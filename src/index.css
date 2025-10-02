@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Areluna Color Palette */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 16%; /* Jet */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 16%; /* Jet */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 16%; /* Jet */
+
+    --primary: 0 0% 16%; /* Jet */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 0 0% 52%; /* Battleship Grey */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 0 0% 96%; /* Light Grey */
+    --muted-foreground: 0 0% 52%; /* Battleship Grey */
+
+    --accent: 45 85% 60%; /* Gold Leaf */
+    --accent-foreground: 0 0% 16%; /* Jet */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 45 85% 60%; /* Gold Leaf */
+    
+    /* Custom design tokens */
+    --battleship-grey: 0 0% 52%;
+    --jet: 0 0% 16%;
+    --gold-leaf: 45 85% 60%;
+    --pure-white: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%), hsl(45 85% 50%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 16%), hsl(0 0% 25%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 16% / 0.2);
+    --shadow-gold: 0 5px 20px -5px hsl(45 85% 60% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Modo escuro dramático - seções alternadas */
+    --background: 0 0% 5%; /* Background quase preto */
+    --foreground: 0 0% 98%; /* Texto muito claro */
+
+    --card: 0 0% 8%; /* Cards muito escuros */
+    --card-foreground: 0 0% 98%; /* Texto muito claro nos cards */
+
+    --popover: 0 0% 8%; /* Popovers muito escuros */
+    --popover-foreground: 0 0% 98%; /* Texto muito claro nos popovers */
+
+    --primary: 45 85% 65%; /* Gold mais brilhante */
+    --primary-foreground: 0 0% 5%; /* Texto muito escuro no gold */
+
+    --secondary: 0 0% 12%; /* Secundário escuro */
+    --secondary-foreground: 0 0% 95%; /* Texto claro no secundário */
+
+    --muted: 0 0% 10%; /* Muted muito escuro */
+    --muted-foreground: 0 0% 80%; /* Texto muted mais claro */
+
+    --accent: 45 85% 65%; /* Gold mais brilhante */
+    --accent-foreground: 0 0% 5%; /* Texto muito escuro no accent */
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%; /* Bordas muito escuras */
+    --input: 0 0% 8%; /* Inputs muito escuros */
+    --ring: 45 85% 65%; /* Ring dourado brilhante */
+
+    /* Custom Areluna colors para modo escuro dramático */
+    --battleship-grey: 0 0% 75%; /* Bem claro no modo escuro */
+    --jet: 0 0% 98%; /* Texto quase branco */
+    --gold-leaf: 45 85% 65%; /* Gold mais brilhante */
+    --pure-white: 0 0% 5%; /* Background quase preto */
+
+    /* Gradients dramáticos para modo escuro */
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 65%), hsl(45 90% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 2%), hsl(0 0% 8%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
+
+    /* Shadows muito intensas e douradas */
+    --shadow-elegant: 0 30px 60px -15px rgba(0, 0, 0, 0.95);
+    --shadow-gold: 0 20px 40px -8px rgba(251, 191, 36, 0.5), 0 8px 15px -3px rgba(251, 191, 36, 0.3);
+
+    /* Sidebar para modo escuro */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 45 85% 65%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 45 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Embla Carousel */
+.embla {
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y;
+  margin-left: calc(1rem * -1);
+  padding-bottom: 1rem;
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 auto;
+  padding-left: 1rem;
+  min-width: 0;
+  margin-bottom: 1rem;
+}
+
+/* Animações customizadas para mobile menu */
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Utility classes para text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
