@@ -29,7 +29,7 @@ const Header = () => {
 
   const handleMobileMenuClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    
+
     // Check if it's a page route (starts with /) or an anchor (#)
     if (href.startsWith('/')) {
       // Navigate to page
@@ -44,56 +44,48 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30' 
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
         : 'bg-transparent'
-    }`}>
-      {/* Main header */}
-      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${
-        isScrolled ? 'py-1.5 xs:py-2 sm:py-3' : 'py-3 xs:py-4 sm:py-6'
       }`}>
+      {/* Main header */}
+      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled ? 'py-1.5 xs:py-2 sm:py-3' : 'py-3 xs:py-4 sm:py-6'
+        }`}>
         {/* Mobile Layout - Side by side */}
         <div className="flex items-center justify-between lg:hidden">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <img 
-              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png" 
-              alt="Areluna" 
-              className={`w-auto transition-all duration-500 ${
-                isScrolled 
-                  ? 'h-6 xs:h-8 sm:h-10' 
+            <img
+              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+              alt="Areluna"
+              loading="eager"
+              decoding="async"
+              className={`w-auto transition-all duration-500 ${isScrolled
+                  ? 'h-6 xs:h-8 sm:h-10'
                   : 'h-8 xs:h-10 sm:h-16'
-              }`}
+                }`}
             />
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center ${
-              isScrolled 
-                ? 'bg-gray-800/80 border-gray-700/50 hover:bg-gray-800/90' 
+            className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center ${isScrolled
+                ? 'bg-gray-800/80 border-gray-700/50 hover:bg-gray-800/90'
                 : 'bg-white/10 border-white/20 hover:bg-white/20'
-            }`}
+              }`}
             aria-label="Toggle mobile menu"
           >
             <div className="w-5 xs:w-6 h-5 xs:h-6 flex flex-col justify-center items-center">
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-800' : 'bg-white'
-              } ${
-                isMobileMenuOpen ? 'rotate-45 translate-y-0.5 xs:translate-y-1' : '-translate-y-0.5 xs:-translate-y-1'
-              }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-800' : 'bg-white'
-              } ${
-                isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
-              }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-800' : 'bg-white'
-              } ${
-                isMobileMenuOpen ? '-rotate-45 -translate-y-0.5 xs:-translate-y-1' : 'translate-y-0.5 xs:translate-y-1'
-              }`}></span>
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'
+                } ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5 xs:translate-y-1' : '-translate-y-0.5 xs:-translate-y-1'
+                }`}></span>
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'
+                } ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
+                }`}></span>
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'
+                } ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5 xs:-translate-y-1' : 'translate-y-0.5 xs:translate-y-1'
+                }`}></span>
             </div>
           </button>
         </div>
@@ -102,28 +94,27 @@ const Header = () => {
         <div className="hidden lg:block">
           {/* Logo centralizada */}
           <div className="flex items-center justify-center">
-            <img 
-              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png" 
-              alt="Areluna" 
-              className={`w-auto transition-all duration-500 ${
-                isScrolled 
-                  ? 'h-16' 
+            <img
+              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+              alt="Areluna"
+              loading="eager"
+              decoding="async"
+              className={`w-auto transition-all duration-500 ${isScrolled
+                  ? 'h-16'
                   : 'h-32'
-              }`}
+                }`}
             />
           </div>
 
           {/* Desktop Navigation - Abaixo da logo */}
-          <nav className={`flex items-center justify-center space-x-6 xl:space-x-8 transition-all duration-500 ${
-            isScrolled ? 'mt-3' : 'mt-6'
-          }`}>
+          <nav className={`flex items-center justify-center space-x-6 xl:space-x-8 transition-all duration-500 ${isScrolled ? 'mt-3' : 'mt-6'
+            }`}>
             {menuItems.map((item) => (
-              <a 
+              <a
                 key={item.href}
-                href={item.href} 
-                className={`hover:text-[hsl(var(--gold-leaf))] transition-colors font-light tracking-wider text-xs xl:text-sm whitespace-nowrap ${
-                  isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
-                }`}
+                href={item.href}
+                className={`hover:text-[hsl(var(--gold-leaf))] transition-colors font-light tracking-wider text-xs xl:text-sm whitespace-nowrap ${isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
+                  }`}
                 onClick={(e) => {
                   if (item.href.startsWith('#')) {
                     e.preventDefault();
@@ -144,23 +135,24 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Overlay */}
-        <div className={`lg:hidden fixed inset-0 top-0 bg-black/80 backdrop-blur-xl transition-all duration-700 ${
-          isMobileMenuOpen 
-            ? 'opacity-100 visible' 
+        <div className={`lg:hidden fixed inset-0 top-0 bg-black/80 backdrop-blur-xl transition-all duration-700 ${isMobileMenuOpen
+            ? 'opacity-100 visible'
             : 'opacity-0 invisible'
-        }`}>
+          }`}>
           {/* Background decorativo */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-amber-400/5 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl"></div>
+            <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-br from-[hsl(var(--jet))]/10 to-[hsl(var(--ring))]/5 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--ring))]/8 to-[hsl(var(--jet))]/5 rounded-full blur-2xl"></div>
           </div>
 
           <div className="relative z-10 flex flex-col min-h-screen">
             {/* Header do menu mobile */}
             <div className="pt-16 xs:pt-20 pb-6 xs:pb-8 text-center">
-              <img 
-                src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png" 
-                alt="Areluna" 
+              <img
+                src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+                alt="Areluna"
+                loading="lazy"
+                decoding="async"
                 className="h-12 xs:h-16 w-auto mx-auto mb-3 xs:mb-4"
               />
               <div className="w-12 xs:w-16 h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold-leaf))] to-transparent mx-auto"></div>
@@ -173,14 +165,13 @@ const Header = () => {
                   <button
                     key={item.href}
                     onClick={() => handleMobileMenuClick(item.href)}
-                    className={`w-full text-left px-4 xs:px-5 sm:px-6 py-3 xs:py-3.5 sm:py-4 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 border border-transparent hover:border-[hsl(var(--gold-leaf))]/20 hover:bg-gradient-to-r hover:from-[hsl(var(--gold-leaf))]/5 hover:to-amber-400/5 ${
-                      index === 0 ? 'animate-slide-in-left' : 
-                      index === 1 ? 'animate-slide-in-left animation-delay-100' :
-                      index === 2 ? 'animate-slide-in-left animation-delay-200' :
-                      index === 3 ? 'animate-slide-in-left animation-delay-300' :
-                      'animate-slide-in-left animation-delay-400'
-                    }`}
-                    style={{animationDelay: `${index * 100}ms`}}
+                    className={`w-full text-left px-4 xs:px-5 sm:px-6 py-3 xs:py-3.5 sm:py-4 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 border border-transparent hover:border-[hsl(var(--gold-leaf))]/20 hover:bg-gradient-to-r hover:from-[hsl(var(--jet))]/5 hover:to-[hsl(var(--ring))]/5 dark:hover:from-gray-800/50 dark:hover:to-gray-900/50 ${index === 0 ? 'animate-slide-in-left' :
+                        index === 1 ? 'animate-slide-in-left animation-delay-100' :
+                          index === 2 ? 'animate-slide-in-left animation-delay-200' :
+                            index === 3 ? 'animate-slide-in-left animation-delay-300' :
+                              'animate-slide-in-left animation-delay-400'
+                      }`}
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-white font-light tracking-wider text-sm xs:text-base">
@@ -217,16 +208,16 @@ const Header = () => {
               <div className="mb-4 xs:mb-6">
                 <ThemeToggle />
               </div>
-              
+
               {/* Call to action */}
               <div className="px-4 xs:px-6 sm:px-8">
-                <button 
+                <button
                   onClick={() => handleMobileMenuClick('#contato')}
-                  className="w-full bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 hover:from-amber-400 hover:to-[hsl(var(--gold-leaf))] text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
+                  className="w-full bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black hover:from-gray-800 hover:to-gray-900 text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
                 >
                   CONSULTA GRATUITA
                 </button>
-                
+
                 <p className="text-xs text-white/70 mt-2 xs:mt-3 font-light px-2">
                   O principal destino para medicina dentária em Lisboa
                 </p>

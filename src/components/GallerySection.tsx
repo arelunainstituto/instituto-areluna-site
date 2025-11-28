@@ -1,4 +1,5 @@
 import { useState } from "react";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -53,24 +54,25 @@ const GallerySection = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet dark:text-gray-800 mb-4">
             Clínica
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-700 font-medium tracking-wide max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-jet/80 dark:text-gray-700 font-medium tracking-wide max-w-2xl mx-auto px-4">
             Conheça nossos espaços modernos e equipamentos de última geração
           </p>
         </div>
-        
+
         {/* Grid uniforme com quadrados perfeitos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {images.map((image, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="aspect-square group relative overflow-hidden rounded-lg bg-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img 
-                className="w-full h-full object-cover cursor-pointer transition-all duration-300 group-hover:scale-110" 
-                src={image.src} 
+              <OptimizedImage
+                className="w-full h-full object-cover cursor-pointer transition-all duration-300 group-hover:scale-110"
+                src={image.src}
                 alt={image.alt}
+                width={400}
+                height={400}
                 onClick={() => openModal(image.src)}
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300 flex items-center justify-center">
                 <div className="bg-white bg-opacity-90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
@@ -85,17 +87,18 @@ const GallerySection = () => {
 
         {/* Modal para visualizar imagem em tela cheia */}
         {selectedImage && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 animate-fade-in p-4"
             onClick={closeModal}
           >
             <div className="relative max-w-7xl max-h-full">
-              <img 
-                src={selectedImage} 
-                alt="Imagem da clínica em tela cheia" 
+              <OptimizedImage
+                src={selectedImage}
+                alt="Imagem da clínica em tela cheia"
+                width={1200}
                 className="max-w-full max-h-full object-contain rounded-lg animate-scale-in shadow-2xl"
               />
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation();
                   closeModal();

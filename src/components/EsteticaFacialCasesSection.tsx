@@ -34,13 +34,13 @@ const EsteticaFacialCasesSection = () => {
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', 
+        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }}></div>
 
       {/* Elementos decorativos flutuantes */}
       <div className="absolute top-20 -right-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-amber-400/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       {/* Background text sutil */}
       <div className="absolute top-32 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
@@ -66,11 +66,11 @@ const EsteticaFacialCasesSection = () => {
               Estética Facial
             </span>
           </h2>
-          
+
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 rounded-full"></div>
-          
+
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
-            Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas 
+            Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas
             com os tratamentos mais avançados de estética facial.
           </p>
         </div>
@@ -85,20 +85,22 @@ const EsteticaFacialCasesSection = () => {
             >
               {/* Imagem do caso */}
               <div className="aspect-[4/3] overflow-hidden relative">
-                <img 
-                  src={caseItem.image} 
+                <img
+                  src={caseItem.image}
                   alt={`${caseItem.title} - Estética Facial Premium`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
                 {/* Overlay gradiente */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Badge do caso */}
                 <div className="absolute top-4 left-4 bg-[hsl(var(--gold-leaf))] text-white px-3 py-1.5 rounded-full text-xs font-vivant font-medium shadow-lg">
                   {caseItem.title}
                 </div>
-                
+
                 {/* Ícone de expansão */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
                   <svg className="w-4 h-4 text-[hsl(var(--gold-leaf))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,18 +115,17 @@ const EsteticaFacialCasesSection = () => {
                 <h3 className="text-xl font-vivant text-jet dark:text-white mb-2 group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300">
                   {caseItem.description}
                 </h3>
-                
+
                 {/* Detalhes expandidos */}
-                <div className={`overflow-hidden transition-all duration-500 ${
-                  selectedCase === caseItem.id ? 'max-h-24 opacity-100 mt-4' : 'max-h-0 opacity-0'
-                }`}>
+                <div className={`overflow-hidden transition-all duration-500 ${selectedCase === caseItem.id ? 'max-h-24 opacity-100 mt-4' : 'max-h-0 opacity-0'
+                  }`}>
                   <div className="pt-2 border-t border-[hsl(var(--gold-leaf))]/20">
                     <p className="text-sm text-gray-600 dark:text-gray-400 font-vivant-light leading-relaxed">
                       {caseItem.details}
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Indicador de clique */}
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex items-center gap-2">
@@ -133,10 +134,9 @@ const EsteticaFacialCasesSection = () => {
                       Premium
                     </span>
                   </div>
-                  
-                  <div className={`transform transition-transform duration-300 ${
-                    selectedCase === caseItem.id ? 'rotate-180' : ''
-                  }`}>
+
+                  <div className={`transform transition-transform duration-300 ${selectedCase === caseItem.id ? 'rotate-180' : ''
+                    }`}>
                     <svg className="w-4 h-4 text-[hsl(var(--gold-leaf))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -153,12 +153,12 @@ const EsteticaFacialCasesSection = () => {
 
         {/* CTA final */}
         <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-amber-400/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-amber-400/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
-            <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-jet dark:text-white mb-3 sm:mb-4">
+          <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
+            <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-white mb-3 sm:mb-4">
               A sua transformação pode ser a próxima!
             </h3>
-            <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
-              Cada rosto é único. Agende uma consulta gratuita para descobrirmos 
+            <p className="text-sm xs:text-base text-gray-300 mb-6">
+              Cada rosto é único. Agende uma consulta gratuita para descobrirmos
               qual o melhor protocolo de tratamentos para si.
             </p>
             <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">

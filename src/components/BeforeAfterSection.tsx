@@ -128,11 +128,13 @@ const BeforeAfterSection = () => {
                                  {/* Imagem antes/depois */}
                  <div className="relative overflow-hidden rounded-2xl shadow-xl mb-6">
                    <div className="aspect-[4/5]">
-                     <img 
-                       src={caseItem.image} 
-                       alt={`${caseItem.title} - Antes e Depois`}
-                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                     />
+                    <img 
+                      src={caseItem.image} 
+                      alt={`${caseItem.title} - Antes e Depois`}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                    />
                    </div>
                   
                   {/* Badge do caso */}
@@ -218,11 +220,13 @@ const BeforeAfterSection = () => {
                                  {/* Imagem antes/depois */}
                  <div className="relative overflow-hidden rounded-2xl shadow-xl mb-6">
                    <div className="aspect-[4/5]">
-                     <img 
-                       src={caseItem.image} 
-                       alt={`${caseItem.title} - Antes e Depois`}
-                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                     />
+                    <img 
+                      src={caseItem.image} 
+                      alt={`${caseItem.title} - Antes e Depois`}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                    />
                    </div>
                   
                   {/* Badge do caso */}
