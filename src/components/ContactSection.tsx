@@ -17,12 +17,12 @@ const ContactSection = () => {
                   CONSULTA
                 </h2>
               </div>
-              
+
               <p className="text-lg text-battleship leading-relaxed font-light">
-                Estamos prontos para ajudá-lo a alcançar a beleza natural que sempre desejou. 
+                Estamos prontos para ajudá-lo a alcançar a beleza natural que sempre desejou.
                 Entre em contato e descubra como podemos transformar seu sorriso.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-1 h-1 bg-gold-leaf rounded-full"></div>
@@ -37,7 +37,7 @@ const ContactSection = () => {
                   <span className="text-jet">Rua das Flores, 123 - Lisboa</span>
                 </div>
               </div>
-              
+
               <div className="pt-4">
                 <Button variant="outline-gold" size="lg" className="font-light tracking-wide">
                   MARCAR CONSULTA
@@ -45,10 +45,10 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Right side - Image */}
           <div className="relative">
-            <div className="w-full h-full bg-gradient-to-br from-gold-leaf/20 to-battleship/20 flex items-center justify-center">
+            <div className="w-full h-full bg-gradient-to-br from-[hsl(var(--jet))]/20 to-[hsl(var(--ring))]/20 flex items-center justify-center">
               <div className="text-center text-battleship/60">
                 <p className="text-lg font-vivant-light">Imagem de Contato</p>
               </div>

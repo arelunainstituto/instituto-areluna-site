@@ -39,8 +39,8 @@ const EsteticaFacialCasesSection = () => {
       }}></div>
 
       {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 -right-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-amber-400/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 -right-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-[hsl(var(--ring))]/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-[hsl(var(--jet))]/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       {/* Background text sutil */}
       <div className="absolute top-32 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
@@ -67,7 +67,7 @@ const EsteticaFacialCasesSection = () => {
             </span>
           </h2>
 
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
 
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
             Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas

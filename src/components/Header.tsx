@@ -8,7 +8,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 100);
+      setIsScrolled(scrollPosition > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -45,11 +45,11 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
-        : 'bg-transparent'
+      ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
+      : 'bg-transparent'
       }`}>
       {/* Main header */}
-      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled ? 'py-1.5 xs:py-2 sm:py-3' : 'py-3 xs:py-4 sm:py-6'
+      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled ? 'py-1.5 xs:py-2 sm:py-3' : 'py-2 xs:py-3 sm:py-4'
         }`}>
         {/* Mobile Layout - Side by side */}
         <div className="flex items-center justify-between lg:hidden">
@@ -61,8 +61,8 @@ const Header = () => {
               loading="eager"
               decoding="async"
               className={`w-auto transition-all duration-500 ${isScrolled
-                  ? 'h-6 xs:h-8 sm:h-10'
-                  : 'h-8 xs:h-10 sm:h-16'
+                ? 'h-6 xs:h-8 sm:h-10'
+                : 'h-8 xs:h-10 sm:h-14'
                 }`}
             />
           </div>
@@ -71,8 +71,8 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center ${isScrolled
-                ? 'bg-gray-800/80 border-gray-700/50 hover:bg-gray-800/90'
-                : 'bg-white/10 border-white/20 hover:bg-white/20'
+              ? 'bg-gray-800/80 border-gray-700/50 hover:bg-gray-800/90'
+              : 'bg-white/10 border-white/20 hover:bg-white/20'
               }`}
             aria-label="Toggle mobile menu"
           >
@@ -100,14 +100,14 @@ const Header = () => {
               loading="eager"
               decoding="async"
               className={`w-auto transition-all duration-500 ${isScrolled
-                  ? 'h-16'
-                  : 'h-32'
+                ? 'h-12'
+                : 'h-24'
                 }`}
             />
           </div>
 
           {/* Desktop Navigation - Abaixo da logo */}
-          <nav className={`flex items-center justify-center space-x-6 xl:space-x-8 transition-all duration-500 ${isScrolled ? 'mt-3' : 'mt-6'
+          <nav className={`flex items-center justify-center space-x-5 xl:space-x-6 transition-all duration-500 ${isScrolled ? 'mt-2' : 'mt-4'
             }`}>
             {menuItems.map((item) => (
               <a
@@ -136,8 +136,8 @@ const Header = () => {
 
         {/* Mobile Navigation Overlay */}
         <div className={`lg:hidden fixed inset-0 top-0 bg-black/80 backdrop-blur-xl transition-all duration-700 ${isMobileMenuOpen
-            ? 'opacity-100 visible'
-            : 'opacity-0 invisible'
+          ? 'opacity-100 visible'
+          : 'opacity-0 invisible'
           }`}>
           {/* Background decorativo */}
           <div className="absolute inset-0 overflow-hidden">
@@ -166,10 +166,10 @@ const Header = () => {
                     key={item.href}
                     onClick={() => handleMobileMenuClick(item.href)}
                     className={`w-full text-left px-4 xs:px-5 sm:px-6 py-3 xs:py-3.5 sm:py-4 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 border border-transparent hover:border-[hsl(var(--gold-leaf))]/20 hover:bg-gradient-to-r hover:from-[hsl(var(--jet))]/5 hover:to-[hsl(var(--ring))]/5 dark:hover:from-gray-800/50 dark:hover:to-gray-900/50 ${index === 0 ? 'animate-slide-in-left' :
-                        index === 1 ? 'animate-slide-in-left animation-delay-100' :
-                          index === 2 ? 'animate-slide-in-left animation-delay-200' :
-                            index === 3 ? 'animate-slide-in-left animation-delay-300' :
-                              'animate-slide-in-left animation-delay-400'
+                      index === 1 ? 'animate-slide-in-left animation-delay-100' :
+                        index === 2 ? 'animate-slide-in-left animation-delay-200' :
+                          index === 3 ? 'animate-slide-in-left animation-delay-300' :
+                            'animate-slide-in-left animation-delay-400'
                       }`}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >

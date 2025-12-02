@@ -47,8 +47,8 @@ const EsteticaFacialFAQSection = () => {
       }}></div>
 
       {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/8 to-amber-400/4 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/6 to-[hsl(var(--gold-leaf))]/4 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/8 to-[hsl(var(--ring))]/4 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-[hsl(var(--jet))]/6 to-[hsl(var(--gold-leaf))]/4 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
 
       {/* Background text sutil */}
       <div className="absolute top-40 -right-32 pointer-events-none overflow-hidden">
@@ -75,10 +75,10 @@ const EsteticaFacialFAQSection = () => {
             Perguntas sobre Estética
           </h2>
 
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 sm:mb-8 rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
-            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-[hsl(var(--gold-leaf))] mb-4 sm:mb-6">
+            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
               Estética Facial Premium
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">

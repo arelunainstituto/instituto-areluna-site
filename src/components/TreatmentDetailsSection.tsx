@@ -201,10 +201,10 @@ const TreatmentDetailsSection = () => {
             Nossos Tratamentos
           </h2>
 
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 sm:mb-8 rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
-            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-[hsl(var(--gold-leaf))] mb-4 sm:mb-6">
+            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
               Tecnologia Avançada, Cuidado Personalizado
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
@@ -221,8 +221,8 @@ const TreatmentDetailsSection = () => {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 rounded-full transition-all duration-300 text-xs xs:text-sm sm:text-base font-vivant-light tracking-wide min-h-[44px] flex items-center justify-center ${activeCategory === category.id
-                  ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white shadow-lg transform scale-105'
-                  : 'bg-white/70 dark:bg-gray-800/70 text-jet dark:text-gray-300 hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 border border-[hsl(var(--gold-leaf))]/20'
+                ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white shadow-lg transform scale-105'
+                : 'bg-white/70 dark:bg-gray-800/70 text-jet dark:text-gray-300 hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 border border-[hsl(var(--gold-leaf))]/20'
                 }`}
             >
               <span className="mr-1 xs:mr-2">{category.icon}</span>

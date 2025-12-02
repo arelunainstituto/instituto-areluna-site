@@ -19,9 +19,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Areluna custom variants
-        gold: "bg-gradient-gold text-jet hover:shadow-gold transition-all duration-300 font-medium",
+        gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20",
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
-        "outline-gold": "border border-gold-leaf text-gold-leaf hover:bg-gold-leaf hover:text-jet transition-all duration-300",
+        "outline-gold": "border-2 border-[hsl(var(--jet))] text-[hsl(var(--jet))] hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",
       },
       size: {
@@ -40,7 +40,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 

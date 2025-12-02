@@ -23,11 +23,6 @@ const StatsSection = () => {
       {/* Background decorativo */}
       <div className="absolute inset-0 bg-black/20 dark:bg-gray-800/30"></div>
 
-      {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/15 rounded-full blur-lg"></div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header da seção */}
         <div className="text-center mb-16">

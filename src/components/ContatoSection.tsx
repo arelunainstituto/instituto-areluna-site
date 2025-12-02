@@ -3,13 +3,13 @@ const ContatoSection = () => {
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', 
+        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }}></div>
 
       {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 -right-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-amber-400/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-20 -right-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--jet))]/10 to-[hsl(var(--ring))]/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-[hsl(var(--ring))]/8 to-[hsl(var(--jet))]/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       {/* Background text sutil */}
       <div className="absolute top-32 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
@@ -35,11 +35,11 @@ const ContatoSection = () => {
               Encontrar
             </span>
           </h2>
-          
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 rounded-full"></div>
-          
+
+          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
+
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
-            Estamos localizados no coração de Évora, prontos para recebê-lo com o mais alto padrão 
+            Estamos localizados no coração de Évora, prontos para recebê-lo com o mais alto padrão
             de atendimento e tecnologia avançada.
           </p>
         </div>
@@ -60,7 +60,7 @@ const ContatoSection = () => {
                   Contacto Direto
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center text-jet/80 dark:text-gray-300">
                   <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ const ContatoSection = () => {
                   Horários
                 </h3>
               </div>
-              
+
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-jet/80 dark:text-gray-300">
                   <span className="font-vivant">Segunda - Sexta</span>
@@ -133,7 +133,7 @@ const ContatoSection = () => {
                   Localização
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="text-jet/80 dark:text-gray-300">
                   <p className="font-vivant text-lg mb-2">Instituto Areluna</p>
@@ -141,7 +141,7 @@ const ContatoSection = () => {
                   <p className="font-vivant-light">7000-000 Évora</p>
                   <p className="font-vivant-light">Portugal</p>
                 </div>
-                
+
                 <div className="mt-6">
                   <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light text-sm shadow-lg hover:shadow-xl transform hover:scale-105">
                     VER NO MAPA
@@ -162,7 +162,7 @@ const ContatoSection = () => {
                   Como Chegar
                 </h3>
               </div>
-              
+
               <div className="space-y-3 text-jet/80 dark:text-gray-300 font-vivant-light">
                 <div className="flex items-start">
                   <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,12 +195,12 @@ const ContatoSection = () => {
 
         {/* CTA final */}
         <div className="text-center">
-          <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-amber-400/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-amber-400/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-br from-[hsl(var(--jet))]/5 to-[hsl(var(--ring))]/5 dark:from-black/10 dark:to-gray-900/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
             <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-jet dark:text-white mb-3 sm:mb-4">
               Pronto para transformar o seu sorriso?
             </h3>
             <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
-              Agende a sua consulta gratuita e descubra como podemos ajudá-lo 
+              Agende a sua consulta gratuita e descubra como podemos ajudá-lo
               a alcançar o sorriso perfeito.
             </p>
             <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">

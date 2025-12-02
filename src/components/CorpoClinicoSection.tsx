@@ -112,7 +112,7 @@ const CorpoClinicoSection = () => {
           <h2 className="text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
             Corpo Clínico
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gold to-amber-400 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-jet/80 dark:text-gray-300 max-w-2xl mx-auto font-vivant-light">
             Nossa equipa de médicos especialistas está comprometida em oferecer o melhor cuidado com excelência e dedicação no padrão IAL
           </p>
@@ -187,7 +187,7 @@ const CorpoClinicoSection = () => {
 
                       <div>
                         {/* Linha decorativa */}
-                        <div className="w-12 h-0.5 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-transparent mb-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                        <div className="w-12 h-0.5 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mb-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
                         {/* Especialidade detalhada */}
                         <div className="flex flex-col space-y-1">

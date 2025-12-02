@@ -12,8 +12,8 @@ const TourismDentarioSection = () => {
       }}></div>
 
       {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/15 to-amber-400/8 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/12 to-[hsl(var(--gold-leaf))]/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--jet))]/15 to-[hsl(var(--ring))]/8 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-[hsl(var(--ring))]/12 to-[hsl(var(--jet))]/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[hsl(var(--gold-leaf))]/8 rounded-full blur-xl"></div>
 
       {/* Background text sutil */}
@@ -46,9 +46,9 @@ const TourismDentarioSection = () => {
 
               {/* Linha decorativa */}
               <div className="flex items-center gap-4">
-                <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 rounded-full"></div>
+                <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
                 <div className="w-3 h-3 bg-[hsl(var(--gold-leaf))]/20 rounded-full border-2 border-[hsl(var(--gold-leaf))]/40"></div>
-                <div className="w-32 h-px bg-gradient-to-r from-amber-400 to-[hsl(var(--gold-leaf))] rounded-full"></div>
+                <div className="w-32 h-px bg-gradient-to-r from-[hsl(var(--ring))] to-[hsl(var(--jet))] rounded-full"></div>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ const TourismDentarioSection = () => {
 
               {/* Call to action text */}
               <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--gold-leaf))] to-amber-400 rounded-full"></div>
+                <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
                 <p className="text-xl font-vivant text-[hsl(var(--gold-leaf))] italic">
                   Entre em contacto e mude a sua vida.
                 </p>
@@ -87,7 +87,7 @@ const TourismDentarioSection = () => {
               ].map((benefit, index) => (
                 <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--gold-leaf))] to-amber-400 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <div>

@@ -7,16 +7,16 @@ const TreatmentsSection = () => {
   const [activeCategory, setActiveCategory] = useState("todos");
 
   const categories = [
-    { id: "todos", name: "Todos", icon: "🦷" },
-    { id: "medicina-dentaria", name: "Medicina Dentária", icon: "🦷" },
-    { id: "harmonizacao-orofacial", name: "Harmonização Orofacial", icon: "💫" },
-    { id: "estetica-facial", name: "Estética Facial", icon: "✨" },
-    { id: "estetica-corporal", name: "Estética Corporal", icon: "💪" },
-    { id: "terapia-capilar", name: "Terapia Capilar", icon: "💇" },
-    { id: "transplante-capilar", name: "Transplante Capilar", icon: "🌱" },
-    { id: "nutricao", name: "Nutrição", icon: "🥗" },
-    { id: "endocrinologia", name: "Endocrinologia", icon: "⚕️" },
-    { id: "ansiedade", name: "Ansiedade Clínica", icon: "🧠" }
+    { id: "todos", name: "Todos" },
+    { id: "medicina-dentaria", name: "Medicina Dentária" },
+    { id: "harmonizacao-orofacial", name: "Harmonização Orofacial" },
+    { id: "estetica-facial", name: "Estética Facial" },
+    { id: "estetica-corporal", name: "Estética Corporal" },
+    { id: "terapia-capilar", name: "Terapia Capilar" },
+    { id: "transplante-capilar", name: "Transplante Capilar" },
+    { id: "nutricao", name: "Nutrição" },
+    { id: "endocrinologia", name: "Endocrinologia" },
+    { id: "ansiedade", name: "Ansiedade Clínica" }
   ];
 
   const treatments = [
@@ -339,13 +339,15 @@ const TreatmentsSection = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeCategory === category.id
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
-                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-300'
+              className={`group relative px-6 py-3.5 rounded-lg font-vivant-light text-sm tracking-wide transition-all duration-500 overflow-hidden ${activeCategory === category.id
+                  ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white shadow-xl border border-white/20'
+                  : 'bg-white/80 backdrop-blur-sm text-jet border-2 border-[hsl(var(--jet))]/20 hover:border-[hsl(var(--jet))]/40 hover:bg-white hover:shadow-lg'
                 }`}
             >
-              <span>{category.icon}</span>
-              {category.name}
+              <span className="relative z-10 font-medium">{category.name}</span>
+              {activeCategory !== category.id && (
+                <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jet))]/5 to-[hsl(var(--ring))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              )}
             </button>
           ))}
         </div>
@@ -354,9 +356,15 @@ const TreatmentsSection = () => {
         <div className="bg-white dark:bg-gray-50 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-200">
           {/* Header do tratamento ideal */}
           <div className="text-center mb-8">
-            <div className="inline-block bg-[hsl(var(--gold-leaf))] dark:bg-[hsl(var(--gold-leaf))] text-white px-6 py-3 rounded-lg text-sm font-medium mb-6">
-              DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
-            </div>
+            <button className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-vivant-light font-medium text-white transition-all duration-300 bg-[hsl(var(--gold-leaf))] rounded-full hover:bg-[hsl(var(--gold-leaf))]/90 hover:scale-105 hover:shadow-lg">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+              <span className="relative flex items-center gap-2">
+                DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </button>
           </div>
 
           {/* Grid principal de tratamentos */}

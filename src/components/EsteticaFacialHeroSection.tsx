@@ -3,22 +3,16 @@ const esteticaHero = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954
 
 const EsteticaFacialHeroSection = () => {
   return (
-    <section
-      className="relative h-screen bg-cover bg-no-repeat flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${esteticaHero})`,
-        backgroundPosition: 'center 20%'
-      }}
-    >
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-      ></div>
-
-      {/* Background decorativo */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[hsl(var(--jet))]/20 to-[hsl(var(--ring))]/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-br from-[hsl(var(--ring))]/15 to-[hsl(var(--jet))]/10 rounded-full blur-2xl"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
+      {/* Imagem de fundo com baixa opacidade */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={esteticaHero}
+          alt="Background"
+          className="w-full h-full object-cover mix-blend-overlay"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
 
       <div
