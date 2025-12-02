@@ -176,10 +176,10 @@ const TreatmentDetailsSection = () => {
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', 
+        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }}></div>
-      
+
       {/* Background text sutil */}
       <div className="absolute top-32 -right-32 pointer-events-none overflow-hidden">
         <span className="text-[12rem] xs:text-[14rem] sm:text-[16rem] lg:text-[18rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
@@ -200,15 +200,15 @@ const TreatmentDetailsSection = () => {
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
             Nossos Tratamentos
           </h2>
-          
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 mx-auto mb-6 sm:mb-8 rounded-full"></div>
-          
+
+          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
+
           <div className="max-w-3xl mx-auto px-4">
-            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-[hsl(var(--gold-leaf))] mb-4 sm:mb-6">
+            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
               Tecnologia Avançada, Cuidado Personalizado
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-              Cada tratamento é cuidadosamente planejado para suas necessidades específicas, 
+              Cada tratamento é cuidadosamente planejado para suas necessidades específicas,
               utilizando as mais avançadas técnicas e tecnologias disponíveis.
             </p>
           </div>
@@ -220,11 +220,10 @@ const TreatmentDetailsSection = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 rounded-full transition-all duration-300 text-xs xs:text-sm sm:text-base font-vivant-light tracking-wide min-h-[44px] flex items-center justify-center ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-amber-400 text-white shadow-lg transform scale-105'
-                  : 'bg-white/70 dark:bg-gray-800/70 text-jet dark:text-gray-300 hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 border border-[hsl(var(--gold-leaf))]/20'
-              }`}
+              className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 rounded-full transition-all duration-300 text-xs xs:text-sm sm:text-base font-vivant-light tracking-wide min-h-[44px] flex items-center justify-center ${activeCategory === category.id
+                ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white shadow-lg transform scale-105'
+                : 'bg-white/70 dark:bg-gray-800/70 text-jet dark:text-gray-300 hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 border border-[hsl(var(--gold-leaf))]/20'
+                }`}
             >
               <span className="mr-1 xs:mr-2">{category.icon}</span>
               <span className="truncate">{category.name}</span>
@@ -244,10 +243,12 @@ const TreatmentDetailsSection = () => {
                 <img
                   src={treatment.image}
                   alt={treatment.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
 
               </div>
 
@@ -255,7 +256,7 @@ const TreatmentDetailsSection = () => {
                 <h3 className="text-lg xs:text-xl sm:text-2xl font-vivant text-jet dark:text-white mb-2 xs:mb-3 group-hover:text-[hsl(var(--gold-leaf))] dark:group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 line-clamp-2">
                   {treatment.name}
                 </h3>
-                
+
                 <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-3 xs:mb-4 font-vivant-light leading-relaxed line-clamp-3">
                   {treatment.description}
                 </p>
@@ -276,8 +277,8 @@ const TreatmentDetailsSection = () => {
                   ))}
                 </div>
 
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="sm"
                   className="w-full group-hover:bg-[hsl(var(--gold-leaf))] group-hover:text-white group-hover:border-[hsl(var(--gold-leaf))] transition-all duration-300 min-h-[44px] text-xs xs:text-sm"
                 >
@@ -290,12 +291,12 @@ const TreatmentDetailsSection = () => {
 
         {/* CTA final */}
         <div className="text-center mt-16 sm:mt-20">
-          <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-amber-400/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-amber-400/10 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-[hsl(var(--gold-leaf))]/20">
-            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet dark:text-white mb-4">
+          <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-[hsl(var(--gold-leaf))]/20">
+            <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-white mb-4">
               Não encontrou o que procura?
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Oferecemos uma gama completa de tratamentos personalizados. 
+            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Oferecemos uma gama completa de tratamentos personalizados.
               Agende uma consulta gratuita para encontrarmos a solução ideal para você.
             </p>
             <Button variant="gold" size="lg" className="px-8 py-4 text-sm xs:text-base tracking-wider font-vivant-light">

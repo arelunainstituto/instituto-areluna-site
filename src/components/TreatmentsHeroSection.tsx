@@ -2,25 +2,19 @@ import { Button } from "@/components/ui/button";
 
 const TreatmentsHeroSection = () => {
   return (
-    <section 
-      className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-hidden" 
-      style={{
-        backgroundImage: "url('https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954598/instituto-areluna/97a1febf-3c27-4a63-a583-b2522013f3f4.jpg')"
-      }}
-    >
-      <div 
-        className="absolute inset-0 w-full h-full" 
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-      ></div>
-
-      {/* Background decorativo */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/20 to-amber-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-br from-amber-400/15 to-[hsl(var(--gold-leaf))]/10 rounded-full blur-2xl"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
+      {/* Imagem de fundo com baixa opacidade */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954598/instituto-areluna/97a1febf-3c27-4a63-a583-b2522013f3f4.jpg"
+          alt="Background"
+          className="w-full h-full object-cover mix-blend-overlay"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
-      
-      <div 
-        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto" 
+
+      <div
+        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto"
         style={{ color: '#FFFFFF' }}
       >
         {/* Badge superior */}
@@ -32,20 +26,20 @@ const TreatmentsHeroSection = () => {
         </div>
 
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant-skinny font-thin mb-6 xs:mb-8 leading-tight tracking-wider" style={{
-        fontWeight: 200
-      }}>
+          fontWeight: 200
+        }}>
           Transformamos Sorrisos,<br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
           <span className="text-[hsl(var(--gold-leaf))] drop-shadow-lg">
             Mudamos Vidas
           </span>
         </h1>
-        
+
         <p className="text-base xs:text-lg sm:text-xl lg:text-2xl mb-8 xs:mb-10 sm:mb-12 font-vivant opacity-90 max-w-3xl mx-auto leading-relaxed">
-          Descubra nossa gama completa de tratamentos odontológicos com tecnologia de ponta, 
+          Descubra nossa gama completa de tratamentos odontológicos com tecnologia de ponta,
           sempre priorizando seu conforto e os melhores resultados.
         </p>
-        
+
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
           <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
             CONSULTA GRATUITA
@@ -63,7 +57,7 @@ const TreatmentsHeroSection = () => {
             { number: "95%", label: "Satisfação dos Pacientes" },
             { number: "20+", label: "Tratamentos Disponíveis" }
           ].map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center"
             >

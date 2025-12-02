@@ -2,56 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Areluna Color Palette */
-    --background: 0 0% 100%; /* White */
-    --foreground: 0 0% 16%; /* Jet */
+    /* Areluna Color Palette - Premium Earthy Theme */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 20 11% 25%;
+    /* #483E39 - Darker Brown */
 
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 0 0% 16%; /* Jet */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 20 11% 25%;
+    /* #483E39 - Darker Brown */
 
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 0 0% 16%; /* Jet */
-
-    --primary: 0 0% 16%; /* Jet */
-    --primary-foreground: 0 0% 100%; /* White */
-
-    --secondary: 0 0% 52%; /* Battleship Grey */
-    --secondary-foreground: 0 0% 100%; /* White */
-
-    --muted: 0 0% 96%; /* Light Grey */
-    --muted-foreground: 0 0% 52%; /* Battleship Grey */
-
-    --accent: 45 85% 60%; /* Gold Leaf */
-    --accent-foreground: 0 0% 16%; /* Jet */
+    --popover: 0 0% 100%;
+    /* White */
+    --popover-foreground: 20 11% 25%;
+    /* #483E39 - Darker Brown */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 45 85% 60%; /* Gold Leaf */
-    
+    --border: 20 5% 72%;
+    /* #BBB7B5 - Light Gray */
+    --input: 20 5% 72%;
+    /* #BBB7B5 - Light Gray */
+    --ring: 30 10% 36%;
+    /* #665C53 - Dark Brown */
+
     /* Custom design tokens */
-    --battleship-grey: 0 0% 52%;
-    --jet: 0 0% 16%;
-    --gold-leaf: 45 85% 60%;
+    --battleship-grey: 20 5% 72%;
+    /* #BBB7B5 */
+    --jet: 20 11% 25%;
+    /* #483E39 */
+    --gold-leaf: 38 33% 70%;
+    /* #CCB999 */
     --pure-white: 0 0% 100%;
-    
+
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%), hsl(45 85% 50%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 16%), hsl(0 0% 25%));
-    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    
+    --gradient-gold: linear-gradient(135deg, hsl(38 33% 70%), hsl(38 33% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(20 11% 25%), hsl(30 10% 36%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(30 10% 98%));
+
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 16% / 0.2);
-    --shadow-gold: 0 5px 20px -5px hsl(45 85% 60% / 0.3);
-    
+    --shadow-elegant: 0 10px 30px -10px hsl(20 11% 25% / 0.2);
+    --shadow-gold: 0 5px 20px -5px hsl(38 33% 70% / 0.3);
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -76,58 +72,79 @@ All colors MUST be HSL.
 
   .dark {
     /* Modo escuro dramático - seções alternadas */
-    --background: 0 0% 5%; /* Background quase preto */
-    --foreground: 0 0% 98%; /* Texto muito claro */
+    --background: 20 11% 20%;
+    /* Darker version of #483E39 */
+    --foreground: 38 33% 90%;
+    /* Very light Tan */
 
-    --card: 0 0% 8%; /* Cards muito escuros */
-    --card-foreground: 0 0% 98%; /* Texto muito claro nos cards */
+    --card: 20 11% 25%;
+    /* #483E39 */
+    --card-foreground: 38 33% 90%;
+    /* Very light Tan */
 
-    --popover: 0 0% 8%; /* Popovers muito escuros */
-    --popover-foreground: 0 0% 98%; /* Texto muito claro nos popovers */
+    --popover: 20 11% 25%;
+    /* #483E39 */
+    --popover-foreground: 38 33% 90%;
+    /* Very light Tan */
 
-    --primary: 45 85% 65%; /* Gold mais brilhante */
-    --primary-foreground: 0 0% 5%; /* Texto muito escuro no gold */
+    --primary: 38 33% 70%;
+    /* #CCB999 - Tan */
+    --primary-foreground: 20 11% 25%;
+    /* #483E39 - Darker Brown */
 
-    --secondary: 0 0% 12%; /* Secundário escuro */
-    --secondary-foreground: 0 0% 95%; /* Texto claro no secundário */
+    --secondary: 30 10% 36%;
+    /* #665C53 - Dark Brown */
+    --secondary-foreground: 0 0% 95%;
+    /* White-ish */
 
-    --muted: 0 0% 10%; /* Muted muito escuro */
-    --muted-foreground: 0 0% 80%; /* Texto muted mais claro */
+    --muted: 20 11% 15%;
+    /* Darker background */
+    --muted-foreground: 20 5% 72%;
+    /* #BBB7B5 - Light Gray */
 
-    --accent: 45 85% 65%; /* Gold mais brilhante */
-    --accent-foreground: 0 0% 5%; /* Texto muito escuro no accent */
+    --accent: 38 33% 70%;
+    /* #CCB999 - Tan */
+    --accent-foreground: 20 11% 25%;
+    /* #483E39 - Darker Brown */
 
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%; /* Bordas muito escuras */
-    --input: 0 0% 8%; /* Inputs muito escuros */
-    --ring: 45 85% 65%; /* Ring dourado brilhante */
+    --border: 30 10% 36%;
+    /* #665C53 - Dark Brown */
+    --input: 30 10% 36%;
+    /* #665C53 - Dark Brown */
+    --ring: 38 33% 70%;
+    /* #CCB999 - Tan */
 
     /* Custom Areluna colors para modo escuro dramático */
-    --battleship-grey: 0 0% 75%; /* Bem claro no modo escuro */
-    --jet: 0 0% 98%; /* Texto quase branco */
-    --gold-leaf: 45 85% 65%; /* Gold mais brilhante */
-    --pure-white: 0 0% 5%; /* Background quase preto */
+    --battleship-grey: 20 5% 72%;
+    /* #BBB7B5 */
+    --jet: 38 33% 90%;
+    /* Very light Tan */
+    --gold-leaf: 38 33% 70%;
+    /* #CCB999 */
+    --pure-white: 20 11% 20%;
+    /* Dark Background */
 
     /* Gradients dramáticos para modo escuro */
-    --gradient-gold: linear-gradient(135deg, hsl(45 85% 65%), hsl(45 90% 60%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 2%), hsl(0 0% 8%));
-    --gradient-light: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(38 33% 70%), hsl(38 33% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(20 11% 15%), hsl(20 11% 20%));
+    --gradient-light: linear-gradient(180deg, hsl(20 11% 20%), hsl(20 11% 25%));
 
     /* Shadows muito intensas e douradas */
-    --shadow-elegant: 0 30px 60px -15px rgba(0, 0, 0, 0.95);
-    --shadow-gold: 0 20px 40px -8px rgba(251, 191, 36, 0.5), 0 8px 15px -3px rgba(251, 191, 36, 0.3);
+    --shadow-elegant: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+    --shadow-gold: 0 20px 40px -8px rgba(204, 185, 153, 0.3), 0 8px 15px -3px rgba(204, 185, 153, 0.1);
 
     /* Sidebar para modo escuro */
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 45 85% 65%;
-    --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 45 85% 65%;
+    --sidebar-background: 20 11% 20%;
+    --sidebar-foreground: 38 33% 90%;
+    --sidebar-primary: 38 33% 70%;
+    --sidebar-primary-foreground: 20 11% 25%;
+    --sidebar-accent: 20 11% 25%;
+    --sidebar-accent-foreground: 38 33% 90%;
+    --sidebar-border: 30 10% 36%;
+    --sidebar-ring: 38 33% 70%;
   }
 }
 
@@ -143,7 +160,7 @@ All colors MUST be HSL.
 
 /* Grid Pattern Background */
 .bg-grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -176,6 +193,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateX(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);

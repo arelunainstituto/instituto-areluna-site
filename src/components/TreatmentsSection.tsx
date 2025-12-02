@@ -7,16 +7,16 @@ const TreatmentsSection = () => {
   const [activeCategory, setActiveCategory] = useState("todos");
 
   const categories = [
-    { id: "todos", name: "Todos", icon: "🦷" },
-    { id: "medicina-dentaria", name: "Medicina Dentária", icon: "🦷" },
-    { id: "harmonizacao-orofacial", name: "Harmonização Orofacial", icon: "💫" },
-    { id: "estetica-facial", name: "Estética Facial", icon: "✨" },
-    { id: "estetica-corporal", name: "Estética Corporal", icon: "💪" },
-    { id: "terapia-capilar", name: "Terapia Capilar", icon: "💇" },
-    { id: "transplante-capilar", name: "Transplante Capilar", icon: "🌱" },
-    { id: "nutricao", name: "Nutrição", icon: "🥗" },
-    { id: "endocrinologia", name: "Endocrinologia", icon: "⚕️" },
-    { id: "ansiedade", name: "Ansiedade Clínica", icon: "🧠" }
+    { id: "todos", name: "Todos" },
+    { id: "medicina-dentaria", name: "Medicina Dentária" },
+    { id: "harmonizacao-orofacial", name: "Harmonização Orofacial" },
+    { id: "estetica-facial", name: "Estética Facial" },
+    { id: "estetica-corporal", name: "Estética Corporal" },
+    { id: "terapia-capilar", name: "Terapia Capilar" },
+    { id: "transplante-capilar", name: "Transplante Capilar" },
+    { id: "nutricao", name: "Nutrição" },
+    { id: "endocrinologia", name: "Endocrinologia" },
+    { id: "ansiedade", name: "Ansiedade Clínica" }
   ];
 
   const treatments = [
@@ -291,8 +291,8 @@ const TreatmentsSection = () => {
     }
   ];
 
-  const filteredTreatments = activeCategory === "todos" 
-    ? treatments 
+  const filteredTreatments = activeCategory === "todos"
+    ? treatments
     : treatments.filter(treatment => treatment.category === activeCategory);
 
   return (
@@ -303,15 +303,15 @@ const TreatmentsSection = () => {
           Tratamentos
         </span>
       </div>
-      
+
       {/* Elementos decorativos flutuantes premium */}
       <div className="absolute top-20 right-10 w-40 h-40 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/8 to-amber-400/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-32 left-20 w-32 h-32 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      <div className="absolute bottom-32 left-20 w-32 h-32 bg-gradient-to-br from-amber-400/8 to-[hsl(var(--gold-leaf))]/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-[hsl(var(--gold-leaf))]/3 to-transparent rounded-full blur-3xl"></div>
-      
+
       {/* Subtle grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
-      
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header da seção */}
         <div className="text-center mb-16 sm:mb-20">
@@ -339,14 +339,15 @@ const TreatmentsSection = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
-                 activeCategory === category.id
-                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
-                   : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-300'
-               }`}
+              className={`group relative px-6 py-3.5 rounded-lg font-vivant-light text-sm tracking-wide transition-all duration-500 overflow-hidden ${activeCategory === category.id
+                  ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white shadow-xl border border-white/20'
+                  : 'bg-white/80 backdrop-blur-sm text-jet border-2 border-[hsl(var(--jet))]/20 hover:border-[hsl(var(--jet))]/40 hover:bg-white hover:shadow-lg'
+                }`}
             >
-              <span>{category.icon}</span>
-              {category.name}
+              <span className="relative z-10 font-medium">{category.name}</span>
+              {activeCategory !== category.id && (
+                <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--jet))]/5 to-[hsl(var(--ring))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              )}
             </button>
           ))}
         </div>
@@ -355,9 +356,15 @@ const TreatmentsSection = () => {
         <div className="bg-white dark:bg-gray-50 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-200">
           {/* Header do tratamento ideal */}
           <div className="text-center mb-8">
-            <div className="inline-block bg-[hsl(var(--gold-leaf))] dark:bg-[hsl(var(--gold-leaf))] text-white px-6 py-3 rounded-lg text-sm font-medium mb-6">
-              DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
-            </div>
+            <button className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-vivant-light font-medium text-white transition-all duration-300 bg-[hsl(var(--gold-leaf))] rounded-full hover:bg-[hsl(var(--gold-leaf))]/90 hover:scale-105 hover:shadow-lg">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+              <span className="relative flex items-center gap-2">
+                DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </button>
           </div>
 
           {/* Grid principal de tratamentos */}
@@ -402,49 +409,49 @@ const TreatmentsSection = () => {
 
         {/* Call to Action Premium */}
         <div className="text-center mt-16">
-          <div className="relative bg-gradient-to-br from-[hsl(var(--gold-leaf))] via-amber-400 to-yellow-500 rounded-3xl px-10 py-16 shadow-[0_25px_80px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black rounded-3xl px-10 py-16 shadow-[0_25px_80px_rgba(0,0,0,0.25)] overflow-hidden">
             {/* Elementos decorativos de fundo */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-white/15 rounded-full blur-2xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
-            
+            <div className="absolute top-0 left-0 w-32 h-32 bg-[hsl(var(--gold-leaf))]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-24 h-24 bg-[hsl(var(--gold-leaf))]/15 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[hsl(var(--gold-leaf))]/5 rounded-full blur-3xl"></div>
+
             {/* Overlay de glassmorphism */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 backdrop-blur-sm"></div>
-            
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 via-transparent to-black/10 backdrop-blur-sm"></div>
+
             {/* Conteúdo */}
             <div className="relative z-10">
               {/* Ornamento superior */}
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-px bg-white/40 rounded-full"></div>
-                <div className="w-3 h-3 bg-white/60 rounded-full mx-4 -mt-1.5"></div>
-                <div className="w-16 h-px bg-white/40 rounded-full"></div>
+                <div className="w-16 h-px bg-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
+                <div className="w-3 h-3 bg-[hsl(var(--gold-leaf))]/60 rounded-full mx-4 -mt-1.5"></div>
+                <div className="w-16 h-px bg-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
               </div>
-              
+
               <h3 className="text-4xl md:text-5xl font-vivant text-white mb-8 drop-shadow-lg">
                 Transforme o Seu Sorriso
               </h3>
-              <p className="text-white/95 font-vivant-light text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white/90 font-vivant-light text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
                 Agende uma consulta e descubra como podemos criar o sorriso dos seus sonhos com nossos tratamentos personalizados e tecnologia de vanguarda.
               </p>
-              
+
               {/* Botão premium */}
               <div className="relative inline-block group">
-                <div className="absolute inset-0 bg-white rounded-full blur-md opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
-                <button className="relative bg-white/95 backdrop-blur-sm text-[hsl(var(--gold-leaf))] font-vivant font-semibold px-10 py-5 rounded-full hover:bg-white transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-3xl border border-white/20 group-hover:border-white/40">
+                <div className="absolute inset-0 bg-[hsl(var(--gold-leaf))] rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <button className="relative bg-white/95 backdrop-blur-sm text-gray-800 font-vivant font-semibold px-10 py-5 rounded-full hover:bg-white transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-3xl border border-[hsl(var(--gold-leaf))]/20 group-hover:border-[hsl(var(--gold-leaf))]/40">
                   <span className="relative z-10">Agendar Consulta Exclusiva</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </button>
               </div>
-              
+
               {/* Indicador de qualidade */}
-              <div className="mt-8 flex justify-center items-center space-x-2 text-white/80 text-sm font-vivant-light">
-                <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+              <div className="mt-8 flex justify-center items-center space-x-2 text-[hsl(var(--gold-leaf))]/80 text-sm font-vivant-light">
+                <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))]/60 rounded-full"></div>
                 <span>Atendimento Premium</span>
-                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                <div className="w-1 h-1 bg-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
                 <span>Tecnologia Avançada</span>
-                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                <div className="w-1 h-1 bg-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
                 <span>Resultados Garantidos</span>
-                <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+                <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))]/60 rounded-full"></div>
               </div>
             </div>
           </div>
