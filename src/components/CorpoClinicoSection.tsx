@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
-import draSaraImg from "@/assets/dra-sara.jpg";
+import draYaraImg from "@/assets/dra-yara.jpg";
 import draFedericaImg from "@/assets/dra-federica.jpg";
 
 const CorpoClinicoSection = () => {
@@ -25,19 +25,6 @@ const CorpoClinicoSection = () => {
   }, [emblaApi]);
 
   const doctors = [
-    {
-      name: "Dra. Arethuza Luna",
-      crm: "OMD 11845",
-      specialty: "Harmonização Facial",
-      fullSpecialties: [
-        "Harmonização Facial",
-        "Ortodontia",
-        "Ortopedia"
-      ],
-      peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413229/Dra_Arethuza_x7fsmo.jpg",
-      bio: "Médica Dentista com especialização em Ortodontia, Ortopedia e Harmonização Facial. Master Injector Swift Beauty (NY) e em Harmonização Orofacial Avançada (Miami)."
-    },
     {
       name: "Dr. Leonardo Saraiva",
       crm: "OMD 11846",
@@ -113,17 +100,42 @@ const CorpoClinicoSection = () => {
         "Harmonização Orofacial"
       ],
       peloBrasil: false,
-      image: draSaraImg,
+      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413232/Dra_Sara_muubhr.jpg",
       bio: "Médica Dentista com atuação em odontologia clínica integrada e abordagem personalizada para cada paciente."
     },
     {
-      name: "Dra. Federica Laporta",
-      crm: "OMD",
+      name: "Dra. Yara Campos",
+      crm: "OMD 15666",
+      specialty: "Clínica Geral",
+      fullSpecialties: [
+        "Clínica Geral",
+        "Estética Oral"
+      ],
+      peloBrasil: true,
+      image: draYaraImg,
+      bio: ""
+    },
+    {
+      name: "Federica Laporta",
+      crm: "",
       specialty: "Higienista Oral",
       fullSpecialties: ["Higienista Oral"],
       peloBrasil: false,
       image: draFedericaImg,
-      bio: "Higienista Oral dedicada à prevenção e promoção da saúde oral."
+      bio: ""
+    },
+    {
+      name: "Dra. Arethuza Luna",
+      crm: "OMD 11845",
+      specialty: "Harmonização Facial",
+      fullSpecialties: [
+        "Harmonização Facial",
+        "Ortodontia",
+        "Ortopedia"
+      ],
+      peloBrasil: true,
+      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413229/Dra_Arethuza_x7fsmo.jpg",
+      bio: "Médica Dentista com especialização em Ortodontia, Ortopedia e Harmonização Facial. Master Injector Swift Beauty (NY) e em Harmonização Orofacial Avançada (Miami)."
     }
   ];
 
@@ -201,11 +213,11 @@ const CorpoClinicoSection = () => {
                         <h3 className="font-vivant text-jet dark:text-white text-xl mb-2 group-hover:text-[hsl(var(--gold-leaf))] dark:group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300">
                           {doctor.name}
                         </h3>
-                        <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-light mb-4">
+                        <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-regular mb-4">
                           {doctor.crm}
                         </p>
                         {doctor.bio && (
-                          <p className="text-jet/80 dark:text-gray-300 text-xs font-vivant-light mb-4 line-clamp-4">
+                          <p className="text-jet/80 dark:text-gray-300 text-xs mb-4 line-clamp-4">
                             {doctor.bio}
                           </p>
                         )}
