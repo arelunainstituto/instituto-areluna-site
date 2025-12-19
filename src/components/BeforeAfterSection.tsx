@@ -304,7 +304,7 @@ const BeforeAfterSection = () => {
               </p>
 
               <button className="bg-white/95 dark:bg-gray-100/95 text-[hsl(var(--gold-leaf))] font-vivant font-semibold px-12 py-6 rounded-2xl hover:bg-white dark:hover:bg-gray-100 transition-all duration-500 hover:scale-105 shadow-2xl dark:shadow-none border border-white/20 dark:border-gray-100/20">
-                AGENDAR AVALIAÇÃO GRATUITA
+                AGENDAR AVALIAÇÃO
               </button>
             </div>
           </div>

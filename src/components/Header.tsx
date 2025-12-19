@@ -20,10 +20,10 @@ const Header = () => {
     { href: "/turismo-dentario", label: "TURISMO DENTÁRIO" },
     { href: "/transplante-capilar", label: "TRANSPLANTE CAPILAR" },
     { href: "/estetica-facial", label: "ESTÉTICA FACIAL" },
-    { href: "#midia", label: "MÍDIA" },
+    // { href: "#midia", label: "MÍDIA" },
     { href: "/contato", label: "CONTATO" },
-    { href: "#blog", label: "BLOG" },
-    { href: "#formacoes", label: "FORMAÇÕES" }
+    // { href: "#blog", label: "BLOG" },
+    // { href: "#formacoes", label: "FORMAÇÕES" }
   ];
 
   const handleMobileMenuClick = (href: string) => {
