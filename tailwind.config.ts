@@ -27,11 +27,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'vivant': ['Bw Vivant Skinny', 'sans-serif'],
-				'vivant-light': ['Bw Vivant Skinny', 'sans-serif'],
-				'vivant-medium': ['Bw Vivant Skinny', 'sans-serif'],
-				'vivant-black': ['Bw Vivant Skinny', 'sans-serif'],
-				'vivant-skinny': ['Bw Vivant Skinny', 'sans-serif'],
+				'vivant': ['Tenor Sans', 'sans-serif'],
+				'vivant-light': ['Tenor Sans', 'sans-serif'],
+				'vivant-medium': ['Tenor Sans', 'sans-serif'],
+				'vivant-black': ['Tenor Sans', 'sans-serif'],
+				'vivant-skinny': ['Tenor Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

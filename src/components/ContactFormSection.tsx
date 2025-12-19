@@ -32,8 +32,8 @@ const ContactFormSection = () => {
         </svg>
       ),
       title: "Email",
-      value: "contato@areluna.pt",
-      link: "mailto:contato@areluna.pt"
+      value: "rececao@institutoareluna.pt",
+      link: "mailto:rececao@institutoareluna.pt"
     },
     {
       icon: (
@@ -42,8 +42,8 @@ const ContactFormSection = () => {
         </svg>
       ),
       title: "Telefone",
-      value: "+351 XXX XXX XXX",
-      link: "tel:+351XXXXXXXXX"
+      value: "+351 220 430 090",
+      link: "tel:+351220430090"
     },
     {
       icon: (
@@ -63,7 +63,7 @@ const ContactFormSection = () => {
         </svg>
       ),
       title: "Horário",
-      value: "Seg-Sex: 9h às 18h",
+      value: "Seg-Sex: 09h às 19h",
       link: "#"
     }
   ];
@@ -72,13 +72,13 @@ const ContactFormSection = () => {
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-100/60 via-gray-50/40 to-gray-100/60 dark:from-black dark:via-gray-900/40 dark:to-black relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)', 
+        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }}></div>
-      
+
       {/* Elementos decorativos flutuantes */}
       <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--gold-leaf))]/12 to-[hsl(var(--ring))]/6 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-[hsl(var(--jet))]/10 to-[hsl(var(--gold-leaf))]/8 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-[hsl(var(--jet))]/10 to-[hsl(var(--gold-leaf))]/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       <div className="absolute top-1/2 left-1/4 w-28 h-28 bg-[hsl(var(--gold-leaf))]/6 rounded-full blur-xl"></div>
 
       {/* Background text sutil */}
@@ -105,16 +105,15 @@ const ContactFormSection = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet mb-6 drop-shadow-sm">
             Entre em Contato
           </h2>
-          
+
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
-          
+
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Transforme o Seu Sorriso
+              Renova-se!
             </h3>
             <p className="text-base sm:text-lg text-jet/70 font-vivant-light leading-relaxed">
-              Entre em contacto connosco e agende a sua consulta. Estamos prontos para criar o sorriso dos seus sonhos 
-              com os mais altos padrões de qualidade e excelência.
+              Entre em contacto conosco e agende a sua consulta. Estamos prontos para cuidar de si com os mais altos padrões de qualidade e excelência.
             </p>
           </div>
         </div>
@@ -127,11 +126,10 @@ const ContactFormSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Nome */}
                 <div className="group">
-                  <label 
-                    htmlFor="name" 
-                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${
-                      focusedField === 'name' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
-                    }`}
+                  <label
+                    htmlFor="name"
+                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'name' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
+                      }`}
                   >
                     Nome Completo
                   </label>
@@ -151,11 +149,10 @@ const ContactFormSection = () => {
                 {/* Email e Telefone */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label 
-                      htmlFor="email" 
-                      className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${
-                        focusedField === 'email' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
-                      }`}
+                    <label
+                      htmlFor="email"
+                      className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'email' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
+                        }`}
                     >
                       Email
                     </label>
@@ -173,11 +170,10 @@ const ContactFormSection = () => {
                   </div>
 
                   <div className="group">
-                    <label 
-                      htmlFor="phone" 
-                      className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${
-                        focusedField === 'phone' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
-                      }`}
+                    <label
+                      htmlFor="phone"
+                      className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'phone' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
+                        }`}
                     >
                       Telefone
                     </label>
@@ -196,11 +192,10 @@ const ContactFormSection = () => {
 
                 {/* Assunto */}
                 <div className="group">
-                  <label 
-                    htmlFor="subject" 
-                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${
-                      focusedField === 'subject' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
-                    }`}
+                  <label
+                    htmlFor="subject"
+                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'subject' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
+                      }`}
                   >
                     Assunto
                   </label>
@@ -224,11 +219,10 @@ const ContactFormSection = () => {
 
                 {/* Mensagem */}
                 <div className="group">
-                  <label 
-                    htmlFor="message" 
-                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${
-                      focusedField === 'message' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
-                    }`}
+                  <label
+                    htmlFor="message"
+                    className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'message' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
+                      }`}
                   >
                     Mensagem
                   </label>
@@ -263,7 +257,7 @@ const ContactFormSection = () => {
           <div className="order-1 lg:order-2 space-y-8">
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/15 dark:border-[hsl(var(--gold-leaf))]/30">
               <h4 className="text-2xl font-vivant text-jet mb-6">Informações de Contacto</h4>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <a
@@ -285,29 +279,31 @@ const ContactFormSection = () => {
 
             {/* Mapa ou informação adicional */}
             <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-[hsl(var(--ring))]/5 dark:from-[hsl(var(--gold-leaf))]/20 dark:to-[hsl(var(--ring))]/10 rounded-3xl p-8 border border-[hsl(var(--gold-leaf))]/15">
+              <h4 className="text-xl font-vivant text-jet mb-4">Unidades</h4>
+              <div className="space-y-4 text-jet/80 dark:text-gray-300 font-vivant-light mb-8">
+                <div>
+                  <p className="font-medium text-[hsl(var(--gold-leaf))]">Unidade | Mota Galiza</p>
+                  <p>Rua de Júlio Dinis, 190 | 4050-027 Porto</p>
+                </div>
+                <div>
+                  <p className="font-medium text-[hsl(var(--gold-leaf))]">Unidade | Marquês</p>
+                  <p>Rua de Faria Guimarães, 450 | 4000-205 Porto</p>
+                </div>
+              </div>
+
               <h4 className="text-xl font-vivant text-jet mb-4">Horário de Funcionamento</h4>
               <div className="space-y-3 text-jet/70 font-vivant-light">
                 <div className="flex justify-between">
                   <span>Segunda - Sexta</span>
-                  <span className="text-[hsl(var(--gold-leaf))] font-medium">9:00 - 18:00</span>
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium">09:00 - 19:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sábados</span>
-                  <span className="text-jet/50">Fechado</span>
+                  <span>Sábado</span>
+                  <span className="text-jet/80">Sob marcação</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Domingos</span>
-                  <span className="text-jet/50">Fechado</span>
-                </div>
-                <div className="border-t border-[hsl(var(--gold-leaf))]/20 pt-3 mt-4">
-                  <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-[hsl(var(--gold-leaf))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <p className="text-sm text-[hsl(var(--gold-leaf))] font-medium">
-                      Consultas de emergência disponíveis 24/7
-                    </p>
-                  </div>
+                  <span>Domingo</span>
+                  <span className="text-jet/50">Encerrado</span>
                 </div>
               </div>
             </div>

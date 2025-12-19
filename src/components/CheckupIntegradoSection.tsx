@@ -17,7 +17,7 @@ const CheckupIntegradoSection = () => {
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Avaliação Estética Facial",
-      description: "Análise facial 3D, planeamento de harmonização e rejuvenescimento",
+      description: "Planeamento de harmonização e rejuvenescimento",
       duration: "1-2 horas"
     },
     {

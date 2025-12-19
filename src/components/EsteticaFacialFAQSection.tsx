@@ -137,12 +137,11 @@ const EsteticaFacialFAQSection = () => {
                 Pronta para realçar a sua beleza?
               </h3>
               <p className="text-sm xs:text-base text-gray-300 mb-6 max-w-xl mx-auto">
-                Agende uma consulta gratuita com a Dra. Areluna para descobrir
-                qual o melhor protocolo de tratamentos para si.
+                Agende uma consulta com a equipa de especialistas da Dra. Areluna para descobrir qual o melhor protocolo de tratamentos para si.
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
                 <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                  CONSULTA GRATUITA
+                  Agende a sua consulta
                 </button>
                 <button className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
                   VER TRATAMENTOS

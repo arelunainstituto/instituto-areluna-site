@@ -26,15 +26,15 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-1 h-1 bg-gold-leaf rounded-full"></div>
-                  <span className="text-jet">+351 21 123 4567</span>
+                  <span className="text-jet">+351 220 430 090</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-1 h-1 bg-gold-leaf rounded-full"></div>
-                  <span className="text-jet">info@areluna.pt</span>
+                  <span className="text-jet">rececao@institutoareluna.pt</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-1 h-1 bg-gold-leaf rounded-full"></div>
-                  <span className="text-jet">Rua das Flores, 123 - Lisboa</span>
+                  <span className="text-jet">Rua de Júlio Dinis, 190 - Porto</span>
                 </div>
               </div>
 

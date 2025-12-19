@@ -16,7 +16,9 @@ const TreatmentsSection = () => {
     { id: "transplante-capilar", name: "Transplante Capilar" },
     { id: "nutricao", name: "Nutrição" },
     { id: "endocrinologia", name: "Endocrinologia" },
-    { id: "ansiedade", name: "Ansiedade Clínica" }
+    { id: "ansiedade", name: "Ansiedade Clínica" },
+    { id: "cirurgia-plastica", name: "Cirurgia Plástica" },
+    { id: "dermatologia", name: "Dermatologia" }
   ];
 
   const treatments = [
@@ -340,8 +342,8 @@ const TreatmentsSection = () => {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`group relative px-6 py-3.5 rounded-lg font-vivant-light text-sm tracking-wide transition-all duration-500 overflow-hidden ${activeCategory === category.id
-                  ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white shadow-xl border border-white/20'
-                  : 'bg-white/80 backdrop-blur-sm text-jet border-2 border-[hsl(var(--jet))]/20 hover:border-[hsl(var(--jet))]/40 hover:bg-white hover:shadow-lg'
+                ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white shadow-xl border border-white/20'
+                : 'bg-white/80 backdrop-blur-sm text-jet border-2 border-[hsl(var(--jet))]/20 hover:border-[hsl(var(--jet))]/40 hover:bg-white hover:shadow-lg'
                 }`}
             >
               <span className="relative z-10 font-medium">{category.name}</span>
@@ -428,17 +430,17 @@ const TreatmentsSection = () => {
               </div>
 
               <h3 className="text-4xl md:text-5xl font-vivant text-white mb-8 drop-shadow-lg">
-                Transforme o Seu Sorriso
+                Conheça a sua melhor versão
               </h3>
               <p className="text-white/90 font-vivant-light text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
-                Agende uma consulta e descubra como podemos criar o sorriso dos seus sonhos com nossos tratamentos personalizados e tecnologia de vanguarda.
+                Agende uma consulta e descubra como podemos realizar os seus sonhos com os nossos tratamentos personalizados e alta tecnologia.
               </p>
 
               {/* Botão premium */}
               <div className="relative inline-block group">
                 <div className="absolute inset-0 bg-[hsl(var(--gold-leaf))] rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <button className="relative bg-white/95 backdrop-blur-sm text-gray-800 font-vivant font-semibold px-10 py-5 rounded-full hover:bg-white transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-3xl border border-[hsl(var(--gold-leaf))]/20 group-hover:border-[hsl(var(--gold-leaf))]/40">
-                  <span className="relative z-10">Agendar Consulta Exclusiva</span>
+                  <span className="relative z-10">Agendar consulta</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </button>
               </div>

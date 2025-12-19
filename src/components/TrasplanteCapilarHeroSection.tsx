@@ -1,18 +1,10 @@
 import { Button } from "@/components/ui/button";
-const drMarcos = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954125/instituto-areluna/dr-marcos.jpg";
-
 const TrasplanteCapilarHeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
-      {/* Imagem de fundo com baixa opacidade */}
+      {/* Imagem de fundo removida conforme solicitado */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={drMarcos}
-          alt="Background"
-          className="w-full h-full object-cover  mix-blend-overlay"
-          style={{ objectPosition: 'center 20%' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black"></div>
       </div>
 
       <div
@@ -44,7 +36,7 @@ const TrasplanteCapilarHeroSection = () => {
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
           <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
-            CONSULTA GRATUITA
+            AGENDAR CONSULTA
           </Button>
           <Button variant="outline-gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
             VER RESULTADOS
@@ -55,13 +47,13 @@ const TrasplanteCapilarHeroSection = () => {
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {[
             { number: "25+", label: "Anos de Experiência" },
-            { number: "5K+", label: "Transplantes Realizados" },
+            { number: "15K+", label: "Transplantes Realizados" },
             { number: "FUE", label: "Técnica Premium" },
             { number: "98%", label: "Satisfação Pacientes" }
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center"
+              className="bg-[#231F20]/95 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-[hsl(var(--gold-leaf))]/30 transition-all duration-300 text-center group"
             >
               <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-vivant font-bold text-[hsl(var(--gold-leaf))] mb-2">
                 {stat.number}
@@ -80,7 +72,7 @@ const TrasplanteCapilarHeroSection = () => {
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

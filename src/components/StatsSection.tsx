@@ -1,20 +1,22 @@
 const StatsSection = () => {
   const stats = [
     {
-      number: "16",
+      value: "14",
       label: "Especialistas"
     },
     {
-      number: "10+",
-      label: "Especialidades"
+      value: "22",
+      label: "especialidades"
     },
     {
-      number: "5000+",
-      label: "Pacientes Atendidos"
+      prefix: "+ de ",
+      value: "25 mil",
+      label: "pacientes atendidos"
     },
     {
-      number: "15+",
-      label: "Anos de Tradição"
+      prefix: "+ de ",
+      value: "24 anos",
+      label: "de tradição"
     }
   ];
 
@@ -43,8 +45,15 @@ const StatsSection = () => {
               className="group text-center"
             >
               {/* Número em destaque */}
-              <div className="text-5xl md:text-6xl lg:text-7xl font-vivant text-white mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
-                {stat.number}
+              <div className="flex items-baseline justify-center gap-2 mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
+                {stat.prefix && (
+                  <span className="text-2xl md:text-3xl font-vivant-light text-white/90">
+                    {stat.prefix}
+                  </span>
+                )}
+                <span className="text-5xl md:text-5xl lg:text-5xl font-vivant text-white">
+                  {stat.value}
+                </span>
               </div>
 
               {/* Label */}
@@ -61,7 +70,7 @@ const StatsSection = () => {
         {/* Texto de rodapé */}
         <div className="text-center mt-16">
           <p className="text-white/80 font-vivant-light text-lg">
-            Construindo sorrisos há mais de uma década
+            Construindo sorrisos há mais de duas décadas
           </p>
         </div>
       </div>

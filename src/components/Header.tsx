@@ -215,7 +215,7 @@ const Header = () => {
                   onClick={() => handleMobileMenuClick('#contato')}
                   className="w-full bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black hover:from-gray-800 hover:to-gray-900 text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
                 >
-                  CONSULTA GRATUITA
+                  AGENDAR CONSULTA
                 </button>
 
                 <p className="text-xs text-white/70 mt-2 xs:mt-3 font-light px-2">

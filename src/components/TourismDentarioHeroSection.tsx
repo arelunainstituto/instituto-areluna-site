@@ -5,11 +5,6 @@ const TourismDentarioHeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954609/instituto-areluna/d84bc5ca-828d-4362-9806-cfa7f17440d9.jpg"
-          alt="Background"
-          className="w-full h-full object-cover mix-blend-overlay"
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
 
@@ -50,16 +45,15 @@ const TourismDentarioHeroSection = () => {
         </div>
 
         {/* Estatísticas do programa */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {[
             { number: "3", label: "Dias de Programa" },
-            { number: "25+", label: "Anos de Experiência" },
-            { number: "100%", label: "Médico Português" },
-            { number: "Porto", label: "Cidade Incluída" }
+            { number: "24+", label: "Anos de Experiência" },
+            { number: "Porto", label: "Cidade Invicta" }
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center"
+              className="bg-[#231F20]/95 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-[hsl(var(--gold-leaf))]/30 transition-all duration-300 text-center group"
             >
               <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-vivant font-bold text-[hsl(var(--gold-leaf))] mb-2">
                 {stat.number}

@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
-const esteticaHero = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954163/instituto-areluna/estetica-hero.jpg";
 
 const EsteticaFacialHeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={esteticaHero}
-          alt="Background"
-          className="w-full h-full object-cover mix-blend-overlay"
-          style={{ objectPosition: 'center 20%' }}
-        />
+
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
 
@@ -39,12 +33,12 @@ const EsteticaFacialHeroSection = () => {
 
         <p className="text-base xs:text-lg sm:text-xl lg:text-2xl mb-8 xs:mb-10 sm:mb-12 font-vivant opacity-90 max-w-3xl mx-auto leading-relaxed">
           Realce a sua beleza natural com os mais avançados tratamentos de estética facial.
-          Procedimentos seguros e resultados excepcionais com a Dra. Areluna.
+          Procedimentos seguros e resultados excepcionais com a equipa da Dra. Arethuza Luna.
         </p>
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
           <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
-            CONSULTA GRATUITA
+            AGENDAR CONSULTA
           </Button>
           <Button variant="outline-gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
             VER TRATAMENTOS
@@ -52,16 +46,15 @@ const EsteticaFacialHeroSection = () => {
         </div>
 
         {/* Estatísticas de estética */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {[
-            { number: "25+", label: "Anos de Experiência" },
-            { number: "8K+", label: "Procedimentos Realizados" },
-            { number: "100%", label: "Tratamentos Premium" },
-            { number: "99%", label: "Satisfação das Pacientes" }
+            { number: "15 anos", label: "Anos de experiência" },
+            { number: "5k", label: "Procedimentos realizados" },
+            { number: "95%", label: "Satisfação das pacientes" }
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center overflow-hidden"
+              className="bg-[#231F20]/95 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-[hsl(var(--gold-leaf))]/30 transition-all duration-300 text-center group"
             >
               <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-vivant font-bold text-[hsl(var(--gold-leaf))] mb-2 break-words">
                 {stat.number}
