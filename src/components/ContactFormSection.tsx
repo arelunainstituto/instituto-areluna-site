@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useToast } from "@/components/ui/use-toast";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
@@ -18,10 +19,59 @@ const ContactFormSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui seria implementada a lógica de envio do formulário
-    console.log('Formulário enviado:', formData);
+    setIsSubmitting(true);
+
+    try {
+      const sendUrl = import.meta.env.VITE_SEND_FORM_URL;
+
+      if (!sendUrl) {
+        console.error('VITE_SEND_FORM_URL is not defined');
+        toast({
+          title: "Erro de configuração",
+          description: "Não foi possível enviar a mensagem. Por favor, tente novamente mais tarde ou contate-nos por telefone.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const response = await fetch(sendUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Entraremos em contato o mais breve possível.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Falha no envio');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -243,9 +293,10 @@ const ContactFormSection = () => {
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white font-vivant font-semibold px-8 py-5 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-white/20 group relative overflow-hidden"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white font-vivant font-semibold px-8 py-5 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-white/20 group relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <span className="relative z-10">ENVIAR MENSAGEM</span>
+                    <span className="relative z-10">{isSubmitting ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                 </div>
