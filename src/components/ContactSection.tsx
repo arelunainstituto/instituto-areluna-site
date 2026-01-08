@@ -39,9 +39,15 @@ const ContactSection = () => {
               </div>
 
               <div className="pt-4">
-                <Button variant="outline-gold" size="lg" className="font-light tracking-wide">
-                  MARCAR CONSULTA
-                </Button>
+                <a
+                  href="https://wa.me/351910098226"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline-gold" size="lg" className="font-light tracking-wide w-full sm:w-auto">
+                    MARCAR CONSULTA
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

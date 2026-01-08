@@ -204,7 +204,7 @@ const Header = () => {
               {/* Call to action */}
               <div className="px-4 xs:px-6 sm:px-8">
                 <button
-                  onClick={() => handleMobileMenuClick('#contato')}
+                  onClick={() => window.open('https://wa.me/351910098226', '_blank')}
                   className="w-full bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black hover:from-gray-800 hover:to-gray-900 text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
                 >
                   AGENDAR CONSULTA

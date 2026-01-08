@@ -299,9 +299,11 @@ const TreatmentDetailsSection = () => {
               Oferecemos uma gama completa de tratamentos personalizados.
               Agende uma consulta para encontrarmos a solução ideal para você.
             </p>
-            <Button variant="gold" size="lg" className="px-8 py-4 text-sm xs:text-base tracking-wider font-vivant-light">
-              AGENDAR CONSULTA
-            </Button>
+            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <Button variant="gold" size="lg" className="px-8 py-4 text-sm xs:text-base tracking-wider font-vivant-light">
+                AGENDAR CONSULTA
+              </Button>
+            </a>
           </div>
         </div>
       </div>

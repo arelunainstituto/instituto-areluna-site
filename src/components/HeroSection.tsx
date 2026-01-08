@@ -37,13 +37,32 @@ const HeroSection = () => {
           Referência européia em saúde e estética integrada
         </p>
 
-        <div className="flex justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <Button
-            variant="outline-gold"
-            className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant border-[hsl(var(--gold-leaf))]/30 hover:bg-[hsl(var(--gold-leaf))]/10 text-white min-w-[280px]"
+        <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <a
+            href="https://wa.me/351910098226"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            ENCONTRE O SEU PROCEDIMENTO
-          </Button>
+            <Button
+              variant="outline-gold"
+              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant border-[hsl(var(--gold-leaf))]/30 hover:bg-[hsl(var(--gold-leaf))]/10 text-white min-w-[280px]"
+            >
+              ENCONTRE O SEU PROCEDIMENTO
+            </Button>
+          </a>
+
+          <a
+            href="https://pagamento.institutoareluna.pt/b/eVq6oH2da5oM5nJahT9Zo0w?_gl=1*1u10ymg*_gcl_au*OTQ4NDQ4NDE1LjE3Njc4NzgxMDk.*_ga*MTI1MTYyMTI4OS4xNzY3ODc4MTA5*_ga_1FBN8LDFRR*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgyOTA4ODU1NDk.*_ga_Q2XN6ZFDEN*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgxNjA5NDc2Mjk1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="gold"
+              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300"
+            >
+              RESERVA
+            </Button>
+          </a>
         </div>
 
         {/* Indicador de scroll */}

@@ -4,7 +4,7 @@ const TourismDentarioSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
+    <section id="programa" className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
@@ -107,16 +107,18 @@ const TourismDentarioSection = () => {
                 onMouseLeave={() => setIsHovered(false)}
               >
                 {/* Botão principal */}
-                <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
-                  <span className="relative z-10">AGENDAR CONSULTA ONLINE</span>
+                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                  <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
+                    <span className="relative z-10">AGENDAR CONSULTA ONLINE</span>
 
-                  {/* Shimmer effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
-                    }`}></div>
+                    {/* Shimmer effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
+                      }`}></div>
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
