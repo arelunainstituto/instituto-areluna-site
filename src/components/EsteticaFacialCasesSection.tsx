@@ -1,7 +1,7 @@
 import { useState } from 'react';
-const caso1 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753955350/bca6a6d2-cc76-4279-9371-5211db4763cf_tgqulx.jpg";
+import casoRino from "@/assets/caso-rino.png";
+import casoLips from "@/assets/caso-lips.jpg";
 const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954174/instituto-areluna/estetica-caso-2.jpg";
-const caso3 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954177/instituto-areluna/estetica-caso-3.jpg";
 
 const EsteticaFacialCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
@@ -10,22 +10,22 @@ const EsteticaFacialCasesSection = () => {
     {
       id: 1,
       title: "Caso 1",
-      description: "Rejuvenescimento facial",
-      image: caso1,
+      description: "Rinomodelação com ácido hialurónico",
+      image: casoRino,
       details: "Botox + Preenchimento - Resultado após 2 semanas"
     },
     {
       id: 2,
       title: "Caso 2",
-      description: "Harmonização facial",
+      description: "Toxina Botulínica",
       image: caso2,
       details: "Tratamento completo - Resultado após 1 mês"
     },
     {
       id: 3,
       title: "Caso 3",
-      description: "Lifting não-cirúrgico",
-      image: caso3,
+      description: "Preenchimento labial com ácido hialurónico",
+      image: casoLips,
       details: "Fios de PDO + Skinbooster - Resultado após 3 semanas"
     }
   ];
@@ -158,7 +158,7 @@ const EsteticaFacialCasesSection = () => {
               A sua transformação pode ser a próxima!
             </h3>
             <p className="text-sm xs:text-base text-gray-300 mb-6">
-              Cada rosto é único. Agende uma consulta gratuita para descobrirmos
+              Cada rosto é único. Agende uma consulta para descobrirmos
               qual o melhor protocolo de tratamentos para si.
             </p>
             <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">

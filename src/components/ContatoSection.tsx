@@ -39,7 +39,7 @@ const ContatoSection = () => {
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
 
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
-            Estamos localizados no coração de Évora, prontos para recebê-lo com o mais alto padrão
+            Estamos localizados no Porto, prontos para receber você com o mais alto padrão
             de atendimento e tecnologia avançada.
           </p>
         </div>
@@ -66,19 +66,13 @@ const ContatoSection = () => {
                   <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
-                  <span className="font-vivant-light">+351 266 000 000</span>
+                  <span className="font-vivant-light">+351 220 430 090</span>
                 </div>
                 <div className="flex items-center text-jet/80 dark:text-gray-300">
                   <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="font-vivant-light">geral@areluna.pt</span>
-                </div>
-                <div className="flex items-center text-jet/80 dark:text-gray-300">
-                  <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                  <span className="font-vivant-light">WhatsApp: +351 900 000 000</span>
+                  <span className="font-vivant-light">rececao@institutoareluna.pt</span>
                 </div>
               </div>
             </div>
@@ -103,16 +97,11 @@ const ContatoSection = () => {
                 </div>
                 <div className="flex justify-between items-center text-jet/80 dark:text-gray-300">
                   <span className="font-vivant">Sábado</span>
-                  <span className="font-vivant-light text-[hsl(var(--gold-leaf))]">09:00 - 17:00</span>
+                  <span className="font-vivant-light text-[hsl(var(--gold-leaf))]">Sob marcação</span>
                 </div>
                 <div className="flex justify-between items-center text-jet/80 dark:text-gray-300">
                   <span className="font-vivant">Domingo</span>
-                  <span className="font-vivant-light text-gray-500">Fechado</span>
-                </div>
-                <div className="mt-4 p-3 bg-[hsl(var(--gold-leaf))]/10 rounded-xl">
-                  <p className="text-xs text-jet/70 dark:text-gray-400 font-vivant-light">
-                    Consultas de urgência disponíveis mediante agendamento prévio
-                  </p>
+                  <span className="font-vivant-light text-gray-500">Encerrado</span>
                 </div>
               </div>
             </div>
@@ -135,11 +124,13 @@ const ContatoSection = () => {
               </div>
 
               <div className="space-y-4">
+                <div className="text-jet/80 dark:text-gray-300 mb-6">
+                  <p className="font-vivant text-lg mb-1 text-[hsl(var(--gold-leaf))]">Unidade | Mota Galiza</p>
+                  <p className="font-vivant-light">Rua de Júlio Dinis, 190 | 4050-027 Porto</p>
+                </div>
                 <div className="text-jet/80 dark:text-gray-300">
-                  <p className="font-vivant text-lg mb-2">Instituto Areluna</p>
-                  <p className="font-vivant-light">Rua Serpa Pinto, 123</p>
-                  <p className="font-vivant-light">7000-000 Évora</p>
-                  <p className="font-vivant-light">Portugal</p>
+                  <p className="font-vivant text-lg mb-1 text-[hsl(var(--gold-leaf))]">Unidade | Marquês</p>
+                  <p className="font-vivant-light">Rua de Faria Guimarães, 450 | 4000-205 Porto</p>
                 </div>
 
                 <div className="mt-6">
@@ -164,30 +155,10 @@ const ContatoSection = () => {
               </div>
 
               <div className="space-y-3 text-jet/80 dark:text-gray-300 font-vivant-light">
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                  <span>Estacionamento gratuito disponível</span>
-                </div>
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Paragem de autocarro a 50m</span>
-                </div>
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <span>5 minutos a pé do centro histórico</span>
-                </div>
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 text-[hsl(var(--gold-leaf))] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                  <span>Acesso para pessoas com mobilidade reduzida</span>
-                </div>
+                <p>
+                  As nossas unidades estão situadas em locais de fácil acesso no Porto.
+                  Utilize o mapa para encontrar a melhor rota para si.
+                </p>
               </div>
             </div>
           </div>
@@ -200,11 +171,11 @@ const ContatoSection = () => {
               Pronto para transformar o seu sorriso?
             </h3>
             <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
-              Agende a sua consulta gratuita e descubra como podemos ajudá-lo
+              Agende a sua consulta e descubra como podemos ajudá-lo
               a alcançar o sorriso perfeito.
             </p>
             <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
-              MARCAR CONSULTA GRATUITA
+              AGENDAR CONSULTA
             </button>
           </div>
         </div>

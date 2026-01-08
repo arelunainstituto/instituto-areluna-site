@@ -1,5 +1,5 @@
 import { useState } from 'react';
-const heroWoman = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954115/instituto-areluna/hero-woman.jpg";
+import draArePremium from "@/assets/dra-are-premium.jpg";
 
 const EsteticaFacialSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -64,7 +64,7 @@ const EsteticaFacialSection = () => {
             {/* Descrição do programa */}
             <div className="space-y-6">
               <p className="text-lg text-jet/80 dark:text-gray-300 font-vivant-light leading-relaxed">
-                A <strong className="text-[hsl(var(--gold-leaf))]">Dra. Areluna</strong> oferece os mais modernos tratamentos de
+                A equipa de especialistas da <strong className="text-[hsl(var(--gold-leaf))]">Dra. Areluna</strong> oferece os mais modernos tratamentos de
                 <span className="text-[hsl(var(--gold-leaf))] font-medium"> estética facial</span>,
                 combinando técnicas avançadas com produtos premium para resultados naturais.
               </p>
@@ -109,7 +109,7 @@ const EsteticaFacialSection = () => {
               >
                 {/* Botão principal */}
                 <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
-                  <span className="relative z-10">AGENDAR CONSULTA GRATUITA</span>
+                  <span className="relative z-10">CONSULTA</span>
 
                   {/* Shimmer effect */}
                   <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
@@ -126,13 +126,13 @@ const EsteticaFacialSection = () => {
           <div className="order-1 lg:order-2">
             <div className="relative bg-gradient-to-br from-white/80 via-white/60 to-white/80 rounded-3xl p-8 backdrop-blur-sm border border-[hsl(var(--gold-leaf))]/20 shadow-2xl">
               {/* Imagem da Dra. Areluna */}
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden">
                 <img
-                  src={heroWoman}
+                  src={draArePremium}
                   alt="Dra. Areluna - Especialista em Estética Facial"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-auto"
                 />
               </div>
 

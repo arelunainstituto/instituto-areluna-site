@@ -42,7 +42,7 @@ const TreatmentsHeroSection = () => {
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
           <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
-            CONSULTA GRATUITA
+            AGENDAR CONSULTA
           </Button>
           <Button variant="outline-gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
             VER TODOS OS TRATAMENTOS
@@ -52,14 +52,14 @@ const TreatmentsHeroSection = () => {
         {/* Estatísticas rápidas */}
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {[
-            { number: "25+", label: "Anos de Experiência" },
-            { number: "15K+", label: "Sorrisos Transformados" },
+            { number: "+24", label: "Anos de Experiência" },
+            { number: "+20 mil", label: "Sorrisos Transformados" },
             { number: "95%", label: "Satisfação dos Pacientes" },
-            { number: "20+", label: "Tratamentos Disponíveis" }
+            { number: "100+", label: "Tratamentos Disponíveis" }
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center"
+              className="bg-[#231F20]/95 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-[hsl(var(--gold-leaf))]/30 transition-all duration-300 text-center group"
             >
               <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-vivant font-bold text-[hsl(var(--gold-leaf))] mb-2">
                 {stat.number}

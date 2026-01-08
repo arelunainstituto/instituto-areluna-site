@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +20,10 @@ const Header = () => {
     { href: "/turismo-dentario", label: "TURISMO DENTÁRIO" },
     { href: "/transplante-capilar", label: "TRANSPLANTE CAPILAR" },
     { href: "/estetica-facial", label: "ESTÉTICA FACIAL" },
-    { href: "#midia", label: "MÍDIA" },
+    // { href: "#midia", label: "MÍDIA" },
     { href: "/contato", label: "CONTATO" },
-    { href: "#blog", label: "BLOG" },
-    { href: "#formacoes", label: "FORMAÇÕES" }
+    // { href: "#blog", label: "BLOG" },
+    // { href: "#formacoes", label: "FORMAÇÕES" }
   ];
 
   const handleMobileMenuClick = (href: string) => {
@@ -45,7 +44,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-      ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
+      ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
       : 'bg-transparent'
       }`}>
       {/* Main header */}
@@ -113,8 +112,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className={`hover:text-[hsl(var(--gold-leaf))] transition-colors font-light tracking-wider text-xs xl:text-sm whitespace-nowrap ${isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
-                  }`}
+                className={`hover:text-[hsl(var(--gold-leaf))] transition-colors font-light tracking-wider text-xs xl:text-sm whitespace-nowrap text-white`}
                 onClick={(e) => {
                   if (item.href.startsWith('#')) {
                     e.preventDefault();
@@ -128,9 +126,6 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <div className="ml-4 xl:ml-6">
-              <ThemeToggle />
-            </div>
           </nav>
         </div>
 
@@ -205,9 +200,6 @@ const Header = () => {
 
             {/* Footer do menu */}
             <div className="pb-6 xs:pb-8 pt-4 xs:pt-6 text-center border-t border-[hsl(var(--gold-leaf))]/10">
-              <div className="mb-4 xs:mb-6">
-                <ThemeToggle />
-              </div>
 
               {/* Call to action */}
               <div className="px-4 xs:px-6 sm:px-8">
@@ -215,7 +207,7 @@ const Header = () => {
                   onClick={() => handleMobileMenuClick('#contato')}
                   className="w-full bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black hover:from-gray-800 hover:to-gray-900 text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
                 >
-                  CONSULTA GRATUITA
+                  AGENDAR CONSULTA
                 </button>
 
                 <p className="text-xs text-white/70 mt-2 xs:mt-3 font-light px-2">

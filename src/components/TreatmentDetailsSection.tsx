@@ -297,10 +297,10 @@ const TreatmentDetailsSection = () => {
             </h3>
             <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Oferecemos uma gama completa de tratamentos personalizados.
-              Agende uma consulta gratuita para encontrarmos a solução ideal para você.
+              Agende uma consulta para encontrarmos a solução ideal para você.
             </p>
             <Button variant="gold" size="lg" className="px-8 py-4 text-sm xs:text-base tracking-wider font-vivant-light">
-              CONSULTA GRATUITA
+              AGENDAR CONSULTA
             </Button>
           </div>
         </div>

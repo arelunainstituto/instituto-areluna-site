@@ -2,6 +2,9 @@ import { useState, useCallback } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
+import draYaraImg from "@/assets/dra-yara.jpg";
+import draFedericaImg from "@/assets/dra-federica.jpg";
+
 const CorpoClinicoSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -23,16 +26,26 @@ const CorpoClinicoSection = () => {
 
   const doctors = [
     {
-      name: "Dra. Arethuza Luna",
-      crm: "OMD 11845",
-      specialty: "Harmonização Facial",
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413229/Dra_Arethuza_x7fsmo.jpg",
-      bio: "Médica Dentista com especialização em Ortodontia, Ortopedia e Harmonização Facial. Master Injector Swift Beauty (NY) e em Harmonização Orofacial Avançada (Miami)."
+      name: "Dr. Leonardo Saraiva",
+      crm: "OMD 11846",
+      specialty: "Radiologia",
+      fullSpecialties: [
+        "Radiologia",
+        "Estomatologia e Patologia Oral"
+      ],
+      peloBrasil: true,
+      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413227/Dr_Leonardo_Saraiva_hpzjei.jpg",
+      bio: "Médico Dentista com especialização em Radiologia e Estomatologia. Diagnóstico preciso e visão abrangente da saúde orall."
     },
     {
       name: "Dra. Daiane Andrade",
       crm: "OMD 22681",
       specialty: "Endodontia",
+      fullSpecialties: [
+        "Endodontia",
+        "Reabilitação Oral"
+      ],
+      peloBrasil: true,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Daiane_mywpym.jpg",
       bio: "Médica Dentista especialista em Endodontia, com atuação focada em tratamentos de precisão e preservação dentária."
     },
@@ -40,6 +53,8 @@ const CorpoClinicoSection = () => {
       name: "Dra. Carla Salvi",
       crm: "OMD 15214",
       specialty: "Cirurgia Oral",
+      fullSpecialties: ["Cirurgia Oral"],
+      peloBrasil: true,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413233/Dra_Karla_lgoql9.jpg",
       bio: "Cirurgiã Oral e Maxilofacial com Mestrado em Medicina Dentária. Atuação dedicada à reabilitação estética e funcional do sorriso."
     },
@@ -47,6 +62,11 @@ const CorpoClinicoSection = () => {
       name: "Dr. Marcos Kawasaki",
       crm: "OM 75498",
       specialty: "Transplante Capilar",
+      fullSpecialties: [
+        "Transplante Capilar",
+        "Dermatologia"
+      ],
+      peloBrasil: true,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413232/Dr_Marcos_Kawasaki_zy97ko.jpg",
       bio: "Mais de 17 anos de experiência clínica. Pós-graduado em Dermatologia (ISMD) e especialista em Transplante Capilar."
     },
@@ -54,6 +74,11 @@ const CorpoClinicoSection = () => {
       name: "Dra. Aline Marodin",
       crm: "OMD 12330",
       specialty: "Harmonização Facial",
+      fullSpecialties: [
+        "Harmonização Orofacial",
+        "Cirurgia Oral"
+      ],
+      peloBrasil: true,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Aline_yd8mq5.jpg",
       bio: "Cirurgiã Oral e Maxilofacial com formação em Harmonização Facial Avançada. Atuação voltada para resultados naturais e equilibrados."
     },
@@ -61,43 +86,56 @@ const CorpoClinicoSection = () => {
       name: "Dra. Pethine Dalsasso",
       crm: "OMD 12228",
       specialty: "Odontopediatria",
+      fullSpecialties: ["Odontopediatria"],
+      peloBrasil: true,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Pethine_ommkbw.jpg",
-      bio: "Médica Dentista especialista em Odontopediatria. Atendimento humanizado com foco no bem-estar e conforto das crianças."
+      bio: "Médica Dentista especialista em Odontopediatria. Atendimento humanizado com foco em bem-estar e conforto das crianças."
     },
     {
       name: "Dra. Sara Ribeiro",
       crm: "OMD 08560",
       specialty: "Clínica Geral",
+      fullSpecialties: [
+        "Clínica Geral e Reabilitação Oral",
+        "Harmonização Orofacial"
+      ],
+      peloBrasil: false,
       image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413232/Dra_Sara_muubhr.jpg",
       bio: "Médica Dentista com atuação em odontologia clínica integrada e abordagem personalizada para cada paciente."
     },
     {
-      name: "Dr. Leonardo Saraiva",
-      crm: "OMD 11846",
-      specialty: "Radiologia",
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413227/Dr_Leonardo_Saraiva_hpzjei.jpg",
-      bio: "Médico Dentista com especialização em Radiologia e Estomatologia. Diagnóstico preciso e visão abrangente da saúde orall."
+      name: "Dra. Yara Campos",
+      crm: "OMD 15666",
+      specialty: "Clínica Geral",
+      fullSpecialties: [
+        "Clínica Geral",
+        "Estética Oral"
+      ],
+      peloBrasil: true,
+      image: draYaraImg,
+      bio: ""
     },
     {
-      name: "Dra. Ana Vitória Marques",
-      crm: "OMD 15209",
-      specialty: "Estética Oral",
-      image: "https://ui-avatars.com/api/?name=Ana+Vitoria+Marques&background=random",
-      bio: "Mestre em Medicina Dentária pela Universidade do Porto, com foco em estética e reabilitação oral."
+      name: "Federica Laporta",
+      crm: "",
+      specialty: "Higienista Oral",
+      fullSpecialties: ["Higienista Oral"],
+      peloBrasil: false,
+      image: draFedericaImg,
+      bio: ""
     },
     {
-      name: "Dra. Patricia Tatsch",
-      crm: "OM 47868",
-      specialty: "Cirurgia Plástica",
-      image: "https://ui-avatars.com/api/?name=Patricia+Tatsch&background=random",
-      bio: "Cirurgiã Plástica reconhecida pela excelência em cirurgias da mama, unindo cuidado, técnica e naturalidade. Atuação em mamoplastia de aumento, redução e troca de prótese, além de Lipo HD de definição natural."
-    },
-    {
-      name: "Dra. Thais Perlingeiro",
-      crm: "OM 69564",
-      specialty: "Nutrologia",
-      image: "https://ui-avatars.com/api/?name=Thais+Perlingeiro&background=random",
-      bio: "Médica com formação em Endocrinologia e especialização em Nutrologia. Atuação focada em emagrecimento, menopausa e medicina anti-aging, promovendo prevenção de doenças e equilíbrio hormonal."
+      name: "Dra. Arethuza Luna",
+      crm: "OMD 11845",
+      specialty: "Harmonização Facial",
+      fullSpecialties: [
+        "Harmonização Facial",
+        "Ortodontia",
+        "Ortopedia"
+      ],
+      peloBrasil: true,
+      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413229/Dra_Arethuza_x7fsmo.jpg",
+      bio: "Médica Dentista com especialização em Ortodontia, Ortopedia e Harmonização Facial. Master Injector Swift Beauty (NY) e em Harmonização Orofacial Avançada (Miami)."
     }
   ];
 
@@ -175,11 +213,11 @@ const CorpoClinicoSection = () => {
                         <h3 className="font-vivant text-jet dark:text-white text-xl mb-2 group-hover:text-[hsl(var(--gold-leaf))] dark:group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300">
                           {doctor.name}
                         </h3>
-                        <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-light mb-4">
+                        <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-regular mb-4">
                           {doctor.crm}
                         </p>
                         {doctor.bio && (
-                          <p className="text-jet/80 dark:text-gray-300 text-xs font-vivant-light mb-4 line-clamp-4">
+                          <p className="text-jet/80 dark:text-gray-300 text-xs mb-4 line-clamp-4">
                             {doctor.bio}
                           </p>
                         )}
@@ -191,8 +229,25 @@ const CorpoClinicoSection = () => {
 
                         {/* Especialidade detalhada */}
                         <div className="flex flex-col space-y-1">
-                          <span className="text-sm text-jet/70 dark:text-gray-400">Especialista em</span>
-                          <span className="text-sm font-medium text-[hsl(var(--gold-leaf))]">{doctor.specialty}</span>
+                          <span className="text-sm text-jet/70 dark:text-gray-400">
+                            Especialista em
+                          </span>
+                          {doctor.fullSpecialties ? (
+                            doctor.fullSpecialties.map((spec, i) => (
+                              <span key={i} className="text-sm font-medium text-[hsl(var(--gold-leaf))] block">
+                                {spec}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="text-sm font-medium text-[hsl(var(--gold-leaf))]">
+                              {doctor.specialty}
+                            </span>
+                          )}
+                          {doctor.peloBrasil && (
+                            <span className="text-xs text-jet/50 dark:text-gray-500 italic mt-1 block">
+                              *pelo Brasil
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>

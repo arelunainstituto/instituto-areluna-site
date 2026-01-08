@@ -158,7 +158,7 @@ const TrasplanteCapilarCasesSection = () => {
               O seu caso pode ser o próximo!
             </h3>
             <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
-              Cada caso é único. Agende uma consulta gratuita para avaliarmos
+              Cada caso é único. Agende uma consulta para avaliarmos
               o seu potencial de transplante e definirmos o melhor plano.
             </p>
             <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">

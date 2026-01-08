@@ -130,8 +130,8 @@ const Footer = () => {
                     </svg>
                   </div>
                   <div>
-                    <a href="tel:+351XXXXXXXXX" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light text-sm">
-                      +351 XXX XXX XXX
+                    <a href="tel:+351220430090" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light text-sm">
+                      +351 220 430 090
                     </a>
                   </div>
                 </li>
@@ -142,8 +142,8 @@ const Footer = () => {
                     </svg>
                   </div>
                   <div>
-                    <a href="mailto:contato@areluna.pt" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light text-sm">
-                      contato@areluna.pt
+                    <a href="mailto:rececao@institutoareluna.pt" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light text-sm">
+                      rececao@institutoareluna.pt
                     </a>
                   </div>
                 </li>
@@ -155,8 +155,9 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-pure-white/70 font-vivant-light text-sm">
-                      Seg-Sex: 9h-18h<br />
-                      Sáb: Fechado
+                      Seg-Sex: 09h-19h<br />
+                      Sáb: Sob marcação<br />
+                      Dom: Encerrado
                     </p>
                   </div>
                 </li>

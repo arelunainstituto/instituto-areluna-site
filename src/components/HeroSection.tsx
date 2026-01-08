@@ -30,12 +30,11 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant-skinny font-thin mb-8 leading-tight tracking-wide text-white opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          O principal destino para <span className="font-vivant text-[hsl(var(--gold-leaf))]">medicina dentária</span>
-          <br />e estética avançada em Portugal
+          O principal destino para estética avançada e <span className="font-vivant text-[hsl(var(--gold-leaf))]">medicina dentária</span> em Portugal
         </h1>
 
         <p className="text-base sm:text-lg lg:text-xl mb-12 font-vivant-light text-white/80 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          Transforme seu sorriso com os melhores especialistas
+          Referência européia em saúde e estética integrada
         </p>
 
         <div className="flex justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>

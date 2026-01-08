@@ -34,7 +34,7 @@ const ContatoHeroSection = () => {
         {/* Subtítulo */}
         <p className="text-lg xs:text-xl sm:text-2xl text-white/90 font-vivant-light leading-relaxed mb-10 max-w-3xl mx-auto">
           Estamos aqui para ajudá-lo a alcançar o sorriso dos seus sonhos.
-          Agende sua consulta gratuita e transforme sua vida.
+          Agende sua consulta e transforme sua vida.
         </p>
 
         {/* Botões de ação */}
@@ -61,7 +61,7 @@ const ContatoHeroSection = () => {
                 </svg>
               ),
               title: "Localização",
-              info: "Centro de Évora"
+              info: "Porto, Portugal"
             },
             {
               icon: (
@@ -70,7 +70,7 @@ const ContatoHeroSection = () => {
                 </svg>
               ),
               title: "Telefone",
-              info: "+351 266 000 000"
+              info: "+351 220 430 090"
             },
             {
               icon: (
@@ -79,7 +79,7 @@ const ContatoHeroSection = () => {
                 </svg>
               ),
               title: "Email",
-              info: "geral@areluna.pt"
+              info: "rececao@institutoareluna.pt"
             }
           ].map((contact, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 xs:p-6 border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300">
