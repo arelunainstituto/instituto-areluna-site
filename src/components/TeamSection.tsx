@@ -26,7 +26,7 @@ const TeamSection = () => {
             Nossa <span className="text-gold-leaf">Equipe</span>
           </h2>
           <p className="text-xl text-battleship leading-relaxed">
-            Profissionais altamente qualificados e experientes, dedicados a proporcionar 
+            Profissionais altamente qualificados e experientes, dedicados a proporcionar
             o melhor cuidado e resultados excepcionais para cada paciente.
           </p>
         </div>
@@ -37,8 +37,8 @@ const TeamSection = () => {
               <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
                 <div className="relative">
                   <div className="w-32 h-32 rounded-full overflow-hidden shadow-elegant group-hover:shadow-gold transition-all duration-300">
-                    <img 
-                      src={member.image} 
+                    <img
+                      src={member.image}
                       alt={member.name}
                       loading="lazy"
                       decoding="async"
@@ -59,11 +59,11 @@ const TeamSection = () => {
                     </h3>
                     <p className="text-gold-leaf font-medium">{member.specialty}</p>
                   </div>
-                  
+
                   <p className="text-battleship leading-relaxed">
                     {member.description}
                   </p>
-                  
+
                   <div className="space-y-2">
                     {member.qualifications.map((qualification, idx) => (
                       <div key={idx} className="flex items-center justify-center lg:justify-start space-x-2">
@@ -86,9 +86,11 @@ const TeamSection = () => {
             <p className="text-battleship mb-6">
               Agende uma consulta e conheça os profissionais que cuidarão da sua beleza e bem-estar.
             </p>
-            <button className="bg-gold-leaf text-jet px-8 py-3 rounded-lg font-medium hover:shadow-gold transition-all duration-300">
-              Agendar Consulta
-            </button>
+            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <button className="bg-gold-leaf text-jet px-8 py-3 rounded-lg font-medium hover:shadow-gold transition-all duration-300">
+                Agendar Consulta
+              </button>
+            </a>
           </div>
         </div>
       </div>

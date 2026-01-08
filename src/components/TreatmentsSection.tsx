@@ -298,7 +298,7 @@ const TreatmentsSection = () => {
     : treatments.filter(treatment => treatment.category === activeCategory);
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white dark:bg-gray-100 relative overflow-hidden">
+    <section id="tratamentos" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white dark:bg-gray-100 relative overflow-hidden">
       {/* Background text sutil */}
       <div className="absolute top-32 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[18rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
@@ -358,15 +358,17 @@ const TreatmentsSection = () => {
         <div className="bg-white dark:bg-gray-50 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-200">
           {/* Header do tratamento ideal */}
           <div className="text-center mb-8">
-            <button className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-vivant-light font-medium text-white transition-all duration-300 bg-[hsl(var(--gold-leaf))] rounded-full hover:bg-[hsl(var(--gold-leaf))]/90 hover:scale-105 hover:shadow-lg">
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
-              <span className="relative flex items-center gap-2">
-                DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
-                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </button>
+            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <button className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-vivant-light font-medium text-white transition-all duration-300 bg-[hsl(var(--gold-leaf))] rounded-full hover:bg-[hsl(var(--gold-leaf))]/90 hover:scale-105 hover:shadow-lg">
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+                <span className="relative flex items-center gap-2">
+                  DESCUBRA O TRATAMENTO IDEAL PARA VOCÊ
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </button>
+            </a>
           </div>
 
           {/* Grid principal de tratamentos */}
@@ -439,10 +441,12 @@ const TreatmentsSection = () => {
               {/* Botão premium */}
               <div className="relative inline-block group">
                 <div className="absolute inset-0 bg-[hsl(var(--gold-leaf))] rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                <button className="relative bg-white/95 backdrop-blur-sm text-gray-800 font-vivant font-semibold px-10 py-5 rounded-full hover:bg-white transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-3xl border border-[hsl(var(--gold-leaf))]/20 group-hover:border-[hsl(var(--gold-leaf))]/40">
-                  <span className="relative z-10">Agendar consulta</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </button>
+                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                  <button className="relative bg-white/95 backdrop-blur-sm text-gray-800 font-vivant font-semibold px-10 py-5 rounded-full hover:bg-white transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-3xl border border-[hsl(var(--gold-leaf))]/20 group-hover:border-[hsl(var(--gold-leaf))]/40">
+                    <span className="relative z-10">Agendar consulta</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </button>
+                </a>
               </div>
 
               {/* Indicador de qualidade */}

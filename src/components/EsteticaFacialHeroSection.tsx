@@ -37,10 +37,17 @@ const EsteticaFacialHeroSection = () => {
         </p>
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
-          <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
-            AGENDAR CONSULTA
-          </Button>
-          <Button variant="outline-gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
+          <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
+              AGENDAR CONSULTA
+            </Button>
+          </a>
+          <Button
+            variant="outline-gold"
+            size="lg"
+            className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]"
+            onClick={() => document.getElementById('estetica')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             VER TRATAMENTOS
           </Button>
         </div>

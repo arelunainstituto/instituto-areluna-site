@@ -138,15 +138,14 @@ const TreatmentsFAQSection = () => {
               </h3>
               <p className="text-sm xs:text-base text-gray-300 mb-6 max-w-xl mx-auto">
                 Nossa equipa está disponível para esclarecer todas as suas questões
-                numa consulta personalizada e gratuita.
+                numa consulta personalizada.
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
-                <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                  AGENDAR CONSULTA
-                </button>
-                <button className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                  CONTACTAR POR WHATSAPP
-                </button>
+                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                  <button className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
+                    CONTACTAR POR WHATSAPP
+                  </button>
+                </a>
               </div>
             </div>
           </div>

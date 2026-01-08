@@ -39,9 +39,11 @@ const ContatoHeroSection = () => {
 
         {/* Botões de ação */}
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center items-center mb-16">
-          <Button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base shadow-lg hover:shadow-xl transform hover:scale-105">
-            AGENDAR CONSULTA
-          </Button>
+          <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <Button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base shadow-lg hover:shadow-xl transform hover:scale-105">
+              AGENDAR CONSULTA
+            </Button>
+          </a>
           <Button
             variant="outline"
             className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-jet rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base backdrop-blur-sm bg-white/10"

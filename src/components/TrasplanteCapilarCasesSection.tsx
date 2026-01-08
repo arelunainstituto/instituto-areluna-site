@@ -161,9 +161,11 @@ const TrasplanteCapilarCasesSection = () => {
               Cada caso é único. Agende uma consulta para avaliarmos
               o seu potencial de transplante e definirmos o melhor plano.
             </p>
-            <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
-              AVALIAR MEU CASO
-            </button>
+            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
+                AVALIAR MEU CASO
+              </button>
+            </a>
           </div>
         </div>
       </div>
