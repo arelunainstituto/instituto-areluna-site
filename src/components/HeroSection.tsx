@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
@@ -30,11 +33,11 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant-skinny font-thin mb-8 leading-tight tracking-wide text-white opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          O principal destino para estética avançada e <span className="font-vivant text-[hsl(var(--gold-leaf))]">medicina dentária</span> em Portugal
+          {t('hero.title_start')} <span className="font-vivant text-[hsl(var(--gold-leaf))]">{t('hero.title_highlight')}</span> {t('hero.title_end')}
         </h1>
 
         <p className="text-base sm:text-lg lg:text-xl mb-12 font-vivant-light text-white/80 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          Referência européia em saúde e estética integrada
+          {t('hero.subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
@@ -47,7 +50,7 @@ const HeroSection = () => {
               variant="outline-gold"
               className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant border-[hsl(var(--gold-leaf))]/30 hover:bg-[hsl(var(--gold-leaf))]/10 text-white min-w-[280px]"
             >
-              ENCONTRE O SEU PROCEDIMENTO
+              {t('hero.find_procedure')}
             </Button>
           </a>
 
@@ -60,7 +63,7 @@ const HeroSection = () => {
               variant="gold"
               className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300"
             >
-              RESERVA
+              {t('hero.book')}
             </Button>
           </a>
         </div>

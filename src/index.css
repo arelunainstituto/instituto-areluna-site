@@ -258,3 +258,72 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Quill.js Compatibility Layer */
+.ql-align-center {
+  text-align: center;
+}
+
+.ql-align-right {
+  text-align: right;
+}
+
+.ql-align-justify {
+  text-align: justify;
+}
+
+.ql-indent-1 {
+  padding-left: 2em;
+}
+
+.ql-indent-2 {
+  padding-left: 4em;
+}
+
+.ql-indent-3 {
+  padding-left: 6em;
+}
+
+.ql-indent-4 {
+  padding-left: 8em;
+}
+
+.ql-indent-5 {
+  padding-left: 10em;
+}
+
+.ql-indent-6 {
+  padding-left: 12em;
+}
+
+.ql-indent-7 {
+  padding-left: 14em;
+}
+
+.ql-indent-8 {
+  padding-left: 16em;
+}
+
+.ql-video {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure embedded images and iframes are responsive */
+article img,
+article iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+article iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Fix for Quill.js empty paragraphs causing excessive spacing */
+.prose p:has(br:only-child) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

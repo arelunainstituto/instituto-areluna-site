@@ -1,22 +1,26 @@
+import { useTranslation } from 'react-i18next';
+
 const StatsSection = () => {
+  const { t } = useTranslation();
+
   const stats = [
     {
-      value: "14",
-      label: "Especialistas"
+      value: t('stats.specialists.value'),
+      label: t('stats.specialists.label')
     },
     {
-      value: "22",
-      label: "especialidades"
+      value: t('stats.specialties.value'),
+      label: t('stats.specialties.label')
     },
     {
-      prefix: "+ de ",
-      value: "25 mil",
-      label: "pacientes atendidos"
+      prefix: t('stats.patients.prefix') + " ",
+      value: t('stats.patients.value'),
+      label: t('stats.patients.label')
     },
     {
-      prefix: "+ de ",
-      value: "24 anos",
-      label: "de tradição"
+      prefix: t('stats.tradition.prefix') + " ",
+      value: t('stats.tradition.value'),
+      label: t('stats.tradition.label')
     }
   ];
 
@@ -29,11 +33,11 @@ const StatsSection = () => {
         {/* Header da seção */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-vivant text-white mb-4">
-            Nossa Excelência
+            {t('stats.title')}
           </h2>
           <div className="w-24 h-1 bg-white mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-white/90 max-w-2xl mx-auto font-vivant-light">
-            Números que refletem nossa dedicação em oferecer o melhor cuidado dentário
+            {t('stats.subtitle')}
           </p>
         </div>
 
@@ -70,7 +74,7 @@ const StatsSection = () => {
         {/* Texto de rodapé */}
         <div className="text-center mt-16">
           <p className="text-white/80 font-vivant-light text-lg">
-            Construindo sorrisos há mais de duas décadas
+            {t('stats.footer_text')}
           </p>
         </div>
       </div>

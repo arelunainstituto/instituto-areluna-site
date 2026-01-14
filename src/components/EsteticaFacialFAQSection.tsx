@@ -1,40 +1,42 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const EsteticaFacialFAQSection = () => {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "Que tipos de tratamentos de estética facial oferece?",
-      answer: "Oferecemos uma ampla gama de tratamentos incluindo botox, preenchimentos com ácido hialurónico, peelings químicos, mesoterapia facial, fios de PDO para lifting, laserterapia e tratamentos para rejuvenescimento. Cada procedimento é personalizado conforme as necessidades específicas de cada paciente."
+      question: t("facial_aesthetics_page.faq.list.types.question"),
+      answer: t("facial_aesthetics_page.faq.list.types.answer")
     },
     {
-      question: "Os tratamentos de estética facial são dolorosos?",
-      answer: "A maioria dos nossos tratamentos causa apenas desconforto mínimo. Utilizamos técnicas de anestesia tópica quando necessário e trabalhamos sempre para maximizar o conforto do paciente. Procedimentos como botox e preenchimentos são geralmente bem tolerados com apenas uma ligeira sensação de picada."
+      question: t("facial_aesthetics_page.faq.list.pain.question"),
+      answer: t("facial_aesthetics_page.faq.list.pain.answer")
     },
     {
-      question: "Quando vou ver os resultados dos tratamentos?",
-      answer: "Os resultados variam conforme o tratamento. Botox mostra efeito em 3-7 dias, preenchimentos são imediatos mas o resultado final surge em 2 semanas, peelings mostram melhoria em 1-2 semanas. Durante a consulta, explicamos o timeline específico para cada procedimento."
+      question: t("facial_aesthetics_page.faq.list.results_time.question"),
+      answer: t("facial_aesthetics_page.faq.list.results_time.answer")
     },
     {
-      question: "Quanto tempo duram os resultados?",
-      answer: "A duração varia por tratamento: botox dura 4-6 meses, preenchimentos 6-18 meses dependendo da zona, peelings têm resultados progressivos, fios de PDO mantêm efeito por 12-18 meses. Estabelecemos um plano de manutenção personalizado para manter os resultados."
+      question: t("facial_aesthetics_page.faq.list.duration.question"),
+      answer: t("facial_aesthetics_page.faq.list.duration.answer")
     },
     {
-      question: "Existe algum tempo de recuperação?",
-      answer: "A maioria dos tratamentos permite retomar atividades normais imediatamente. Pode haver ligeiro inchaço ou vermelhidão que desaparece em poucas horas. Para peelings mais intensos, o tempo de recuperação pode ser de 3-7 dias. Fornecemos sempre instruções detalhadas pós-tratamento."
+      question: t("facial_aesthetics_page.faq.list.recovery.question"),
+      answer: t("facial_aesthetics_page.faq.list.recovery.answer")
     },
     {
-      question: "Como sei qual tratamento é adequado para mim?",
-      answer: "Durante a consulta inicial gratuita, avaliamos o seu tipo de pele, preocupações específicas e objetivos estéticos. Com base nesta análise personalizada, recomendamos o protocolo de tratamentos mais adequado para alcançar os resultados desejados de forma natural e harmoniosa."
+      question: t("facial_aesthetics_page.faq.list.suitability.question"),
+      answer: t("facial_aesthetics_page.faq.list.suitability.answer")
     },
     {
-      question: "Os tratamentos são seguros?",
-      answer: "Sim, todos os nossos tratamentos são realizados com produtos certificados e técnicas comprovadas. A Dra. Areluna tem 25 anos de experiência e formação especializada em estética facial. Seguimos rigorosos protocolos de segurança e higiene para garantir procedimentos seguros e eficazes."
+      question: t("facial_aesthetics_page.faq.list.safety.question"),
+      answer: t("facial_aesthetics_page.faq.list.safety.answer")
     },
     {
-      question: "Posso combinar diferentes tratamentos?",
-      answer: "Sim, frequentemente combinamos tratamentos para resultados mais completos e naturais. Por exemplo, botox com preenchimentos, ou mesoterapia com peelings. Criamos protocolos personalizados que podem incluir múltiplos procedimentos, sempre respeitando os intervalos de segurança entre tratamentos."
+      question: t("facial_aesthetics_page.faq.list.combination.question"),
+      answer: t("facial_aesthetics_page.faq.list.combination.answer")
     }
   ];
 
@@ -72,18 +74,17 @@ const EsteticaFacialFAQSection = () => {
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
-            Perguntas sobre Estética
+            {t("facial_aesthetics_page.faq.title")}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Estética Facial Premium
+              {t("facial_aesthetics_page.faq.subtitle")}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-              Esclarecemos todas as dúvidas sobre os nossos tratamentos de estética facial.
-              Procedimentos seguros e personalizados para realçar a sua beleza natural.
+              {t("facial_aesthetics_page.faq.description")}
             </p>
           </div>
         </div>
@@ -134,22 +135,22 @@ const EsteticaFacialFAQSection = () => {
           <div className="text-center mt-12 sm:mt-16">
             <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20">
               <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-white mb-3 sm:mb-4">
-                Pronta para realçar a sua beleza?
+                {t("facial_aesthetics_page.faq.cta_title")}
               </h3>
               <p className="text-sm xs:text-base text-gray-300 mb-6 max-w-xl mx-auto">
-                Agende uma consulta com a equipa de especialistas da Dra. Areluna para descobrir qual o melhor protocolo de tratamentos para si.
+                {t("facial_aesthetics_page.faq.cta_desc")}
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                    Agende a sua consulta
+                    {t("facial_aesthetics_page.faq.cta_button_schedule")}
                   </button>
                 </a>
                 <button
                   className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide"
                   onClick={() => document.getElementById('estetica')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  VER TRATAMENTOS
+                  {t("facial_aesthetics_page.faq.cta_button_treatments")}
                 </button>
               </div>
             </div>

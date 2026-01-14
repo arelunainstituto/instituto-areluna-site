@@ -1,40 +1,42 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const TrasplanteCapilarFAQSection = () => {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "O que é a técnica FUE e como funciona?",
-      answer: "FUE (Follicular Unit Extraction) é a técnica mais avançada de transplante capilar. Extraímos folículos individuais da área doadora com micro-punções de 0,8-1,0mm, preservando os tecidos circundantes. Depois implantamos cada folículo na área recetorai com precisão, garantindo resultados naturais e cicatrização rápida."
+      question: t('hair_transplant_page.faq.list.fue_technique.question'),
+      answer: t('hair_transplant_page.faq.list.fue_technique.answer')
     },
     {
-      question: "O transplante capilar FUE é doloroso?",
-      answer: "O procedimento é realizado com anestesia local, pelo que não sentirá dor durante a cirurgia. Pode haver algum desconforto mínimo nos primeiros 2-3 dias, facilmente controlado com medicação. A maioria dos pacientes considera o pós-operatório muito mais confortável do que esperavam."
+      question: t('hair_transplant_page.faq.list.pain.question'),
+      answer: t('hair_transplant_page.faq.list.pain.answer')
     },
     {
-      question: "Quando vou ver os resultados finais?",
-      answer: "Os primeiros cabelos começam a crescer aos 3-4 meses. Aos 6 meses já se vê uma diferença significativa. O resultado final e completo é visível entre 12-18 meses. O cabelo transplantado cresce normalmente e pode ser cortado, penteado e tratado como o resto do cabelo."
+      question: t('hair_transplant_page.faq.list.results_time.question'),
+      answer: t('hair_transplant_page.faq.list.results_time.answer')
     },
     {
-      question: "Quantas sessões são necessárias?",
-      answer: "Na maioria dos casos, uma única sessão é suficiente. Dependendo do grau de calvície e dos objetivos estéticos, pode ser necessária uma segunda sessão após 12-18 meses para maior densidade. Durante a consulta, definimos um plano personalizado para o seu caso específico."
+      question: t('hair_transplant_page.faq.list.sessions.question'),
+      answer: t('hair_transplant_page.faq.list.sessions.answer')
     },
     {
-      question: "O transplante capilar é definitivo?",
-      answer: "Sim, o transplante capilar é permanente. Os folículos transplantados são retirados da área doadora (nuca/laterais) que geneticamente não sofrem calvície. Por isso, o cabelo transplantado mantém essas características e não cairá ao longo da vida."
+      question: t('hair_transplant_page.faq.list.definitive.question'),
+      answer: t('hair_transplant_page.faq.list.definitive.answer')
     },
     {
-      question: "Qual é o tempo de recuperação?",
-      answer: "Pode retomar atividades normais em 2-3 dias. O trabalho pode ser retomado após 3-5 dias, dependendo da atividade. Exercício físico intenso deve ser evitado por 2 semanas. As crostinhas caem naturalmente em 7-10 dias. Seguimos acompanhamento pós-operatório rigoroso."
+      question: t('hair_transplant_page.faq.list.recovery.question'),
+      answer: t('hair_transplant_page.faq.list.recovery.answer')
     },
     {
-      question: "Posso fazer transplante se tenho pouco cabelo doador?",
-      answer: "Avaliamos cada caso individualmente. Mesmo com área doadora limitada, muitas vezes é possível obter excelentes resultados focando nas áreas mais importantes (linha frontal). Utilizamos técnicas de maximização da densidade e, se necessário, sugerimos tratamentos complementares."
+      question: t('hair_transplant_page.faq.list.donor_area.question'),
+      answer: t('hair_transplant_page.faq.list.donor_area.answer')
     },
     {
-      question: "O resultado fica natural?",
-      answer: "Sim, com a técnica FUE e nossa experiência de 25 anos, os resultados são completamente naturais. Respeitamos o padrão natural de crescimento, a direção dos cabelos e a linha frontal adequada à idade. Ninguém conseguirá distinguir o cabelo transplantado do natural."
+      question: t('hair_transplant_page.faq.list.natural_look.question'),
+      answer: t('hair_transplant_page.faq.list.natural_look.answer')
     }
   ];
 
@@ -72,18 +74,17 @@ const TrasplanteCapilarFAQSection = () => {
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
-            Perguntas sobre Transplante
+            {t('hair_transplant_page.faq.title')}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Transplante Capilar FUE
+              {t('hair_transplant_page.faq.subtitle')}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-              Esclarecemos todas as dúvidas sobre o transplante capilar FUE.
-              A técnica mais avançada para recuperar a sua confiança e densidade capilar natural.
+              {t('hair_transplant_page.faq.description')}
             </p>
           </div>
         </div>
@@ -134,23 +135,22 @@ const TrasplanteCapilarFAQSection = () => {
           <div className="text-center mt-12 sm:mt-16">
             <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-[hsl(var(--ring))]/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-[hsl(var(--ring))]/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20">
               <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-jet dark:text-white mb-3 sm:mb-4">
-                Pronto para recuperar a sua confiança?
+                {t('hair_transplant_page.faq.cta_title')}
               </h3>
               <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
-                Agende uma consulta para avaliarmos o seu caso e definirmos
-                o melhor plano de transplante capilar personalizado.
+                {t('hair_transplant_page.faq.cta_desc')}
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                    AGENDAR CONSULTA
+                    {t('hair_transplant_page.faq.cta_button_schedule')}
                   </button>
                 </a>
                 <button
                   className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide"
                   onClick={() => document.getElementById('transplante')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  VER RESULTADOS
+                  {t('hair_transplant_page.faq.cta_button_results')}
                 </button>
               </div>
             </div>

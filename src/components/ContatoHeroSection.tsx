@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 const heroWoman = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954115/instituto-areluna/hero-woman.jpg";
 
 const ContatoHeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
@@ -19,36 +22,35 @@ const ContatoHeroSection = () => {
         <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/30 shadow-lg mb-8">
           <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3 animate-pulse"></div>
           <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-            FALE CONOSCO
+            {t("contact_page.hero.badge")}
           </span>
         </div>
 
         {/* Título principal */}
         <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-vivant text-white mb-6 leading-tight">
-          Entre em
+          {t("contact_page.hero.title_start")}
           <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-lg">
-            Contato
+            {t("contact_page.hero.title_highlight")}
           </span>
         </h1>
 
         {/* Subtítulo */}
         <p className="text-lg xs:text-xl sm:text-2xl text-white/90 font-vivant-light leading-relaxed mb-10 max-w-3xl mx-auto">
-          Estamos aqui para ajudá-lo a alcançar o sorriso dos seus sonhos.
-          Agende sua consulta e transforme sua vida.
+          {t("contact_page.hero.subtitle")}
         </p>
 
         {/* Botões de ação */}
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center items-center mb-16">
           <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
             <Button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base shadow-lg hover:shadow-xl transform hover:scale-105">
-              AGENDAR CONSULTA
+              {t("contact_page.hero.cta_main")}
             </Button>
           </a>
           <Button
             variant="outline"
             className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-jet rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base backdrop-blur-sm bg-white/10"
           >
-            WHATSAPP DIRETO
+            {t("contact_page.hero.cta_whatsapp")}
           </Button>
         </div>
 
@@ -62,7 +64,7 @@ const ContatoHeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               ),
-              title: "Localização",
+              title: t("contact_page.hero.quick_contact.location.title"),
               info: "Porto, Portugal"
             },
             {
@@ -71,7 +73,7 @@ const ContatoHeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               ),
-              title: "Telefone",
+              title: t("contact_page.hero.quick_contact.phone.title"),
               info: "+351 220 430 090"
             },
             {
@@ -80,7 +82,7 @@ const ContatoHeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               ),
-              title: "Email",
+              title: t("contact_page.hero.quick_contact.email.title"),
               info: "rececao@institutoareluna.pt"
             }
           ].map((contact, index) => (

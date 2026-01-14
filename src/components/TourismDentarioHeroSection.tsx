@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const TourismDentarioHeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
@@ -16,29 +19,28 @@ const TourismDentarioHeroSection = () => {
         <div className="inline-flex items-center bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-full px-4 xs:px-6 py-2 xs:py-3 border border-[hsl(var(--gold-leaf))]/30 shadow-lg mb-6 xs:mb-8">
           <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
           <span className="text-[hsl(var(--gold-leaf))] font-vivant text-xs xs:text-sm font-medium tracking-wide">
-            PROGRAMA EXCLUSIVO
+            {t('tourism_page.hero.badge')}
           </span>
         </div>
 
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant-skinny font-thin mb-6 xs:mb-8 leading-tight tracking-wider" style={{
           fontWeight: 200
         }}>
-          Turismo Dentário<br className="hidden sm:block" />
+          {t('tourism_page.hero.title_start')}<br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
           <span className="text-[hsl(var(--gold-leaf))] drop-shadow-lg">
-            no Porto
+            {t('tourism_page.hero.title_highlight')}
           </span>
         </h1>
 
         <p className="text-base xs:text-lg sm:text-xl lg:text-2xl mb-8 xs:mb-10 sm:mb-12 font-vivant opacity-90 max-w-3xl mx-auto leading-relaxed">
-          Transforme o seu sorriso enquanto descobre as belezas da cidade do Porto.
-          Um programa de 3 dias com tratamento dentário e experiência turística incluída.
+          {t('tourism_page.hero.description')}
         </p>
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
           <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
             <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
-              AGENDAR PROGRAMA
+              {t('tourism_page.hero.cta_schedule')}
             </Button>
           </a>
           <Button
@@ -47,16 +49,16 @@ const TourismDentarioHeroSection = () => {
             className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]"
             onClick={() => document.getElementById('programa')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            SABER MAIS
+            {t('tourism_page.hero.cta_more')}
           </Button>
         </div>
 
         {/* Estatísticas do programa */}
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {[
-            { number: "3", label: "Dias de Programa" },
-            { number: "24+", label: "Anos de Experiência" },
-            { number: "Porto", label: "Cidade Invicta" }
+            { number: t('tourism_page.hero.stats.days.value'), label: t('tourism_page.hero.stats.days.label') },
+            { number: t('tourism_page.hero.stats.experience.value'), label: t('tourism_page.hero.stats.experience.label') },
+            { number: t('tourism_page.hero.stats.location.value'), label: t('tourism_page.hero.stats.location.label') }
           ].map((stat, index) => (
             <div
               key={index}

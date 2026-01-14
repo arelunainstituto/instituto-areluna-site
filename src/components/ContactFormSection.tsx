@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useToast } from "@/components/ui/use-toast";
+import { useTranslation } from "react-i18next";
 
 const ContactFormSection = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,8 +34,8 @@ const ContactFormSection = () => {
       if (!sendUrl) {
         console.error('VITE_SEND_FORM_URL is not defined');
         toast({
-          title: "Erro de configuração",
-          description: "Não foi possível enviar a mensagem. Por favor, tente novamente mais tarde ou contate-nos por telefone.",
+          title: t("contact.toasts.config_error_title"),
+          description: t("contact.toasts.config_error_desc"),
           variant: "destructive",
         });
         return;
@@ -49,8 +51,8 @@ const ContactFormSection = () => {
 
       if (response.ok) {
         toast({
-          title: "Mensagem enviada!",
-          description: "Entraremos em contato o mais breve possível.",
+          title: t("contact.toasts.success_title"),
+          description: t("contact.toasts.success_desc"),
         });
         setFormData({
           name: '',
@@ -65,8 +67,8 @@ const ContactFormSection = () => {
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
       toast({
-        title: "Erro ao enviar",
-        description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
+        title: t("contact.toasts.error_title"),
+        description: t("contact.toasts.error_desc"),
         variant: "destructive",
       });
     } finally {
@@ -81,7 +83,7 @@ const ContactFormSection = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      title: "Email",
+      title: t("contact.info.email_label"),
       value: "rececao@institutoareluna.pt",
       link: "mailto:rececao@institutoareluna.pt"
     },
@@ -91,7 +93,7 @@ const ContactFormSection = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
-      title: "Telefone",
+      title: t("contact.info.phone_label"),
       value: "+351 220 430 090",
       link: "tel:+351220430090"
     },
@@ -102,8 +104,8 @@ const ContactFormSection = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      title: "Localização",
-      value: "Porto, Portugal",
+      title: t("contact.info.location_label"),
+      value: t("contact.info.location_value"),
       link: "#"
     },
     {
@@ -112,8 +114,8 @@ const ContactFormSection = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "Horário",
-      value: "Seg-Sex: 09h às 19h",
+      title: t("contact.info.hours_label"),
+      value: t("contact.info.hours_value"),
       link: "#"
     }
   ];
@@ -134,7 +136,7 @@ const ContactFormSection = () => {
       {/* Background text sutil */}
       <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          Contato
+          {t("contact.background_text")}
         </span>
       </div>
 
@@ -153,17 +155,17 @@ const ContactFormSection = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet mb-6 drop-shadow-sm">
-            Entre em Contato
+            {t("contact.title")}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Renova-se!
+              {t("contact.subtitle")}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 font-vivant-light leading-relaxed">
-              Entre em contacto conosco e agende a sua consulta. Estamos prontos para cuidar de si com os mais altos padrões de qualidade e excelência.
+              {t("contact.description")}
             </p>
           </div>
         </div>
@@ -181,7 +183,7 @@ const ContactFormSection = () => {
                     className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'name' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
                       }`}
                   >
-                    Nome Completo
+                    {t("contact.form.name")}
                   </label>
                   <input
                     type="text"
@@ -191,7 +193,7 @@ const ContactFormSection = () => {
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
                     className="w-full px-4 py-4 bg-white/70 dark:bg-gray-800/70 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all duration-300 font-vivant-light placeholder-gray-400 dark:placeholder-gray-500 text-jet dark:text-gray-100"
-                    placeholder="Introduza o seu nome completo"
+                    placeholder={t("contact.form.name_placeholder")}
                     required
                   />
                 </div>
@@ -204,7 +206,7 @@ const ContactFormSection = () => {
                       className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'email' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
                         }`}
                     >
-                      Email
+                      {t("contact.form.email")}
                     </label>
                     <input
                       type="email"
@@ -214,7 +216,7 @@ const ContactFormSection = () => {
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
                       className="w-full px-4 py-4 bg-white/70 dark:bg-gray-800/70 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all duration-300 font-vivant-light placeholder-gray-400 dark:placeholder-gray-500 text-jet dark:text-gray-100"
-                      placeholder="seu@email.com"
+                      placeholder={t("contact.form.email_placeholder")}
                       required
                     />
                   </div>
@@ -225,7 +227,7 @@ const ContactFormSection = () => {
                       className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'phone' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
                         }`}
                     >
-                      Telefone
+                      {t("contact.form.phone")}
                     </label>
                     <input
                       type="tel"
@@ -235,7 +237,7 @@ const ContactFormSection = () => {
                       onFocus={() => setFocusedField('phone')}
                       onBlur={() => setFocusedField(null)}
                       className="w-full px-4 py-4 bg-white/70 dark:bg-gray-800/70 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all duration-300 font-vivant-light placeholder-gray-400 dark:placeholder-gray-500 text-jet dark:text-gray-100"
-                      placeholder="+351 XXX XXX XXX"
+                      placeholder={t("contact.form.phone_placeholder")}
                     />
                   </div>
                 </div>
@@ -247,7 +249,7 @@ const ContactFormSection = () => {
                     className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'subject' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
                       }`}
                   >
-                    Assunto
+                    {t("contact.form.subject")}
                   </label>
                   <select
                     id="subject"
@@ -258,12 +260,12 @@ const ContactFormSection = () => {
                     className="w-full px-4 py-4 bg-white/70 dark:bg-gray-800/70 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all duration-300 font-vivant-light text-jet dark:text-gray-100"
                     required
                   >
-                    <option value="">Selecione um assunto</option>
-                    <option value="consulta">Agendar Consulta</option>
-                    <option value="tratamentos">Informações sobre Tratamentos</option>
-                    <option value="turismo">Turismo Dentário</option>
-                    <option value="emergencia">Consulta de Emergência</option>
-                    <option value="outros">Outros</option>
+                    <option value="">{t("contact.form.subject_placeholder")}</option>
+                    <option value="consulta">{t("contact.form.subjects.consultation")}</option>
+                    <option value="tratamentos">{t("contact.form.subjects.treatments")}</option>
+                    <option value="turismo">{t("contact.form.subjects.tourism")}</option>
+                    <option value="emergencia">{t("contact.form.subjects.emergency")}</option>
+                    <option value="outros">{t("contact.form.subjects.other")}</option>
                   </select>
                 </div>
 
@@ -274,7 +276,7 @@ const ContactFormSection = () => {
                     className={`block text-sm font-vivant font-medium mb-2 transition-colors duration-300 ${focusedField === 'message' ? 'text-[hsl(var(--gold-leaf))]' : 'text-jet/70'
                       }`}
                   >
-                    Mensagem
+                    {t("contact.form.message")}
                   </label>
                   <textarea
                     id="message"
@@ -284,7 +286,7 @@ const ContactFormSection = () => {
                     onBlur={() => setFocusedField(null)}
                     rows={5}
                     className="w-full px-4 py-4 bg-white/70 dark:bg-gray-800/70 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all duration-300 font-vivant-light placeholder-gray-400 dark:placeholder-gray-500 text-jet dark:text-gray-100 resize-none"
-                    placeholder="Descreva como podemos ajudá-lo..."
+                    placeholder={t("contact.form.message_placeholder")}
                     required
                   />
                 </div>
@@ -296,7 +298,7 @@ const ContactFormSection = () => {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white font-vivant font-semibold px-8 py-5 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-white/20 group relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <span className="relative z-10">{isSubmitting ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}</span>
+                    <span className="relative z-10">{isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                 </div>
@@ -307,7 +309,7 @@ const ContactFormSection = () => {
           {/* Informações de contato */}
           <div className="order-1 lg:order-2 space-y-8">
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/15 dark:border-[hsl(var(--gold-leaf))]/30">
-              <h4 className="text-2xl font-vivant text-jet mb-6">Informações de Contacto</h4>
+              <h4 className="text-2xl font-vivant text-jet mb-6">{t("contact.info.title")}</h4>
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -330,31 +332,31 @@ const ContactFormSection = () => {
 
             {/* Mapa ou informação adicional */}
             <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/10 to-[hsl(var(--ring))]/5 dark:from-[hsl(var(--gold-leaf))]/20 dark:to-[hsl(var(--ring))]/10 rounded-3xl p-8 border border-[hsl(var(--gold-leaf))]/15">
-              <h4 className="text-xl font-vivant text-jet mb-4">Unidades</h4>
+              <h4 className="text-xl font-vivant text-jet mb-4">{t("contact.units.title")}</h4>
               <div className="space-y-4 text-jet/80 dark:text-gray-300 font-vivant-light mb-8">
                 <div>
-                  <p className="font-medium text-[hsl(var(--gold-leaf))]">Unidade | Mota Galiza</p>
-                  <p>Rua de Júlio Dinis, 190 | 4050-027 Porto</p>
+                  <p className="font-medium text-[hsl(var(--gold-leaf))]">{t("contact.units.unit1.name")}</p>
+                  <p>{t("contact.units.unit1.address")}</p>
                 </div>
                 <div>
-                  <p className="font-medium text-[hsl(var(--gold-leaf))]">Unidade | Marquês</p>
-                  <p>Rua de Faria Guimarães, 450 | 4000-205 Porto</p>
+                  <p className="font-medium text-[hsl(var(--gold-leaf))]">{t("contact.units.unit2.name")}</p>
+                  <p>{t("contact.units.unit2.address")}</p>
                 </div>
               </div>
 
-              <h4 className="text-xl font-vivant text-jet mb-4">Horário de Funcionamento</h4>
+              <h4 className="text-xl font-vivant text-jet mb-4">{t("contact.opening_hours.title")}</h4>
               <div className="space-y-3 text-jet/70 font-vivant-light">
                 <div className="flex justify-between">
-                  <span>Segunda - Sexta</span>
+                  <span>{t("contact.opening_hours.weekdays")}</span>
                   <span className="text-[hsl(var(--gold-leaf))] font-medium">09:00 - 19:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sábado</span>
-                  <span className="text-jet/80">Sob marcação</span>
+                  <span>{t("contact.opening_hours.saturday")}</span>
+                  <span className="text-jet/80">{t("contact.opening_hours.by_appointment")}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Domingo</span>
-                  <span className="text-jet/50">Encerrado</span>
+                  <span>{t("contact.opening_hours.sunday")}</span>
+                  <span className="text-jet/50">{t("contact.opening_hours.closed")}</span>
                 </div>
               </div>
             </div>
@@ -365,4 +367,4 @@ const ContactFormSection = () => {
   );
 };
 
-export default ContactFormSection; 
+export default ContactFormSection;

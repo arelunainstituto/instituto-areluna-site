@@ -1,40 +1,42 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const TourismDentarioFAQSection = () => {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "O que está incluído no programa de 3 dias?",
-      answer: "O programa inclui consulta inicial, plano de tratamento personalizado, tratamentos dentários necessários, visita guiada pela cidade do Porto, alojamento sugerido e acompanhamento pós-tratamento. Também fornecemos todas as informações turísticas para aproveitar ao máximo a sua estadia."
+      question: t('tourism_page.faq.list.included.question'),
+      answer: t('tourism_page.faq.list.included.answer')
     },
     {
-      question: "Preciso de falar português para participar no programa?",
-      answer: "Não é necessário. A nossa equipa é fluente em várias línguas, incluindo inglês, francês e espanhol. Todo o atendimento e comunicação podem ser feitos na sua língua de preferência, garantindo total conforto durante todo o processo."
+      question: t('tourism_page.faq.list.language.question'),
+      answer: t('tourism_page.faq.list.language.answer')
     },
     {
-      question: "Que tipos de tratamentos podem ser realizados em 3 dias?",
-      answer: "Tratamentos como branqueamento dentário, facetas de porcelana, coroas, pequenas restaurações e limpezas profundas podem ser concluídos. Para tratamentos mais complexos como implantes, podemos iniciar o processo e planear uma segunda visita se necessário."
+      question: t('tourism_page.faq.list.treatments.question'),
+      answer: t('tourism_page.faq.list.treatments.answer')
     },
     {
-      question: "Como é organizado o alojamento durante o programa?",
-      answer: "Oferecemos sugestões de hotéis parceiros com condições especiais para os nossos pacientes, desde opções económicas a hotéis de luxo. Também podemos recomendar apartamentos ou outros tipos de alojamento conforme a sua preferência e orçamento."
+      question: t('tourism_page.faq.list.accommodation.question'),
+      answer: t('tourism_page.faq.list.accommodation.answer')
     },
     {
-      question: "Que locais turísticos vou visitar no Porto?",
-      answer: "O roteiro inclui pontos icónicos como a Ribeira, Torre dos Clérigos, Estação de São Bento, caves do vinho do Porto em Vila Nova de Gaia, Livraria Lello e muito mais. O programa turístico é flexível e pode ser personalizado conforme os seus interesses."
+      question: t('tourism_page.faq.list.tourism.question'),
+      answer: t('tourism_page.faq.list.tourism.answer')
     },
     {
-      question: "Os preços são diferentes do atendimento normal?",
-      answer: "Os preços dos tratamentos mantêm-se os mesmos. O programa de turismo dentário oferece valor acrescentado com a experiência turística, sem custos adicionais nos tratamentos. Apenas paga os tratamentos dentários que necessita."
+      question: t('tourism_page.faq.list.prices.question'),
+      answer: t('tourism_page.faq.list.prices.answer')
     },
     {
-      question: "E se precisar de tratamento adicional após regressar ao meu país?",
-      answer: "Mantemos contacto para acompanhamento pós-tratamento e podemos coordenar com dentistas no seu país de origem se necessário. Também oferecemos consultas de seguimento online e, se precisar, pode sempre regressar para tratamentos complementares."
+      question: t('tourism_page.faq.list.followup.question'),
+      answer: t('tourism_page.faq.list.followup.answer')
     },
     {
-      question: "Posso trazer acompanhante durante o programa?",
-      answer: "Claro! Acompanhantes são bem-vindos e podem participar na experiência turística. Oferecemos sugestões de atividades para que possam aproveitar o tempo enquanto está nos tratamentos. O programa turístico pode ser adaptado para grupos."
+      question: t('tourism_page.faq.list.companion.question'),
+      answer: t('tourism_page.faq.list.companion.answer')
     }
   ];
 
@@ -72,18 +74,17 @@ const TourismDentarioFAQSection = () => {
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
-            Perguntas sobre o Programa
+            {t('tourism_page.faq.title')}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Turismo Dentário no Porto
+              {t('tourism_page.faq.subtitle')}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-              Esclarecemos todas as dúvidas sobre o nosso programa exclusivo de turismo dentário.
-              Uma experiência única que combina cuidados dentários de excelência com o encanto do Porto.
+              {t('tourism_page.faq.description')}
             </p>
           </div>
         </div>
@@ -134,16 +135,15 @@ const TourismDentarioFAQSection = () => {
           <div className="text-center mt-12 sm:mt-16">
             <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20">
               <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-white mb-3 sm:mb-4">
-                Pronto para a experiência?
+                {t('tourism_page.faq.cta_title')}
               </h3>
               <p className="text-sm xs:text-base text-gray-300 mb-6 max-w-xl mx-auto">
-                Agende o seu programa de turismo dentário e descubra como pode transformar
-                o seu sorriso enquanto explora a belíssima cidade do Porto.
+                {t('tourism_page.faq.cta_desc')}
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="px-6 py-3 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                    AGENDAR PROGRAMA
+                    {t('tourism_page.faq.cta_button')}
                   </button>
                 </a>
               </div>

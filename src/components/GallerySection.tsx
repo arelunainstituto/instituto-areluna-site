@@ -1,41 +1,43 @@
 import { useState } from "react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
+import { useTranslation } from 'react-i18next';
 
 const GallerySection = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411823/Clinica-AreLuna-D1-38_dmbtgg.jpg",
-      alt: "Consultório dentário moderno"
+      alt: t('gallery.img1_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411825/Instituto-Areluna-Clinicas-96_zqze6a.jpg",
-      alt: "Espaço moderno da clínica"
+      alt: t('gallery.img2_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411826/Clinica-AreLuna-D1-3_inhjk7.jpg",
-      alt: "Equipamentos de última geração"
+      alt: t('gallery.img3_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411827/Clinica-AreLuna-D1-28_lhs3vb.jpg",
-      alt: "Ambiente de tratamento"
+      alt: t('gallery.img4_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411831/Clinica-AreLuna-D1-44_ebooan.jpg",
-      alt: "Sala de procedimentos"
+      alt: t('gallery.img5_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411838/Clinica-AreLuna-D1-2_dbgdvb.jpg",
-      alt: "Recepção da clínica Areluna"
+      alt: t('gallery.img6_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411838/Instituto-Areluna-Clinicas-38_kw4afw.jpg",
-      alt: "Instalações modernas"
+      alt: t('gallery.img7_alt')
     },
     {
       src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759412566/Instituto-Areluna-Clinicas-80_1_1_txumyu.jpg",
-      alt: "Tecnologia avançada"
+      alt: t('gallery.img8_alt')
     }
   ];
 
@@ -52,10 +54,10 @@ const GallerySection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet dark:text-gray-800 mb-4">
-            Clínica
+            {t('gallery.title')}
           </h2>
           <p className="text-base sm:text-lg text-jet/80 dark:text-gray-700 font-medium tracking-wide max-w-2xl mx-auto px-4">
-            Conheça nossos espaços modernos e equipamentos de última geração
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -94,7 +96,7 @@ const GallerySection = () => {
             <div className="relative max-w-7xl max-h-full">
               <OptimizedImage
                 src={selectedImage}
-                alt="Imagem da clínica em tela cheia"
+                alt={t('gallery.fullscreen_alt')}
                 width={1200}
                 className="max-w-full max-h-full object-contain rounded-lg animate-scale-in shadow-2xl"
               />
