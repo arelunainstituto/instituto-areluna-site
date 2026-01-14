@@ -1,0 +1,688 @@
+{
+    "common": {
+        "loading": "Caricamento...",
+        "error": "Si è verificato un errore",
+        "contact": "Contatto"
+    },
+    "nav": {
+        "institute": "L'Istituto",
+        "treatments": "Trattamenti",
+        "tourism": "Turismo Dentale",
+        "hair_transplant": "Trapianto di Capelli",
+        "facial_aesthetics": "Estetica Facciale",
+        "before_after": "Prima e Dopo",
+        "blog": "Blog"
+    },
+    "hero": {
+        "title_start": "La destinazione principale per l'estetica avanzata e",
+        "title_highlight": "l'odontoiatria",
+        "title_end": "in Portogallo",
+        "subtitle": "Riferimento europeo in salute ed estetica integrata",
+        "find_procedure": "TROVA LA TUA PROCEDURA",
+        "book": "PRENOTA ORA"
+    },
+    "gallery": {
+        "title": "Clinica",
+        "subtitle": "Discover our modern spaces and state-of-the-art equipment",
+        "fullscreen_alt": "Full screen clinic image",
+        "img1_alt": "Modern dental office",
+        "img2_alt": "Modern clinic space",
+        "img3_alt": "State-of-the-art equipment",
+        "img4_alt": "Treatment environment",
+        "img5_alt": "Procedure room",
+        "img6_alt": "Areluna clinic reception",
+        "img7_alt": "Modern facilities",
+        "img8_alt": "Advanced technology"
+    },
+    "team": {
+        "title": "Clinical Team",
+        "subtitle": "Our team of specialist doctors is committed to offering the best care with excellence and dedication in the IAL standard",
+        "specialist_in": "Specialist in",
+        "by_brazil": "*in Brazil",
+        "doctors": {
+            "leonardo": {
+                "role": "Dentist",
+                "specialty": "Radiology",
+                "bio": "Dentist specializing in Radiology and Stomatology. Precise diagnosis and comprehensive view of oral health.",
+                "specs": [
+                    "Radiology",
+                    "Stomatology and Oral Pathology"
+                ]
+            },
+            "daiane": {
+                "role": "Dentist",
+                "specialty": "Endodontics",
+                "bio": "Dentist specializing in Endodontics, focused on precision treatments and dental preservation.",
+                "specs": [
+                    "Endodontics",
+                    "Oral Rehabilitation"
+                ]
+            },
+            "carla": {
+                "role": "Oral Surgeon",
+                "specialty": "Oral Surgery",
+                "bio": "Oral and Maxillofacial Surgeon with a Master's in Dental Medicine. Dedicated to aesthetic and functional smile rehabilitation.",
+                "specs": [
+                    "Oral Surgery"
+                ]
+            },
+            "marcos": {
+                "role": "Physician",
+                "specialty": "Hair Transplant",
+                "bio": "Over 17 years of clinical experience. Postgraduate in Dermatology (ISMD) and specialist in Hair Transplant.",
+                "specs": [
+                    "Hair Transplant",
+                    "Dermatology"
+                ]
+            },
+            "aline": {
+                "role": "Oral Surgeon",
+                "specialty": "Facial Harmonization",
+                "bio": "Oral and Maxillofacial Surgeon trained in Advanced Facial Harmonization. Focused on natural and balanced results.",
+                "specs": [
+                    "Orofacial Harmonization",
+                    "Oral Surgery"
+                ]
+            },
+            "pethine": {
+                "role": "Dentist",
+                "specialty": "Pediatric Dentistry",
+                "bio": "Dentist specializing in Pediatric Dentistry. Humanized care focused on children's well-being and comfort.",
+                "specs": [
+                    "Pediatric Dentistry"
+                ]
+            },
+            "sara": {
+                "role": "Dentist",
+                "specialty": "General Practice",
+                "bio": "Dentist working in integrated clinical dentistry and personalized approach for each patient.",
+                "specs": [
+                    "General Practice and Oral Rehabilitation",
+                    "Orofacial Harmonization"
+                ]
+            },
+            "yara": {
+                "role": "Dentist",
+                "specialty": "General Practice",
+                "bio": "",
+                "specs": [
+                    "General Practice",
+                    "Oral Aesthetics"
+                ]
+            },
+            "federica": {
+                "role": "Oral Hygienist",
+                "specialty": "Oral Hygienist",
+                "bio": "",
+                "specs": [
+                    "Oral Hygienist"
+                ]
+            },
+            "arethuza": {
+                "role": "Dentist",
+                "specialty": "Facial Harmonization",
+                "bio": "Dentist specializing in Orthodontics, Orthopedics and Facial Harmonization. Master Injector Swift Beauty (NY) and Advanced Orofacial Harmonization (Miami).",
+                "specs": [
+                    "Facial Harmonization",
+                    "Orthodontics",
+                    "Orthopedics"
+                ]
+            }
+        }
+    },
+    "stats": {
+        "title": "Your Health in Numbers",
+        "subtitle": "More than numbers, these are stories of lives transformed by an excellent multidisciplinary team.",
+        "footer_text": "Building smiles for over two decades",
+        "specialists": {
+            "value": "15",
+            "label": "Specialists"
+        },
+        "specialties": {
+            "value": "12",
+            "label": "Specialties"
+        },
+        "patients": {
+            "prefix": "+ than",
+            "value": "50k",
+            "label": "Treatments Performed"
+        },
+        "tradition": {
+            "prefix": "+ than",
+            "value": "24 years",
+            "label": "of tradition"
+        }
+    },
+    "treatments": {
+        "title": "Treatments",
+        "power_title": "The Power of a Smile",
+        "description": "Here, we treat smiles as an extension of each patient's identity.\n\nWe combine cutting-edge technology, multidisciplinary care, and aesthetic sensitivity to transform not just the smile — but also how you see and feel about yourself.\n\nAll with comfort, precision, and the excellence that makes Instituto Areluna a reference in oral rehabilitation.",
+        "discover_label": "DISCOVER THE IDEAL TREATMENT FOR YOU",
+        "view_all": "View all {{count}} treatments →",
+        "categories": {
+            "todos": "All",
+            "medicina-dentaria": "Dental Medicine",
+            "harmonizacao-orofacial": "Orofacial Harmonization",
+            "estetica-facial": "Facial Aesthetics",
+            "estetica-corporal": "Body Aesthetics",
+            "terapia-capilar": "Hair Therapy",
+            "transplante-capilar": "Hair Transplant",
+            "nutricao": "Nutrition",
+            "endocrinologia": "Endocrinology",
+            "ansiedade": "Clinical Anxiety",
+            "cirurgia-plastica": "Plastic Surgery",
+            "dermatologia": "Dermatology"
+        },
+        "cta": {
+            "title": "Meet your best version",
+            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "button": "Schedule consultation",
+            "premium": "Premium Care",
+            "tech": "Advanced Technology",
+            "results": "Guaranteed Results"
+        },
+        "items": {
+            "1": {
+                "title": "Dental Aesthetics",
+                "description": "Advanced aesthetic treatments for complete smile transformation.",
+                "features": [
+                    "Veneers",
+                    "Whitening",
+                    "Restorations",
+                    "Natural"
+                ]
+            },
+            "2": {
+                "title": "Invisible Aligners",
+                "description": "Discreet orthodontic correction with removable transparent aligners.",
+                "features": [
+                    "Invisible",
+                    "Removable",
+                    "Comfortable",
+                    "Predictable"
+                ]
+            },
+            "3": {
+                "title": "Traditional Orthodontics",
+                "description": "Orthodontic treatment with brackets for malocclusion correction.",
+                "features": [
+                    "Effective",
+                    "Durable",
+                    "Precise",
+                    "Economical"
+                ]
+            },
+            "4": {
+                "title": "Implantology and Advanced Surgery",
+                "description": "Dental implants and oral surgeries with cutting-edge technology.",
+                "features": [
+                    "Immediate Load",
+                    "Biocompatible",
+                    "Long-lasting",
+                    "Natural"
+                ]
+            },
+            "5": {
+                "title": "Endodontics",
+                "description": "Root canal treatment for preservation of compromised teeth.",
+                "features": [
+                    "Preserves Tooth",
+                    "Painless",
+                    "Microscopy",
+                    "Success"
+                ]
+            },
+            "6": {
+                "title": "Periodontology",
+                "description": "Specialized treatment of gums and support structures.",
+                "features": [
+                    "Laser",
+                    "Regeneration",
+                    "Prevention",
+                    "Health"
+                ]
+            },
+            "7": {
+                "title": "Collagen Biostimulators",
+                "description": "Sculptra and Radiesse for natural facial collagen stimulation.",
+                "features": [
+                    "Natural",
+                    "Long-lasting",
+                    "Rejuvenates",
+                    "Sculptra"
+                ]
+            },
+            "8": {
+                "title": "Double Chin Lipoenzymatic",
+                "description": "Non-surgical reduction of localized fat in the chin region.",
+                "features": [
+                    "Non-invasive",
+                    "Effective",
+                    "Contour",
+                    "Definition"
+                ]
+            },
+            "9": {
+                "title": "Facial Support Threads",
+                "description": "Non-surgical facial lifting with absorbable threads for firmness.",
+                "features": [
+                    "Lifting",
+                    "Firmness",
+                    "Natural",
+                    "Immediate"
+                ]
+            },
+            "10": {
+                "title": "Dark Circles Filling",
+                "description": "Correction of dark circles and hollows with high-quality hyaluronic acid.",
+                "features": [
+                    "Rejuvenates",
+                    "Natural",
+                    "Hydrates",
+                    "Smooths"
+                ]
+            },
+            "11": {
+                "title": "Non-Surgical Rhinoplasty",
+                "description": "Nose correction with hyaluronic acid without the need for surgery.",
+                "features": [
+                    "Non-surgical",
+                    "Immediate",
+                    "Reversible",
+                    "Harmony"
+                ]
+            },
+            "12": {
+                "title": "Medical Peels",
+                "description": "Chemical and enzymatic peels for renewal and rejuvenation.",
+                "features": [
+                    "Renewal",
+                    "Texture",
+                    "Luminosity",
+                    "Anti-aging"
+                ]
+            },
+            "13": {
+                "title": "Skinbooster and Mesotherapy",
+                "description": "Deep hydration and revitalization of facial skin.",
+                "features": [
+                    "Hydration",
+                    "Luminosity",
+                    "Firmness",
+                    "Vitamins"
+                ]
+            },
+            "14": {
+                "title": "Rejuvenation with PRP",
+                "description": "Platelet-Rich Plasma for natural skin regeneration.",
+                "features": [
+                    "Natural",
+                    "Regeneration",
+                    "Collagen",
+                    "Autologous"
+                ]
+            },
+            "15": {
+                "title": "Microneedling",
+                "description": "Collagen stimulation through controlled micro-injuries.",
+                "features": [
+                    "Collagen",
+                    "Texture",
+                    "Scars",
+                    "Firmness"
+                ]
+            },
+            "16": {
+                "title": "Body Radiofrequency",
+                "description": "Treatment for body flaccidity with radiofrequency technology.",
+                "features": [
+                    "Firmness",
+                    "Collagen",
+                    "Contour",
+                    "Non-invasive"
+                ]
+            },
+            "17": {
+                "title": "Body Mesotherapy",
+                "description": "Treatment for localized fat and cellulite with microinjections.",
+                "features": [
+                    "Cellulite",
+                    "Fat",
+                    "Drainage",
+                    "Modeling"
+                ]
+            },
+            "18": {
+                "title": "Lymphatic Drainage",
+                "description": "Specialized massage for post-surgical recovery and well-being.",
+                "features": [
+                    "Post-surgical",
+                    "Detox",
+                    "Relaxing",
+                    "Recovery"
+                ]
+            },
+            "19": {
+                "title": "Hair PRP",
+                "description": "Platelet-Rich Plasma to stimulate hair growth.",
+                "features": [
+                    "Growth",
+                    "Natural",
+                    "Density",
+                    "Regeneration"
+                ]
+            },
+            "20": {
+                "title": "Capillary Microinfusion (MMP)",
+                "description": "Infusion of medications directly into the scalp.",
+                "features": [
+                    "Medications",
+                    "Precision",
+                    "Efficacy",
+                    "Targeted"
+                ]
+            },
+            "21": {
+                "title": "Hair Mesotherapy",
+                "description": "Application of vitamins and nutrients for hair strengthening.",
+                "features": [
+                    "Vitamins",
+                    "Strengthens",
+                    "Nutrition",
+                    "Vitality"
+                ]
+            },
+            "22": {
+                "title": "FUE Transplant",
+                "description": "FUE technique without visible cuts for natural hair transplant.",
+                "features": [
+                    "No Scars",
+                    "Natural",
+                    "Permanent",
+                    "Technology"
+                ]
+            },
+            "23": {
+                "title": "Evaluation with Dermatoscopy",
+                "description": "Advanced digital analysis of the scalp before transplant.",
+                "features": [
+                    "Digital",
+                    "Precision",
+                    "Planning",
+                    "Analysis"
+                ]
+            },
+            "24": {
+                "title": "Anti-inflammatory Nutrition",
+                "description": "Nutritional plans to combat inflammation and optimize health.",
+                "features": [
+                    "Anti-inflammatory",
+                    "Personalized",
+                    "Health",
+                    "Well-being"
+                ]
+            },
+            "25": {
+                "title": "Hormonal Evaluation",
+                "description": "Complete hormonal profile analysis for adults and youths.",
+                "features": [
+                    "Hormonal",
+                    "Complete",
+                    "Metabolic",
+                    "Personalized"
+                ]
+            },
+            "26": {
+                "title": "Dental Anxiety Support",
+                "description": "Specialized support for patients with fear or dental trauma.",
+                "features": [
+                    "Support",
+                    "Comfort",
+                    "Security",
+                    "Specialized"
+                ]
+            }
+        }
+    },
+    "checkup": {
+        "pill": "PROGRAMMA ESCLUSIVO",
+        "title": {
+            "main": "Check-up Integrato per",
+            "highlight": "Pazienti Internazionali"
+        },
+        "description": "Una valutazione completa e integrata che combina odontoiatria, estetica facciale, analisi dei capelli ed esami di laboratorio in un solo giorno.",
+        "services_title": {
+            "main": "Cosa è incluso nel tuo",
+            "highlight": "Check-up"
+        },
+        "services": {
+            "dental": {
+                "title": "Valutazione Odontoiatrica Completa",
+                "description": "Esame orale dettagliato, radiografie panoramiche e piano di trattamento personalizzato",
+                "duration": "2-3 ore"
+            },
+            "hair": {
+                "title": "Analisi Capillare Avanzata",
+                "description": "Tricoscopia digitale, analisi della densità e valutazione per trapianto di capelli",
+                "duration": "1-2 ore"
+            },
+            "facial": {
+                "title": "Valutazione Estetica Facciale",
+                "description": "Pianificazione di armonizzazione e ringiovanimento",
+                "duration": "1-2 ore"
+            },
+            "labs": {
+                "title": "Esami di Laboratorio",
+                "description": "Profilo ormonale, vitamine, minerali e marcatori di salute generale",
+                "duration": "30 min"
+            }
+        },
+        "benefits_title": {
+            "main": "Vantaggi del",
+            "highlight": "Programma"
+        },
+        "benefits": {
+            "one_day": {
+                "title": "Tutto in 1 Giorno",
+                "description": "Valutazione completa in una sola visita"
+            },
+            "personal_assistant": {
+                "title": "Assistente Personale",
+                "description": "Supporto completo nella pianificazione del viaggio"
+            },
+            "integrated_care": {
+                "title": "Cura Integrata",
+                "description": "Approccio olistico alla tua salute ed estetica"
+            },
+            "efficiency": {
+                "title": "Massima Efficienza",
+                "description": "Ottimizzazione del tempo per pazienti internazionali"
+            }
+        },
+        "cta": {
+            "title": "Pronto per la tua trasformazione?",
+            "subtitle": "Prenota il tuo Check-up Integrato e scopri il tuo pieno potenziale",
+            "button": "Prenota Check-up",
+            "support": "Assistenza multilingue"
+        }
+    },
+    "tourism": {
+        "badge": "In 25 anni di esperienza",
+        "title": {
+            "main": "Programma",
+            "highlight": "Turismo Dentale"
+        },
+        "question": "Vivi fuori dal Portogallo e vorresti essere seguito da un <highlight>dentista portoghese</highlight>?",
+        "description": "La <highlight1>Clinica Areluna</highlight1> offre un programma di trasformazione di <highlight2>tre giorni</highlight2> con visita turistica inclusa nella <highlight3>bella città di Porto</highlight3>.",
+        "cta_text": "Contattaci e cambia la tua vita.",
+        "benefits": {
+            "3_days": {
+                "title": "3 Giorni",
+                "desc": "Programma intensivo"
+            },
+            "tourism": {
+                "title": "Turismo",
+                "desc": "Visita a Porto inclusa"
+            },
+            "portuguese": {
+                "title": "Portoghese",
+                "desc": "Dentista nazionale"
+            },
+            "experience": {
+                "title": "Esperienza",
+                "desc": "25 anni di competenza"
+            }
+        },
+        "button": "PRENOTA CONSULENZA ONLINE",
+        "video_badge": "25 ANNI"
+    },
+    "before_after": {
+        "background_text": "Trasformazione",
+        "title": "Galleria del Sorriso",
+        "subtitle": "Trasformazioni Reali",
+        "description": "Scopri come trasformiamo i sorrisi e cambiamo le vite con i nostri trattamenti avanzati. Ogni caso è unico e personalizzato per ottenere risultati eccezionali.",
+        "implants_title": "Impianti e Riabilitazione",
+        "facets_title": "Faccette in Porcellana",
+        "card": {
+            "case_badge": "CASO",
+            "duration_label": "Durata",
+            "treatment_label": "Trattamento"
+        },
+        "cta": {
+            "title": "La Tua Trasformazione Inizia Qui",
+            "text": "Prenota la tua consulenza e scopri come possiamo trasformare il tuo sorriso con risultati naturali e duraturi.",
+            "button": "PRENOTA VALUTAZIONE"
+        },
+        "cases": {
+            "implants": {
+                "1": {
+                    "title": "Trasformazione Completa",
+                    "desc": "Riabilitazione orale totale con protesi fisse",
+                    "treatment": "Impianti e Protesi",
+                    "duration": "4 mesi"
+                },
+                "2": {
+                    "title": "Sorriso Rinnovato",
+                    "desc": "Impianti ed estetica dentale avanzata",
+                    "treatment": "Impianti Dentali",
+                    "duration": "3 mesi"
+                },
+                "3": {
+                    "title": "Cambio di Vita",
+                    "desc": "Ricostruzione dentale personalizzata",
+                    "treatment": "Riabilitazione Totale",
+                    "duration": "5 mesi"
+                }
+            },
+            "facets": {
+                "1": {
+                    "title": "Sorriso Armonioso",
+                    "desc": "Faccette in porcellana per correzione estetica",
+                    "treatment": "Faccette in Porcellana",
+                    "duration": "2 settimane"
+                },
+                "2": {
+                    "title": "Perfezione Naturale",
+                    "desc": "Faccette ultrasottili per risultato naturale",
+                    "treatment": "Faccette Ultrasottili",
+                    "duration": "3 settimane"
+                },
+                "3": {
+                    "title": "Eleganza Raffinata",
+                    "desc": "Faccette personalizzate per sorriso perfetto",
+                    "treatment": "Faccette Personalizzate",
+                    "duration": "2 settimane"
+                }
+            }
+        }
+    },
+    "contact": {
+        "background_text": "Contatto",
+        "title": "Contattaci",
+        "subtitle": "Rinnovati!",
+        "description": "Contattaci e prenota la tua consulenza. Siamo pronti a prenderci cura di te con i più alti standard di qualità ed eccellenza.",
+        "form": {
+            "name": "Nome Completo",
+            "name_placeholder": "Inserisci il tuo nome completo",
+            "email": "Email",
+            "email_placeholder": "tua@email.com",
+            "phone": "Telefono",
+            "phone_placeholder": "+351 XXX XXX XXX",
+            "subject": "Oggetto",
+            "subject_placeholder": "Seleziona un oggetto",
+            "subjects": {
+                "consultation": "Prenota Consulenza",
+                "treatments": "Informazioni sui Trattamenti",
+                "tourism": "Turismo Dentale",
+                "emergency": "Consulenza di Emergenza",
+                "other": "Altro"
+            },
+            "message": "Messaggio",
+            "message_placeholder": "Descrivi come possiamo aiutarti...",
+            "submit": "INVIA MESSAGGIO",
+            "sending": "INVIO..."
+        },
+        "info": {
+            "title": "Informazioni di Contatto",
+            "email_label": "Email",
+            "phone_label": "Telefono",
+            "location_label": "Posizione",
+            "location_value": "Porto, Portogallo",
+            "hours_label": "Orari",
+            "hours_value": "Lun-Ven: 09:00 alle 19:00"
+        },
+        "units": {
+            "title": "Unità",
+            "unit1": {
+                "name": "Unità | Mota Galiza",
+                "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
+            },
+            "unit2": {
+                "name": "Unità | Marquês",
+                "address": "Rua de Faria Guimarães, 450 | 4000-205 Porto"
+            }
+        },
+        "opening_hours": {
+            "title": "Orari di Apertura",
+            "weekdays": "Lunedì - Venerdì",
+            "saturday": "Sabato",
+            "sunday": "Domenica",
+            "by_appointment": "Su appuntamento",
+            "closed": "Chiuso"
+        },
+        "toasts": {
+            "config_error_title": "Errore di configurazione",
+            "config_error_desc": "Impossibile inviare il messaggio. Riprova più tardi o contattaci telefonicamente.",
+            "success_title": "Messaggio inviato!",
+            "success_desc": "Ti contatteremo al più presto.",
+            "error_title": "Errore durante l'invio",
+            "error_desc": "Si è verificato un errore durante l'invio del messaggio. Riprova."
+        }
+    },
+    "footer": {
+        "rights_reserved": "Tutti i diritti riservati.",
+        "privacy_policy": "Informativa sulla Privacy",
+        "data_protection": "Protezione dei Dati (GDPR)",
+        "terms_of_use": "Termini di Utilizzo",
+        "cookies": "Cookie",
+        "main_title": "Odontoiatria & Estetica Avanzata",
+        "description": "Trasformiamo sorrisi con 25 anni di esperienza, utilizzando le tecniche e le tecnologie più avanzate per offrire risultati eccezionali e naturali.",
+        "quick_links": "Link Rapidi",
+        "regulatory_entity": "Autorità di Regolamentazione",
+        "reg_number": "N. Registrazione ERS:",
+        "license_number": "N. Licenza:",
+        "complaints_book": "Libro dei Reclami Online",
+        "location": "Porto, Portogallo",
+        "hours": "Lun-Ven: 09:00-19:00<br/>Sab: Su appuntamento<br/>Dom: Chiuso"
+    },
+    "header": {
+        "subtitle": "La destinazione principale per l'odontoiatria a Lisbona",
+        "book_consultation": "PRENOTA UNA VISITA"
+    },
+    "cookie_banner": {
+        "title": "La tua privacy è importante",
+        "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione, analizzare il traffico del sito e personalizzare i contenuti. Cliccando su \"Accetta\", acconsenti al nostro utilizzo dei cookie. Puoi leggere di più nella nostra <0>Politica sulla Privacy</0>.",
+        "reject": "Rifiuta",
+        "accept_all": "Accetta Tutto"
+    }
+}
