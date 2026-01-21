@@ -67,8 +67,8 @@ const Header = () => {
               loading="eager"
               decoding="async"
               className={`w-auto transition-all duration-500 ${isScrolled || isBlogPage
-                ? 'h-6 xs:h-8 sm:h-10'
-                : 'h-8 xs:h-10 sm:h-14'
+                ? 'h-16 xs:h-16 sm:h-18'
+                : 'h-[6rem] xs:h-18 sm:h-20'
                 }`}
             />
           </div>
@@ -76,21 +76,15 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center ${isScrolled || isBlogPage
-              ? 'bg-gray-800/80 border-gray-700/50 hover:bg-gray-800/90'
-              : 'bg-white/10 border-white/20 hover:bg-white/20'
-              }`}
+            className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center bg-white/10 border-white/20 hover:bg-white/20`}
             aria-label="Toggle mobile menu"
           >
             <div className="w-5 xs:w-6 h-5 xs:h-6 flex flex-col justify-center items-center">
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled || isBlogPage ? 'bg-gray-800' : 'bg-white'
-                } ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5 xs:translate-y-1' : '-translate-y-0.5 xs:-translate-y-1'
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5 xs:translate-y-1' : '-translate-y-0.5 xs:-translate-y-1'
                 }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled || isBlogPage ? 'bg-gray-800' : 'bg-white'
-                } ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 ${isScrolled || isBlogPage ? 'bg-gray-800' : 'bg-white'
-                } ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5 xs:-translate-y-1' : 'translate-y-0.5 xs:translate-y-1'
+              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5 xs:-translate-y-1' : 'translate-y-0.5 xs:translate-y-1'
                 }`}></span>
             </div>
           </button>
@@ -106,8 +100,8 @@ const Header = () => {
               loading="eager"
               decoding="async"
               className={`w-auto transition-all duration-500 ${isScrolled || isBlogPage
-                ? 'h-12'
-                : 'h-24'
+                ? 'h-20'
+                : 'h-40'
                 }`}
             />
           </div>
@@ -158,9 +152,8 @@ const Header = () => {
                 alt="Areluna"
                 loading="lazy"
                 decoding="async"
-                className="h-12 xs:h-16 w-auto mx-auto mb-3 xs:mb-4"
+                className="h-[8rem] xs:h-20 w-auto mx-auto mb-3 xs:mb-4"
               />
-              <div className="w-12 xs:w-16 h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold-leaf))] to-transparent mx-auto"></div>
               <div className="mt-4 flex justify-center">
                 <LanguageSwitcher />
               </div>

@@ -40,10 +40,7 @@ const WhatsAppFloat = () => {
           </svg>
         </div>
 
-        {/* Badge de notificação */}
-        <div className="absolute -top-0.5 sm:-top-1 -right-0.5 sm:-right-1 bg-red-500 text-white rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold animate-bounce">
-          !
-        </div>
+
       </a>
     </div>
   );
