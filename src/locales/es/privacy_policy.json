@@ -1,0 +1,31 @@
+{
+    "title": "Política de Privacidad",
+    "last_update": "Última actualización: {{date}}",
+    "sections": {
+        "intro": {
+            "title": "1. Introducción",
+            "text": "El Instituto Areluna (\"nosotros\", \"nuestro\") respeta su privacidad y se compromete a proteger sus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información cuando visita nuestro sitio web."
+        },
+        "collection": {
+            "title": "2. Recopilación de Datos",
+            "text": "Podemos recopilar los siguientes tipos de información:",
+            "items": {
+                "contact": "Información de contacto (nombre, email, teléfono) cuando completa nuestros formularios.",
+                "cookies": "Datos de navegación y cookies para mejorar la experiencia del usuario."
+            }
+        },
+        "usage": {
+            "title": "3. Uso de Datos",
+            "text": "Utilizamos sus datos para:",
+            "items": {
+                "response": "Responder a sus solicitudes de contacto y citas.",
+                "improvement": "Mejorar nuestros servicios y el contenido del sitio web.",
+                "marketing": "Comunicar novedades y ofertas (si ha dado su consentimiento)."
+            }
+        },
+        "rights": {
+            "title": "4. Sus Derechos",
+            "text": "De acuerdo con el RGPD, tiene derecho a acceder, rectificar o eliminar sus datos personales. Para ejercer estos derechos, contáctenos a través de: rececao@institutoareluna.pt"
+        }
+    }
+}

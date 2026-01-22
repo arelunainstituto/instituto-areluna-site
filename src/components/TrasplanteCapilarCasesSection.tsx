@@ -1,32 +1,34 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 const caso1 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954137/instituto-areluna/caso-1.jpg";
 const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954147/instituto-areluna/caso-2.jpg";
 const caso3 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954150/instituto-areluna/caso-3.jpg";
 
 const TrasplanteCapilarCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
+  const { t } = useTranslation('hair_transplant_page');
 
   const cases = [
     {
       id: 1,
       title: "Caso 1",
-      description: "Recuperação da linha frontal",
+      description: t('cases.items.case1.description'),
       image: caso1,
-      details: "Transplante FUE com 3.500 folículos - Resultado após 12 meses"
+      details: t('cases.items.case1.details')
     },
     {
       id: 2,
       title: "Caso 2",
-      description: "Densidade na região superior",
+      description: t('cases.items.case2.description'),
       image: caso2,
-      details: "Transplante FUE com 4.200 folículos - Resultado após 13 meses"
+      details: t('cases.items.case2.details')
     },
     {
       id: 3,
       title: "Caso 3",
-      description: "Reconstrução completa",
+      description: t('cases.items.case3.description'),
       image: caso3,
-      details: "Transplante FUE com 5.000 folículos - Resultado após 15 meses"
+      details: t('cases.items.case3.details')
     }
   ];
 
@@ -56,22 +58,21 @@ const TrasplanteCapilarCasesSection = () => {
           <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 shadow-lg mb-6">
             <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
             <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-              RESULTADOS REAIS
+              {t('cases.badge')}
             </span>
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6 leading-tight">
-            Casos de
+            {t('cases.title_start')}
             <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-sm">
-              Transplante FUE
+              {t('cases.title_highlight')}
             </span>
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
 
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
-            Veja os resultados reais dos nossos pacientes. Transformações naturais e definitivas
-            com a técnica FUE mais avançada do mercado.
+            {t('cases.description')}
           </p>
         </div>
 
@@ -155,15 +156,14 @@ const TrasplanteCapilarCasesSection = () => {
         <div className="text-center mt-12 sm:mt-16">
           <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-[hsl(var(--ring))]/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-[hsl(var(--ring))]/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
             <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-jet dark:text-white mb-3 sm:mb-4">
-              O seu caso pode ser o próximo!
+              {t('cases.cta.title')}
             </h3>
             <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
-              Cada caso é único. Agende uma consulta para avaliarmos
-              o seu potencial de transplante e definirmos o melhor plano.
+              {t('cases.cta.description')}
             </p>
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
-                AVALIAR MEU CASO
+                {t('cases.cta.button')}
               </button>
             </a>
           </div>

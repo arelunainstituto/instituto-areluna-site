@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "Dra. Areluna - Especialista",
+        "title_start": "Estética Facial",
+        "title_highlight": "Premium",
+        "question": "Deseja <highlight>realçar a sua beleza natural</highlight> com tratamentos seguros e eficazes?",
+        "description": "A equipa de especialistas da <strong1>Dra. Areluna</strong1> oferece os mais modernos tratamentos de <highlight>estética facial</highlight>, combinando técnicas avançadas com produtos premium para resultados naturais.",
+        "cta_text": "Beleza natural com resultados duradouros.",
+        "button": "CONSULTA"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Seguro",
+            "desc": "Procedimentos certificados"
+        },
+        "natural": {
+            "title": "Natural",
+            "desc": "Resultados harmoniosos"
+        },
+        "premium": {
+            "title": "Premium",
+            "desc": "Produtos de qualidade"
+        },
+        "experience": {
+            "title": "25 Anos",
+            "desc": "Experiência comprovada"
+        }
+    },
+    "cases": {
+        "badge": "RESULTADOS REAIS",
+        "title_start": "Casos de",
+        "title_highlight": "Estética Facial",
+        "description": "Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas com os tratamentos mais avançados de estética facial.",
+        "items": {
+            "case1": {
+                "description": "Rinomodelação com ácido hialurónico",
+                "details": "Botox + Preenchimento - Resultado após 2 semanas"
+            },
+            "case2": {
+                "description": "Toxina Botulínica",
+                "details": "Tratamento completo - Resultado após 1 mês"
+            },
+            "case3": {
+                "description": "Preenchimento labial com ácido hialurónico",
+                "details": "Fios de PDO + Skinbooster - Resultado após 3 semanas"
+            }
+        },
+        "cta": {
+            "title": "A sua transformação pode ser a próxima!",
+            "description": "Cada rosto é único. Agende uma consulta para descobrirmos qual o melhor protocolo de tratamentos para si.",
+            "button": "AGENDAR AVALIAÇÃO"
+        }
+    }
+}

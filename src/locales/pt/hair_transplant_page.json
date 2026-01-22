@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "Técnica FUE Premium",
+        "title_start": "Transplante",
+        "title_highlight": "Capilar FUE",
+        "question": "Sofre de <highlight>calvície ou perda capilar</highlight> e procura uma solução definitiva?",
+        "description": "A <strong1>Clínica Areluna</strong1> oferece transplante capilar com a técnica <highlight>FUE (Follicular Unit Extraction)</highlight>, a mais avançada e menos invasiva do mercado.",
+        "cta_text": "Resultados naturais e duradouros garantidos.",
+        "button": "AGENDAR CONSULTA"
+    },
+    "benefits": {
+        "fue": {
+            "title": "FUE",
+            "desc": "Técnica menos invasiva"
+        },
+        "natural": {
+            "title": "Natural",
+            "desc": "Resultados imperceptíveis"
+        },
+        "lasting": {
+            "title": "Duradouro",
+            "desc": "Resultado para toda a vida"
+        },
+        "experience": {
+            "title": "25 Anos",
+            "desc": "Experiência comprovada"
+        }
+    },
+    "cases": {
+        "badge": "RESULTADOS REAIS",
+        "title_start": "Casos de",
+        "title_highlight": "Transplante FUE",
+        "description": "Veja os resultados reais dos nossos pacientes. Transformações naturais e definitivas com a técnica FUE mais avançada do mercado.",
+        "items": {
+            "case1": {
+                "description": "Recuperação da linha frontal",
+                "details": "Transplante FUE com 3.500 folículos - Resultado após 12 meses"
+            },
+            "case2": {
+                "description": "Densidade na região superior",
+                "details": "Transplante FUE com 4.200 folículos - Resultado após 13 meses"
+            },
+            "case3": {
+                "description": "Reconstrução completa",
+                "details": "Transplante FUE com 5.000 folículos - Resultado após 15 meses"
+            }
+        },
+        "cta": {
+            "title": "O seu caso pode ser o próximo!",
+            "description": "Cada caso é único. Agende uma consulta para avaliarmos o seu potencial de transplante e definirmos o melhor plano.",
+            "button": "AVALIAR MEU CASO"
+        }
+    }
+}

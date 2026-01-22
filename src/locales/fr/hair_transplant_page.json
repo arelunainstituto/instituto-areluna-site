@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "Technique FUE Premium",
+        "title_start": "Greffe",
+        "title_highlight": "Capillaire FUE",
+        "question": "Souffrez-vous de <highlight>calvitie ou de perte de cheveux</highlight> et cherchez-vous une solution définitive ?",
+        "description": "La <strong1>Clinique Areluna</strong1> propose la greffe capillaire avec la technique <highlight>FUE (Follicular Unit Extraction)</highlight>, la plus avancée et la moins invasive du marché.",
+        "cta_text": "Résultats naturels et durables garantis.",
+        "button": "PRENDRE RENDEZ-VOUS"
+    },
+    "benefits": {
+        "fue": {
+            "title": "FUE",
+            "desc": "Technique moins invasive"
+        },
+        "natural": {
+            "title": "Naturel",
+            "desc": "Résultats imperceptibles"
+        },
+        "lasting": {
+            "title": "Durable",
+            "desc": "Résultat à vie"
+        },
+        "experience": {
+            "title": "25 Ans",
+            "desc": "Expérience prouvée"
+        }
+    },
+    "cases": {
+        "badge": "RÉSULTATS RÉELS",
+        "title_start": "Cas de",
+        "title_highlight": "Greffe FUE",
+        "description": "Découvrez les résultats réels de nos patients. Transformations naturelles et définitives avec la technique FUE la plus avancée du marché.",
+        "items": {
+            "case1": {
+                "description": "Récupération de la ligne frontale",
+                "details": "Greffe FUE avec 3 500 follicules - Résultat après 12 mois"
+            },
+            "case2": {
+                "description": "Densité dans la région supérieure",
+                "details": "Greffe FUE avec 4 200 follicules - Résultat après 13 mois"
+            },
+            "case3": {
+                "description": "Reconstruction complète",
+                "details": "Greffe FUE avec 5 000 follicules - Résultat après 15 mois"
+            }
+        },
+        "cta": {
+            "title": "Votre cas pourrait être le prochain !",
+            "description": "Chaque cas est unique. Prenez rendez-vous pour évaluer votre potentiel de greffe et définir le meilleur plan.",
+            "button": "ÉVALUER MON CAS"
+        }
+    }
+}

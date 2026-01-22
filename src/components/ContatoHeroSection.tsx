@@ -6,7 +6,7 @@ const ContatoHeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-44 sm:pt-56 md:pt-64 pb-20">
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
         <img

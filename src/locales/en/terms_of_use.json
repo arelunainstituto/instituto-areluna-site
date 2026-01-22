@@ -1,0 +1,22 @@
+{
+    "title": "Terms of Use",
+    "last_update": "Last updated: {{date}}",
+    "sections": {
+        "acceptance": {
+            "title": "1. Acceptance of Terms",
+            "text": "By accessing and using the Instituto Areluna website, you agree to comply with these Terms of Use. If you do not agree with any of these terms, please do not use our website."
+        },
+        "intellectual_property": {
+            "title": "2. Intellectual Property",
+            "text": "All content on this website (text, images, logos) is the property of Instituto Areluna or its licensors and is protected by copyright laws."
+        },
+        "permitted_use": {
+            "title": "3. Permitted Use",
+            "text": "This website is intended for personal and informational use only. It is prohibited to use the website for illegal purposes or in ways that may harm the image of Instituto Areluna."
+        },
+        "liability": {
+            "title": "4. Limitation of Liability",
+            "text": "Instituto Areluna strives to keep the website information up to date but does not guarantee its complete accuracy. We are not responsible for any damages resulting from the use of this website."
+        }
+    }
+}

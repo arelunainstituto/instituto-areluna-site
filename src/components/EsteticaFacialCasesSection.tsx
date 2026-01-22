@@ -1,32 +1,35 @@
 import { useState } from 'react';
-import casoRino from "@/assets/caso-rino.png";
-import casoLips from "@/assets/caso-lips.jpg";
+import { useTranslation } from 'react-i18next';
+const casoRino = "@/assets/caso-rino.png"; // Note: imports are handled at top, just ensuring context match
+import casoRinoImg from "@/assets/caso-rino.png";
+import casoLipsImg from "@/assets/caso-lips.jpg";
 const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954174/instituto-areluna/estetica-caso-2.jpg";
 
 const EsteticaFacialCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
+  const { t } = useTranslation('facial_aesthetics_page');
 
   const cases = [
     {
       id: 1,
       title: "Caso 1",
-      description: "Rinomodelação com ácido hialurónico",
-      image: casoRino,
-      details: "Botox + Preenchimento - Resultado após 2 semanas"
+      description: t('cases.items.case1.description'),
+      image: casoRinoImg,
+      details: t('cases.items.case1.details')
     },
     {
       id: 2,
       title: "Caso 2",
-      description: "Toxina Botulínica",
+      description: t('cases.items.case2.description'),
       image: caso2,
-      details: "Tratamento completo - Resultado após 1 mês"
+      details: t('cases.items.case2.details')
     },
     {
       id: 3,
       title: "Caso 3",
-      description: "Preenchimento labial com ácido hialurónico",
-      image: casoLips,
-      details: "Fios de PDO + Skinbooster - Resultado após 3 semanas"
+      description: t('cases.items.case3.description'),
+      image: casoLipsImg,
+      details: t('cases.items.case3.details')
     }
   ];
 
@@ -45,7 +48,7 @@ const EsteticaFacialCasesSection = () => {
       {/* Background text sutil */}
       <div className="absolute top-32 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[12rem] xs:text-[14rem] sm:text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/[0.02] select-none whitespace-nowrap">
-          Beleza
+          Casos
         </span>
       </div>
 
@@ -56,22 +59,21 @@ const EsteticaFacialCasesSection = () => {
           <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 shadow-lg mb-6">
             <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
             <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-              RESULTADOS REAIS
+              {t('cases.badge')}
             </span>
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6 leading-tight">
-            Casos de
+            {t('cases.title_start')}
             <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-sm">
-              Estética Facial
+              {t('cases.title_highlight')}
             </span>
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 rounded-full"></div>
 
           <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed max-w-3xl mx-auto">
-            Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas
-            com os tratamentos mais avançados de estética facial.
+            {t('cases.description')}
           </p>
         </div>
 
@@ -153,17 +155,16 @@ const EsteticaFacialCasesSection = () => {
 
         {/* CTA final */}
         <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
-            <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-white mb-3 sm:mb-4">
-              A sua transformação pode ser a próxima!
+          <div className="bg-gradient-to-br from-[hsl(var(--gold-leaf))]/5 to-[hsl(var(--ring))]/5 dark:from-[hsl(var(--gold-leaf))]/10 dark:to-[hsl(var(--ring))]/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20 max-w-2xl mx-auto">
+            <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-jet dark:text-white mb-3 sm:mb-4">
+              {t('cases.cta.title')}
             </h3>
-            <p className="text-sm xs:text-base text-gray-300 mb-6">
-              Cada rosto é único. Agende uma consulta para descobrirmos
-              qual o melhor protocolo de tratamentos para si.
+            <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
+              {t('cases.cta.description')}
             </p>
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
-                AGENDAR AVALIAÇÃO
+                {t('cases.cta.button')}
               </button>
             </a>
           </div>

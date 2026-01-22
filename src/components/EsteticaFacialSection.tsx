@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import draArePremium from "@/assets/dra-are-premium.jpg";
 
 const EsteticaFacialSection = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation('facial_aesthetics_page');
 
   return (
     <section id="estetica" className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
@@ -32,16 +34,16 @@ const EsteticaFacialSection = () => {
             <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 dark:border-[hsl(var(--gold-leaf))]/40 shadow-lg">
               <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
               <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-                Dra. Areluna - Especialista
+                {t('hero.badge')}
               </span>
             </div>
 
             {/* Título principal */}
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-vivant text-jet dark:text-gray-200 leading-tight">
-                Estética Facial
+                {t('hero.title_start')}
                 <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-sm">
-                  Premium
+                  {t('hero.title_highlight')}
                 </span>
               </h2>
 
@@ -56,24 +58,41 @@ const EsteticaFacialSection = () => {
             {/* Pergunta principal */}
             <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/15">
               <p className="text-xl md:text-2xl font-vivant text-black dark:text-white leading-relaxed">
-                Deseja
-                <span className="text-[hsl(var(--gold-leaf))] font-medium"> realçar a sua beleza natural</span> com tratamentos seguros e eficazes?
+                <Trans
+                  i18nKey="hero.question"
+                  ns="facial_aesthetics_page"
+                  components={{
+                    highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
+                  }}
+                >
+                  Deseja
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> realçar a sua beleza natural</span> com tratamentos seguros e eficazes?
+                </Trans>
               </p>
             </div>
 
             {/* Descrição do programa */}
             <div className="space-y-6">
               <p className="text-lg text-jet/80 dark:text-gray-300 font-vivant-light leading-relaxed">
-                A equipa de especialistas da <strong className="text-[hsl(var(--gold-leaf))]">Dra. Areluna</strong> oferece os mais modernos tratamentos de
-                <span className="text-[hsl(var(--gold-leaf))] font-medium"> estética facial</span>,
-                combinando técnicas avançadas com produtos premium para resultados naturais.
+                <Trans
+                  i18nKey="hero.description"
+                  ns="facial_aesthetics_page"
+                  components={{
+                    strong1: <strong className="text-[hsl(var(--gold-leaf))]" />,
+                    highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
+                  }}
+                >
+                  A equipa de especialistas da <strong className="text-[hsl(var(--gold-leaf))]">Dra. Areluna</strong> oferece os mais modernos tratamentos de
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> estética facial</span>,
+                  combinando técnicas avançadas com produtos premium para resultados naturais.
+                </Trans>
               </p>
 
               {/* Call to action text */}
               <div className="flex items-center gap-3">
                 <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
                 <p className="text-xl font-vivant text-[hsl(var(--gold-leaf))] italic">
-                  Beleza natural com resultados duradouros.
+                  {t('hero.cta_text')}
                 </p>
               </div>
             </div>
@@ -81,10 +100,10 @@ const EsteticaFacialSection = () => {
             {/* Benefícios premium */}
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { title: "Seguro", desc: "Procedimentos certificados" },
-                { title: "Natural", desc: "Resultados harmoniosos" },
-                { title: "Premium", desc: "Produtos de qualidade" },
-                { title: "25 Anos", desc: "Experiência comprovada" }
+                { title: t('benefits.safe.title'), desc: t('benefits.safe.desc') },
+                { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') },
+                { title: t('benefits.premium.title'), desc: t('benefits.premium.desc') },
+                { title: t('benefits.experience.title'), desc: t('benefits.experience.desc') }
               ].map((benefit, index) => (
                 <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
                   <div className="flex items-center gap-3">
@@ -110,7 +129,7 @@ const EsteticaFacialSection = () => {
                 {/* Botão principal */}
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
-                    <span className="relative z-10">CONSULTA</span>
+                    <span className="relative z-10">{t('hero.button')}</span>
 
                     {/* Shimmer effect */}
                     <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
@@ -131,7 +150,7 @@ const EsteticaFacialSection = () => {
               <div className="rounded-2xl overflow-hidden">
                 <img
                   src={draArePremium}
-                  alt="Dra. Areluna - Especialista em Estética Facial"
+                  alt={t('hero.title_start')}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-auto"

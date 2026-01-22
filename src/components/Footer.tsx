@@ -105,27 +105,27 @@ const Footer = () => {
               <h4 className="text-lg font-vivant text-[hsl(var(--gold-leaf))] mb-6">{t('footer.quick_links')}</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="#instituto" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('nav.institute')}
                   </a>
                 </li>
                 <li>
-                  <a href="#tratamentos" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/tratamentos" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('nav.treatments')}
                   </a>
                 </li>
                 <li>
-                  <a href="#turismo" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/turismo-dentario" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('nav.tourism')}
                   </a>
                 </li>
                 <li>
-                  <a href="#antes-depois" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/#casos-clinicos" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('nav.before_after')}
                   </a>
                 </li>
                 <li>
-                  <a href="#contato" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/contato" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('common.contact')}
                   </a>
                 </li>
@@ -218,7 +218,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-pure-white/60 text-sm font-vivant-light text-center md:text-left">
-              © 2024 Areluna - Medicina Dentária & Estética Avançada. {t('footer.rights_reserved')}
+              © {new Date().getFullYear()} Instituto Areluna - {t('footer.main_title')}. {t('footer.rights_reserved')}
             </div>
 
             {/* Links legais */}

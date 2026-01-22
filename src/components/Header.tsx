@@ -9,6 +9,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isBlogPage = location.pathname.startsWith('/blog');
+  const isPrivacyOrTerms = location.pathname === '/privacidade' || location.pathname === '/termos';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +51,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || isBlogPage
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || isBlogPage || isPrivacyOrTerms
       ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
       : 'bg-transparent'
       }`}>

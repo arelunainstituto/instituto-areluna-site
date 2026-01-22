@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954147/instituto-areluna/caso-2.jpg";
 
 const TrasplanteCapilarSection = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation('hair_transplant_page');
 
   return (
     <section id="transplante" className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
@@ -32,16 +34,16 @@ const TrasplanteCapilarSection = () => {
             <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 dark:border-[hsl(var(--gold-leaf))]/40 shadow-lg">
               <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
               <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-                Técnica FUE Premium
+                {t('hero.badge')}
               </span>
             </div>
 
             {/* Título principal */}
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-vivant text-jet dark:text-gray-200 leading-tight">
-                Transplante
+                {t('hero.title_start')}
                 <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-sm">
-                  Capilar FUE
+                  {t('hero.title_highlight')}
                 </span>
               </h2>
 
@@ -56,24 +58,41 @@ const TrasplanteCapilarSection = () => {
             {/* Pergunta principal */}
             <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/15">
               <p className="text-xl md:text-2xl font-vivant text-black dark:text-white leading-relaxed">
-                Sofre de
-                <span className="text-[hsl(var(--gold-leaf))] font-medium"> calvície ou perda capilar</span> e procura uma solução definitiva?
+                <Trans
+                  i18nKey="hero.question"
+                  ns="hair_transplant_page"
+                  components={{
+                    highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
+                  }}
+                >
+                  Sofre de
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> calvície ou perda capilar</span> e procura uma solução definitiva?
+                </Trans>
               </p>
             </div>
 
             {/* Descrição do programa */}
             <div className="space-y-6">
               <p className="text-lg text-jet/80 dark:text-gray-300 font-vivant-light leading-relaxed">
-                A <strong className="text-[hsl(var(--gold-leaf))]">Clínica Areluna</strong> oferece transplante capilar com a técnica
-                <span className="text-[hsl(var(--gold-leaf))] font-medium"> FUE (Follicular Unit Extraction)</span>,
-                a mais avançada e menos invasiva do mercado.
+                <Trans
+                  i18nKey="hero.description"
+                  ns="hair_transplant_page"
+                  components={{
+                    strong1: <strong className="text-[hsl(var(--gold-leaf))]" />,
+                    highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
+                  }}
+                >
+                  A <strong className="text-[hsl(var(--gold-leaf))]">Clínica Areluna</strong> oferece transplante capilar com a técnica
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> FUE (Follicular Unit Extraction)</span>,
+                  a mais avançada e menos invasiva do mercado.
+                </Trans>
               </p>
 
               {/* Call to action text */}
               <div className="flex items-center gap-3">
                 <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
                 <p className="text-xl font-vivant text-[hsl(var(--gold-leaf))] italic">
-                  Resultados naturais e duradouros garantidos.
+                  {t('hero.cta_text')}
                 </p>
               </div>
             </div>
@@ -81,10 +100,10 @@ const TrasplanteCapilarSection = () => {
             {/* Benefícios premium */}
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { title: "FUE", desc: "Técnica menos invasiva" },
-                { title: "Natural", desc: "Resultados imperceptíveis" },
-                { title: "Duradouro", desc: "Resultado para toda a vida" },
-                { title: "25 Anos", desc: "Experiência comprovada" }
+                { title: t('benefits.fue.title'), desc: t('benefits.fue.desc') },
+                { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') },
+                { title: t('benefits.lasting.title'), desc: t('benefits.lasting.desc') },
+                { title: t('benefits.experience.title'), desc: t('benefits.experience.desc') }
               ].map((benefit, index) => (
                 <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
                   <div className="flex items-center gap-3">
@@ -110,7 +129,7 @@ const TrasplanteCapilarSection = () => {
                 {/* Botão principal */}
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
-                    <span className="relative z-10">AGENDAR CONSULTA</span>
+                    <span className="relative z-10">{t('hero.button')}</span>
 
                     {/* Shimmer effect */}
                     <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
@@ -131,7 +150,7 @@ const TrasplanteCapilarSection = () => {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
                   src={caso2}
-                  alt="Caso 2 - Densidade na região superior - Transplante Capilar FUE"
+                  alt={t('hero.title_highlight')}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-center"

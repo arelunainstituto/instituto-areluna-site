@@ -372,28 +372,35 @@ const TreatmentsSection = () => {
           {/* Grid principal de tratamentos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTreatments.slice(0, 9).map((treatment, index) => (
-              <div
+              <a
                 key={index}
-                className="group bg-gray-50 dark:bg-white rounded-2xl p-6 hover:bg-gray-100 dark:hover:bg-gray-50 transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-300 hover:border-[hsl(var(--gold-leaf))]/30 hover:shadow-md"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                href={`https://wa.me/351910098226?text=Olá! Gostaria de saber mais sobre: ${encodeURIComponent(treatment.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <h4 className="font-vivant text-jet dark:text-gray-800 text-lg mb-2 group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300">
-                      {treatment.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-700 text-sm leading-relaxed">
-                      {treatment.description.length > 80 ? treatment.description.substring(0, 80) + '...' : treatment.description}
-                    </p>
-                  </div>
-                  <div className="ml-4 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg className="w-6 h-6 text-[hsl(var(--gold-leaf))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                <div
+                  className="bg-gray-50 dark:bg-white rounded-2xl p-6 hover:bg-gray-100 dark:hover:bg-gray-50 transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-300 hover:border-[hsl(var(--gold-leaf))]/30 hover:shadow-md h-full"
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <div className="flex items-center justify-between h-full">
+                    <div className="flex-1">
+                      <h4 className="font-vivant text-jet dark:text-gray-800 text-lg mb-2 group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300">
+                        {treatment.title}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-700 text-sm leading-relaxed">
+                        {treatment.description.length > 80 ? treatment.description.substring(0, 80) + '...' : treatment.description}
+                      </p>
+                    </div>
+                    <div className="ml-4 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg className="w-6 h-6 text-[hsl(var(--gold-leaf))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 

@@ -1,54 +1,55 @@
-
+import { useTranslation } from 'react-i18next';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const PrivacyPolicy = () => {
+    const { t, i18n } = useTranslation('privacy_policy');
+    const currentLang = i18n.language;
+
     return (
-        <div className="min-h-screen bg-jet text-pure-white flex flex-col">
+        <div className="min-h-screen bg-white text-gray-900 flex flex-col">
             <Header />
 
-            <main className="flex-grow pt-32 pb-20 px-6">
+            <main className="flex-grow pt-[260px] pb-20 px-6">
                 <div className="container mx-auto max-w-4xl">
                     <h1 className="text-4xl md:text-5xl font-vivant text-[hsl(var(--gold-leaf))] mb-8">
-                        Política de Privacidade
+                        {t('title')}
                     </h1>
 
-                    <div className="prose prose-invert prose-gold max-w-none font-vivant-light">
-                        <p className="text-lg text-pure-white/80 mb-8">
-                            Última atualização: {new Date().toLocaleDateString('pt-PT')}
+                    <div className="prose prose-lg max-w-none font-vivant-light text-gray-700">
+                        <p className="text-lg text-gray-600 mb-8">
+                            {t('last_update', { date: new Date().toLocaleDateString(currentLang === 'pt' ? 'pt-PT' : currentLang) })}
                         </p>
 
                         <section className="space-y-6">
-                            <h2 className="text-2xl font-vivant text-pure-white">1. Introdução</h2>
+                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.intro.title')}</h2>
                             <p>
-                                O Instituto Areluna ("nós", "nosso") respeita a sua privacidade e compromete-se a proteger os seus dados pessoais.
-                                Esta Política de Privacidade explica como recolhemos, utilizamos e protegemos as suas informações quando visita o nosso website.
+                                {t('sections.intro.text')}
                             </p>
 
-                            <h2 className="text-2xl font-vivant text-pure-white">2. Recolha de Dados</h2>
+                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.collection.title')}</h2>
                             <p>
-                                Podemos recolher os seguintes tipos de informações:
-                            </p>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Informações de contacto (nome, email, telefone) quando preenche os nossos formulários.</li>
-                                <li>Dados de navegação e cookies para melhorar a experiência do utilizador.</li>
-                            </ul>
-
-                            <h2 className="text-2xl font-vivant text-pure-white">3. Utilização dos Dados</h2>
-                            <p>
-                                Utilizamos os seus dados para:
+                                {t('sections.collection.text')}
                             </p>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li>Responder aos seus pedidos de contacto e marcações.</li>
-                                <li>Melhorar os nossos serviços e o conteúdo do website.</li>
-                                <li>Comunicar novidades e ofertas (caso tenha consentido).</li>
+                                <li>{t('sections.collection.items.contact')}</li>
+                                <li>{t('sections.collection.items.cookies')}</li>
                             </ul>
 
-                            <h2 className="text-2xl font-vivant text-pure-white">4. Os Seus Direitos</h2>
+                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.usage.title')}</h2>
                             <p>
-                                De acordo com o RGPD, tem o direito de aceder, retificar ou eliminar os seus dados pessoais.
-                                Para exercer estes direitos, por favor contacte-nos através do email: rececao@institutoareluna.pt
+                                {t('sections.usage.text')}
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2">
+                                <li>{t('sections.usage.items.response')}</li>
+                                <li>{t('sections.usage.items.improvement')}</li>
+                                <li>{t('sections.usage.items.marketing')}</li>
+                            </ul>
+
+                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.rights.title')}</h2>
+                            <p>
+                                {t('sections.rights.text')}
                             </p>
                         </section>
                     </div>

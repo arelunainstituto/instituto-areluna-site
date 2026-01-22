@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "FUE Premium Technique",
+        "title_start": "Hair",
+        "title_highlight": "FUE Transplant",
+        "question": "Do you suffer from <highlight>baldness or hair loss</highlight> and are looking for a definitive solution?",
+        "description": "<strong1>Clínica Areluna</strong1> offers hair transplantation using the <highlight>FUE (Follicular Unit Extraction)</highlight> technique, the most advanced and least invasive on the market.",
+        "cta_text": "Natural and long-lasting results guaranteed.",
+        "button": "SCHEDULE CONSULTATION"
+    },
+    "benefits": {
+        "fue": {
+            "title": "FUE",
+            "desc": "Least invasive technique"
+        },
+        "natural": {
+            "title": "Natural",
+            "desc": "Imperceptible results"
+        },
+        "lasting": {
+            "title": "Lasting",
+            "desc": "Results for life"
+        },
+        "experience": {
+            "title": "25 Years",
+            "desc": "Proven experience"
+        }
+    },
+    "cases": {
+        "badge": "REAL RESULTS",
+        "title_start": "Cases of",
+        "title_highlight": "FUE Transplant",
+        "description": "See real results from our patients. Natural and definitive transformations with the most advanced FUE technique on the market.",
+        "items": {
+            "case1": {
+                "description": "Frontal hairline recovery",
+                "details": "FUE Transplant with 3,500 follicles - Result after 12 months"
+            },
+            "case2": {
+                "description": "Density in the upper region",
+                "details": "FUE Transplant with 4,200 follicles - Result after 13 months"
+            },
+            "case3": {
+                "description": "Complete reconstruction",
+                "details": "FUE Transplant with 5,000 follicles - Result after 15 months"
+            }
+        },
+        "cta": {
+            "title": "Your case could be next!",
+            "description": "Each case is unique. Schedule a consultation so we can evaluate your transplant potential and define the best plan.",
+            "button": "EVALUATE MY CASE"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "Dr Areluna - Spécialiste",
+        "title_start": "Esthétique Faciale",
+        "title_highlight": "Premium",
+        "question": "Souhaitez-vous <highlight>sublimer votre beauté naturelle</highlight> avec des traitements sûrs et efficaces ?",
+        "description": "L'équipe de spécialistes du <strong1>Dr Areluna</strong1> propose les traitements d'<highlight>esthétique faciale</highlight> les plus modernes, combinant des techniques avancées avec des produits premium pour des résultats naturels.",
+        "cta_text": "Beauté naturelle avec des résultats durables.",
+        "button": "CONSULTATION"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Sûr",
+            "desc": "Procédures certifiées"
+        },
+        "natural": {
+            "title": "Naturel",
+            "desc": "Résultats harmonieux"
+        },
+        "premium": {
+            "title": "Premium",
+            "desc": "Produits de qualité"
+        },
+        "experience": {
+            "title": "25 Ans",
+            "desc": "Expérience prouvée"
+        }
+    },
+    "cases": {
+        "badge": "RÉSULTATS RÉELS",
+        "title_start": "Cas de",
+        "title_highlight": "Esthétique Faciale",
+        "description": "Découvrez les résultats réels de nos patients. Transformations naturelles et harmonieuses avec les traitements d'esthétique faciale les plus avancés.",
+        "items": {
+            "case1": {
+                "description": "Rhinomodulation à l'acide hyaluronique",
+                "details": "Botox + Comblement - Résultat après 2 semaines"
+            },
+            "case2": {
+                "description": "Toxine Botulique",
+                "details": "Traitement complet - Résultat après 1 mois"
+            },
+            "case3": {
+                "description": "Comblement des lèvres à l'acide hyaluronique",
+                "details": "Fils tenseurs + Skinbooster - Résultat après 3 semaines"
+            }
+        },
+        "cta": {
+            "title": "Votre transformation pourrait être la prochaine !",
+            "description": "Chaque visage est unique. Planifiez une consultation pour découvrir le meilleur protocole de traitement pour vous.",
+            "button": "PLANIFIER L'ÉVALUATION"
+        }
+    }
+}

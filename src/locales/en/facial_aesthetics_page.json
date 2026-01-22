@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "badge": "Dr. Areluna - Specialist",
+        "title_start": "Facial Aesthetics",
+        "title_highlight": "Premium",
+        "question": "Do you wish to <highlight>enhance your natural beauty</highlight> with safe and effective treatments?",
+        "description": "<strong1>Dr. Areluna's</strong1> team of specialists offers the most modern <highlight>facial aesthetics</highlight> treatments, combining advanced techniques with premium products for natural results.",
+        "cta_text": "Natural beauty with long-lasting results.",
+        "button": "CONSULTATION"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Safe",
+            "desc": "Certified procedures"
+        },
+        "natural": {
+            "title": "Natural",
+            "desc": "Harmonious results"
+        },
+        "premium": {
+            "title": "Premium",
+            "desc": "Quality products"
+        },
+        "experience": {
+            "title": "25 Years",
+            "desc": "Proven experience"
+        }
+    },
+    "cases": {
+        "badge": "REAL RESULTS",
+        "title_start": "Cases of",
+        "title_highlight": "Facial Aesthetics",
+        "description": "See real results from our patients. Natural and harmonious transformations with the most advanced facial aesthetics treatments.",
+        "items": {
+            "case1": {
+                "description": "Rhinomodeling with hyaluronic acid",
+                "details": "Botox + Filler - Result after 2 weeks"
+            },
+            "case2": {
+                "description": "Botulinum Toxin",
+                "details": "Complete treatment - Result after 1 month"
+            },
+            "case3": {
+                "description": "Lip filler with hyaluronic acid",
+                "details": "PDO threads + Skinbooster - Result after 3 weeks"
+            }
+        },
+        "cta": {
+            "title": "Your transformation could be next!",
+            "description": "Each face is unique. Schedule a consultation so we can discover the best treatment protocol for you.",
+            "button": "SCHEDULE EVALUATION"
+        }
+    }
+}

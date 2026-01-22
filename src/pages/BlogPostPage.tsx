@@ -88,7 +88,7 @@ const BlogPostPage = () => {
                         </div>
                     )}
 
-                    <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6 text-gray-900 dark:text-white">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-light leading-tight mb-6 text-gray-900 dark:text-white">
                         {post.title}
                     </h1>
 

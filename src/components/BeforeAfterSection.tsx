@@ -58,7 +58,7 @@ const BeforeAfterSection = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+    <section id="casos-clinicos" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
