@@ -9,6 +9,7 @@ import { ptBR } from "date-fns/locale";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import BlogHeroSection from "@/components/BlogHeroSection";
 
 const BlogPage = () => {
     const { data, isLoading, error } = useQuery({
@@ -20,7 +21,7 @@ const BlogPage = () => {
         return (
             <div className="min-h-screen bg-white dark:bg-gray-950">
                 <Header />
-                <div className="pt-24 pb-16">
+                <div className="pb-16 bg-white dark:bg-gray-950">
                     <div className="container mx-auto px-4">
                         <h1 className="text-4xl font-light mb-12 text-center text-gray-900 dark:text-white">Blog</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,7 +47,7 @@ const BlogPage = () => {
         return (
             <div className="min-h-screen bg-white dark:bg-gray-950">
                 <Header />
-                <div className="pt-24 pb-16">
+                <div className="pt-32 pb-16">
                     <div className="container mx-auto px-4 py-24 text-center">
                         <p className="text-red-500">Erro ao carregar posts. Por favor, tente novamente mais tarde.</p>
                     </div>
@@ -60,15 +61,9 @@ const BlogPage = () => {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950">
             <Header />
-            <div className="pt-24 pb-16">
+            <BlogHeroSection />
+            <div className="pt-16 pb-16 bg-white dark:bg-gray-950">
                 <div className="container mx-auto px-4">
-                    <h1 className="text-4xl xs:text-5xl font-light mb-4 text-center text-gray-900 dark:text-white">
-                        Nosso Blog
-                    </h1>
-                    <p className="text-center text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Acompanhe as nossas últimas novidades e artigos sobre saúde e estética.
-                    </p>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {data?.data.map((post) => (
                             <Link key={post.id} to={`/blog/${slugify(post.title)}`} className="group">
