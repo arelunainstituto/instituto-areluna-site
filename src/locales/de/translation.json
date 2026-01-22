@@ -102,20 +102,28 @@
                 ]
             },
             "yara": {
-                "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "role": "Zahnärztin",
+                "specialty": "Allgemeine Zahnheilkunde",
+                "bio": "Zahnärztin mit Tätigkeitsschwerpunkten in der Allgemeinen Zahnheilkunde und Oralen Ästhetik. Behandlung ausgerichtet auf Mundgesundheit in Verbindung mit Ästhetik, mit Fokus auf natürliche, funktionelle und personalisierte Ergebnisse für jeden Patienten.",
                 "specs": [
-                    "General Practice",
-                    "Oral Aesthetics"
+                    "Allgemeine Zahnheilkunde",
+                    "Orale Ästhetik"
+                ]
+            },
+            "patricia": {
+                "role": "Plastische Chirurgin",
+                "specialty": "Plastische Chirurgin",
+                "bio": "Plastische Chirurgin, anerkannt für Exzellenz in der Brustchirurgie, vereint Pflege, Technik und Natürlichkeit. Tätigkeit in Brustvergrößerung, -verkleinerung und Prothesenwechsel sowie HD-Lipo mit natürlicher Definition.",
+                "specs": [
+                    "Plastische Chirurgin"
                 ]
             },
             "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+                "role": "Dentalhygienikerin",
+                "specialty": "Dentalhygienikerin",
+                "bio": "Tätigkeit fokussiert auf Prävention, Erhaltung der Mundgesundheit und personalisierte Betreuung der Patienten, mit Aufmerksamkeit für Komfort, Technik und kontinuierliche Pflege.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Dentalhygienikerin"
                 ]
             },
             "arethuza": {

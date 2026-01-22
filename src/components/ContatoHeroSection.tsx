@@ -46,12 +46,14 @@ const ContatoHeroSection = () => {
               {t("contact_page.hero.cta_main")}
             </Button>
           </a>
-          <Button
-            variant="outline"
-            className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-jet rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base backdrop-blur-sm bg-white/10"
-          >
-            {t("contact_page.hero.cta_whatsapp")}
-          </Button>
+          <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-jet rounded-xl transition-all duration-300 font-vivant-light tracking-wide text-base backdrop-blur-sm bg-white/10"
+            >
+              {t("contact_page.hero.cta_whatsapp")}
+            </Button>
+          </a>
         </div>
 
         {/* Informações de contato rápido */}

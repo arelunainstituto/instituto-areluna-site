@@ -102,20 +102,28 @@
                 ]
             },
             "yara": {
-                "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "role": "Odontóloga",
+                "specialty": "Odontología General",
+                "bio": "Odontóloga con actuación en Clínica General y Estética Oral. Atención enfocada en la salud oral aliada a la estética, con foco en resultados naturales, funcionales y personalizados para cada paciente.",
                 "specs": [
-                    "General Practice",
-                    "Oral Aesthetics"
+                    "Odontología General",
+                    "Estética Oral"
+                ]
+            },
+            "patricia": {
+                "role": "Cirujana Plástica",
+                "specialty": "Cirujana Plástica",
+                "bio": "Cirujana Plástica reconocida por la excelencia en cirugías de mama, uniendo cuidado, técnica y naturalidad. Actuación en mamoplastia de aumento, reducción y cambio de prótesis, además de Lipo HD de definición natural.",
+                "specs": [
+                    "Cirujana Plástica"
                 ]
             },
             "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+                "role": "Higienista Oral",
+                "specialty": "Higienista Oral",
+                "bio": "Actuación enfocada en la prevención, mantenimiento de la salud oral y seguimiento personalizado de los pacientes, con atención al confort, la técnica y el cuidado continuo.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Higienista Oral"
                 ]
             },
             "arethuza": {

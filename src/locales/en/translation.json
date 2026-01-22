@@ -103,19 +103,27 @@
             },
             "yara": {
                 "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "specialty": "General Dentistry",
+                "bio": "Dentist working in General Dentistry and Oral Aesthetics. Focused on oral health combined with aesthetics, aiming for natural, functional, and personalized results for each patient.",
                 "specs": [
-                    "General Practice",
+                    "General Dentistry",
                     "Oral Aesthetics"
                 ]
             },
-            "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+            "patricia": {
+                "role": "Plastic Surgeon",
+                "specialty": "Plastic Surgeon",
+                "bio": "Plastic Surgeon recognized for excellence in breast surgeries, combining care, technique, and naturalness. Expertise in breast augmentation, reduction, and implant exchange, as well as HD Lipo with natural definition.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Plastic Surgeon"
+                ]
+            },
+            "federica": {
+                "role": "Dental Hygienist",
+                "specialty": "Dental Hygienist",
+                "bio": "Focused on prevention, oral health maintenance, and personalized patient follow-up, with attention to comfort, technique, and continuous care.",
+                "specs": [
+                    "Dental Hygienist"
                 ]
             },
             "arethuza": {

@@ -104,16 +104,24 @@
             "yara": {
                 "role": "Médica Dentista",
                 "specialty": "Clínica Geral",
-                "bio": "",
+                "bio": "Médica Dentista com atuação em Clínica Geral e Estética Oral. Atendimento voltado à saúde oral aliada à estética, com foco em resultados naturais, funcionais e personalizados para cada paciente.  ",
                 "specs": [
                     "Clínica Geral",
                     "Estética Oral"
                 ]
             },
+            "patricia": {
+                "role": "Cirurgiã Plástica",
+                "specialty": "Cirurgiã Plástica",
+                "bio": "Cirurgiã Plástica reconhecida pela excelência em cirurgias da mama, unindo cuidado, técnica e naturalidade. Atuação em mamoplastia de aumento, redução e troca de prótese, além de Lipo HD de definição natural. ",
+                "specs": [
+                    "Cirurgiã Plástica"
+                ]
+            },
             "federica": {
                 "role": "Higienista Oral",
                 "specialty": "Higienista Oral",
-                "bio": "",
+                "bio": "Atuação focada na prevenção, manutenção da saúde oral e acompanhamento personalizado dos pacientes, com atenção ao conforto, à técnica e ao cuidado contínuo.",
                 "specs": [
                     "Higienista Oral"
                 ]

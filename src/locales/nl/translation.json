@@ -102,20 +102,28 @@
                 ]
             },
             "yara": {
-                "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "role": "Tandarts",
+                "specialty": "Algemene Tandheelkunde",
+                "bio": "Tandarts werkzaam in Algemene Tandheelkunde en Orale Esthetiek. Behandeling gericht op mondgezondheid gecombineerd met esthetiek, met focus op natuurlijke, functionele en gepersonaliseerde resultaten voor elke patiënt.",
                 "specs": [
-                    "General Practice",
-                    "Oral Aesthetics"
+                    "Algemene Tandheelkunde",
+                    "Orale Esthetiek"
+                ]
+            },
+            "patricia": {
+                "role": "Plastisch Chirurg",
+                "specialty": "Plastisch Chirurg",
+                "bio": "Plastisch Chirurg erkend voor excellentie in borstchirurgie, combineert zorg, techniek en natuurlijkheid. Werkzaam in borstvergroting, -verkleining en prothesewissel, evenals HD Lipo met natuurlijke definitie.",
+                "specs": [
+                    "Plastisch Chirurg"
                 ]
             },
             "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+                "role": "Mondhygiënist",
+                "specialty": "Mondhygiënist",
+                "bio": "Werkzaamheden gericht op preventie, behoud van mondgezondheid en gepersonaliseerde begeleiding van patiënten, met aandacht voor comfort, techniek en continue zorg.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Mondhygiënist"
                 ]
             },
             "arethuza": {

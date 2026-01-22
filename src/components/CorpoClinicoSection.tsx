@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import draYaraImg from "@/assets/dra-yara.jpg";
 import draFedericaImg from "@/assets/dra-federica.jpg";
+import draPatriciaImg from "@/assets/dra-patricia.jpg";
 
 const CorpoClinicoSection = () => {
   const { t } = useTranslation();
@@ -82,6 +83,13 @@ const CorpoClinicoSection = () => {
       crm: "OMD 15666",
       peloBrasil: true,
       image: draYaraImg
+    },
+    {
+      id: "patricia",
+      name: "Dra. Patrícia Tatsch",
+      crm: "OMD 47868",
+      peloBrasil: false,
+      image: draPatriciaImg
     },
     {
       id: "federica",

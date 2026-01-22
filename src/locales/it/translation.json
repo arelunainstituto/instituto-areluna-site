@@ -102,20 +102,28 @@
                 ]
             },
             "yara": {
-                "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "role": "Dentista",
+                "specialty": "Odontoiatria Generale",
+                "bio": "Dentista con attività in Odontoiatria Generale ed Estetica Orale. Trattamento rivolto alla salute orale alleata all'estetica, con focus su risultati naturali, funzionali e personalizzati per ogni paziente.",
                 "specs": [
-                    "General Practice",
-                    "Oral Aesthetics"
+                    "Odontoiatria Generale",
+                    "Estetica Orale"
+                ]
+            },
+            "patricia": {
+                "role": "Chirurgo Plastico",
+                "specialty": "Chirurgo Plastico",
+                "bio": "Chirurgo Plastico riconosciuta per l'eccellenza nella chirurgia del seno, unendo cura, tecnica e naturalezza. Attività in mastoplastica additiva, riduttiva e sostituzione protesi, oltre a Lipo HD di definizione naturale.",
+                "specs": [
+                    "Chirurgo Plastico"
                 ]
             },
             "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+                "role": "Igienista Dentale",
+                "specialty": "Igienista Dentale",
+                "bio": "Attività focalizzata sulla prevenzione, mantenimento della salute orale e accompagnamento personalizzato dei pazienti, con attenzione al comfort, alla tecnica e alla cura continua.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Igienista Dentale"
                 ]
             },
             "arethuza": {

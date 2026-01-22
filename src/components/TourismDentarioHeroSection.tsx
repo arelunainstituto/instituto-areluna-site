@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import tourismBg from "@/assets/tourism.png";
 
 const TourismDentarioHeroSection = () => {
   const { t } = useTranslation();
@@ -8,6 +9,11 @@ const TourismDentarioHeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-44 sm:pt-56 md:pt-64 pb-20">
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
+        <img
+          src={tourismBg}
+          alt="Tourism background"
+          className="w-full h-full object-cover mix-blend-overlay"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
 

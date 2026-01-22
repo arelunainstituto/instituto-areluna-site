@@ -17,7 +17,6 @@ const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfUse = lazy(() => import("./pages/TermsOfUse"));
-const NotFound = lazy(() => import("./pages/NotFound"));
 
 import CookieBanner from "./components/CookieBanner";
 

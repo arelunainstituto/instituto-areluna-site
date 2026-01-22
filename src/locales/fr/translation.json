@@ -102,20 +102,28 @@
                 ]
             },
             "yara": {
-                "role": "Dentist",
-                "specialty": "General Practice",
-                "bio": "",
+                "role": "Dentiste",
+                "specialty": "Dentisterie Générale",
+                "bio": "Dentiste exerçant en Dentisterie Générale et Esthétique Orale. Soins axés sur la santé bucco-dentaire alliée à l'esthétique, avec un accent sur des résultats naturels, fonctionnels et personnalisés pour chaque patient.",
                 "specs": [
-                    "General Practice",
-                    "Oral Aesthetics"
+                    "Dentisterie Générale",
+                    "Esthétique Orale"
+                ]
+            },
+            "patricia": {
+                "role": "Chirurgienne Plasticienne",
+                "specialty": "Chirurgienne Plasticienne",
+                "bio": "Chirurgienne Plasticienne reconnue pour son excellence dans les chirurgies mammaires, alliant soin, technique et naturel. Expertise en augmentation, réduction mammaire et changement d'implants, ainsi qu'en Lipo HD à définition naturelle.",
+                "specs": [
+                    "Chirurgienne Plasticienne"
                 ]
             },
             "federica": {
-                "role": "Oral Hygienist",
-                "specialty": "Oral Hygienist",
-                "bio": "",
+                "role": "Hygiéniste Dentaire",
+                "specialty": "Hygiéniste Dentaire",
+                "bio": "Axée sur la prévention, le maintien de la santé bucco-dentaire et le suivi personnalisé des patients, avec une attention particulière au confort, à la technique et aux soins continus.",
                 "specs": [
-                    "Oral Hygienist"
+                    "Hygiéniste Dentaire"
                 ]
             },
             "arethuza": {
