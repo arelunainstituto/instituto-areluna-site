@@ -520,7 +520,7 @@
             "main": "Programme",
             "highlight": "Tourisme Dentaire"
         },
-        "question": "Vous vivez hors du Portugal et aimeriez être suivi par un <highlight>dentiste portugais</highlight> ?",
+        "question": "Vous vivez hors du Portugal et aimeriez être suivi par un <highlight>dentiste</highlight> ?",
         "description": "La <highlight1>Clinique Areluna</highlight1> propose un programme de transformation de <highlight2>trois jours</highlight2> avec visite touristique incluse dans la <highlight3>belle ville de Porto</highlight3>.",
         "cta_text": "Contactez-nous et changez votre vie.",
         "benefits": {
@@ -684,7 +684,7 @@
         "hours": "Lun-Ven : 09h-19h<br/>Sam : Sur rendez-vous<br/>Dim : Fermé"
     },
     "header": {
-        "subtitle": "La principale destination pour la médecine dentaire à Lisbonne",
+        "subtitle": "La principale destination pour la médecine dentaire à Porto",
         "book_consultation": "PRENDRE RENDEZ-VOUS"
     },
     "cookie_banner": {

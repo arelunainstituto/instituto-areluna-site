@@ -520,7 +520,7 @@
             "main": "Programa",
             "highlight": "Turismo Dental"
         },
-        "question": "¿Vives fuera de Portugal y te gustaría ser atendido por un <highlight>dentista portugués</highlight>?",
+        "question": "¿Vives fuera de Portugal y te gustaría ser atendido por un <highlight>dentista</highlight>?",
         "description": "La <highlight1>Clínica Areluna</highlight1> dispone de un programa de transformación de <highlight2>tres días</highlight2> con visita turística incluida a la <highlight3>bella ciudad de Oporto</highlight3>.",
         "cta_text": "Contáctanos y cambia tu vida.",
         "benefits": {
@@ -684,7 +684,7 @@
         "hours": "Lun-Vie: 09h-19h<br/>Sáb: Con cita previa<br/>Dom: Cerrado"
     },
     "header": {
-        "subtitle": "El destino principal para la medicina dental en Lisboa",
+        "subtitle": "El destino principal para la medicina dental en Oporto",
         "book_consultation": "AGENDAR CITA"
     },
     "cookie_banner": {

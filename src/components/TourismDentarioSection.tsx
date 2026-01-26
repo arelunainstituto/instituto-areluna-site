@@ -87,11 +87,10 @@ const TourismDentarioSection = () => {
             </div>
 
             {/* Benefícios premium */}
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {[
                 { title: t("tourism.benefits.3_days.title"), desc: t("tourism.benefits.3_days.desc") },
                 { title: t("tourism.benefits.tourism.title"), desc: t("tourism.benefits.tourism.desc") },
-                { title: t("tourism.benefits.portuguese.title"), desc: t("tourism.benefits.portuguese.desc") },
                 { title: t("tourism.benefits.experience.title"), desc: t("tourism.benefits.experience.desc") }
               ].map((benefit, index) => (
                 <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">

@@ -520,7 +520,7 @@
             "main": "Programa",
             "highlight": "Turismo Dentário"
         },
-        "question": "Vive fora de Portugal e gostava de ser acompanhado por um <highlight>médico dentista Português</highlight>?",
+        "question": "Vive fora de Portugal e gostava de ser acompanhado por um <highlight>médico dentista</highlight>?",
         "description": "A <highlight1>Clínica Areluna</highlight1> dispõe de um programa de transformação de <highlight2>três dias</highlight2> com visita turística incluída à <highlight3>bela cidade do Porto</highlight3>.",
         "cta_text": "Entre em contacto e mude a sua vida.",
         "benefits": {
@@ -684,7 +684,7 @@
         "hours": "Seg-Sex: 09h-19h<br/>Sáb: Sob marcação<br/>Dom: Encerrado"
     },
     "header": {
-        "subtitle": "O principal destino para medicina dentária em Lisboa",
+        "subtitle": "O principal destino para medicina dentária no Porto",
         "book_consultation": "AGENDAR CONSULTA"
     },
     "cookie_banner": {

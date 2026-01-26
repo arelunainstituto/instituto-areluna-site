@@ -161,7 +161,7 @@ const BeforeAfterSection = () => {
                     </p>
 
                     {/* Detalhes do tratamento */}
-                    <div className="grid grid-cols-2 gap-3">
+                    {/* <div className="grid grid-cols-2 gap-3">
                       <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
                         <div className="relative z-10">
@@ -191,7 +191,7 @@ const BeforeAfterSection = () => {
                           <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.treatment}</p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Linha decorativa */}
                     <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -259,7 +259,7 @@ const BeforeAfterSection = () => {
                     </p>
 
                     {/* Detalhes do tratamento */}
-                    <div className="grid grid-cols-2 gap-3">
+                    {/* <div className="grid grid-cols-2 gap-3">
                       <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
                         <div className="relative z-10">

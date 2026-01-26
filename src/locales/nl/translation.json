@@ -520,7 +520,7 @@
             "main": "Programma",
             "highlight": "Tandheelkundig Toerisme"
         },
-        "question": "Woont u buiten Portugal en wilt u begeleid worden door een <highlight>Portugese tandarts</highlight>?",
+        "question": "Woont u buiten Portugal en wilt u begeleid worden door een <highlight>tandarts</highlight>?",
         "description": "<highlight1>Kliniek Areluna</highlight1> biedt een transformatieprogramma van <highlight2>drie dagen</highlight2> met inbegrepen toeristisch bezoek aan de <highlight3>prachtige stad Porto</highlight3>.",
         "cta_text": "Neem contact op en verander uw leven.",
         "benefits": {
@@ -684,7 +684,7 @@
         "hours": "Ma-Vr: 09:00-19:00<br/>Za: Op afspraak<br/>Zo: Gesloten"
     },
     "header": {
-        "subtitle": "De belangrijkste bestemming voor tandheelkunde in Lissabon",
+        "subtitle": "De belangrijkste bestemming voor tandheelkunde in Porto",
         "book_consultation": "AFSPRAAK MAKEN"
     },
     "cookie_banner": {
