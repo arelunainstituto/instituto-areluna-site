@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-const heroWoman = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954115/instituto-areluna/hero-woman.jpg";
+import heroWoman from "@/assets/DSC06081.jpg";
 
 const ContatoHeroSection = () => {
   const { t } = useTranslation();
