@@ -1,6 +1,14 @@
 import { useState } from "react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
+import imgD1_38 from "@/assets/Clinica-AreLuna-D1-38.jpg";
+import img96 from "@/assets/Instituto-Areluna-Clinicas-96.jpg";
+import imgD1_3 from "@/assets/Clinica-AreLuna-D1-3.jpg";
+import imgD1_28 from "@/assets/Clinica-AreLuna-D1-28.jpg";
+import imgD1_44 from "@/assets/Clinica-AreLuna-D1-44.jpg";
+import imgD1_2 from "@/assets/Clinica-AreLuna-D1-2.jpg";
+import img38 from "@/assets/Instituto-Areluna-Clinicas-38.jpg";
+import img80 from "@/assets/Instituto-Areluna-Clinicas-80.jpg";
 
 const GallerySection = () => {
   const { t } = useTranslation();
@@ -8,35 +16,35 @@ const GallerySection = () => {
 
   const images = [
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411823/Clinica-AreLuna-D1-38_dmbtgg.jpg",
+      src: imgD1_38,
       alt: t('gallery.img1_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411825/Instituto-Areluna-Clinicas-96_zqze6a.jpg",
+      src: img96,
       alt: t('gallery.img2_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411826/Clinica-AreLuna-D1-3_inhjk7.jpg",
+      src: imgD1_3,
       alt: t('gallery.img3_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411827/Clinica-AreLuna-D1-28_lhs3vb.jpg",
+      src: imgD1_28,
       alt: t('gallery.img4_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411831/Clinica-AreLuna-D1-44_ebooan.jpg",
+      src: imgD1_44,
       alt: t('gallery.img5_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411838/Clinica-AreLuna-D1-2_dbgdvb.jpg",
+      src: imgD1_2,
       alt: t('gallery.img6_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759411838/Instituto-Areluna-Clinicas-38_kw4afw.jpg",
+      src: img38,
       alt: t('gallery.img7_alt')
     },
     {
-      src: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759412566/Instituto-Areluna-Clinicas-80_1_1_txumyu.jpg",
+      src: img80,
       alt: t('gallery.img8_alt')
     }
   ];

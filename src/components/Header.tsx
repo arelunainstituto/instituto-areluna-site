@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import logoImg from "@/assets/logo.png";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -63,7 +64,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center justify-center">
             <img
-              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+              src={logoImg}
               alt="Areluna"
               loading="eager"
               decoding="async"
@@ -96,7 +97,7 @@ const Header = () => {
           {/* Logo centralizada */}
           <div className="flex items-center justify-center">
             <img
-              src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+              src={logoImg}
               alt="Areluna"
               loading="eager"
               decoding="async"
@@ -149,7 +150,7 @@ const Header = () => {
             {/* Header do menu mobile */}
             <div className="pt-16 xs:pt-20 pb-6 xs:pb-8 text-center">
               <img
-                src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+                src={logoImg}
                 alt="Areluna"
                 loading="lazy"
                 decoding="async"

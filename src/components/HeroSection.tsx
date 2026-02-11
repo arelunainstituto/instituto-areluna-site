@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
+import heroImage from "@/assets/heroImage.jpeg";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const HeroSection = () => {
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954598/instituto-areluna/97a1febf-3c27-4a63-a583-b2522013f3f4.jpg"
+          src={heroImage}
           alt="Background"
           className="w-full h-full object-cover mix-blend-overlay"
         />

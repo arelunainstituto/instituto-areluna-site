@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import caso13 from "../assets/Caso 13.png";
 
 const BeforeAfterSection = () => {
   const { t } = useTranslation();
@@ -41,7 +42,7 @@ const BeforeAfterSection = () => {
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465123/Caso_13_yqtm3a.png",
+      image: caso13,
       title: t("before_after.cases.facets.2.title"),
       description: t("before_after.cases.facets.2.desc"),
       duration: t("before_after.cases.facets.2.duration"),

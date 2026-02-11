@@ -3,9 +3,17 @@ import useEmblaCarousel from 'embla-carousel-react';
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
 
-import draYaraImg from "@/assets/dra-yara.jpg";
-import draFedericaImg from "@/assets/dra-federica.jpg";
-import draPatriciaImg from "@/assets/dra-patricia.jpg";
+import draYaraImg from "@/assets/Dra_Yara_Campos.jpg";
+import draFedericaImg from "@/assets/Dra_Federica_Laporta.jpg";
+import draPatriciaImg from "@/assets/Dra_Patrícia_Tatsch.jpg";
+import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
+import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
+import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
+import draCarlaImg from "@/assets/Dra_Carla_Salvi.jpg";
+import drMarcosImg from "@/assets/Dr_Marcos_Kawasaki.jpg";
+import draAlineImg from "@/assets/Dra_Aline_Marodin.jpg";
+import draPethineImg from "@/assets/Dra_Pethine_Dalsasso.jpg";
+import draSaraImg from "@/assets/Dra_Sara_Ribeiro.jpg";
 
 const CorpoClinicoSection = () => {
   const { t } = useTranslation();
@@ -33,49 +41,49 @@ const CorpoClinicoSection = () => {
       name: "Dr. Leonardo Saraiva",
       crm: "OMD 11846",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413227/Dr_Leonardo_Saraiva_hpzjei.jpg"
+      image: drLeonardoImg
     },
     {
       id: "daiane",
       name: "Dra. Daiane Andrade",
       crm: "OMD 22681",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Daiane_mywpym.jpg"
+      image: draDaianeImg
     },
     {
       id: "carla",
       name: "Dra. Carla Salvi",
       crm: "OMD 15214",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413233/Dra_Karla_lgoql9.jpg"
+      image: draCarlaImg
     },
     {
       id: "marcos",
       name: "Dr. Marcos Kawasaki",
       crm: "OM 75498",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413232/Dr_Marcos_Kawasaki_zy97ko.jpg"
+      image: drMarcosImg
     },
     {
       id: "aline",
       name: "Dra. Aline Marodin",
       crm: "OMD 12330",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Aline_yd8mq5.jpg"
+      image: draAlineImg
     },
     {
       id: "pethine",
       name: "Dra. Pethine Dalsasso",
       crm: "OMD 12228",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413228/Dra_Pethine_ommkbw.jpg"
+      image: draPethineImg
     },
     {
       id: "sara",
       name: "Dra. Sara Ribeiro",
       crm: "OMD 08560",
       peloBrasil: false,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413232/Dra_Sara_muubhr.jpg"
+      image: draSaraImg
     },
     {
       id: "yara",
@@ -103,7 +111,7 @@ const CorpoClinicoSection = () => {
       name: "Dra. Arethuza Luna",
       crm: "OMD 11845",
       peloBrasil: true,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1759413229/Dra_Arethuza_x7fsmo.jpg"
+      image: draArethuzaImg
     }
   ];
 

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
+import video from '@/assets/214-Legendado.mp4';
+import thumb from '@/assets/thumb.jpg';
 
 const TourismDentarioSection = () => {
   const { t } = useTranslation();
@@ -137,14 +139,14 @@ const TourismDentarioSection = () => {
               {/* Vídeo em formato stories */}
               <div className="aspect-[9/16] max-w-sm mx-auto bg-black rounded-3xl overflow-hidden shadow-2xl relative">
                 <video
-                  src="https://res.cloudinary.com/dli5oe4qg/video/upload/v1759420502/214-Legendado_1_1_wmmdvl.mp4"
+                  src={video}
                   className="w-full h-full object-cover"
                   controls
                   muted
                   playsInline
                   preload="metadata"
                   title="Programa Turismo Dentário - 214-Legendado"
-                  poster="https://res.cloudinary.com/dli5oe4qg/image/upload/v1759420895/Instituto_22092025_reelsnica_1_cxvac5.jpg"
+                  poster={thumb}
                 />
               </div>
 

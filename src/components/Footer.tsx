@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
+import logoImg from '@/assets/logo.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <img
-                  src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954590/instituto-areluna/684037b8-d590-4e39-83d2-b5ce9e85eae9.png"
+                  src={logoImg}
                   alt="Areluna"
                   loading="lazy"
                   decoding="async"
