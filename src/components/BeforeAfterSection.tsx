@@ -1,5 +1,10 @@
 import { useTranslation } from "react-i18next";
 import caso13 from "../assets/Caso 13.png";
+import caso14 from "../assets/14.png";
+import caso16 from "../assets/16.png";
+import caso30 from "../assets/30.jpg";
+import caso23 from "../assets/Caso 23.png";
+import caso80 from "../assets/80.png";
 
 const BeforeAfterSection = () => {
   const { t } = useTranslation();
@@ -7,7 +12,7 @@ const BeforeAfterSection = () => {
   const cases = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954554/instituto-areluna/23.jpg", // Caso 1 - Antes e Depois
+      image: caso14, // Caso 1 - Antes e Depois
       title: t("before_after.cases.implants.1.title"),
       description: t("before_after.cases.implants.1.desc"),
       duration: t("before_after.cases.implants.1.duration"),
@@ -15,7 +20,7 @@ const BeforeAfterSection = () => {
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954561/instituto-areluna/24.jpg", // Caso 2 - Antes e Depois
+      image: caso16, // Caso 2 - Antes e Depois
       title: t("before_after.cases.implants.2.title"),
       description: t("before_after.cases.implants.2.desc"),
       duration: t("before_after.cases.implants.2.duration"),
@@ -23,7 +28,7 @@ const BeforeAfterSection = () => {
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954567/instituto-areluna/25.jpg", // Caso 3 - Antes e Depois
+      image: caso30, // Caso 3 - Antes e Depois
       title: t("before_after.cases.implants.3.title"),
       description: t("before_after.cases.implants.3.desc"),
       duration: t("before_after.cases.implants.3.duration"),
@@ -34,7 +39,7 @@ const BeforeAfterSection = () => {
   const facetsCases = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465124/Caso_18_qcqzkb.png",
+      image: caso13,
       title: t("before_after.cases.facets.1.title"),
       description: t("before_after.cases.facets.1.desc"),
       duration: t("before_after.cases.facets.1.duration"),
@@ -42,7 +47,7 @@ const BeforeAfterSection = () => {
     },
     {
       id: 2,
-      image: caso13,
+      image: caso23,
       title: t("before_after.cases.facets.2.title"),
       description: t("before_after.cases.facets.2.desc"),
       duration: t("before_after.cases.facets.2.duration"),
@@ -50,7 +55,7 @@ const BeforeAfterSection = () => {
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465119/caso_27_mfkoht.png",
+      image: caso80,
       title: t("before_after.cases.facets.3.title"),
       description: t("before_after.cases.facets.3.desc"),
       duration: t("before_after.cases.facets.3.duration"),
@@ -131,13 +136,13 @@ const BeforeAfterSection = () => {
                 <div className="relative z-10">
                   {/* Imagem antes/depois */}
                   <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
-                    <div className="aspect-[4/5] rounded-3xl">
+                    <div className="aspect-square rounded-3xl">
                       <img
                         src={caseItem.image}
                         alt={`${caseItem.title} - Antes e Depois`}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-contain bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
 
@@ -229,13 +234,13 @@ const BeforeAfterSection = () => {
                 <div className="relative z-10">
                   {/* Imagem antes/depois */}
                   <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
-                    <div className="aspect-[4/5]">
+                    <div className="aspect-square rounded-3xl">
                       <img
                         src={caseItem.image}
                         alt={`${caseItem.title} - Antes e Depois`}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-contain bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
 
