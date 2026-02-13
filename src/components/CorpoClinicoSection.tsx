@@ -222,7 +222,7 @@ const CorpoClinicoSection = () => {
                             {doctor.crm}
                           </p>
                           {bio && (
-                            <p className="text-jet/80 dark:text-gray-300 text-xs mb-4 line-clamp-4">
+                            <p className="text-jet/80 dark:text-gray-300 text-xs mb-4">
                               {bio}
                             </p>
                           )}

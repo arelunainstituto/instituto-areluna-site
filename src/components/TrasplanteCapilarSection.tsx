@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954147/instituto-areluna/caso-2.jpg";
+import caso2 from '../assets/Caso 2.jpg';
 
 const TrasplanteCapilarSection = () => {
   const [isHovered, setIsHovered] = useState(false);
