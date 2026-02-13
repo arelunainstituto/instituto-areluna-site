@@ -126,6 +126,25 @@
                     "Igienista Dentale"
                 ]
             },
+            "thais": {
+                "role": "Medico",
+                "specialty": "Endocrinologia",
+                "bio": "Medico con formazione in Endocrinologia e specializzazione in Nutrologia. Focalizzata su dimagrimento, menopausa e medicina anti-invecchiamento, promuovendo la prevenzione delle malattie e l'equilibrio ormonale.",
+                "specs": [
+                    "Endocrinologia",
+                    "Nutrologia",
+                    "Medicina Anti-Invecchiamento"
+                ]
+            },
+            "anavitoria": {
+                "role": "Dentista",
+                "specialty": "Estetica Orale",
+                "bio": "Master in Medicina Dentale dell'Università di Porto, con focus su estetica e riabilitazione orale.",
+                "specs": [
+                    "Estetica Orale",
+                    "Riabilitazione Orale"
+                ]
+            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",

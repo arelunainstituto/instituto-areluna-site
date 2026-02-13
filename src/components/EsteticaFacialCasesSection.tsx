@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-const casoRino = "@/assets/caso-rino.png"; // Note: imports are handled at top, just ensuring context match
 import casoRinoImg from "@/assets/caso-rino.png";
 import casoLipsImg from "@/assets/caso-lips.jpg";
-const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954174/instituto-areluna/estetica-caso-2.jpg";
+import caso2 from "@/assets/01.png";
 
 const EsteticaFacialCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);

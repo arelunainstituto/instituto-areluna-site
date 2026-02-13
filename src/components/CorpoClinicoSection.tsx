@@ -107,6 +107,20 @@ const CorpoClinicoSection = () => {
       image: draFedericaImg
     },
     {
+      id: "thais",
+      name: "Dra. Thais Perlingeiro",
+      crm: "OM 69564",
+      peloBrasil: true,
+      image: ''
+    },
+    {
+      id: "anavitoria",
+      name: "Dra. Ana Vitória Marques",
+      crm: "OMD 15209",
+      peloBrasil: false,
+      image: ''
+    },
+    {
       id: "arethuza",
       name: "Dra. Arethuza Luna",
       crm: "OMD 11845",
@@ -171,16 +185,26 @@ const CorpoClinicoSection = () => {
                     >
                       {/* Container da imagem */}
                       <div className="relative overflow-hidden flex-shrink-0">
-                        <OptimizedImage
-                          src={doctor.image}
-                          alt={doctor.name}
-                          width={400}
-                          height={400}
-                          className={`w-full h-80 transition-all duration-700 group-hover:scale-110 object-cover`}
-                          style={doctor.name === "Dr. Leonardo Saraiva" ? { objectPosition: 'center 30%' } : {}}
-                        />
-                        {/* Overlay gradiente */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        {doctor.image ? (
+                          <>
+                            <OptimizedImage
+                              src={doctor.image}
+                              alt={doctor.name}
+                              width={400}
+                              height={400}
+                              className={`w-full h-80 transition-all duration-700 group-hover:scale-110 object-cover`}
+                              style={doctor.name === "Dr. Leonardo Saraiva" ? { objectPosition: 'center 30%' } : {}}
+                            />
+                            {/* Overlay gradiente */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          </>
+                        ) : (
+                          <div className="w-full h-80 bg-gradient-to-br from-[hsl(var(--gold-leaf))] to-amber-600 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center transition-all duration-700 group-hover:scale-110">
+                            <span className="text-9xl font-vivant text-white/90">
+                              {doctor.name.split(' ').pop()?.charAt(0).toUpperCase()}
+                            </span>
+                          </div>
+                        )}
 
                         {/* Badge de especialidade */}
                         <div className="absolute top-4 left-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg">

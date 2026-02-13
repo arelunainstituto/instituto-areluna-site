@@ -126,6 +126,25 @@
                     "Hygiéniste Dentaire"
                 ]
             },
+            "thais": {
+                "role": "Médecin",
+                "specialty": "Endocrinologie",
+                "bio": "Médecin avec formation en Endocrinologie et spécialisation en Nutrologie. Axée sur la perte de poids, la ménopause et la médecine anti-âge, favorisant la prévention des maladies et l'équilibre hormonal.",
+                "specs": [
+                    "Endocrinologie",
+                    "Nutrologie",
+                    "Médecine Anti-Âge"
+                ]
+            },
+            "anavitoria": {
+                "role": "Dentiste",
+                "specialty": "Esthétique Orale",
+                "bio": "Master en Médecine Dentaire de l'Université de Porto, axé sur l'esthétique et la réhabilitation orale.",
+                "specs": [
+                    "Esthétique Orale",
+                    "Réhabilitation Orale"
+                ]
+            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",

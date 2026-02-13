@@ -126,6 +126,25 @@
                     "Mondhygiënist"
                 ]
             },
+            "thais": {
+                "role": "Arts",
+                "specialty": "Endocrinologie",
+                "bio": "Arts met opleiding in Endocrinologie en specialisatie in Nutrologie. Gericht op gewichtsverlies, menopauze en anti-verouderingsgeneeskunde, ter bevordering van ziektepreventie en hormonaal evenwicht.",
+                "specs": [
+                    "Endocrinologie",
+                    "Nutrologie",
+                    "Anti-Verouderingsgeneeskunde"
+                ]
+            },
+            "anavitoria": {
+                "role": "Tandarts",
+                "specialty": "Orale Esthetiek",
+                "bio": "Master in Tandheelkunde van de Universiteit van Porto, met focus op esthetiek en orale revalidatie.",
+                "specs": [
+                    "Orale Esthetiek",
+                    "Orale Revalidatie"
+                ]
+            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",

@@ -126,6 +126,25 @@
                     "Dentalhygienikerin"
                 ]
             },
+            "thais": {
+                "role": "Ärztin",
+                "specialty": "Endokrinologie",
+                "bio": "Ärztin mit Ausbildung in Endokrinologie und Spezialisierung in Nutrologie. Fokussiert auf Gewichtsreduktion, Menopause und Anti-Aging-Medizin, zur Förderung der Krankheitsprävention und des hormonellen Gleichgewichts.",
+                "specs": [
+                    "Endokrinologie",
+                    "Nutrologie",
+                    "Anti-Aging-Medizin"
+                ]
+            },
+            "anavitoria": {
+                "role": "Zahnärztin",
+                "specialty": "Orale Ästhetik",
+                "bio": "Master in Zahnmedizin von der Universität Porto, mit Schwerpunkt auf Ästhetik und oraler Rehabilitation.",
+                "specs": [
+                    "Orale Ästhetik",
+                    "Orale Rehabilitation"
+                ]
+            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",

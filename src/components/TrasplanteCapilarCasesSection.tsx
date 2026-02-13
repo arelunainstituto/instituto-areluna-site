@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-const caso1 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954137/instituto-areluna/caso-1.jpg";
-const caso2 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954147/instituto-areluna/caso-2.jpg";
-const caso3 = "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954150/instituto-areluna/caso-3.jpg";
+import caso1 from "@/assets/transplante-caso-1.jpg";
+import caso2 from "@/assets/transplante-caso-2.png";
+import caso3 from "@/assets/transplante-caso-3.jpg";
 
 const TrasplanteCapilarCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
@@ -85,7 +85,7 @@ const TrasplanteCapilarCasesSection = () => {
               onClick={() => setSelectedCase(selectedCase === caseItem.id ? null : caseItem.id)}
             >
               {/* Imagem do caso */}
-              <div className="aspect-[4/3] overflow-hidden relative">
+              <div className="aspect-[15/18] overflow-hidden relative">
                 <img
                   src={caseItem.image}
                   alt={`${caseItem.title} - Transplante Capilar FUE`}
