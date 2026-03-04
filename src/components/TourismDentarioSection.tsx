@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import video from '@/assets/214-Legendado.mp4';
-import thumb from '@/assets/thumb.jpg';
 
 const TourismDentarioSection = () => {
   const { t } = useTranslation();
@@ -28,9 +26,9 @@ const TourismDentarioSection = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="max-w-3xl mx-auto">
           {/* Conteúdo */}
-          <div className="order-2 lg:order-1 space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Badge superior */}
             <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 dark:border-[hsl(var(--gold-leaf))]/40 shadow-lg">
               <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
@@ -110,7 +108,7 @@ const TourismDentarioSection = () => {
             </div>
 
             {/* Botão premium */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center w-full">
               <div
                 className="relative inline-block group cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
@@ -129,34 +127,6 @@ const TourismDentarioSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                 </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Espaço para imagem */}
-          <div className="order-1 lg:order-2">
-            <div className="relative bg-gradient-to-br from-white/80 via-white/60 to-white/80 rounded-3xl p-8 backdrop-blur-sm border border-[hsl(var(--gold-leaf))]/20 shadow-2xl">
-              {/* Vídeo em formato stories */}
-              <div className="aspect-[9/16] max-w-sm mx-auto bg-black rounded-3xl overflow-hidden shadow-2xl relative">
-                <video
-                  src={video}
-                  className="w-full h-full object-cover"
-                  controls
-                  muted
-                  playsInline
-                  preload="metadata"
-                  title="Programa Turismo Dentário - 214-Legendado"
-                  poster={thumb}
-                />
-              </div>
-
-              {/* Elementos decorativos do card */}
-              <div className="absolute -top-3 -right-3 w-6 h-6 bg-[hsl(var(--gold-leaf))] rounded-full opacity-80"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-400 rounded-full opacity-60"></div>
-
-              {/* Badge no card */}
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <span className="text-[hsl(var(--gold-leaf))] font-vivant text-xs font-medium">{t("tourism.video_badge")}</span>
               </div>
             </div>
           </div>
