@@ -98,7 +98,7 @@ const TrasplanteCapilarSection = () => {
             </div>
 
             {/* Benefícios premium */}
-            <div className="grid md:grid-cols-2 gap-4">
+            {/* <div className="grid md:grid-cols-2 gap-4">
               {[
                 { title: t('benefits.fue.title'), desc: t('benefits.fue.desc') },
                 { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') },
@@ -117,7 +117,7 @@ const TrasplanteCapilarSection = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Botão premium */}
             <div className="pt-4">

@@ -1,10 +1,25 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-
+import thumbImg from '../assets/thumb.jpg';
+import { Play } from 'lucide-react';
 
 const TourismDentarioSection = () => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsVideoPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsVideoPlaying(false);
+      }
+    }
+  };
 
   return (
     <section id="programa" className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
@@ -88,7 +103,7 @@ const TourismDentarioSection = () => {
             </div>
 
             {/* Benefícios premium */}
-            <div className="grid md:grid-cols-3 gap-4">
+            {/* <div className="grid md:grid-cols-3 gap-4">
               {[
                 { title: t("tourism.benefits.3_days.title"), desc: t("tourism.benefits.3_days.desc") },
                 { title: t("tourism.benefits.tourism.title"), desc: t("tourism.benefits.tourism.desc") },
@@ -106,7 +121,7 @@ const TourismDentarioSection = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Botão premium */}
             <div className="pt-4 flex justify-center w-full">
@@ -135,15 +150,31 @@ const TourismDentarioSection = () => {
           {/* Vídeo em formato stories */}
           <div className="order-1 lg:order-2">
             <div className="relative bg-gradient-to-br from-white/80 via-white/60 to-white/80 rounded-3xl p-8 backdrop-blur-sm border border-[hsl(var(--gold-leaf))]/20 shadow-2xl">
-              <div className="aspect-[9/16] max-w-sm mx-auto bg-black rounded-3xl overflow-hidden shadow-2xl relative">
-                <iframe
-                  src="https://www.youtube.com/embed/MOlUJ22wo_g?autoplay=0&rel=0&modestbranding=1&controls=0"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+              <div className="aspect-[9/16] max-w-sm mx-auto bg-black rounded-3xl overflow-hidden shadow-2xl relative group">
+                <video
+                  ref={videoRef}
+                  src="https://hvqckoajxhdqaxfawisd.supabase.co/storage/v1/object/sign/video/214-Legendado.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xYmZmNGRkNy02NjAwLTRlYmMtYTc1OC1hNTBiYTczYzE0YzYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ2aWRlby8yMTQtTGVnZW5kYWRvLm1wNCIsImlhdCI6MTc3NjQyNTc1OCwiZXhwIjoxOTM0MTA1NzU4fQ.Ev3jnYFKqtq3n0zFau2nIh-NtCEFy58REYfH59hDq_s"
+                  className="w-full h-full object-cover cursor-pointer"
+                  onClick={togglePlay}
+                  onPause={() => setIsVideoPlaying(false)}
+                  onPlay={() => setIsVideoPlaying(true)}
+                  playsInline
+                  preload="metadata"
                   title="Programa Turismo Dentário"
-                  style={{ border: 'none' }}
+                  poster={thumbImg}
                 />
+                
+                {/* Play Button Overlay */}
+                {!isVideoPlaying && (
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 cursor-pointer transition-colors duration-300"
+                    onClick={togglePlay}
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--gold-leaf))] to-amber-400 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.4)] backdrop-blur-sm transform transition-all group-hover:scale-110">
+                      <Play className="text-white w-7 h-7 ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Elementos decorativos do card */}
