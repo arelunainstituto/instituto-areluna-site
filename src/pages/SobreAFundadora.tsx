@@ -19,15 +19,15 @@ const personSchema = {
     "url": "https://www.institutoareluna.pt/"
   },
   "alumniOf": [
-    {"@type": "CollegeOrUniversity", "name": "Universidade Federal do Paraná"},
-    {"@type": "CollegeOrUniversity", "name": "Swift Beauty Institute, Nova Iorque"},
-    {"@type": "CollegeOrUniversity", "name": "Harmonização Orofacial Avançada, Miami"}
+    { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Paraná" },
+    { "@type": "CollegeOrUniversity", "name": "Swift Beauty Institute, Nova Iorque" },
+    { "@type": "CollegeOrUniversity", "name": "Harmonização Orofacial Avançada, Miami" }
   ],
   "hasCredential": [
-    {"@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas"},
-    {"@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia"},
-    {"@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque"},
-    {"@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami"}
+    { "@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas" },
+    { "@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia" },
+    { "@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque" },
+    { "@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami" }
   ],
   "knowsAbout": [
     "Ortodontia",
@@ -68,7 +68,7 @@ const SobreAFundadora = () => {
       />
       <Header />
 
-      <main className="pt-40">
+      <main className="pt-[8.9rem]">
         {/* Hero section */}
         <section className="py-20 px-4 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden">
           <div className="container mx-auto max-w-6xl">
