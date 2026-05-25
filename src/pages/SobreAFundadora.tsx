@@ -4,65 +4,62 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
 import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
 import { Link } from "react-router-dom";
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dra. Arethuza Luna",
-  "jobTitle": "Médica-Dentista — Ortodontia e Harmonização Orofacial",
-  "description": "Fundadora do Instituto AreLuna, pioneira em medicina dentária e harmonização orofacial no Porto. Com formação internacional em Nova Iorque e Miami, fundou a clínica que hoje é referência europeia em saúde e estética integrada.",
-  "image": "https://www.institutoareluna.pt/og-institutoareluna.jpg",
-  "url": "https://www.institutoareluna.pt/sobre-a-fundadora",
-  "worksFor": {
-    "@type": "Dentist",
-    "name": "Instituto AreLuna",
-    "url": "https://www.institutoareluna.pt/"
-  },
-  "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Paraná" },
-    { "@type": "CollegeOrUniversity", "name": "Swift Beauty Institute, Nova Iorque" },
-    { "@type": "CollegeOrUniversity", "name": "Harmonização Orofacial Avançada, Miami" }
-  ],
-  "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas" },
-    { "@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia" },
-    { "@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque" },
-    { "@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami" }
-  ],
-  "knowsAbout": [
-    "Ortodontia",
-    "Ortopedia Facial",
-    "Harmonização Orofacial",
-    "Estética Facial Avançada",
-    "Medicina Dentária Integrada"
-  ],
-  "sameAs": [
-    "https://www.instagram.com/dra.arethuzaluna",
-    "https://www.instagram.com/institutoareluna"
-  ]
-};
+import { useTranslation } from "react-i18next";
 
 const SobreAFundadora = () => {
-  const specialties = [
-    "Ortodontia e Ortopedia Facial",
-    "Harmonização Orofacial Avançada",
-    "Medicina Dentária Integrada",
-    "Master Injector (Swift Beauty, NY)",
-    "Harmonização Orofacial Avançada (Miami)"
-  ];
+  const { t } = useTranslation();
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dra. Arethuza Luna",
+    "jobTitle": "Médica-Dentista — Ortodontia e Harmonização Orofacial",
+    "description": t('founder.seo.description'),
+    "image": "https://www.institutoareluna.pt/og-institutoareluna.jpg",
+    "url": "https://www.institutoareluna.pt/sobre-a-fundadora",
+    "worksFor": {
+      "@type": "Dentist",
+      "name": "Instituto AreLuna",
+      "url": "https://www.institutoareluna.pt/"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Paraná" },
+      { "@type": "CollegeOrUniversity", "name": "Swift Beauty Institute, Nova Iorque" },
+      { "@type": "CollegeOrUniversity", "name": "Harmonização Orofacial Avançada, Miami" }
+    ],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas" },
+      { "@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia" },
+      { "@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque" },
+      { "@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami" }
+    ],
+    "knowsAbout": [
+      "Ortodontia",
+      "Ortopedia Facial",
+      "Harmonização Orofacial",
+      "Estética Facial Avançada",
+      "Medicina Dentária Integrada"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/dra.arethuzaluna",
+      "https://www.instagram.com/institutoareluna"
+    ]
+  };
+
+  const specialties = t('founder.specialties', { returnObjects: true }) as string[];
 
   const credentials = [
-    { label: "Registo Profissional", value: "OMD 11845" },
-    { label: "Formação Base", value: "Universidade Federal do Paraná" },
-    { label: "Experiência Clínica", value: "+24 anos" },
-    { label: "Especialização Internacional", value: "Nova Iorque e Miami" }
+    { label: t('founder.credentials.registry'), value: t('founder.credentials.registry_val') },
+    { label: t('founder.credentials.education'), value: t('founder.credentials.education_val') },
+    { label: t('founder.credentials.experience'), value: t('founder.credentials.experience_val') },
+    { label: t('founder.credentials.international'), value: t('founder.credentials.international_val') }
   ];
 
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Dra. Arethuza Luna — Fundadora | Instituto AreLuna Porto"
-        description="Dra. Arethuza Luna, OMD 11845, fundadora do Instituto AreLuna no Porto. Especialista em Ortodontia, Ortopedia e Harmonização Orofacial. Formação internacional em Nova Iorque e Miami. +24 anos de experiência."
+        title={t('founder.seo.title')}
+        description={t('founder.seo.description')}
         canonical="https://www.institutoareluna.pt/sobre-a-fundadora"
         jsonLd={personSchema}
       />
@@ -90,14 +87,14 @@ const SobreAFundadora = () => {
               {/* Bio */}
               <div className="text-white">
                 <p className="text-[hsl(var(--gold-leaf))] text-sm font-medium tracking-widest uppercase mb-4">
-                  Fundadora & Directora Clínica
+                  {t('founder.role')}
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-vivant font-thin mb-6 leading-tight">
-                  Dra. Arethuza<br />
-                  <span className="text-[hsl(var(--gold-leaf))]">Luna</span>
+                  {t('founder.title')}<br />
+                  <span className="text-[hsl(var(--gold-leaf))]">{t('founder.subtitle')}</span>
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-8 font-light">
-                  Médica-Dentista com registo OMD 11845, especializada em Ortodontia, Ortopedia Facial e Harmonização Orofacial Avançada. Fundou o Instituto AreLuna há mais de duas décadas com uma visão clara: elevar o padrão da medicina dentária e da estética avançada em Portugal para um nível europeu de excelência.
+                  {t('founder.bio')}
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -115,7 +112,7 @@ const SobreAFundadora = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"
                 >
-                  Agendar Consulta
+                  {t('founder.cta_whatsapp')}
                 </a>
               </div>
             </div>
@@ -129,7 +126,7 @@ const SobreAFundadora = () => {
               {/* Especialidades */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-vivant text-[hsl(var(--jet))] dark:text-white mb-8">
-                  Especialidades
+                  {t('founder.specialties_title')}
                 </h2>
                 <ul className="space-y-4">
                   {specialties.map((spec, i) => (
@@ -144,17 +141,17 @@ const SobreAFundadora = () => {
               {/* Visão */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-vivant text-[hsl(var(--jet))] dark:text-white mb-8">
-                  A Visão
+                  {t('founder.vision_title')}
                 </h2>
                 <div className="space-y-6 text-gray-700 dark:text-gray-300 font-light leading-relaxed">
                   <p>
-                    Com uma abordagem que alia medicina dentária de precisão, estética avançada e bem-estar integral, a Dra. Arethuza Luna construiu uma clínica onde cada paciente é tratado como único. O padrão IAL — desenvolvido ao longo de mais de 24 anos — é o reflexo desta filosofia.
+                    {t('founder.vision_p1')}
                   </p>
                   <p>
-                    A sua formação internacional — incluindo um programa de Master Injector na Swift Beauty Institute em Nova Iorque e Harmonização Orofacial Avançada em Miami — trouxe para Portugal técnicas e protocolos que anteriormente só estavam disponíveis nos maiores centros do mundo.
+                    {t('founder.vision_p2')}
                   </p>
                   <p>
-                    Hoje, o Instituto AreLuna é reconhecido como referência europeia, recebendo pacientes de Portugal, Brasil e de mais de 20 países, que viajam especificamente para beneficiar da combinação única de qualidade, expertise e hospitalidade portuguesa.
+                    {t('founder.vision_p3')}
                   </p>
                 </div>
               </div>
@@ -166,23 +163,23 @@ const SobreAFundadora = () => {
         <section className="py-20 px-4 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden">
           <div className="container mx-auto max-w-4xl text-center text-white">
             <h2 className="text-3xl md:text-4xl font-vivant font-thin mb-6">
-              Conheça o Instituto AreLuna
+              {t('founder.cta_title')}
             </h2>
             <p className="text-white/70 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
-              Visite-nos no Porto e descubra por que razão somos a escolha de milhares de pacientes nacionais e internacionais. A sua transformação começa aqui.
+              {t('founder.cta_desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contato"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"
               >
-                Marcar Consulta
+                {t('founder.cta_button_contact')}
               </Link>
               <Link
                 to="/tratamentos"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-white/30 text-white font-light hover:bg-white/10 transition-colors duration-300"
               >
-                Ver Tratamentos
+                {t('founder.cta_button_treatments')}
               </Link>
             </div>
           </div>
