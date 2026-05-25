@@ -59,7 +59,7 @@ const SobreAFundadora = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950">
+    <div className="min-h-screen">
       <SEOHead
         title="Dra. Arethuza Luna — Fundadora | Instituto AreLuna Porto"
         description="Dra. Arethuza Luna, OMD 11845, fundadora do Instituto AreLuna no Porto. Especialista em Ortodontia, Ortopedia e Harmonização Orofacial. Formação internacional em Nova Iorque e Miami. +24 anos de experiência."
@@ -68,9 +68,9 @@ const SobreAFundadora = () => {
       />
       <Header />
 
-      <main className="pt-40 pb-20">
+      <main className="pt-40">
         {/* Hero section */}
-        <section className="bg-gradient-to-b from-[hsl(var(--jet))] to-gray-900 py-20 px-4">
+        <section className="py-20 px-4 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden">
           <div className="container mx-auto max-w-6xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Foto */}
@@ -123,7 +123,7 @@ const SobreAFundadora = () => {
         </section>
 
         {/* Formação & Especialidades */}
-        <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 bg-white dark:bg-[hsl(var(--jet))]">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-16">
               {/* Especialidades */}
@@ -163,7 +163,7 @@ const SobreAFundadora = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 bg-gradient-to-br from-[hsl(var(--jet))] to-gray-900">
+        <section className="py-20 px-4 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden">
           <div className="container mx-auto max-w-4xl text-center text-white">
             <h2 className="text-3xl md:text-4xl font-vivant font-thin mb-6">
               Conheça o Instituto AreLuna

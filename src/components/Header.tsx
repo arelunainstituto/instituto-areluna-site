@@ -11,6 +11,7 @@ const Header = () => {
   const location = useLocation();
   const isBlogPage = location.pathname.startsWith('/blog');
   const isPrivacyOrTerms = location.pathname === '/privacidade' || location.pathname === '/termos';
+  const isSolidHeader = isBlogPage || isPrivacyOrTerms || location.pathname === '/sobre-a-fundadora';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,7 @@ const Header = () => {
     { href: "/turismo-dentario", label: t('nav.tourism') },
     { href: "/transplante-capilar", label: t('nav.hair_transplant') },
     { href: "/estetica-facial", label: t('nav.facial_aesthetics') },
+    { href: "/sobre-a-fundadora", label: "A Fundadora" },
     // { href: "#midia", label: "MÍDIA" },
     { href: "/contato", label: t('common.contact') },
     { href: "/blog", label: t('nav.blog') },
@@ -52,12 +54,12 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || isBlogPage || isPrivacyOrTerms
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || isSolidHeader
       ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
       : 'bg-transparent'
       }`}>
       {/* Main header */}
-      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled || isBlogPage ? 'py-1.5 xs:py-2 sm:py-3' : 'py-2 xs:py-3 sm:py-4'
+      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled || isSolidHeader ? 'py-1.5 xs:py-2 sm:py-3' : 'py-2 xs:py-3 sm:py-4'
         }`}>
         {/* Mobile Layout - Side by side */}
         <div className="flex items-center justify-between lg:hidden">
@@ -68,7 +70,7 @@ const Header = () => {
               alt="Areluna"
               loading="eager"
               decoding="async"
-              className={`w-auto transition-all duration-500 ${isScrolled || isBlogPage
+              className={`w-auto transition-all duration-500 ${isScrolled || isSolidHeader
                 ? 'h-16 xs:h-16 sm:h-18'
                 : 'h-[6rem] xs:h-18 sm:h-20'
                 }`}
@@ -101,7 +103,7 @@ const Header = () => {
               alt="Areluna"
               loading="eager"
               decoding="async"
-              className={`w-auto transition-all duration-500 ${isScrolled || isBlogPage
+              className={`w-auto transition-all duration-500 ${isScrolled || isSolidHeader
                 ? 'h-20'
                 : 'h-40'
                 }`}
@@ -109,7 +111,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation - Abaixo da logo */}
-          <nav className={`flex items-center justify-center space-x-5 xl:space-x-6 transition-all duration-500 ${isScrolled || isBlogPage ? 'mt-2' : 'mt-4'
+          <nav className={`flex items-center justify-center space-x-5 xl:space-x-6 transition-all duration-500 ${isScrolled || isSolidHeader ? 'mt-2' : 'mt-4'
             }`}>
             {menuItems.map((item) => (
               <a
