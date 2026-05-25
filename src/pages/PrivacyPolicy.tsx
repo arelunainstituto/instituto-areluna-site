@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SEOHead from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
     const { t, i18n } = useTranslation('privacy_policy');
@@ -9,6 +10,12 @@ const PrivacyPolicy = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+            <SEOHead
+              title="Política de Privacidade | Instituto AreLuna"
+              description="Política de privacidade e tratamento de dados pessoais do Instituto AreLuna, em conformidade com o RGPD."
+              canonical="https://www.institutoareluna.pt/privacidade"
+              noindex={true}
+            />
             <Header />
 
             <main className="flex-grow pt-[260px] pb-20 px-6">

@@ -10,6 +10,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BlogHeroSection from "@/components/BlogHeroSection";
+import SEOHead from "@/components/SEOHead";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Instituto AreLuna",
+  "description": "Artigos sobre saúde oral, estética facial e bem-estar pela equipa clínica do Instituto AreLuna.",
+  "url": "https://www.institutoareluna.pt/blog",
+  "inLanguage": "pt-PT",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Instituto AreLuna",
+    "url": "https://www.institutoareluna.pt/"
+  }
+};
 
 const BlogPage = () => {
     const { data, isLoading, error } = useQuery({
@@ -60,6 +75,12 @@ const BlogPage = () => {
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950">
+            <SEOHead
+              title="Blog de Saúde Oral e Estética | Instituto AreLuna"
+              description="Artigos sobre saúde oral, estética facial e bem-estar da equipa clínica do Instituto AreLuna. Dicas e novidades de dentistas e especialistas especializados no Porto."
+              canonical="https://www.institutoareluna.pt/blog"
+              jsonLd={blogSchema}
+            />
             <Header />
             <BlogHeroSection />
             <div className="pt-16 pb-16 bg-white dark:bg-gray-950">
@@ -71,7 +92,9 @@ const BlogPage = () => {
                                     <div className="aspect-video w-full overflow-hidden">
                                         <img
                                             src={post.image_url || "/placeholder.svg"}
-                                            alt={post.title}
+                                            alt={`${post.title} — Instituto AreLuna`}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
                                     </div>

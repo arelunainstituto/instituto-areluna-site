@@ -17,6 +17,7 @@ const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfUse = lazy(() => import("./pages/TermsOfUse"));
+const SobreAFundadora = lazy(() => import("./pages/SobreAFundadora"));
 
 import CookieBanner from "./components/CookieBanner";
 
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/contato" element={<ContatoPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/sobre-a-fundadora" element={<SobreAFundadora />} />
               <Route path="/privacidade" element={<PrivacyPolicy />} />
               <Route path="/termos" element={<TermsOfUse />} />
               <Route path="/casos-clinicos" element={<Index />} />

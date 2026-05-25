@@ -129,10 +129,21 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
+            <a
+              href="tel:+351220430090"
+              aria-label="Telefone: +351 220 430 090"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[hsl(var(--gold-leaf))]/40 text-[hsl(var(--gold-leaf))] text-xs font-medium hover:bg-[hsl(var(--gold-leaf))]/10 transition-all duration-300 whitespace-nowrap"
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +351 220 430 090
+            </a>
             <div className="pl-4 opacity-80 border-l border-white/10 ml-4">
               <LanguageSwitcher />
             </div>
           </nav>
+
         </div>
 
         {/* Mobile Navigation Overlay */}

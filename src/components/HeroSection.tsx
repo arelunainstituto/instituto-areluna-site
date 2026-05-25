@@ -11,11 +11,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Background"
+          alt="Interior do Instituto AreLuna — clínica dentária e de estética avançada no Porto"
           className="w-full h-full object-cover mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
+
 
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
