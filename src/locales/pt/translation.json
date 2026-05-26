@@ -24,15 +24,15 @@
     "gallery": {
         "title": "Clínica",
         "subtitle": "Conheça nossos espaços modernos e equipamentos de última geração",
-        "fullscreen_alt": "Imagem da clínica em tela cheia",
-        "img1_alt": "Consultório dentário moderno",
-        "img2_alt": "Espaço moderno da clínica",
-        "img3_alt": "Equipamentos de última geração",
-        "img4_alt": "Ambiente de tratamento",
-        "img5_alt": "Sala de procedimentos",
-        "img6_alt": "Recepção da clínica Areluna",
-        "img7_alt": "Instalações modernas",
-        "img8_alt": "Tecnologia avançada"
+        "fullscreen_alt": "Imagem das instalações do Instituto AreLuna — clínica dentária no Porto",
+        "img1_alt": "Consultório dentário moderno do Instituto AreLuna com cadeira ergonómica e equipamentos de última geração, Porto",
+        "img2_alt": "Espaço de recepção elegante do Instituto AreLuna — ambiente premium de clínica dentária no Porto",
+        "img3_alt": "Equipamentos de diagnóstico de última geração no Instituto AreLuna, clínica dentária e estética no Porto",
+        "img4_alt": "Sala de tratamento do Instituto AreLuna com tecnologia avançada para medicina dentária e estética facial",
+        "img5_alt": "Sala de procedimentos estéticos do Instituto AreLuna — ambiente esterilizado e equipado, Porto",
+        "img6_alt": "Recepção e zona de espera do Instituto AreLuna — clínica de estética e medicina dentária no Porto",
+        "img7_alt": "Instalações modernas do Instituto AreLuna no Porto — clínica dentária com padrão europeu de excelência",
+        "img8_alt": "Tecnologia avançada para diagnóstico e tratamento oral no Instituto AreLuna, Porto Portugal"
     },
     "team": {
         "title": "Corpo Clínico",
@@ -1043,6 +1043,43 @@
                 "description": "Agende a sua consulta e descubra como podemos ajudá-lo a alcançar o sorriso perfeito.",
                 "button": "AGENDAR CONSULTA"
             }
+        }
+    },
+    "founder": {
+        "title": "Dra. Arethuza",
+        "subtitle": "Luna",
+        "role": "Fundadora & Directora Clínica",
+        "bio": "Médica-Dentista com registo OMD 11845, especializada em Ortodontia, Ortopedia Facial e Harmonização Orofacial Avançada. Fundou o Instituto AreLuna há mais de duas décadas com uma visão clara: elevar o padrão da medicina dentária e da estética avançada em Portugal para um nível europeu de excelência.",
+        "specialties_title": "Especialidades",
+        "specialties": [
+            "Ortodontia e Ortopedia Facial",
+            "Harmonização Orofacial Avançada",
+            "Medicina Dentária Integrada",
+            "Master Injector (Swift Beauty, NY)",
+            "Harmonização Orofacial Avançada (Miami)"
+        ],
+        "credentials": {
+            "registry": "Registo Profissional",
+            "registry_val": "OMD 11845",
+            "education": "Formação Base",
+            "education_val": "Universidade Federal do Paraná",
+            "experience": "Experiência Clínica",
+            "experience_val": "+24 anos",
+            "international": "Especialização Internacional",
+            "international_val": "Nova Iorque e Miami"
+        },
+        "vision_title": "A Visão",
+        "vision_p1": "Com uma abordagem que alia medicina dentária de precisão, estética avançada e bem-estar integral, a Dra. Arethuza Luna construiu uma clínica onde cada paciente é tratado como único. O padrão IAL — desenvolvido ao longo de mais de 24 anos — é o reflexo desta filosofia.",
+        "vision_p2": "A sua formação internacional — incluindo um programa de Master Injector na Swift Beauty Institute em Nova Iorque e Harmonização Orofacial Avançada em Miami — trouxe para Portugal técnicas e protocolos que anteriormente só estavam disponíveis nos maiores centros do mundo.",
+        "vision_p3": "Hoje, o Instituto AreLuna é reconhecido como referência europeia, recebendo pacientes de Portugal, Brasil e de mais de 20 países, que viajam especificamente para beneficiar da combinação única de qualidade, expertise e hospitalidade portuguesa.",
+        "cta_title": "Conheça o Instituto AreLuna",
+        "cta_desc": "Visite-nos no Porto e descubra por que razão somos a escolha de milhares de pacientes nacionais e internacionais. A sua transformação começa aqui.",
+        "cta_button_contact": "Marcar Consulta",
+        "cta_button_treatments": "Ver Tratamentos",
+        "cta_whatsapp": "Agendar Consulta",
+        "seo": {
+            "title": "Dra. Arethuza Luna — Fundadora | Instituto AreLuna Porto",
+            "description": "Dra. Arethuza Luna, OMD 11845, fundadora do Instituto AreLuna no Porto. Especialista em Ortodontia, Ortopedia e Harmonização Orofacial. Formação internacional em Nova Iorque e Miami. +24 anos de experiência."
         }
     }
 }

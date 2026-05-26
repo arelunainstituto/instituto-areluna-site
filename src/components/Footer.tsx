@@ -126,12 +126,18 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/sobre-a-fundadora" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                    Sobre a Fundadora
+                  </a>
+                </li>
+                <li>
                   <a href="/contato" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('common.contact')}
                   </a>
                 </li>
               </ul>
             </div>
+
 
             {/* Informações de contato e ERS */}
             <div className="space-y-8">

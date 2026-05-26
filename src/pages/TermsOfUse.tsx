@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SEOHead from "@/components/SEOHead";
 
 const TermsOfUse = () => {
     const { t, i18n } = useTranslation('terms_of_use');
@@ -9,6 +10,12 @@ const TermsOfUse = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+            <SEOHead
+              title="Termos de Utilização | Instituto AreLuna"
+              description="Termos e condições de utilização do site do Instituto AreLuna — clínica dentária e de estética avançada no Porto."
+              canonical="https://www.institutoareluna.pt/termos"
+              noindex={true}
+            />
             <Header />
 
             <main className="flex-grow pt-[260px] pb-20 px-6">

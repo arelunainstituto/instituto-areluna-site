@@ -711,5 +711,42 @@
         "description": "Wij gebruiken cookies om uw browse-ervaring te verbeteren, siteverkeer te analyseren en inhoud te personaliseren. Door op \"Accepteren\" te klikken, stemt u in met ons gebruik van cookies. U kunt meer lezen in ons <0>Privacybeleid</0>.",
         "reject": "Weigeren",
         "accept_all": "Alles Accepteren"
+    },
+    "founder": {
+        "title": "Dr. Arethuza",
+        "subtitle": "Luna",
+        "role": "Oprichtster & Klinisch Directrice",
+        "bio": "Tandarts met OMD-registratie 11845, gespecialiseerd in Orthodontie, Faciale Orthopedie en Geavanceerde Orofaciale Harmonisatie. Ze richtte het AreLuna Instituut meer dan twee decennia geleden op met een duidelijke visie: de standaard van de tandheelkunde en geavanceerde esthetiek in Portugal naar een Europees topniveau tillen.",
+        "specialties_title": "Specialiteiten",
+        "specialties": [
+            "Orthodontie en Faciale Orthopedie",
+            "Geavanceerde Orofaciale Harmonisatie",
+            "Geïntegreerde Tandheelkunde",
+            "Master Injector (Swift Beauty, NY)",
+            "Geavanceerde Orofaciale Harmonisatie (Miami)"
+        ],
+        "credentials": {
+            "registry": "Beroepsregistratie",
+            "registry_val": "OMD 11845",
+            "education": "Opleiding",
+            "education_val": "Federale Universiteit van Paraná",
+            "experience": "Klinische Ervaring",
+            "experience_val": "+24 jaar",
+            "international": "Internationale Specialisatie",
+            "international_val": "New York en Miami"
+        },
+        "vision_title": "De Visie",
+        "vision_p1": "Met een aanpak die precisietandheelkunde, geavanceerde esthetiek en integraal welzijn combineert, heeft dr. Arethuza Luna een kliniek gebouwd waar elke patiënt als uniek wordt behandeld. De IAL-standaard - ontwikkeld gedurende meer dan 24 jaar - is de weerspiegeling van deze filosofie.",
+        "vision_p2": "Haar internationale opleiding - waaronder een Master Injector programma aan het Swift Beauty Institute in New York en Geavanceerde Orofaciale Harmonisatie in Miami - bracht technieken en protocollen naar Portugal die voorheen alleen in de grote centra van de wereld beschikbaar waren.",
+        "vision_p3": "Vandaag de dag wordt het AreLuna Instituut erkend als een Europese referentie, met patiënten uit Portugal, Brazilië en meer dan 20 landen, die specifiek reizen om te profiteren van de unieke combinatie van kwaliteit, expertise en Portugese gastvrijheid.",
+        "cta_title": "Ontdek het AreLuna Instituut",
+        "cta_desc": "Bezoek ons in Porto en ontdek waarom we de keuze van duizenden nationale en internationale patiënten zijn. Uw transformatie begint hier.",
+        "cta_button_contact": "Consultatie Boeken",
+        "cta_button_treatments": "Bekijk Behandelingen",
+        "cta_whatsapp": "Afspraak Maken",
+        "seo": {
+            "title": "Dr. Arethuza Luna — Oprichtster | AreLuna Instituut Porto",
+            "description": "Dr. Arethuza Luna, OMD 11845, oprichtster van het AreLuna Instituut in Porto. Specialist in Orthodontie, Orthopedie en Orofaciale Harmonisatie. Internationale training in New York en Miami. +24 jaar ervaring."
+        }
     }
 }

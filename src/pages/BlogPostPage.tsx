@@ -4,12 +4,13 @@ import { fetchPosts, fetchPostById } from "@/services/marketingApi";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/utils";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { ArrowLeft, Calendar, User, Phone } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SEOHead from "@/components/SEOHead";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -68,8 +69,53 @@ const BlogPostPage = () => {
 
     if (!post) return null;
 
+    // Construir excerpt a partir do conteúdo se não existir
+    const excerpt = post.excerpt
+        || post.content?.replace(/<[^>]+>/g, '').slice(0, 155) + '…'
+        || `Artigo do blog do Instituto AreLuna — ${post.title}`;
+
+    const canonical = `https://www.institutoareluna.pt/blog/${slug}`;
+
+    const blogPostingSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": excerpt.slice(0, 155),
+        "image": post.image_url || "https://www.institutoareluna.pt/og-institutoareluna.jpg",
+        "url": canonical,
+        "datePublished": post.published_at,
+        "dateModified": post.updated_at || post.published_at,
+        "inLanguage": "pt-PT",
+        "author": {
+            "@type": "Person",
+            "name": post.author_name || "Instituto AreLuna",
+            "url": "https://www.institutoareluna.pt/sobre-a-fundadora"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Instituto AreLuna",
+            "url": "https://www.institutoareluna.pt/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.institutoareluna.pt/og-institutoareluna.jpg"
+            }
+        },
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical}
+    };
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950">
+            <SEOHead
+                title={post.title}
+                description={excerpt.slice(0, 155)}
+                canonical={canonical}
+                ogImage={post.image_url || undefined}
+                ogImageAlt={post.title}
+                ogType="article"
+                articlePublishedTime={post.published_at}
+                articleModifiedTime={post.updated_at || post.published_at}
+                jsonLd={blogPostingSchema}
+            />
             <Header />
             <div className="pt-24 pb-16">
                 <article className="container mx-auto px-4 max-w-4xl">
@@ -83,6 +129,8 @@ const BlogPostPage = () => {
                             <img
                                 src={post.image_url}
                                 alt={post.title}
+                                loading="eager"
+                                decoding="async"
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -95,12 +143,14 @@ const BlogPostPage = () => {
                     <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-10 border-b border-gray-100 dark:border-gray-800 pb-8">
                         <div className="flex items-center">
                             <Calendar className="mr-2 h-4 w-4 text-[hsl(var(--gold-leaf))]" />
-                            {format(new Date(post.published_at), "d 'de' MMMM, yyyy", { locale: ptBR })}
+                            <time dateTime={post.published_at}>
+                                {format(new Date(post.published_at), "d 'de' MMMM, yyyy", { locale: ptBR })}
+                            </time>
                         </div>
                         {post.author_name && (
                             <div className="flex items-center">
                                 <User className="mr-2 h-4 w-4 text-[hsl(var(--gold-leaf))]" />
-                                {post.author_name}
+                                <span>{post.author_name}</span>
                             </div>
                         )}
                     </div>
@@ -109,6 +159,33 @@ const BlogPostPage = () => {
                         className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-light prose-a:text-[hsl(var(--gold-leaf))] prose-img:rounded-xl prose-p:my-2"
                         dangerouslySetInnerHTML={{ __html: post.content || "" }}
                     />
+
+                    {/* CTA padronizado no final do artigo */}
+                    <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700">
+                        <h2 className="text-xl font-light text-gray-900 dark:text-white mb-2">
+                            Ficou com dúvidas ou quer saber mais?
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-400 mb-6 font-light">
+                            A equipa do Instituto AreLuna está disponível para esclarecer todas as suas questões numa consulta personalizada.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a
+                                href="https://wa.me/351910098226"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"
+                            >
+                                <Phone className="mr-2 h-4 w-4" />
+                                Falar por WhatsApp
+                            </a>
+                            <Link
+                                to="/contato"
+                                className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] font-medium hover:bg-[hsl(var(--gold-leaf))]/10 transition-colors duration-300"
+                            >
+                                Marcar Consulta
+                            </Link>
+                        </div>
+                    </div>
                 </article>
             </div>
             <Footer />
@@ -118,3 +195,4 @@ const BlogPostPage = () => {
 };
 
 export default BlogPostPage;
+
