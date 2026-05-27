@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "@/services/marketingApi";
+import { staticPosts, staticPostTitleSlugs } from "@/data/blogStaticPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { slugify } from "@/lib/utils";
@@ -27,7 +28,7 @@ const blogSchema = {
 };
 
 const BlogPage = () => {
-    const { data, isLoading, error } = useQuery({
+    const { data, isLoading } = useQuery({
         queryKey: ["posts"],
         queryFn: () => fetchPosts(),
     });
@@ -58,20 +59,12 @@ const BlogPage = () => {
         );
     }
 
-    if (error) {
-        return (
-            <div className="min-h-screen bg-white dark:bg-gray-950">
-                <Header />
-                <div className="pt-32 pb-16">
-                    <div className="container mx-auto px-4 py-24 text-center">
-                        <p className="text-red-500">Erro ao carregar posts. Por favor, tente novamente mais tarde.</p>
-                    </div>
-                </div>
-                <Footer />
-                <WhatsAppFloat />
-            </div>
-        );
-    }
+    // Posts estáticos (frontend) + posts do ERP, sem duplicar (o estático tem prioridade),
+    // ordenados do mais recente para o mais antigo. Os estáticos aparecem mesmo se a API falhar.
+    const apiPosts = (data?.data ?? []).filter((p) => !staticPostTitleSlugs.has(slugify(p.title)));
+    const posts = [...staticPosts, ...apiPosts].sort(
+        (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime(),
+    );
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -86,8 +79,8 @@ const BlogPage = () => {
             <div className="pt-16 pb-16 bg-white dark:bg-gray-950">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {data?.data.map((post) => (
-                            <Link key={post.id} to={`/blog/${slugify(post.title)}`} className="group">
+                        {posts.map((post) => (
+                            <Link key={post.id} to={`/blog/${post.slug ?? slugify(post.title)}`} className="group">
                                 <Card className="h-full overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-900 group-hover:-translate-y-1">
                                     <div className="aspect-video w-full overflow-hidden">
                                         <img

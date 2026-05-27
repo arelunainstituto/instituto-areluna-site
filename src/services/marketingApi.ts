@@ -9,6 +9,15 @@ export interface Post {
     author_id: string;
     author_name: string;
     content?: string; // Optional because list view doesn't have it
+    updated_at?: string;
+    /** Explicit URL slug. When absent the title is slugified. Used by static posts. */
+    slug?: string;
+    /** Opening subtitle rendered in italic under the title (static posts). */
+    subtitle?: string;
+    /** Optional caption rendered under the hero image (static posts). */
+    image_caption?: string;
+    /** True for posts defined locally in the frontend (not from the ERP). */
+    isStatic?: boolean;
 }
 
 export interface PostsResponse {

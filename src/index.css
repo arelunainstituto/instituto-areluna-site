@@ -327,3 +327,103 @@ article iframe {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* ───────────────────────────────────────────────────────────────
+   Design do artigo do blog (aplica-se a posts estáticos e do ERP)
+   Layer sobre o `prose`: vence por especificidade (prose usa :where).
+   ─────────────────────────────────────────────────────────────── */
+.blog-content { color: #374151; }
+.blog-content p { line-height: 1.75; }
+
+/* Subtítulo de abertura, em itálico, sob o título */
+.blog-content .article-lead {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* H2 — início de cada secção */
+.blog-content h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+/* H3 — subsecção, em dourado/bronze */
+.blog-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: hsl(36 42% 42%);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content strong { color: #111827; font-weight: 600; }
+
+/* Listas com marcador dourado */
+.blog-content ul { list-style: none; padding-left: 1rem; }
+.blog-content ul > li { position: relative; padding-left: 1rem; margin: 0.4rem 0; }
+.blog-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: hsl(var(--gold-leaf));
+}
+
+/* Figuras inline com legenda centrada */
+.blog-content figure { margin: 2.5rem 0; }
+.blog-content figure img { width: 100%; border-radius: 0.75rem; }
+.blog-content figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Link interno em destaque (padrão do blog) */
+.blog-content .article-internal-link a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Caixa de CTA — WhatsApp */
+.blog-content .article-cta {
+  margin-top: 3rem;
+  padding: 2.25rem 2rem;
+  border-radius: 1rem;
+  background: #3a6f5c;
+  text-align: center;
+}
+.blog-content .article-cta__text {
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+.blog-content .article-cta__btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #2f5d4c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.blog-content .article-cta__btn:hover { opacity: 0.9; }
+
+/* Dark mode */
+.dark .blog-content { color: #d1d5db; }
+.dark .blog-content h2 { color: #f9fafb; }
+.dark .blog-content h3 { color: hsl(38 45% 62%); }
+.dark .blog-content strong { color: #ffffff; }
+.dark .blog-content .article-lead,
+.dark .blog-content figcaption { color: #9ca3af; }
