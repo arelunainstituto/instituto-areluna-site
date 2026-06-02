@@ -42,7 +42,25 @@ const PRERENDER_ROUTES = [
 ];
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(async ({ mode }) => {
+  // Em Linux (Vercel/CI) o Chromium bundled do puppeteer falha por libs
+  // do sistema em falta (libnspr4.so). Usamos @sparticuz/chromium —
+  // auto-contido, pensado para serverless. Localmente (macOS/Windows)
+  // mantemos o Chrome do puppeteer porque sparticuz é Linux-only.
+  let launchOptions: Record<string, unknown> = {
+    args: ["--lang=pt-PT", "--accept-lang=pt-PT,pt"],
+  };
+  const shouldPrerender = mode !== "development";
+  if (shouldPrerender && process.platform === "linux") {
+    const chromium = (await import("@sparticuz/chromium")).default;
+    launchOptions = {
+      args: [...chromium.args, "--lang=pt-PT", "--accept-lang=pt-PT,pt"],
+      executablePath: await chromium.executablePath(),
+      headless: true,
+    };
+  }
+
+  return {
   server: {
     host: "::",
     port: 8080,
@@ -51,7 +69,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
-    mode !== 'development' && prerender({
+    shouldPrerender && prerender({
       routes: PRERENDER_ROUTES,
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
@@ -65,11 +83,9 @@ export default defineConfig(({ mode }) => ({
         // de timing entre lazy chunks / i18n / Helmet em rotas pesadas.
         maxConcurrentRoutes: 1,
         headless: true,
-        // Força o locale do Chromium para pt-PT durante o prerender,
-        // para o i18next-browser-languagedetector escolher PT por defeito.
-        launchOptions: {
-          args: ["--lang=pt-PT", "--accept-lang=pt-PT,pt"],
-        },
+        // Linux: usa Chromium do sparticuz (auto-contido); macOS/Windows:
+        // usa o Chrome bundled do puppeteer (pré-existente).
+        launchOptions,
       },
       // Garantir lang="pt-PT" no <html> caso o helmet não o tenha definido
       postProcess(renderedRoute: { route: string; html: string }) {
@@ -85,4 +101,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+  };
+});
