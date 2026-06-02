@@ -107,7 +107,7 @@ const SobreAFundadora = () => {
                 </div>
 
                 <a
-                  href="https://wa.me/351916880662"
+                  href="https://wa.me/351910098226"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"

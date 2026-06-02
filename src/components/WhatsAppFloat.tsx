@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
   return (
     <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
       <a
-        href="https://wa.me/351916880662"
+        href="https://wa.me/351910098226"
         target="_blank"
         rel="noopener noreferrer"
         className="relative group cursor-pointer inline-block"

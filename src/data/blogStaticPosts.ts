@@ -233,7 +233,7 @@ const reabilitacaoOral: Post = {
 <p><strong>Nós transformamos sorrisos, mas não só. Transformamos vidas.</strong></p>
 ${ctaBox(
     "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
-    "https://wa.me/351916880662?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20reabilita%C3%A7%C3%A3o%20oral%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+    "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20reabilita%C3%A7%C3%A3o%20oral%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
   )}
 `,
 };
@@ -417,7 +417,7 @@ const esteticaIntegrada: Post = {
 <p><strong>E é exatamente isso que procuramos entregar todos os dias no Instituto AreLuna: resultados naturais, seguros e atemporais.</strong></p>
 ${ctaBox(
     "Cada rosto é único. Fale com a nossa equipa para uma avaliação personalizada.",
-    "https://wa.me/351916880662?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20est%C3%A9tica%20integrada%20e%20harmoniza%C3%A7%C3%A3o%20facial%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+    "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20est%C3%A9tica%20integrada%20e%20harmoniza%C3%A7%C3%A3o%20facial%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
   )}
 `,
 };

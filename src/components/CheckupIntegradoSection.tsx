@@ -158,7 +158,7 @@ const CheckupIntegradoSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://wa.me/351916880662"
+                href="https://wa.me/351910098226"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-[hsl(var(--gold-leaf))] px-8 py-4 rounded-2xl font-vivant font-medium hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg"
