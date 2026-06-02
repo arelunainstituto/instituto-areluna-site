@@ -103,4 +103,4 @@ upload-*.js
 replace-*.js
 *-mapping.json
 
-areluna/
+!areluna/

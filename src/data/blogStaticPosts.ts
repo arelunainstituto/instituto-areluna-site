@@ -2,6 +2,14 @@ import type { Post } from "@/services/marketingApi";
 import { slugify } from "@/lib/utils";
 
 /**
+ * Toggle: enquanto `false`, o blog mostra **apenas** os posts estáticos
+ * definidos abaixo — a API do ERP não é consultada.
+ * Mudar para `true` quando a publicação no ERP estiver arrumada e quisermos
+ * voltar a mostrar os posts vindos de lá em conjunto com os estáticos.
+ */
+export const ENABLE_ERP_POSTS = false;
+
+/**
  * Posts publicados diretamente no frontend (não vêm do ERP).
  *
  * Porquê estáticos: o editor do ERP é WYSIWYG e escapa HTML colado, o que

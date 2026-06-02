@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts, fetchPostById } from "@/services/marketingApi";
-import { findStaticPostBySlug } from "@/data/blogStaticPosts";
+import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/utils";
@@ -19,21 +19,21 @@ const BlogPostPage = () => {
     // Posts estáticos (definidos no frontend) têm prioridade e dispensam a API.
     const staticPost = findStaticPostBySlug(slug);
 
-    // 1. Fetch list to find ID from slug
+    // 1. Fetch list to find ID from slug — só corre se o ERP estiver ativo.
     const { data: listData, isLoading: isListLoading, error: listError } = useQuery({
         queryKey: ["posts"],
         queryFn: () => fetchPosts(),
-        enabled: !staticPost,
+        enabled: ENABLE_ERP_POSTS && !staticPost,
     });
 
     const postFromList = listData?.data.find((p) => slugify(p.title) === slug);
     const postId = postFromList?.id;
 
-    // 2. Fetch post details using ID
+    // 2. Fetch post details using ID — só corre se o ERP estiver ativo.
     const { data: apiPost, isLoading: isPostLoading, error: postError } = useQuery({
         queryKey: ["post", postId],
         queryFn: () => fetchPostById(postId!),
-        enabled: !!postId && !staticPost,
+        enabled: ENABLE_ERP_POSTS && !!postId && !staticPost,
     });
 
     const post = staticPost ?? apiPost;

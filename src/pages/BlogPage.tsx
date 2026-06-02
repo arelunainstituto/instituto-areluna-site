@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "@/services/marketingApi";
-import { staticPosts, staticPostTitleSlugs } from "@/data/blogStaticPosts";
+import { staticPosts, staticPostTitleSlugs, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { slugify } from "@/lib/utils";
@@ -28,12 +28,15 @@ const blogSchema = {
 };
 
 const BlogPage = () => {
+    // Enquanto ENABLE_ERP_POSTS = false, mostramos apenas os posts estáticos.
+    // A query continua declarada mas desactivada para manter a ordem dos hooks estável.
     const { data, isLoading } = useQuery({
         queryKey: ["posts"],
         queryFn: () => fetchPosts(),
+        enabled: ENABLE_ERP_POSTS,
     });
 
-    if (isLoading) {
+    if (ENABLE_ERP_POSTS && isLoading) {
         return (
             <div className="min-h-screen bg-white dark:bg-gray-950">
                 <Header />
@@ -59,9 +62,11 @@ const BlogPage = () => {
         );
     }
 
-    // Posts estáticos (frontend) + posts do ERP, sem duplicar (o estático tem prioridade),
-    // ordenados do mais recente para o mais antigo. Os estáticos aparecem mesmo se a API falhar.
-    const apiPosts = (data?.data ?? []).filter((p) => !staticPostTitleSlugs.has(slugify(p.title)));
+    // Posts estáticos (frontend) + (opcional) posts do ERP, sem duplicar pelo título.
+    // Quando ENABLE_ERP_POSTS = false, `apiPosts` é sempre vazio.
+    const apiPosts = ENABLE_ERP_POSTS
+        ? (data?.data ?? []).filter((p) => !staticPostTitleSlugs.has(slugify(p.title)))
+        : [];
     const posts = [...staticPosts, ...apiPosts].sort(
         (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime(),
     );

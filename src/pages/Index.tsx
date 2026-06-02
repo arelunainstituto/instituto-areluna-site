@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { buildTeamPersonSchemas } from "@/data/teamSchema";
 
 const GallerySection = lazy(() => import("@/components/GallerySection"));
 const CorpoClinicoSection = lazy(() => import("@/components/CorpoClinicoSection"));
@@ -94,7 +95,7 @@ const Index = () => {
         title="Clínica Dentária e Estética Avançada Porto | Instituto AreLuna"
         description="Instituto AreLuna no Porto — tratamentos dentários e estética avançada com padrão europeu. Implantes, alinhadores, facetas, harmonização orofacial. Equipa multidisciplinar. Agende a sua consulta."
         canonical="https://www.institutoareluna.pt/"
-        jsonLd={[dentistSchema, personSchema, websiteSchema]}
+        jsonLd={[dentistSchema, personSchema, websiteSchema, ...buildTeamPersonSchemas()]}
       />
       <Header />
       <HeroSection />

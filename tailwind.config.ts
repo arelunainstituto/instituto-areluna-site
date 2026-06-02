@@ -92,13 +92,21 @@ export default {
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-dark': 'var(--gradient-dark)',
 				'gradient-light': 'var(--gradient-light)',
+				// LP-scope gradients (resolvem via vars dentro de .lp-scope)
+				'gradient-marble': 'var(--gradient-marble)',
+				'gradient-hero': 'var(--gradient-hero)',
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'gold': 'var(--shadow-gold)',
+				// LP-scope shadow
+				'premium': 'var(--shadow-premium)',
 			},
 			transitionDuration: {
 				'smooth': 'var(--transition-smooth)',
+			},
+			transitionTimingFunction: {
+				'elegant': 'cubic-bezier(0.23, 1, 0.32, 1)',
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
