@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "@/services/marketingApi";
+import { staticPosts, staticPostTitleSlugs, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { slugify } from "@/lib/utils";
@@ -27,12 +28,15 @@ const blogSchema = {
 };
 
 const BlogPage = () => {
-    const { data, isLoading, error } = useQuery({
+    // Enquanto ENABLE_ERP_POSTS = false, mostramos apenas os posts estáticos.
+    // A query continua declarada mas desactivada para manter a ordem dos hooks estável.
+    const { data, isLoading } = useQuery({
         queryKey: ["posts"],
         queryFn: () => fetchPosts(),
+        enabled: ENABLE_ERP_POSTS,
     });
 
-    if (isLoading) {
+    if (ENABLE_ERP_POSTS && isLoading) {
         return (
             <div className="min-h-screen bg-white dark:bg-gray-950">
                 <Header />
@@ -58,20 +62,14 @@ const BlogPage = () => {
         );
     }
 
-    if (error) {
-        return (
-            <div className="min-h-screen bg-white dark:bg-gray-950">
-                <Header />
-                <div className="pt-32 pb-16">
-                    <div className="container mx-auto px-4 py-24 text-center">
-                        <p className="text-red-500">Erro ao carregar posts. Por favor, tente novamente mais tarde.</p>
-                    </div>
-                </div>
-                <Footer />
-                <WhatsAppFloat />
-            </div>
-        );
-    }
+    // Posts estáticos (frontend) + (opcional) posts do ERP, sem duplicar pelo título.
+    // Quando ENABLE_ERP_POSTS = false, `apiPosts` é sempre vazio.
+    const apiPosts = ENABLE_ERP_POSTS
+        ? (data?.data ?? []).filter((p) => !staticPostTitleSlugs.has(slugify(p.title)))
+        : [];
+    const posts = [...staticPosts, ...apiPosts].sort(
+        (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime(),
+    );
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -86,8 +84,8 @@ const BlogPage = () => {
             <div className="pt-16 pb-16 bg-white dark:bg-gray-950">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {data?.data.map((post) => (
-                            <Link key={post.id} to={`/blog/${slugify(post.title)}`} className="group">
+                        {posts.map((post) => (
+                            <Link key={post.id} to={`/blog/${post.slug ?? slugify(post.title)}`} className="group">
                                 <Card className="h-full overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-900 group-hover:-translate-y-1">
                                     <div className="aspect-video w-full overflow-hidden">
                                         <img

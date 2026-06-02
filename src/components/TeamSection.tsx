@@ -86,7 +86,7 @@ const TeamSection = () => {
             <p className="text-battleship mb-6">
               Agende uma consulta e conheça os profissionais que cuidarão da sua beleza e bem-estar.
             </p>
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/351916880662" target="_blank" rel="noopener noreferrer">
               <button className="bg-gold-leaf text-jet px-8 py-3 rounded-lg font-medium hover:shadow-gold transition-all duration-300">
                 Agendar Consulta
               </button>

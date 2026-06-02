@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts, fetchPostById } from "@/services/marketingApi";
+import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/utils";
@@ -15,24 +16,29 @@ import SEOHead from "@/components/SEOHead";
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
 
-    // 1. Fetch list to find ID from slug
+    // Posts estáticos (definidos no frontend) têm prioridade e dispensam a API.
+    const staticPost = findStaticPostBySlug(slug);
+
+    // 1. Fetch list to find ID from slug — só corre se o ERP estiver ativo.
     const { data: listData, isLoading: isListLoading, error: listError } = useQuery({
         queryKey: ["posts"],
         queryFn: () => fetchPosts(),
+        enabled: ENABLE_ERP_POSTS && !staticPost,
     });
 
     const postFromList = listData?.data.find((p) => slugify(p.title) === slug);
     const postId = postFromList?.id;
 
-    // 2. Fetch post details using ID
-    const { data: post, isLoading: isPostLoading, error: postError } = useQuery({
+    // 2. Fetch post details using ID — só corre se o ERP estiver ativo.
+    const { data: apiPost, isLoading: isPostLoading, error: postError } = useQuery({
         queryKey: ["post", postId],
         queryFn: () => fetchPostById(postId!),
-        enabled: !!postId,
+        enabled: ENABLE_ERP_POSTS && !!postId && !staticPost,
     });
 
-    const isLoading = isListLoading || (!!postId && isPostLoading);
-    const error = listError || postError;
+    const post = staticPost ?? apiPost;
+    const isLoading = !staticPost && (isListLoading || (!!postId && isPostLoading));
+    const error = !staticPost && (listError || postError);
 
     if (isLoading) {
         return (
@@ -55,7 +61,7 @@ const BlogPostPage = () => {
         );
     }
 
-    if (error || (!isListLoading && !postId)) {
+    if (!staticPost && (error || (!isListLoading && !postId))) {
         return (
             <div className="container mx-auto px-4 py-32 text-center">
                 <h2 className="text-3xl font-light mb-4">Artigo não encontrado</h2>
@@ -124,23 +130,18 @@ const BlogPostPage = () => {
                         Voltar para o Blog
                     </Link>
 
-                    {post.image_url && (
-                        <div className="aspect-video w-full overflow-hidden rounded-2xl mb-8 shadow-lg">
-                            <img
-                                src={post.image_url}
-                                alt={post.title}
-                                loading="eager"
-                                decoding="async"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    )}
-
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-light leading-tight mb-6 text-gray-900 dark:text-white">
+                    {/* Ordem: título → subtítulo → autor/data → imagem destaque → conteúdo */}
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900 dark:text-white">
                         {post.title}
                     </h1>
 
-                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-10 border-b border-gray-100 dark:border-gray-800 pb-8">
+                    {post.subtitle && (
+                        <p className="text-lg md:text-xl italic text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
+                            {post.subtitle}
+                        </p>
+                    )}
+
+                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-8">
                         <div className="flex items-center">
                             <Calendar className="mr-2 h-4 w-4 text-[hsl(var(--gold-leaf))]" />
                             <time dateTime={post.published_at}>
@@ -155,12 +156,33 @@ const BlogPostPage = () => {
                         )}
                     </div>
 
+                    {post.image_url && (
+                        <figure className="mb-10">
+                            <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
+                                <img
+                                    src={post.image_url}
+                                    alt={post.image_caption || post.title}
+                                    loading="eager"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            {post.image_caption && (
+                                <figcaption className="text-center italic text-sm text-gray-500 mt-3">
+                                    {post.image_caption}
+                                </figcaption>
+                            )}
+                        </figure>
+                    )}
+
                     <div
-                        className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-light prose-a:text-[hsl(var(--gold-leaf))] prose-img:rounded-xl prose-p:my-2"
+                        className="blog-content prose prose-lg dark:prose-invert max-w-none prose-a:text-[hsl(var(--gold-leaf))] prose-img:rounded-xl"
                         dangerouslySetInnerHTML={{ __html: post.content || "" }}
                     />
 
-                    {/* CTA padronizado no final do artigo */}
+                    {/* CTA padronizado no final do artigo.
+                        Posts estáticos já incluem o seu próprio CTA temático no conteúdo. */}
+                    {!post.isStatic && (
                     <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700">
                         <h2 className="text-xl font-light text-gray-900 dark:text-white mb-2">
                             Ficou com dúvidas ou quer saber mais?
@@ -170,7 +192,7 @@ const BlogPostPage = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
-                                href="https://wa.me/351910098226"
+                                href="https://wa.me/351916880662"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"
@@ -186,6 +208,7 @@ const BlogPostPage = () => {
                             </Link>
                         </div>
                     </div>
+                    )}
                 </article>
             </div>
             <Footer />

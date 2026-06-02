@@ -327,3 +327,162 @@ article iframe {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* ───────────────────────────────────────────────────────────────
+   Design do artigo do blog (aplica-se a posts estáticos e do ERP)
+   Layer sobre o `prose`: vence por especificidade (prose usa :where).
+   ─────────────────────────────────────────────────────────────── */
+.blog-content { color: #374151; }
+.blog-content p { line-height: 1.75; }
+
+/* Subtítulo de abertura, em itálico, sob o título */
+.blog-content .article-lead {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* H2 — início de cada secção */
+.blog-content h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+/* H3 — subsecção, em dourado/bronze */
+.blog-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: hsl(36 42% 42%);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content strong { color: #111827; font-weight: 600; }
+
+/* Listas com marcador dourado */
+.blog-content ul { list-style: none; padding-left: 1rem; }
+.blog-content ul > li { position: relative; padding-left: 1rem; margin: 0.4rem 0; }
+.blog-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: hsl(var(--gold-leaf));
+}
+
+/* Figuras inline com legenda centrada */
+.blog-content figure { margin: 2.5rem 0; }
+.blog-content figure img { width: 100%; border-radius: 0.75rem; }
+.blog-content figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Link interno em destaque (padrão do blog) */
+.blog-content .article-internal-link a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Caixa de CTA — WhatsApp */
+.blog-content .article-cta {
+  margin-top: 3rem;
+  padding: 2.25rem 2rem;
+  border-radius: 1rem;
+  background: #3a6f5c;
+  text-align: center;
+}
+.blog-content .article-cta__text {
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+.blog-content .article-cta__btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #2f5d4c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.blog-content .article-cta__btn:hover { opacity: 0.9; }
+
+/* Dark mode */
+.dark .blog-content { color: #d1d5db; }
+.dark .blog-content h2 { color: #f9fafb; }
+.dark .blog-content h3 { color: hsl(38 45% 62%); }
+.dark .blog-content strong { color: #ffffff; }
+.dark .blog-content .article-lead,
+.dark .blog-content figcaption { color: #9ca3af; }
+
+/* ───────────────────────────────────────────────────────────────
+   LP scope — paleta e tokens das landing pages migradas (vivobem).
+   Aplica-se apenas dentro de <div class="lp-scope">…</div> para
+   não perturbar o estilo do site institucional. Tailwind tokens
+   (bg-primary, bg-gradient-gold, shadow-premium, etc.) resolvem-se
+   a estes valores dentro do scope.
+   ─────────────────────────────────────────────────────────────── */
+.lp-scope {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  /* ouro do logo + clínica */
+  --primary: 42 72% 52%;
+  --primary-foreground: 0 0% 100%;
+  /* mármore */
+  --secondary: 280 8% 92%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 280 5% 95%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 285 12% 88%;
+  --accent-foreground: 0 0% 15%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 280 8% 88%;
+  --input: 280 8% 88%;
+  --ring: 42 72% 52%;
+  --radius: 0.75rem;
+
+  /* gradientes e sombras das LPs */
+  --gradient-marble: linear-gradient(135deg, hsl(285 15% 95%), hsl(280 10% 90%), hsl(42 20% 90%));
+  --gradient-gold: linear-gradient(135deg, hsl(42 72% 52%), hsl(38 76% 58%));
+  --gradient-hero: linear-gradient(135deg, hsl(285 25% 20% / 0.8), hsl(280 20% 25% / 0.7));
+  --shadow-premium: 0 10px 40px -10px hsl(285 25% 20% / 0.15);
+  --shadow-gold: 0 8px 32px -8px hsl(42 72% 52% / 0.3);
+
+  /* spacing fluido das LPs */
+  --section-py: clamp(3rem, 6vw + 1rem, 6rem);
+  --section-py-lg: clamp(4rem, 8vw + 1rem, 8rem);
+  --container-px: clamp(1rem, 2vw + 0.5rem, 2rem);
+  --content-gap: clamp(1.5rem, 2vw + 0.5rem, 3rem);
+  --header-offset: 4rem;
+
+  /* aplica background/cor do tema LP ao conteúdo do scope */
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+@media (min-width: 768px) {
+  .lp-scope { --header-offset: 5rem; }
+}
+
+/* Utilities usadas pelas LPs (globais — só fazem efeito onde aplicadas) */
+.py-section    { padding-top: var(--section-py); padding-bottom: var(--section-py); }
+.py-section-lg { padding-top: var(--section-py-lg); padding-bottom: var(--section-py-lg); }
+.px-container  { padding-left: var(--container-px); padding-right: var(--container-px); }
+.transition-elegant { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
