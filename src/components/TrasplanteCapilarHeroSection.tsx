@@ -38,7 +38,7 @@ const TrasplanteCapilarHeroSection = () => {
         </p>
 
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-6 justify-center mb-8 xs:mb-12">
-          <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/351916880662" target="_blank" rel="noopener noreferrer">
             <Button variant="gold" size="lg" className="px-6 xs:px-8 py-3 xs:py-4 text-sm xs:text-base tracking-wider font-vivant-light min-h-[48px]">
               {t('hair_transplant_page.hero.cta_schedule')}
             </Button>

@@ -40,7 +40,7 @@ const ContactSection = () => {
 
               <div className="pt-4">
                 <a
-                  href="https://wa.me/351910098226"
+                  href="https://wa.me/351916880662"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

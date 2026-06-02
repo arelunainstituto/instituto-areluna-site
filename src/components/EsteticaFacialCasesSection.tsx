@@ -161,7 +161,7 @@ const EsteticaFacialCasesSection = () => {
             <p className="text-sm xs:text-base text-gray-600 dark:text-gray-400 mb-6">
               {t('cases.cta.description')}
             </p>
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/351916880662" target="_blank" rel="noopener noreferrer">
               <button className="px-8 py-4 bg-[hsl(var(--gold-leaf))] hover:bg-amber-500 text-white rounded-xl transition-all duration-300 font-vivant-light tracking-wide shadow-lg hover:shadow-xl transform hover:scale-105">
                 {t('cases.cta.button')}
               </button>
