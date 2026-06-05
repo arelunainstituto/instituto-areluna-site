@@ -44,7 +44,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <a
-            href="https://wa.me/351916880662"
+            href="https://wa.me/351910098226"
             target="_blank"
             rel="noopener noreferrer"
           >

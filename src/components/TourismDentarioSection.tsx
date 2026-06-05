@@ -131,7 +131,7 @@ const TourismDentarioSection = () => {
                 onMouseLeave={() => setIsHovered(false)}
               >
                 {/* Botão principal */}
-                <a href="https://wa.me/351916880662" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
                     <span className="relative z-10">{t("tourism.button")}</span>
 

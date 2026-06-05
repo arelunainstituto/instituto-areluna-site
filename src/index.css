@@ -428,6 +428,90 @@ article iframe {
 .dark .blog-content .article-lead,
 .dark .blog-content figcaption { color: #9ca3af; }
 
+/* Tabela comparativa (cabeçalho dourado, linhas alternadas, responsiva) */
+.blog-content .blog-tabela-wrapper {
+  margin: 2rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.blog-content .blog-tabela-comparativa {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.blog-content .blog-tabela-comparativa thead th {
+  background: hsl(var(--gold-leaf));
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid hsl(36 42% 42%);
+}
+.blog-content .blog-tabela-comparativa tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+.blog-content .blog-tabela-comparativa tbody tr:nth-child(even) td {
+  background: #fafafa;
+}
+.blog-content .blog-tabela-comparativa tbody td:first-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+.dark .blog-content .blog-tabela-comparativa { background: #1f2937; box-shadow: none; }
+.dark .blog-content .blog-tabela-comparativa thead th { color: #1f2937; }
+.dark .blog-content .blog-tabela-comparativa tbody td { color: #e5e7eb; border-bottom-color: #374151; }
+.dark .blog-content .blog-tabela-comparativa tbody tr:nth-child(even) td { background: #111827; }
+.dark .blog-content .blog-tabela-comparativa tbody td:first-child { color: #f9fafb; }
+
+/* Bloco "Leia também" (rodapé dos artigos) */
+.blog-content .article-leia-tambem {
+  margin: 3rem 0 0;
+  padding: 1.75rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+  border-radius: 0.75rem;
+}
+.blog-content .article-leia-tambem h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+  color: hsl(36 42% 42%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.blog-content .article-leia-tambem ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.blog-content .article-leia-tambem li {
+  padding-left: 0;
+  margin: 0.4rem 0;
+}
+.blog-content .article-leia-tambem li::before { display: none; }
+.blog-content .article-leia-tambem a {
+  color: #1f2937;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.blog-content .article-leia-tambem a:hover {
+  border-bottom-color: hsl(var(--gold-leaf));
+}
+.dark .blog-content .article-leia-tambem {
+  background: #111827;
+  border-top-color: #374151;
+}
+.dark .blog-content .article-leia-tambem h2 { color: hsl(38 45% 62%); }
+.dark .blog-content .article-leia-tambem a { color: #f3f4f6; }
+
 /* ───────────────────────────────────────────────────────────────
    LP scope — paleta e tokens das landing pages migradas (vivobem).
    Aplica-se apenas dentro de <div class="lp-scope">…</div> para
