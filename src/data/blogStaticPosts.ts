@@ -26,6 +26,14 @@ const ctaBox = (frase: string, waUrl: string) => `
   <a class="article-cta__btn" href="${waUrl}" target="_blank" rel="noopener noreferrer">Falar com a nossa equipa</a>
 </div>`;
 
+const leiaTambem = (links: Array<{ href: string; label: string }>) => `
+<aside class="article-leia-tambem">
+  <h2>Leia também</h2>
+  <ul>
+    ${links.map((l) => `<li>🦷 <a href="${l.href}">${l.label}</a></li>`).join("\n    ")}
+  </ul>
+</aside>`;
+
 const reabilitacaoOral: Post = {
   id: "static-reabilitacao-oral",
   isStatic: true,
@@ -422,8 +430,269 @@ ${ctaBox(
 `,
 };
 
+const implanteDoi: Post = {
+  id: "static-implante-dentario-doi",
+  isStatic: true,
+  slug: "implante-dentario-doi",
+  title: "Implante dentário dói? A resposta honesta que os nossos pacientes merecem",
+  author_name: "Instituto Areluna",
+  custom_author: "Instituto Areluna",
+  author_id: "",
+  published_at: "2026-06-03T10:00:00.000Z",
+  tags: ["Implantes Dentários", "Cirurgia Oral"],
+  excerpt:
+    "Vai doer? O que realmente acontece antes, durante e depois de um implante dentário no Instituto AreLuna — sem medos, com informação clara.",
+  image_url: "/blog/c1-hero-implante-doi.jpg",
+  image_caption: "Dra. Arethuza Luna no Instituto AreLuna, no Porto",
+  subtitle: "O medo de sentir dor antes de cuidar do sorriso — e o que realmente acontece",
+  content: `
+<p>Existe uma pergunta que quase todos os pacientes nos fazem antes de iniciar um tratamento com implantes dentários.</p>
+
+<p>Às vezes, ela surge logo na primeira consulta. Outras vezes, aparece na véspera da cirurgia, depois de uma noite a pesquisar no Google. Mas a dúvida costuma ser a mesma:</p>
+
+<p><strong>"Vai doer muito?"</strong></p>
+
+<p>É um medo legítimo. E merece uma resposta honesta.</p>
+
+<p>No Instituto AreLuna, acreditamos que um paciente bem informado é um paciente mais tranquilo. Por isso, neste artigo explicamos, passo a passo, o que realmente acontece num tratamento com implante dentário — antes, durante e depois da cirurgia.</p>
+
+<h2>Antes da cirurgia: o planeamento que faz toda a diferença</h2>
+
+<figure>
+  <img src="/blog/c2-planeamento-implante.jpg" alt="Dra. Arethuza Luna no ambiente clínico do Instituto AreLuna" loading="lazy" decoding="async" />
+  <figcaption>Dra. Arethuza Luna no ambiente clínico do Instituto AreLuna</figcaption>
+</figure>
+
+<p>No Instituto AreLuna, cada caso começa muito antes do dia da cirurgia.</p>
+
+<p>A fase de planeamento é, na nossa experiência, uma das etapas mais determinantes de todo o processo. É aqui que se evitam grande parte das complicações e que se constrói a segurança do tratamento.</p>
+
+<p>Cada paciente passa por uma avaliação completa, que pode incluir radiografia panorâmica, tomografia computorizada 3D (CBCT), análise da estrutura óssea e avaliação do historial de saúde. Só depois desse diagnóstico é que definimos o plano cirúrgico, sempre com o apoio da nossa equipa especializada.</p>
+
+<p>Esta fase não dói. É uma consulta de diagnóstico, semelhante a qualquer outra avaliação clínica, mas com um olhar mais profundo sobre o caso.</p>
+
+<h2>Durante a cirurgia: o que se sente realmente</h2>
+
+<p><strong>A resposta direta é: durante a colocação do implante, o paciente não deve sentir dor.</strong></p>
+
+<p>Utilizamos anestesia local, semelhante à utilizada numa extração dentária comum. A zona fica anestesiada, e o paciente pode sentir alguma pressão, vibração ou movimento dos instrumentos, mas não dor.</p>
+
+<p>O que ouvimos frequentemente dos nossos pacientes depois da cirurgia é uma frase muito simples:</p>
+
+<p><strong>"Afinal, foi muito menos do que eu imaginava."</strong></p>
+
+<p>Na maioria das vezes, o medo que o paciente traz para a consulta é maior do que a experiência real do procedimento.</p>
+
+<p>Isso não significa que a cirurgia seja tratada como algo banal. Um implante dentário é um procedimento cirúrgico e, por isso, exige protocolo, planeamento, equipa preparada e cuidados rigorosos. Mas, com anestesia adequada e uma abordagem bem planeada, o desconforto durante o procedimento tende a ser mínimo.</p>
+
+<p>Em média, a colocação de um implante unitário pode demorar cerca de 30 minutos, dependendo da complexidade do caso.</p>
+
+<h2>Depois da cirurgia: os primeiros dias</h2>
+
+<figure>
+  <img src="/blog/c3-ambiente-clinica.jpg" alt="Ambiente acolhedor do Instituto AreLuna no Porto" loading="lazy" decoding="async" />
+  <figcaption>Ambiente acolhedor do Instituto AreLuna no Porto</figcaption>
+</figure>
+
+<p>Esta é a fase que merece mais atenção e onde surgem muitas dúvidas.</p>
+
+<p>Nas primeiras 24 a 48 horas, é normal sentir algum desconforto. Podem surgir:</p>
+
+<ul>
+  <li>ligeiro inchaço na zona operada;</li>
+  <li>sensação de pressão localizada;</li>
+  <li>pequeno sangramento residual, controlado com gaze;</li>
+  <li>desconforto ao abrir a boca ou ao mastigar.</li>
+</ul>
+
+<p>Estes sintomas costumam ser controlados com a medicação prescrita pela equipa clínica, incluindo analgésicos e anti-inflamatórios quando indicados. A maioria dos nossos pacientes consegue retomar atividades leves no dia seguinte, sempre seguindo as orientações recebidas.</p>
+
+<p>Durante a primeira semana, recomendamos uma alimentação mais mole e fria, além de evitar bebidas quentes, tabaco e esforço físico intenso. São cuidados simples, mas importantes para permitir que o organismo recupere com tranquilidade.</p>
+
+<p>A partir da segunda semana, o desconforto tende a diminuir progressivamente. Nos meses seguintes, acontece um processo fundamental chamado osteointegração: é quando o implante se integra ao osso de forma estável e natural.</p>
+
+<h2>E se aparecer dor depois de anos?</h2>
+
+<p>Uma dúvida muito comum é: "Implante dentário dói depois de anos?"</p>
+
+<p>Um implante bem planeado, bem posicionado e bem cuidado não deve causar dor após o período de cicatrização.</p>
+
+<p>Se surgir dor, desconforto, sangramento, mau cheiro ou sensação de mobilidade meses ou anos depois do tratamento, é importante procurar avaliação profissional. Em alguns casos, pode existir periimplantite, uma inflamação dos tecidos ao redor do implante, frequentemente associada a higiene insuficiente, tabaco, ausência de acompanhamento ou tratamentos realizados sem planeamento adequado.</p>
+
+<p>Por isso, no Instituto AreLuna, o acompanhamento pós-tratamento faz parte do nosso protocolo. Não é um extra. É parte integrante do cuidado.</p>
+
+<h2>Por que os implantes têm uma taxa de sucesso tão elevada?</h2>
+
+<p>Os implantes dentários apresentam uma elevada taxa de sucesso quando são bem indicados, bem executados e acompanhados ao longo do tempo.</p>
+
+<p>Esse resultado depende principalmente de três fatores:</p>
+
+<ul>
+  <li><strong>Planeamento rigoroso:</strong> o diagnóstico completo antes da cirurgia permite avaliar o osso, a saúde geral e as condições específicas de cada paciente.</li>
+  <li><strong>Materiais certificados:</strong> trabalhamos com materiais de qualidade e com evidência clínica, porque a escolha do implante também influencia a previsibilidade do tratamento.</li>
+  <li><strong>Acompanhamento contínuo:</strong> a relação com o paciente não termina no dia da cirurgia. A manutenção é essencial para preservar o resultado ao longo dos anos.</li>
+</ul>
+
+<h2>O primeiro passo é uma conversa</h2>
+
+<p>Se está a pensar em fazer um implante dentário e o medo da dor tem sido o que a tem travado, o melhor primeiro passo é marcar uma consulta de avaliação.</p>
+
+<p>Não precisa decidir nada nesse dia. A consulta serve para compreender o seu caso, esclarecer dúvidas e apresentar as opções possíveis, com tempo, cuidado e sem pressão.</p>
+
+<p>A nossa equipa está aqui para isso.</p>
+${ctaBox(
+  "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
+  "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20implantes%20dent%C3%A1rios%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+)}
+${leiaTambem([
+  { href: "/blog/dentes-fixos-num-so-dia-carga-imediata", label: "Dentes fixos num só dia: como funciona a carga imediata" },
+  { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
+])}
+`,
+};
+
+const cargaImediata: Post = {
+  id: "static-carga-imediata",
+  isStatic: true,
+  slug: "dentes-fixos-num-so-dia-carga-imediata",
+  title: "Dentes fixos num só dia: como funciona a carga imediata no Instituto AreLuna",
+  author_name: "Instituto Areluna",
+  custom_author: "Instituto Areluna",
+  author_id: "",
+  published_at: "2026-06-06T10:00:00.000Z",
+  tags: ["Implantes Dentários", "Carga Imediata", "All-on-4"],
+  excerpt:
+    "Sair com dentes fixos no mesmo dia da cirurgia é possível. Saiba como funciona a carga imediata e para quem é indicada no Instituto AreLuna.",
+  // NOTA: os IDs Drive das fotos d1 e d2 do guia DEV estão inválidos. Usando
+  // imagens existentes como fallback até a equipa subir as definitivas:
+  // d1 (Hero — Dra. blazer branco) → b1-hero-dra-autoridade.jpg
+  // d2 (Sala clínica — D1-20) → a3-lounge-sala-espera.jpg
+  // Trocar pelas URLs finais quando estiverem no Cloudinary.
+  image_url: "/blog/b1-hero-dra-autoridade.jpg",
+  image_caption: "Dra. Arethuza Luna, Instituto AreLuna — reabilitação com carga imediata",
+  subtitle: "De manhã chegam. À tarde saem com dentes fixos.",
+  content: `
+<p>Esta é a realidade de muitos dos nossos pacientes.</p>
+
+<p>Durante anos, a reabilitação total de uma arcada dentária exigia múltiplas cirurgias, vários meses de espera e longos períodos de adaptação a próteses removíveis. Para muitas pessoas, essa perspetiva era suficiente para adiar o tratamento indefinidamente.</p>
+
+<p>E nós compreendemos porquê.</p>
+
+<p>A perda dentária afeta muito mais do que a mastigação. Afeta a confiança, a vida social, a autoestima e a forma como cada pessoa se relaciona consigo própria.</p>
+
+<p>Hoje, graças à evolução da implantologia, esse cenário mudou.</p>
+
+<p>Em muitos casos, é possível entrar no Instituto AreLuna de manhã e sair, no próprio dia, com uma prótese fixa provisória suportada por implantes dentários.</p>
+
+<h2>O que é a carga imediata?</h2>
+
+<figure>
+  <img src="/blog/a3-lounge-sala-espera.jpg" alt="Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata" loading="lazy" decoding="async" />
+  <figcaption>Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata</figcaption>
+</figure>
+
+<p>Na implantologia convencional, após a colocação dos implantes, existe um período de cicatrização e osteointegração que pode durar vários meses. Durante esse tempo, o paciente utiliza uma solução provisória enquanto o implante se integra ao osso.</p>
+
+<p>Na carga imediata, o processo é diferente.</p>
+
+<p>Logo após a colocação dos implantes, é instalada uma prótese fixa provisória, permitindo que o paciente saia da clínica com dentes fixos no próprio dia.</p>
+
+<p>Isto significa que pode voltar a sorrir, falar e recuperar a confiança imediatamente, sem passar meses sem uma solução fixa.</p>
+
+<p>A prótese definitiva será colocada posteriormente, após a conclusão da osteointegração. No entanto, o benefício estético e funcional imediato já é uma realidade desde o primeiro dia.</p>
+
+<h2>Como é possível sair com dentes no mesmo dia?</h2>
+
+<p>A possibilidade de realizar carga imediata depende de uma avaliação clínica rigorosa.</p>
+
+<p>Nem todos os casos são iguais, e é precisamente por isso que o planeamento é tão importante.</p>
+
+<h3>Densidade e volume ósseo</h3>
+<p>O implante precisa de atingir uma estabilidade inicial adequada para suportar a prótese provisória. Quando o volume ósseo disponível não é suficiente, pode ser necessário realizar procedimentos complementares, como enxertos ósseos, o que pode alterar o plano de tratamento.</p>
+
+<h3>Número e posicionamento dos implantes</h3>
+<p>Técnicas como o All-on-4 permitem reabilitar uma arcada completa utilizando quatro implantes estrategicamente posicionados. A distribuição das forças mastigatórias é cuidadosamente estudada para garantir estabilidade e previsibilidade a longo prazo.</p>
+
+<h3>Estado geral de saúde</h3>
+<p>Algumas condições médicas ou determinados medicamentos podem influenciar a cicatrização e a integração dos implantes. Por isso, a avaliação clínica detalhada é sempre o primeiro passo.</p>
+
+<h3>Planeamento digital</h3>
+<p>No Instituto AreLuna utilizamos tomografia computorizada (CBCT) e planeamento cirúrgico digital 3D. Antes da cirurgia acontecer, já sabemos exatamente onde cada implante será colocado. Este nível de precisão permite procedimentos mais previsíveis, mais seguros e mais confortáveis para o paciente.</p>
+
+<h2>Implante convencional ou carga imediata: qual a diferença?</h2>
+
+<div class="blog-tabela-wrapper">
+  <table class="blog-tabela-comparativa">
+    <thead>
+      <tr><th></th><th>Implante convencional</th><th>Carga imediata</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dentes fixos no próprio dia</td><td>Não</td><td>Sim (prótese provisória)</td></tr>
+      <tr><td>Número de visitas à clínica</td><td>Mais</td><td>Menos</td></tr>
+      <tr><td>Tempo total de tratamento</td><td>6–12 meses</td><td>6–9 meses</td></tr>
+      <tr><td>Período sem prótese fixa</td><td>Sim</td><td>Não</td></tr>
+      <tr><td>Indicação</td><td>Casos simples e complexos</td><td>Casos com boa estabilidade óssea</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Para quem é indicada a carga imediata?</h2>
+
+<p>A carga imediata pode ser uma excelente opção para pacientes que necessitam de reabilitação total de arcada, especialmente quando existe uma boa condição óssea e estabilidade adequada para os implantes.</p>
+
+<p>É uma solução particularmente valorizada por pessoas que:</p>
+
+<ul>
+  <li>Utilizam próteses removíveis e procuram mais conforto;</li>
+  <li>Pretendem recuperar rapidamente a função mastigatória;</li>
+  <li>Têm uma vida profissional ativa;</li>
+  <li>Vivem longe da clínica;</li>
+  <li>Residem no estrangeiro e dispõem de pouco tempo para tratamento.</li>
+</ul>
+
+<p>Não é por acaso que recebemos regularmente pacientes vindos de vários países europeus que organizam a sua deslocação ao Porto precisamente para realizar este tratamento.</p>
+
+<p>Quando o planeamento é adequado, muitas vezes é possível concentrar etapas que anteriormente exigiam vários meses.</p>
+
+<h2>O resultado que os nossos pacientes descrevem</h2>
+
+<figure>
+  <img src="/blog/d3-resultado-pacientes.jpg" alt="Dra. Arethuza Luna — Instituto AreLuna no Porto" loading="lazy" decoding="async" />
+  <figcaption>Dra. Arethuza Luna — Instituto AreLuna no Porto</figcaption>
+</figure>
+
+<p>A reação mais comum que ouvimos após uma cirurgia de carga imediata é uma combinação de alívio e surpresa.</p>
+
+<p>Alívio porque o procedimento correu melhor do que imaginavam.</p>
+
+<p>Surpresa porque o resultado imediato supera frequentemente as expectativas.</p>
+
+<p>Já acompanhámos pacientes que passaram anos a esconder o sorriso, evitando fotografias, reuniões ou momentos simples do dia a dia. Poucas horas depois da cirurgia, muitos voltam a olhar-se ao espelho com uma confiança que já não sentiam há muito tempo.</p>
+
+<p>E é precisamente isso que torna este tratamento tão transformador.</p>
+
+<p><strong>Não se trata apenas de substituir dentes. Trata-se de devolver qualidade de vida.</strong></p>
+
+<h2>O primeiro passo é perceber se é candidato</h2>
+
+<p>Nem todos os pacientes são candidatos à carga imediata. A única forma de saber é através de uma avaliação clínica completa, acompanhada dos exames adequados.</p>
+
+<p>Na consulta, analisamos o seu caso, esclarecemos todas as dúvidas e explicamos quais as opções mais seguras e previsíveis para si.</p>
+
+<p>Sem pressão. Sem compromisso. Apenas informação clara para que possa tomar uma decisão consciente.</p>
+${ctaBox(
+  "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
+  "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20dentes%20fixos%20num%20s%C3%B3%20dia%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+)}
+${leiaTambem([
+  { href: "/blog/implante-dentario-doi", label: "Implante dentário dói? A resposta honesta" },
+  { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
+])}
+`,
+};
+
 /** Posts estáticos, do mais recente para o mais antigo. */
-export const staticPosts: Post[] = [reabilitacaoOral, esteticaIntegrada];
+export const staticPosts: Post[] = [cargaImediata, implanteDoi, reabilitacaoOral, esteticaIntegrada];
 
 /** Slugs de URL próprios destes posts. */
 export const staticPostSlugs = new Set(staticPosts.map((p) => p.slug));

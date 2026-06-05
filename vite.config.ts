@@ -30,6 +30,8 @@ const PRERENDER_ROUTES = [
   // Blog — posts estáticos (sincronizar com src/data/blogStaticPosts.ts)
   "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes",
   "/blog/estetica-integrada-o-equilibrio-entre-naturalidade-e-tecnologia",
+  "/blog/implante-dentario-doi",
+  "/blog/dentes-fixos-num-so-dia-carga-imediata",
 
   // LPs migradas do vivobem.pt
   "/implantes-dentarios-porto",
