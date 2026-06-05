@@ -563,7 +563,7 @@ const cargaImediata: Post = {
   tags: ["Implantes Dentários", "Carga Imediata", "All-on-4"],
   excerpt:
     "Sair com dentes fixos no mesmo dia da cirurgia é possível. Saiba como funciona a carga imediata e para quem é indicada no Instituto AreLuna.",
-  image_url: "/blog/d1-hero-carga-imediata.jpg",
+  image_url: "/blog/carga-imediata-dentes-fixos-um-dia.jpg",
   image_caption: "Dra. Arethuza Luna, Instituto AreLuna — reabilitação com carga imediata",
   subtitle: "De manhã chegam. À tarde saem com dentes fixos.",
   content: `
@@ -582,7 +582,7 @@ const cargaImediata: Post = {
 <h2>O que é a carga imediata?</h2>
 
 <figure>
-  <img src="/blog/d2-sala-clinica-carga-imediata.jpg" alt="Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata" loading="lazy" decoding="async" />
+  <img src="/blog/clinica-areluna-carga-imediata.jpg" alt="Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata" loading="lazy" decoding="async" />
   <figcaption>Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata</figcaption>
 </figure>
 
@@ -652,7 +652,7 @@ const cargaImediata: Post = {
 <h2>O resultado que os nossos pacientes descrevem</h2>
 
 <figure>
-  <img src="/blog/d3-resultado-pacientes.jpg" alt="Dra. Arethuza Luna — Instituto AreLuna no Porto" loading="lazy" decoding="async" />
+  <img src="/blog/resultado-pacientes-areluna.jpg" alt="Dra. Arethuza Luna — Instituto AreLuna no Porto" loading="lazy" decoding="async" />
   <figcaption>Dra. Arethuza Luna — Instituto AreLuna no Porto</figcaption>
 </figure>
 
