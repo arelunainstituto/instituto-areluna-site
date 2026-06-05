@@ -442,7 +442,7 @@ const implanteDoi: Post = {
   tags: ["Implantes Dentários", "Cirurgia Oral"],
   excerpt:
     "Vai doer? O que realmente acontece antes, durante e depois de um implante dentário no Instituto AreLuna — sem medos, com informação clara.",
-  image_url: "/blog/c1-hero-implante-doi.jpg",
+  image_url: "/blog/implante-dentario-doi-instituto-areluna.jpg",
   image_caption: "Dra. Arethuza Luna no Instituto AreLuna, no Porto",
   subtitle: "O medo de sentir dor antes de cuidar do sorriso — e o que realmente acontece",
   content: `
@@ -459,7 +459,7 @@ const implanteDoi: Post = {
 <h2>Antes da cirurgia: o planeamento que faz toda a diferença</h2>
 
 <figure>
-  <img src="/blog/c2-planeamento-implante.jpg" alt="Dra. Arethuza Luna no ambiente clínico do Instituto AreLuna" loading="lazy" decoding="async" />
+  <img src="/blog/planeamento-implante-dentario-areluna.jpg" alt="Dra. Arethuza Luna no ambiente clínico do Instituto AreLuna" loading="lazy" decoding="async" />
   <figcaption>Dra. Arethuza Luna no ambiente clínico do Instituto AreLuna</figcaption>
 </figure>
 
@@ -490,7 +490,7 @@ const implanteDoi: Post = {
 <h2>Depois da cirurgia: os primeiros dias</h2>
 
 <figure>
-  <img src="/blog/c3-ambiente-clinica.jpg" alt="Ambiente acolhedor do Instituto AreLuna no Porto" loading="lazy" decoding="async" />
+  <img src="/blog/ambiente-clinica-instituto-areluna.jpg" alt="Ambiente acolhedor do Instituto AreLuna no Porto" loading="lazy" decoding="async" />
   <figcaption>Ambiente acolhedor do Instituto AreLuna no Porto</figcaption>
 </figure>
 
@@ -541,13 +541,13 @@ const implanteDoi: Post = {
 
 <p>A nossa equipa está aqui para isso.</p>
 ${ctaBox(
-  "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
-  "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20implantes%20dent%C3%A1rios%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
-)}
+    "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
+    "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20implantes%20dent%C3%A1rios%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+  )}
 ${leiaTambem([
-  { href: "/blog/dentes-fixos-num-so-dia-carga-imediata", label: "Dentes fixos num só dia: como funciona a carga imediata" },
-  { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
-])}
+    { href: "/blog/dentes-fixos-num-so-dia-carga-imediata", label: "Dentes fixos num só dia: como funciona a carga imediata" },
+    { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
+  ])}
 `,
 };
 
@@ -563,12 +563,7 @@ const cargaImediata: Post = {
   tags: ["Implantes Dentários", "Carga Imediata", "All-on-4"],
   excerpt:
     "Sair com dentes fixos no mesmo dia da cirurgia é possível. Saiba como funciona a carga imediata e para quem é indicada no Instituto AreLuna.",
-  // NOTA: os IDs Drive das fotos d1 e d2 do guia DEV estão inválidos. Usando
-  // imagens existentes como fallback até a equipa subir as definitivas:
-  // d1 (Hero — Dra. blazer branco) → b1-hero-dra-autoridade.jpg
-  // d2 (Sala clínica — D1-20) → a3-lounge-sala-espera.jpg
-  // Trocar pelas URLs finais quando estiverem no Cloudinary.
-  image_url: "/blog/b1-hero-dra-autoridade.jpg",
+  image_url: "/blog/d1-hero-carga-imediata.jpg",
   image_caption: "Dra. Arethuza Luna, Instituto AreLuna — reabilitação com carga imediata",
   subtitle: "De manhã chegam. À tarde saem com dentes fixos.",
   content: `
@@ -587,7 +582,7 @@ const cargaImediata: Post = {
 <h2>O que é a carga imediata?</h2>
 
 <figure>
-  <img src="/blog/a3-lounge-sala-espera.jpg" alt="Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata" loading="lazy" decoding="async" />
+  <img src="/blog/d2-sala-clinica-carga-imediata.jpg" alt="Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata" loading="lazy" decoding="async" />
   <figcaption>Sala clínica do Instituto AreLuna equipada para tratamento de implantes com carga imediata</figcaption>
 </figure>
 
@@ -681,13 +676,13 @@ const cargaImediata: Post = {
 
 <p>Sem pressão. Sem compromisso. Apenas informação clara para que possa tomar uma decisão consciente.</p>
 ${ctaBox(
-  "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
-  "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20dentes%20fixos%20num%20s%C3%B3%20dia%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
-)}
+    "Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.",
+    "https://wa.me/351910098226?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20dentes%20fixos%20num%20s%C3%B3%20dia%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada.",
+  )}
 ${leiaTambem([
-  { href: "/blog/implante-dentario-doi", label: "Implante dentário dói? A resposta honesta" },
-  { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
-])}
+    { href: "/blog/implante-dentario-doi", label: "Implante dentário dói? A resposta honesta" },
+    { href: "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", label: "O Diferencial da Reabilitação Oral no Instituto AreLuna" },
+  ])}
 `,
 };
 
