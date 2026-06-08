@@ -472,47 +472,50 @@ article iframe {
 .dark .blog-content .blog-tabela-comparativa tbody tr:nth-child(even) td { background: #111827; }
 .dark .blog-content .blog-tabela-comparativa tbody td:first-child { color: #f9fafb; }
 
-/* Bloco "Leia também" (rodapé dos artigos) */
-.blog-content .article-leia-tambem {
+/* Bloco "Leia também" (rodapé dos artigos).
+   Sem prefixo `.blog-content` para também funcionar quando renderizado
+   por React fora do dangerouslySetInnerHTML (ex: a partir do campo
+   `related_posts` da API). */
+.article-leia-tambem {
   margin: 3rem 0 0;
   padding: 1.75rem 1.5rem;
   border-top: 1px solid #e5e7eb;
   background: #fafafa;
   border-radius: 0.75rem;
 }
-.blog-content .article-leia-tambem h2 {
+.article-leia-tambem h2 {
   font-size: 1.1rem;
   margin: 0 0 0.75rem;
   color: hsl(36 42% 42%);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.blog-content .article-leia-tambem ul {
+.article-leia-tambem ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.blog-content .article-leia-tambem li {
+.article-leia-tambem li {
   padding-left: 0;
   margin: 0.4rem 0;
 }
-.blog-content .article-leia-tambem li::before { display: none; }
-.blog-content .article-leia-tambem a {
+.article-leia-tambem li::before { display: none; }
+.article-leia-tambem a {
   color: #1f2937;
   font-weight: 500;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
-.blog-content .article-leia-tambem a:hover {
+.article-leia-tambem a:hover {
   border-bottom-color: hsl(var(--gold-leaf));
 }
-.dark .blog-content .article-leia-tambem {
+.dark .article-leia-tambem {
   background: #111827;
   border-top-color: #374151;
 }
-.dark .blog-content .article-leia-tambem h2 { color: hsl(38 45% 62%); }
-.dark .blog-content .article-leia-tambem a { color: #f3f4f6; }
+.dark .article-leia-tambem h2 { color: hsl(38 45% 62%); }
+.dark .article-leia-tambem a { color: #f3f4f6; }
 
 /* ───────────────────────────────────────────────────────────────
    LP scope — paleta e tokens das landing pages migradas (vivobem).

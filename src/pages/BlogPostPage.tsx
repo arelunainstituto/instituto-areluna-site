@@ -199,6 +199,25 @@ const BlogPostPage = () => {
                             </a>
                         </div>
                     )}
+
+                    {/* "Leia também" — alimentado pelo campo related_posts da API
+                        (resolvido pelo backend a partir de related_post_ids). */}
+                    {(() => {
+                        const related = (post.related_posts ?? []).filter((rp) => rp.slug !== slug);
+                        if (related.length === 0) return null;
+                        return (
+                            <aside className="article-leia-tambem">
+                                <h2>Leia também</h2>
+                                <ul>
+                                    {related.map((rp) => (
+                                        <li key={rp.id}>
+                                            🦷 <Link to={`/blog/${rp.slug}`}>{rp.title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </aside>
+                        );
+                    })()}
                 </article>
             </div>
             <Footer />

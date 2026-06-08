@@ -1,3 +1,13 @@
+/** Subset de Post devolvido na lista `related_posts` (sem `content`). */
+export interface RelatedPost {
+    id: string;
+    title: string;
+    slug: string;
+    excerpt: string;
+    image_url: string;
+    published_at: string;
+}
+
 export interface Post {
     id: string;
     title: string;
@@ -10,6 +20,10 @@ export interface Post {
     author_name: string;
     content?: string; // Optional because list view doesn't have it
     updated_at?: string;
+    /** Posts relacionados (resolvidos pelo backend a partir de related_post_ids). */
+    related_posts?: RelatedPost[];
+    /** IDs dos relacionados (não usado pelo frontend — usar `related_posts`). */
+    related_post_ids?: string[];
     /** Explicit URL slug. When absent the title is slugified. Used by static posts. */
     slug?: string;
     /** Opening subtitle rendered in italic under the title (static posts). */
