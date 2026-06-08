@@ -395,20 +395,22 @@ article iframe {
   text-decoration: none;
 }
 
-/* Caixa de CTA — WhatsApp */
-.blog-content .article-cta {
+/* Caixa de CTA — WhatsApp (igual em todos os artigos: estáticos e do ERP).
+   Sem prefixo `.blog-content` para também funcionar quando renderizada
+   por React fora do conteúdo dangerouslySetInnerHTML. */
+.article-cta {
   margin-top: 3rem;
   padding: 2.25rem 2rem;
   border-radius: 1rem;
   background: #3a6f5c;
   text-align: center;
 }
-.blog-content .article-cta__text {
+.article-cta__text {
   margin: 0 0 1.25rem;
   color: #ffffff;
   font-size: 1.05rem;
 }
-.blog-content .article-cta__btn {
+.article-cta__btn {
   display: inline-block;
   padding: 0.85rem 2rem;
   border-radius: 9999px;
@@ -418,7 +420,7 @@ article iframe {
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-.blog-content .article-cta__btn:hover { opacity: 0.9; }
+.article-cta__btn:hover { opacity: 0.9; }
 
 /* Dark mode */
 .dark .blog-content { color: #d1d5db; }

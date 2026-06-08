@@ -5,7 +5,7 @@ import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/utils";
-import { ArrowLeft, Calendar, User, Phone } from "lucide-react";
+import { ArrowLeft, Calendar, User } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Header from "@/components/Header";
@@ -181,34 +181,23 @@ const BlogPostPage = () => {
                         dangerouslySetInnerHTML={{ __html: post.content || "" }}
                     />
 
-                    {/* CTA padronizado no final do artigo.
-                        Posts estáticos já incluem o seu próprio CTA temático no conteúdo. */}
+                    {/* CTA padrão — mesmo visual do CTA usado nos artigos estáticos
+                        (caixa verde, botão branco). Aplicado apenas para posts vindos
+                        do ERP; os estáticos já injectam o seu próprio CTA temático. */}
                     {!post.isStatic && (
-                    <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700">
-                        <h2 className="text-xl font-light text-gray-900 dark:text-white mb-2">
-                            Ficou com dúvidas ou quer saber mais?
-                        </h2>
-                        <p className="text-gray-600 dark:text-gray-400 mb-6 font-light">
-                            A equipa do Instituto AreLuna está disponível para esclarecer todas as suas questões numa consulta personalizada.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="article-cta">
+                            <p className="article-cta__text">
+                                Cada caso é único. Fale com a nossa equipa para uma avaliação personalizada.
+                            </p>
                             <a
-                                href="https://wa.me/351910098226"
+                                className="article-cta__btn"
+                                href={`https://wa.me/351910098226?text=${encodeURIComponent(`Olá! Li o artigo "${post.title}" no blog do Instituto Areluna e gostaria de uma avaliação personalizada.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[hsl(var(--gold-leaf))] text-white font-medium hover:bg-amber-500 transition-colors duration-300"
                             >
-                                <Phone className="mr-2 h-4 w-4" />
-                                Falar por WhatsApp
+                                Falar com a nossa equipa
                             </a>
-                            <Link
-                                to="/contato"
-                                className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] font-medium hover:bg-[hsl(var(--gold-leaf))]/10 transition-colors duration-300"
-                            >
-                                Marcar Consulta
-                            </Link>
                         </div>
-                    </div>
                     )}
                 </article>
             </div>
