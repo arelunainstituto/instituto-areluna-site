@@ -7,7 +7,7 @@ import { slugify } from "@/lib/utils";
  * Mudar para `true` quando a publicação no ERP estiver arrumada e quisermos
  * voltar a mostrar os posts vindos de lá em conjunto com os estáticos.
  */
-export const ENABLE_ERP_POSTS = false;
+export const ENABLE_ERP_POSTS = true;
 
 /**
  * Posts publicados diretamente no frontend (não vêm do ERP).
