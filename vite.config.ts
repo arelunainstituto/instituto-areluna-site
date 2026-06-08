@@ -27,11 +27,15 @@ const PRERENDER_ROUTES = [
   "/privacidade",
   "/termos",
 
-  // Blog — posts estáticos (sincronizar com src/data/blogStaticPosts.ts)
+  // Blog — slugs servidos pela API do ERP.
+  // Atualizar manualmente quando forem publicados posts novos.
   "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes",
   "/blog/estetica-integrada-o-equilibrio-entre-naturalidade-e-tecnologia",
   "/blog/implante-dentario-doi",
   "/blog/dentes-fixos-num-so-dia-carga-imediata",
+  "/blog/turismo-dentario-como-funciona-vantagens-e-desafios",
+  "/blog/conheca-os-principais-procedimentos-de-estetica-facial",
+  "/blog/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada",
 
   // LPs migradas do vivobem.pt
   "/implantes-dentarios-porto",
