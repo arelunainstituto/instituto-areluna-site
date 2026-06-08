@@ -16,6 +16,9 @@ export interface Post {
     subtitle?: string;
     /** Optional caption rendered under the hero image (static posts). */
     image_caption?: string;
+    /** CSS `object-position` para o hero/thumbnail. Útil para fotos de retrato
+     *  em que o rosto fica acima do centro (ex: `center 20%`, `top`). */
+    image_object_position?: string;
     /** True for posts defined locally in the frontend (not from the ERP). */
     isStatic?: boolean;
 }

@@ -165,6 +165,7 @@ const BlogPostPage = () => {
                                     loading="eager"
                                     decoding="async"
                                     className="w-full h-full object-cover"
+                                    style={{ objectPosition: post.image_object_position }}
                                 />
                             </div>
                             {post.image_caption && (

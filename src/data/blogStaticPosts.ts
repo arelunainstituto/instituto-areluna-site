@@ -260,6 +260,7 @@ const esteticaIntegrada: Post = {
     "Porque a verdadeira beleza nunca deve parecer artificial: a jornada e a filosofia da Dra. Arethuza Luna sobre estética integrada.",
   image_url: "/blog/b1-hero-dra-autoridade.jpg",
   image_caption: "Dra. Arethuza Luna, especialista em Harmonização Orofacial",
+  image_object_position: "center 20%",
   subtitle: "Porque a verdadeira beleza nunca deve parecer artificial",
   content: `
 <h2>A minha jornada na medicina dentária</h2>
@@ -444,6 +445,7 @@ const implanteDoi: Post = {
     "Vai doer? O que realmente acontece antes, durante e depois de um implante dentário no Instituto AreLuna — sem medos, com informação clara.",
   image_url: "/blog/implante-dentario-doi-instituto-areluna.jpg",
   image_caption: "Dra. Arethuza Luna no Instituto AreLuna, no Porto",
+  image_object_position: "center 25%",
   subtitle: "O medo de sentir dor antes de cuidar do sorriso — e o que realmente acontece",
   content: `
 <p>Existe uma pergunta que quase todos os pacientes nos fazem antes de iniciar um tratamento com implantes dentários.</p>
@@ -565,6 +567,7 @@ const cargaImediata: Post = {
     "Sair com dentes fixos no mesmo dia da cirurgia é possível. Saiba como funciona a carga imediata e para quem é indicada no Instituto AreLuna.",
   image_url: "/blog/carga-imediata-dentes-fixos-um-dia.jpg",
   image_caption: "Dra. Arethuza Luna, Instituto AreLuna — reabilitação com carga imediata",
+  image_object_position: "center 15%",
   subtitle: "De manhã chegam. À tarde saem com dentes fixos.",
   content: `
 <p>Esta é a realidade de muitos dos nossos pacientes.</p>
