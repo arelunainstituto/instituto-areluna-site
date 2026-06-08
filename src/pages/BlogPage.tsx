@@ -94,6 +94,7 @@ const BlogPage = () => {
                                             loading="lazy"
                                             decoding="async"
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            style={{ objectPosition: post.image_object_position }}
                                         />
                                     </div>
                                     <CardHeader>
