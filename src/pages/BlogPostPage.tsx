@@ -26,7 +26,7 @@ const BlogPostPage = () => {
         enabled: ENABLE_ERP_POSTS && !staticPost,
     });
 
-    const postFromList = listData?.data.find((p) => slugify(p.title) === slug);
+    const postFromList = listData?.data.find((p) => p.slug === slug || slugify(p.title) === slug);
     const postId = postFromList?.id;
 
     // 2. Fetch post details using ID — só corre se o ERP estiver ativo.
