@@ -11,7 +11,7 @@ import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
 import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
 import draCarlaImg from "@/assets/Dra_Carla_Salvi.jpg";
 import drMarcosImg from "@/assets/Dr_Marcos_Kawasaki.jpg";
-import draAlineImg from "@/assets/Dra_Aline_Marodin.jpg";
+//import draAlineImg from "@/assets/Dra_Aline_Marodin.jpg";
 import draPethineImg from "@/assets/Dra_Pethine_Dalsasso.jpg";
 import draSaraImg from "@/assets/Dra_Sara_Ribeiro.jpg";
 
@@ -64,13 +64,7 @@ const CorpoClinicoSection = () => {
       peloBrasil: true,
       image: drMarcosImg
     },
-    {
-      id: "aline",
-      name: "Dra. Aline Marodin",
-      crm: "OMD 12330",
-      peloBrasil: true,
-      image: draAlineImg
-    },
+    
     {
       id: "pethine",
       name: "Dra. Pethine Dalsasso",
