@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { fetchPosts, fetchPostById } from "@/services/marketingApi";
+import { fetchAllPosts, fetchPostById } from "@/services/marketingApi";
 import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
@@ -20,13 +20,15 @@ const BlogPostPage = () => {
     const staticPost = findStaticPostBySlug(slug);
 
     // 1. Fetch list to find ID from slug — só corre se o ERP estiver ativo.
+    // Tem de ser a lista COMPLETA: com a listagem paginada, artigos fora da
+    // primeira página também precisam de resolver slug → id.
     const { data: listData, isLoading: isListLoading, error: listError } = useQuery({
-        queryKey: ["posts"],
-        queryFn: () => fetchPosts(),
+        queryKey: ["posts", "all"],
+        queryFn: () => fetchAllPosts(),
         enabled: ENABLE_ERP_POSTS && !staticPost,
     });
 
-    const postFromList = listData?.data.find((p) => p.slug === slug || slugify(p.title) === slug);
+    const postFromList = listData?.find((p) => p.slug === slug || slugify(p.title) === slug);
     const postId = postFromList?.id;
 
     // 2. Fetch post details using ID — só corre se o ERP estiver ativo.
