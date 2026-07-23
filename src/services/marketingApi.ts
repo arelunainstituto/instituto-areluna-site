@@ -67,6 +67,33 @@ export const fetchPosts = async (page = 1, limit = 10): Promise<PostsResponse> =
     return response.json();
 };
 
+/** Travão de segurança: nunca pedimos mais do que isto à API. */
+const MAX_PAGES = 20;
+
+/**
+ * Devolve **todos** os posts publicados.
+ *
+ * A listagem do blog pagina no cliente (12 por página) para poder
+ * ordenar por data o conjunto completo — e, se voltarem a existir posts
+ * estáticos, misturá-los na ordem certa. Pedimos um `limit` alto e, se
+ * o backend o limitar (devolvendo `totalPages > 1`), buscamos as páginas
+ * restantes em paralelo.
+ */
+export const fetchAllPosts = async (limit = 100): Promise<Post[]> => {
+    const first = await fetchPosts(1, limit);
+    const totalPages = Math.min(first.meta?.totalPages ?? 1, MAX_PAGES);
+
+    if (totalPages <= 1) {
+        return first.data;
+    }
+
+    const rest = await Promise.all(
+        Array.from({ length: totalPages - 1 }, (_, i) => fetchPosts(i + 2, limit)),
+    );
+
+    return [...first.data, ...rest.flatMap((r) => r.data)];
+};
+
 export const fetchPostById = async (id: string): Promise<Post> => {
     const response = await fetch(`${API_URL}/api/public/marketing/posts/${id}`, {
         headers: HEADERS,
