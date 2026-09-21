@@ -11,7 +11,8 @@ const Header = () => {
   const location = useLocation();
   const isBlogPage = location.pathname.startsWith('/blog');
   const isPrivacyOrTerms = location.pathname === '/privacidade' || location.pathname === '/termos';
-  const isSolidHeader = isBlogPage || isPrivacyOrTerms || location.pathname === '/sobre-a-fundadora';
+  const knownTransparentRoutes = ['/', '/tratamentos', '/turismo-dentario', '/transplante-capilar', '/estetica-facial', '/contato'];
+  const isSolidHeader = isBlogPage || isPrivacyOrTerms || location.pathname === '/sobre-a-fundadora' || !knownTransparentRoutes.includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
