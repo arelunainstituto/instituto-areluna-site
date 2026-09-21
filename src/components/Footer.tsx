@@ -152,8 +152,8 @@ const Footer = () => {
                       </svg>
                     </div>
                     <div className="text-sm text-pure-white/70 font-vivant-light space-y-1">
-                      <p><strong className="text-pure-white/90">Porto (Sede):</strong> Rua de Júlio Dinis, 194 R/C, 4050-024 Porto</p>
-                      <p><strong className="text-pure-white/90">Lisboa (Nova Unidade):</strong> Alameda das Linhas de Torres / Lumiar, Lisboa</p>
+                      <p><strong className="text-pure-white/90">{t('footer.units.porto_label', 'Porto (Sede):')}</strong> {t('footer.units.porto_address', 'Rua de Júlio Dinis, 194 R/C, 4050-024 Porto')}</p>
+                      <p><strong className="text-pure-white/90">{t('footer.units.lisboa_label', 'Lisboa (Nova Unidade):')}</strong> {t('footer.units.lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}</p>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
@@ -197,10 +197,10 @@ const Footer = () => {
 
               {/* Entidade Reguladora & Dados da Sociedade */}
               <div>
-                <h4 className="text-sm font-vivant text-[hsl(var(--gold-leaf))] mb-3">Conformidade & Regulação</h4>
+                <h4 className="text-sm font-vivant text-[hsl(var(--gold-leaf))] mb-3">{t('footer.units.compliance_title', 'Conformidade & Regulação')}</h4>
                 <ul className="space-y-1.5">
                   <li className="text-pure-white/80 font-vivant-light text-xs font-semibold">
-                    Instituto AreLuna Lda. · NIPC 516 161 637
+                    {t('footer.units.company_name', 'Instituto AreLuna Lda. · NIPC 516 161 637')}
                   </li>
                   <li className="text-pure-white/70 font-vivant-light text-xs">
                     <span className="font-semibold text-pure-white/90">{t('footer.reg_number')}</span> E161637

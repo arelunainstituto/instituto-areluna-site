@@ -6,7 +6,6 @@ import FinalCTASection from "@/lp/components/sections/FinalCTASection";
 import BeforeAfter from "@/lp/components/BeforeAfter";
 import BenefitsImplantes from "@/lp/components/BenefitsImplantes";
 import HowItWorks from "@/lp/components/HowItWorks";
-import Testimonials from "@/lp/components/Testimonials";
 import Authority from "@/lp/components/Authority";
 import Footer from "@/lp/components/Footer";
 import { CLINIC_IMAGE, LEAD_WEBHOOK_URL } from "@/lp/config/landingPages";
@@ -81,7 +80,6 @@ const Implantes = () => {
       <BeforeAfter />
       <BenefitsImplantes />
       <HowItWorks />
-      <Testimonials />
       <Authority />
       <FinalCTASection
         titlePrefix="Chegou a hora de mudar."

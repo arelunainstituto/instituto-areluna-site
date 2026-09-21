@@ -1,12 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import {
   COUNTRIES,
   DEFAULT_COUNTRY_ISO,
   applyPhoneMask,
-  countDigits,
   getCountryByIso,
 } from "@/lp/lib/countries";
 import { MessageSquare, MapPin, Phone, Mail, Clock, ShieldCheck, CheckCircle2 } from "lucide-react";
@@ -27,9 +26,9 @@ const AGE_OPTIONS = [
 ];
 
 const UNIT_OPTIONS = [
-  { value: "lisboa", label: "Lisboa (Lumiar) — Nova Unidade ✨" },
-  { value: "porto", label: "Porto (Mota Galiza)" },
-  { value: "turismo", label: "Turismo Dentário / Sem preferência" }
+  { value: "lisboa", labelKey: "unit_lisboa", defaultLabel: "Lisboa" },
+  { value: "porto", labelKey: "unit_porto", defaultLabel: "Porto" },
+  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Turismo Dentário" }
 ];
 
 const LANGUAGE_OPTIONS = [
@@ -38,13 +37,6 @@ const LANGUAGE_OPTIONS = [
   "Français",
   "Español",
   "Deutsch"
-];
-
-const CALLBACK_OPTIONS = [
-  "Qualquer altura do dia",
-  "Manhã (09h - 13h)",
-  "Tarde (14h - 18h)",
-  "Final do dia (18h - 20h)"
 ];
 
 const ContactFormSection = () => {
@@ -57,7 +49,6 @@ const ContactFormSection = () => {
     email: '',
     phone: '',
     unit: 'lisboa',
-    nationality: '',
     residence: '',
     preferredLanguage: 'Português',
     smileState: SMILE_STATE_OPTIONS[0],
@@ -95,8 +86,8 @@ const ContactFormSection = () => {
 
     if (!formData.consentPrivacy) {
       toast({
-        title: "Consentimento obrigatório",
-        description: "Por favor, aceite a Política de Privacidade e Cookies para continuar.",
+        title: t('triage_form.toast_privacy_title', "Consentimento obrigatório"),
+        description: t('triage_form.toast_privacy_desc', "Por favor, aceite a Política de Privacidade e Cookies para continuar."),
         variant: "destructive"
       });
       return;
@@ -105,8 +96,8 @@ const ContactFormSection = () => {
     const phoneDigits = formData.phone.replace(/\D/g, "");
     if (phoneDigits.length < country.minDigits) {
       toast({
-        title: "Telemóvel incompleto",
-        description: `Por favor, insira pelo menos ${country.minDigits} dígitos no número de telefone.`,
+        title: t('triage_form.toast_phone_title', "Telemóvel incompleto"),
+        description: t('triage_form.toast_phone_desc', "Por favor, insira pelo menos {{min}} dígitos no número de telefone.", { min: country.minDigits }),
         variant: "destructive"
       });
       return;
@@ -128,7 +119,6 @@ const ContactFormSection = () => {
       countryCode: country.code,
       countryIso: country.iso,
       unit: formData.unit,
-      nationality: formData.nationality,
       residence: formData.residence,
       preferredLanguage: formData.preferredLanguage,
       smileState: formData.smileState,
@@ -182,8 +172,8 @@ const ContactFormSection = () => {
       if (response.ok) {
         setIsSubmittedSuccess(true);
         toast({
-          title: "Pedido de Consulta Enviado!",
-          description: "Recebemos os seus dados e a nossa equipa clínica entrará em contacto muito em breve.",
+          title: t('triage_form.toast_success_title', "Pedido de Consulta Enviado!"),
+          description: t('triage_form.toast_success_desc', "Recebemos os seus dados e a nossa equipa clínica entrará em contacto muito em breve."),
         });
       } else {
         throw new Error('Falha no envio do formulário');
@@ -191,8 +181,8 @@ const ContactFormSection = () => {
     } catch (error) {
       console.error('Erro no envio:', error);
       toast({
-        title: "Ocorreu um erro no envio",
-        description: "Não conseguimos enviar os dados automaticamente. Por favor, tente novamente ou fale connosco pelo WhatsApp.",
+        title: t('triage_form.toast_error_title', "Ocorreu um erro no envio"),
+        description: t('triage_form.toast_error_desc', "Não conseguimos enviar os dados automaticamente. Por favor, tente novamente ou fale connosco pelo WhatsApp."),
         variant: "destructive",
       });
     } finally {
@@ -217,17 +207,21 @@ const ContactFormSection = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(var(--gold-leaf))]/10 border border-[hsl(var(--gold-leaf))]/25 text-[hsl(var(--gold-leaf))] text-xs font-semibold uppercase tracking-widest mb-4">
             <span className="w-2 h-2 rounded-full bg-[hsl(var(--gold-leaf))] animate-ping"></span>
-            Marcação & Triagem Clínica · Lisboa & Porto
+            {t('triage_form.badge', 'Marcação & Triagem Clínica · Lisboa & Porto')}
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant text-jet dark:text-white mb-4 drop-shadow-sm">
-            Marque a Sua Consulta de Avaliação
+            {t('triage_form.title', 'Marque a Sua Consulta de Avaliação')}
           </h2>
 
           <div className="w-28 h-1 bg-gradient-to-r from-[hsl(var(--gold-leaf))] to-[hsl(var(--ring))] mx-auto mb-5 rounded-full"></div>
 
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-            Atendimento exclusivo nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza)</strong>. Preencha os seus dados para que a equipa médica e de acolhimento prepare a melhor abordagem para o seu caso.
+            <Trans
+              i18nKey="triage_form.subtitle_html"
+              defaults="Atendimento exclusivo nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza)</strong>. Preencha os seus dados para que a equipa médica e de acolhimento prepare a melhor abordagem para o seu caso."
+              components={{ strong: <strong /> }}
+            />
           </p>
         </div>
 
@@ -242,10 +236,10 @@ const ContactFormSection = () => {
                     <CheckCircle2 size={42} />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-vivant text-jet dark:text-white">
-                    Obrigado pela sua confiança!
+                    {t('triage_form.success_title', 'Obrigado pela sua confiança!')}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto font-vivant-light text-base leading-relaxed">
-                    A sua solicitação foi registada com sucesso na nossa triagem clínica. Um dos nossos coordenadores de tratamento entrará em contacto consigo muito em breve na altura indicada.
+                    {t('triage_form.success_desc', 'A sua solicitação foi registada com sucesso na nossa triagem clínica. Um dos nossos coordenadores de tratamento entrará em contacto consigo muito em breve na altura indicada.')}
                   </p>
                   <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                     <a
@@ -255,22 +249,22 @@ const ContactFormSection = () => {
                       className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition-all duration-300 shadow-lg"
                     >
                       <MessageSquare size={18} />
-                      Falar agora pelo WhatsApp
+                      {t('triage_form.success_whatsapp', 'Falar agora pelo WhatsApp')}
                     </a>
                     <button
                       onClick={() => setIsSubmittedSuccess(false)}
                       className="px-6 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium transition-colors"
                     >
-                      Enviar nova mensagem
+                      {t('triage_form.success_new_msg', 'Enviar nova mensagem')}
                     </button>
                   </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Bloco 1: Unidade de Preferência */}
+                  {/* Bloco 1: Unidade de Preferência - Lisboa / Porto / Turismo Dentário */}
                   <div className="p-4 rounded-2xl bg-gradient-to-r from-[hsl(var(--gold-leaf))]/10 via-[hsl(var(--gold-leaf))]/5 to-transparent border border-[hsl(var(--gold-leaf))]/20">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[hsl(var(--gold-leaf))] mb-2">
-                      1. Onde prefere ser atendido? (*)
+                      {t('triage_form.step1_title', '1. Onde prefere ser atendido? (*)')}
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                       {UNIT_OPTIONS.map((u) => (
@@ -284,7 +278,7 @@ const ContactFormSection = () => {
                               : 'bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-[hsl(var(--gold-leaf))]/50'
                           }`}
                         >
-                          {u.label}
+                          {t(`triage_form.${u.labelKey}`, u.defaultLabel)}
                         </button>
                       ))}
                     </div>
@@ -299,7 +293,7 @@ const ContactFormSection = () => {
                           focusedField === 'name' ? 'text-[hsl(var(--gold-leaf))]' : 'text-gray-600 dark:text-gray-300'
                         }`}
                       >
-                        Nome Completo (*)
+                        {t('triage_form.name_label', 'Nome Completo (*)')}
                       </label>
                       <input
                         type="text"
@@ -309,7 +303,7 @@ const ContactFormSection = () => {
                         onFocus={() => setFocusedField('name')}
                         onBlur={() => setFocusedField(null)}
                         className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:ring-1 focus:ring-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100 placeholder-gray-400"
-                        placeholder="Ex: Maria Santos"
+                        placeholder={t('triage_form.name_placeholder', 'Ex: Maria Santos')}
                         required
                       />
                     </div>
@@ -321,7 +315,7 @@ const ContactFormSection = () => {
                           focusedField === 'age' ? 'text-[hsl(var(--gold-leaf))]' : 'text-gray-600 dark:text-gray-300'
                         }`}
                       >
-                        Idade (*)
+                        {t('triage_form.age_label', 'Idade (*)')}
                       </label>
                       <select
                         id="age"
@@ -332,7 +326,7 @@ const ContactFormSection = () => {
                         className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:ring-1 focus:ring-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100"
                         required
                       >
-                        <option value="">Selecione...</option>
+                        <option value="">{t('triage_form.age_placeholder', 'Selecione...')}</option>
                         {AGE_OPTIONS.map((age) => (
                           <option key={age} value={age}>{age}</option>
                         ))}
@@ -349,7 +343,7 @@ const ContactFormSection = () => {
                           focusedField === 'email' ? 'text-[hsl(var(--gold-leaf))]' : 'text-gray-600 dark:text-gray-300'
                         }`}
                       >
-                        E-mail (*)
+                        {t('triage_form.email_label', 'E-mail (*)')}
                       </label>
                       <input
                         type="email"
@@ -359,7 +353,7 @@ const ContactFormSection = () => {
                         onFocus={() => setFocusedField('email')}
                         onBlur={() => setFocusedField(null)}
                         className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:ring-1 focus:ring-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100 placeholder-gray-400"
-                        placeholder="exemplo@dominio.com"
+                        placeholder={t('triage_form.email_placeholder', 'exemplo@dominio.com')}
                         required
                       />
                     </div>
@@ -371,13 +365,14 @@ const ContactFormSection = () => {
                           focusedField === 'phone' ? 'text-[hsl(var(--gold-leaf))]' : 'text-gray-600 dark:text-gray-300'
                         }`}
                       >
-                        Telefone / WhatsApp (*)
+                        {t('triage_form.phone_label', 'Telefone / WhatsApp (*)')}
                       </label>
                       <div className="flex gap-2">
                         {/* Seletor de país DDI */}
                         <select
                           value={countryIso}
                           onChange={(e) => setCountryIso(e.target.value)}
+                          aria-label="DDI País"
                           className="w-[110px] px-2.5 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none text-xs text-jet dark:text-gray-100"
                         >
                           {COUNTRIES.map((c) => (
@@ -401,32 +396,14 @@ const ContactFormSection = () => {
                     </div>
                   </div>
 
-                  {/* Bloco 4: Nacionalidade, Residência e Língua */}
-                  <div className="grid sm:grid-cols-3 gap-4">
-                    <div className="group">
-                      <label
-                        htmlFor="nationality"
-                        className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-600 dark:text-gray-300"
-                      >
-                        País de Nacionalidade (*)
-                      </label>
-                      <input
-                        type="text"
-                        id="nationality"
-                        value={formData.nationality}
-                        onChange={(e) => handleInputChange('nationality', e.target.value)}
-                        className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:ring-1 focus:ring-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100 placeholder-gray-400"
-                        placeholder="Ex: Portugal, Reino Unido..."
-                        required
-                      />
-                    </div>
-
+                  {/* Bloco 4: Residência e Língua (Removido: País de Nacionalidade conforme solicitado) */}
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div className="group">
                       <label
                         htmlFor="residence"
                         className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-600 dark:text-gray-300"
                       >
-                        País de Residência (*)
+                        {t('triage_form.residence_label', 'País de Residência (*)')}
                       </label>
                       <input
                         type="text"
@@ -434,7 +411,7 @@ const ContactFormSection = () => {
                         value={formData.residence}
                         onChange={(e) => handleInputChange('residence', e.target.value)}
                         className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:ring-1 focus:ring-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100 placeholder-gray-400"
-                        placeholder="Ex: Portugal, Suíça, França..."
+                        placeholder={t('triage_form.residence_placeholder', 'Ex: Portugal, Suíça, França...')}
                         required
                       />
                     </div>
@@ -444,7 +421,7 @@ const ContactFormSection = () => {
                         htmlFor="preferredLanguage"
                         className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-600 dark:text-gray-300"
                       >
-                        Língua de Preferência (*)
+                        {t('triage_form.language_label', 'Língua de Preferência (*)')}
                       </label>
                       <select
                         id="preferredLanguage"
@@ -466,7 +443,7 @@ const ContactFormSection = () => {
                       htmlFor="smileState"
                       className="block text-xs font-semibold uppercase tracking-wider text-[hsl(var(--gold-leaf))] mb-2"
                     >
-                      Como se sente em relação ao seu sorriso ou o estado dos seus dentes? (*)
+                      {t('triage_form.smile_question', 'Como se sente em relação ao seu sorriso ou o estado dos seus dentes? (*)')}
                     </label>
                     <select
                       id="smileState"
@@ -475,14 +452,18 @@ const ContactFormSection = () => {
                       className="w-full px-4 py-3.5 bg-white dark:bg-gray-800 border-2 border-[hsl(var(--gold-leaf))]/40 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none font-medium text-sm text-jet dark:text-gray-100"
                       required
                     >
-                      {SMILE_STATE_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
+                      <option value={SMILE_STATE_OPTIONS[0]}>
+                        {t('triage_form.smile_opt1', SMILE_STATE_OPTIONS[0])}
+                      </option>
+                      <option value={SMILE_STATE_OPTIONS[1]}>
+                        {t('triage_form.smile_opt2', SMILE_STATE_OPTIONS[1])}
+                      </option>
+                      <option value={SMILE_STATE_OPTIONS[2]}>
+                        {t('triage_form.smile_opt3', SMILE_STATE_OPTIONS[2])}
+                      </option>
                     </select>
                     <span className="block mt-2 text-xs text-gray-500 dark:text-gray-400">
-                      Esta informação ajuda-nos a direcionar o especialista mais indicado para o seu plano de tratamento.
+                      {t('triage_form.smile_hint', 'Esta informação ajuda-nos a direcionar o especialista mais indicado para o seu plano de tratamento.')}
                     </span>
                   </div>
 
@@ -493,7 +474,7 @@ const ContactFormSection = () => {
                         htmlFor="callbackTime"
                         className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-600 dark:text-gray-300"
                       >
-                        Qual a melhor altura para ligarmos de volta?
+                        {t('triage_form.callback_label', 'Qual a melhor altura para ligarmos de volta?')}
                       </label>
                       <select
                         id="callbackTime"
@@ -501,10 +482,11 @@ const ContactFormSection = () => {
                         onChange={(e) => handleInputChange('callbackTime', e.target.value)}
                         className="w-full px-4 py-3 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100"
                       >
-                        <option value="">Selecione um horário preferencial...</option>
-                        {CALLBACK_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
+                        <option value="">{t('triage_form.callback_placeholder', 'Selecione um horário preferencial...')}</option>
+                        <option value="Qualquer altura do dia">{t('triage_form.callback_anytime', 'Qualquer altura do dia')}</option>
+                        <option value="Manhã (09h - 13h)">{t('triage_form.callback_morning', 'Manhã (09h - 13h)')}</option>
+                        <option value="Tarde (14h - 18h)">{t('triage_form.callback_afternoon', 'Tarde (14h - 18h)')}</option>
+                        <option value="Final do dia (18h - 20h)">{t('triage_form.callback_evening', 'Final do dia (18h - 20h)')}</option>
                       </select>
                     </div>
 
@@ -513,7 +495,7 @@ const ContactFormSection = () => {
                         htmlFor="message"
                         className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-600 dark:text-gray-300"
                       >
-                        Mensagem ou detalhes adicionais (opcional)
+                        {t('triage_form.message_label', 'Mensagem ou detalhes adicionais (opcional)')}
                       </label>
                       <textarea
                         id="message"
@@ -521,7 +503,7 @@ const ContactFormSection = () => {
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={2}
                         className="w-full px-4 py-2.5 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-[hsl(var(--gold-leaf))] focus:outline-none transition-all text-sm text-jet dark:text-gray-100 placeholder-gray-400 resize-none"
-                        placeholder="Alguma dúvida específica ou histórico dental prévio..."
+                        placeholder={t('triage_form.message_placeholder', 'Alguma dúvida específica ou histórico dental prévio...')}
                       />
                     </div>
                   </div>
@@ -537,9 +519,9 @@ const ContactFormSection = () => {
                         required
                       />
                       <span>
-                        Li e aceito a{" "}
+                        {t('triage_form.consent_privacy_text', 'Li e aceito a')}{" "}
                         <Link to="/privacidade" className="text-[hsl(var(--gold-leaf))] hover:underline font-medium" target="_blank">
-                          Política de Privacidade e Cookies
+                          {t('triage_form.privacy_policy_link', 'Política de Privacidade e Cookies')}
                         </Link>
                         . (*)
                       </span>
@@ -553,12 +535,12 @@ const ContactFormSection = () => {
                         className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[hsl(var(--gold-leaf))] focus:ring-[hsl(var(--gold-leaf))]"
                       />
                       <span>
-                        Quero receber novidades clínicas e informações do Instituto AreLuna.
+                        {t('triage_form.consent_marketing_text', 'Quero receber novidades clínicas e informações do Instituto AreLuna.')}
                       </span>
                     </label>
 
                     <p className="text-[11px] text-gray-400 dark:text-gray-500 pt-1">
-                      (*) Campos obrigatórios. Os seus dados clínicos e de contacto são tratados com sigilo médico absoluto.
+                      {t('triage_form.required_note', '(*) Campos obrigatórios. Os seus dados clínicos e de contacto são tratados com sigilo médico absoluto.')}
                     </p>
                   </div>
 
@@ -570,7 +552,9 @@ const ContactFormSection = () => {
                       className="w-full bg-gradient-to-r from-[hsl(var(--jet))] via-black to-[hsl(var(--ring))] text-white font-vivant font-semibold px-8 py-4.5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.01] border border-[hsl(var(--gold-leaf))]/30 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed group"
                     >
                       <span className="text-base tracking-wide">
-                        {isSubmitting ? "A processar o pedido..." : "SOLICITAR AVALIAÇÃO CLÍNICA"}
+                        {isSubmitting
+                          ? t('triage_form.submitting_btn', 'A processar o pedido...')
+                          : t('triage_form.submit_btn', 'SOLICITAR AVALIAÇÃO CLÍNICA')}
                       </span>
                       <span className="text-[hsl(var(--gold-leaf))] group-hover:translate-x-1 transition-transform duration-200">
                         →
@@ -588,7 +572,9 @@ const ContactFormSection = () => {
             <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/20">
               <div className="flex items-center gap-2 mb-6 text-[hsl(var(--gold-leaf))]">
                 <MapPin className="w-5 h-5" />
-                <h4 className="text-xl font-vivant text-jet dark:text-white">Nossas Unidades</h4>
+                <h4 className="text-xl font-vivant text-jet dark:text-white">
+                  {t('triage_form.sidebar_units_title', 'Nossas Unidades')}
+                </h4>
               </div>
 
               <div className="space-y-6">
@@ -596,17 +582,17 @@ const ContactFormSection = () => {
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-[hsl(var(--gold-leaf))]/15 via-amber-500/5 to-transparent border border-[hsl(var(--gold-leaf))]/30">
                   <div className="flex items-center justify-between mb-1.5">
                     <h5 className="font-vivant font-semibold text-jet dark:text-white text-base">
-                      Lisboa · Lumiar
+                      {t('triage_form.sidebar_lisboa_name', 'Lisboa · Lumiar')}
                     </h5>
                     <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[hsl(var(--gold-leaf))] text-white">
-                      Nova Unidade
+                      {t('triage_form.sidebar_lisboa_badge', 'Nova Unidade')}
                     </span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
-                    Alameda das Linhas de Torres / Lumiar, Lisboa
+                    {t('triage_form.sidebar_lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}
                   </p>
                   <p className="text-[11px] text-[hsl(var(--gold-leaf))] font-medium mt-2">
-                    ✓ Abertura de Agendamentos & Avaliações Prioritárias
+                    {t('triage_form.sidebar_lisboa_tag', '✓ Abertura de Agendamentos & Avaliações Prioritárias')}
                   </p>
                 </div>
 
@@ -614,15 +600,17 @@ const ContactFormSection = () => {
                 <div className="p-4 rounded-2xl bg-gray-50/80 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700">
                   <div className="flex items-center justify-between mb-1.5">
                     <h5 className="font-vivant font-semibold text-jet dark:text-white text-base">
-                      Porto · Mota Galiza
+                      {t('triage_form.sidebar_porto_name', 'Porto · Mota Galiza')}
                     </h5>
-                    <span className="text-[10px] text-gray-500 dark:text-gray-400">Sede</span>
+                    <span className="text-[10px] text-gray-500 dark:text-gray-400">
+                      {t('triage_form.sidebar_porto_badge', 'Sede')}
+                    </span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
-                    Rua de Júlio Dinis, 194 R/C | 4050-024 Porto
+                    {t('triage_form.sidebar_porto_address', 'Rua de Júlio Dinis, 194 R/C | 4050-024 Porto')}
                   </p>
                   <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
-                    Registo ERS: E161637 · Licença: 21593/2022
+                    {t('triage_form.sidebar_porto_reg', 'Registo ERS: E161637 · Licença: 21593/2022')}
                   </p>
                 </div>
               </div>
@@ -632,10 +620,12 @@ const ContactFormSection = () => {
             <div className="bg-gradient-to-br from-[#12161b] to-black text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-500/20 relative overflow-hidden">
               <div className="flex items-center gap-2 mb-3 text-emerald-400">
                 <MessageSquare className="w-5 h-5" />
-                <h4 className="text-lg font-vivant font-semibold">Prefere Resposta Imediata?</h4>
+                <h4 className="text-lg font-vivant font-semibold">
+                  {t('triage_form.sidebar_wa_title', 'Prefere Resposta Imediata?')}
+                </h4>
               </div>
               <p className="text-xs text-gray-300 font-vivant-light leading-relaxed mb-5">
-                Para quem não quer aguardar ligação ou busca tirar dúvidas pontuais antes do agendamento, a nossa equipa clínica atende diretamente pelo canal direto oficial:
+                {t('triage_form.sidebar_wa_desc', 'Para quem não quer aguardar ligação ou busca tirar dúvidas pontuais antes do agendamento, a nossa equipa clínica atende diretamente pelo canal direto oficial:')}
               </p>
               <a
                 href="https://wa.me/351910098226?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20marca%C3%A7%C3%A3o%20de%20consulta%20no%20Instituto%20AreLuna."
@@ -643,7 +633,7 @@ const ContactFormSection = () => {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all duration-300 shadow-lg group"
               >
-                <span>Falar com a receção no WhatsApp</span>
+                <span>{t('triage_form.sidebar_wa_btn', 'Falar com a receção no WhatsApp')}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
@@ -653,7 +643,7 @@ const ContactFormSection = () => {
               <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                 <Phone className="w-4 h-4 text-[hsl(var(--gold-leaf))]" />
                 <a href="tel:+351220430090" className="hover:text-[hsl(var(--gold-leaf))] transition-colors font-medium">
-                  +351 220 430 090 (Porto & Geral)
+                  {t('triage_form.sidebar_phone_label', '+351 220 430 090 (Porto & Geral)')}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
@@ -665,13 +655,13 @@ const ContactFormSection = () => {
               <div className="flex items-start gap-3 text-gray-600 dark:text-gray-400">
                 <Clock className="w-4 h-4 text-[hsl(var(--gold-leaf))] mt-0.5" />
                 <div>
-                  <p>Segunda a Sexta: 09:00 - 19:00</p>
-                  <p>Sábado: Sob marcação prévia</p>
+                  <p>{t('triage_form.sidebar_hours_mon_fri', 'Segunda a Sexta: 09:00 - 19:00')}</p>
+                  <p>{t('triage_form.sidebar_hours_sat', 'Sábado: Sob marcação prévia')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 pt-2 text-[11px] text-gray-500 border-t border-gray-100 dark:border-gray-800">
                 <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                <span>Sigilo profissional e conformidade integral RGPD / ERS</span>
+                <span>{t('triage_form.sidebar_compliance', 'Sigilo profissional e conformidade integral RGPD / ERS')}</span>
               </div>
             </div>
           </div>
