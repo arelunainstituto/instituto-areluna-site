@@ -162,7 +162,7 @@
         "subtitle": "More than numbers, these are stories of lives transformed by an excellent multidisciplinary team.",
         "footer_text": "Building smiles for over two decades",
         "specialists": {
-            "value": "15",
+            "value": "12",
             "label": "Specialists"
         },
         "specialties": {
@@ -206,7 +206,7 @@
             "button": "Schedule consultation",
             "premium": "Premium Care",
             "tech": "Advanced Technology",
-            "results": "Guaranteed Results"
+            "results": "Continuous Follow-up"
         },
         "items": {
             "1": {
@@ -858,12 +858,12 @@
             "cta_results": "VIEW RESULTS",
             "stats": {
                 "experience": {
-                    "value": "25+",
-                    "label": "Years of Experience"
+                    "value": "24+",
+                    "label": "Years of Tradition"
                 },
                 "transplants": {
-                    "value": "15K+",
-                    "label": "Transplants Performed"
+                    "value": "FUE",
+                    "label": "High-Precision Micrografts"
                 },
                 "technique": {
                     "value": "FUE",

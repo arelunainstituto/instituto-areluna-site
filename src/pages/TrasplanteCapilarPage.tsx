@@ -7,6 +7,7 @@ import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import { transplanteCapilarFaqSchema } from "@/data/faqSchemas";
 
 const schemas = [
   {
@@ -34,7 +35,8 @@ const schemas = [
       "jobTitle": "Médico especialista em Transplante Capilar e Dermatologia",
       "worksFor": {"@type": "Dentist","name": "Instituto AreLuna"}
     }
-  }
+  },
+  transplanteCapilarFaqSchema
 ];
 
 const TrasplanteCapilarPage = () => {

@@ -44,9 +44,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <a
-            href="https://wa.me/351910098226"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/tratamentos"
           >
             <Button
               variant="outline-gold"
@@ -57,18 +55,20 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="https://pagamento.institutoareluna.pt/b/eVq6oH2da5oM5nJahT9Zo0w?_gl=1*1u10ymg*_gcl_au*OTQ4NDQ4NDE1LjE3Njc4NzgxMDk.*_ga*MTI1MTYyMTI4OS4xNzY3ODc4MTA5*_ga_1FBN8LDFRR*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgyOTA4ODU1NDk.*_ga_Q2XN6ZFDEN*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgxNjA5NDc2Mjk1"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contacto-form"
           >
             <Button
               variant="gold"
-              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300"
+              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300 shadow-xl shadow-amber-900/20"
             >
               {t('hero.book')}
             </Button>
           </a>
         </div>
+
+        <p className="text-xs text-pure-white/60 font-vivant-light text-center mt-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          Unidades em Lisboa (Lumiar) e no Porto (Mota Galiza) · Acompanhamento contínuo e personalizado
+        </p>
 
         {/* Indicador de scroll */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1.5s' }}>

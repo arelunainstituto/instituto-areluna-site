@@ -47,14 +47,14 @@ const Implantes = () => {
         title="Implantes Dentários All-on-Four em 24h | Porto"
         description="Recupere o seu sorriso em 24 horas com a técnica All-on-Four no Porto. Apenas 4 implantes por arcada, sem enxertos. Marque a sua avaliação gratuita."
         keywords="implantes dentários Porto, all-on-four Porto, implantes 24 horas, prótese fixa implantes, reabilitação oral Porto"
-        path="/implantes"
+        path="/implantes-dentarios-porto"
         jsonLd={[
           organizationSchema,
           buildServiceSchema({
             name: "Implantes Dentários All-on-Four",
             description:
               "Reabilitação oral completa com 4 implantes por arcada e prótese fixa entregue em 24 horas, sem necessidade de enxertos ósseos.",
-            path: "/implantes",
+            path: "/implantes-dentarios-porto",
             serviceType: "Implantologia Dentária",
           }),
           buildBreadcrumbSchema([
@@ -91,7 +91,7 @@ const Implantes = () => {
         trustIndicators={[
           { label: "Avaliação sem compromisso" },
           { label: "Atendimento personalizado" },
-          { label: "Resultados garantidos" },
+          { label: "Acompanhamento contínuo" },
         ]}
       />
       <Footer />

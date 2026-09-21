@@ -7,6 +7,7 @@ import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import { esteticaFacialFaqSchema } from "@/data/faqSchemas";
 
 const schemas = [
   {
@@ -29,7 +30,8 @@ const schemas = [
     "howPerformed": "Protocolo personalizado combinando técnicas minimamente invasivas: toxina botulínica para expressões dinâmicas, ácido hialurónico para volume e contorno, e bioestimuladores para regeneração da pele.",
     "followup": "Reavaliação após 2-4 semanas. Manutenção recomendada a cada 6-12 meses.",
     "performedBy": {"@type": "Dentist","name": "Instituto AreLuna","url": "https://www.institutoareluna.pt/"}
-  }
+  },
+  esteticaFacialFaqSchema
 ];
 
 const EsteticaFacialPage = () => {

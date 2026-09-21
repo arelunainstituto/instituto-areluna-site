@@ -47,14 +47,14 @@ const Alinhadores = () => {
         title="Alinhadores Invisíveis no Porto | Instituto Areluna"
         description="Alinhe os seus dentes com alinhadores invisíveis e removíveis no Porto. Tratamento ortodôntico discreto, planeamento 3D e acompanhamento clínico de excelência."
         keywords="alinhadores invisíveis Porto, ortodontia invisível, alinhador dentário transparente, aparelho invisível, ortodontia Porto"
-        path="/alinhadores"
+        path="/alinhadores-invisiveis-porto"
         jsonLd={[
           organizationSchema,
           buildServiceSchema({
             name: "Alinhadores Invisíveis",
             description:
               "Tratamento ortodôntico com alinhadores transparentes, removíveis e discretos, com planeamento digital 3D e acompanhamento clínico no Porto.",
-            path: "/alinhadores",
+            path: "/alinhadores-invisiveis-porto",
             serviceType: "Ortodontia",
           }),
           buildBreadcrumbSchema([

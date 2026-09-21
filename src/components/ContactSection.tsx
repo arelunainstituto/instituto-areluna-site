@@ -34,7 +34,7 @@ const ContactSection = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-1 h-1 bg-gold-leaf rounded-full"></div>
-                  <span className="text-jet">Rua de Júlio Dinis, 190 - Porto</span>
+                  <span className="text-jet">Porto: Rua de Júlio Dinis, 194 R/C · Lisboa: Lumiar</span>
                 </div>
               </div>
 

@@ -7,6 +7,7 @@ import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import { treatmentsFaqSchema } from "@/data/faqSchemas";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -24,7 +25,7 @@ const TreatmentsPage = () => {
         title="Tratamentos Dentários e Estéticos no Porto | Instituto AreLuna"
         description="Ortodontia, implantes, facetas, harmonização orofacial e transplante capilar no Porto. Tecnologia avançada e equipa multidisciplinar no Instituto AreLuna. Agende a sua consulta."
         canonical="https://www.institutoareluna.pt/tratamentos"
-        jsonLd={breadcrumbSchema}
+        jsonLd={[breadcrumbSchema, treatmentsFaqSchema]}
       />
       <Header />
       <TreatmentsHeroSection />

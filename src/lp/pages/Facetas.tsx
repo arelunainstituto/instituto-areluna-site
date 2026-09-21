@@ -47,14 +47,14 @@ const Facetas = () => {
         title="Facetas Dentárias no Porto | Instituto Areluna"
         description="Transforme o seu sorriso com facetas dentárias ultrafinas no Porto. Resultado natural, durável e personalizado, com planeamento digital no Instituto Areluna."
         keywords="facetas dentárias Porto, lentes de contacto dental, facetas em cerâmica, sorriso branco, estética dental Porto"
-        path="/facetas"
+        path="/facetas-dentarias-porto"
         jsonLd={[
           organizationSchema,
           buildServiceSchema({
             name: "Facetas Dentárias",
             description:
               "Facetas dentárias ultrafinas em cerâmica para correção de cor, forma e alinhamento dos dentes. Resultado estético natural e duradouro.",
-            path: "/facetas",
+            path: "/facetas-dentarias-porto",
             serviceType: "Estética Dentária",
           }),
           buildBreadcrumbSchema([

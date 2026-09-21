@@ -17,9 +17,9 @@
         "title_start": "O principal destino para estética avançada e",
         "title_highlight": "medicina dentária",
         "title_end": "em Portugal",
-        "subtitle": "Referência européia em saúde e estética integrada",
+        "subtitle": "Referência europeia em saúde e estética integrada · Lisboa & Porto",
         "find_procedure": "ENCONTRE O SEU PROCEDIMENTO",
-        "book": "RESERVA"
+        "book": "MARCAR AVALIAÇÃO"
     },
     "gallery": {
         "title": "Clínica",
@@ -162,7 +162,7 @@
         "subtitle": "Mais do que números, são histórias de vidas transformadas por uma equipa multidisciplinar de excelência.",
         "footer_text": "Construindo sorrisos há mais de duas décadas",
         "specialists": {
-            "value": "15",
+            "value": "12",
             "label": "Especialistas"
         },
         "specialties": {
@@ -206,7 +206,7 @@
             "button": "Agendar consulta",
             "premium": "Atendimento Premium",
             "tech": "Tecnologia Avançada",
-            "results": "Resultados Garantidos"
+            "results": "Acompanhamento Contínuo"
         },
         "items": {
             "1": {
@@ -661,12 +661,12 @@
         "units": {
             "title": "Unidades",
             "unit1": {
-                "name": "Unidade | Mota Galiza",
-                "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
+                "name": "Porto · Mota Galiza (Sede)",
+                "address": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto"
             },
             "unit2": {
-                "name": "Unidade | Marquês",
-                "address": "Rua de Faria Guimarães, 450 | 4000-205 Porto"
+                "name": "Lisboa · Lumiar (Nova Unidade)",
+                "address": "Alameda das Linhas de Torres / Lumiar, Lisboa"
             }
         },
         "opening_hours": {
@@ -699,7 +699,7 @@
         "reg_number": "Nº Registo ERS:",
         "license_number": "Nº Licença:",
         "complaints_book": "Livro de Reclamações Online",
-        "location": "Porto, Portugal",
+        "location": "Porto & Lisboa, Portugal",
         "hours": "Seg-Sex: 09h-19h<br/>Sáb: Sob marcação<br/>Dom: Encerrado"
     },
     "header": {
@@ -858,12 +858,12 @@
             "cta_results": "VER RESULTADOS",
             "stats": {
                 "experience": {
-                    "value": "25+",
-                    "label": "Anos de Experiência"
+                    "value": "24+",
+                    "label": "Anos de Tradição"
                 },
                 "transplants": {
-                    "value": "15K+",
-                    "label": "Transplantes Realizados"
+                    "value": "FUE",
+                    "label": "Microenxertos de Alta Precisão"
                 },
                 "technique": {
                     "value": "FUE",
@@ -1028,10 +1028,10 @@
             },
             "location": {
                 "title": "Localização",
-                "unit_galiza": "Unidade | Mota Galiza",
-                "address_galiza": "Rua de Júlio Dinis, 190 | 4050-027 Porto",
-                "unit_marques": "Unidade | Marquês",
-                "address_marques": "Rua de Faria Guimarães, 450 | 4000-205 Porto",
+                "unit_galiza": "Porto · Mota Galiza (Sede)",
+                "address_galiza": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto",
+                "unit_marques": "Lisboa · Lumiar (Nova Unidade)",
+                "address_marques": "Alameda das Linhas de Torres / Lumiar, Lisboa",
                 "map_button": "VER NO MAPA"
             },
             "transport": {

@@ -18,6 +18,7 @@ const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfUse = lazy(() => import("./pages/TermsOfUse"));
 const SobreAFundadora = lazy(() => import("./pages/SobreAFundadora"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Landing pages (migradas do vivobem.pt) — fora de Header/Footer institucional
 const LPImplantes = lazy(() => import("./lp/pages/Implantes"));
@@ -77,7 +78,7 @@ const App = () => (
               <Route path="/caso-diana-vieira" element={<Navigate to="/casos/diana-vieira" replace />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
           <CookieBanner />
