@@ -15,19 +15,19 @@ const schemas = [
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem","position": 1,"name": "Instituto AreLuna","item": "https://www.institutoareluna.pt/"},
-      {"@type": "ListItem","position": 2,"name": "Turismo Dentário","item": "https://www.institutoareluna.pt/turismo-dentario"}
+      {"@type": "ListItem","position": 2,"name": "Pacientes internacionais","item": "https://www.institutoareluna.pt/turismo-dentario"}
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "Turismo Dentário em Portugal",
-    "description": "Programa de tratamento dentário de 3 dias no Porto para pacientes internacionais, combinando medicina dentária avançada com turismo pela cidade do Porto.",
+    "name": "Acompanhamento de pacientes que vivem fora de Portugal",
+    "description": "Acompanhamento de pacientes que vivem fora de Portugal: avaliação presencial no Porto, plano de tratamento escrito com o número de deslocações previsto e preços iguais para todos os pacientes.",
     "procedureType": "https://schema.org/TherapeuticProcedure",
     "bodyLocation": "Mouth",
-    "preparation": "Avaliação clínica e planeamento personalizado por videoconferência prévia à viagem.",
-    "howPerformed": "Programa intensivo de 3 dias com avaliação completa, tratamentos dentários e estéticos, e acompanhamento turístico na cidade do Porto.",
-    "followup": "Relatório clínico completo enviado ao médico de referência do paciente.",
+    "preparation": "Consulta de avaliação presencial e exames, quando necessários.",
+    "howPerformed": "Plano de tratamento escrito, com o número de deslocações previsto, definido após a avaliação presencial.",
+    "followup": "Relatório clínico entregue ao paciente, que o pode partilhar com o seu médico dentista no país onde vive.",
     "performedBy": {"@type": "Dentist","name": "Instituto AreLuna","url": "https://www.institutoareluna.pt/"}
   }
 ];
@@ -36,8 +36,8 @@ const TourismDentarioPage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Turismo Dentário em Portugal — Porto | Instituto AreLuna"
-        description="Tratamentos dentários de alta qualidade em Portugal para brasileiros e europeus. Programa de 3 dias no Porto: medicina dentária, estética facial e turismo. Instituto AreLuna."
+        title="Pacientes que vivem fora de Portugal — Porto | Instituto AreLuna"
+        description="Acompanhamento de pacientes que vivem fora de Portugal: avaliação presencial no Porto, plano escrito com o número de deslocações e preços iguais para todos. Instituto AreLuna."
         canonical="https://www.institutoareluna.pt/turismo-dentario"
         jsonLd={schemas}
       />

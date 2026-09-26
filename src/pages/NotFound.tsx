@@ -20,7 +20,7 @@ const NotFound = () => {
     { label: "Implantes Dentários", href: "/implantes-dentarios-porto" },
     { label: "Alinhadores Invisíveis", href: "/alinhadores-invisiveis-porto" },
     { label: "Facetas Dentárias", href: "/facetas-dentarias-porto" },
-    { label: "Turismo Dentário", href: "/turismo-dentario" },
+    { label: "Pacientes internacionais", href: "/turismo-dentario" },
     { label: "Contacto & Marcação", href: "/contato" },
   ];
 

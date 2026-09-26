@@ -193,7 +193,7 @@ const EvaluationForm = ({
 
       <CardHeader className="text-center pb-6 pt-8 px-4 sm:px-6">
         <div className="inline-block px-4 py-2 bg-gradient-gold text-white rounded-full text-xs sm:text-sm font-medium mb-4 max-w-full">
-          🎯 AVALIAÇÃO ESPECIALIZADA
+          🎯 CONSULTA DE AVALIAÇÃO
         </div>
         <CardTitle className="text-xl sm:text-2xl md:text-3xl font-vivant-medium text-foreground leading-tight text-pretty">
           {title ?? `Avaliação de ${interesse}`}

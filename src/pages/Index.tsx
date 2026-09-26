@@ -30,12 +30,12 @@ const dentistSchema = {
   "telephone": "+351220430090",
   "email": "rececao@institutoareluna.pt",
   "priceRange": "€€€",
-  "description": "Clínica dentária e de estética avançada no Porto, com equipa multidisciplinar e padrão europeu de excelência.",
+  "description": "Medicina dentária, medicina estética e tratamentos capilares no Porto.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua de Júlio Dinis 194 R/C",
+    "streetAddress": "Rua Júlio Dinis, n.º 194",
     "addressLocality": "Porto",
-    "postalCode": "4050-024",
+    "postalCode": "4050-327",
     "addressCountry": "PT"
   },
   "geo": {
@@ -56,7 +56,7 @@ const dentistSchema = {
     "https://www.youtube.com/@institutoareluna",
     "https://x.com/institutoarelun"
   ],
-  "medicalSpecialty": ["Dentistry","CosmeticDentistry","Orthodontics","OralAndMaxillofacialSurgery"],
+  "medicalSpecialty": ["Dentistry","CosmeticDentistry","Orthodontics"],
   "isAcceptingNewPatients": true,
   "areaServed": [{"@type": "City", "name": "Porto"},{"@type": "Country", "name": "Portugal"}],
   "hasMap": "https://maps.google.com/?q=Instituto+AreLuna+Porto",
@@ -82,7 +82,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": "Instituto AreLuna",
   "url": "https://www.institutoareluna.pt/",
-  "description": "Clínica dentária e de estética avançada no Porto — Instituto AreLuna",
+  "description": "Medicina dentária, medicina estética e tratamentos capilares no Porto — Instituto AreLuna",
   "inLanguage": "pt-PT",
   "publisher": {"@type": "Organization", "name": "Instituto AreLuna"}
 };
@@ -92,7 +92,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Clínica Dentária e Estética Avançada Porto | Instituto AreLuna"
-        description="Instituto AreLuna no Porto — tratamentos dentários e estética avançada com padrão europeu. Implantes, alinhadores, facetas, harmonização orofacial. Equipa multidisciplinar. Agende a sua consulta."
+        description="Instituto AreLuna no Porto — medicina dentária, medicina estética e tratamentos capilares. Implantes, alinhadores, facetas e harmonização orofacial. Marque a sua consulta de avaliação."
         canonical="https://www.institutoareluna.pt/"
         jsonLd={[dentistSchema, personSchema, websiteSchema, ...buildTeamPersonSchemas()]}
       />

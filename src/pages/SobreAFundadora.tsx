@@ -29,7 +29,7 @@ const SobreAFundadora = () => {
     ],
     "hasCredential": [
       { "@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas" },
-      { "@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia" },
+      { "@type": "EducationalOccupationalCredential", "name": "Formação em Ortodontia e Ortopedia Facial (Brasil)" },
       { "@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque" },
       { "@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami" }
     ],
@@ -51,7 +51,6 @@ const SobreAFundadora = () => {
   const credentials = [
     { label: t('founder.credentials.registry'), value: t('founder.credentials.registry_val') },
     { label: t('founder.credentials.education'), value: t('founder.credentials.education_val') },
-    { label: t('founder.credentials.experience'), value: t('founder.credentials.experience_val') },
     { label: t('founder.credentials.international'), value: t('founder.credentials.international_val') }
   ];
 
@@ -76,7 +75,7 @@ const SobreAFundadora = () => {
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-[hsl(var(--gold-leaf))]/20">
                   <img
                     src={draArethuzaImg}
-                    alt="Dra. Arethuza Luna — fundadora do Instituto AreLuna, médica-dentista especialista em ortodontia e harmonização orofacial no Porto"
+                    alt="Dra. Arethuza Luna — fundadora do Instituto AreLuna, médica dentista (OMD n.º 11845) com formação em ortodontia e harmonização orofacial, no Porto"
                     loading="eager"
                     decoding="async"
                     className="w-full object-cover max-h-[600px] lg:max-h-[700px]"

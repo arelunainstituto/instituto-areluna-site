@@ -88,7 +88,7 @@ const EsteticaFacialCasesSection = () => {
               <div className="aspect-[4/3] overflow-hidden relative">
                 <img
                   src={caseItem.image}
-                  alt={`${caseItem.title} - Estética Facial Premium`}
+                  alt={`${caseItem.title} - Estética Facial`}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
@@ -132,7 +132,7 @@ const EsteticaFacialCasesSection = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full animate-pulse"></div>
                     <span className="text-xs text-[hsl(var(--gold-leaf))] font-vivant-light">
-                      Premium
+                      Caso clínico
                     </span>
                   </div>
 

@@ -196,7 +196,7 @@ const CorpoClinicoSection = () => {
                             {doctor.name}
                           </h3>
                           <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-regular mb-4">
-                            {doctor.crm}
+                            {doctor.crm.replace(/^(OMD|OM) /, "$1 n.º ")}
                           </p>
                           {bio && (
                             <p className="text-jet/80 dark:text-gray-300 text-xs mb-4">

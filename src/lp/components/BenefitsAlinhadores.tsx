@@ -1,11 +1,11 @@
 const BenefitsAlinhadores = () => {
   const benefits = [
-    "Alinhadores transparentes e praticamente invisíveis",
+    "Alinhadores transparentes e discretos",
     "Removíveis para comer, beber e escovar os dentes",
-    "Sem fios nem brackets — máximo conforto no dia a dia",
-    "Planeamento digital 3D com previsão do resultado final",
-    "Tratamento mais rápido do que aparelhos fixos tradicionais",
-    "Acompanhamento clínico próximo até ao alinhamento perfeito"
+    "Sem fios nem brackets",
+    "Planeamento digital 3D",
+    "Duração definida no plano de tratamento de cada caso",
+    "Acompanhamento clínico em consultas regulares"
   ];
 
   return (
@@ -13,7 +13,7 @@ const BenefitsAlinhadores = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-vivant-black text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-            Por que escolher{" "}
+            O que envolve o tratamento com{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
               Alinhadores Invisíveis?
             </span>

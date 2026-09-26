@@ -16,7 +16,7 @@ interface FormSectionProps {
 }
 
 const FormSection = ({
-  eyebrow = "AVALIAÇÃO GRATUITA",
+  eyebrow = "CONSULTA DE AVALIAÇÃO",
   title,
   titleHighlight,
   description,

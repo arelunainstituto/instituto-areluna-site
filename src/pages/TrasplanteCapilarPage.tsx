@@ -23,7 +23,7 @@ const schemas = [
     "@type": "MedicalProcedure",
     "name": "Transplante Capilar FUE",
     "alternateName": ["Transplante de Cabelo","Hair Transplant FUE","Transplante Capilar no Porto"],
-    "description": "Transplante capilar pela técnica FUE (Follicular Unit Extraction) — sem cortes visíveis, resultados naturais e permanentes. Realizado pelo Dr. Marcos Kawasaki no Instituto AreLuna, Porto.",
+    "description": "Transplante capilar pela técnica FUE (Follicular Unit Extraction), realizado pelo Dr. Marcos Kawasaki (OM n.º 75498) no Instituto AreLuna, Porto. A indicação depende de consulta de avaliação.",
     "procedureType": "https://schema.org/SurgicalProcedure",
     "bodyLocation": "Scalp",
     "preparation": "Avaliação com dermatoscopia digital e análise de densidade capilar. Suspensão de anticoagulantes conforme indicação médica.",
@@ -32,7 +32,7 @@ const schemas = [
     "performedBy": {
       "@type": "Person",
       "name": "Dr. Marcos Kawasaki",
-      "jobTitle": "Médico especialista em Transplante Capilar e Dermatologia",
+      "jobTitle": "Médico — Transplante Capilar",
       "worksFor": {"@type": "Dentist","name": "Instituto AreLuna"}
     }
   },
@@ -44,7 +44,7 @@ const TrasplanteCapilarPage = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Transplante Capilar no Porto — Técnica FUE | Instituto AreLuna"
-        description="Transplante capilar FUE no Porto com resultados naturais e permanentes. Dr. Marcos Kawasaki — especialista em Dermatologia com 17+ anos. Avaliação com dermatoscopia digital. Instituto AreLuna."
+        description="Transplante capilar FUE no Porto com o Dr. Marcos Kawasaki (OM n.º 75498). Avaliação com dermatoscopia digital. A indicação depende de consulta de avaliação. Instituto AreLuna."
         canonical="https://www.institutoareluna.pt/transplante-capilar"
         jsonLd={schemas}
       />

@@ -8,32 +8,32 @@
     "nav": {
         "institute": "Het Instituut",
         "treatments": "Behandelingen",
-        "tourism": "Tandheelkundig Toerisme",
+        "tourism": "Internationale patiënten",
         "hair_transplant": "Haartransplantatie",
         "facial_aesthetics": "Gezicht Esthetiek",
         "clinical_cases": "Klinische casussen",
         "blog": "Blog"
     },
     "hero": {
-        "title_start": "De belangrijkste bestemming voor geavanceerde esthetiek en",
-        "title_highlight": "tandheelkunde",
+        "title_start": "Tandheelkunde, esthetische geneeskunde en",
+        "title_highlight": "haarbehandelingen",
         "title_end": "in Portugal",
-        "subtitle": "Europese referentie in geintegreerde gezondheid en esthetiek",
+        "subtitle": "Evaluatieconsult en individueel behandelplan · Lissabon & Porto",
         "find_procedure": "VIND UW PROCEDURE",
         "book": "BOEK NU"
     },
     "gallery": {
         "title": "Kliniek",
-        "subtitle": "Discover our modern spaces and state-of-the-art equipment",
+        "subtitle": "Ontdek onze ruimtes en uitrusting",
         "fullscreen_alt": "Full screen clinic image",
-        "img1_alt": "Modern dental office",
-        "img2_alt": "Modern clinic space",
-        "img3_alt": "State-of-the-art equipment",
-        "img4_alt": "Treatment environment",
+        "img1_alt": "Tandartspraktijk van het Instituto AreLuna, Porto",
+        "img2_alt": "Receptie van het Instituto AreLuna — tandheelkundige kliniek in Porto",
+        "img3_alt": "Diagnostische apparatuur in het Instituto AreLuna, Porto",
+        "img4_alt": "Behandelkamer van het Instituto AreLuna, Porto",
         "img5_alt": "Procedure room",
         "img6_alt": "Areluna clinic reception",
-        "img7_alt": "Modern facilities",
-        "img8_alt": "Advanced technology"
+        "img7_alt": "Faciliteiten van het Instituto AreLuna in Porto — tandheelkundige kliniek",
+        "img8_alt": "Apparatuur voor orale diagnose en behandeling in het Instituto AreLuna, Porto"
     },
     "team": {
         "title": "Clinical Team",
@@ -52,16 +52,16 @@
             "daiane": {
                 "role": "Dentist",
                 "specialty": "Endodontics",
-                "bio": "Dentist specializing in Endodontics, focused on precision treatments and dental preservation.",
+                "bio": "Tandarts, OMD nr. 22681. Opleiding in endodontie (Brazilië).",
                 "specs": [
                     "Endodontics",
                     "Oral Rehabilitation"
                 ]
             },
             "carla": {
-                "role": "Oral Surgeon",
+                "role": "Tandarts",
                 "specialty": "Oral Surgery",
-                "bio": "Oral and Maxillofacial Surgeon with a Master's in Dental Medicine. Dedicated to aesthetic and functional smile rehabilitation.",
+                "bio": "Tandarts, OMD nr. 15214. Opleiding in orale chirurgie (Brazilië) en master tandheelkunde.",
                 "specs": [
                     "Oral Surgery"
                 ]
@@ -69,16 +69,15 @@
             "marcos": {
                 "role": "Physician",
                 "specialty": "Hair Transplant",
-                "bio": "Over 17 years of clinical experience. Postgraduate in Dermatology (ISMD) and specialist in Hair Transplant.",
+                "bio": "Arts, OM nr. 75498. Opleiding in haartransplantatie (Brazilië) en postgraduaat aan het ISMD.",
                 "specs": [
-                    "Hair Transplant",
-                    "Dermatology"
+                    "Haartransplantatie"
                 ]
             },
             "aline": {
-                "role": "Oral Surgeon",
+                "role": "Tandarts",
                 "specialty": "Facial Harmonization",
-                "bio": "Oral and Maxillofacial Surgeon trained in Advanced Facial Harmonization. Focused on natural and balanced results.",
+                "bio": "Tandarts, OMD nr. 12330. Opleiding in orale chirurgie en orofaciale harmonisatie (Brazilië).",
                 "specs": [
                     "Orofacial Harmonization",
                     "Oral Surgery"
@@ -87,7 +86,7 @@
             "pethine": {
                 "role": "Dentist",
                 "specialty": "Pediatric Dentistry",
-                "bio": "Dentist specializing in Pediatric Dentistry. Humanized care focused on children's well-being and comfort.",
+                "bio": "Tandarts, OMD nr. 12228. Opleiding in kindertandheelkunde (Brazilië).",
                 "specs": [
                     "Pediatric Dentistry"
                 ]
@@ -95,7 +94,7 @@
             "sara": {
                 "role": "Dentist",
                 "specialty": "General Practice",
-                "bio": "Dentist working in integrated clinical dentistry and personalized approach for each patient.",
+                "bio": "Tandarts, OMD nr. 08560. Actief in algemene tandheelkunde, orale rehabilitatie en orofaciale harmonisatie.",
                 "specs": [
                     "General Practice and Oral Rehabilitation",
                     "Orofacial Harmonization"
@@ -104,7 +103,7 @@
             "yara": {
                 "role": "Tandarts",
                 "specialty": "Algemene Tandheelkunde",
-                "bio": "Tandarts werkzaam in Algemene Tandheelkunde en Orale Esthetiek. Behandeling gericht op mondgezondheid gecombineerd met esthetiek, met focus op natuurlijke, functionele en gepersonaliseerde resultaten voor elke patiënt.",
+                "bio": "Tandarts, OMD nr. 15666. Opleiding in algemene tandheelkunde en orale esthetiek (Brazilië).",
                 "specs": [
                     "Algemene Tandheelkunde",
                     "Orale Esthetiek"
@@ -113,7 +112,7 @@
             "thais": {
                 "role": "Arts",
                 "specialty": "Endocrinologie",
-                "bio": "Arts met opleiding in Endocrinologie en specialisatie in Nutrologie. Gericht op gewichtsverlies, menopauze en anti-verouderingsgeneeskunde, ter bevordering van ziektepreventie en hormonaal evenwicht.",
+                "bio": "Arts, OM nr. 69564. Opleiding in endocrinologie en nutrologie (Brazilië). Actief in gewichtsverlies, menopauze en anti-agingmedicijn.",
                 "specs": [
                     "Endocrinologie",
                     "Nutrologie",
@@ -123,7 +122,7 @@
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",
-                "bio": "Dentist specializing in Orthodontics, Orthopedics and Facial Harmonization. Master Injector Swift Beauty (NY) and Advanced Orofacial Harmonization (Miami).",
+                "bio": "Tandarts, OMD nr. 11845. Opleiding in orthodontie, faciale orthopedie en orofaciale harmonisatie (Brazilië); Master Injector Swift Beauty (New York) en gevorderde orofaciale harmonisatie (Miami).",
                 "specs": [
                     "Facial Harmonization",
                     "Orthodontics",
@@ -135,7 +134,7 @@
     "treatments": {
         "title": "Treatments",
         "power_title": "The Power of a Smile",
-        "description": "Here, we treat smiles as an extension of each patient's identity.\n\nWe combine cutting-edge technology, multidisciplinary care, and aesthetic sensitivity to transform not just the smile — but also how you see and feel about yourself.\n\nAll with comfort, precision, and the excellence that makes Instituto Areluna a reference in oral rehabilitation.",
+        "description": "Elk behandelplan volgt uit een evaluatieconsult en een individuele diagnose.\n\nHet multidisciplinaire team van het Instituto Areluna combineert tandheelkunde, esthetische geneeskunde en haarbehandelingen.\n\nTijdens het consult leggen we de aangewezen opties, de risico's en de kosten uit, vóór elke beslissing.",
         "discover_label": "DISCOVER THE IDEAL TREATMENT FOR YOU",
         "view_all": "View all {{count}} treatments →",
         "categories": {
@@ -147,8 +146,7 @@
             "terapia-capilar": "Hair Therapy",
             "transplante-capilar": "Hair Transplant",
             "endocrinologia": "Endocrinology",
-            "cirurgia-plastica": "Plastic Surgery",
-            "dermatologia": "Dermatology"
+            "dermatologia": "Haarbehandelingen"
         },
         "cta": {
             "title": "Maak een afspraak voor een evaluatieconsult",
@@ -161,7 +159,7 @@
         "items": {
             "1": {
                 "title": "Dental Aesthetics",
-                "description": "Advanced aesthetic treatments for complete smile transformation.",
+                "description": "Esthetische tandheelkundige behandelingen, bepaald na klinische evaluatie.",
                 "features": [
                     "Veneers",
                     "Whitening",
@@ -173,45 +171,45 @@
                 "title": "Invisible Aligners",
                 "description": "Discreet orthodontic correction with removable transparent aligners.",
                 "features": [
-                    "Invisible",
-                    "Removable",
-                    "Comfortable",
-                    "Predictable"
+                    "Discreet",
+                    "Uitneembaar",
+                    "Comfortabel",
+                    "Gepland"
                 ]
             },
             "3": {
                 "title": "Traditional Orthodontics",
                 "description": "Orthodontic treatment with brackets for malocclusion correction.",
                 "features": [
-                    "Effective",
-                    "Durable",
-                    "Precise",
-                    "Economical"
+                    "Brackets",
+                    "Duurzaam",
+                    "Nauwkeurig",
+                    "Betaalbaar"
                 ]
             },
             "4": {
                 "title": "Implantology and Advanced Surgery",
-                "description": "Dental implants and oral surgeries with cutting-edge technology.",
+                "description": "Tandimplantaten en orale chirurgie, na klinische evaluatie en onderzoek.",
                 "features": [
-                    "Immediate Load",
-                    "Biocompatible",
-                    "Long-lasting",
-                    "Natural"
+                    "Digitale planning",
+                    "Biocompatibel",
+                    "Beeldvorming",
+                    "Rehabilitatie"
                 ]
             },
             "5": {
                 "title": "Endodontics",
                 "description": "Root canal treatment for preservation of compromised teeth.",
                 "features": [
-                    "Preserves Tooth",
-                    "Painless",
-                    "Microscopy",
-                    "Success"
+                    "Tandbehoudend",
+                    "Lokale verdoving",
+                    "Microscopie",
+                    "Opvolging"
                 ]
             },
             "6": {
                 "title": "Periodontology",
-                "description": "Specialized treatment of gums and support structures.",
+                "description": "Behandeling van het tandvlees en het steunweefsel van de tanden.",
                 "features": [
                     "Laser",
                     "Regeneration",
@@ -223,30 +221,30 @@
                 "title": "Collagen Biostimulators",
                 "description": "Sculptra and Radiesse for natural facial collagen stimulation.",
                 "features": [
-                    "Natural",
-                    "Long-lasting",
-                    "Rejuvenates",
-                    "Sculptra"
+                    "Collageen",
+                    "Sculptra",
+                    "Radiesse",
+                    "Gezichtsevaluatie"
                 ]
             },
             "8": {
                 "title": "Double Chin Lipoenzymatic",
                 "description": "Non-surgical reduction of localized fat in the chin region.",
                 "features": [
-                    "Non-invasive",
-                    "Effective",
+                    "Zonder chirurgie",
+                    "Enzymen",
                     "Contour",
-                    "Definition"
+                    "Voorafgaande evaluatie"
                 ]
             },
             "9": {
                 "title": "Facial Support Threads",
                 "description": "Non-surgical facial lifting with absorbable threads for firmness.",
                 "features": [
-                    "Lifting",
-                    "Firmness",
-                    "Natural",
-                    "Immediate"
+                    "Oplosbare draden",
+                    "Zonder chirurgie",
+                    "Stevigheid",
+                    "Gezichtsevaluatie"
                 ]
             },
             "10": {
@@ -263,10 +261,10 @@
                 "title": "Non-Surgical Rhinoplasty",
                 "description": "Nose correction with hyaluronic acid without the need for surgery.",
                 "features": [
-                    "Non-surgical",
-                    "Immediate",
-                    "Reversible",
-                    "Harmony"
+                    "Zonder chirurgie",
+                    "Hyaluronzuur",
+                    "Omkeerbaar",
+                    "Gezichtsevaluatie"
                 ]
             },
             "12": {
@@ -331,7 +329,7 @@
             },
             "18": {
                 "title": "Lymphatic Drainage",
-                "description": "Specialized massage for post-surgical recovery and well-being.",
+                "description": "Massage voor postoperatief herstel en welzijn.",
                 "features": [
                     "Post-surgical",
                     "Detox",
@@ -353,10 +351,10 @@
                 "title": "Capillary Microinfusion (MMP)",
                 "description": "Infusion of medications directly into the scalp.",
                 "features": [
-                    "Medications",
-                    "Precision",
-                    "Efficacy",
-                    "Targeted"
+                    "Medicatie",
+                    "Precisie",
+                    "Hoofdhuid",
+                    "Gericht"
                 ]
             },
             "21": {
@@ -371,17 +369,17 @@
             },
             "22": {
                 "title": "FUE Transplant",
-                "description": "FUE technique without visible cuts for natural hair transplant.",
+                "description": "Haartransplantatie met de FUE-techniek, na evaluatie van het donorgebied.",
                 "features": [
-                    "No Scars",
-                    "Natural",
-                    "Permanent",
-                    "Technology"
+                    "FUE",
+                    "Folliculaire eenheden",
+                    "Lokale verdoving",
+                    "Opvolging"
                 ]
             },
             "23": {
                 "title": "Evaluation with Dermatoscopy",
-                "description": "Advanced digital analysis of the scalp before transplant.",
+                "description": "Digitale analyse van de hoofdhuid vóór de transplantatie.",
                 "features": [
                     "Digital",
                     "Precision",
@@ -454,29 +452,11 @@
     },
     "tourism": {
         "title": {
-            "main": "Programma",
-            "highlight": "Tandheelkundig Toerisme"
+            "main": "Patiënten die buiten",
+            "highlight": "Portugal wonen"
         },
         "question": "Woont u buiten Portugal?",
         "description": "We plannen de evaluatieconsulten zo dat u elke reis naar Porto optimaal benut. Het aantal reizen hangt af van het behandelplan.",
-        "benefits": {
-            "3_days": {
-                "title": "3 Dagen",
-                "desc": "Intensief programma"
-            },
-            "tourism": {
-                "title": "Toerisme",
-                "desc": "Bezoek aan Porto inbegrepen"
-            },
-            "portuguese": {
-                "title": "Portugees",
-                "desc": "Nationale tandarts"
-            },
-            "experience": {
-                "title": "Ervaring",
-                "desc": "25 jaar expertise"
-            }
-        },
         "button": "AFSPRAAK MAKEN"
     },
     "before_after": {
@@ -542,8 +522,8 @@
     "contact": {
         "background_text": "Contact",
         "title": "Neem Contact Op",
-        "subtitle": "Vernieuw Uzelf!",
-        "description": "Neem contact met ons op en plan uw consult. Wij staan klaar om voor u te zorgen met de hoogste normen van kwaliteit en excellentie.",
+        "subtitle": "Neem contact op",
+        "description": "Maak uw afspraak telefonisch, per e-mail of via het formulier.",
         "form": {
             "name": "Volledige Naam",
             "name_placeholder": "Voer uw volledige naam in",
@@ -556,7 +536,7 @@
             "subjects": {
                 "consultation": "Consult Plannen",
                 "treatments": "Informatie over Behandelingen",
-                "tourism": "Tandheelkundig Toerisme",
+                "tourism": "Internationale patiënten",
                 "emergency": "Spoedconsult",
                 "other": "Andere"
             },
@@ -577,12 +557,12 @@
         "units": {
             "title": "Vestigingen",
             "unit1": {
-                "name": "Vestiging | Mota Galiza",
-                "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
+                "name": "Unidade Mota Galiza",
+                "address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593"
             },
             "unit2": {
-                "name": "Vestiging | Lumiar",
-                "address": "Alameda das Linhas de Torres / Lumiar, Lissabon"
+                "name": "Unidade Marquês",
+                "address": "Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345"
             }
         },
         "opening_hours": {
@@ -618,16 +598,16 @@
         "location": "Porto, Portugal",
         "hours": "Ma-Vr: 09:00-19:00<br/>Za: Op afspraak<br/>Zo: Gesloten",
         "units": {
-            "porto_label": "Porto (Hoofdvestiging):",
-            "porto_address": "Rua de Júlio Dinis, 194 R/C, 4050-024 Porto",
+            "porto_label": "Porto (Mota Galiza):",
+            "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
             "lisboa_label": "Lissabon (Nieuwe Vestiging):",
             "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lissabon",
             "compliance_title": "Naleving & Regulering",
-            "company_name": "Instituto AreLuna Lda. · NIPC 516 161 637"
+            "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
     },
     "header": {
-        "subtitle": "De belangrijkste bestemming voor tandheelkunde in Porto",
+        "subtitle": "Tandheelkunde, esthetische geneeskunde en haarbehandelingen",
         "book_consultation": "AFSPRAAK MAKEN"
     },
     "cookie_banner": {
@@ -640,8 +620,8 @@
         "title": "Dr. Arethuza",
         "subtitle": "Luna",
         "role": "Oprichtster & Klinisch Directrice",
-        "bio": "Tandarts met OMD-registratie 11845, gespecialiseerd in Orthodontie, Faciale Orthopedie en Geavanceerde Orofaciale Harmonisatie. Ze richtte het AreLuna Instituut meer dan twee decennia geleden op met een duidelijke visie: de standaard van de tandheelkunde en geavanceerde esthetiek in Portugal naar een Europees topniveau tillen.",
-        "specialties_title": "Specialiteiten",
+        "bio": "Tandarts, OMD nr. 11845, met opleiding in orthodontie, faciale orthopedie en orofaciale harmonisatie (Brazilië). Oprichtster en klinisch directeur van het Instituto AreLuna.",
+        "specialties_title": "Werkterreinen",
         "specialties": [
             "Orthodontie en Faciale Orthopedie",
             "Geavanceerde Orofaciale Harmonisatie",
@@ -651,36 +631,34 @@
         ],
         "credentials": {
             "registry": "Beroepsregistratie",
-            "registry_val": "OMD 11845",
+            "registry_val": "OMD n.º 11845",
             "education": "Opleiding",
             "education_val": "Federale Universiteit van Paraná",
-            "experience": "Klinische Ervaring",
-            "experience_val": "+24 jaar",
-            "international": "Internationale Specialisatie",
+            "international": "Internationale opleiding",
             "international_val": "New York en Miami"
         },
         "vision_title": "De Visie",
-        "vision_p1": "Met een aanpak die precisietandheelkunde, geavanceerde esthetiek en integraal welzijn combineert, heeft dr. Arethuza Luna een kliniek gebouwd waar elke patiënt als uniek wordt behandeld. De IAL-standaard - ontwikkeld gedurende meer dan 24 jaar - is de weerspiegeling van deze filosofie.",
-        "vision_p2": "Haar internationale opleiding - waaronder een Master Injector programma aan het Swift Beauty Institute in New York en Geavanceerde Orofaciale Harmonisatie in Miami - bracht technieken en protocollen naar Portugal die voorheen alleen in de grote centra van de wereld beschikbaar waren.",
-        "vision_p3": "Vandaag de dag wordt het AreLuna Instituut erkend als een Europese referentie, met patiënten uit Portugal, Brazilië en meer dan 20 landen, die specifiek reizen om te profiteren van de unieke combinatie van kwaliteit, expertise en Portugese gastvrijheid.",
+        "vision_p1": "Met een aanpak die tandheelkunde, esthetiek en welzijn combineert, bouwde dr. Arethuza Luna een kliniek waar elk behandelplan volgt uit een individuele evaluatie.",
+        "vision_p2": "Haar internationale opleiding omvat een Master Injector-programma aan het Swift Beauty Institute in New York en een opleiding gevorderde orofaciale harmonisatie in Miami.",
+        "vision_p3": "Het Instituto AreLuna ontvangt patiënten die in Portugal en in het buitenland wonen. Voor iedereen begint de behandeling met een evaluatieconsult.",
         "cta_title": "Ontdek het AreLuna Instituut",
-        "cta_desc": "Bezoek ons in Porto en ontdek waarom we de keuze van duizenden nationale en internationale patiënten zijn. Uw transformatie begint hier.",
+        "cta_desc": "Maak een afspraak voor een evaluatieconsult in Porto.",
         "cta_button_contact": "Consultatie Boeken",
         "cta_button_treatments": "Bekijk Behandelingen",
-        "cta_whatsapp": "Afspraak Maken",
+        "cta_whatsapp": "Afspraak maken",
         "seo": {
             "title": "Dr. Arethuza Luna — Oprichtster | AreLuna Instituut Porto",
-            "description": "Dr. Arethuza Luna, OMD 11845, oprichtster van het AreLuna Instituut in Porto. Specialist in Orthodontie, Orthopedie en Orofaciale Harmonisatie. Internationale training in New York en Miami. +24 jaar ervaring."
+            "description": "Dr. Arethuza Luna, OMD nr. 11845, oprichtster van het Instituto AreLuna in Porto. Opleiding in orthodontie, faciale orthopedie en orofaciale harmonisatie (Brazilië) en internationale opleiding in New York en Miami."
         }
     },
     "triage_form": {
         "badge": "Afspraak & Klinische Triage · Lissabon & Porto",
         "title": "Boek Uw Beoordelingsconsult",
-        "subtitle_html": "Exclusieve zorg in onze klinieken in <strong>Lissabon (Lumiar)</strong> en <strong>Porto (Mota Galiza)</strong>. Vul uw gegevens in zodat ons medisch team de beste aanpak voor uw situatie kan voorbereiden.",
+        "subtitle_html": "Consulten in onze klinieken in <strong>Lissabon (Lumiar)</strong> en <strong>Porto (Mota Galiza en Marquês)</strong>. Vul uw gegevens in zodat het team uw evaluatieconsult kan voorbereiden.",
         "step1_title": "1. Waar wordt u het liefst behandeld? (*)",
         "unit_lisboa": "Lissabon",
         "unit_porto": "Porto",
-        "unit_turismo": "Tandheelkundig Toerisme",
+        "unit_turismo": "Ik woon buiten Portugal",
         "name_label": "Volledige Naam (*)",
         "name_placeholder": "Bijv.: Jan de Vries",
         "age_label": "Leeftijd (*)",
@@ -695,7 +673,7 @@
         "smile_opt1": "Ik ben ontevreden over mijn eerdere tandheelkundige werk.",
         "smile_opt2": "Ik wil graag mijn glimlach verbeteren.",
         "smile_opt3": "Ik wil graag mijn tandheelkundig werk verbeteren.",
-        "smile_hint": "Deze informatie helpt ons de juiste specialist voor uw behandelplan te selecteren.",
+        "smile_hint": "Deze informatie helpt ons uw evaluatieconsult voor te bereiden.",
         "callback_label": "Wanneer kunnen we u het beste terugbellen?",
         "callback_placeholder": "Kies een voorkeurstijd...",
         "callback_anytime": "Op elk moment van de dag",
@@ -718,11 +696,11 @@
         "sidebar_lisboa_name": "Lissabon · Lumiar",
         "sidebar_lisboa_badge": "Nieuwe Vestiging",
         "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lissabon",
-        "sidebar_lisboa_tag": "✓ Afspraken en prioritaire beoordelingen geopend",
+        "sidebar_lisboa_tag": "✓ Evaluatieconsulten beschikbaar",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Hoofdvestiging",
-        "sidebar_porto_address": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto",
-        "sidebar_porto_reg": "ERS-registratie: E161637 · Vergunning: 21593/2022",
+        "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+        "sidebar_porto_reg": "Registo ERS n.º 161637 · Licença de funcionamento n.º 21593",
         "sidebar_wa_title": "Liever direct antwoord?",
         "sidebar_wa_desc": "Wilt u niet wachten op een telefoontje of heeft u vooraf vragen? Ons team helpt u direct via WhatsApp:",
         "sidebar_wa_btn": "Spreek receptie via WhatsApp",

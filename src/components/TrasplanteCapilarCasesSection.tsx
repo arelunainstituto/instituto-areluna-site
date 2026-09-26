@@ -132,7 +132,7 @@ const TrasplanteCapilarCasesSection = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full animate-pulse"></div>
                     <span className="text-xs text-[hsl(var(--gold-leaf))] font-vivant-light">
-                      FUE Premium
+                      Caso clínico
                     </span>
                   </div>
 

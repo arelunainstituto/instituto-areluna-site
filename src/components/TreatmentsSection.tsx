@@ -18,7 +18,6 @@ const TreatmentsSection = () => {
     { id: "terapia-capilar", name: t("treatments.categories.terapia-capilar") },
     { id: "transplante-capilar", name: t("treatments.categories.transplante-capilar") },
     { id: "endocrinologia", name: t("treatments.categories.endocrinologia") },
-    { id: "cirurgia-plastica", name: t("treatments.categories.cirurgia-plastica") },
     { id: "dermatologia", name: t("treatments.categories.dermatologia") }
   ];
 

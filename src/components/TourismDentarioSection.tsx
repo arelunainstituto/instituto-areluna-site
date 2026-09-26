@@ -37,7 +37,7 @@ const TourismDentarioSection = () => {
       {/* Background text sutil */}
       <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          Turismo
+          Internacional
         </span>
       </div>
 
@@ -79,27 +79,6 @@ const TourismDentarioSection = () => {
               </p>
             </div>
 
-            {/* Benefícios premium */}
-            {/* <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { title: t("tourism.benefits.3_days.title"), desc: t("tourism.benefits.3_days.desc") },
-                { title: t("tourism.benefits.tourism.title"), desc: t("tourism.benefits.tourism.desc") },
-                { title: t("tourism.benefits.experience.title"), desc: t("tourism.benefits.experience.desc") }
-              ].map((benefit, index) => (
-                <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-vivant text-[hsl(var(--gold-leaf))] font-medium">{benefit.title}</h4>
-                      <p className="text-xs text-jet/70 dark:text-gray-400 font-vivant-light">{benefit.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
             {/* Botão premium */}
             <div className="pt-4 flex justify-center w-full">
               <div
@@ -137,7 +116,7 @@ const TourismDentarioSection = () => {
                   onPlay={() => setIsVideoPlaying(true)}
                   playsInline
                   preload="metadata"
-                  title="Programa Turismo Dentário"
+                  title="Pacientes que vivem fora de Portugal"
                   poster={thumbImg}
                 />
                 

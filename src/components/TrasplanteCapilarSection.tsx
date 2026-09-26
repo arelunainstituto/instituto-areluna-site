@@ -67,7 +67,7 @@ const TrasplanteCapilarSection = () => {
                   }}
                 >
                   Sofre de
-                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> calvície ou perda capilar</span> e procura uma solução definitiva?
+                  <span className="text-[hsl(var(--gold-leaf))] font-medium"> calvície ou perda capilar</span> e quer saber se o transplante está indicado para si?
                 </Trans>
               </p>
             </div>
@@ -85,7 +85,7 @@ const TrasplanteCapilarSection = () => {
                 >
                   A <strong className="text-[hsl(var(--gold-leaf))]">Clínica Areluna</strong> oferece transplante capilar com a técnica
                   <span className="text-[hsl(var(--gold-leaf))] font-medium"> FUE (Follicular Unit Extraction)</span>,
-                  a mais avançada e menos invasiva do mercado.
+                  após consulta de avaliação.
                 </Trans>
               </p>
 
@@ -97,28 +97,6 @@ const TrasplanteCapilarSection = () => {
                 </p>
               </div>
             </div>
-
-            {/* Benefícios premium */}
-            {/* <div className="grid md:grid-cols-2 gap-4">
-              {[
-                { title: t('benefits.fue.title'), desc: t('benefits.fue.desc') },
-                { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') },
-                { title: t('benefits.lasting.title'), desc: t('benefits.lasting.desc') },
-                { title: t('benefits.experience.title'), desc: t('benefits.experience.desc') }
-              ].map((benefit, index) => (
-                <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-vivant text-[hsl(var(--gold-leaf))] font-medium">{benefit.title}</h4>
-                      <p className="text-xs text-jet/70 dark:text-gray-400 font-vivant-light">{benefit.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
 
             {/* Botão premium */}
             <div className="pt-4">
