@@ -41,9 +41,6 @@ const PRERENDER_ROUTES = [
   "/implantes-dentarios-porto",
   "/alinhadores-invisiveis-porto",
   "/facetas-dentarias-porto",
-  "/casos/sergio-emanuel",
-  "/casos/sandra-maria",
-  "/casos/diana-vieira",
   "/obrigado",
 ];
 

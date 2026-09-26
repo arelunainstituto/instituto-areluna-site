@@ -657,25 +657,7 @@
             "title_highlight": "Mudamos Vidas",
             "description": "Descubra nossa gama completa de tratamentos odontológicos com tecnologia de ponta, sempre priorizando seu conforto e os melhores resultados.",
             "cta_schedule": "AGENDAR CONSULTA",
-            "cta_view_all": "VER TODOS OS TRATAMENTOS",
-            "stats": {
-                "experience": {
-                    "value": "+24",
-                    "label": "Anos de Experiência"
-                },
-                "smiles": {
-                    "value": "+20 mil",
-                    "label": "Sorrisos Transformados"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Satisfação dos Pacientes"
-                },
-                "treatments": {
-                    "value": "100+",
-                    "label": "Tratamentos Disponíveis"
-                }
-            }
+            "cta_view_all": "VER TODOS OS TRATAMENTOS"
         },
         "faq": {
             "title": "Perguntas Frequentes",
@@ -727,21 +709,7 @@
             "title_highlight": "no Porto",
             "description": "Transforme o seu sorriso enquanto descobre as belezas da cidade do Porto. Um programa de 3 dias com tratamento dentário e experiência turística incluída.",
             "cta_schedule": "AGENDAR PROGRAMA",
-            "cta_more": "SABER MAIS",
-            "stats": {
-                "days": {
-                    "value": "3",
-                    "label": "Dias de Programa"
-                },
-                "experience": {
-                    "value": "24+",
-                    "label": "Anos de Experiência"
-                },
-                "location": {
-                    "value": "Porto",
-                    "label": "Cidade Invicta"
-                }
-            }
+            "cta_more": "SABER MAIS"
         },
         "faq": {
             "title": "Perguntas sobre o Programa",
@@ -793,25 +761,7 @@
             "title_highlight": "FUE Premium",
             "description": "Recupere a sua confiança com a técnica mais avançada de transplante capilar. Resultados naturais e duradouros com tecnologia de ponta e equipas especializadas.",
             "cta_schedule": "AGENDAR CONSULTA",
-            "cta_results": "VER RESULTADOS",
-            "stats": {
-                "experience": {
-                    "value": "24+",
-                    "label": "Anos de Tradição"
-                },
-                "transplants": {
-                    "value": "FUE",
-                    "label": "Microenxertos de Alta Precisão"
-                },
-                "technique": {
-                    "value": "FUE",
-                    "label": "Técnica Premium"
-                },
-                "satisfaction": {
-                    "value": "98%",
-                    "label": "Satisfação Pacientes"
-                }
-            }
+            "cta_results": "VER RESULTADOS"
         },
         "faq": {
             "title": "Perguntas sobre Transplante",
@@ -864,21 +814,7 @@
             "title_highlight": "Premium",
             "description": "Realce a sua beleza natural com os mais avançados tratamentos de estética facial. Procedimentos seguros e resultados excepcionais com a equipa da Dra. Arethuza Luna.",
             "cta_schedule": "AGENDAR CONSULTA",
-            "cta_treatments": "VER TRATAMENTOS",
-            "stats": {
-                "experience": {
-                    "value": "15 anos",
-                    "label": "Anos de experiência"
-                },
-                "procedures": {
-                    "value": "5k",
-                    "label": "Procedimentos realizados"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Satisfação das pacientes"
-                }
-            }
+            "cta_treatments": "VER TRATAMENTOS"
         },
         "faq": {
             "title": "Perguntas sobre Estética",

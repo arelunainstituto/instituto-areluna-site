@@ -657,25 +657,7 @@
             "title_highlight": "Changing Lives",
             "description": "Discover our complete range of dental treatments with cutting-edge technology, always prioritizing your comfort and the best results.",
             "cta_schedule": "BOOK CONSULTATION",
-            "cta_view_all": "VIEW ALL TREATMENTS",
-            "stats": {
-                "experience": {
-                    "value": "+24",
-                    "label": "Years of Experience"
-                },
-                "smiles": {
-                    "value": "+20k",
-                    "label": "Smiles Transformed"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Patient Satisfaction"
-                },
-                "treatments": {
-                    "value": "100+",
-                    "label": "Treatments Available"
-                }
-            }
+            "cta_view_all": "VIEW ALL TREATMENTS"
         },
         "faq": {
             "title": "Frequently Asked Questions",
@@ -727,21 +709,7 @@
             "title_highlight": "in Porto",
             "description": "Transform your smile while discovering the beauties of the city of Porto. A 3-day program with dental treatment and tourist experience included.",
             "cta_schedule": "BOOK PROGRAM",
-            "cta_more": "LEARN MORE",
-            "stats": {
-                "days": {
-                    "value": "3",
-                    "label": "Program Days"
-                },
-                "experience": {
-                    "value": "24+",
-                    "label": "Years of Experience"
-                },
-                "location": {
-                    "value": "Porto",
-                    "label": "Invicta City"
-                }
-            }
+            "cta_more": "LEARN MORE"
         },
         "faq": {
             "title": "Questions about the Program",
@@ -793,25 +761,7 @@
             "title_highlight": "FUE Premium",
             "description": "Regain your confidence with the most advanced hair transplant technique. Natural and long-lasting results with cutting-edge technology and specialized teams.",
             "cta_schedule": "BOOK CONSULTATION",
-            "cta_results": "VIEW RESULTS",
-            "stats": {
-                "experience": {
-                    "value": "24+",
-                    "label": "Years of Tradition"
-                },
-                "transplants": {
-                    "value": "FUE",
-                    "label": "High-Precision Micrografts"
-                },
-                "technique": {
-                    "value": "FUE",
-                    "label": "Premium Technique"
-                },
-                "satisfaction": {
-                    "value": "98%",
-                    "label": "Patient Satisfaction"
-                }
-            }
+            "cta_results": "VIEW RESULTS"
         },
         "faq": {
             "title": "Questions about Transplant",
@@ -864,21 +814,7 @@
             "title_highlight": "Premium",
             "description": "Enhance your natural beauty with the most advanced facial aesthetics treatments. Safe procedures and exceptional results with Dr. Arethuza Luna's team.",
             "cta_schedule": "BOOK CONSULTATION",
-            "cta_treatments": "VIEW TREATMENTS",
-            "stats": {
-                "experience": {
-                    "value": "15 Years",
-                    "label": "Years of experience"
-                },
-                "procedures": {
-                    "value": "5k",
-                    "label": "Procedures performed"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Patient satisfaction"
-                }
-            }
+            "cta_treatments": "VIEW TREATMENTS"
         },
         "faq": {
             "title": "Questions about Aesthetics",
