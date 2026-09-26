@@ -15,7 +15,7 @@ const SobreAFundadora = () => {
     "name": "Dra. Arethuza Luna",
     "jobTitle": "Médica-Dentista — Ortodontia e Harmonização Orofacial",
     "description": t('founder.seo.description'),
-    "image": "https://www.institutoareluna.pt/og-institutoareluna.jpg",
+    "image": "https://www.institutoareluna.pt/og-institutoareluna-logo.jpg",
     "url": "https://www.institutoareluna.pt/sobre-a-fundadora",
     "worksFor": {
       "@type": "Dentist",
