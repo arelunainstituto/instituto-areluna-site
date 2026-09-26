@@ -151,12 +151,12 @@
             "dermatologia": "Dermatology"
         },
         "cta": {
-            "title": "Meet your best version",
-            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "title": "Maak een afspraak voor een evaluatieconsult",
+            "description": "Tijdens het consult beoordelen we uw situatie en leggen we de aangewezen opties, de risico's en de kosten uit. Pas daarna beslist u.",
             "button": "Schedule consultation",
-            "premium": "Premium Care",
-            "tech": "Advanced Technology",
-            "results": "Guaranteed Results"
+            "premium": "Individuele evaluatie",
+            "tech": "Uitgelegd plan",
+            "results": "Offerte vooraf"
         },
         "items": {
             "1": {
@@ -402,12 +402,11 @@
         }
     },
     "checkup": {
-        "pill": "EXCLUSIEF PROGRAMMA",
         "title": {
-            "main": "Geïntegreerde Check-up voor",
-            "highlight": "Internationale Patiënten"
+            "main": "Evaluatie voor",
+            "highlight": "wie buiten Portugal woont"
         },
-        "description": "Een uitgebreide en geïntegreerde beoordeling die tandheelkunde, gezichtsathetiek, haarnalyse en laboratoriumtests combineert in slechts één dag.",
+        "description": "We kunnen de evaluatieconsulten die u nodig heeft (tandheelkunde, gezichtsesthetiek, haarevaluatie en klinische analyses) tijdens dezelfde reis inplannen, wanneer dat klinisch passend is.",
         "services_title": {
             "main": "Wat is inbegrepen in uw",
             "highlight": "Check-up"
@@ -439,10 +438,6 @@
             "highlight": "Programma"
         },
         "benefits": {
-            "one_day": {
-                "title": "Alles in 1 Dag",
-                "description": "Volledige beoordeling in slechts één bezoek"
-            },
             "personal_assistant": {
                 "title": "Persoonlijke Assistent",
                 "description": "Volledige ondersteuning bij reisplanning"
@@ -450,16 +445,10 @@
             "integrated_care": {
                 "title": "Geïntegreerde Zorg",
                 "description": "Holistische benadering van uw gezondheid en esthetiek"
-            },
-            "efficiency": {
-                "title": "Maximale Efficiëntie",
-                "description": "Tijdoptimalisatie voor internationale patiënten"
             }
         },
         "cta": {
-            "title": "Klaar voor uw transformatie?",
-            "subtitle": "Plan uw Geïntegreerde Check-up en ontdek uw volledige potentieel",
-            "button": "Check-up Plannen",
+            "button": "Evaluatie plannen",
             "support": "Meertalige ondersteuning"
         }
     },

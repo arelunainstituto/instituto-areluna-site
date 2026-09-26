@@ -151,12 +151,12 @@
             "dermatologia": "Dermatologia"
         },
         "cta": {
-            "title": "Conheça a sua melhor versão",
-            "description": "Agende uma consulta e descubra como podemos realizar os seus sonhos com os nossos tratamentos personalizados e alta tecnologia.",
+            "title": "Marque a sua consulta de avaliação",
+            "description": "Na consulta avaliamos a sua situação, explicamos as opções indicadas, os riscos e os custos. Só depois decide.",
             "button": "Agendar consulta",
-            "premium": "Atendimento Premium",
-            "tech": "Tecnologia Avançada",
-            "results": "Acompanhamento Contínuo"
+            "premium": "Avaliação individual",
+            "tech": "Plano explicado",
+            "results": "Orçamento antes de iniciar"
         },
         "items": {
             "1": {
@@ -402,12 +402,11 @@
         }
     },
     "checkup": {
-        "pill": "PROGRAMA EXCLUSIVO",
         "title": {
-            "main": "Check-up Integrado para",
-            "highlight": "Pacientes Internacionais"
+            "main": "Avaliação para",
+            "highlight": "quem vive fora de Portugal"
         },
-        "description": "Uma avaliação completa e integrada que combina medicina dentária, estética facial, análise capilar e exames laboratoriais em apenas um dia.",
+        "description": "Podemos marcar na mesma deslocação as consultas de avaliação de que precisa (medicina dentária, estética facial, avaliação capilar e análises clínicas), sempre que for clinicamente adequado.",
         "services_title": {
             "main": "O que está incluído no seu",
             "highlight": "Check-up"
@@ -439,10 +438,6 @@
             "highlight": "Programa"
         },
         "benefits": {
-            "one_day": {
-                "title": "Tudo em 1 Dia",
-                "description": "Avaliação completa em apenas uma visita"
-            },
             "personal_assistant": {
                 "title": "Assistente Pessoal",
                 "description": "Apoio completo no planeamento da viagem"
@@ -450,16 +445,10 @@
             "integrated_care": {
                 "title": "Cuidado Integrado",
                 "description": "Abordagem holística da sua saúde e estética"
-            },
-            "efficiency": {
-                "title": "Eficiência Máxima",
-                "description": "Otimização do tempo para pacientes internacionais"
             }
         },
         "cta": {
-            "title": "Pronto para a sua transformação?",
-            "subtitle": "Agende o seu Check-up Integrado e descubra o seu potencial completo",
-            "button": "Agendar Check-up",
+            "button": "Agendar avaliação",
             "support": "Assistência em múltiplas línguas"
         }
     },

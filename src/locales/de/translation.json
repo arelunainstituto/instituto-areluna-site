@@ -151,12 +151,12 @@
             "dermatologia": "Dermatology"
         },
         "cta": {
-            "title": "Meet your best version",
-            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "title": "Vereinbaren Sie Ihren Untersuchungstermin",
+            "description": "Im Termin beurteilen wir Ihre Situation und erklären die geeigneten Optionen, die Risiken und die Kosten. Erst danach entscheiden Sie.",
             "button": "Schedule consultation",
-            "premium": "Premium Care",
-            "tech": "Advanced Technology",
-            "results": "Guaranteed Results"
+            "premium": "Individuelle Untersuchung",
+            "tech": "Erklärter Plan",
+            "results": "Kostenvoranschlag vor Beginn"
         },
         "items": {
             "1": {
@@ -402,12 +402,11 @@
         }
     },
     "checkup": {
-        "pill": "EXKLUSIVES PROGRAMM",
         "title": {
-            "main": "Integrierter Check-up für",
-            "highlight": "Internationale Patienten"
+            "main": "Untersuchung für",
+            "highlight": "Menschen, die außerhalb Portugals leben"
         },
-        "description": "Eine umfassende und integrierte Untersuchung, die Zahnmedizin, Gesichtsästhetik, Haaranalyse und Labortests an nur einem Tag kombiniert.",
+        "description": "Wir können die benötigten Untersuchungstermine (Zahnmedizin, Gesichtsästhetik, Haaruntersuchung und Laboranalysen) auf dieselbe Reise legen, sofern dies klinisch sinnvoll ist.",
         "services_title": {
             "main": "Was in Ihrem Check-up",
             "highlight": "enthalten ist"
@@ -439,10 +438,6 @@
             "highlight": "Programms"
         },
         "benefits": {
-            "one_day": {
-                "title": "Alles an 1 Tag",
-                "description": "Komplette Bewertung bei nur einem Besuch"
-            },
             "personal_assistant": {
                 "title": "Persönlicher Assistent",
                 "description": "Volle Unterstützung bei der Reiseplanung"
@@ -450,16 +445,10 @@
             "integrated_care": {
                 "title": "Integrierte Versorgung",
                 "description": "Ganzheitlicher Ansatz für Ihre Gesundheit und Ästhetik"
-            },
-            "efficiency": {
-                "title": "Maximale Effizienz",
-                "description": "Zeitoptimierung für internationale Patienten"
             }
         },
         "cta": {
-            "title": "Bereit für Ihre Transformation?",
-            "subtitle": "Vereinbaren Sie Ihren integrierten Check-up und entdecken Sie Ihr volles Potenzial",
-            "button": "Check-up vereinbaren",
+            "button": "Untersuchung vereinbaren",
             "support": "Mehrsprachige Unterstützung"
         }
     },

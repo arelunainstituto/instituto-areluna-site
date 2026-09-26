@@ -151,12 +151,12 @@
             "dermatologia": "Dermatology"
         },
         "cta": {
-            "title": "Meet your best version",
-            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "title": "Book your assessment appointment",
+            "description": "In the appointment we assess your situation and explain the suitable options, the risks and the costs. Only then do you decide.",
             "button": "Schedule consultation",
-            "premium": "Premium Care",
-            "tech": "Advanced Technology",
-            "results": "Continuous Follow-up"
+            "premium": "Individual assessment",
+            "tech": "Plan explained",
+            "results": "Quote before starting"
         },
         "items": {
             "1": {
@@ -402,12 +402,11 @@
         }
     },
     "checkup": {
-        "pill": "EXCLUSIVE PROGRAM",
         "title": {
-            "main": "Integrated Check-up for",
-            "highlight": "International Patients"
+            "main": "Assessment for",
+            "highlight": "those living outside Portugal"
         },
-        "description": "A comprehensive and integrated assessment combining dentistry, facial aesthetics, hair analysis, and lab tests in just one day.",
+        "description": "We can schedule the assessment appointments you need (dentistry, facial aesthetics, hair assessment and clinical tests) during the same trip, whenever clinically appropriate.",
         "services_title": {
             "main": "What is included in your",
             "highlight": "Check-up"
@@ -439,10 +438,6 @@
             "highlight": "Program"
         },
         "benefits": {
-            "one_day": {
-                "title": "All in 1 Day",
-                "description": "Complete assessment in just one visit"
-            },
             "personal_assistant": {
                 "title": "Personal Assistant",
                 "description": "Full support in travel planning"
@@ -450,16 +445,10 @@
             "integrated_care": {
                 "title": "Integrated Care",
                 "description": "Holistic approach to your health and aesthetics"
-            },
-            "efficiency": {
-                "title": "Maximum Efficiency",
-                "description": "Time optimization for international patients"
             }
         },
         "cta": {
-            "title": "Ready for your transformation?",
-            "subtitle": "Schedule your Integrated Check-up and discover your full potential",
-            "button": "Schedule Check-up",
+            "button": "Book assessment",
             "support": "Multi-language assistance"
         }
     },
