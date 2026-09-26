@@ -16,9 +16,7 @@ const TreatmentsSection = () => {
     { id: "estetica-corporal", name: t("treatments.categories.estetica-corporal") },
     { id: "terapia-capilar", name: t("treatments.categories.terapia-capilar") },
     { id: "transplante-capilar", name: t("treatments.categories.transplante-capilar") },
-    { id: "nutricao", name: t("treatments.categories.nutricao") },
     { id: "endocrinologia", name: t("treatments.categories.endocrinologia") },
-    { id: "ansiedade", name: t("treatments.categories.ansiedade") },
     { id: "cirurgia-plastica", name: t("treatments.categories.cirurgia-plastica") },
     { id: "dermatologia", name: t("treatments.categories.dermatologia") }
   ];
@@ -260,17 +258,6 @@ const TreatmentsSection = () => {
       category: "transplante-capilar",
       features: t("treatments.items.23.features", { returnObjects: true }) as string[]
     },
-    // Nutrição Clínica
-    {
-      id: 24,
-      title: t("treatments.items.24.title"),
-      description: t("treatments.items.24.description"),
-      image: "https://res.cloudinary.com/dxm1cikvp/image/upload/v1735745234/nutricao_ggqhqz.jpg",
-      highlight: false,
-      duration: "60-90 min",
-      category: "nutricao",
-      features: t("treatments.items.24.features", { returnObjects: true }) as string[]
-    },
     // Endocrinologia
     {
       id: 25,
@@ -281,17 +268,6 @@ const TreatmentsSection = () => {
       duration: "60-90 min",
       category: "endocrinologia",
       features: t("treatments.items.25.features", { returnObjects: true }) as string[]
-    },
-    // Ansiedade Clínica
-    {
-      id: 26,
-      title: t("treatments.items.26.title"),
-      description: t("treatments.items.26.description"),
-      image: "https://res.cloudinary.com/dxm1cikvp/image/upload/v1735745234/ansiedade_ggqhqz.jpg",
-      highlight: false,
-      duration: "45-60 min",
-      category: "ansiedade",
-      features: t("treatments.items.26.features", { returnObjects: true }) as string[]
     }
   ];
 

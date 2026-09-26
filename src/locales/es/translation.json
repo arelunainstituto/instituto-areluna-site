@@ -169,9 +169,7 @@
             "estetica-corporal": "Body Aesthetics",
             "terapia-capilar": "Hair Therapy",
             "transplante-capilar": "Hair Transplant",
-            "nutricao": "Nutrition",
             "endocrinologia": "Endocrinology",
-            "ansiedade": "Clinical Anxiety",
             "cirurgia-plastica": "Plastic Surgery",
             "dermatologia": "Dermatology"
         },
@@ -414,16 +412,6 @@
                     "Analysis"
                 ]
             },
-            "24": {
-                "title": "Anti-inflammatory Nutrition",
-                "description": "Nutritional plans to combat inflammation and optimize health.",
-                "features": [
-                    "Anti-inflammatory",
-                    "Personalized",
-                    "Health",
-                    "Well-being"
-                ]
-            },
             "25": {
                 "title": "Hormonal Evaluation",
                 "description": "Complete hormonal profile analysis for adults and youths.",
@@ -432,16 +420,6 @@
                     "Complete",
                     "Metabolic",
                     "Personalized"
-                ]
-            },
-            "26": {
-                "title": "Dental Anxiety Support",
-                "description": "Specialized support for patients with fear or dental trauma.",
-                "features": [
-                    "Support",
-                    "Comfort",
-                    "Security",
-                    "Specialized"
                 ]
             }
         }

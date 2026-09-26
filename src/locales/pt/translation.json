@@ -169,9 +169,7 @@
             "estetica-corporal": "Estética Corporal",
             "terapia-capilar": "Terapia Capilar",
             "transplante-capilar": "Transplante Capilar",
-            "nutricao": "Nutrição",
             "endocrinologia": "Endocrinologia",
-            "ansiedade": "Ansiedade Clínica",
             "cirurgia-plastica": "Cirurgia Plástica",
             "dermatologia": "Dermatologia"
         },
@@ -414,16 +412,6 @@
                     "Análise"
                 ]
             },
-            "24": {
-                "title": "Nutrição Anti-inflamatória",
-                "description": "Planos nutricionais para combater inflamação e otimizar saúde.",
-                "features": [
-                    "Anti-inflamatória",
-                    "Personalizada",
-                    "Saúde",
-                    "Bem-estar"
-                ]
-            },
             "25": {
                 "title": "Avaliação Hormonal",
                 "description": "Análise completa do perfil hormonal para adultos e jovens.",
@@ -432,16 +420,6 @@
                     "Completa",
                     "Metabólica",
                     "Personalizada"
-                ]
-            },
-            "26": {
-                "title": "Apoio para Ansiedade Dentária",
-                "description": "Suporte especializado para pacientes com medo ou trauma dentário.",
-                "features": [
-                    "Apoio",
-                    "Conforto",
-                    "Segurança",
-                    "Especializado"
                 ]
             }
         }
