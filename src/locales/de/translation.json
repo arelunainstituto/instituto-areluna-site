@@ -480,10 +480,10 @@
         "button": "TERMIN VEREINBAREN"
     },
     "before_after": {
-        "background_text": "Transformation",
+        "background_text": "Fälle",
         "title": "Lächeln-Galerie",
-        "subtitle": "Echte Transformationen",
-        "description": "Sehen Sie, wie wir Lächeln verwandeln und Leben mit unseren fortschrittlichen Behandlungen verändern. Jeder Fall ist einzigartig und personalisiert, um außergewöhnliche Ergebnisse zu erzielen.",
+        "subtitle": "Klinische Fälle",
+        "description": "Fotos mit schriftlicher Einwilligung der Patienten veröffentlicht. Jeder Behandlungsplan beruht auf einer individuellen Untersuchung, und die Ergebnisse sind von Person zu Person verschieden.",
         "implants_title": "Implantate und Rehabilitation",
         "facets_title": "Porzellan-Veneers",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Behandlung"
         },
         "cta": {
-            "title": "Ihre Transformation beginnt hier",
-            "text": "Vereinbaren Sie Ihren Beratungstermin und entdecken Sie, wie wir Ihr Lächeln mit natürlichen und dauerhaften Ergebnissen verwandeln können.",
+            "title": "Vereinbaren Sie Ihren Untersuchungstermin",
+            "text": "Im ersten Termin beurteilen wir Ihren Fall und erklären Ihnen die für Sie geeigneten Behandlungsoptionen.",
             "button": "BEWERTUNG VEREINBAREN"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Komplette Transformation",
+                    "title": "Orale Rehabilitation mit festsitzender Prothese",
                     "desc": "Totale orale Rehabilitation mit festsitzenden Prothesen",
                     "treatment": "Implantate und Prothesen",
                     "duration": "4 Monate"
                 },
                 "2": {
-                    "title": "Erneuertes Lächeln",
+                    "title": "Implantate und Rehabilitation",
                     "desc": "Implantate und fortgeschrittene Zahnästhetik",
                     "treatment": "Zahnimplantate",
                     "duration": "3 Monate"
                 },
                 "3": {
-                    "title": "Lebensveränderung",
+                    "title": "Zahnrekonstruktion",
                     "desc": "Personalisierte Zahnrekonstruktion",
                     "treatment": "Totalrehabilitation",
                     "duration": "5 Monate"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Harmonisches Lächeln",
+                    "title": "Keramikveneers",
                     "desc": "Porzellan-Veneers zur ästhetischen Korrektur",
                     "treatment": "Porzellan-Veneers",
                     "duration": "2 Wochen"
                 },
                 "2": {
-                    "title": "Natürliche Perfektion",
+                    "title": "Ultradünne Veneers",
                     "desc": "Hauchdünne Veneers für natürliches Ergebnis",
                     "treatment": "Hauchdünne Veneers",
                     "duration": "3 Wochen"
                 },
                 "3": {
-                    "title": "Raffinierte Eleganz",
-                    "desc": "Personalisierte Veneers für perfektes Lächeln",
+                    "title": "Individuelle Veneers",
+                    "desc": "Für jeden Fall gestaltete Veneers",
                     "treatment": "Personalisierte Veneers",
                     "duration": "2 Wochen"
                 }

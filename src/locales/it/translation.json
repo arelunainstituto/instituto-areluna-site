@@ -480,10 +480,10 @@
         "button": "PRENOTA UNA VISITA"
     },
     "before_after": {
-        "background_text": "Trasformazione",
+        "background_text": "Casi",
         "title": "Galleria del Sorriso",
-        "subtitle": "Trasformazioni Reali",
-        "description": "Scopri come trasformiamo i sorrisi e cambiamo le vite con i nostri trattamenti avanzati. Ogni caso è unico e personalizzato per ottenere risultati eccezionali.",
+        "subtitle": "Casi clinici",
+        "description": "Fotografie pubblicate con autorizzazione scritta dei pazienti. Ogni piano di trattamento è nato da una valutazione individuale e i risultati variano da persona a persona.",
         "implants_title": "Impianti e Riabilitazione",
         "facets_title": "Faccette in Porcellana",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Trattamento"
         },
         "cta": {
-            "title": "La Tua Trasformazione Inizia Qui",
-            "text": "Prenota la tua consulenza e scopri come possiamo trasformare il tuo sorriso con risultati naturali e duraturi.",
+            "title": "Prenoti la sua visita di valutazione",
+            "text": "Alla prima visita valutiamo il suo caso e le spieghiamo le opzioni di trattamento indicate per lei.",
             "button": "PRENOTA VALUTAZIONE"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Trasformazione Completa",
+                    "title": "Riabilitazione orale con protesi fissa",
                     "desc": "Riabilitazione orale totale con protesi fisse",
                     "treatment": "Impianti e Protesi",
                     "duration": "4 mesi"
                 },
                 "2": {
-                    "title": "Sorriso Rinnovato",
+                    "title": "Impianti e riabilitazione",
                     "desc": "Impianti ed estetica dentale avanzata",
                     "treatment": "Impianti Dentali",
                     "duration": "3 mesi"
                 },
                 "3": {
-                    "title": "Cambio di Vita",
+                    "title": "Ricostruzione dentale",
                     "desc": "Ricostruzione dentale personalizzata",
                     "treatment": "Riabilitazione Totale",
                     "duration": "5 mesi"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Sorriso Armonioso",
+                    "title": "Faccette in ceramica",
                     "desc": "Faccette in porcellana per correzione estetica",
                     "treatment": "Faccette in Porcellana",
                     "duration": "2 settimane"
                 },
                 "2": {
-                    "title": "Perfezione Naturale",
+                    "title": "Faccette ultrasottili",
                     "desc": "Faccette ultrasottili per risultato naturale",
                     "treatment": "Faccette Ultrasottili",
                     "duration": "3 settimane"
                 },
                 "3": {
-                    "title": "Eleganza Raffinata",
-                    "desc": "Faccette personalizzate per sorriso perfetto",
+                    "title": "Faccette personalizzate",
+                    "desc": "Faccette progettate per ogni caso",
                     "treatment": "Faccette Personalizzate",
                     "duration": "2 settimane"
                 }

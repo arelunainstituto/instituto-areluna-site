@@ -480,10 +480,10 @@
         "button": "BOOK APPOINTMENT"
     },
     "before_after": {
-        "background_text": "Transformation",
+        "background_text": "Cases",
         "title": "Smile Gallery",
-        "subtitle": "Real Transformations",
-        "description": "See how we transform smiles and change lives with our advanced treatments. Each case is unique and personalized to achieve exceptional results.",
+        "subtitle": "Clinical cases",
+        "description": "Photos published with the patients' written consent. Each treatment plan followed an individual assessment and results vary from person to person.",
         "implants_title": "Implants and Rehabilitation",
         "facets_title": "Porcelain Veneers",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Treatment"
         },
         "cta": {
-            "title": "Your Transformation Starts Here",
-            "text": "Schedule your consultation and discover how we can transform your smile with natural and lasting results.",
+            "title": "Book your assessment appointment",
+            "text": "At the first appointment we assess your case and explain the treatment options suitable for you.",
             "button": "SCHEDULE ASSESSMENT"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Complete Transformation",
+                    "title": "Oral rehabilitation with fixed prosthesis",
                     "desc": "Total oral rehabilitation with fixed prostheses",
                     "treatment": "Implants and Prostheses",
                     "duration": "4 months"
                 },
                 "2": {
-                    "title": "Renewed Smile",
+                    "title": "Implants and rehabilitation",
                     "desc": "Implants and advanced dental aesthetics",
                     "treatment": "Dental Implants",
                     "duration": "3 months"
                 },
                 "3": {
-                    "title": "Life Changing",
+                    "title": "Dental reconstruction",
                     "desc": "Personalized dental reconstruction",
                     "treatment": "Total Rehabilitation",
                     "duration": "5 months"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Harmonious Smile",
+                    "title": "Ceramic veneers",
                     "desc": "Porcelain veneers for aesthetic correction",
                     "treatment": "Porcelain Veneers",
                     "duration": "2 weeks"
                 },
                 "2": {
-                    "title": "Natural Perfection",
+                    "title": "Ultra-thin veneers",
                     "desc": "Ultra-thin veneers for natural result",
                     "treatment": "Ultra-thin Veneers",
                     "duration": "3 weeks"
                 },
                 "3": {
-                    "title": "Refined Elegance",
-                    "desc": "Personalized veneers for perfect smile",
+                    "title": "Custom veneers",
+                    "desc": "Veneers designed for each case",
                     "treatment": "Personalized Veneers",
                     "duration": "2 weeks"
                 }

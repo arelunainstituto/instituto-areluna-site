@@ -480,10 +480,10 @@
         "button": "PEDIR CITA"
     },
     "before_after": {
-        "background_text": "Transformación",
+        "background_text": "Casos",
         "title": "Galería de Sonrisas",
-        "subtitle": "Transformaciones Reales",
-        "description": "Vea cómo transformamos sonrisas y cambiamos vidas con nuestros tratamientos avanzados. Cada caso es único y personalizado para lograr resultados excepcionales.",
+        "subtitle": "Casos clínicos",
+        "description": "Fotografías publicadas con autorización escrita de los pacientes. Cada plan de tratamiento resultó de una evaluación individual y los resultados varían de una persona a otra.",
         "implants_title": "Implantes y Rehabilitación",
         "facets_title": "Carillas de Porcelana",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Tratamiento"
         },
         "cta": {
-            "title": "Su Transformación Comienza Aquí",
-            "text": "Programe su consulta y descubra cómo podemos transformar su sonrisa con resultados naturales y duraderos.",
+            "title": "Pida su consulta de evaluación",
+            "text": "En la primera consulta evaluamos su caso y le explicamos las opciones de tratamiento indicadas para usted.",
             "button": "AGENDAR EVALUACIÓN"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Transformación Completa",
+                    "title": "Rehabilitación oral con prótesis fija",
                     "desc": "Rehabilitación oral total con prótesis fijas",
                     "treatment": "Implantes y Prótesis",
                     "duration": "4 meses"
                 },
                 "2": {
-                    "title": "Sonrisa Renovada",
+                    "title": "Implantes y rehabilitación",
                     "desc": "Implantes y estética dental avanzada",
                     "treatment": "Implantes Dentales",
                     "duration": "3 meses"
                 },
                 "3": {
-                    "title": "Cambio de Vida",
+                    "title": "Reconstrucción dental",
                     "desc": "Reconstrucción dental personalizada",
                     "treatment": "Rehabilitación Total",
                     "duration": "5 meses"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Sonrisa Armoniosa",
+                    "title": "Carillas cerámicas",
                     "desc": "Carillas de porcelana para corrección estética",
                     "treatment": "Carillas de Porcelana",
                     "duration": "2 semanas"
                 },
                 "2": {
-                    "title": "Perfección Natural",
+                    "title": "Carillas ultrafinas",
                     "desc": "Carillas ultrafinas para resultado natural",
                     "treatment": "Carillas Ultrafinas",
                     "duration": "3 semanas"
                 },
                 "3": {
-                    "title": "Elegancia Refinada",
-                    "desc": "Carillas personalizadas para sonrisa perfecta",
+                    "title": "Carillas personalizadas",
+                    "desc": "Carillas diseñadas para cada caso",
                     "treatment": "Carillas Personalizadas",
                     "duration": "2 semanas"
                 }

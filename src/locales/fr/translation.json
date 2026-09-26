@@ -480,10 +480,10 @@
         "button": "PRENDRE RENDEZ-VOUS"
     },
     "before_after": {
-        "background_text": "Transformation",
+        "background_text": "Cas",
         "title": "Galerie de Sourires",
-        "subtitle": "Transformations Réelles",
-        "description": "Découvrez comment nous transformons les sourires et changeons des vies grâce à nos traitements avancés. Chaque cas est unique et personnalisé pour obtenir des résultats exceptionnels.",
+        "subtitle": "Cas cliniques",
+        "description": "Photos publiées avec l'autorisation écrite des patients. Chaque plan de traitement découle d'une évaluation individuelle et les résultats varient d'une personne à l'autre.",
         "implants_title": "Implants et Réhabilitation",
         "facets_title": "Facettes en Porcelaine",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Traitement"
         },
         "cta": {
-            "title": "Votre Transformation Commence Ici",
-            "text": "Planifiez votre consultation et découvrez comment nous pouvons transformer votre sourire avec des résultats naturels et durables.",
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "text": "Lors de la première consultation, nous évaluons votre cas et vous expliquons les options de traitement indiquées pour vous.",
             "button": "PLANIFIER ÉVALUATION"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Transformation Complète",
+                    "title": "Réhabilitation orale avec prothèse fixe",
                     "desc": "Réhabilitation orale totale avec prothèses fixes",
                     "treatment": "Implants et Prothèses",
                     "duration": "4 mois"
                 },
                 "2": {
-                    "title": "Sourire Renouvelé",
+                    "title": "Implants et réhabilitation",
                     "desc": "Implants et esthétique dentaire avancée",
                     "treatment": "Implants Dentaires",
                     "duration": "3 mois"
                 },
                 "3": {
-                    "title": "Changement de Vie",
+                    "title": "Reconstruction dentaire",
                     "desc": "Reconstruction dentaire personnalisée",
                     "treatment": "Réhabilitation Totale",
                     "duration": "5 mois"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Sourire Harmonieux",
+                    "title": "Facettes céramiques",
                     "desc": "Facettes en porcelaine pour correction esthétique",
                     "treatment": "Facettes en Porcelaine",
                     "duration": "2 semaines"
                 },
                 "2": {
-                    "title": "Perfection Naturelle",
+                    "title": "Facettes ultrafines",
                     "desc": "Facettes ultra-fines pour un résultat naturel",
                     "treatment": "Facettes Ultra-fines",
                     "duration": "3 semaines"
                 },
                 "3": {
-                    "title": "Élégance Raffinée",
-                    "desc": "Facettes personnalisées pour un sourire parfait",
+                    "title": "Facettes personnalisées",
+                    "desc": "Facettes conçues pour chaque cas",
                     "treatment": "Facettes Personnalisées",
                     "duration": "2 semaines"
                 }

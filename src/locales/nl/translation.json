@@ -480,10 +480,10 @@
         "button": "AFSPRAAK MAKEN"
     },
     "before_after": {
-        "background_text": "Transformatie",
+        "background_text": "Casussen",
         "title": "Glimlach Galerij",
-        "subtitle": "Echte Transformaties",
-        "description": "Zie hoe we glimlachen transformeren en levens veranderen met onze geavanceerde behandelingen. Elk geval is uniek en gepersonaliseerd om uitzonderlijke resultaten te bereiken.",
+        "subtitle": "Klinische casussen",
+        "description": "Foto's gepubliceerd met schriftelijke toestemming van de patiënten. Elk behandelplan volgde uit een individuele evaluatie en de resultaten verschillen van persoon tot persoon.",
         "implants_title": "Implantaten en Revalidatie",
         "facets_title": "Porseleinen Facings",
         "card": {
@@ -492,26 +492,26 @@
             "treatment_label": "Behandeling"
         },
         "cta": {
-            "title": "Uw Transformatie Begint Hier",
-            "text": "Plan uw consult en ontdek hoe we uw glimlach kunnen transformeren met natuurlijke en blijvende resultaten.",
+            "title": "Maak een afspraak voor een evaluatieconsult",
+            "text": "Tijdens het eerste consult beoordelen we uw situatie en leggen we de behandelopties uit die voor u geschikt zijn.",
             "button": "EVALUATIE PLANNEN"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Complete Transformatie",
+                    "title": "Orale rehabilitatie met vaste prothese",
                     "desc": "Totale orale revalidatie met vaste protheses",
                     "treatment": "Implantaten en Protheses",
                     "duration": "4 maanden"
                 },
                 "2": {
-                    "title": "Vernieuwde Glimlach",
+                    "title": "Implantaten en rehabilitatie",
                     "desc": "Implantaten en geavanceerde tandheelkundige esthetiek",
                     "treatment": "Tandheelkundige Implantaten",
                     "duration": "3 maanden"
                 },
                 "3": {
-                    "title": "Levensveranderend",
+                    "title": "Tandreconstructie",
                     "desc": "Gepersonaliseerde tandheelkundige reconstructie",
                     "treatment": "Totale Revalidatie",
                     "duration": "5 maanden"
@@ -519,20 +519,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Harmonieus Glimlach",
+                    "title": "Keramische facings",
                     "desc": "Porseleinen facings voor esthetische correctie",
                     "treatment": "Porseleinen Facings",
                     "duration": "2 weken"
                 },
                 "2": {
-                    "title": "Natuurlijke Perfectie",
+                    "title": "Ultradunne facings",
                     "desc": "Ultradunne facings voor natuurlijk resultaat",
                     "treatment": "Ultradunne Facings",
                     "duration": "3 weken"
                 },
                 "3": {
-                    "title": "Verfijnde Elegantie",
-                    "desc": "Gepersonaliseerde facings voor perfecte glimlach",
+                    "title": "Gepersonaliseerde facings",
+                    "desc": "Facings ontworpen voor elk geval",
                     "treatment": "Gepersonaliseerde Facings",
                     "duration": "2 weken"
                 }
