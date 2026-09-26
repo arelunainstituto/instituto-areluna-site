@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const TreatmentDetailsSection = () => {
   const [activeCategory, setActiveCategory] = useState("ortodontia");
@@ -304,6 +305,7 @@ const TreatmentDetailsSection = () => {
                 AGENDAR CONSULTA
               </Button>
             </a>
+            <ClinicalDisclaimer className="mt-4 text-gray-300" />
           </div>
         </div>
       </div>

@@ -2,7 +2,8 @@
     "common": {
         "loading": "Wird geladen...",
         "error": "Ein Fehler ist aufgetreten",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "clinical_disclaimer": "Ob eine Behandlung angezeigt ist, hängt von einem Untersuchungstermin und einer individuellen Diagnose ab. Die Ergebnisse sind von Person zu Person verschieden."
     },
     "nav": {
         "institute": "Das Institut",

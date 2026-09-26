@@ -2,7 +2,8 @@
     "common": {
         "loading": "Laden...",
         "error": "Er is een fout opgetreden",
-        "contact": "Contact"
+        "contact": "Contact",
+        "clinical_disclaimer": "Of een behandeling aangewezen is, hangt af van een evaluatieconsult en een individuele diagnose. De resultaten verschillen van persoon tot persoon."
     },
     "nav": {
         "institute": "Het Instituut",

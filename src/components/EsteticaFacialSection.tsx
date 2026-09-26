@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import draArePremium from "@/assets/dra-are-premium.jpg";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const EsteticaFacialSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -140,6 +141,7 @@ const EsteticaFacialSection = () => {
                   </button>
                 </a>
               </div>
+              <ClinicalDisclaimer className="mt-4 mx-0 text-jet/60 dark:text-gray-400" />
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const TrasplanteCapilarHeroSection = () => {
   const { t } = useTranslation();
@@ -52,6 +53,7 @@ const TrasplanteCapilarHeroSection = () => {
             {t('hair_transplant_page.hero.cta_results')}
           </Button>
         </div>
+        <ClinicalDisclaimer className="text-white/75 -mt-2 xs:-mt-6 mb-8" />
       </div>
 
       {/* Scroll indicator */}

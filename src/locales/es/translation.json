@@ -2,7 +2,8 @@
     "common": {
         "loading": "Cargando...",
         "error": "Ocurrió un error",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "clinical_disclaimer": "La indicación de cualquier tratamiento depende de una consulta de evaluación y de un diagnóstico individual. Los resultados varían de una persona a otra."
     },
     "nav": {
         "institute": "El Instituto",

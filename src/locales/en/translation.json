@@ -2,7 +2,8 @@
     "common": {
         "loading": "Loading...",
         "error": "An error occurred",
-        "contact": "Contact"
+        "contact": "Contact",
+        "clinical_disclaimer": "Whether any treatment is indicated depends on an assessment appointment and an individual diagnosis. Results vary from person to person."
     },
     "nav": {
         "institute": "The Institute",

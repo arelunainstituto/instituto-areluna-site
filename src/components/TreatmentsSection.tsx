@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const TreatmentsSection = () => {
   const { t } = useTranslation();
@@ -429,6 +430,7 @@ const TreatmentsSection = () => {
                   </button>
                 </a>
               </div>
+              <ClinicalDisclaimer className="mt-6 text-white/75" />
 
               {/* Indicador de qualidade */}
               <div className="mt-8 flex justify-center items-center space-x-2 text-[hsl(var(--gold-leaf))]/80 text-sm font-vivant-light">

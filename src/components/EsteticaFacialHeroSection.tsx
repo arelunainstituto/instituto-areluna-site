@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const EsteticaFacialHeroSection = () => {
   const { t } = useTranslation();
@@ -53,6 +54,7 @@ const EsteticaFacialHeroSection = () => {
             {t("facial_aesthetics_page.hero.cta_treatments")}
           </Button>
         </div>
+        <ClinicalDisclaimer className="text-white/75 -mt-2 xs:-mt-6 mb-8" />
       </div>
 
       {/* Scroll indicator */}
