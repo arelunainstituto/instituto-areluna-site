@@ -26,10 +26,7 @@ const TEAM: TeamMember[] = [
   { id: "pethine",   name: "Dra. Pethine Dalsasso",    crm: "OMD 12228", jobTitle: "Médica Dentista — Odontopediatria",    knowsAbout: ["Odontopediatria"] },
   { id: "sara",      name: "Dra. Sara Ribeiro",        crm: "OMD 08560", jobTitle: "Médica Dentista — Clínica Geral",      knowsAbout: ["Clínica Geral e Reabilitação Oral", "Harmonização Orofacial"] },
   { id: "yara",      name: "Dra. Yara Campos",         crm: "OMD 15666", jobTitle: "Médica Dentista — Clínica Geral",      knowsAbout: ["Clínica Geral", "Estética Oral"] },
-  { id: "patricia",  name: "Dra. Patrícia Tatsch",     crm: "OMD 47868", jobTitle: "Cirurgiã Plástica",                    knowsAbout: ["Cirurgia Plástica"] },
-  { id: "federica",  name: "Federica Laporta",         crm: "",          jobTitle: "Higienista Oral",                      knowsAbout: ["Higienista Oral"] },
   { id: "thais",     name: "Dra. Thais Perlingeiro",   crm: "OM 69564",  jobTitle: "Médica — Endocrinologia",              knowsAbout: ["Endocrinologia", "Nutrologia", "Medicina Anti-Aging"] },
-  { id: "anavitoria", name: "Dra. Ana Vitória Marques", crm: "OMD 15209", jobTitle: "Médica Dentista — Estética Oral",      knowsAbout: ["Estética Oral", "Reabilitação Oral"] },
 ];
 
 const CLINIC_REF = {

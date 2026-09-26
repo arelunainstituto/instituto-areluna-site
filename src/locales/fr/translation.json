@@ -110,22 +110,6 @@
                     "Esthétique Orale"
                 ]
             },
-            "patricia": {
-                "role": "Chirurgienne Plasticienne",
-                "specialty": "Chirurgienne Plasticienne",
-                "bio": "Chirurgienne Plasticienne reconnue pour son excellence dans les chirurgies mammaires, alliant soin, technique et naturel. Expertise en augmentation, réduction mammaire et changement d'implants, ainsi qu'en Lipo HD à définition naturelle.",
-                "specs": [
-                    "Chirurgienne Plasticienne"
-                ]
-            },
-            "federica": {
-                "role": "Hygiéniste Dentaire",
-                "specialty": "Hygiéniste Dentaire",
-                "bio": "Axée sur la prévention, le maintien de la santé bucco-dentaire et le suivi personnalisé des patients, avec une attention particulière au confort, à la technique et aux soins continus.",
-                "specs": [
-                    "Hygiéniste Dentaire"
-                ]
-            },
             "thais": {
                 "role": "Médecin",
                 "specialty": "Endocrinologie",
@@ -134,15 +118,6 @@
                     "Endocrinologie",
                     "Nutrologie",
                     "Médecine Anti-Âge"
-                ]
-            },
-            "anavitoria": {
-                "role": "Dentiste",
-                "specialty": "Esthétique Orale",
-                "bio": "Master en Médecine Dentaire de l'Université de Porto, axé sur l'esthétique et la réhabilitation orale.",
-                "specs": [
-                    "Esthétique Orale",
-                    "Réhabilitation Orale"
                 ]
             },
             "arethuza": {

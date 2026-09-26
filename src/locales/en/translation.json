@@ -110,22 +110,6 @@
                     "Oral Aesthetics"
                 ]
             },
-            "patricia": {
-                "role": "Plastic Surgeon",
-                "specialty": "Plastic Surgeon",
-                "bio": "Plastic Surgeon recognized for excellence in breast surgeries, combining care, technique, and naturalness. Expertise in breast augmentation, reduction, and implant exchange, as well as HD Lipo with natural definition.",
-                "specs": [
-                    "Plastic Surgeon"
-                ]
-            },
-            "federica": {
-                "role": "Dental Hygienist",
-                "specialty": "Dental Hygienist",
-                "bio": "Focused on prevention, oral health maintenance, and personalized patient follow-up, with attention to comfort, technique, and continuous care.",
-                "specs": [
-                    "Dental Hygienist"
-                ]
-            },
             "thais": {
                 "role": "Physician",
                 "specialty": "Endocrinology",
@@ -134,15 +118,6 @@
                     "Endocrinology",
                     "Nutrology",
                     "Anti-Aging Medicine"
-                ]
-            },
-            "anavitoria": {
-                "role": "Dentist",
-                "specialty": "Oral Aesthetics",
-                "bio": "Master in Dental Medicine from the University of Porto, with a focus on aesthetics and oral rehabilitation.",
-                "specs": [
-                    "Oral Aesthetics",
-                    "Oral Rehabilitation"
                 ]
             },
             "arethuza": {

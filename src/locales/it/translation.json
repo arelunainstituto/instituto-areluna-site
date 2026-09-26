@@ -110,22 +110,6 @@
                     "Estetica Orale"
                 ]
             },
-            "patricia": {
-                "role": "Chirurgo Plastico",
-                "specialty": "Chirurgo Plastico",
-                "bio": "Chirurgo Plastico riconosciuta per l'eccellenza nella chirurgia del seno, unendo cura, tecnica e naturalezza. Attività in mastoplastica additiva, riduttiva e sostituzione protesi, oltre a Lipo HD di definizione naturale.",
-                "specs": [
-                    "Chirurgo Plastico"
-                ]
-            },
-            "federica": {
-                "role": "Igienista Dentale",
-                "specialty": "Igienista Dentale",
-                "bio": "Attività focalizzata sulla prevenzione, mantenimento della salute orale e accompagnamento personalizzato dei pazienti, con attenzione al comfort, alla tecnica e alla cura continua.",
-                "specs": [
-                    "Igienista Dentale"
-                ]
-            },
             "thais": {
                 "role": "Medico",
                 "specialty": "Endocrinologia",
@@ -134,15 +118,6 @@
                     "Endocrinologia",
                     "Nutrologia",
                     "Medicina Anti-Invecchiamento"
-                ]
-            },
-            "anavitoria": {
-                "role": "Dentista",
-                "specialty": "Estetica Orale",
-                "bio": "Master in Medicina Dentale dell'Università di Porto, con focus su estetica e riabilitazione orale.",
-                "specs": [
-                    "Estetica Orale",
-                    "Riabilitazione Orale"
                 ]
             },
             "arethuza": {

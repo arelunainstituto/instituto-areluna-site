@@ -110,22 +110,6 @@
                     "Estética Oral"
                 ]
             },
-            "patricia": {
-                "role": "Cirurgiã Plástica",
-                "specialty": "Cirurgiã Plástica",
-                "bio": "Cirurgiã Plástica reconhecida pela excelência em cirurgias da mama, unindo cuidado, técnica e naturalidade. Atuação em mamoplastia de aumento, redução e troca de prótese, além de Lipo HD de definição natural. ",
-                "specs": [
-                    "Cirurgiã Plástica"
-                ]
-            },
-            "federica": {
-                "role": "Higienista Oral",
-                "specialty": "Higienista Oral",
-                "bio": "Atuação focada na prevenção, manutenção da saúde oral e acompanhamento personalizado dos pacientes, com atenção ao conforto, à técnica e ao cuidado contínuo.",
-                "specs": [
-                    "Higienista Oral"
-                ]
-            },
             "thais": {
                 "role": "Médica",
                 "specialty": "Endocrinologia",
@@ -134,15 +118,6 @@
                     "Endocrinologia",
                     "Nutrologia",
                     "Medicina Anti-Aging"
-                ]
-            },
-            "anavitoria": {
-                "role": "Médica Dentista",
-                "specialty": "Estética Oral",
-                "bio": "Mestre em Medicina Dentária pela Universidade do Porto, com foco em estética e reabilitação oral.",
-                "specs": [
-                    "Estética Oral",
-                    "Reabilitação Oral"
                 ]
             },
             "arethuza": {

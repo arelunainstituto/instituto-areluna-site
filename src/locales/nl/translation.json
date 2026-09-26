@@ -110,22 +110,6 @@
                     "Orale Esthetiek"
                 ]
             },
-            "patricia": {
-                "role": "Plastisch Chirurg",
-                "specialty": "Plastisch Chirurg",
-                "bio": "Plastisch Chirurg erkend voor excellentie in borstchirurgie, combineert zorg, techniek en natuurlijkheid. Werkzaam in borstvergroting, -verkleining en prothesewissel, evenals HD Lipo met natuurlijke definitie.",
-                "specs": [
-                    "Plastisch Chirurg"
-                ]
-            },
-            "federica": {
-                "role": "Mondhygiënist",
-                "specialty": "Mondhygiënist",
-                "bio": "Werkzaamheden gericht op preventie, behoud van mondgezondheid en gepersonaliseerde begeleiding van patiënten, met aandacht voor comfort, techniek en continue zorg.",
-                "specs": [
-                    "Mondhygiënist"
-                ]
-            },
             "thais": {
                 "role": "Arts",
                 "specialty": "Endocrinologie",
@@ -134,15 +118,6 @@
                     "Endocrinologie",
                     "Nutrologie",
                     "Anti-Verouderingsgeneeskunde"
-                ]
-            },
-            "anavitoria": {
-                "role": "Tandarts",
-                "specialty": "Orale Esthetiek",
-                "bio": "Master in Tandheelkunde van de Universiteit van Porto, met focus op esthetiek en orale revalidatie.",
-                "specs": [
-                    "Orale Esthetiek",
-                    "Orale Revalidatie"
                 ]
             },
             "arethuza": {

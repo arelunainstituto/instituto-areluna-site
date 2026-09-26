@@ -4,8 +4,6 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
 
 import draYaraImg from "@/assets/Dra_Yara_Campos.jpg";
-import draFedericaImg from "@/assets/Dra_Federica_Laporta.jpg";
-import draPatriciaImg from "@/assets/Dra_Patrícia_Tatsch.jpg";
 import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
 import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
 import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
@@ -93,31 +91,10 @@ const CorpoClinicoSection = () => {
       image: draYaraImg
     },
     {
-      id: "patricia",
-      name: "Dra. Patrícia Tatsch",
-      crm: "OMD 47868",
-      peloBrasil: false,
-      image: draPatriciaImg
-    },
-    {
-      id: "federica",
-      name: "Federica Laporta",
-      crm: "",
-      peloBrasil: false,
-      image: draFedericaImg
-    },
-    {
       id: "thais",
       name: "Dra. Thais Perlingeiro",
       crm: "OM 69564",
       peloBrasil: true,
-      image: ''
-    },
-    {
-      id: "anavitoria",
-      name: "Dra. Ana Vitória Marques",
-      crm: "OMD 15209",
-      peloBrasil: false,
       image: ''
     },
     {
