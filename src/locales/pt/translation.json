@@ -464,14 +464,12 @@
         }
     },
     "tourism": {
-        "badge": "Em 25 anos de experiência",
         "title": {
             "main": "Programa",
             "highlight": "Turismo Dentário"
         },
-        "question": "Vive fora de Portugal e gostava de ser acompanhado por um <highlight>médico dentista</highlight>?",
-        "description": "A <highlight1>Clínica Areluna</highlight1> dispõe de um programa de transformação de <highlight2>três dias</highlight2> com visita turística incluída à <highlight3>bela cidade do Porto</highlight3>.",
-        "cta_text": "Entre em contacto e mude a sua vida.",
+        "question": "Vive fora de Portugal?",
+        "description": "Organizamos as consultas de avaliação para aproveitar ao máximo cada deslocação ao Porto. O número de deslocações depende do plano de tratamento.",
         "benefits": {
             "3_days": {
                 "title": "3 Dias",
@@ -490,8 +488,7 @@
                 "desc": "25 anos de expertise"
             }
         },
-        "button": "AGENDAR CONSULTA ONLINE",
-        "video_badge": "25 ANOS"
+        "button": "MARCAR CONSULTA"
     },
     "before_after": {
         "background_text": "Transformação",

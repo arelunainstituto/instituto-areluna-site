@@ -464,14 +464,12 @@
         }
     },
     "tourism": {
-        "badge": "En 25 años de experiencia",
         "title": {
             "main": "Programa",
             "highlight": "Turismo Dental"
         },
-        "question": "¿Vives fuera de Portugal y te gustaría ser atendido por un <highlight>dentista</highlight>?",
-        "description": "La <highlight1>Clínica Areluna</highlight1> dispone de un programa de transformación de <highlight2>tres días</highlight2> con visita turística incluida a la <highlight3>bella ciudad de Oporto</highlight3>.",
-        "cta_text": "Contáctanos y cambia tu vida.",
+        "question": "¿Vive fuera de Portugal?",
+        "description": "Organizamos las consultas de evaluación para aprovechar al máximo cada desplazamiento a Oporto. El número de desplazamientos depende del plan de tratamiento.",
         "benefits": {
             "3_days": {
                 "title": "3 Días",
@@ -490,8 +488,7 @@
                 "desc": "25 años de experiencia"
             }
         },
-        "button": "AGENDAR CONSULTA ONLINE",
-        "video_badge": "25 AÑOS"
+        "button": "PEDIR CITA"
     },
     "before_after": {
         "background_text": "Transformación",

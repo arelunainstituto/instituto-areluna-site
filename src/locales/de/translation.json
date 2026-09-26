@@ -464,14 +464,12 @@
         }
     },
     "tourism": {
-        "badge": "In 25 Jahren Erfahrung",
         "title": {
             "main": "Programm",
             "highlight": "Zahntourismus"
         },
-        "question": "Leben Sie außerhalb Portugals und möchten von einem <highlight>Zahnarzt</highlight> betreut werden?",
-        "description": "Die <highlight1>Klinik Areluna</highlight1> bietet ein <highlight2>dreitägiges</highlight2> Transformationsprogramm inklusive touristischem Besuch in der <highlight3>schönen Stadt Porto</highlight3>.",
-        "cta_text": "Kontaktieren Sie uns und ändern Sie Ihr Leben.",
+        "question": "Sie leben außerhalb Portugals?",
+        "description": "Wir planen die Untersuchungstermine so, dass Sie jede Reise nach Porto optimal nutzen. Die Anzahl der Reisen hängt vom Behandlungsplan ab.",
         "benefits": {
             "3_days": {
                 "title": "3 Tage",
@@ -490,8 +488,7 @@
                 "desc": "25 Jahre Expertise"
             }
         },
-        "button": "ONLINE-BERATUNG VEREINBAREN",
-        "video_badge": "25 JAHRE"
+        "button": "TERMIN VEREINBAREN"
     },
     "before_after": {
         "background_text": "Transformation",
