@@ -132,29 +132,6 @@
             }
         }
     },
-    "stats": {
-        "title": "Your Health in Numbers",
-        "subtitle": "More than numbers, these are stories of lives transformed by an excellent multidisciplinary team.",
-        "footer_text": "Building smiles for over two decades",
-        "specialists": {
-            "value": "12",
-            "label": "Specialists"
-        },
-        "specialties": {
-            "value": "12",
-            "label": "Specialties"
-        },
-        "patients": {
-            "prefix": "+ than",
-            "value": "50k",
-            "label": "Treatments Performed"
-        },
-        "tradition": {
-            "prefix": "+ than",
-            "value": "24 years",
-            "label": "of tradition"
-        }
-    },
     "treatments": {
         "title": "Treatments",
         "power_title": "The Power of a Smile",

@@ -132,29 +132,6 @@
             }
         }
     },
-    "stats": {
-        "title": "A Sua Saúde em Números",
-        "subtitle": "Mais do que números, são histórias de vidas transformadas por uma equipa multidisciplinar de excelência.",
-        "footer_text": "Construindo sorrisos há mais de duas décadas",
-        "specialists": {
-            "value": "12",
-            "label": "Especialistas"
-        },
-        "specialties": {
-            "value": "12",
-            "label": "Especialidades"
-        },
-        "patients": {
-            "prefix": "+ de",
-            "value": "50k",
-            "label": "Tratamentos Realizados"
-        },
-        "tradition": {
-            "prefix": "+ de",
-            "value": "24 anos",
-            "label": "de tradição"
-        }
-    },
     "treatments": {
         "title": "Tratamentos",
         "power_title": "O Poder de um Sorriso",

@@ -3,7 +3,6 @@ import TourismDentarioHeroSection from "@/components/TourismDentarioHeroSection"
 import TourismDentarioSection from "@/components/TourismDentarioSection";
 import CheckupIntegradoSection from "@/components/CheckupIntegradoSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import StatsSection from "@/components/StatsSection";
 import TourismDentarioFAQSection from "@/components/TourismDentarioFAQSection";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
@@ -46,7 +45,6 @@ const TourismDentarioPage = () => {
       <TourismDentarioHeroSection />
       <TourismDentarioSection />
       <CheckupIntegradoSection />
-      <StatsSection />
       <BeforeAfterSection />
       <TourismDentarioFAQSection />
       <ContactFormSection />
