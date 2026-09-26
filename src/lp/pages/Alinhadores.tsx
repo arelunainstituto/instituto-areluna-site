@@ -6,7 +6,6 @@ import FinalCTASection from "@/lp/components/sections/FinalCTASection";
 import BeforeAfterOrtodontia from "@/lp/components/BeforeAfterOrtodontia";
 import BenefitsAlinhadores from "@/lp/components/BenefitsAlinhadores";
 import HowItWorksOrtodontia from "@/lp/components/HowItWorksOrtodontia";
-import TestimonialsOrtodontia from "@/lp/components/TestimonialsOrtodontia";
 import AuthorityOrtodontia from "@/lp/components/AuthorityOrtodontia";
 import Footer from "@/lp/components/Footer";
 import { CLINIC_IMAGE, LEAD_WEBHOOK_URL } from "@/lp/config/landingPages";
@@ -81,7 +80,6 @@ const Alinhadores = () => {
       <BeforeAfterOrtodontia />
       <BenefitsAlinhadores />
       <HowItWorksOrtodontia />
-      <TestimonialsOrtodontia />
       <AuthorityOrtodontia />
       <FinalCTASection
         titlePrefix="Chegou a hora de alinhar."

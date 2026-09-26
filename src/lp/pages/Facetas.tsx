@@ -6,7 +6,6 @@ import FinalCTASection from "@/lp/components/sections/FinalCTASection";
 import BeforeAfterEstetica from "@/lp/components/BeforeAfterEstetica";
 import BenefitsFacetas from "@/lp/components/BenefitsFacetas";
 import HowItWorksEstetica from "@/lp/components/HowItWorksEstetica";
-import TestimonialsEstetica from "@/lp/components/TestimonialsEstetica";
 import AuthorityEstetica from "@/lp/components/AuthorityEstetica";
 import Footer from "@/lp/components/Footer";
 import { CLINIC_IMAGE, LEAD_WEBHOOK_URL } from "@/lp/config/landingPages";
@@ -81,7 +80,6 @@ const Facetas = () => {
       <BeforeAfterEstetica />
       <BenefitsFacetas />
       <HowItWorksEstetica />
-      <TestimonialsEstetica />
       <AuthorityEstetica />
       <FinalCTASection
         titlePrefix="Chegou a hora de transformar."
