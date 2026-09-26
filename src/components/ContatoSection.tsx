@@ -132,8 +132,8 @@ const ContatoSection = () => {
                   <p className="font-vivant-light">{t("contact_page.info.location.address_galiza")}</p>
                 </div>
                 <div className="text-jet/80 dark:text-gray-300">
-                  <p className="font-vivant text-lg mb-1 text-[hsl(var(--gold-leaf))]">{t("contact_page.info.location.unit_marques")}</p>
-                  <p className="font-vivant-light">{t("contact_page.info.location.address_marques")}</p>
+                  <p className="font-vivant text-lg mb-1 text-[hsl(var(--gold-leaf))]">{t("contact_page.info.location.unit_lisboa")}</p>
+                  <p className="font-vivant-light">{t("contact_page.info.location.address_lisboa")}</p>
                 </div>
 
                 <div className="mt-6">

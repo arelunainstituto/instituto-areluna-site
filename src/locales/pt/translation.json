@@ -904,8 +904,8 @@
                 "title": "Localização",
                 "unit_galiza": "Porto · Mota Galiza (Sede)",
                 "address_galiza": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto",
-                "unit_marques": "Lisboa · Lumiar (Nova Unidade)",
-                "address_marques": "Alameda das Linhas de Torres / Lumiar, Lisboa",
+                "unit_lisboa": "Lisboa · Lumiar (Nova Unidade)",
+                "address_lisboa": "Alameda das Linhas de Torres / Lumiar, Lisboa",
                 "map_button": "VER NO MAPA"
             },
             "transport": {

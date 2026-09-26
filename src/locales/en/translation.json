@@ -595,8 +595,8 @@
                 "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
             },
             "unit2": {
-                "name": "Unit | Marquês",
-                "address": "Rua de Faria Guimarães, 450 | 4000-205 Porto"
+                "name": "Unit | Lumiar",
+                "address": "Alameda das Linhas de Torres / Lumiar, Lisbon"
             }
         },
         "opening_hours": {
@@ -904,8 +904,8 @@
                 "title": "Location",
                 "unit_galiza": "Mota Galiza Unit",
                 "address_galiza": "Rua de Júlio Dinis, 190 | 4050-027 Porto",
-                "unit_marques": "Marquês Unit",
-                "address_marques": "Rua de Faria Guimarães, 450 | 4000-205 Porto",
+                "unit_lisboa": "Lisbon · Lumiar (New Clinic)",
+                "address_lisboa": "Alameda das Linhas de Torres / Lumiar, Lisbon",
                 "map_button": "VIEW ON MAP"
             },
             "transport": {
