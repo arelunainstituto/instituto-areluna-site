@@ -200,13 +200,13 @@ const Footer = () => {
                 <h4 className="text-sm font-vivant text-[hsl(var(--gold-leaf))] mb-3">{t('footer.units.compliance_title', 'Conformidade & Regulação')}</h4>
                 <ul className="space-y-1.5">
                   <li className="text-pure-white/80 font-vivant-light text-xs font-semibold">
-                    {t('footer.units.company_name', 'Instituto AreLuna Lda. · NIPC 516 161 637')}
+                    Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240 · Inscrição ERS n.º 37630
                   </li>
                   <li className="text-pure-white/70 font-vivant-light text-xs">
-                    <span className="font-semibold text-pure-white/90">{t('footer.reg_number')}</span> E161637
+                    <span className="font-semibold text-pure-white/90">Unidade Mota Galiza</span> — Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593
                   </li>
                   <li className="text-pure-white/70 font-vivant-light text-xs">
-                    <span className="font-semibold text-pure-white/90">{t('footer.license_number')}</span> 21593/2022
+                    <span className="font-semibold text-pure-white/90">Unidade Marquês</span> — Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345
                   </li>
                 </ul>
                 <a
@@ -227,7 +227,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-pure-white/60 text-sm font-vivant-light text-center md:text-left">
-              © {new Date().getFullYear()} Instituto Areluna - {t('footer.main_title')}. {t('footer.rights_reserved')}
+              © {new Date().getFullYear()} Instituto Areluna Medicina Dentária Avançada, Lda.
             </div>
 
             {/* Links legais */}
