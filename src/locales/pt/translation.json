@@ -37,17 +37,16 @@
     },
     "team": {
         "title": "Corpo Clínico",
-        "subtitle": "Nossa equipa de médicos especialistas está comprometida em oferecer o melhor cuidado com excelência e dedicação no padrão IAL",
-        "specialist_in": "Especialista em",
-        "by_brazil": "*pelo Brasil",
+        "subtitle": "A nossa equipa clínica. Cada profissional está identificado com a Ordem profissional e o número de cédula.",
+        "specialist_in": "Áreas de atuação",
         "doctors": {
             "leonardo": {
                 "role": "Médico Dentista",
                 "specialty": "Radiologia",
-                "bio": "Médico Dentista com especialização em Radiologia e Estomatologia. Diagnóstico preciso e visão abrangente da saúde oral.",
+                "bio": "Médico dentista, OMD n.º 11846. Formação em Radiologia e Patologia Oral (Brasil).",
                 "specs": [
                     "Radiologia",
-                    "Estomatologia e Patologia Oral"
+                    "Patologia Oral"
                 ]
             },
             "daiane": {

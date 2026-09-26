@@ -18,7 +18,7 @@ interface TeamMember {
 }
 
 const TEAM: TeamMember[] = [
-  { id: "leonardo",  name: "Dr. Leonardo Saraiva",     crm: "OMD 11846", jobTitle: "Médico Dentista — Radiologia",         knowsAbout: ["Radiologia", "Estomatologia e Patologia Oral"] },
+  { id: "leonardo",  name: "Dr. Leonardo Saraiva",     crm: "OMD 11846", jobTitle: "Médico Dentista — Radiologia",         knowsAbout: ["Radiologia", "Patologia Oral"] },
   { id: "daiane",    name: "Dra. Daiane Andrade",      crm: "OMD 22681", jobTitle: "Médica Dentista — Endodontia",         knowsAbout: ["Endodontia", "Reabilitação Oral"] },
   { id: "carla",     name: "Dra. Carla Salvi",         crm: "OMD 15214", jobTitle: "Cirurgiã Oral e Maxilofacial",         knowsAbout: ["Cirurgia Oral"] },
   { id: "marcos",    name: "Dr. Marcos Kawasaki",      crm: "OM 75498",  jobTitle: "Médico — Transplante Capilar",         knowsAbout: ["Transplante Capilar", "Dermatologia"] },

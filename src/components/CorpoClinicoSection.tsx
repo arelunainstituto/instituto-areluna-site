@@ -225,11 +225,6 @@ const CorpoClinicoSection = () => {
                                 {specialty}
                               </span>
                             )}
-                            {doctor.peloBrasil && (
-                              <span className="text-xs text-jet/50 dark:text-gray-500 italic mt-1 block">
-                                {t('team.by_brazil')}
-                              </span>
-                            )}
                           </div>
                         </div>
                       </div>

@@ -37,17 +37,16 @@
     },
     "team": {
         "title": "Clinical Team",
-        "subtitle": "Our team of specialist doctors is committed to offering the best care with excellence and dedication in the IAL standard",
-        "specialist_in": "Specialist in",
-        "by_brazil": "*in Brazil",
+        "subtitle": "Unser klinisches Team. Jede Fachkraft ist mit ihrer Berufskammer und ihrer Registriernummer angegeben.",
+        "specialist_in": "Tätigkeitsbereiche",
         "doctors": {
             "leonardo": {
                 "role": "Dentist",
                 "specialty": "Radiology",
-                "bio": "Dentist specializing in Radiology and Stomatology. Precise diagnosis and comprehensive view of oral health.",
+                "bio": "Zahnarzt, OMD Nr. 11846. Ausbildung in Radiologie und Oralpathologie (Brasilien).",
                 "specs": [
-                    "Radiology",
-                    "Stomatology and Oral Pathology"
+                    "Radiologie",
+                    "Oralpathologie"
                 ]
             },
             "daiane": {
