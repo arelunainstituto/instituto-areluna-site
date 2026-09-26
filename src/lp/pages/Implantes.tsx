@@ -18,24 +18,24 @@ import {
 
 const faqImplantes = buildFAQSchema([
   {
-    question: "Em quanto tempo recupero o sorriso com All-on-Four?",
+    question: "Quando é colocada a prótese fixa no All-on-Four?",
     answer:
-      "Com a técnica All-on-Four é possível sair da clínica com a prótese fixa colocada em 24 horas após a cirurgia, devolvendo de imediato a função mastigatória e a estética do sorriso.",
+      "Em casos selecionados, após avaliação clínica e exames, pode ser colocada uma prótese fixa provisória no próprio dia ou no dia seguinte.",
   },
   {
     question: "É preciso fazer enxerto ósseo?",
     answer:
-      "Na maioria dos casos não. A técnica All-on-Four foi concebida precisamente para tirar partido do osso disponível, evitando enxertos e reduzindo o tempo total de tratamento.",
+      "Depende do caso. A técnica All-on-Four foi concebida para aproveitar o osso disponível; a necessidade de enxerto é avaliada na consulta, com exames de imagem.",
   },
   {
     question: "Quanto custam os implantes dentários no Instituto Areluna?",
     answer:
-      "O orçamento é sempre personalizado e elaborado após avaliação clínica gratuita, com possibilidade de planos de pagamento adaptados a cada paciente.",
+      "O orçamento é elaborado após a consulta de avaliação. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte.",
   },
   {
     question: "Os implantes dentários doem?",
     answer:
-      "A cirurgia é realizada sob anestesia local e protocolos de conforto, sendo um procedimento bem tolerado. O pós-operatório é, em regra, ligeiro e controlado com medicação habitual.",
+      "A cirurgia é realizada sob anestesia local. No pós-operatório pode haver desconforto, que é controlado com a medicação indicada pelo médico dentista.",
   },
 ]);
 
@@ -43,16 +43,16 @@ const Implantes = () => {
   return (
     <main id="main-content" tabIndex={-1} className="lp-scope">
       <SEO
-        title="Implantes Dentários All-on-Four em 24h | Porto"
-        description="Recupere o seu sorriso em 24 horas com a técnica All-on-Four no Porto. Apenas 4 implantes por arcada, sem enxertos. Marque a sua avaliação gratuita."
-        keywords="implantes dentários Porto, all-on-four Porto, implantes 24 horas, prótese fixa implantes, reabilitação oral Porto"
+        title="Implantes dentários All-on-Four no Porto | Instituto Areluna"
+        description="Implantes dentários com a técnica All-on-Four no Porto. A indicação depende de consulta de avaliação e diagnóstico individual. Marque a sua consulta de avaliação."
+        keywords="implantes dentários Porto, all-on-four Porto, prótese fixa implantes, reabilitação oral Porto"
         path="/implantes-dentarios-porto"
         jsonLd={[
           organizationSchema,
           buildServiceSchema({
             name: "Implantes Dentários All-on-Four",
             description:
-              "Reabilitação oral completa com 4 implantes por arcada e prótese fixa entregue em 24 horas, sem necessidade de enxertos ósseos.",
+              "Reabilitação oral com 4 implantes por arcada. Em casos selecionados, após avaliação clínica e exames, pode ser colocada uma prótese fixa provisória no próprio dia ou no dia seguinte.",
             path: "/implantes-dentarios-porto",
             serviceType: "Implantologia Dentária",
           }),
@@ -67,10 +67,10 @@ const Implantes = () => {
       <Header />
       <HeroSection
         overlayImage={CLINIC_IMAGE}
-        titleTop="Volte a Sorrir"
-        titleHighlight="em até 24 Horas"
-        subtitle="Com a técnica All-on-Four, o seu sorriso fixo, bonito e funcional está a um dia de distância."
-        description="Reabilitação oral completa com apenas 4 implantes — sem enxertos e com estética natural. Ideal para quem quer deixar a prótese móvel no passado."
+        titleTop="Implantes dentários All-on-Four"
+        titleHighlight="no Porto"
+        subtitle="Em casos selecionados, após avaliação clínica e exames, pode ser colocada uma prótese fixa provisória no próprio dia ou no dia seguinte."
+        description="Reabilitação oral com 4 implantes por arcada, para quem tem falta de dentes ou usa prótese removível. A indicação é confirmada na consulta de avaliação."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         formInteresse="Implantes Dentários"
         formDescription="Descubra se é candidato ao All-on-Four"
@@ -82,12 +82,12 @@ const Implantes = () => {
       <HowItWorks />
       <Authority />
       <FinalCTASection
-        titlePrefix="Chegou a hora de mudar."
-        titleHighlight="O seu sorriso pode estar pronto amanhã."
-        description="Marque a sua avaliação e descubra se pode fazer o tratamento All-on-Four com entrega em 24h."
+        titlePrefix="Marque a sua consulta de avaliação."
+        titleHighlight="Implantes dentários All-on-Four no Porto."
+        description="Na consulta avaliamos o seu caso, explicamos as opções indicadas, os riscos e os custos."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         trustIndicators={[
-          { label: "Avaliação sem compromisso" },
+          { label: "Primeira consulta de avaliação sem custo" },
           { label: "Atendimento personalizado" },
           { label: "Acompanhamento contínuo" },
         ]}

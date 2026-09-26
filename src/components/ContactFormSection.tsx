@@ -28,7 +28,7 @@ const AGE_OPTIONS = [
 const UNIT_OPTIONS = [
   { value: "lisboa", labelKey: "unit_lisboa", defaultLabel: "Lisboa" },
   { value: "porto", labelKey: "unit_porto", defaultLabel: "Porto" },
-  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Turismo Dentário" }
+  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Vivo fora de Portugal" }
 ];
 
 const LANGUAGE_OPTIONS = [
@@ -219,7 +219,7 @@ const ContactFormSection = () => {
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
             <Trans
               i18nKey="triage_form.subtitle_html"
-              defaults="Atendimento exclusivo nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza)</strong>. Preencha os seus dados para que a equipa médica e de acolhimento prepare a melhor abordagem para o seu caso."
+              defaults="Consultas nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza e Marquês)</strong>. Preencha os seus dados para que a equipa prepare a sua consulta de avaliação."
               components={{ strong: <strong /> }}
             />
           </p>
@@ -463,7 +463,7 @@ const ContactFormSection = () => {
                       </option>
                     </select>
                     <span className="block mt-2 text-xs text-gray-500 dark:text-gray-400">
-                      {t('triage_form.smile_hint', 'Esta informação ajuda-nos a direcionar o especialista mais indicado para o seu plano de tratamento.')}
+                      {t('triage_form.smile_hint', 'Esta informação ajuda-nos a preparar a sua consulta de avaliação.')}
                     </span>
                   </div>
 
@@ -592,7 +592,7 @@ const ContactFormSection = () => {
                     {t('triage_form.sidebar_lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}
                   </p>
                   <p className="text-[11px] text-[hsl(var(--gold-leaf))] font-medium mt-2">
-                    {t('triage_form.sidebar_lisboa_tag', '✓ Abertura de Agendamentos & Avaliações Prioritárias')}
+                    {t('triage_form.sidebar_lisboa_tag', '✓ Marcação de consultas de avaliação')}
                   </p>
                 </div>
 
@@ -607,10 +607,25 @@ const ContactFormSection = () => {
                     </span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
-                    {t('triage_form.sidebar_porto_address', 'Rua de Júlio Dinis, 194 R/C | 4050-024 Porto')}
+                    {t('triage_form.sidebar_porto_address', 'Rua Júlio Dinis, n.º 194, 4050-327 Porto')}
                   </p>
                   <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
-                    {t('triage_form.sidebar_porto_reg', 'Registo ERS: E161637 · Licença: 21593/2022')}
+                    {t('triage_form.sidebar_porto_reg', 'Registo ERS n.º 161637 · Licença de funcionamento n.º 21593')}
+                  </p>
+                </div>
+
+                {/* Unidade Porto · Marquês */}
+                <div className="p-4 rounded-2xl bg-gray-50/80 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="font-vivant font-semibold text-jet dark:text-white text-base">
+                      {t('triage_form.sidebar_marques_name', 'Porto · Marquês')}
+                    </h5>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
+                    {t('triage_form.sidebar_marques_address', 'Rua de Faria Guimarães, n.º 450, 4000-205 Porto')}
+                  </p>
+                  <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
+                    {t('triage_form.sidebar_marques_reg', 'Registo ERS n.º 175125 · Licença de funcionamento n.º 25345')}
                   </p>
                 </div>
               </div>

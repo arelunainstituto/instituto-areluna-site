@@ -4,18 +4,17 @@ const Authority = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            Instituto Areluna,{" "}
+            Instituto Areluna:{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              especialista em implantes dentários
+              implantes dentários no Porto
             </span>
           </h2>
 
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-premium">
             <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-              Com vasta experiência em implantologia e utilizando tecnologia de ponta,
-              o Instituto Areluna realiza procedimentos com segurança, conforto e resultados excepcionais.
-              Especialista em reabilitação oral completa e devolução da confiança no sorriso,
-              tudo num ambiente moderno e acolhedor.
+              A equipa clínica do Instituto Areluna realiza tratamentos de implantologia e reabilitação oral.
+              Cada plano resulta de uma consulta de avaliação e de diagnóstico individual,
+              e os resultados variam de pessoa para pessoa.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
@@ -27,7 +26,7 @@ const Authority = () => {
                   Técnica All-on-Four
                 </h3>
                 <p className="text-muted-foreground">
-                  Reabilitação completa com apenas 4 implantes
+                  Reabilitação com 4 implantes por arcada
                 </p>
               </div>
 
@@ -36,10 +35,10 @@ const Authority = () => {
                   <span className="text-white text-3xl">👨‍⚕️</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Equipa Especializada
+                  Equipa clínica
                 </h3>
                 <p className="text-muted-foreground">
-                  Cirurgiões experientes em implantologia
+                  Médicos dentistas com atividade em implantologia
                 </p>
               </div>
 
@@ -48,10 +47,10 @@ const Authority = () => {
                   <span className="text-white text-3xl">⚡</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Resultados em 24h
+                  Prótese provisória
                 </h3>
                 <p className="text-muted-foreground">
-                  Sorriso fixo e funcional no mesmo dia
+                  Em casos selecionados, no próprio dia ou no dia seguinte
                 </p>
               </div>
             </div>
@@ -63,15 +62,15 @@ const Authority = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Sem Enxertos Ósseos
+                Avaliação com exames
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Recuperação Rápida
+                Plano explicado
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Resultados Duradouros
+                Consultas de controlo
               </span>
             </div>
           </div>

@@ -6,7 +6,6 @@ import FinalCTASection from "@/lp/components/sections/FinalCTASection";
 import BeforeAfterEstetica from "@/lp/components/BeforeAfterEstetica";
 import BenefitsFacetas from "@/lp/components/BenefitsFacetas";
 import HowItWorksEstetica from "@/lp/components/HowItWorksEstetica";
-import TestimonialsEstetica from "@/lp/components/TestimonialsEstetica";
 import AuthorityEstetica from "@/lp/components/AuthorityEstetica";
 import Footer from "@/lp/components/Footer";
 import { CLINIC_IMAGE, LEAD_WEBHOOK_URL } from "@/lp/config/landingPages";
@@ -21,12 +20,12 @@ const faqFacetas = buildFAQSchema([
   {
     question: "Qual a diferença entre facetas e lentes de contacto dental?",
     answer:
-      "As lentes de contacto dental são facetas ultrafinas, com espessuras a partir de 0,2 mm, que exigem desgaste mínimo do dente. Ambas corrigem cor, forma e alinhamento.",
+      "As lentes de contacto dental são facetas ultrafinas, que em regra exigem menor desgaste do dente. A opção indicada depende da avaliação clínica.",
   },
   {
     question: "Quanto tempo duram as facetas dentárias?",
     answer:
-      "Com cuidados adequados, as facetas em cerâmica duram, em média, entre 10 e 20 anos, mantendo o brilho e a estética originais.",
+      "A durabilidade depende do material, dos hábitos e da manutenção. Na consulta explicamos o que esperar no seu caso.",
   },
   {
     question: "Quantas consultas são necessárias para colocar facetas?",
@@ -36,7 +35,7 @@ const faqFacetas = buildFAQSchema([
   {
     question: "As facetas dentárias estragam os dentes?",
     answer:
-      "Não. Quando bem indicadas e colocadas por equipa especializada, preservam grande parte da estrutura dental e protegem o dente original.",
+      "Depende do caso. As facetas implicam, em regra, algum desgaste do dente; a indicação e o tipo de faceta são definidos na consulta de avaliação.",
   },
 ]);
 
@@ -45,7 +44,7 @@ const Facetas = () => {
     <main id="main-content" tabIndex={-1} className="lp-scope">
       <SEO
         title="Facetas Dentárias no Porto | Instituto Areluna"
-        description="Transforme o seu sorriso com facetas dentárias ultrafinas no Porto. Resultado natural, durável e personalizado, com planeamento digital no Instituto Areluna."
+        description="Facetas dentárias no Porto, com planeamento digital. A indicação depende de consulta de avaliação e diagnóstico individual. Instituto Areluna."
         keywords="facetas dentárias Porto, lentes de contacto dental, facetas em cerâmica, sorriso branco, estética dental Porto"
         path="/facetas-dentarias-porto"
         jsonLd={[
@@ -53,7 +52,7 @@ const Facetas = () => {
           buildServiceSchema({
             name: "Facetas Dentárias",
             description:
-              "Facetas dentárias ultrafinas em cerâmica para correção de cor, forma e alinhamento dos dentes. Resultado estético natural e duradouro.",
+              "Facetas dentárias em cerâmica para correção de cor e forma dos dentes, após avaliação clínica.",
             path: "/facetas-dentarias-porto",
             serviceType: "Estética Dentária",
           }),
@@ -68,10 +67,10 @@ const Facetas = () => {
       <Header />
       <HeroSection
         overlayImage={CLINIC_IMAGE}
-        titleTop="Transforme o seu Sorriso"
-        titleHighlight="com Facetas Dentárias"
-        subtitle="Lentes de contato dental ultrafinas para um sorriso perfeito e natural em poucos dias."
-        description="Correção de formato, cor e alinhamento dos dentes com tecnologia de ponta. Resultado imediato e duradouro para o sorriso dos seus sonhos."
+        titleTop="Facetas dentárias"
+        titleHighlight="no Porto"
+        subtitle="Facetas em cerâmica e lentes de contacto dental, com planeamento digital."
+        description="Correção de formato e cor dos dentes. O número de consultas e o tipo de faceta dependem da avaliação clínica."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         formInteresse="Facetas"
         formDescription="Descubra se as facetas são ideais para si"
@@ -81,17 +80,16 @@ const Facetas = () => {
       <BeforeAfterEstetica />
       <BenefitsFacetas />
       <HowItWorksEstetica />
-      <TestimonialsEstetica />
       <AuthorityEstetica />
       <FinalCTASection
-        titlePrefix="Chegou a hora de transformar."
-        titleHighlight="Seu sorriso perfeito com facetas."
+        titlePrefix="Marque a sua consulta de avaliação."
+        titleHighlight="Facetas dentárias no Porto."
         description="Marque a sua avaliação e descubra se pode fazer o tratamento com facetas dentárias."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         trustIndicators={[
-          { label: "Avaliação sem compromisso" },
+          { label: "Primeira consulta de avaliação sem custo" },
           { label: "Design digital do sorriso" },
-          { label: "Resultado natural" },
+          { label: "Plano explicado" },
         ]}
       />
       <Footer />

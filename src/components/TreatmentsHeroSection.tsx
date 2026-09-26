@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const TreatmentsHeroSection = () => {
   const { t } = useTranslation();
@@ -57,28 +58,7 @@ const TreatmentsHeroSection = () => {
             {t('treatments_page.hero.cta_view_all')}
           </Button>
         </div>
-
-        {/* Estatísticas rápidas */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
-          {[
-            { number: t('treatments_page.hero.stats.experience.value'), label: t('treatments_page.hero.stats.experience.label') },
-            { number: t('treatments_page.hero.stats.smiles.value'), label: t('treatments_page.hero.stats.smiles.label') },
-            { number: t('treatments_page.hero.stats.satisfaction.value'), label: t('treatments_page.hero.stats.satisfaction.label') },
-            { number: t('treatments_page.hero.stats.treatments.value'), label: t('treatments_page.hero.stats.treatments.label') }
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-[#231F20]/95 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-[hsl(var(--gold-leaf))]/30 transition-all duration-300 text-center group"
-            >
-              <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-vivant font-bold text-[hsl(var(--gold-leaf))] mb-2">
-                {stat.number}
-              </div>
-              <div className="text-xs xs:text-sm sm:text-base font-vivant-light opacity-90 leading-tight">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        <ClinicalDisclaimer className="text-white/75 -mt-2 xs:-mt-6 mb-8" />
       </div>
 
       {/* Scroll indicator */}

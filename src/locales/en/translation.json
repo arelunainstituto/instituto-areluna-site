@@ -2,66 +2,66 @@
     "common": {
         "loading": "Loading...",
         "error": "An error occurred",
-        "contact": "Contact"
+        "contact": "Contact",
+        "clinical_disclaimer": "Whether any treatment is indicated depends on an assessment appointment and an individual diagnosis. Results vary from person to person."
     },
     "nav": {
         "institute": "The Institute",
         "treatments": "Treatments",
-        "tourism": "Dental Tourism",
+        "tourism": "International patients",
         "hair_transplant": "Hair Transplant",
         "facial_aesthetics": "Facial Aesthetics",
-        "before_after": "Before & After",
+        "clinical_cases": "Clinical cases",
         "blog": "Blog"
     },
     "hero": {
-        "title_start": "The main destination for advanced aesthetics and",
-        "title_highlight": "dentistry",
+        "title_start": "Dentistry, aesthetic medicine and",
+        "title_highlight": "hair treatments",
         "title_end": "in Portugal",
-        "subtitle": "European reference in integrated health and aesthetics",
+        "subtitle": "Assessment appointment and individual treatment plan · Lisbon & Porto",
         "find_procedure": "FIND YOUR PROCEDURE",
         "book": "BOOK NOW"
     },
     "gallery": {
         "title": "Clinic",
-        "subtitle": "Discover our modern spaces and state-of-the-art equipment",
+        "subtitle": "See our facilities and equipment",
         "fullscreen_alt": "Full screen clinic image",
-        "img1_alt": "Modern dental office",
-        "img2_alt": "Modern clinic space",
-        "img3_alt": "State-of-the-art equipment",
-        "img4_alt": "Treatment environment",
+        "img1_alt": "Dental surgery at Instituto AreLuna, Porto",
+        "img2_alt": "Reception area at Instituto AreLuna — dental clinic in Porto",
+        "img3_alt": "Diagnostic equipment at Instituto AreLuna, Porto",
+        "img4_alt": "Treatment room at Instituto AreLuna, Porto",
         "img5_alt": "Procedure room",
         "img6_alt": "Areluna clinic reception",
-        "img7_alt": "Modern facilities",
-        "img8_alt": "Advanced technology"
+        "img7_alt": "Instituto AreLuna facilities in Porto — dental clinic",
+        "img8_alt": "Oral diagnosis and treatment equipment at Instituto AreLuna, Porto"
     },
     "team": {
         "title": "Clinical Team",
-        "subtitle": "Our team of specialist doctors is committed to offering the best care with excellence and dedication in the IAL standard",
-        "specialist_in": "Specialist in",
-        "by_brazil": "*in Brazil",
+        "subtitle": "Our clinical team. Each professional is identified by their professional Order and licence number.",
+        "specialist_in": "Areas of practice",
         "doctors": {
             "leonardo": {
                 "role": "Dentist",
                 "specialty": "Radiology",
-                "bio": "Dentist specializing in Radiology and Stomatology. Precise diagnosis and comprehensive view of oral health.",
+                "bio": "Dentist, OMD no. 11846. Training in Radiology and Oral Pathology (Brazil).",
                 "specs": [
                     "Radiology",
-                    "Stomatology and Oral Pathology"
+                    "Oral Pathology"
                 ]
             },
             "daiane": {
                 "role": "Dentist",
                 "specialty": "Endodontics",
-                "bio": "Dentist specializing in Endodontics, focused on precision treatments and dental preservation.",
+                "bio": "Dentist, OMD no. 22681. Training in Endodontics (Brazil).",
                 "specs": [
                     "Endodontics",
                     "Oral Rehabilitation"
                 ]
             },
             "carla": {
-                "role": "Oral Surgeon",
+                "role": "Dentist",
                 "specialty": "Oral Surgery",
-                "bio": "Oral and Maxillofacial Surgeon with a Master's in Dental Medicine. Dedicated to aesthetic and functional smile rehabilitation.",
+                "bio": "Dentist, OMD no. 15214. Training in Oral Surgery (Brazil) and Master's in Dental Medicine.",
                 "specs": [
                     "Oral Surgery"
                 ]
@@ -69,16 +69,15 @@
             "marcos": {
                 "role": "Physician",
                 "specialty": "Hair Transplant",
-                "bio": "Over 17 years of clinical experience. Postgraduate in Dermatology (ISMD) and specialist in Hair Transplant.",
+                "bio": "Physician, OM no. 75498. Training in Hair Transplantation (Brazil) and postgraduate studies at ISMD.",
                 "specs": [
-                    "Hair Transplant",
-                    "Dermatology"
+                    "Hair Transplant"
                 ]
             },
             "aline": {
-                "role": "Oral Surgeon",
+                "role": "Dentist",
                 "specialty": "Facial Harmonization",
-                "bio": "Oral and Maxillofacial Surgeon trained in Advanced Facial Harmonization. Focused on natural and balanced results.",
+                "bio": "Dentist, OMD no. 12330. Training in Oral Surgery and Orofacial Harmonisation (Brazil).",
                 "specs": [
                     "Orofacial Harmonization",
                     "Oral Surgery"
@@ -87,7 +86,7 @@
             "pethine": {
                 "role": "Dentist",
                 "specialty": "Pediatric Dentistry",
-                "bio": "Dentist specializing in Pediatric Dentistry. Humanized care focused on children's well-being and comfort.",
+                "bio": "Dentist, OMD no. 12228. Training in Paediatric Dentistry (Brazil).",
                 "specs": [
                     "Pediatric Dentistry"
                 ]
@@ -95,7 +94,7 @@
             "sara": {
                 "role": "Dentist",
                 "specialty": "General Practice",
-                "bio": "Dentist working in integrated clinical dentistry and personalized approach for each patient.",
+                "bio": "Dentist, OMD no. 08560. Practice in general dentistry, oral rehabilitation and orofacial harmonisation.",
                 "specs": [
                     "General Practice and Oral Rehabilitation",
                     "Orofacial Harmonization"
@@ -104,51 +103,26 @@
             "yara": {
                 "role": "Dentist",
                 "specialty": "General Dentistry",
-                "bio": "Dentist working in General Dentistry and Oral Aesthetics. Focused on oral health combined with aesthetics, aiming for natural, functional, and personalized results for each patient.",
+                "bio": "Dentist, OMD no. 15666. Training in General Dentistry and Oral Aesthetics (Brazil).",
                 "specs": [
                     "General Dentistry",
                     "Oral Aesthetics"
                 ]
             },
-            "patricia": {
-                "role": "Plastic Surgeon",
-                "specialty": "Plastic Surgeon",
-                "bio": "Plastic Surgeon recognized for excellence in breast surgeries, combining care, technique, and naturalness. Expertise in breast augmentation, reduction, and implant exchange, as well as HD Lipo with natural definition.",
-                "specs": [
-                    "Plastic Surgeon"
-                ]
-            },
-            "federica": {
-                "role": "Dental Hygienist",
-                "specialty": "Dental Hygienist",
-                "bio": "Focused on prevention, oral health maintenance, and personalized patient follow-up, with attention to comfort, technique, and continuous care.",
-                "specs": [
-                    "Dental Hygienist"
-                ]
-            },
             "thais": {
                 "role": "Physician",
                 "specialty": "Endocrinology",
-                "bio": "Physician with training in Endocrinology and specialization in Nutrology. Focused on weight loss, menopause and anti-aging medicine, promoting disease prevention and hormonal balance.",
+                "bio": "Physician, OM no. 69564. Training in Endocrinology and Nutrology (Brazil). Practice in weight loss, menopause and anti-ageing medicine.",
                 "specs": [
                     "Endocrinology",
                     "Nutrology",
                     "Anti-Aging Medicine"
                 ]
             },
-            "anavitoria": {
-                "role": "Dentist",
-                "specialty": "Oral Aesthetics",
-                "bio": "Master in Dental Medicine from the University of Porto, with a focus on aesthetics and oral rehabilitation.",
-                "specs": [
-                    "Oral Aesthetics",
-                    "Oral Rehabilitation"
-                ]
-            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",
-                "bio": "Dentist specializing in Orthodontics, Orthopedics and Facial Harmonization. Master Injector Swift Beauty (NY) and Advanced Orofacial Harmonization (Miami).",
+                "bio": "Dentist, OMD no. 11845. Training in Orthodontics, Facial Orthopaedics and Orofacial Harmonisation (Brazil); Master Injector Swift Beauty (New York) and Advanced Orofacial Harmonisation (Miami).",
                 "specs": [
                     "Facial Harmonization",
                     "Orthodontics",
@@ -157,33 +131,10 @@
             }
         }
     },
-    "stats": {
-        "title": "Your Health in Numbers",
-        "subtitle": "More than numbers, these are stories of lives transformed by an excellent multidisciplinary team.",
-        "footer_text": "Building smiles for over two decades",
-        "specialists": {
-            "value": "12",
-            "label": "Specialists"
-        },
-        "specialties": {
-            "value": "12",
-            "label": "Specialties"
-        },
-        "patients": {
-            "prefix": "+ than",
-            "value": "50k",
-            "label": "Treatments Performed"
-        },
-        "tradition": {
-            "prefix": "+ than",
-            "value": "24 years",
-            "label": "of tradition"
-        }
-    },
     "treatments": {
         "title": "Treatments",
         "power_title": "The Power of a Smile",
-        "description": "Here, we treat smiles as an extension of each patient's identity.\n\nWe combine cutting-edge technology, multidisciplinary care, and aesthetic sensitivity to transform not just the smile — but also how you see and feel about yourself.\n\nAll with comfort, precision, and the excellence that makes Instituto Areluna a reference in oral rehabilitation.",
+        "description": "Each treatment plan follows an assessment appointment and an individual diagnosis.\n\nThe multidisciplinary team at Instituto Areluna brings together dentistry, aesthetic medicine and hair treatments.\n\nAt the appointment we explain the suitable options, the risks and the costs before any decision.",
         "discover_label": "DISCOVER THE IDEAL TREATMENT FOR YOU",
         "view_all": "View all {{count}} treatments →",
         "categories": {
@@ -194,24 +145,21 @@
             "estetica-corporal": "Body Aesthetics",
             "terapia-capilar": "Hair Therapy",
             "transplante-capilar": "Hair Transplant",
-            "nutricao": "Nutrition",
             "endocrinologia": "Endocrinology",
-            "ansiedade": "Clinical Anxiety",
-            "cirurgia-plastica": "Plastic Surgery",
-            "dermatologia": "Dermatology"
+            "dermatologia": "Hair treatments"
         },
         "cta": {
-            "title": "Meet your best version",
-            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "title": "Book your assessment appointment",
+            "description": "In the appointment we assess your situation and explain the suitable options, the risks and the costs. Only then do you decide.",
             "button": "Schedule consultation",
-            "premium": "Premium Care",
-            "tech": "Advanced Technology",
-            "results": "Continuous Follow-up"
+            "premium": "Individual assessment",
+            "tech": "Plan explained",
+            "results": "Quote before starting"
         },
         "items": {
             "1": {
                 "title": "Dental Aesthetics",
-                "description": "Advanced aesthetic treatments for complete smile transformation.",
+                "description": "Dental aesthetic treatments, defined after a clinical assessment.",
                 "features": [
                     "Veneers",
                     "Whitening",
@@ -223,45 +171,45 @@
                 "title": "Invisible Aligners",
                 "description": "Discreet orthodontic correction with removable transparent aligners.",
                 "features": [
-                    "Invisible",
+                    "Discreet",
                     "Removable",
                     "Comfortable",
-                    "Predictable"
+                    "Planned"
                 ]
             },
             "3": {
                 "title": "Traditional Orthodontics",
                 "description": "Orthodontic treatment with brackets for malocclusion correction.",
                 "features": [
-                    "Effective",
+                    "Brackets",
                     "Durable",
                     "Precise",
-                    "Economical"
+                    "Affordable"
                 ]
             },
             "4": {
                 "title": "Implantology and Advanced Surgery",
-                "description": "Dental implants and oral surgeries with cutting-edge technology.",
+                "description": "Dental implants and oral surgery, after clinical assessment and tests.",
                 "features": [
-                    "Immediate Load",
+                    "Digital planning",
                     "Biocompatible",
-                    "Long-lasting",
-                    "Natural"
+                    "Imaging tests",
+                    "Rehabilitation"
                 ]
             },
             "5": {
                 "title": "Endodontics",
                 "description": "Root canal treatment for preservation of compromised teeth.",
                 "features": [
-                    "Preserves Tooth",
-                    "Painless",
+                    "Tooth-preserving",
+                    "Local anaesthesia",
                     "Microscopy",
-                    "Success"
+                    "Follow-up"
                 ]
             },
             "6": {
                 "title": "Periodontology",
-                "description": "Specialized treatment of gums and support structures.",
+                "description": "Treatment of the gums and supporting structures of the teeth.",
                 "features": [
                     "Laser",
                     "Regeneration",
@@ -273,30 +221,30 @@
                 "title": "Collagen Biostimulators",
                 "description": "Sculptra and Radiesse for natural facial collagen stimulation.",
                 "features": [
-                    "Natural",
-                    "Long-lasting",
-                    "Rejuvenates",
-                    "Sculptra"
+                    "Collagen",
+                    "Sculptra",
+                    "Radiesse",
+                    "Facial assessment"
                 ]
             },
             "8": {
                 "title": "Double Chin Lipoenzymatic",
                 "description": "Non-surgical reduction of localized fat in the chin region.",
                 "features": [
-                    "Non-invasive",
-                    "Effective",
+                    "Non-surgical",
+                    "Enzymes",
                     "Contour",
-                    "Definition"
+                    "Prior assessment"
                 ]
             },
             "9": {
                 "title": "Facial Support Threads",
                 "description": "Non-surgical facial lifting with absorbable threads for firmness.",
                 "features": [
-                    "Lifting",
+                    "Absorbable threads",
+                    "Non-surgical",
                     "Firmness",
-                    "Natural",
-                    "Immediate"
+                    "Facial assessment"
                 ]
             },
             "10": {
@@ -314,9 +262,9 @@
                 "description": "Nose correction with hyaluronic acid without the need for surgery.",
                 "features": [
                     "Non-surgical",
-                    "Immediate",
+                    "Hyaluronic acid",
                     "Reversible",
-                    "Harmony"
+                    "Facial assessment"
                 ]
             },
             "12": {
@@ -381,7 +329,7 @@
             },
             "18": {
                 "title": "Lymphatic Drainage",
-                "description": "Specialized massage for post-surgical recovery and well-being.",
+                "description": "Massage for post-surgical recovery and well-being.",
                 "features": [
                     "Post-surgical",
                     "Detox",
@@ -403,9 +351,9 @@
                 "title": "Capillary Microinfusion (MMP)",
                 "description": "Infusion of medications directly into the scalp.",
                 "features": [
-                    "Medications",
+                    "Medication",
                     "Precision",
-                    "Efficacy",
+                    "Scalp",
                     "Targeted"
                 ]
             },
@@ -421,32 +369,22 @@
             },
             "22": {
                 "title": "FUE Transplant",
-                "description": "FUE technique without visible cuts for natural hair transplant.",
+                "description": "Hair transplant using the FUE technique, after assessment of the donor area.",
                 "features": [
-                    "No Scars",
-                    "Natural",
-                    "Permanent",
-                    "Technology"
+                    "FUE",
+                    "Follicular units",
+                    "Local anaesthesia",
+                    "Follow-up"
                 ]
             },
             "23": {
                 "title": "Evaluation with Dermatoscopy",
-                "description": "Advanced digital analysis of the scalp before transplant.",
+                "description": "Digital scalp analysis before the transplant.",
                 "features": [
                     "Digital",
                     "Precision",
                     "Planning",
                     "Analysis"
-                ]
-            },
-            "24": {
-                "title": "Anti-inflammatory Nutrition",
-                "description": "Nutritional plans to combat inflammation and optimize health.",
-                "features": [
-                    "Anti-inflammatory",
-                    "Personalized",
-                    "Health",
-                    "Well-being"
                 ]
             },
             "25": {
@@ -458,26 +396,15 @@
                     "Metabolic",
                     "Personalized"
                 ]
-            },
-            "26": {
-                "title": "Dental Anxiety Support",
-                "description": "Specialized support for patients with fear or dental trauma.",
-                "features": [
-                    "Support",
-                    "Comfort",
-                    "Security",
-                    "Specialized"
-                ]
             }
         }
     },
     "checkup": {
-        "pill": "EXCLUSIVE PROGRAM",
         "title": {
-            "main": "Integrated Check-up for",
-            "highlight": "International Patients"
+            "main": "Assessment for",
+            "highlight": "those living outside Portugal"
         },
-        "description": "A comprehensive and integrated assessment combining dentistry, facial aesthetics, hair analysis, and lab tests in just one day.",
+        "description": "We can schedule the assessment appointments you need (dentistry, facial aesthetics, hair assessment and clinical tests) during the same trip, whenever clinically appropriate.",
         "services_title": {
             "main": "What is included in your",
             "highlight": "Check-up"
@@ -509,10 +436,6 @@
             "highlight": "Program"
         },
         "benefits": {
-            "one_day": {
-                "title": "All in 1 Day",
-                "description": "Complete assessment in just one visit"
-            },
             "personal_assistant": {
                 "title": "Personal Assistant",
                 "description": "Full support in travel planning"
@@ -520,54 +443,27 @@
             "integrated_care": {
                 "title": "Integrated Care",
                 "description": "Holistic approach to your health and aesthetics"
-            },
-            "efficiency": {
-                "title": "Maximum Efficiency",
-                "description": "Time optimization for international patients"
             }
         },
         "cta": {
-            "title": "Ready for your transformation?",
-            "subtitle": "Schedule your Integrated Check-up and discover your full potential",
-            "button": "Schedule Check-up",
+            "button": "Book assessment",
             "support": "Multi-language assistance"
         }
     },
     "tourism": {
-        "badge": "In 25 years of experience",
         "title": {
-            "main": "Dental Tourism",
-            "highlight": "Program"
+            "main": "Patients living",
+            "highlight": "outside Portugal"
         },
-        "question": "Do you live outside Portugal and would like to be followed by a <highlight>dentist</highlight>?",
-        "description": "<highlight1>Clínica Areluna</highlight1> offers a <highlight2>three-day</highlight2> transformation program with a included tourist visit to the <highlight3>beautiful city of Porto</highlight3>.",
-        "cta_text": "Get in touch and change your life.",
-        "benefits": {
-            "3_days": {
-                "title": "3 Days",
-                "desc": "Intensive program"
-            },
-            "tourism": {
-                "title": "Tourism",
-                "desc": "Visit to Porto included"
-            },
-            "portuguese": {
-                "title": "Portuguese",
-                "desc": "National dentist"
-            },
-            "experience": {
-                "title": "Experience",
-                "desc": "25 years of expertise"
-            }
-        },
-        "button": "SCHEDULE ONLINE CONSULTATION",
-        "video_badge": "25 YEARS"
+        "question": "Do you live outside Portugal?",
+        "description": "We schedule your assessment appointments to make the most of each trip to Porto. The number of trips depends on your treatment plan.",
+        "button": "BOOK APPOINTMENT"
     },
     "before_after": {
-        "background_text": "Transformation",
+        "background_text": "Cases",
         "title": "Smile Gallery",
-        "subtitle": "Real Transformations",
-        "description": "See how we transform smiles and change lives with our advanced treatments. Each case is unique and personalized to achieve exceptional results.",
+        "subtitle": "Clinical cases",
+        "description": "Photos published with the patients' written consent. Each treatment plan followed an individual assessment and results vary from person to person.",
         "implants_title": "Implants and Rehabilitation",
         "facets_title": "Porcelain Veneers",
         "card": {
@@ -576,26 +472,26 @@
             "treatment_label": "Treatment"
         },
         "cta": {
-            "title": "Your Transformation Starts Here",
-            "text": "Schedule your consultation and discover how we can transform your smile with natural and lasting results.",
+            "title": "Book your assessment appointment",
+            "text": "At the first appointment we assess your case and explain the treatment options suitable for you.",
             "button": "SCHEDULE ASSESSMENT"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Complete Transformation",
+                    "title": "Oral rehabilitation with fixed prosthesis",
                     "desc": "Total oral rehabilitation with fixed prostheses",
                     "treatment": "Implants and Prostheses",
                     "duration": "4 months"
                 },
                 "2": {
-                    "title": "Renewed Smile",
+                    "title": "Implants and rehabilitation",
                     "desc": "Implants and advanced dental aesthetics",
                     "treatment": "Dental Implants",
                     "duration": "3 months"
                 },
                 "3": {
-                    "title": "Life Changing",
+                    "title": "Dental reconstruction",
                     "desc": "Personalized dental reconstruction",
                     "treatment": "Total Rehabilitation",
                     "duration": "5 months"
@@ -603,20 +499,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Harmonious Smile",
+                    "title": "Ceramic veneers",
                     "desc": "Porcelain veneers for aesthetic correction",
                     "treatment": "Porcelain Veneers",
                     "duration": "2 weeks"
                 },
                 "2": {
-                    "title": "Natural Perfection",
+                    "title": "Ultra-thin veneers",
                     "desc": "Ultra-thin veneers for natural result",
                     "treatment": "Ultra-thin Veneers",
                     "duration": "3 weeks"
                 },
                 "3": {
-                    "title": "Refined Elegance",
-                    "desc": "Personalized veneers for perfect smile",
+                    "title": "Custom veneers",
+                    "desc": "Veneers designed for each case",
                     "treatment": "Personalized Veneers",
                     "duration": "2 weeks"
                 }
@@ -626,8 +522,8 @@
     "contact": {
         "background_text": "Contact",
         "title": "Get in Touch",
-        "subtitle": "Renew Yourself!",
-        "description": "Contact us and schedule your consultation. We are ready to take care of you with the highest standards of quality and excellence.",
+        "subtitle": "Get in touch",
+        "description": "Book your appointment by phone, email or using the form.",
         "form": {
             "name": "Full Name",
             "name_placeholder": "Enter your full name",
@@ -640,7 +536,7 @@
             "subjects": {
                 "consultation": "Schedule Consultation",
                 "treatments": "Information about Treatments",
-                "tourism": "Dental Tourism",
+                "tourism": "International patients",
                 "emergency": "Emergency Consultation",
                 "other": "Others"
             },
@@ -661,12 +557,12 @@
         "units": {
             "title": "Units",
             "unit1": {
-                "name": "Unit | Mota Galiza",
-                "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
+                "name": "Unidade Mota Galiza",
+                "address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593"
             },
             "unit2": {
-                "name": "Unit | Marquês",
-                "address": "Rua de Faria Guimarães, 450 | 4000-205 Porto"
+                "name": "Unidade Marquês",
+                "address": "Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345"
             }
         },
         "opening_hours": {
@@ -693,7 +589,7 @@
         "terms_of_use": "Terms of Use",
         "cookies": "Cookies",
         "main_title": "Dental Medicine & Advanced Aesthetics",
-        "description": "We transform smiles with 25 years of experience, using the most advanced techniques and technologies to offer exceptional and natural results.",
+        "description": "Dentistry, aesthetic medicine and hair treatments in Porto.",
         "quick_links": "Quick Links",
         "regulatory_entity": "Regulatory Authority",
         "reg_number": "ERS Registration No:",
@@ -702,17 +598,17 @@
         "location": "Porto, Portugal",
         "hours": "Mon-Fri: 09h-19h<br/>Sat: By appointment<br/>Sun: Closed",
         "units": {
-            "porto_label": "Porto (Headquarters):",
-            "porto_address": "Rua de Júlio Dinis, 194 R/C, 4050-024 Porto",
+            "porto_label": "Porto (Mota Galiza):",
+            "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
             "lisboa_label": "Lisbon (New Clinic):",
             "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbon",
             "compliance_title": "Compliance & Regulation",
-            "company_name": "Instituto AreLuna Lda. · NIPC 516 161 637"
+            "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
     },
     "header": {
-        "subtitle": "The main destination for dental medicine in Porto",
-        "book_consultation": "BOOK CONSULTATION"
+        "subtitle": "Dentistry, aesthetic medicine and hair treatments",
+        "book_consultation": "BOOK APPOINTMENT"
     },
     "cookie_banner": {
         "title": "Your privacy is important",
@@ -722,62 +618,44 @@
     },
     "treatments_page": {
         "hero": {
-            "badge": "ADVANCED TREATMENTS",
-            "title_start": "Transforming Smiles,",
-            "title_highlight": "Changing Lives",
-            "description": "Discover our complete range of dental treatments with cutting-edge technology, always prioritizing your comfort and the best results.",
-            "cta_schedule": "BOOK CONSULTATION",
-            "cta_view_all": "VIEW ALL TREATMENTS",
-            "stats": {
-                "experience": {
-                    "value": "+24",
-                    "label": "Years of Experience"
-                },
-                "smiles": {
-                    "value": "+20k",
-                    "label": "Smiles Transformed"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Patient Satisfaction"
-                },
-                "treatments": {
-                    "value": "100+",
-                    "label": "Treatments Available"
-                }
-            }
+            "badge": "TREATMENTS",
+            "title_start": "Our",
+            "title_highlight": "treatments",
+            "description": "Dentistry, aesthetic medicine and hair treatments. Whether a treatment is indicated depends on an assessment appointment.",
+            "cta_schedule": "BOOK APPOINTMENT",
+            "cta_view_all": "VIEW ALL TREATMENTS"
         },
         "faq": {
             "title": "Frequently Asked Questions",
             "subtitle": "We Clarify Your Doubts",
             "description": "We have gathered the most common questions about our treatments. Didn't find the answer you are looking for? Contact us.",
             "cta_title": "Still have questions?",
-            "cta_desc": "Our team is available to clarify all your questions in a personalized consultation.",
+            "cta_desc": "Our team will answer your questions at the assessment appointment.",
             "cta_button": "CONTACT VIA WHATSAPP",
             "list": {
                 "ortho_time": {
                     "question": "How long does orthodontic treatment take?",
-                    "answer": "The time varies according to the complexity of the case, generally between 12 to 30 months. With invisible aligners, it can be faster (12-24 months). During the initial consultation, we provide a more precise estimate based on your specific situation."
+                    "answer": "The duration depends on the complexity of the case. At the assessment appointment we give an estimate for your situation."
                 },
                 "implants_pain": {
                     "question": "Do dental implants hurt?",
-                    "answer": "The procedure is performed under local anesthesia, so you will not feel pain during surgery. Post-operatively, there may be some discomfort that is easily controlled with medication. Most patients resume normal activities in 2-3 days."
+                    "answer": "The procedure is performed under local anaesthesia. After surgery there may be some discomfort, which is managed with the medication prescribed by the dentist. Recovery time varies from person to person."
                 },
                 "veneers_cost": {
                     "question": "How much do porcelain veneers cost?",
-                    "answer": "The price of veneers varies according to the number of teeth and complexity of the case, starting from €600 per tooth. We offer flexible payment plans and a free initial consultation for a personalized quote."
+                    "answer": "The price of veneers depends on the number of teeth and the complexity of the case, and is set out in a written quote after the appointment. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
                 },
                 "whitening_safety": {
                     "question": "Is teeth whitening safe?",
-                    "answer": "Yes, when performed by qualified professionals. We use approved techniques and pharmaceutical-grade products. There may be temporary sensitivity, which disappears in a few days. We always perform a prior assessment of dental health."
+                    "answer": "When indicated and carried out by qualified professionals with approved products. Temporary sensitivity may occur. We always assess dental health beforehand."
                 },
                 "bone_graft": {
                     "question": "Do I need a bone graft to place implants?",
-                    "answer": "It depends on the quantity and quality of available bone. About 30% of patients need a graft. We use advanced bone regeneration techniques that significantly increase the possibilities of implant placement."
+                    "answer": "It depends on the amount and quality of available bone, which we assess at the appointment with imaging tests. If a graft is needed, we explain the procedure, the risks and the costs."
                 },
                 "durability": {
                     "question": "What is the durability of aesthetic treatments?",
-                    "answer": "Porcelain veneers last 15-20 years, whitening 2-3 years (depending on habits), implants can last a lifetime with proper care. We offer guarantees and preventive maintenance programs."
+                    "answer": "Durability depends on the treatment, each person's habits and maintenance. At the appointment we explain what to expect in your case and the schedule of check-ups."
                 },
                 "insurance": {
                     "question": "Do you accept health insurance?",
@@ -785,211 +663,161 @@
                 },
                 "simultaneous": {
                     "question": "Is it possible to do multiple treatments simultaneously?",
-                    "answer": "Yes, we often combine treatments to optimize results and reduce total time. For example, implants with whitening, or orthodontics followed by veneers. We create a personalized integrated treatment plan."
+                    "answer": "In some cases treatments can be combined, when clinically appropriate. The treatment plan is defined after the assessment appointment."
                 }
             }
         }
     },
     "tourism_page": {
         "hero": {
-            "badge": "EXCLUSIVE PROGRAM",
-            "title_start": "Dental Tourism",
-            "title_highlight": "in Porto",
-            "description": "Transform your smile while discovering the beauties of the city of Porto. A 3-day program with dental treatment and tourist experience included.",
-            "cta_schedule": "BOOK PROGRAM",
-            "cta_more": "LEARN MORE",
-            "stats": {
-                "days": {
-                    "value": "3",
-                    "label": "Program Days"
-                },
-                "experience": {
-                    "value": "24+",
-                    "label": "Years of Experience"
-                },
-                "location": {
-                    "value": "Porto",
-                    "label": "Invicta City"
-                }
-            }
+            "badge": "INTERNATIONAL PATIENTS",
+            "title_start": "Patients living",
+            "title_highlight": "outside Portugal",
+            "description": "We care for patients who live outside Portugal: an in-person assessment in Porto, a written treatment plan stating the expected number of trips, and the same prices for all patients.",
+            "cta_schedule": "BOOK APPOINTMENT",
+            "cta_more": "LEARN MORE"
         },
         "faq": {
-            "title": "Questions about the Program",
-            "subtitle": "Dental Tourism in Porto",
-            "description": "We clarify all doubts about our exclusive dental tourism program. A unique experience that combines excellent dental care with the charm of Porto.",
-            "cta_title": "Ready for the experience?",
-            "cta_desc": "Schedule your dental tourism program and discover how you can transform your smile while exploring the beautiful city of Porto.",
-            "cta_button": "BOOK PROGRAM",
+            "title": "Frequently asked questions",
+            "subtitle": "Patients living outside Portugal",
+            "description": "How we organise the assessment and treatment of people living outside Portugal.",
+            "cta_title": "Book your assessment appointment",
+            "cta_desc": "At the first appointment we assess your case and give you a written plan with the expected number of trips.",
+            "cta_button": "BOOK APPOINTMENT",
             "list": {
                 "included": {
-                    "question": "What is included in the 3-day program?",
-                    "answer": "The program includes initial consultation, personalized treatment plan, necessary dental treatments, guided tour of the city of Porto, suggested accommodation, and post-treatment follow-up. We also provide all tourist information to make the most of your stay."
+                    "question": "How does the follow-up work?",
+                    "answer": "It starts with an in-person assessment appointment in Porto and, if needed, tests. We then give you a written treatment plan with the stages, the expected number of trips and the quote."
                 },
                 "language": {
-                    "question": "Do I need to speak Portuguese to participate in the program?",
-                    "answer": "It is not necessary. Our team is fluent in several languages, including English, French, and Spanish. All service and communication can be done in your preferred language, ensuring total comfort throughout the process."
+                    "question": "Do I need to speak Portuguese?",
+                    "answer": "No. The team communicates in several languages, including English, French and Spanish."
                 },
                 "treatments": {
-                    "question": "What types of treatments can be performed in 3 days?",
-                    "answer": "Treatments such as teeth whitening, porcelain veneers, crowns, small restorations, and deep cleanings can be completed. For more complex treatments like implants, we can start the process and plan a second visit if necessary."
+                    "question": "How many trips will I need?",
+                    "answer": "The number of trips depends on the treatment plan and is only defined after the in-person assessment. It is stated in the written plan we give you."
                 },
                 "accommodation": {
-                    "question": "How is accommodation organized during the program?",
-                    "answer": "We offer suggestions for partner hotels with special conditions for our patients, from budget options to luxury hotels. We can also recommend apartments or other types of accommodation according to your preference and budget."
-                },
-                "tourism": {
-                    "question": "What tourist sites will I visit in Porto?",
-                    "answer": "The itinerary includes iconic points such as Ribeira, Clérigos Tower, São Bento Station, Port wine cellars in Vila Nova de Gaia, Lello Bookstore, and much more. The tourist program is flexible and can be customized according to your interests."
+                    "question": "Does the clinic arrange travel or accommodation?",
+                    "answer": "No. Travel and accommodation are arranged by the patient. We schedule appointments to make the most of each trip to Porto."
                 },
                 "prices": {
-                    "question": "Are the prices different from normal service?",
-                    "answer": "Treatment prices remain the same. The dental tourism program offers added value with the tourist experience, with no additional costs in treatments. You only pay for the dental treatments you need."
+                    "question": "Are prices different for people living outside Portugal?",
+                    "answer": "No. Prices are the same for all patients, whether or not they live in Portugal. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
                 },
                 "followup": {
-                    "question": "What if I need additional treatment after returning to my country?",
-                    "answer": "We maintain contact for post-treatment follow-up and can coordinate with dentists in your home country if necessary. We also offer online follow-up consultations, and if you need, you can always return for complementary treatments."
+                    "question": "What about follow-up after I return home?",
+                    "answer": "We provide a clinical report you can share with your dentist in the country where you live. Check-ups take place in person, on dates agreed with you."
                 },
                 "companion": {
-                    "question": "Can I bring a companion during the program?",
-                    "answer": "Of course! Companions are welcome and can participate in the tourist experience. We offer suggestions for activities so they can enjoy their time while you are in treatments. The tourist program can be adapted for groups."
+                    "question": "Can I bring a companion?",
+                    "answer": "Yes, you may bring a companion to your appointments."
                 }
             }
         }
     },
     "hair_transplant_page": {
         "hero": {
-            "badge": "ADVANCED TECHNIQUE",
+            "badge": "HAIR TRANSPLANT",
             "title_start": "Hair Transplant",
-            "title_highlight": "FUE Premium",
-            "description": "Regain your confidence with the most advanced hair transplant technique. Natural and long-lasting results with cutting-edge technology and specialized teams.",
-            "cta_schedule": "BOOK CONSULTATION",
-            "cta_results": "VIEW RESULTS",
-            "stats": {
-                "experience": {
-                    "value": "24+",
-                    "label": "Years of Tradition"
-                },
-                "transplants": {
-                    "value": "FUE",
-                    "label": "High-Precision Micrografts"
-                },
-                "technique": {
-                    "value": "FUE",
-                    "label": "Premium Technique"
-                },
-                "satisfaction": {
-                    "value": "98%",
-                    "label": "Patient Satisfaction"
-                }
-            }
+            "title_highlight": "FUE in Porto",
+            "description": "Hair transplant using the FUE technique with Dr Marcos Kawasaki (OM no. 75498). Whether it is indicated depends on an assessment appointment with dermatoscopy.",
+            "cta_schedule": "BOOK APPOINTMENT",
+            "cta_results": "SEE CLINICAL CASES"
         },
         "faq": {
             "title": "Questions about Transplant",
             "subtitle": "FUE Hair Transplant",
-            "description": "We clarify all doubts about FUE hair transplant. The most advanced technique to regain your confidence and natural hair density.",
-            "cta_title": "Ready to regain your confidence?",
-            "cta_desc": "Schedule a consultation to evaluate your case and define the best personalized hair transplant plan.",
-            "cta_button_schedule": "BOOK CONSULTATION",
-            "cta_button_results": "VIEW RESULTS",
+            "description": "Answers to frequently asked questions about FUE hair transplantation.",
+            "cta_title": "Book your assessment appointment",
+            "cta_desc": "At the appointment we assess your case and explain whether a transplant is indicated, the risks and the costs.",
+            "cta_button_schedule": "BOOK APPOINTMENT",
+            "cta_button_results": "SEE CLINICAL CASES",
             "list": {
                 "fue_technique": {
                     "question": "What is the FUE technique and how does it work?",
-                    "answer": "FUE (Follicular Unit Extraction) is the most advanced hair transplant technique. We extract individual follicles from the donor area with 0.8-1.0mm micro-punches, preserving surrounding tissues. Then we implant each follicle in the recipient area with precision, ensuring natural results and rapid healing."
+                    "answer": "FUE (Follicular Unit Extraction) is a hair transplant technique in which individual follicular units are extracted from the donor area and then implanted in the recipient area. Whether it is indicated depends on the clinical assessment."
                 },
                 "pain": {
                     "question": "Is FUE hair transplant painful?",
-                    "answer": "The procedure is performed under local anesthesia, so you will not feel pain during surgery. There may be some minimal discomfort in the first 2-3 days, easily controlled with medication. Most patients find the post-operative period much more comfortable than they expected."
+                    "answer": "The procedure is performed under local anaesthesia. There may be some discomfort in the first days, managed with the medication prescribed by the doctor."
                 },
                 "results_time": {
                     "question": "When will I see the final results?",
-                    "answer": "The first hairs start to grow at 3-4 months. At 6 months a significant difference is already seen. The full final result is visible between 12-18 months. The transplanted hair grows normally and can be cut, styled, and treated like the rest of the hair."
+                    "answer": "Transplanted hair grows progressively over several months. At the appointment we explain the expected course in your case; results vary from person to person."
                 },
                 "sessions": {
                     "question": "How many sessions are necessary?",
                     "answer": "In most cases, a single session is sufficient. Depending on the degree of baldness and aesthetic goals, a second session may be necessary after 12-18 months for greater density. During the consultation, we define a personalized plan for your specific case."
                 },
                 "definitive": {
-                    "question": "Is hair transplant permanent?",
-                    "answer": "Yes, hair transplant is permanent. The transplanted follicles are taken from the donor area (nape/sides) which genetically do not suffer from baldness. Therefore, the transplanted hair maintains these characteristics and will not fall out over a lifetime."
+                    "question": "Does the transplanted hair last?",
+                    "answer": "Follicles are taken from a donor area that is usually less affected by hair loss. The outcome depends on each person and on the progression of hair loss in non-transplanted hair, which we monitor at check-ups."
                 },
                 "recovery": {
                     "question": "What is the recovery time?",
-                    "answer": "You can resume normal activities in 2-3 days. Work can be resumed after 3-5 days, depending on the activity. Intense physical exercise should be avoided for 2 weeks. The small scabs fall off naturally in 7-10 days. We follow strict post-operative monitoring."
+                    "answer": "Recovery time varies from person to person. At the appointment we explain post-operative care and the schedule of check-ups."
                 },
                 "donor_area": {
                     "question": "Can I have a transplant if I have little donor hair?",
-                    "answer": "We evaluate each case individually. Even with limited donor area, it is often possible to achieve excellent results by focusing on the most important areas (front line). We use density maximization techniques and, if necessary, suggest complementary treatments."
+                    "answer": "We assess each case individually. If the donor area is limited, we explain what is possible in your case and, if indicated, other treatments."
                 },
                 "natural_look": {
                     "question": "Does the result look natural?",
-                    "answer": "Yes, with the FUE technique and our 25 years of experience, the results are completely natural. We respect the natural growth pattern, the direction of the hairs, and the front line appropriate to age. No one will be able to distinguish transplanted hair from natural hair."
+                    "answer": "Planning follows the direction of hair growth and an age-appropriate hairline. Results vary from person to person."
                 }
             }
         }
     },
     "facial_aesthetics_page": {
         "hero": {
-            "badge": "NATURAL BEAUTY",
+            "badge": "FACIAL AESTHETICS",
             "title_start": "Facial Aesthetics",
-            "title_highlight": "Premium",
-            "description": "Enhance your natural beauty with the most advanced facial aesthetics treatments. Safe procedures and exceptional results with Dr. Arethuza Luna's team.",
-            "cta_schedule": "BOOK CONSULTATION",
-            "cta_treatments": "VIEW TREATMENTS",
-            "stats": {
-                "experience": {
-                    "value": "15 Years",
-                    "label": "Years of experience"
-                },
-                "procedures": {
-                    "value": "5k",
-                    "label": "Procedures performed"
-                },
-                "satisfaction": {
-                    "value": "95%",
-                    "label": "Patient satisfaction"
-                }
-            }
+            "title_highlight": "in Porto",
+            "description": "Facial aesthetic treatments with Dr Arethuza Luna's team (OMD no. 11845). Whether a treatment is indicated depends on an assessment appointment, and results vary from person to person.",
+            "cta_schedule": "BOOK APPOINTMENT",
+            "cta_treatments": "VIEW TREATMENTS"
         },
         "faq": {
             "title": "Questions about Aesthetics",
-            "subtitle": "Premium Facial Aesthetics",
+            "subtitle": "Facial Aesthetics",
             "description": "We clarify all doubts about our facial aesthetics treatments. Safe and personalized procedures to enhance your natural beauty.",
-            "cta_title": "Ready to enhance your beauty?",
-            "cta_desc": "Schedule a consultation with Dr. Areluna's team of specialists to discover the best treatment protocol for you.",
-            "cta_button_schedule": "BOOK CONSULTATION",
+            "cta_title": "Book your assessment appointment",
+            "cta_desc": "At the appointment we assess your case and explain the suitable options, the risks and the costs.",
+            "cta_button_schedule": "Book appointment",
             "cta_button_treatments": "VIEW TREATMENTS",
             "list": {
                 "types": {
                     "question": "What types of facial aesthetics treatments do you offer?",
-                    "answer": "We offer a wide range of treatments including botox, hyaluronic acid fillers, chemical peels, facial mesotherapy, PDO threads for lifting, laser therapy, and rejuvenation treatments. Each procedure is personalized according to the specific needs of each patient."
+                    "answer": "We carry out treatments with botulinum toxin, hyaluronic acid fillers, chemical peels, facial mesotherapy, PDO threads and laser therapy. Whether each procedure is indicated is decided at the assessment appointment."
                 },
                 "pain": {
                     "question": "Are facial aesthetics treatments painful?",
-                    "answer": "Most of our treatments cause only minimal discomfort. We use topical anesthesia techniques when necessary and always work to maximize patient comfort. Procedures like botox and fillers are generally well tolerated with only a slight stinging sensation."
+                    "answer": "There may be some discomfort during and after procedures. When needed, we use topical anaesthesia. At the appointment we explain what to expect from each treatment."
                 },
                 "results_time": {
                     "question": "When will I see the results of the treatments?",
-                    "answer": "Results vary by treatment. Botox shows effect in 3-7 days, fillers are immediate but the final result appears in 2 weeks, peels show improvement in 1-2 weeks. During the consultation, we explain the specific timeline for each procedure."
+                    "answer": "The time until effects are noticeable varies with the treatment and the person. At the appointment we explain what to expect from each procedure."
                 },
                 "duration": {
                     "question": "How long do the results last?",
-                    "answer": "Duration varies by treatment: botox lasts 4-6 months, fillers 6-18 months depending on the area, peels have progressive results, PDO threads maintain effect for 12-18 months. We establish a personalized maintenance plan to keep the results."
+                    "answer": "How long effects last varies with the treatment, the area and the person. At the appointment we explain the maintenance plan suitable for you."
                 },
                 "recovery": {
                     "question": "Is there any recovery time?",
-                    "answer": "Most treatments allow you to resume normal activities immediately. There may be slight swelling or redness that disappears in a few hours. For deeper peels, recovery time can be 3-7 days. We always provide detailed post-treatment instructions."
+                    "answer": "It depends on the treatment. There may be temporary swelling or redness. We always provide written aftercare instructions."
                 },
                 "suitability": {
                     "question": "How do I know which treatment is right for me?",
-                    "answer": "During the free initial consultation, we evaluate your skin type, specific concerns, and aesthetic goals. Based on this personalized analysis, we recommend the most appropriate treatment protocol to achieve the desired results naturally and harmoniously."
+                    "answer": "At the assessment appointment we look at your skin, concerns and goals, and explain the suitable options, risks and costs. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
                 },
                 "safety": {
                     "question": "Are the treatments safe?",
-                    "answer": "Yes, all our treatments are performed with certified products and proven techniques. Dr. Areluna has 25 years of experience and specialized training in facial aesthetics. We follow strict safety and hygiene protocols to ensure safe and effective procedures."
+                    "answer": "We use certified products and follow safety and hygiene protocols. Like any clinical procedure, these treatments carry risks, which we explain at the assessment appointment."
                 },
                 "combination": {
                     "question": "Can I combine different treatments?",
-                    "answer": "Yes, we often combine treatments for more complete and natural results. For example, botox with fillers, or mesotherapy with peels. We create personalized protocols that can include multiple procedures, always respecting safety intervals between treatments."
+                    "answer": "In some cases treatments can be combined, for example botulinum toxin with fillers, respecting safety intervals. The plan is defined at the assessment appointment."
                 }
             }
         }
@@ -999,8 +827,8 @@
             "badge": "CONTACT US",
             "title_start": "Get in",
             "title_highlight": "Touch",
-            "subtitle": "We are here to help you achieve the smile of your dreams. Schedule your consultation and transform your life.",
-            "cta_main": "BOOK CONSULTATION",
+            "subtitle": "Book your appointment by phone, email or using the form.",
+            "cta_main": "BOOK APPOINTMENT",
             "cta_whatsapp": "DIRECT WHATSAPP",
             "quick_contact": {
                 "location": {
@@ -1021,7 +849,7 @@
             "badge": "CONTACT INFORMATION",
             "title_start": "How to",
             "title_highlight": "Find Us",
-            "description": "We are located in Porto, ready to welcome you with the highest standard of care and advanced technology.",
+            "description": "We are in Porto. Book your appointment by phone, email or using the form.",
             "direct_contact": {
                 "title": "Direct Contact"
             },
@@ -1036,10 +864,10 @@
             },
             "location": {
                 "title": "Location",
-                "unit_galiza": "Mota Galiza Unit",
-                "address_galiza": "Rua de Júlio Dinis, 190 | 4050-027 Porto",
-                "unit_marques": "Marquês Unit",
-                "address_marques": "Rua de Faria Guimarães, 450 | 4000-205 Porto",
+                "unit_galiza": "Unidade Mota Galiza",
+                "address_galiza": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+                "unit_lisboa": "Lisbon · Lumiar (New Clinic)",
+                "address_lisboa": "Alameda das Linhas de Torres / Lumiar, Lisbon",
                 "map_button": "VIEW ON MAP"
             },
             "transport": {
@@ -1047,8 +875,8 @@
                 "description": "Our units are located in easily accessible locations in Porto. Use the map to find the best route for you."
             },
             "cta": {
-                "title": "Ready to transform your smile?",
-                "description": "Schedule your consultation and discover how we can help you achieve the perfect smile.",
+                "title": "Book your assessment appointment",
+                "description": "At the first appointment we assess your case and explain the treatment options suitable for you.",
                 "button": "BOOK CONSULTATION"
             }
         }
@@ -1057,8 +885,8 @@
         "title": "Dr. Arethuza",
         "subtitle": "Luna",
         "role": "Founder & Clinical Director",
-        "bio": "Dentist with OMD registration 11845, specializing in Orthodontics, Facial Orthopedics, and Advanced Orofacial Harmonization. She founded the AreLuna Institute over two decades ago with a clear vision: to elevate the standard of dentistry and advanced aesthetics in Portugal to a European level of excellence.",
-        "specialties_title": "Specialties",
+        "bio": "Dentist, OMD no. 11845, with training in Orthodontics, Facial Orthopaedics and Orofacial Harmonisation (Brazil). Founder and clinical director of Instituto AreLuna.",
+        "specialties_title": "Areas of practice",
         "specialties": [
             "Orthodontics and Facial Orthopedics",
             "Advanced Orofacial Harmonization",
@@ -1068,36 +896,34 @@
         ],
         "credentials": {
             "registry": "Professional Registry",
-            "registry_val": "OMD 11845",
+            "registry_val": "OMD n.º 11845",
             "education": "Education",
             "education_val": "Federal University of Paraná",
-            "experience": "Clinical Experience",
-            "experience_val": "+24 years",
-            "international": "International Specialization",
+            "international": "International training",
             "international_val": "New York and Miami"
         },
         "vision_title": "The Vision",
-        "vision_p1": "With an approach that combines precision dentistry, advanced aesthetics, and integral well-being, Dr. Arethuza Luna has built a clinic where every patient is treated as unique. The IAL standard—developed over more than 24 years—is the reflection of this philosophy.",
-        "vision_p2": "Her international training—including a Master Injector program at the Swift Beauty Institute in New York and Advanced Orofacial Harmonization in Miami—brought to Portugal techniques and protocols previously only available in the world's major centers.",
-        "vision_p3": "Today, the AreLuna Institute is recognized as a European reference, receiving patients from Portugal, Brazil, and over 20 countries, who travel specifically to benefit from the unique combination of quality, expertise, and Portuguese hospitality.",
+        "vision_p1": "With an approach that combines dentistry, aesthetics and well-being, Dr Arethuza Luna built a clinic where every treatment plan follows an individual assessment.",
+        "vision_p2": "Her international training includes a Master Injector programme at the Swift Beauty Institute in New York and training in Advanced Orofacial Harmonisation in Miami.",
+        "vision_p3": "Instituto AreLuna sees patients who live in Portugal and abroad. For everyone, treatment starts with an assessment appointment.",
         "cta_title": "Discover the AreLuna Institute",
-        "cta_desc": "Visit us in Porto and discover why we are the choice of thousands of national and international patients. Your transformation begins here.",
+        "cta_desc": "Book your assessment appointment in Porto.",
         "cta_button_contact": "Book a Consultation",
         "cta_button_treatments": "View Treatments",
-        "cta_whatsapp": "Schedule Consultation",
+        "cta_whatsapp": "Book appointment",
         "seo": {
             "title": "Dr. Arethuza Luna — Founder | AreLuna Institute Porto",
-            "description": "Dr. Arethuza Luna, OMD 11845, founder of the AreLuna Institute in Porto. Specialist in Orthodontics, Orthopedics, and Orofacial Harmonization. International training in New York and Miami. +24 years of experience."
+            "description": "Dr Arethuza Luna, OMD no. 11845, founder of Instituto AreLuna in Porto. Training in Orthodontics, Facial Orthopaedics and Orofacial Harmonisation (Brazil) and international training in New York and Miami."
         }
     },
     "triage_form": {
         "badge": "Clinical Booking & Triage · Lisbon & Porto",
         "title": "Book Your Assessment Consultation",
-        "subtitle_html": "Exclusive care at our clinics in <strong>Lisbon (Lumiar)</strong> and <strong>Porto (Mota Galiza)</strong>. Fill in your details so our clinical and welcoming team can prepare the best approach for your case.",
+        "subtitle_html": "Appointments at our clinics in <strong>Lisbon (Lumiar)</strong> and <strong>Porto (Mota Galiza and Marquês)</strong>. Fill in your details so the team can prepare your assessment appointment.",
         "step1_title": "1. Where do you prefer to be attended? (*)",
         "unit_lisboa": "Lisbon",
         "unit_porto": "Porto",
-        "unit_turismo": "Dental Tourism",
+        "unit_turismo": "I live outside Portugal",
         "name_label": "Full Name (*)",
         "name_placeholder": "E.g.: Mary Smith",
         "age_label": "Age (*)",
@@ -1112,7 +938,7 @@
         "smile_opt1": "I am dissatisfied with my old dental work.",
         "smile_opt2": "I would like to improve my smile.",
         "smile_opt3": "I would like to improve my dental work.",
-        "smile_hint": "This information helps us direct the most suitable specialist for your treatment plan.",
+        "smile_hint": "This information helps us prepare your assessment appointment.",
         "callback_label": "What is the best time for us to call you back?",
         "callback_placeholder": "Select a preferred time...",
         "callback_anytime": "Any time of day",
@@ -1135,11 +961,11 @@
         "sidebar_lisboa_name": "Lisbon · Lumiar",
         "sidebar_lisboa_badge": "New Clinic",
         "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbon",
-        "sidebar_lisboa_tag": "✓ Priority Booking & Assessments Open",
+        "sidebar_lisboa_tag": "✓ Assessment appointments available",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Headquarters",
-        "sidebar_porto_address": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto",
-        "sidebar_porto_reg": "ERS Registration: E161637 · License: 21593/2022",
+        "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+        "sidebar_porto_reg": "Registo ERS n.º 161637 · Licença de funcionamento n.º 21593",
         "sidebar_wa_title": "Prefer an Immediate Answer?",
         "sidebar_wa_desc": "For those who prefer not to wait for a call or have quick questions before booking, our clinical team assists directly via official WhatsApp:",
         "sidebar_wa_btn": "Talk to Reception on WhatsApp",

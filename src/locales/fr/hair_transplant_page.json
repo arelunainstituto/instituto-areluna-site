@@ -1,36 +1,18 @@
 {
     "hero": {
-        "badge": "Technique FUE Premium",
+        "badge": "Technique FUE",
         "title_start": "Greffe",
         "title_highlight": "Capillaire FUE",
-        "question": "Souffrez-vous de <highlight>calvitie ou de perte de cheveux</highlight> et cherchez-vous une solution définitive ?",
-        "description": "La <strong1>Clinique Areluna</strong1> propose la greffe capillaire avec la technique <highlight>FUE (Follicular Unit Extraction)</highlight>, la plus avancée et la moins invasive du marché.",
-        "cta_text": "Résultats naturels et suivi continu personnalisé.",
+        "question": "Vous souffrez de <highlight>chute de cheveux ou de calvitie</highlight> et souhaitez savoir si la greffe est indiquée pour vous ?",
+        "description": "L'<strong1>Instituto Areluna</strong1> réalise des greffes capillaires par technique <highlight>FUE (Follicular Unit Extraction)</highlight>, après une consultation d'évaluation.",
+        "cta_text": "Plan défini après évaluation et suivi lors de contrôles.",
         "button": "PRENDRE RENDEZ-VOUS"
     },
-    "benefits": {
-        "fue": {
-            "title": "FUE",
-            "desc": "Technique moins invasive"
-        },
-        "natural": {
-            "title": "Naturel",
-            "desc": "Résultats imperceptibles"
-        },
-        "lasting": {
-            "title": "Durable",
-            "desc": "Résultat à vie"
-        },
-        "experience": {
-            "title": "+24 Ans",
-            "desc": "Expérience prouvée"
-        }
-    },
     "cases": {
-        "badge": "RÉSULTATS RÉELS",
+        "badge": "CAS CLINIQUES",
         "title_start": "Cas de",
         "title_highlight": "Greffe FUE",
-        "description": "Découvrez les résultats réels de nos patients. Transformations naturelles et définitives avec la technique FUE la plus avancée du marché.",
+        "description": "Photos publiées avec l'autorisation écrite des patients. Chaque plan découle d'une évaluation individuelle et les résultats varient d'une personne à l'autre.",
         "items": {
             "case1": {
                 "description": "Récupération de la ligne frontale",
@@ -46,9 +28,9 @@
             }
         },
         "cta": {
-            "title": "Votre cas pourrait être le prochain !",
-            "description": "Chaque cas est unique. Prenez rendez-vous pour évaluer votre potentiel de greffe et définir le meilleur plan.",
-            "button": "ÉVALUER MON CAS"
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "description": "Lors de la consultation, nous évaluons votre cas et expliquons si la greffe est indiquée, les risques et les coûts.",
+            "button": "PRENDRE RENDEZ-VOUS"
         }
     }
 }

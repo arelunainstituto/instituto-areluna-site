@@ -37,7 +37,7 @@ const TourismDentarioSection = () => {
       {/* Background text sutil */}
       <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          Turismo
+          Internacional
         </span>
       </div>
 
@@ -45,14 +45,6 @@ const TourismDentarioSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Conteúdo */}
           <div className="order-2 lg:order-1 space-y-6 sm:space-y-8">
-            {/* Badge superior */}
-            <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 dark:border-[hsl(var(--gold-leaf))]/40 shadow-lg">
-              <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
-              <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-                {t("tourism.badge")}
-              </span>
-            </div>
-
             {/* Título principal */}
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-vivant text-jet dark:text-gray-200 leading-tight">
@@ -83,45 +75,9 @@ const TourismDentarioSection = () => {
             {/* Descrição do programa */}
             <div className="space-y-6">
               <p className="text-lg text-jet/80 dark:text-gray-300 font-vivant-light leading-relaxed">
-                <Trans
-                  i18nKey="tourism.description"
-                  components={{
-                    highlight1: <strong className="text-[hsl(var(--gold-leaf))]" />,
-                    highlight2: <span className="text-[hsl(var(--gold-leaf))] font-medium" />,
-                    highlight3: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
-                  }}
-                />
+                {t("tourism.description")}
               </p>
-
-              {/* Call to action text */}
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
-                <p className="text-xl font-vivant text-[hsl(var(--gold-leaf))] italic">
-                  {t("tourism.cta_text")}
-                </p>
-              </div>
             </div>
-
-            {/* Benefícios premium */}
-            {/* <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { title: t("tourism.benefits.3_days.title"), desc: t("tourism.benefits.3_days.desc") },
-                { title: t("tourism.benefits.tourism.title"), desc: t("tourism.benefits.tourism.desc") },
-                { title: t("tourism.benefits.experience.title"), desc: t("tourism.benefits.experience.desc") }
-              ].map((benefit, index) => (
-                <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-vivant text-[hsl(var(--gold-leaf))] font-medium">{benefit.title}</h4>
-                      <p className="text-xs text-jet/70 dark:text-gray-400 font-vivant-light">{benefit.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
 
             {/* Botão premium */}
             <div className="pt-4 flex justify-center w-full">
@@ -160,7 +116,7 @@ const TourismDentarioSection = () => {
                   onPlay={() => setIsVideoPlaying(true)}
                   playsInline
                   preload="metadata"
-                  title="Programa Turismo Dentário"
+                  title="Pacientes que vivem fora de Portugal"
                   poster={thumbImg}
                 />
                 
@@ -180,11 +136,6 @@ const TourismDentarioSection = () => {
               {/* Elementos decorativos do card */}
               <div className="absolute -top-3 -right-3 w-6 h-6 bg-[hsl(var(--gold-leaf))] rounded-full opacity-80"></div>
               <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-400 rounded-full opacity-60"></div>
-
-              {/* Badge no card */}
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <span className="text-[hsl(var(--gold-leaf))] font-vivant text-xs font-medium">25 ANOS</span>
-              </div>
             </div>
           </div>
         </div>

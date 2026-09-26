@@ -22,7 +22,8 @@ const Footer = () => {
             <div className="space-y-4 text-white/80">
               <div>
                 <p className="font-medium">📍 Localização</p>
-                <p className="text-sm">Rua de Júlio Dinis 194 R/C, 4050-024 Porto</p>
+                <p className="text-sm">Unidade Mota Galiza — Rua Júlio Dinis, n.º 194, 4050-327 Porto</p>
+                <p className="text-sm">Unidade Marquês — Rua de Faria Guimarães, n.º 450, 4000-205 Porto</p>
               </div>
               
               <div>
@@ -45,14 +46,15 @@ const Footer = () => {
                 Entidade Reguladora da Saúde
               </h3>
               <div className="text-white/70 text-sm space-y-2">
-                <p>Nº de Registo na ERS – E161637</p>
-                <p>Nº da licença de funcionamento – 21593/2022</p>
+                <p>Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240 · Inscrição ERS n.º 37630</p>
+                <p>Unidade Mota Galiza — Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593</p>
+                <p>Unidade Marquês — Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345</p>
               </div>
             </div>
             
             <div className="text-center md:text-right">
               <h3 className="font-vivant-medium text-lg font-medium mb-4 text-primary">
-              Pronto para Transformar o Seu Sorriso?
+              Marque a sua consulta de avaliação
               </h3>
               <button
                 onClick={() => document.getElementById('evaluation-form')?.scrollIntoView({ behavior: 'smooth' })}
@@ -74,7 +76,7 @@ const Footer = () => {
                 Termos de Utilização
               </Link>
             </div>
-            <p>&copy; 2024 Instituto Areluna. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Instituto Areluna Medicina Dentária Avançada, Lda.</p>
           </div>
         </div>
       </div>

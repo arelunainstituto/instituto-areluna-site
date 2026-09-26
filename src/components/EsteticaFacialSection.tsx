@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import draArePremium from "@/assets/dra-are-premium.jpg";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const EsteticaFacialSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -82,9 +83,9 @@ const EsteticaFacialSection = () => {
                     highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
                   }}
                 >
-                  A equipa de especialistas da <strong className="text-[hsl(var(--gold-leaf))]">Dra. Areluna</strong> oferece os mais modernos tratamentos de
+                  A equipa da <strong className="text-[hsl(var(--gold-leaf))]">Dra. Arethuza Luna</strong> realiza tratamentos de
                   <span className="text-[hsl(var(--gold-leaf))] font-medium"> estética facial</span>,
-                  combinando técnicas avançadas com produtos premium para resultados naturais.
+                  após consulta de avaliação.
                 </Trans>
               </p>
 
@@ -101,9 +102,8 @@ const EsteticaFacialSection = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { title: t('benefits.safe.title'), desc: t('benefits.safe.desc') },
-                { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') },
-                { title: t('benefits.premium.title'), desc: t('benefits.premium.desc') },
-                { title: t('benefits.experience.title'), desc: t('benefits.experience.desc') }
+                { title: t('benefits.natural.title'), desc: t('benefits.natural.desc') }
+
               ].map((benefit, index) => (
                 <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
                   <div className="flex items-center gap-3">
@@ -140,6 +140,7 @@ const EsteticaFacialSection = () => {
                   </button>
                 </a>
               </div>
+              <ClinicalDisclaimer className="mt-4 mx-0 text-jet/60 dark:text-gray-400" />
             </div>
           </div>
 

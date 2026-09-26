@@ -12,7 +12,7 @@ export const treatmentsFaqSchema = {
       "name": "Quanto tempo demora um tratamento ortodôntico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O tempo varia conforme a complexidade do caso, geralmente entre 12 a 30 meses. Com alinhadores invisíveis, pode ser mais rápido (12-24 meses). Durante a consulta inicial, fornecemos uma estimativa mais precisa baseada na sua situação específica."
+        "text": "O tempo depende da complexidade do caso. Na consulta de avaliação indicamos uma estimativa para a sua situação."
       }
     },
     {
@@ -20,7 +20,7 @@ export const treatmentsFaqSchema = {
       "name": "Os implantes dentários doem?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O procedimento é realizado com anestesia local, pelo que não sentirá dor durante a cirurgia. No pós-operatório, pode haver algum desconforto que é facilmente controlado com medicação. A maioria dos pacientes retoma as atividades normais em 2-3 dias."
+        "text": "O procedimento é realizado com anestesia local. No pós-operatório pode haver desconforto, que é controlado com a medicação indicada pelo médico dentista. O tempo de recuperação varia de pessoa para pessoa."
       }
     },
     {
@@ -28,7 +28,7 @@ export const treatmentsFaqSchema = {
       "name": "Quanto custam as facetas de porcelana?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O preço das facetas varia conforme o número de dentes e complexidade do caso. Oferecemos planeamento digital personalizado e planos de pagamento flexíveis na consulta de avaliação."
+        "text": "O preço das facetas depende do número de dentes e da complexidade do caso, e é apresentado num orçamento escrito após a consulta. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte."
       }
     },
     {
@@ -36,7 +36,7 @@ export const treatmentsFaqSchema = {
       "name": "O branqueamento dentário é seguro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim, quando realizado por profissionais qualificados. Utilizamos técnicas aprovadas e produtos de qualidade farmacêutica. Pode haver sensibilidade temporária, que desaparece em poucos dias. Fazemos sempre uma avaliação prévia da saúde dentária."
+        "text": "Quando indicado e realizado por profissionais qualificados, com produtos aprovados. Pode haver sensibilidade temporária. Fazemos sempre uma avaliação prévia da saúde dentária."
       }
     },
     {
@@ -44,7 +44,7 @@ export const treatmentsFaqSchema = {
       "name": "Preciso de enxerto ósseo para colocar implantes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Depende da quantidade e qualidade do osso disponível. Utilizamos técnicas avançadas de regeneração e protocolos como All-on-Four que reduzem significativamente a necessidade de enxertos extensos."
+        "text": "Depende da quantidade e da qualidade do osso disponível, que avaliamos na consulta com exames de imagem. Se for necessário enxerto, explicamos o procedimento, os riscos e os custos."
       }
     },
     {
@@ -52,7 +52,7 @@ export const treatmentsFaqSchema = {
       "name": "Qual a durabilidade dos tratamentos estéticos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Facetas cerâmicas duram 15-20 anos com os cuidados adequados, branqueamento 2-3 anos, e implantes podem durar toda a vida com manutenção preventiva contínua."
+        "text": "A durabilidade depende do tratamento, dos hábitos de cada pessoa e da manutenção. Na consulta explicamos o que esperar no seu caso e o plano de consultas de controlo."
       }
     },
     {
@@ -68,7 +68,7 @@ export const treatmentsFaqSchema = {
       "name": "É possível fazer vários tratamentos em simultâneo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim, a abordagem multidisciplinar do Instituto AreLuna permite desenhar planos de tratamento integrados para otimizar tempo e resultados numa mesma jornada clínica."
+        "text": "Em alguns casos é possível combinar tratamentos, quando for clinicamente adequado. O plano de tratamento é definido após a consulta de avaliação."
       }
     }
   ]
@@ -91,7 +91,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Os tratamentos de harmonização facial doem?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Os procedimentos são minimamente invasivos e realizados com recurso a anestésicos tópicos ou locais e microcânulas, proporcionando o máximo conforto ao paciente."
+        "text": "Pode haver desconforto durante e após os procedimentos. Quando necessário, usamos anestesia tópica. Explicamos na consulta o que esperar em cada tratamento."
       }
     },
     {
@@ -99,7 +99,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Quanto tempo demoram a surgir os resultados?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Os preenchedores apresentam efeito imediato, enquanto a toxina botulínica consolida o resultado entre 3 a 14 dias. Os bioestimuladores revelam o pico de síntese de colagénio após 30 a 90 dias."
+        "text": "O tempo até se notarem efeitos varia conforme o tratamento e a pessoa. Na consulta explicamos o que esperar em cada procedimento."
       }
     },
     {
@@ -107,7 +107,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Qual a duração dos resultados?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A toxina botulínica dura entre 4 a 6 meses. O ácido hialurónico dura entre 9 a 18 meses, dependendo da área e densidade do produto. Bioestimuladores podem durar até 2 anos."
+        "text": "A duração dos efeitos varia conforme o tratamento, a zona e a pessoa. Na consulta explicamos o plano de manutenção indicado para si."
       }
     },
     {
@@ -115,7 +115,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Como é o período de recuperação?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A maioria dos pacientes retoma a sua rotina social e profissional imediatamente no próprio dia, com pequenas recomendações como evitar exposição solar e exercício intenso nas primeiras 24 horas."
+        "text": "Depende do tratamento. Pode haver inchaço ou vermelhidão temporários. Entregamos sempre instruções escritas para os cuidados após o tratamento."
       }
     },
     {
@@ -123,7 +123,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Quem pode fazer harmonização orofacial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Homens e mulheres que pretendam prevenir ou tratar sinais de envelhecimento, assimetrias faciais ou realçar a harmonia facial. Cada plano é 100% individualizado após avaliação médica."
+        "text": "A indicação depende de uma consulta de avaliação e de diagnóstico individual. Os resultados variam de pessoa para pessoa."
       }
     },
     {
@@ -131,7 +131,7 @@ export const esteticaFacialFaqSchema = {
       "name": "Os tratamentos são seguros?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim, todos os tratamentos são executados por médicos dentistas especialistas e cirurgiões registados na OMD/OM, utilizando produtos de padrão farmacêutico europeu e técnicas seguras com cânulas."
+        "text": "Utilizamos produtos certificados e seguimos protocolos de segurança e higiene. Como qualquer ato clínico, estes tratamentos têm riscos, que explicamos na consulta de avaliação."
       }
     },
     {
@@ -139,7 +139,7 @@ export const esteticaFacialFaqSchema = {
       "name": "É possível combinar diferentes procedimentos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. A combinação sinérgica de toxina, preenchimento e bioestimuladores no protocolo do Instituto AreLuna proporciona resultados mais harmónicos, naturais e duradouros."
+        "text": "Em alguns casos é possível combinar tratamentos, por exemplo toxina botulínica com preenchimentos, respeitando os intervalos de segurança. O plano é definido na consulta de avaliação."
       }
     }
   ]
@@ -154,7 +154,7 @@ export const transplanteCapilarFaqSchema = {
       "name": "O que é a técnica FUE de transplante capilar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A técnica FUE (Follicular Unit Extraction) consiste na extração individual de unidades foliculares da zona dadora sem necessidade de cortes lineares ou bisturi, eliminando cicatrizes visíveis."
+        "text": "FUE (Follicular Unit Extraction) é uma técnica de transplante capilar em que se extraem unidades foliculares individuais da área dadora, que depois são implantadas na área recetora. A indicação depende da avaliação clínica."
       }
     },
     {
@@ -162,7 +162,7 @@ export const transplanteCapilarFaqSchema = {
       "name": "O transplante capilar dói?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O procedimento é realizado sob anestesia local de alta precisão, sendo indolor durante toda a intervenção. O pós-operatório é tranquilo e sem dor intensa."
+        "text": "O procedimento é realizado com anestesia local. Nos primeiros dias pode haver desconforto, que é controlado com a medicação indicada pelo médico."
       }
     },
     {
@@ -170,7 +170,7 @@ export const transplanteCapilarFaqSchema = {
       "name": "Quando começam a nascer os novos cabelos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Os novos fios começam a emergir por volta do 3º ao 4º mês pós-procedimento. O resultado significativo é visível aos 6-9 meses, atingindo a maturação e densidade definitiva aos 12 meses."
+        "text": "O cabelo transplantado cresce de forma progressiva ao longo de vários meses. Na consulta explicamos a evolução esperada no seu caso; os resultados variam de pessoa para pessoa."
       }
     },
     {
@@ -178,15 +178,15 @@ export const transplanteCapilarFaqSchema = {
       "name": "Quantas sessões são necessárias?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Na vasta maioria dos casos, uma única sessão completa é suficiente para restaurar a linha capilar e a densidade desejada. Casos de calvície muito avançada são planeados estrategicamente."
+        "text": "O número de sessões depende do grau de queda e da área dadora, e é definido na consulta de avaliação."
       }
     },
     {
       "@type": "Question",
-      "name": "O resultado do transplante capilar é permanente?",
+      "name": "O cabelo transplantado mantém-se?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Os folículos implantados provêm da zona dadora posterior e lateral da cabeça, geneticamente programados para não sofrer a ação da hormona DHT responsável pela calvície."
+        "text": "Os folículos são retirados de uma área dadora habitualmente menos afetada pela queda. A evolução depende de cada pessoa e da progressão da queda no cabelo não transplantado, que avaliamos em consultas de controlo."
       }
     },
     {
@@ -194,7 +194,7 @@ export const transplanteCapilarFaqSchema = {
       "name": "Como é a recuperação pós-operatória?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A recuperação é rápida. Em 3 a 5 dias o paciente pode regressar ao trabalho que não exija esforço físico. As pequenas crostas caem naturalmente entre o 7º e o 10º dia."
+        "text": "O tempo de recuperação varia de pessoa para pessoa. Na consulta explicamos os cuidados pós-operatórios e o calendário de consultas de controlo."
       }
     },
     {

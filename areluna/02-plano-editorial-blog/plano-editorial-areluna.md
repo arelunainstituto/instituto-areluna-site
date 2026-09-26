@@ -141,7 +141,7 @@ CTA: bloco final padrão (ver §abaixo)
 - "Cárie em adultos: por que aparece e como prevenir"
 - "Bichectomia: contraindicações que os dentistas não dizem"
 - "Bruxismo: o vilão invisível do sorriso e do rosto"
-- "Lipo HD em mulheres acima dos 40" (Dra. Patrícia Tatsch)
+- "Lipo HD em mulheres acima dos 40"
 - "Endocrinologia + estética: o eixo hormonal por trás da pele e do cabelo"
 - "Por que pacientes brasileiros vêm tratar dentes em Portugal"
 - "5 mitos sobre implantes que você ainda acredita"

@@ -2,7 +2,8 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Instituto AreLuna';
 const BASE_URL = 'https://www.institutoareluna.pt';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-institutoareluna.jpg`;
+const OG_BASE = import.meta.env.VITE_OG_BASE || BASE_URL;
+const DEFAULT_OG_IMAGE = `${OG_BASE}/og-institutoareluna-logo.jpg`;
 
 interface SEOHeadProps {
   /** ≤ 60 chars — título único da página */
@@ -32,7 +33,7 @@ const SEOHead = ({
   description,
   canonical,
   ogImage = DEFAULT_OG_IMAGE,
-  ogImageAlt = `${SITE_NAME} — Clínica Dentária e Estética Avançada no Porto`,
+  ogImageAlt = `Logótipo do ${SITE_NAME}`,
   ogType = 'website',
   jsonLd,
   noindex = false,

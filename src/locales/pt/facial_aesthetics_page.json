@@ -1,53 +1,45 @@
 {
     "hero": {
-        "badge": "Dra. Areluna - Especialista",
+        "badge": "Estética facial",
         "title_start": "Estética Facial",
-        "title_highlight": "Premium",
+        "title_highlight": "no Porto",
         "question": "Deseja <highlight>realçar a sua beleza natural</highlight> com tratamentos seguros e eficazes?",
-        "description": "A equipa de especialistas da <strong1>Dra. Areluna</strong1> oferece os mais modernos tratamentos de <highlight>estética facial</highlight>, combinando técnicas avançadas com produtos premium para resultados naturais.",
-        "cta_text": "Beleza natural com resultados duradouros.",
-        "button": "CONSULTA"
+        "description": "A equipa da <strong1>Dra. Arethuza Luna</strong1> realiza tratamentos de <highlight>estética facial</highlight> após consulta de avaliação. Os resultados variam de pessoa para pessoa.",
+        "cta_text": "Plano definido após consulta de avaliação.",
+        "button": "MARCAR CONSULTA"
     },
     "benefits": {
         "safe": {
             "title": "Seguro",
-            "desc": "Procedimentos certificados"
+            "desc": "Produtos certificados"
         },
         "natural": {
-            "title": "Natural",
-            "desc": "Resultados harmoniosos"
-        },
-        "premium": {
-            "title": "Premium",
-            "desc": "Produtos de qualidade"
-        },
-        "experience": {
-            "title": "25 Anos",
-            "desc": "Experiência comprovada"
+            "title": "Avaliação",
+            "desc": "Plano individual"
         }
     },
     "cases": {
-        "badge": "RESULTADOS REAIS",
+        "badge": "CASOS CLÍNICOS",
         "title_start": "Casos de",
         "title_highlight": "Estética Facial",
-        "description": "Veja os resultados reais das nossas pacientes. Transformações naturais e harmoniosas com os tratamentos mais avançados de estética facial.",
+        "description": "Fotografias publicadas com autorização escrita das pacientes. Cada plano resultou de uma avaliação individual e os resultados variam de pessoa para pessoa.",
         "items": {
             "case1": {
                 "description": "Rinomodelação com ácido hialurónico",
-                "details": "Botox + Preenchimento - Resultado após 2 semanas"
+                "details": "Toxina botulínica + preenchimento — fotografia após 2 semanas"
             },
             "case2": {
                 "description": "Toxina Botulínica",
-                "details": "Tratamento completo - Resultado após 1 mês"
+                "details": "Fotografia após 1 mês"
             },
             "case3": {
                 "description": "Preenchimento labial com ácido hialurónico",
-                "details": "Fios de PDO + Skinbooster - Resultado após 3 semanas"
+                "details": "Fios de PDO + skinbooster — fotografia após 3 semanas"
             }
         },
         "cta": {
-            "title": "A sua transformação pode ser a próxima!",
-            "description": "Cada rosto é único. Agende uma consulta para descobrirmos qual o melhor protocolo de tratamentos para si.",
+            "title": "Marque a sua consulta de avaliação",
+            "description": "Na consulta avaliamos o seu caso e explicamos as opções indicadas, os riscos e os custos.",
             "button": "AGENDAR AVALIAÇÃO"
         }
     }

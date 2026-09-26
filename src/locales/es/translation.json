@@ -2,66 +2,66 @@
     "common": {
         "loading": "Cargando...",
         "error": "Ocurrió un error",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "clinical_disclaimer": "La indicación de cualquier tratamiento depende de una consulta de evaluación y de un diagnóstico individual. Los resultados varían de una persona a otra."
     },
     "nav": {
         "institute": "El Instituto",
         "treatments": "Tratamientos",
-        "tourism": "Turismo Dental",
+        "tourism": "Pacientes internacionales",
         "hair_transplant": "Trasplante Capilar",
         "facial_aesthetics": "Estética Facial",
-        "before_after": "Antes y Después",
+        "clinical_cases": "Casos clínicos",
         "blog": "Blog"
     },
     "hero": {
-        "title_start": "El destino principal para estética avanzada y",
-        "title_highlight": "odontología",
+        "title_start": "Odontología, medicina estética y",
+        "title_highlight": "tratamientos capilares",
         "title_end": "en Portugal",
-        "subtitle": "Referencia europea en salud y estética integrada",
+        "subtitle": "Consulta de evaluación y plan de tratamiento individual · Lisboa y Oporto",
         "find_procedure": "ENCUENTRA TU PROCEDIMIENTO",
         "book": "RESERVA AHORA"
     },
     "gallery": {
         "title": "Clínica",
-        "subtitle": "Discover our modern spaces and state-of-the-art equipment",
+        "subtitle": "Conozca nuestras instalaciones y equipos",
         "fullscreen_alt": "Full screen clinic image",
-        "img1_alt": "Modern dental office",
-        "img2_alt": "Modern clinic space",
-        "img3_alt": "State-of-the-art equipment",
-        "img4_alt": "Treatment environment",
+        "img1_alt": "Consultorio dental del Instituto AreLuna, Oporto",
+        "img2_alt": "Recepción del Instituto AreLuna — clínica dental en Oporto",
+        "img3_alt": "Equipos de diagnóstico en el Instituto AreLuna, Oporto",
+        "img4_alt": "Sala de tratamiento del Instituto AreLuna, Oporto",
         "img5_alt": "Procedure room",
         "img6_alt": "Areluna clinic reception",
-        "img7_alt": "Modern facilities",
-        "img8_alt": "Advanced technology"
+        "img7_alt": "Instalaciones del Instituto AreLuna en Oporto — clínica dental",
+        "img8_alt": "Equipos de diagnóstico y tratamiento oral en el Instituto AreLuna, Oporto"
     },
     "team": {
         "title": "Clinical Team",
-        "subtitle": "Our team of specialist doctors is committed to offering the best care with excellence and dedication in the IAL standard",
-        "specialist_in": "Specialist in",
-        "by_brazil": "*in Brazil",
+        "subtitle": "Nuestro equipo clínico. Cada profesional está identificado con su Colegio profesional y su número de colegiado.",
+        "specialist_in": "Áreas de actuación",
         "doctors": {
             "leonardo": {
                 "role": "Dentist",
                 "specialty": "Radiology",
-                "bio": "Dentist specializing in Radiology and Stomatology. Precise diagnosis and comprehensive view of oral health.",
+                "bio": "Médico dentista, OMD n.º 11846. Formación en Radiología y Patología Oral (Brasil).",
                 "specs": [
-                    "Radiology",
-                    "Stomatology and Oral Pathology"
+                    "Radiología",
+                    "Patología Oral"
                 ]
             },
             "daiane": {
                 "role": "Dentist",
                 "specialty": "Endodontics",
-                "bio": "Dentist specializing in Endodontics, focused on precision treatments and dental preservation.",
+                "bio": "Médica dentista, OMD n.º 22681. Formación en Endodoncia (Brasil).",
                 "specs": [
                     "Endodontics",
                     "Oral Rehabilitation"
                 ]
             },
             "carla": {
-                "role": "Oral Surgeon",
+                "role": "Médica dentista",
                 "specialty": "Oral Surgery",
-                "bio": "Oral and Maxillofacial Surgeon with a Master's in Dental Medicine. Dedicated to aesthetic and functional smile rehabilitation.",
+                "bio": "Médica dentista, OMD n.º 15214. Formación en Cirugía Oral (Brasil) y Máster en Medicina Dental.",
                 "specs": [
                     "Oral Surgery"
                 ]
@@ -69,16 +69,15 @@
             "marcos": {
                 "role": "Physician",
                 "specialty": "Hair Transplant",
-                "bio": "Over 17 years of clinical experience. Postgraduate in Dermatology (ISMD) and specialist in Hair Transplant.",
+                "bio": "Médico, OM n.º 75498. Formación en Trasplante Capilar (Brasil) y posgrado en el ISMD.",
                 "specs": [
-                    "Hair Transplant",
-                    "Dermatology"
+                    "Trasplante Capilar"
                 ]
             },
             "aline": {
-                "role": "Oral Surgeon",
+                "role": "Médica dentista",
                 "specialty": "Facial Harmonization",
-                "bio": "Oral and Maxillofacial Surgeon trained in Advanced Facial Harmonization. Focused on natural and balanced results.",
+                "bio": "Médica dentista, OMD n.º 12330. Formación en Cirugía Oral y en Armonización Orofacial (Brasil).",
                 "specs": [
                     "Orofacial Harmonization",
                     "Oral Surgery"
@@ -87,7 +86,7 @@
             "pethine": {
                 "role": "Dentist",
                 "specialty": "Pediatric Dentistry",
-                "bio": "Dentist specializing in Pediatric Dentistry. Humanized care focused on children's well-being and comfort.",
+                "bio": "Médica dentista, OMD n.º 12228. Formación en Odontopediatría (Brasil).",
                 "specs": [
                     "Pediatric Dentistry"
                 ]
@@ -95,7 +94,7 @@
             "sara": {
                 "role": "Dentist",
                 "specialty": "General Practice",
-                "bio": "Dentist working in integrated clinical dentistry and personalized approach for each patient.",
+                "bio": "Médica dentista, OMD n.º 08560. Actividad en clínica general, rehabilitación oral y armonización orofacial.",
                 "specs": [
                     "General Practice and Oral Rehabilitation",
                     "Orofacial Harmonization"
@@ -104,51 +103,26 @@
             "yara": {
                 "role": "Odontóloga",
                 "specialty": "Odontología General",
-                "bio": "Odontóloga con actuación en Clínica General y Estética Oral. Atención enfocada en la salud oral aliada a la estética, con foco en resultados naturales, funcionales y personalizados para cada paciente.",
+                "bio": "Médica dentista, OMD n.º 15666. Formación en Clínica General y Estética Oral (Brasil).",
                 "specs": [
                     "Odontología General",
                     "Estética Oral"
                 ]
             },
-            "patricia": {
-                "role": "Cirujana Plástica",
-                "specialty": "Cirujana Plástica",
-                "bio": "Cirujana Plástica reconocida por la excelencia en cirugías de mama, uniendo cuidado, técnica y naturalidad. Actuación en mamoplastia de aumento, reducción y cambio de prótesis, además de Lipo HD de definición natural.",
-                "specs": [
-                    "Cirujana Plástica"
-                ]
-            },
-            "federica": {
-                "role": "Higienista Oral",
-                "specialty": "Higienista Oral",
-                "bio": "Actuación enfocada en la prevención, mantenimiento de la salud oral y seguimiento personalizado de los pacientes, con atención al confort, la técnica y el cuidado continuo.",
-                "specs": [
-                    "Higienista Oral"
-                ]
-            },
             "thais": {
                 "role": "Médica",
                 "specialty": "Endocrinología",
-                "bio": "Médica con formación en Endocrinología y especialización en Nutrología. Actuación enfocada en adelgazamiento, menopausia y medicina anti-envejecimiento, promoviendo la prevención de enfermedades y el equilibrio hormonal.",
+                "bio": "Médica, OM n.º 69564. Formación en Endocrinología y Nutrología (Brasil). Actividad en adelgazamiento, menopausia y medicina anti-aging.",
                 "specs": [
                     "Endocrinología",
                     "Nutrología",
                     "Medicina Anti-Envejecimiento"
                 ]
             },
-            "anavitoria": {
-                "role": "Odontóloga",
-                "specialty": "Estética Oral",
-                "bio": "Máster en Medicina Dental por la Universidad de Oporto, con enfoque en estética y rehabilitación oral.",
-                "specs": [
-                    "Estética Oral",
-                    "Rehabilitación Oral"
-                ]
-            },
             "arethuza": {
                 "role": "Dentist",
                 "specialty": "Facial Harmonization",
-                "bio": "Dentist specializing in Orthodontics, Orthopedics and Facial Harmonization. Master Injector Swift Beauty (NY) and Advanced Orofacial Harmonization (Miami).",
+                "bio": "Médica dentista, OMD n.º 11845. Formación en Ortodoncia, Ortopedia Facial y Armonización Orofacial (Brasil); Master Injector Swift Beauty (Nueva York) y Armonización Orofacial Avanzada (Miami).",
                 "specs": [
                     "Facial Harmonization",
                     "Orthodontics",
@@ -157,33 +131,10 @@
             }
         }
     },
-    "stats": {
-        "title": "Your Health in Numbers",
-        "subtitle": "More than numbers, these are stories of lives transformed by an excellent multidisciplinary team.",
-        "footer_text": "Building smiles for over two decades",
-        "specialists": {
-            "value": "15",
-            "label": "Specialists"
-        },
-        "specialties": {
-            "value": "12",
-            "label": "Specialties"
-        },
-        "patients": {
-            "prefix": "+ than",
-            "value": "50k",
-            "label": "Treatments Performed"
-        },
-        "tradition": {
-            "prefix": "+ than",
-            "value": "24 years",
-            "label": "of tradition"
-        }
-    },
     "treatments": {
         "title": "Treatments",
         "power_title": "The Power of a Smile",
-        "description": "Here, we treat smiles as an extension of each patient's identity.\n\nWe combine cutting-edge technology, multidisciplinary care, and aesthetic sensitivity to transform not just the smile — but also how you see and feel about yourself.\n\nAll with comfort, precision, and the excellence that makes Instituto Areluna a reference in oral rehabilitation.",
+        "description": "Cada plan de tratamiento resulta de una consulta de evaluación y de un diagnóstico individual.\n\nEl equipo multidisciplinar del Instituto Areluna reúne odontología, medicina estética y tratamientos capilares.\n\nEn la consulta explicamos las opciones indicadas, los riesgos y los costes, antes de cualquier decisión.",
         "discover_label": "DISCOVER THE IDEAL TREATMENT FOR YOU",
         "view_all": "View all {{count}} treatments →",
         "categories": {
@@ -194,24 +145,21 @@
             "estetica-corporal": "Body Aesthetics",
             "terapia-capilar": "Hair Therapy",
             "transplante-capilar": "Hair Transplant",
-            "nutricao": "Nutrition",
             "endocrinologia": "Endocrinology",
-            "ansiedade": "Clinical Anxiety",
-            "cirurgia-plastica": "Plastic Surgery",
-            "dermatologia": "Dermatology"
+            "dermatologia": "Tratamientos capilares"
         },
         "cta": {
-            "title": "Meet your best version",
-            "description": "Schedule a consultation and discover how we can make your dreams come true with our personalized treatments and high technology.",
+            "title": "Pida su consulta de evaluación",
+            "description": "En la consulta evaluamos su situación y le explicamos las opciones indicadas, los riesgos y los costes. Solo después decide.",
             "button": "Schedule consultation",
-            "premium": "Premium Care",
-            "tech": "Advanced Technology",
-            "results": "Guaranteed Results"
+            "premium": "Evaluación individual",
+            "tech": "Plan explicado",
+            "results": "Presupuesto antes de empezar"
         },
         "items": {
             "1": {
                 "title": "Dental Aesthetics",
-                "description": "Advanced aesthetic treatments for complete smile transformation.",
+                "description": "Tratamientos de estética dental, definidos tras la evaluación clínica.",
                 "features": [
                     "Veneers",
                     "Whitening",
@@ -223,45 +171,45 @@
                 "title": "Invisible Aligners",
                 "description": "Discreet orthodontic correction with removable transparent aligners.",
                 "features": [
-                    "Invisible",
-                    "Removable",
-                    "Comfortable",
-                    "Predictable"
+                    "Discreto",
+                    "Removible",
+                    "Cómodo",
+                    "Planificado"
                 ]
             },
             "3": {
                 "title": "Traditional Orthodontics",
                 "description": "Orthodontic treatment with brackets for malocclusion correction.",
                 "features": [
-                    "Effective",
-                    "Durable",
-                    "Precise",
-                    "Economical"
+                    "Brackets",
+                    "Duradero",
+                    "Preciso",
+                    "Económico"
                 ]
             },
             "4": {
                 "title": "Implantology and Advanced Surgery",
-                "description": "Dental implants and oral surgeries with cutting-edge technology.",
+                "description": "Implantes dentales y cirugía oral, tras evaluación clínica y pruebas.",
                 "features": [
-                    "Immediate Load",
+                    "Planificación digital",
                     "Biocompatible",
-                    "Long-lasting",
-                    "Natural"
+                    "Pruebas de imagen",
+                    "Rehabilitación"
                 ]
             },
             "5": {
                 "title": "Endodontics",
                 "description": "Root canal treatment for preservation of compromised teeth.",
                 "features": [
-                    "Preserves Tooth",
-                    "Painless",
-                    "Microscopy",
-                    "Success"
+                    "Preserva el diente",
+                    "Anestesia local",
+                    "Microscopía",
+                    "Seguimiento"
                 ]
             },
             "6": {
                 "title": "Periodontology",
-                "description": "Specialized treatment of gums and support structures.",
+                "description": "Tratamiento de las encías y estructuras de soporte de los dientes.",
                 "features": [
                     "Laser",
                     "Regeneration",
@@ -273,30 +221,30 @@
                 "title": "Collagen Biostimulators",
                 "description": "Sculptra and Radiesse for natural facial collagen stimulation.",
                 "features": [
-                    "Natural",
-                    "Long-lasting",
-                    "Rejuvenates",
-                    "Sculptra"
+                    "Colágeno",
+                    "Sculptra",
+                    "Radiesse",
+                    "Evaluación facial"
                 ]
             },
             "8": {
                 "title": "Double Chin Lipoenzymatic",
                 "description": "Non-surgical reduction of localized fat in the chin region.",
                 "features": [
-                    "Non-invasive",
-                    "Effective",
-                    "Contour",
-                    "Definition"
+                    "Sin cirugía",
+                    "Enzimas",
+                    "Contorno",
+                    "Evaluación previa"
                 ]
             },
             "9": {
                 "title": "Facial Support Threads",
                 "description": "Non-surgical facial lifting with absorbable threads for firmness.",
                 "features": [
-                    "Lifting",
-                    "Firmness",
-                    "Natural",
-                    "Immediate"
+                    "Hilos absorbibles",
+                    "Sin cirugía",
+                    "Firmeza",
+                    "Evaluación facial"
                 ]
             },
             "10": {
@@ -313,10 +261,10 @@
                 "title": "Non-Surgical Rhinoplasty",
                 "description": "Nose correction with hyaluronic acid without the need for surgery.",
                 "features": [
-                    "Non-surgical",
-                    "Immediate",
+                    "Sin cirugía",
+                    "Ácido hialurónico",
                     "Reversible",
-                    "Harmony"
+                    "Evaluación facial"
                 ]
             },
             "12": {
@@ -381,7 +329,7 @@
             },
             "18": {
                 "title": "Lymphatic Drainage",
-                "description": "Specialized massage for post-surgical recovery and well-being.",
+                "description": "Masaje para la recuperación posquirúrgica y el bienestar.",
                 "features": [
                     "Post-surgical",
                     "Detox",
@@ -403,10 +351,10 @@
                 "title": "Capillary Microinfusion (MMP)",
                 "description": "Infusion of medications directly into the scalp.",
                 "features": [
-                    "Medications",
-                    "Precision",
-                    "Efficacy",
-                    "Targeted"
+                    "Medicamentos",
+                    "Precisión",
+                    "Cuero cabelludo",
+                    "Dirigido"
                 ]
             },
             "21": {
@@ -421,32 +369,22 @@
             },
             "22": {
                 "title": "FUE Transplant",
-                "description": "FUE technique without visible cuts for natural hair transplant.",
+                "description": "Trasplante capilar con la técnica FUE, tras la evaluación de la zona donante.",
                 "features": [
-                    "No Scars",
-                    "Natural",
-                    "Permanent",
-                    "Technology"
+                    "FUE",
+                    "Unidades foliculares",
+                    "Anestesia local",
+                    "Seguimiento"
                 ]
             },
             "23": {
                 "title": "Evaluation with Dermatoscopy",
-                "description": "Advanced digital analysis of the scalp before transplant.",
+                "description": "Análisis digital del cuero cabelludo antes del trasplante.",
                 "features": [
                     "Digital",
                     "Precision",
                     "Planning",
                     "Analysis"
-                ]
-            },
-            "24": {
-                "title": "Anti-inflammatory Nutrition",
-                "description": "Nutritional plans to combat inflammation and optimize health.",
-                "features": [
-                    "Anti-inflammatory",
-                    "Personalized",
-                    "Health",
-                    "Well-being"
                 ]
             },
             "25": {
@@ -458,26 +396,15 @@
                     "Metabolic",
                     "Personalized"
                 ]
-            },
-            "26": {
-                "title": "Dental Anxiety Support",
-                "description": "Specialized support for patients with fear or dental trauma.",
-                "features": [
-                    "Support",
-                    "Comfort",
-                    "Security",
-                    "Specialized"
-                ]
             }
         }
     },
     "checkup": {
-        "pill": "PROGRAMA EXCLUSIVO",
         "title": {
-            "main": "Chequeo Integrado para",
-            "highlight": "Pacientes Internacionales"
+            "main": "Evaluación para",
+            "highlight": "quien vive fuera de Portugal"
         },
-        "description": "Una evaluación completa e integrada que combina odontología, estética facial, análisis capilar y exámenes de laboratorio en un solo día.",
+        "description": "Podemos programar en el mismo desplazamiento las consultas de evaluación que necesite (odontología, estética facial, evaluación capilar y análisis clínicos), siempre que sea clínicamente adecuado.",
         "services_title": {
             "main": "Qué incluye su",
             "highlight": "Chequeo"
@@ -509,10 +436,6 @@
             "highlight": "Programa"
         },
         "benefits": {
-            "one_day": {
-                "title": "Todo en 1 Día",
-                "description": "Evaluación completa en una sola visita"
-            },
             "personal_assistant": {
                 "title": "Asistente Personal",
                 "description": "Apoyo completo en la planificación del viaje"
@@ -520,54 +443,27 @@
             "integrated_care": {
                 "title": "Cuidado Integrado",
                 "description": "Enfoque holístico de su salud y estética"
-            },
-            "efficiency": {
-                "title": "Máxima Eficiencia",
-                "description": "Optimización del tiempo para pacientes internacionales"
             }
         },
         "cta": {
-            "title": "¿Listo para su transformación?",
-            "subtitle": "Programe su Chequeo Integrado y descubra su máximo potencial",
-            "button": "Programar Chequeo",
+            "button": "Pedir evaluación",
             "support": "Asistencia multilingüe"
         }
     },
     "tourism": {
-        "badge": "En 25 años de experiencia",
         "title": {
-            "main": "Programa",
-            "highlight": "Turismo Dental"
+            "main": "Pacientes que viven",
+            "highlight": "fuera de Portugal"
         },
-        "question": "¿Vives fuera de Portugal y te gustaría ser atendido por un <highlight>dentista</highlight>?",
-        "description": "La <highlight1>Clínica Areluna</highlight1> dispone de un programa de transformación de <highlight2>tres días</highlight2> con visita turística incluida a la <highlight3>bella ciudad de Oporto</highlight3>.",
-        "cta_text": "Contáctanos y cambia tu vida.",
-        "benefits": {
-            "3_days": {
-                "title": "3 Días",
-                "desc": "Programa intensivo"
-            },
-            "tourism": {
-                "title": "Turismo",
-                "desc": "Visita a Oporto incluida"
-            },
-            "portuguese": {
-                "title": "Portugués",
-                "desc": "Dentista nacional"
-            },
-            "experience": {
-                "title": "Experiencia",
-                "desc": "25 años de experiencia"
-            }
-        },
-        "button": "AGENDAR CONSULTA ONLINE",
-        "video_badge": "25 AÑOS"
+        "question": "¿Vive fuera de Portugal?",
+        "description": "Organizamos las consultas de evaluación para aprovechar al máximo cada desplazamiento a Oporto. El número de desplazamientos depende del plan de tratamiento.",
+        "button": "PEDIR CITA"
     },
     "before_after": {
-        "background_text": "Transformación",
+        "background_text": "Casos",
         "title": "Galería de Sonrisas",
-        "subtitle": "Transformaciones Reales",
-        "description": "Vea cómo transformamos sonrisas y cambiamos vidas con nuestros tratamientos avanzados. Cada caso es único y personalizado para lograr resultados excepcionales.",
+        "subtitle": "Casos clínicos",
+        "description": "Fotografías publicadas con autorización escrita de los pacientes. Cada plan de tratamiento resultó de una evaluación individual y los resultados varían de una persona a otra.",
         "implants_title": "Implantes y Rehabilitación",
         "facets_title": "Carillas de Porcelana",
         "card": {
@@ -576,26 +472,26 @@
             "treatment_label": "Tratamiento"
         },
         "cta": {
-            "title": "Su Transformación Comienza Aquí",
-            "text": "Programe su consulta y descubra cómo podemos transformar su sonrisa con resultados naturales y duraderos.",
+            "title": "Pida su consulta de evaluación",
+            "text": "En la primera consulta evaluamos su caso y le explicamos las opciones de tratamiento indicadas para usted.",
             "button": "AGENDAR EVALUACIÓN"
         },
         "cases": {
             "implants": {
                 "1": {
-                    "title": "Transformación Completa",
+                    "title": "Rehabilitación oral con prótesis fija",
                     "desc": "Rehabilitación oral total con prótesis fijas",
                     "treatment": "Implantes y Prótesis",
                     "duration": "4 meses"
                 },
                 "2": {
-                    "title": "Sonrisa Renovada",
+                    "title": "Implantes y rehabilitación",
                     "desc": "Implantes y estética dental avanzada",
                     "treatment": "Implantes Dentales",
                     "duration": "3 meses"
                 },
                 "3": {
-                    "title": "Cambio de Vida",
+                    "title": "Reconstrucción dental",
                     "desc": "Reconstrucción dental personalizada",
                     "treatment": "Rehabilitación Total",
                     "duration": "5 meses"
@@ -603,20 +499,20 @@
             },
             "facets": {
                 "1": {
-                    "title": "Sonrisa Armoniosa",
+                    "title": "Carillas cerámicas",
                     "desc": "Carillas de porcelana para corrección estética",
                     "treatment": "Carillas de Porcelana",
                     "duration": "2 semanas"
                 },
                 "2": {
-                    "title": "Perfección Natural",
+                    "title": "Carillas ultrafinas",
                     "desc": "Carillas ultrafinas para resultado natural",
                     "treatment": "Carillas Ultrafinas",
                     "duration": "3 semanas"
                 },
                 "3": {
-                    "title": "Elegancia Refinada",
-                    "desc": "Carillas personalizadas para sonrisa perfecta",
+                    "title": "Carillas personalizadas",
+                    "desc": "Carillas diseñadas para cada caso",
                     "treatment": "Carillas Personalizadas",
                     "duration": "2 semanas"
                 }
@@ -626,8 +522,8 @@
     "contact": {
         "background_text": "Contacto",
         "title": "Ponte en Contacto",
-        "subtitle": "¡Renuévate!",
-        "description": "Contáctenos y programe su consulta. Estamos listos para cuidar de usted con los más altos estándares de calidad y excelencia.",
+        "subtitle": "Contacte con nosotros",
+        "description": "Pida su cita por teléfono, por email o a través del formulario.",
         "form": {
             "name": "Nombre Completo",
             "name_placeholder": "Ingrese su nombre completo",
@@ -640,7 +536,7 @@
             "subjects": {
                 "consultation": "Agendar Consulta",
                 "treatments": "Información sobre Tratamientos",
-                "tourism": "Turismo Dental",
+                "tourism": "Pacientes internacionales",
                 "emergency": "Consulta de Emergencia",
                 "other": "Otros"
             },
@@ -661,12 +557,12 @@
         "units": {
             "title": "Unidades",
             "unit1": {
-                "name": "Unidad | Mota Galiza",
-                "address": "Rua de Júlio Dinis, 190 | 4050-027 Porto"
+                "name": "Unidade Mota Galiza",
+                "address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593"
             },
             "unit2": {
-                "name": "Unidad | Marqués",
-                "address": "Rua de Faria Guimarães, 450 | 4000-205 Porto"
+                "name": "Unidade Marquês",
+                "address": "Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345"
             }
         },
         "opening_hours": {
@@ -693,7 +589,7 @@
         "terms_of_use": "Términos de Uso",
         "cookies": "Cookies",
         "main_title": "Medicina Dental y Estética Avanzada",
-        "description": "Transformamos sonrisas con 25 años de experiencia, utilizando las técnicas y tecnologías más avanzadas para ofrecer resultados excepcionales y naturales.",
+        "description": "Odontología, medicina estética y tratamientos capilares en Oporto.",
         "quick_links": "Enlaces Rápidos",
         "regulatory_entity": "Entidad Reguladora",
         "reg_number": "Nº Registro ERS:",
@@ -702,17 +598,17 @@
         "location": "Oporto, Portugal",
         "hours": "Lun-Vie: 09h-19h<br/>Sáb: Con cita previa<br/>Dom: Cerrado",
         "units": {
-            "porto_label": "Oporto (Sede):",
-            "porto_address": "Rua de Júlio Dinis, 194 R/C, 4050-024 Porto",
+            "porto_label": "Oporto (Mota Galiza):",
+            "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
             "lisboa_label": "Lisboa (Nueva Clínica):",
             "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
             "compliance_title": "Conformidad y Regulación",
-            "company_name": "Instituto AreLuna Lda. · NIPC 516 161 637"
+            "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
     },
     "header": {
-        "subtitle": "El destino principal para la medicina dental en Oporto",
-        "book_consultation": "AGENDAR CITA"
+        "subtitle": "Odontología, medicina estética y tratamientos capilares",
+        "book_consultation": "PEDIR CITA"
     },
     "cookie_banner": {
         "title": "Su privacidad es importante",
@@ -724,8 +620,8 @@
         "title": "Dra. Arethuza",
         "subtitle": "Luna",
         "role": "Fundadora y Directora Clínica",
-        "bio": "Odontóloga con registro OMD 11845, especializada en Ortodoncia, Ortopedia Facial y Armonización Orofacial Avanzada. Fundó el Instituto AreLuna hace más de dos décadas con una visión clara: elevar el estándar de la odontología y la estética avanzada en Portugal a un nivel europeo de excelencia.",
-        "specialties_title": "Especialidades",
+        "bio": "Médica dentista, OMD n.º 11845, con formación en Ortodoncia, Ortopedia Facial y Armonización Orofacial (Brasil). Fundadora y directora clínica del Instituto AreLuna.",
+        "specialties_title": "Áreas de actuación",
         "specialties": [
             "Ortodoncia y Ortopedia Facial",
             "Armonización Orofacial Avanzada",
@@ -735,36 +631,34 @@
         ],
         "credentials": {
             "registry": "Registro Profesional",
-            "registry_val": "OMD 11845",
+            "registry_val": "OMD n.º 11845",
             "education": "Formación",
             "education_val": "Universidad Federal de Paraná",
-            "experience": "Experiencia Clínica",
-            "experience_val": "+24 años",
-            "international": "Especialización Internacional",
+            "international": "Formación internacional",
             "international_val": "Nueva York y Miami"
         },
         "vision_title": "La Visión",
-        "vision_p1": "Con un enfoque que combina la odontología de precisión, la estética avanzada y el bienestar integral, la Dra. Arethuza Luna ha construido una clínica donde cada paciente es tratado como único. El estándar IAL, desarrollado a lo largo de más de 24 años, es el reflejo de esta filosofía.",
-        "vision_p2": "Su formación internacional, incluyendo un programa de Master Injector en el Swift Beauty Institute en Nueva York y Armonización Orofacial Avanzada en Miami, trajo a Portugal técnicas y protocolos antes solo disponibles en los principales centros del mundo.",
-        "vision_p3": "Hoy, el Instituto AreLuna es reconocido como una referencia europea, recibiendo pacientes de Portugal, Brasil y más de 20 países, que viajan específicamente para beneficiarse de la combinación única de calidad, experiencia y hospitalidad portuguesa.",
+        "vision_p1": "Con un enfoque que une odontología, estética y bienestar, la Dra. Arethuza Luna creó una clínica donde cada plan de tratamiento resulta de una evaluación individual.",
+        "vision_p2": "Su formación internacional incluye un programa de Master Injector en el Swift Beauty Institute de Nueva York y formación en Armonización Orofacial Avanzada en Miami.",
+        "vision_p3": "El Instituto AreLuna atiende a pacientes que viven en Portugal y en el extranjero. Para todos, el tratamiento empieza con una consulta de evaluación.",
         "cta_title": "Conozca el Instituto AreLuna",
-        "cta_desc": "Visítenos en Oporto y descubra por qué somos la elección de miles de pacientes nacionales e internacionales. Su transformación comienza aquí.",
+        "cta_desc": "Pida su consulta de evaluación en Oporto.",
         "cta_button_contact": "Programar Consulta",
         "cta_button_treatments": "Ver Tratamientos",
-        "cta_whatsapp": "Agendar Consulta",
+        "cta_whatsapp": "Pedir cita",
         "seo": {
             "title": "Dra. Arethuza Luna — Fundadora | Instituto AreLuna Oporto",
-            "description": "Dra. Arethuza Luna, OMD 11845, fundadora del Instituto AreLuna en Oporto. Especialista en Ortodoncia, Ortopedia y Armonización Orofacial. Formación internacional en Nueva York y Miami. +24 años de experiencia."
+            "description": "Dra. Arethuza Luna, OMD n.º 11845, fundadora del Instituto AreLuna en Oporto. Formación en Ortodoncia, Ortopedia Facial y Armonización Orofacial (Brasil) y formación internacional en Nueva York y Miami."
         }
     },
     "triage_form": {
         "badge": "Cita y Triaje Clínico · Lisboa y Oporto",
         "title": "Reserve Su Consulta de Valoración",
-        "subtitle_html": "Atención exclusiva en nuestras clínicas de <strong>Lisboa (Lumiar)</strong> y <strong>Oporto (Mota Galiza)</strong>. Rellene sus datos para que el equipo médico y de acogida prepare el mejor enfoque para su caso.",
+        "subtitle_html": "Consultas en nuestras clínicas de <strong>Lisboa (Lumiar)</strong> y <strong>Oporto (Mota Galiza y Marquês)</strong>. Rellene sus datos para que el equipo prepare su consulta de evaluación.",
         "step1_title": "1. ¿Dónde prefiere ser atendido? (*)",
         "unit_lisboa": "Lisboa",
         "unit_porto": "Oporto",
-        "unit_turismo": "Turismo Dental",
+        "unit_turismo": "Vivo fuera de Portugal",
         "name_label": "Nombre Completo (*)",
         "name_placeholder": "Ej: María Santos",
         "age_label": "Edad (*)",
@@ -779,7 +673,7 @@
         "smile_opt1": "Estoy insatisfecho con mi trabajo dental antiguo.",
         "smile_opt2": "Me gustaría mejorar mi sonrisa.",
         "smile_opt3": "Me gustaría mejorar mi trabajo dental.",
-        "smile_hint": "Esta información nos ayuda a dirigir al especialista más indicado para su plan de tratamiento.",
+        "smile_hint": "Esta información nos ayuda a preparar su consulta de evaluación.",
         "callback_label": "¿Cuál es el mejor momento para que le llamemos?",
         "callback_placeholder": "Seleccione un horario preferente...",
         "callback_anytime": "A cualquier hora del día",
@@ -802,11 +696,11 @@
         "sidebar_lisboa_name": "Lisboa · Lumiar",
         "sidebar_lisboa_badge": "Nueva Clínica",
         "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
-        "sidebar_lisboa_tag": "✓ Apertura de Citas y Evaluaciones Prioritarias",
+        "sidebar_lisboa_tag": "✓ Citas de evaluación disponibles",
         "sidebar_porto_name": "Oporto · Mota Galiza",
         "sidebar_porto_badge": "Sede",
-        "sidebar_porto_address": "Rua de Júlio Dinis, 194 R/C | 4050-024 Porto",
-        "sidebar_porto_reg": "Registro ERS: E161637 · Licencia: 21593/2022",
+        "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+        "sidebar_porto_reg": "Registo ERS n.º 161637 · Licença de funcionamento n.º 21593",
         "sidebar_wa_title": "¿Prefiere Respuesta Inmediata?",
         "sidebar_wa_desc": "Para quienes no desean esperar una llamada o buscan resolver dudas antes de la cita, nuestro equipo atiende directamente por WhatsApp:",
         "sidebar_wa_btn": "Hablar con la recepción por WhatsApp",
