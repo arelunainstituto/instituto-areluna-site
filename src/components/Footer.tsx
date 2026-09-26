@@ -122,7 +122,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="/#casos-clinicos" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
-                    {t('nav.before_after')}
+                    {t('nav.clinical_cases')}
                   </a>
                 </li>
                 <li>
