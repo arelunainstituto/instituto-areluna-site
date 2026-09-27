@@ -9,7 +9,9 @@ import ScrollToHash from "./components/ScrollToHash";
 
 const Index = lazy(() => import("./pages/Index"));
 const TreatmentsPage = lazy(() => import("./pages/TreatmentsPage"));
-const TourismDentarioPage = lazy(() => import("./pages/TourismDentarioPage"));
+// Página de pacientes internacionais fora do ar (em desenvolvimento).
+// Para reativar: trocar EmDesenvolvimento por TourismDentarioPage na rota abaixo.
+const EmDesenvolvimento = lazy(() => import("./pages/EmDesenvolvimento"));
 const TrasplanteCapilarPage = lazy(() => import("./pages/TrasplanteCapilarPage"));
 const EsteticaFacialPage = lazy(() => import("./pages/EsteticaFacialPage"));
 const ContatoPage = lazy(() => import("./pages/ContatoPage"));
@@ -48,7 +50,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/tratamentos" element={<TreatmentsPage />} />
-              <Route path="/pacientes-internacionais" element={<TourismDentarioPage />} />
+              <Route path="/pacientes-internacionais" element={<EmDesenvolvimento />} />
               <Route path="/turismo-dentario" element={<Navigate to="/pacientes-internacionais" replace />} />
               <Route path="/transplante-capilar" element={<TrasplanteCapilarPage />} />
               <Route path="/estetica-facial" element={<EsteticaFacialPage />} />
