@@ -18,7 +18,7 @@
         "title_start": "Tandheelkunde, esthetische geneeskunde en",
         "title_highlight": "haarbehandelingen",
         "title_end": "in Portugal",
-        "subtitle": "Evaluatieconsult en individueel behandelplan · Lissabon & Porto",
+        "subtitle": "Evaluatieconsult en individueel behandelplan · Porto",
         "find_procedure": "VIND UW PROCEDURE",
         "book": "BOEK NU"
     },
@@ -600,8 +600,6 @@
         "units": {
             "porto_label": "Porto (Mota Galiza):",
             "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-            "lisboa_label": "Lissabon (Nieuwe Vestiging):",
-            "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lissabon",
             "compliance_title": "Naleving & Regulering",
             "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
@@ -652,11 +650,10 @@
         }
     },
     "triage_form": {
-        "badge": "Afspraak & Klinische Triage · Lissabon & Porto",
+        "badge": "Afspraken & Klinische Triage · Porto",
         "title": "Boek Uw Beoordelingsconsult",
-        "subtitle_html": "Consulten in onze klinieken in <strong>Lissabon (Lumiar)</strong> en <strong>Porto (Mota Galiza en Marquês)</strong>. Vul uw gegevens in zodat het team uw evaluatieconsult kan voorbereiden.",
+        "subtitle_html": "Consulten in onze klinieken in <strong>Porto (Mota Galiza en Marquês)</strong>. Vul uw gegevens in zodat het team uw evaluatieconsult kan voorbereiden.",
         "step1_title": "1. Waar wordt u het liefst behandeld? (*)",
-        "unit_lisboa": "Lissabon",
         "unit_porto": "Porto",
         "unit_turismo": "Ik woon buiten Portugal",
         "name_label": "Volledige Naam (*)",
@@ -693,10 +690,6 @@
         "success_whatsapp": "Direct via WhatsApp spreken",
         "success_new_msg": "Nieuw bericht verzenden",
         "sidebar_units_title": "Onze Vestigingen",
-        "sidebar_lisboa_name": "Lissabon · Lumiar",
-        "sidebar_lisboa_badge": "Nieuwe Vestiging",
-        "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lissabon",
-        "sidebar_lisboa_tag": "✓ Evaluatieconsulten beschikbaar",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Hoofdvestiging",
         "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",

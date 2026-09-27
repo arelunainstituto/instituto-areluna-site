@@ -28,7 +28,7 @@ export const treatmentsFaqSchema = {
       "name": "Quanto custam as facetas de porcelana?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O preço das facetas depende do número de dentes e da complexidade do caso, e é apresentado num orçamento escrito após a consulta. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte."
+        "text": "O preço das facetas depende do número de dentes e da complexidade do caso, e é apresentado num orçamento escrito após a consulta."
       }
     },
     {

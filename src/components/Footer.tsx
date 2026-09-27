@@ -116,7 +116,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/turismo-dentario" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
+                  <a href="/pacientes-internacionais" className="text-pure-white/70 hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 font-vivant-light">
                     {t('nav.tourism')}
                   </a>
                 </li>
@@ -154,7 +154,6 @@ const Footer = () => {
                     <div className="text-sm text-pure-white/70 font-vivant-light space-y-1">
                       <p><strong className="text-pure-white/90">{t('footer.units.porto_label', 'Porto (Mota Galiza):')}</strong> {t('footer.units.porto_address', 'Rua Júlio Dinis, n.º 194, 4050-327 Porto')}</p>
                       <p><strong className="text-pure-white/90">{t('footer.units.marques_label', 'Porto (Marquês):')}</strong> {t('footer.units.marques_address', 'Rua de Faria Guimarães, n.º 450, 4000-205 Porto')}</p>
-                      <p><strong className="text-pure-white/90">{t('footer.units.lisboa_label', 'Lisboa (Nova Unidade):')}</strong> {t('footer.units.lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}</p>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">

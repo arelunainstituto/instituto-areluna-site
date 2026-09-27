@@ -87,7 +87,7 @@ const Facetas = () => {
         description="Marque a sua avaliação e descubra se pode fazer o tratamento com facetas dentárias."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         trustIndicators={[
-          { label: "Primeira consulta de avaliação sem custo" },
+          { label: "Consulta de avaliação individual" },
           { label: "Design digital do sorriso" },
           { label: "Plano explicado" },
         ]}

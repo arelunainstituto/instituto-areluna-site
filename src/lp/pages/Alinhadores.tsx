@@ -87,7 +87,7 @@ const Alinhadores = () => {
         description="Marque a sua avaliação e descubra se pode fazer o tratamento com alinhadores invisíveis."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         trustIndicators={[
-          { label: "Primeira consulta de avaliação sem custo" },
+          { label: "Consulta de avaliação individual" },
           { label: "Planeamento digital" },
           { label: "Plano explicado" },
         ]}

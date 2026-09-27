@@ -18,7 +18,7 @@
         "title_start": "Odontología, medicina estética y",
         "title_highlight": "tratamientos capilares",
         "title_end": "en Portugal",
-        "subtitle": "Consulta de evaluación y plan de tratamiento individual · Lisboa y Oporto",
+        "subtitle": "Consulta de evaluación y plan de tratamiento individual · Oporto",
         "find_procedure": "ENCUENTRA TU PROCEDIMIENTO",
         "book": "RESERVA AHORA"
     },
@@ -600,8 +600,6 @@
         "units": {
             "porto_label": "Oporto (Mota Galiza):",
             "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-            "lisboa_label": "Lisboa (Nueva Clínica):",
-            "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
             "compliance_title": "Conformidad y Regulación",
             "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
@@ -652,11 +650,10 @@
         }
     },
     "triage_form": {
-        "badge": "Cita y Triaje Clínico · Lisboa y Oporto",
+        "badge": "Citas y Triaje Clínico · Oporto",
         "title": "Reserve Su Consulta de Valoración",
-        "subtitle_html": "Consultas en nuestras clínicas de <strong>Lisboa (Lumiar)</strong> y <strong>Oporto (Mota Galiza y Marquês)</strong>. Rellene sus datos para que el equipo prepare su consulta de evaluación.",
+        "subtitle_html": "Consultas en nuestras clínicas de <strong>Oporto (Mota Galiza y Marquês)</strong>. Rellene sus datos para que el equipo prepare su consulta de evaluación.",
         "step1_title": "1. ¿Dónde prefiere ser atendido? (*)",
-        "unit_lisboa": "Lisboa",
         "unit_porto": "Oporto",
         "unit_turismo": "Vivo fuera de Portugal",
         "name_label": "Nombre Completo (*)",
@@ -693,10 +690,6 @@
         "success_whatsapp": "Hablar ahora por WhatsApp",
         "success_new_msg": "Enviar nuevo mensaje",
         "sidebar_units_title": "Nuestras Clínicas",
-        "sidebar_lisboa_name": "Lisboa · Lumiar",
-        "sidebar_lisboa_badge": "Nueva Clínica",
-        "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
-        "sidebar_lisboa_tag": "✓ Citas de evaluación disponibles",
         "sidebar_porto_name": "Oporto · Mota Galiza",
         "sidebar_porto_badge": "Sede",
         "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",

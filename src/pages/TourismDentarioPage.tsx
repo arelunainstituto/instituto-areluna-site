@@ -15,7 +15,7 @@ const schemas = [
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem","position": 1,"name": "Instituto AreLuna","item": "https://www.institutoareluna.pt/"},
-      {"@type": "ListItem","position": 2,"name": "Pacientes internacionais","item": "https://www.institutoareluna.pt/turismo-dentario"}
+      {"@type": "ListItem","position": 2,"name": "Pacientes internacionais","item": "https://www.institutoareluna.pt/pacientes-internacionais"}
     ]
   },
   {
@@ -38,7 +38,7 @@ const TourismDentarioPage = () => {
       <SEOHead
         title="Pacientes que vivem fora de Portugal — Porto | Instituto AreLuna"
         description="Acompanhamento de pacientes que vivem fora de Portugal: avaliação presencial no Porto, plano escrito com o número de deslocações e preços iguais para todos. Instituto AreLuna."
-        canonical="https://www.institutoareluna.pt/turismo-dentario"
+        canonical="https://www.institutoareluna.pt/pacientes-internacionais"
         jsonLd={schemas}
       />
       <Header />

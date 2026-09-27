@@ -11,7 +11,7 @@ const Header = () => {
   const location = useLocation();
   const isBlogPage = location.pathname.startsWith('/blog');
   const isPrivacyOrTerms = location.pathname === '/privacidade' || location.pathname === '/termos';
-  const knownTransparentRoutes = ['/', '/tratamentos', '/turismo-dentario', '/transplante-capilar', '/estetica-facial', '/contato'];
+  const knownTransparentRoutes = ['/', '/tratamentos', '/pacientes-internacionais', '/transplante-capilar', '/estetica-facial', '/contato'];
   const isSolidHeader = isBlogPage || isPrivacyOrTerms || location.pathname === '/sobre-a-fundadora' || !knownTransparentRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Header = () => {
   const menuItems = [
     { href: "/", label: t('nav.institute') },
     { href: "/tratamentos", label: t('nav.treatments') },
-    { href: "/turismo-dentario", label: t('nav.tourism') },
+    { href: "/pacientes-internacionais", label: t('nav.tourism') },
     { href: "/transplante-capilar", label: t('nav.hair_transplant') },
     { href: "/estetica-facial", label: t('nav.facial_aesthetics') },
     { href: "/sobre-a-fundadora", label: "A Fundadora" },

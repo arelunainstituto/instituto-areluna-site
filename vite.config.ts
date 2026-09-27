@@ -16,7 +16,7 @@ const PRERENDER_ROUTES = [
   // Institucional
   "/",
   "/tratamentos",
-  "/turismo-dentario",
+  "/pacientes-internacionais",
   "/transplante-capilar",
   "/estetica-facial",
   "/contato",

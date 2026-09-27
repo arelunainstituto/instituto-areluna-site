@@ -42,20 +42,6 @@ const contactSchema = [
       "postalCode": "4000-205",
       "addressCountry": "PT"
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Dentist",
-    "name": "Instituto AreLuna — Lisboa (Lumiar)",
-    "url": "https://www.institutoareluna.pt/contato",
-    "telephone": "+351220430090",
-    "email": "rececao@institutoareluna.pt",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Alameda das Linhas de Torres / Lumiar",
-      "addressLocality": "Lisboa",
-      "addressCountry": "PT"
-    }
   }
 ];
 
@@ -63,8 +49,8 @@ const ContatoPage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Contacto e Marcação de Consulta | Lisboa e Porto | Instituto AreLuna"
-        description="Marque a sua consulta no Instituto AreLuna em Lisboa (Lumiar) ou no Porto (Mota Galiza). Clínica dentária e de estética avançada com triagem médica personalizada."
+        title="Contacto e Marcação de Consulta | Porto | Instituto AreLuna"
+        description="Marque a sua consulta de avaliação no Instituto AreLuna, no Porto (Mota Galiza e Marquês). Medicina dentária, medicina estética e tratamentos capilares."
         canonical="https://www.institutoareluna.pt/contato"
         jsonLd={contactSchema}
       />

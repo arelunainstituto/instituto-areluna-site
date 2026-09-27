@@ -18,7 +18,7 @@
         "title_start": "Odontoiatria, medicina estetica e",
         "title_highlight": "trattamenti tricologici",
         "title_end": "in Portogallo",
-        "subtitle": "Visita di valutazione e piano di trattamento individuale · Lisbona e Porto",
+        "subtitle": "Visita di valutazione e piano di trattamento individuale · Porto",
         "find_procedure": "TROVA LA TUA PROCEDURA",
         "book": "PRENOTA ORA"
     },
@@ -600,8 +600,6 @@
         "units": {
             "porto_label": "Porto (Mota Galiza):",
             "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-            "lisboa_label": "Lisbona (Nuova Sede):",
-            "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbona",
             "compliance_title": "Conformità e Regolamentazione",
             "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
@@ -652,11 +650,10 @@
         }
     },
     "triage_form": {
-        "badge": "Prenotazione & Triage Clinico · Lisbona & Porto",
+        "badge": "Prenotazione e Triage Clinico · Porto",
         "title": "Prenoti la Sua Visita di Valutazione",
-        "subtitle_html": "Visite nelle nostre cliniche di <strong>Lisbona (Lumiar)</strong> e <strong>Porto (Mota Galiza e Marquês)</strong>. Inserisca i suoi dati perché il team prepari la sua visita di valutazione.",
+        "subtitle_html": "Visite nelle nostre cliniche di <strong>Porto (Mota Galiza e Marquês)</strong>. Inserisca i suoi dati perché il team prepari la sua visita di valutazione.",
         "step1_title": "1. Dove preferisce essere ricevuto/a? (*)",
-        "unit_lisboa": "Lisbona",
         "unit_porto": "Porto",
         "unit_turismo": "Vivo fuori dal Portogallo",
         "name_label": "Nome Completo (*)",
@@ -693,10 +690,6 @@
         "success_whatsapp": "Parla subito su WhatsApp",
         "success_new_msg": "Invia un nuovo messaggio",
         "sidebar_units_title": "Le Nostre Sedi",
-        "sidebar_lisboa_name": "Lisbona · Lumiar",
-        "sidebar_lisboa_badge": "Nuova Sede",
-        "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbona",
-        "sidebar_lisboa_tag": "✓ Visite di valutazione disponibili",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Sede Principale",
         "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",

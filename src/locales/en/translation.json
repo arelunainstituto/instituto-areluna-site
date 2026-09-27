@@ -18,7 +18,7 @@
         "title_start": "Dentistry, aesthetic medicine and",
         "title_highlight": "hair treatments",
         "title_end": "in Portugal",
-        "subtitle": "Assessment appointment and individual treatment plan · Lisbon & Porto",
+        "subtitle": "Assessment appointment and individual treatment plan · Porto",
         "find_procedure": "FIND YOUR PROCEDURE",
         "book": "BOOK NOW"
     },
@@ -600,8 +600,6 @@
         "units": {
             "porto_label": "Porto (Mota Galiza):",
             "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-            "lisboa_label": "Lisbon (New Clinic):",
-            "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbon",
             "compliance_title": "Compliance & Regulation",
             "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
@@ -643,7 +641,7 @@
                 },
                 "veneers_cost": {
                     "question": "How much do porcelain veneers cost?",
-                    "answer": "The price of veneers depends on the number of teeth and the complexity of the case, and is set out in a written quote after the appointment. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
+                    "answer": "The price of veneers depends on the number of teeth and the complexity of the case, and is set out in a written quote after the assessment appointment."
                 },
                 "whitening_safety": {
                     "question": "Is teeth whitening safe?",
@@ -703,7 +701,7 @@
                 },
                 "prices": {
                     "question": "Are prices different for people living outside Portugal?",
-                    "answer": "No. Prices are the same for all patients, whether or not they live in Portugal. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
+                    "answer": "No. Prices are the same for all patients, whether or not they live in Portugal."
                 },
                 "followup": {
                     "question": "What about follow-up after I return home?",
@@ -809,7 +807,7 @@
                 },
                 "suitability": {
                     "question": "How do I know which treatment is right for me?",
-                    "answer": "At the assessment appointment we look at your skin, concerns and goals, and explain the suitable options, risks and costs. The first assessment appointment is free of charge; imaging tests, if needed, are quoted separately."
+                    "answer": "At the assessment appointment we look at your skin, concerns and goals, and explain the suitable options, risks and costs."
                 },
                 "safety": {
                     "question": "Are the treatments safe?",
@@ -866,8 +864,6 @@
                 "title": "Location",
                 "unit_galiza": "Unidade Mota Galiza",
                 "address_galiza": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-                "unit_lisboa": "Lisbon · Lumiar (New Clinic)",
-                "address_lisboa": "Alameda das Linhas de Torres / Lumiar, Lisbon",
                 "map_button": "VIEW ON MAP"
             },
             "transport": {
@@ -917,11 +913,10 @@
         }
     },
     "triage_form": {
-        "badge": "Clinical Booking & Triage · Lisbon & Porto",
+        "badge": "Booking & Clinical Triage · Porto",
         "title": "Book Your Assessment Consultation",
-        "subtitle_html": "Appointments at our clinics in <strong>Lisbon (Lumiar)</strong> and <strong>Porto (Mota Galiza and Marquês)</strong>. Fill in your details so the team can prepare your assessment appointment.",
+        "subtitle_html": "Appointments at our clinics in <strong>Porto (Mota Galiza and Marquês)</strong>. Fill in your details so the team can prepare your assessment appointment.",
         "step1_title": "1. Where do you prefer to be attended? (*)",
-        "unit_lisboa": "Lisbon",
         "unit_porto": "Porto",
         "unit_turismo": "I live outside Portugal",
         "name_label": "Full Name (*)",
@@ -958,10 +953,6 @@
         "success_whatsapp": "Chat now via WhatsApp",
         "success_new_msg": "Send another message",
         "sidebar_units_title": "Our Clinics",
-        "sidebar_lisboa_name": "Lisbon · Lumiar",
-        "sidebar_lisboa_badge": "New Clinic",
-        "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisbon",
-        "sidebar_lisboa_tag": "✓ Assessment appointments available",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Headquarters",
         "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",

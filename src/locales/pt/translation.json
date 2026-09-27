@@ -18,7 +18,7 @@
         "title_start": "Medicina dentária, medicina estética e",
         "title_highlight": "tratamentos capilares",
         "title_end": "em Portugal",
-        "subtitle": "Consulta de avaliação e plano de tratamento individual · Lisboa & Porto",
+        "subtitle": "Consulta de avaliação e plano de tratamento individual · Porto",
         "find_procedure": "ENCONTRE O SEU PROCEDIMENTO",
         "book": "MARCAR AVALIAÇÃO"
     },
@@ -595,13 +595,11 @@
         "reg_number": "Nº Registo ERS:",
         "license_number": "Nº Licença:",
         "complaints_book": "Livro de Reclamações Online",
-        "location": "Porto & Lisboa, Portugal",
+        "location": "Porto, Portugal",
         "hours": "Seg-Sex: 09h-19h<br/>Sáb: Sob marcação<br/>Dom: Encerrado",
         "units": {
             "porto_label": "Porto (Mota Galiza):",
             "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-            "lisboa_label": "Lisboa (Nova Unidade):",
-            "lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
             "compliance_title": "Conformidade & Regulação",
             "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
         }
@@ -643,7 +641,7 @@
                 },
                 "veneers_cost": {
                     "question": "Quanto custam as facetas de porcelana?",
-                    "answer": "O preço das facetas depende do número de dentes e da complexidade do caso, e é apresentado num orçamento escrito após a consulta. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte."
+                    "answer": "O preço das facetas depende do número de dentes e da complexidade do caso, e é apresentado num orçamento escrito após a consulta de avaliação."
                 },
                 "whitening_safety": {
                     "question": "O branqueamento dentário é seguro?",
@@ -703,7 +701,7 @@
                 },
                 "prices": {
                     "question": "Os preços são diferentes para quem vive fora de Portugal?",
-                    "answer": "Não. Os preços são iguais para todos os pacientes, vivam ou não em Portugal. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte."
+                    "answer": "Não. Os preços são iguais para todos os pacientes, vivam ou não em Portugal."
                 },
                 "followup": {
                     "question": "E o acompanhamento depois de regressar ao meu país?",
@@ -809,7 +807,7 @@
                 },
                 "suitability": {
                     "question": "Como sei qual tratamento é adequado para mim?",
-                    "answer": "Na consulta de avaliação analisamos a sua pele, as suas preocupações e os seus objetivos, e explicamos as opções indicadas, os riscos e os custos. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte."
+                    "answer": "Na consulta de avaliação analisamos a sua pele, as suas preocupações e os seus objetivos, e explicamos as opções indicadas, os riscos e os custos."
                 },
                 "safety": {
                     "question": "Os tratamentos são seguros?",
@@ -866,8 +864,6 @@
                 "title": "Localização",
                 "unit_galiza": "Unidade Mota Galiza",
                 "address_galiza": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
-                "unit_lisboa": "Lisboa · Lumiar (Nova Unidade)",
-                "address_lisboa": "Alameda das Linhas de Torres / Lumiar, Lisboa",
                 "map_button": "VER NO MAPA"
             },
             "transport": {
@@ -917,11 +913,10 @@
         }
     },
     "triage_form": {
-        "badge": "Marcação & Triagem Clínica · Lisboa & Porto",
+        "badge": "Marcação & Triagem Clínica · Porto",
         "title": "Marque a Sua Consulta de Avaliação",
-        "subtitle_html": "Consultas nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza e Marquês)</strong>. Preencha os seus dados para que a equipa prepare a sua consulta de avaliação.",
+        "subtitle_html": "Consultas nas nossas clínicas do <strong>Porto (Mota Galiza e Marquês)</strong>. Preencha os seus dados para que a equipa prepare a sua consulta de avaliação.",
         "step1_title": "1. Onde prefere ser atendido? (*)",
-        "unit_lisboa": "Lisboa",
         "unit_porto": "Porto",
         "unit_turismo": "Vivo fora de Portugal",
         "name_label": "Nome Completo (*)",
@@ -958,10 +953,6 @@
         "success_whatsapp": "Falar agora pelo WhatsApp",
         "success_new_msg": "Enviar nova mensagem",
         "sidebar_units_title": "Nossas Unidades",
-        "sidebar_lisboa_name": "Lisboa · Lumiar",
-        "sidebar_lisboa_badge": "Nova Unidade",
-        "sidebar_lisboa_address": "Alameda das Linhas de Torres / Lumiar, Lisboa",
-        "sidebar_lisboa_tag": "✓ Marcação de consultas de avaliação",
         "sidebar_porto_name": "Porto · Mota Galiza",
         "sidebar_porto_badge": "Sede",
         "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",

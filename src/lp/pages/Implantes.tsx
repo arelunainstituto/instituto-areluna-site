@@ -30,7 +30,7 @@ const faqImplantes = buildFAQSchema([
   {
     question: "Quanto custam os implantes dentários no Instituto Areluna?",
     answer:
-      "O orçamento é elaborado após a consulta de avaliação. A primeira consulta de avaliação não tem custo; exames de imagem, se forem necessários, são orçamentados à parte.",
+      "O orçamento é elaborado por escrito após a consulta de avaliação e dos exames necessários.",
   },
   {
     question: "Os implantes dentários doem?",
@@ -87,7 +87,7 @@ const Implantes = () => {
         description="Na consulta avaliamos o seu caso, explicamos as opções indicadas, os riscos e os custos."
         ctaLabel="🔘 Quero marcar a minha avaliação"
         trustIndicators={[
-          { label: "Primeira consulta de avaliação sem custo" },
+          { label: "Consulta de avaliação individual" },
           { label: "Atendimento personalizado" },
           { label: "Acompanhamento contínuo" },
         ]}
