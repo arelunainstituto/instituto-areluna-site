@@ -9,8 +9,6 @@ import { buildTeamPersonSchemas } from "@/data/teamSchema";
 const GallerySection = lazy(() => import("@/components/GallerySection"));
 const CorpoClinicoSection = lazy(() => import("@/components/CorpoClinicoSection"));
 const TreatmentsSection = lazy(() => import("@/components/TreatmentsSection"));
-const CheckupIntegradoSection = lazy(() => import("@/components/CheckupIntegradoSection"));
-const TourismDentarioSection = lazy(() => import("@/components/TourismDentarioSection"));
 const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
 const ContactFormSection = lazy(() => import("@/components/ContactFormSection"));
 
@@ -106,12 +104,6 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <TreatmentsSection />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <CheckupIntegradoSection />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <TourismDentarioSection />
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <BeforeAfterSection />
