@@ -1,36 +1,18 @@
 {
     "hero": {
-        "badge": "Técnica FUE Premium",
+        "badge": "Técnica FUE",
         "title_start": "Trasplante",
         "title_highlight": "Capilar FUE",
-        "question": "¿Sufre de <highlight>calvicie o pérdida capilar</highlight> y busca una solución definitiva?",
-        "description": "La <strong1>Clínica Areluna</strong1> ofrece trasplante capilar con la técnica <highlight>FUE (Follicular Unit Extraction)</highlight>, la más avanzada y menos invasiva del mercado.",
-        "cta_text": "Resultados naturales y acompañamiento continuo.",
-        "button": "AGENDAR CONSULTA"
-    },
-    "benefits": {
-        "fue": {
-            "title": "FUE",
-            "desc": "Técnica menos invasiva"
-        },
-        "natural": {
-            "title": "Natural",
-            "desc": "Resultados imperceptibles"
-        },
-        "lasting": {
-            "title": "Duradero",
-            "desc": "Resultado de por vida"
-        },
-        "experience": {
-            "title": "+24 Años",
-            "desc": "Experiencia comprobada"
-        }
+        "question": "¿Tiene <highlight>caída del cabello o calvicie</highlight> y quiere saber si el trasplante está indicado para usted?",
+        "description": "El <strong1>Instituto Areluna</strong1> realiza trasplante capilar con la técnica <highlight>FUE (Follicular Unit Extraction)</highlight>, tras una consulta de evaluación.",
+        "cta_text": "Plan definido tras la evaluación y seguimiento en revisiones.",
+        "button": "PEDIR CITA"
     },
     "cases": {
-        "badge": "RESULTADOS REALES",
+        "badge": "CASOS CLÍNICOS",
         "title_start": "Casos de",
         "title_highlight": "Trasplante FUE",
-        "description": "Vea los resultados reales de nuestros pacientes. Transformaciones naturales y definitivas con la técnica FUE más avanzada del mercado.",
+        "description": "Fotografías publicadas con autorización escrita de los pacientes. Cada plan resultó de una evaluación individual y los resultados varían de una persona a otra.",
         "items": {
             "case1": {
                 "description": "Recuperación de la línea frontal",
@@ -46,9 +28,9 @@
             }
         },
         "cta": {
-            "title": "¡Su caso podría ser el próximo!",
-            "description": "Cada caso es único. Agende una consulta para evaluar su potencial de trasplante y definir el mejor plan.",
-            "button": "EVALUAR MI CASO"
+            "title": "Pida su consulta de evaluación",
+            "description": "En la consulta evaluamos su caso y le explicamos si el trasplante está indicado, los riesgos y los costes.",
+            "button": "PEDIR CITA"
         }
     }
 }

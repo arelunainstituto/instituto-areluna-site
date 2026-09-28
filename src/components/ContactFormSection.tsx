@@ -26,9 +26,8 @@ const AGE_OPTIONS = [
 ];
 
 const UNIT_OPTIONS = [
-  { value: "lisboa", labelKey: "unit_lisboa", defaultLabel: "Lisboa" },
   { value: "porto", labelKey: "unit_porto", defaultLabel: "Porto" },
-  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Turismo Dentário" }
+  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Vivo fora de Portugal" }
 ];
 
 const LANGUAGE_OPTIONS = [
@@ -48,7 +47,7 @@ const ContactFormSection = () => {
     age: '',
     email: '',
     phone: '',
-    unit: 'lisboa',
+    unit: 'porto',
     residence: '',
     preferredLanguage: 'Português',
     smileState: SMILE_STATE_OPTIONS[0],
@@ -207,7 +206,7 @@ const ContactFormSection = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(var(--gold-leaf))]/10 border border-[hsl(var(--gold-leaf))]/25 text-[hsl(var(--gold-leaf))] text-xs font-semibold uppercase tracking-widest mb-4">
             <span className="w-2 h-2 rounded-full bg-[hsl(var(--gold-leaf))] animate-ping"></span>
-            {t('triage_form.badge', 'Marcação & Triagem Clínica · Lisboa & Porto')}
+            {t('triage_form.badge', 'Marcação & Triagem Clínica · Porto')}
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant text-jet dark:text-white mb-4 drop-shadow-sm">
@@ -219,7 +218,7 @@ const ContactFormSection = () => {
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
             <Trans
               i18nKey="triage_form.subtitle_html"
-              defaults="Atendimento exclusivo nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza)</strong>. Preencha os seus dados para que a equipa médica e de acolhimento prepare a melhor abordagem para o seu caso."
+              defaults="Consultas nas nossas clínicas do <strong>Porto (Mota Galiza e Marquês)</strong>. Preencha os seus dados para que a equipa prepare a sua consulta de avaliação."
               components={{ strong: <strong /> }}
             />
           </p>
@@ -261,12 +260,12 @@ const ContactFormSection = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Bloco 1: Unidade de Preferência - Lisboa / Porto / Turismo Dentário */}
+                  {/* Bloco 1: Unidade de Preferência - Porto / Fora de Portugal */}
                   <div className="p-4 rounded-2xl bg-gradient-to-r from-[hsl(var(--gold-leaf))]/10 via-[hsl(var(--gold-leaf))]/5 to-transparent border border-[hsl(var(--gold-leaf))]/20">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[hsl(var(--gold-leaf))] mb-2">
                       {t('triage_form.step1_title', '1. Onde prefere ser atendido? (*)')}
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {UNIT_OPTIONS.map((u) => (
                         <button
                           key={u.value}
@@ -463,7 +462,7 @@ const ContactFormSection = () => {
                       </option>
                     </select>
                     <span className="block mt-2 text-xs text-gray-500 dark:text-gray-400">
-                      {t('triage_form.smile_hint', 'Esta informação ajuda-nos a direcionar o especialista mais indicado para o seu plano de tratamento.')}
+                      {t('triage_form.smile_hint', 'Esta informação ajuda-nos a preparar a sua consulta de avaliação.')}
                     </span>
                   </div>
 
@@ -568,7 +567,7 @@ const ContactFormSection = () => {
 
           {/* Coluna Lateral: Unidades e Atendimento Imediato */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Bloco Unidades: Lisboa & Porto */}
+            {/* Bloco Unidades: Porto */}
             <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/20">
               <div className="flex items-center gap-2 mb-6 text-[hsl(var(--gold-leaf))]">
                 <MapPin className="w-5 h-5" />
@@ -578,24 +577,6 @@ const ContactFormSection = () => {
               </div>
 
               <div className="space-y-6">
-                {/* Unidade Lisboa (Destaque) */}
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-[hsl(var(--gold-leaf))]/15 via-amber-500/5 to-transparent border border-[hsl(var(--gold-leaf))]/30">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <h5 className="font-vivant font-semibold text-jet dark:text-white text-base">
-                      {t('triage_form.sidebar_lisboa_name', 'Lisboa · Lumiar')}
-                    </h5>
-                    <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[hsl(var(--gold-leaf))] text-white">
-                      {t('triage_form.sidebar_lisboa_badge', 'Nova Unidade')}
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
-                    {t('triage_form.sidebar_lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}
-                  </p>
-                  <p className="text-[11px] text-[hsl(var(--gold-leaf))] font-medium mt-2">
-                    {t('triage_form.sidebar_lisboa_tag', '✓ Abertura de Agendamentos & Avaliações Prioritárias')}
-                  </p>
-                </div>
-
                 {/* Unidade Porto */}
                 <div className="p-4 rounded-2xl bg-gray-50/80 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700">
                   <div className="flex items-center justify-between mb-1.5">
@@ -607,10 +588,25 @@ const ContactFormSection = () => {
                     </span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
-                    {t('triage_form.sidebar_porto_address', 'Rua de Júlio Dinis, 194 R/C | 4050-024 Porto')}
+                    {t('triage_form.sidebar_porto_address', 'Rua Júlio Dinis, n.º 194, 4050-327 Porto')}
                   </p>
                   <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
-                    {t('triage_form.sidebar_porto_reg', 'Registo ERS: E161637 · Licença: 21593/2022')}
+                    {t('triage_form.sidebar_porto_reg', 'Registo ERS n.º 161637 · Licença de funcionamento n.º 21593')}
+                  </p>
+                </div>
+
+                {/* Unidade Porto · Marquês */}
+                <div className="p-4 rounded-2xl bg-gray-50/80 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="font-vivant font-semibold text-jet dark:text-white text-base">
+                      {t('triage_form.sidebar_marques_name', 'Porto · Marquês')}
+                    </h5>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-300 font-vivant-light leading-relaxed">
+                    {t('triage_form.sidebar_marques_address', 'Rua de Faria Guimarães, n.º 450, 4000-205 Porto')}
+                  </p>
+                  <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
+                    {t('triage_form.sidebar_marques_reg', 'Registo ERS n.º 175125 · Licença de funcionamento n.º 25345')}
                   </p>
                 </div>
               </div>

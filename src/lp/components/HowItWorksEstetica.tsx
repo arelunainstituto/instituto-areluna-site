@@ -4,9 +4,9 @@ const HowItWorksEstetica = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-vivant-black text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            O processo que cria{" "}
+            Como funciona o{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              sorrisos perfeitos em poucos dias
+              tratamento com facetas
             </span>
           </h2>
 
@@ -14,7 +14,7 @@ const HowItWorksEstetica = () => {
             <p className="font-vivant-light text-lg md:text-xl text-foreground leading-relaxed mb-8">
               As facetas dentárias são lâminas ultrafinas que cobrem a superfície dos dentes, 
               corrigindo formato, cor e pequenos desalinhamentos. Com preparação mínima e 
-              tecnologia digital, transformamos o seu sorriso de forma rápida e natural.
+              planeamento digital, o número de consultas é definido em cada caso.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
@@ -50,7 +50,7 @@ const HowItWorksEstetica = () => {
                   Aplicação das Facetas
                 </h3>
                 <p className="text-muted-foreground">
-                  Colagem definitiva em poucos dias
+                  Colagem após a fase de preparação
                 </p>
               </div>
             </div>

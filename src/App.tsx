@@ -9,7 +9,9 @@ import ScrollToHash from "./components/ScrollToHash";
 
 const Index = lazy(() => import("./pages/Index"));
 const TreatmentsPage = lazy(() => import("./pages/TreatmentsPage"));
-const TourismDentarioPage = lazy(() => import("./pages/TourismDentarioPage"));
+// Página de pacientes internacionais fora do ar (em desenvolvimento).
+// Para reativar: trocar EmDesenvolvimento por TourismDentarioPage na rota abaixo.
+const EmDesenvolvimento = lazy(() => import("./pages/EmDesenvolvimento"));
 const TrasplanteCapilarPage = lazy(() => import("./pages/TrasplanteCapilarPage"));
 const EsteticaFacialPage = lazy(() => import("./pages/EsteticaFacialPage"));
 const ContatoPage = lazy(() => import("./pages/ContatoPage"));
@@ -25,7 +27,6 @@ const LPImplantes = lazy(() => import("./lp/pages/Implantes"));
 const LPAlinhadores = lazy(() => import("./lp/pages/Alinhadores"));
 const LPFacetas = lazy(() => import("./lp/pages/Facetas"));
 const LPObrigado = lazy(() => import("./lp/pages/Obrigado"));
-const LPCaso = lazy(() => import("./lp/pages/Caso"));
 
 import CookieBanner from "./components/CookieBanner";
 
@@ -49,7 +50,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/tratamentos" element={<TreatmentsPage />} />
-              <Route path="/turismo-dentario" element={<TourismDentarioPage />} />
+              <Route path="/pacientes-internacionais" element={<EmDesenvolvimento />} />
+              <Route path="/turismo-dentario" element={<Navigate to="/pacientes-internacionais" replace />} />
               <Route path="/transplante-capilar" element={<TrasplanteCapilarPage />} />
               <Route path="/estetica-facial" element={<EsteticaFacialPage />} />
               <Route path="/contato" element={<ContatoPage />} />
@@ -65,7 +67,7 @@ const App = () => (
               <Route path="/implantes-dentarios-porto" element={<LPImplantes />} />
               <Route path="/alinhadores-invisiveis-porto" element={<LPAlinhadores />} />
               <Route path="/facetas-dentarias-porto" element={<LPFacetas />} />
-              <Route path="/casos/:slug" element={<LPCaso />} />
+              <Route path="/casos/:slug" element={<Navigate to="/" replace />} />
               <Route path="/obrigado" element={<LPObrigado />} />
 
               {/* Redirects das URLs antigas do vivobem.pt para os slugs SEO no domínio principal.
@@ -73,9 +75,9 @@ const App = () => (
               <Route path="/implantes" element={<Navigate to="/implantes-dentarios-porto" replace />} />
               <Route path="/alinhadores" element={<Navigate to="/alinhadores-invisiveis-porto" replace />} />
               <Route path="/facetas" element={<Navigate to="/facetas-dentarias-porto" replace />} />
-              <Route path="/caso-real" element={<Navigate to="/casos/sergio-emanuel" replace />} />
-              <Route path="/caso-sandra-maria" element={<Navigate to="/casos/sandra-maria" replace />} />
-              <Route path="/caso-diana-vieira" element={<Navigate to="/casos/diana-vieira" replace />} />
+              <Route path="/caso-real" element={<Navigate to="/" replace />} />
+              <Route path="/caso-sandra-maria" element={<Navigate to="/" replace />} />
+              <Route path="/caso-diana-vieira" element={<Navigate to="/" replace />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

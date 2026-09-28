@@ -2,15 +2,15 @@ const BeforeAfterEstetica = () => {
   const cases = [
     {
       image: "/lp/lovable-uploads/ac47f333-3215-4dfc-bfc9-8dd49560249d.png",
-      title: "Sorriso Harmonioso"
+      title: "Facetas cerâmicas"
     },
     {
       image: "/lp/lovable-uploads/0a41d192-bb3b-4d43-8e11-e5f7115997af.png",
-      title: "Estética Natural"
+      title: "Facetas ultrafinas"
     },
     {
       image: "/lp/lovable-uploads/f8984be4-e220-4e22-a671-97cbeb5ff1d3.png", 
-      title: "Formato Perfeito"
+      title: "Facetas personalizadas"
     }
   ];
 
@@ -23,17 +23,16 @@ const BeforeAfterEstetica = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block px-6 py-2 bg-gradient-gold text-white rounded-full text-sm font-medium mb-6">
-            🌟 RESULTADOS REAIS
+            CASOS CLÍNICOS
           </div>
           <h2 className="font-vivant-black text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8">
-            Transformações{" "}
+            Casos clínicos{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              Reais com Facetas
+              de facetas
             </span>
           </h2>
           <p className="font-vivant-light text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja como as facetas dentárias mudaram a vida dos nossos pacientes. 
-            Resultados que falam por si.
+            Fotografias publicadas com autorização escrita dos pacientes.
           </p>
         </div>
 
@@ -72,14 +71,14 @@ const BeforeAfterEstetica = () => {
         <div className="text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-premium max-w-2xl mx-auto">
             <p className="font-vivant-light text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              "Resultados como estes podem ser seus também. 
+              "Os resultados variam de pessoa para pessoa. 
               Marque a sua avaliação e descubra se é candidato às facetas dentárias."
             </p>
             <button
               onClick={() => document.getElementById('evaluation-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center justify-center rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-gold text-white hover:opacity-90 h-14 px-10 py-2 font-sans font-medium tracking-wide shadow-gold"
             >
-              🔘 Quero Minha Transformação
+              🔘 Marcar consulta de avaliação
             </button>
           </div>
         </div>

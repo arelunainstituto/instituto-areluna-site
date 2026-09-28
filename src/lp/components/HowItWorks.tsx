@@ -4,9 +4,9 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-vivant-black text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            A técnica que devolve{" "}
+            Como funciona o{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              sorrisos em tempo recorde
+              tratamento All-on-Four
             </span>
           </h2>
 
@@ -14,7 +14,7 @@ const HowItWorks = () => {
             <p className="font-vivant-light text-lg md:text-xl text-foreground leading-relaxed mb-8">
               O All-on-Four permite fixar uma prótese total sobre apenas 4 implantes dentários 
               estrategicamente posicionados. Com tecnologia digital, planeamos o seu novo sorriso 
-              com precisão milimétrica — e sai da clínica com dentes fixos no mesmo dia ou 
+              com planeamento digital. Em casos selecionados, após avaliação clínica e exames, pode ser colocada uma prótese fixa provisória no próprio dia ou 
               no dia seguinte.
             </p>
 
@@ -48,10 +48,10 @@ const HowItWorks = () => {
                   <span className="text-white font-bold text-2xl">3</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Sorriso Imediato
+                  Prótese provisória
                 </h3>
                 <p className="text-muted-foreground">
-                  Prótese fixa colocada em 24 horas
+                  Em casos selecionados, no próprio dia ou no dia seguinte
                 </p>
               </div>
             </div>

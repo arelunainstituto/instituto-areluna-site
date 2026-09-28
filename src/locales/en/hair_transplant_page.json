@@ -1,36 +1,18 @@
 {
     "hero": {
-        "badge": "FUE Premium Technique",
+        "badge": "FUE technique",
         "title_start": "Hair",
         "title_highlight": "FUE Transplant",
-        "question": "Do you suffer from <highlight>baldness or hair loss</highlight> and are looking for a definitive solution?",
-        "description": "<strong1>Clínica Areluna</strong1> offers hair transplantation using the <highlight>FUE (Follicular Unit Extraction)</highlight> technique, the most advanced and least invasive on the market.",
-        "cta_text": "Natural and long-lasting results with continuous follow-up.",
-        "button": "SCHEDULE CONSULTATION"
-    },
-    "benefits": {
-        "fue": {
-            "title": "FUE",
-            "desc": "Least invasive technique"
-        },
-        "natural": {
-            "title": "Natural",
-            "desc": "Imperceptible results"
-        },
-        "lasting": {
-            "title": "Lasting",
-            "desc": "Results for life"
-        },
-        "experience": {
-            "title": "+24 Years",
-            "desc": "Proven experience"
-        }
+        "question": "Do you have <highlight>hair loss or baldness</highlight> and want to know whether a transplant is right for you?",
+        "description": "<strong1>Instituto Areluna</strong1> performs hair transplants using the <highlight>FUE (Follicular Unit Extraction)</highlight> technique, after an assessment appointment.",
+        "cta_text": "Plan defined after assessment, with follow-up check-ups.",
+        "button": "BOOK APPOINTMENT"
     },
     "cases": {
-        "badge": "REAL RESULTS",
+        "badge": "CLINICAL CASES",
         "title_start": "Cases of",
         "title_highlight": "FUE Transplant",
-        "description": "See real results from our patients. Natural and definitive transformations with the most advanced FUE technique on the market.",
+        "description": "Photos published with the patients' written consent. Each plan followed an individual assessment and results vary from person to person.",
         "items": {
             "case1": {
                 "description": "Frontal hairline recovery",
@@ -46,9 +28,9 @@
             }
         },
         "cta": {
-            "title": "Your case could be next!",
-            "description": "Each case is unique. Schedule a consultation so we can evaluate your transplant potential and define the best plan.",
-            "button": "EVALUATE MY CASE"
+            "title": "Book your assessment appointment",
+            "description": "At the appointment we assess your case and explain whether a transplant is indicated, the risks and the costs.",
+            "button": "BOOK APPOINTMENT"
         }
     }
 }

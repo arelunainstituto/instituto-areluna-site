@@ -4,18 +4,17 @@ const AuthorityOrtodontia = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            Especialistas em ortodontia,{" "}
+            Ortodontia com alinhadores,{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              resultados precisos e confortáveis
+              com planeamento digital
             </span>
           </h2>
 
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-premium">
             <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-              Com uma equipa especializada em ortodontia moderna e tecnologia digital 
-              de última geração, oferecemos tratamentos com alinhadores transparentes 
-              com segurança, conforto e previsibilidade. Tudo num ambiente 
-              acolhedor e exclusivo.
+              A equipa clínica planeia cada tratamento com alinhadores transparentes
+              com recurso a planeamento digital. A indicação depende de uma consulta
+              de avaliação e os resultados variam de pessoa para pessoa.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
@@ -36,10 +35,10 @@ const AuthorityOrtodontia = () => {
                   <span className="text-white text-3xl">👨‍⚕️</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Ortodontistas Experientes
+                  Equipa clínica
                 </h3>
                 <p className="text-muted-foreground">
-                  Especialistas em alinhadores invisíveis
+                  Médicos dentistas com atividade em ortodontia
                 </p>
               </div>
 
@@ -48,10 +47,10 @@ const AuthorityOrtodontia = () => {
                   <span className="text-white text-3xl">📱</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Acompanhamento Digital
+                  Acompanhamento clínico
                 </h3>
                 <p className="text-muted-foreground">
-                  Monitoramento do progresso via app
+                  Consultas regulares de controlo
                 </p>
               </div>
             </div>
@@ -59,7 +58,7 @@ const AuthorityOrtodontia = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Simulação 3D
+                Planeamento 3D
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
@@ -71,7 +70,7 @@ const AuthorityOrtodontia = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Resultados Previsíveis
+                Plano explicado
               </span>
             </div>
           </div>

@@ -20,7 +20,6 @@ const NotFound = () => {
     { label: "Implantes Dentários", href: "/implantes-dentarios-porto" },
     { label: "Alinhadores Invisíveis", href: "/alinhadores-invisiveis-porto" },
     { label: "Facetas Dentárias", href: "/facetas-dentarias-porto" },
-    { label: "Turismo Dentário", href: "/turismo-dentario" },
     { label: "Contacto & Marcação", href: "/contato" },
   ];
 
@@ -50,7 +49,7 @@ const NotFound = () => {
           </h2>
 
           <p className="text-pure-white/70 font-vivant-light text-base max-w-lg mx-auto leading-relaxed">
-            O endereço que acedeu pode ter mudado ou não se encontra mais disponível. Mas a nossa equipa clínica em Lisboa e no Porto continua pronta para o acolher.
+            O endereço que acedeu pode ter mudado ou não se encontra mais disponível. Mas a nossa equipa clínica no Porto continua pronta para o acolher.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">

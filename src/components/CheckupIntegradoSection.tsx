@@ -33,11 +33,6 @@ const CheckupIntegradoSection = () => {
 
   const benefits = [
     {
-      icon: <Calendar className="w-5 h-5" />,
-      title: t("checkup.benefits.one_day.title"),
-      description: t("checkup.benefits.one_day.description")
-    },
-    {
       icon: <Globe className="w-5 h-5" />,
       title: t("checkup.benefits.personal_assistant.title"),
       description: t("checkup.benefits.personal_assistant.description")
@@ -46,11 +41,6 @@ const CheckupIntegradoSection = () => {
       icon: <Heart className="w-5 h-5" />,
       title: t("checkup.benefits.integrated_care.title"),
       description: t("checkup.benefits.integrated_care.description")
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      title: t("checkup.benefits.efficiency.title"),
-      description: t("checkup.benefits.efficiency.description")
     }
   ];
 
@@ -65,13 +55,6 @@ const CheckupIntegradoSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[hsl(var(--gold-leaf))]/10 px-4 py-2 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full animate-pulse"></div>
-            <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-              {t("checkup.pill")}
-            </span>
-          </div>
-
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-vivant-skinny font-thin mb-6 text-jet dark:text-white leading-tight">
             {t("checkup.title.main")}
             <span className="block text-[hsl(var(--gold-leaf))] font-vivant"> {t("checkup.title.highlight")}</span>
@@ -128,7 +111,7 @@ const CheckupIntegradoSection = () => {
               {t("checkup.benefits_title.main")} <span className="text-[hsl(var(--gold-leaf))]">{t("checkup.benefits_title.highlight")}</span>
             </h3>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-2xl flex items-center justify-center text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -149,13 +132,6 @@ const CheckupIntegradoSection = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-            <h3 className="text-2xl md:text-3xl font-vivant mb-4">
-              {t("checkup.cta.title")}
-            </h3>
-            <p className="text-lg font-vivant-light mb-8 opacity-90">
-              {t("checkup.cta.subtitle")}
-            </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="https://wa.me/351910098226"

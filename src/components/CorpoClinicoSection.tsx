@@ -4,8 +4,6 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
 
 import draYaraImg from "@/assets/Dra_Yara_Campos.jpg";
-import draFedericaImg from "@/assets/Dra_Federica_Laporta.jpg";
-import draPatriciaImg from "@/assets/Dra_Patrícia_Tatsch.jpg";
 import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
 import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
 import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
@@ -93,31 +91,10 @@ const CorpoClinicoSection = () => {
       image: draYaraImg
     },
     {
-      id: "patricia",
-      name: "Dra. Patrícia Tatsch",
-      crm: "OMD 47868",
-      peloBrasil: false,
-      image: draPatriciaImg
-    },
-    {
-      id: "federica",
-      name: "Federica Laporta",
-      crm: "",
-      peloBrasil: false,
-      image: draFedericaImg
-    },
-    {
       id: "thais",
       name: "Dra. Thais Perlingeiro",
       crm: "OM 69564",
       peloBrasil: true,
-      image: ''
-    },
-    {
-      id: "anavitoria",
-      name: "Dra. Ana Vitória Marques",
-      crm: "OMD 15209",
-      peloBrasil: false,
       image: ''
     },
     {
@@ -219,7 +196,7 @@ const CorpoClinicoSection = () => {
                             {doctor.name}
                           </h3>
                           <p className="text-jet/60 dark:text-gray-400 text-sm font-vivant-regular mb-4">
-                            {doctor.crm}
+                            {doctor.crm.replace(/^(OMD|OM) /, "$1 n.º ")}
                           </p>
                           {bio && (
                             <p className="text-jet/80 dark:text-gray-300 text-xs mb-4">
@@ -246,11 +223,6 @@ const CorpoClinicoSection = () => {
                             ) : (
                               <span className="text-sm font-medium text-[hsl(var(--gold-leaf))]">
                                 {specialty}
-                              </span>
-                            )}
-                            {doctor.peloBrasil && (
-                              <span className="text-xs text-jet/50 dark:text-gray-500 italic mt-1 block">
-                                {t('team.by_brazil')}
                               </span>
                             )}
                           </div>
