@@ -2,15 +2,15 @@ const BeforeAfter = () => {
   const cases = [
     {
       image: "/lp/lovable-uploads/825855a0-c45a-47ae-ae27-258aa064c6e1.png",
-      title: "Transformação Completa"
+      title: "Reabilitação oral com prótese fixa"
     },
     {
       image: "/lp/lovable-uploads/362d794f-240a-47e8-bc66-69b825ad6807.png", 
-      title: "Reabilitação Total"
+      title: "Reabilitação total"
     },
     {
       image: "/lp/lovable-uploads/6b85a641-26fb-41b3-a2fd-484a5e3f9e59.png",
-      title: "Sorriso Renovado"
+      title: "Implantes e reabilitação"
     }
   ];
 
@@ -23,17 +23,16 @@ const BeforeAfter = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block px-6 py-2 bg-gradient-gold text-white rounded-full text-sm font-medium mb-6">
-            🌟 RESULTADOS REAIS
+            CASOS CLÍNICOS
           </div>
           <h2 className="font-vivant-black text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8">
-            Transformações{" "}
+            Casos clínicos{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              Reais em 24h
+              de All-on-Four
             </span>
           </h2>
           <p className="font-vivant-light text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja como o All-on-Four mudou a vida dos nossos pacientes. 
-            Resultados que falam por si.
+            Fotografias publicadas com autorização escrita dos pacientes. 
           </p>
         </div>
 
@@ -72,14 +71,14 @@ const BeforeAfter = () => {
         <div className="text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-premium max-w-2xl mx-auto">
             <p className="font-vivant-light text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              "Resultados como estes podem ser seus também. 
+              "Os resultados variam de pessoa para pessoa. 
               Marque a sua avaliação e descubra se é candidato ao All-on-Four."
             </p>
             <button
               onClick={() => document.getElementById('evaluation-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center justify-center rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-gold text-white hover:opacity-90 h-14 px-10 py-2 font-sans font-medium tracking-wide shadow-gold"
             >
-              🔘 Quero Minha Transformação
+              🔘 Marcar consulta de avaliação
             </button>
           </div>
         </div>

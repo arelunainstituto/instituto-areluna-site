@@ -4,9 +4,9 @@ const HowItWorksOrtodontia = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-vivant-black text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            O processo que transforma{" "}
+            Como funciona o{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              sorrisos de forma invisível
+              tratamento com alinhadores
             </span>
           </h2>
 
@@ -14,7 +14,7 @@ const HowItWorksOrtodontia = () => {
             <p className="font-vivant-light text-lg md:text-xl text-foreground leading-relaxed mb-8">
               Com alinhadores transparentes personalizados, movimentamos os dentes gradualmente 
               até à posição ideal. Cada alinhador é feito especialmente para si com tecnologia
-              3D, proporcionando um tratamento confortável e praticamente invisível.
+              3D, com consultas de acompanhamento ao longo do tratamento.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">

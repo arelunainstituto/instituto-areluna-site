@@ -11,7 +11,8 @@ interface SEOProps {
 }
 
 const SITE_URL = "https://www.institutoareluna.pt";
-const DEFAULT_IMAGE = `${SITE_URL}/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.png`;
+const OG_BASE = import.meta.env.VITE_OG_BASE || SITE_URL;
+const DEFAULT_IMAGE = `${OG_BASE}/og-institutoareluna-logo.jpg`;
 const TWITTER_HANDLE = "@instituto_areluna";
 
 const SEO = ({ title, description, path = "/", image, keywords, noindex = false, jsonLd }: SEOProps) => {

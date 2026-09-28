@@ -131,7 +131,7 @@ const BlogPage = () => {
         <div className="min-h-screen bg-white dark:bg-gray-950">
             <SEOHead
               title="Blog de Saúde Oral e Estética | Instituto AreLuna"
-              description="Artigos sobre saúde oral, estética facial e bem-estar da equipa clínica do Instituto AreLuna. Dicas e novidades de dentistas e especialistas especializados no Porto."
+              description="Artigos sobre saúde oral, estética facial e bem-estar da equipa clínica do Instituto AreLuna, no Porto."
               canonical={currentPage > 1 ? `${BLOG_URL}?page=${currentPage}` : BLOG_URL}
               jsonLd={blogSchema}
             />

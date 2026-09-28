@@ -1,11 +1,11 @@
 const BenefitsFacetas = () => {
   const benefits = [
-    "Resultado imediato e estética 100% natural",
-    "Lentes ultrafinas e altamente resistentes",
-    "Correção de cor, formato e alinhamento dos dentes",
-    "Procedimento minimamente invasivo, com mínimo desgaste dental",
-    "Durabilidade de até 20 anos com cuidados adequados",
-    "Sorriso harmonioso e personalizado ao seu rosto"
+    "Planeamento digital antes do tratamento",
+    "Facetas em cerâmica e lentes de contacto dental",
+    "Correção de cor e formato dos dentes",
+    "Desgaste dentário definido caso a caso",
+    "Consultas de controlo e manutenção",
+    "Plano adaptado a cada paciente"
   ];
 
   return (
@@ -13,7 +13,7 @@ const BenefitsFacetas = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-vivant-black text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-            Por que escolher{" "}
+            O que envolve o tratamento com{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
               Facetas Dentárias?
             </span>

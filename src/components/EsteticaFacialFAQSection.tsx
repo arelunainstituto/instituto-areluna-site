@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const EsteticaFacialFAQSection = () => {
   const { t } = useTranslation();
@@ -153,6 +154,7 @@ const EsteticaFacialFAQSection = () => {
                   {t("facial_aesthetics_page.faq.cta_button_treatments")}
                 </button>
               </div>
+              <ClinicalDisclaimer className="mt-4 text-gray-500 dark:text-gray-400" />
             </div>
           </div>
         </div>
