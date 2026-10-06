@@ -1,85 +1,40 @@
 import { useTranslation } from 'react-i18next';
+import { Section, SectionHeading, Reveal } from "@/components/site";
 
+/** Números em grelha alinhada — inspirado no bloco "stats" do 21st.dev. */
 const StatsSection = () => {
   const { t } = useTranslation();
 
   const stats = [
-    {
-      value: t('stats.specialists.value'),
-      label: t('stats.specialists.label')
-    },
-    {
-      value: t('stats.specialties.value'),
-      label: t('stats.specialties.label')
-    },
-    {
-      prefix: t('stats.patients.prefix') + " ",
-      value: t('stats.patients.value'),
-      label: t('stats.patients.label')
-    },
-    {
-      prefix: t('stats.tradition.prefix') + " ",
-      value: t('stats.tradition.value'),
-      label: t('stats.tradition.label')
-    }
+    { value: t('stats.specialists.value'), label: t('stats.specialists.label') },
+    { value: t('stats.specialties.value'), label: t('stats.specialties.label') },
+    { prefix: t('stats.patients.prefix'), value: t('stats.patients.value'), label: t('stats.patients.label') },
+    { prefix: t('stats.tradition.prefix'), value: t('stats.tradition.value'), label: t('stats.tradition.label') },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden">
-      {/* Background decorativo */}
-      <div className="absolute inset-0 bg-black/20 dark:bg-gray-800/30"></div>
+    <Section tone="dark">
+      <SectionHeading tone="dark" title={t('stats.title')} description={t('stats.subtitle')} />
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header da seção */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-vivant text-white mb-4">
-            {t('stats.title')}
-          </h2>
-          <div className="w-24 h-1 bg-white mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto font-vivant-light">
-            {t('stats.subtitle')}
-          </p>
-        </div>
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+        {stats.map((stat, index) => (
+          <Reveal key={index} delay={index * 80} className="flex flex-col items-center px-2 text-center lg:px-6">
+            <dd className="order-1 flex min-h-[3.5rem] flex-col items-center justify-end">
+              {stat.prefix && (
+                <span className="font-vivant-light text-sm text-gold-leaf">{stat.prefix}</span>
+              )}
+              <span className="font-vivant text-5xl leading-none text-pure-white">{stat.value}</span>
+            </dd>
+            <dt className="order-2 mt-3 font-vivant-light text-sm text-white/75 sm:text-base">{stat.label}</dt>
+          </Reveal>
+        ))}
+      </dl>
 
-        {/* Grid de estatísticas */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="group text-center"
-            >
-              {/* Número em destaque */}
-              <div className="flex items-baseline justify-center gap-2 mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
-                {stat.prefix && (
-                  <span className="text-2xl md:text-3xl font-vivant-light text-white/90">
-                    {stat.prefix}
-                  </span>
-                )}
-                <span className="text-5xl md:text-5xl lg:text-5xl font-vivant text-white">
-                  {stat.value}
-                </span>
-              </div>
-
-              {/* Label */}
-              <div className="text-white/95 font-vivant text-base md:text-lg lg:text-xl font-medium">
-                {stat.label}
-              </div>
-
-              {/* Linha decorativa */}
-              <div className="w-16 h-1 bg-white/60 mx-auto mt-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-full"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Texto de rodapé */}
-        <div className="text-center mt-16">
-          <p className="text-white/80 font-vivant-light text-lg">
-            {t('stats.footer_text')}
-          </p>
-        </div>
-      </div>
-    </section>
+      <p className="mt-14 text-center font-vivant-light text-base text-white/70 sm:text-lg">
+        {t('stats.footer_text')}
+      </p>
+    </Section>
   );
 };
 
-export default StatsSection; 
+export default StatsSection;

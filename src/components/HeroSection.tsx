@@ -2,78 +2,48 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
 import heroImage from "@/assets/heroImage.webp";
 
+/**
+ * Hero (LCP): h1 e imagem visíveis na primeira pintura, sem animações de entrada.
+ * Padrão inspirado no bloco "hero" do 21st.dev (texto centrado sobre imagem escura).
+ */
 const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
-      {/* Imagem de fundo com baixa opacidade */}
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-dark pt-36 pb-20 sm:pt-40">
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Interior do Instituto AreLuna — clínica dentária e de estética avançada no Porto"
-          className="w-full h-full object-cover mix-blend-overlay"
+          className="h-full w-full object-cover mix-blend-overlay"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-jet/90 via-jet/80 to-black/90" />
       </div>
 
-
-      {/* Elementos decorativos de fundo */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[hsl(var(--gold-leaf))]/5 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[hsl(var(--ring))]/5 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-
-        {/* Partículas sutis */}
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[hsl(var(--gold-leaf))]/20 rounded-full blur-sm animate-float"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-[hsl(var(--gold-leaf))]/10 rounded-full blur-sm animate-float" style={{ animationDelay: '1.5s' }}></div>
-      </div>
-
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
-        {/* Ornamento superior */}
-        <div className="flex justify-center mb-8 opacity-0 animate-fade-in-up">
-          <div className="w-px h-16 bg-gradient-to-b from-transparent via-[hsl(var(--gold-leaf))]/50 to-transparent"></div>
-        </div>
-
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant-skinny font-thin mb-8 leading-tight tracking-wide text-white opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          {t('hero.title_start')} <span className="font-vivant text-[hsl(var(--gold-leaf))]">{t('hero.title_highlight')}</span> {t('hero.title_end')}
+      <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6">
+        <h1 className="mb-8 font-vivant-skinny text-3xl font-thin leading-tight tracking-wide text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          {t('hero.title_start')} <span className="font-vivant text-gold-leaf">{t('hero.title_highlight')}</span> {t('hero.title_end')}
         </h1>
 
-        <p className="text-base sm:text-lg lg:text-xl mb-12 font-vivant-light text-white/80 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <p className="mx-auto mb-12 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg lg:text-xl">
           {t('hero.subtitle')}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <a
-            href="/tratamentos"
-          >
-            <Button
-              variant="outline-gold"
-              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant border-[hsl(var(--gold-leaf))]/30 hover:bg-[hsl(var(--gold-leaf))]/10 text-white min-w-[280px]"
-            >
-              {t('hero.find_procedure')}
-            </Button>
-          </a>
-
-          <a
-            href="#contacto-form"
-          >
-            <Button
-              variant="gold"
-              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300 shadow-xl shadow-amber-900/20"
-            >
-              {t('hero.book')}
-            </Button>
-          </a>
+        <div className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center sm:gap-6">
+          <Button asChild variant="outline-gold" size="cta" className="w-full sm:w-auto sm:min-w-[260px]">
+            <a href="/tratamentos">{t('hero.find_procedure')}</a>
+          </Button>
+          <Button asChild variant="gold" size="cta" className="w-full sm:w-auto sm:min-w-[260px]">
+            <a href="#contacto-form">{t('hero.book')}</a>
+          </Button>
         </div>
 
-        <p className="text-xs text-pure-white/60 font-vivant-light text-center mt-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+        <p className="mt-6 text-center font-vivant-light text-xs text-pure-white/60 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Unidades em Lisboa (Lumiar) e no Porto (Mota Galiza) · Acompanhamento contínuo e personalizado
         </p>
-
-        {/* Indicador de scroll */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1.5s' }}>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-[hsl(var(--gold-leaf))]/50 to-transparent mx-auto"></div>
-        </div>
       </div>
     </section>
   );
