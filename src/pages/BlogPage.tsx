@@ -20,6 +20,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BlogHeroSection from "@/components/BlogHeroSection";
+import { Section, Reveal, cardBaseClasses } from "@/components/site";
 import SEOHead from "@/components/SEOHead";
 
 /** Artigos por página — múltiplo de 3 para fechar a grade no desktop. */
@@ -137,12 +138,13 @@ const BlogPage = () => {
             />
             <Header />
             <BlogHeroSection />
-            <div ref={listRef} className="pt-16 pb-16 bg-white dark:bg-gray-950 scroll-mt-24">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {visiblePosts.map((post) => (
-                            <Link key={post.id} to={`/blog/${post.slug ?? slugify(post.title)}`} className="group">
-                                <Card className="h-full overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-900 group-hover:-translate-y-1">
+            <Section ref={listRef} tone="light" className="scroll-mt-24">
+                <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                        {visiblePosts.map((post, i) => (
+                            <Reveal key={post.id} delay={(i % 3) * 80}>
+                            <Link key={post.id} to={`/blog/${post.slug ?? slugify(post.title)}`} className="group block h-full">
+                                <Card className={cn(cardBaseClasses("light"), "h-full overflow-hidden p-0")}>
                                     <div className="aspect-video w-full overflow-hidden">
                                         <img
                                             src={post.image_url || "/placeholder.svg"}
@@ -154,10 +156,10 @@ const BlogPage = () => {
                                         />
                                     </div>
                                     <CardHeader>
-                                        <div className="text-xs text-[hsl(var(--gold-leaf))] mb-2 font-medium tracking-wider uppercase">
+                                        <div className="text-xs text-gold-leaf mb-2 font-medium tracking-wider uppercase">
                                             {format(new Date(post.published_at), "d 'de' MMMM, yyyy", { locale: ptBR })}
                                         </div>
-                                        <CardTitle className="text-xl font-medium leading-tight group-hover:text-[hsl(var(--gold-leaf))] transition-colors">
+                                        <CardTitle className="text-xl font-medium leading-tight group-hover:text-gold-leaf transition-colors">
                                             {post.title}
                                         </CardTitle>
                                     </CardHeader>
@@ -165,7 +167,7 @@ const BlogPage = () => {
                                         <p className="text-gray-500 dark:text-gray-400 line-clamp-3 font-light">
                                             {post.excerpt || "Leia mais sobre este assunto em nosso blog..."}
                                         </p>
-                                        <div className="mt-4 text-sm font-medium text-[hsl(var(--gold-leaf))] flex items-center">
+                                        <div className="mt-4 text-sm font-medium text-gold-leaf flex items-center">
                                             Ler artigo
                                             <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -174,6 +176,7 @@ const BlogPage = () => {
                                     </CardContent>
                                 </Card>
                             </Link>
+                            </Reveal>
                         ))}
                     </div>
 
@@ -212,7 +215,7 @@ const BlogPage = () => {
                                                     aria-label={`Ir para a página ${item}`}
                                                     className={cn(
                                                         item === currentPage &&
-                                                            "border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))]",
+                                                            "border-gold-leaf text-gold-leaf",
                                                     )}
                                                 >
                                                     {item}
@@ -246,7 +249,7 @@ const BlogPage = () => {
                         </>
                     )}
                 </div>
-            </div>
+            </Section>
             <Footer />
             <WhatsAppFloat />
         </div>
