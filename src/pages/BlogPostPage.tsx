@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
 import { fetchAllPosts, fetchPostById } from "@/services/marketingApi";
 import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -228,5 +229,11 @@ const BlogPostPage = () => {
     );
 };
 
-export default BlogPostPage;
+// react-query só é preciso aqui: o provider fica nesta chunk lazy, fora do JS inicial.
+const BlogPostPageWithQuery = () => (
+  <QueryClientProvider client={queryClient}>
+    <BlogPostPage />
+  </QueryClientProvider>
+);
 
+export default BlogPostPageWithQuery;

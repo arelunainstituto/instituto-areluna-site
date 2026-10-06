@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
@@ -63,6 +63,37 @@ function manualChunks(id: string): string | undefined {
   return undefined;
 }
 
+/**
+ * Pré-carrega a chunk de tradução do visitante logo no <head>.
+ * Sem isto, a chunk (ex.: locale-en) só é pedida depois de o JS principal
+ * correr, e o primeiro render em inglês (o do PageSpeed) atrasa o LCP.
+ * Usa a mesma ordem de deteção do i18next: ?lng=, localStorage, navegador.
+ */
+function localePreload(): Plugin {
+  return {
+    name: "areluna-locale-preload",
+    apply: "build",
+    transformIndexHtml: {
+      order: "post",
+      handler(html, ctx) {
+        const chunks: Record<string, string> = {};
+        for (const item of Object.values(ctx.bundle ?? {})) {
+          if (item.type === "chunk" && /^locale-[a-z]{2}$/.test(item.name)) {
+            chunks[item.name.slice("locale-".length)] = `/${item.fileName}`;
+          }
+        }
+        const script =
+          "<script>(function(m){try{" +
+          "var q=new URLSearchParams(location.search).get('lng');" +
+          "var l=(q||localStorage.getItem('i18nextLng')||(navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();" +
+          "var u=m[l];if(u){var k=document.createElement('link');k.rel='modulepreload';k.crossOrigin='';k.href=u;document.head.appendChild(k);}" +
+          `}catch(e){}})(${JSON.stringify(chunks)})</script>`;
+        return html.replace(/<head[^>]*>/i, (tag) => `${tag}\n  ${script}`);
+      },
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 // Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
 // domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
@@ -97,6 +128,7 @@ export default defineConfig(async ({ mode }) => {
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
+    localePreload(),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
     shouldPrerender && prerender({
       routes: PRERENDER_ROUTES,
