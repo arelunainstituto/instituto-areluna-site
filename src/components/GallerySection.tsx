@@ -2,14 +2,22 @@ import { useState } from "react";
 import { Section, SectionHeading, Reveal } from "@/components/site";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
-import imgD1_38 from "@/assets/Clinica-AreLuna-D1-38.jpg";
-import img96 from "@/assets/Instituto-Areluna-Clinicas-96.jpg";
-import imgD1_3 from "@/assets/Clinica-AreLuna-D1-3.jpg";
-import imgD1_28 from "@/assets/Clinica-AreLuna-D1-28.jpg";
-import imgD1_44 from "@/assets/Clinica-AreLuna-D1-44.jpg";
-import imgD1_2 from "@/assets/Clinica-AreLuna-D1-2.jpg";
-import img38 from "@/assets/Instituto-Areluna-Clinicas-38.jpg";
-import img80 from "@/assets/Instituto-Areluna-Clinicas-80.jpg";
+import imgD1_38_640 from "@/assets/Clinica-AreLuna-D1-38-640.webp";
+import imgD1_38_1280 from "@/assets/Clinica-AreLuna-D1-38-1280.webp";
+import img96_640 from "@/assets/Instituto-Areluna-Clinicas-96-640.webp";
+import img96_1280 from "@/assets/Instituto-Areluna-Clinicas-96-1280.webp";
+import imgD1_3_640 from "@/assets/Clinica-AreLuna-D1-3-640.webp";
+import imgD1_3_1280 from "@/assets/Clinica-AreLuna-D1-3-1280.webp";
+import imgD1_28_640 from "@/assets/Clinica-AreLuna-D1-28-640.webp";
+import imgD1_28_1280 from "@/assets/Clinica-AreLuna-D1-28-1280.webp";
+import imgD1_44_640 from "@/assets/Clinica-AreLuna-D1-44-640.webp";
+import imgD1_44_1280 from "@/assets/Clinica-AreLuna-D1-44-1280.webp";
+import imgD1_2_640 from "@/assets/Clinica-AreLuna-D1-2-640.webp";
+import imgD1_2_1280 from "@/assets/Clinica-AreLuna-D1-2-1280.webp";
+import img38_640 from "@/assets/Instituto-Areluna-Clinicas-38-640.webp";
+import img38_1280 from "@/assets/Instituto-Areluna-Clinicas-38-1280.webp";
+import img80_640 from "@/assets/Instituto-Areluna-Clinicas-80-640.webp";
+import img80_1280 from "@/assets/Instituto-Areluna-Clinicas-80-1280.webp";
 
 const GallerySection = () => {
   const { t } = useTranslation();
@@ -17,35 +25,43 @@ const GallerySection = () => {
 
   const images = [
     {
-      src: imgD1_38,
+      src: imgD1_38_1280,
+      srcSet: `${imgD1_38_640} 640w, ${imgD1_38_1280} 1280w`,
       alt: t('gallery.img1_alt')
     },
     {
-      src: img96,
+      src: img96_1280,
+      srcSet: `${img96_640} 640w, ${img96_1280} 1280w`,
       alt: t('gallery.img2_alt')
     },
     {
-      src: imgD1_3,
+      src: imgD1_3_1280,
+      srcSet: `${imgD1_3_640} 640w, ${imgD1_3_1280} 1280w`,
       alt: t('gallery.img3_alt')
     },
     {
-      src: imgD1_28,
+      src: imgD1_28_1280,
+      srcSet: `${imgD1_28_640} 640w, ${imgD1_28_1280} 1280w`,
       alt: t('gallery.img4_alt')
     },
     {
-      src: imgD1_44,
+      src: imgD1_44_1280,
+      srcSet: `${imgD1_44_640} 640w, ${imgD1_44_1280} 1280w`,
       alt: t('gallery.img5_alt')
     },
     {
-      src: imgD1_2,
+      src: imgD1_2_1280,
+      srcSet: `${imgD1_2_640} 640w, ${imgD1_2_1280} 1280w`,
       alt: t('gallery.img6_alt')
     },
     {
-      src: img38,
+      src: img38_1280,
+      srcSet: `${img38_640} 640w, ${img38_1280} 1280w`,
       alt: t('gallery.img7_alt')
     },
     {
-      src: img80,
+      src: img80_1280,
+      srcSet: `${img80_640} 640w, ${img80_1280} 1280w`,
       alt: t('gallery.img8_alt')
     }
   ];
@@ -74,6 +90,8 @@ const GallerySection = () => {
               <OptimizedImage
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 src={image.src}
+                srcSet={image.srcSet}
+                sizes="(min-width:1024px) 25vw, (min-width:640px) 33vw, 50vw"
                 alt={image.alt}
                 width={400}
                 height={400}

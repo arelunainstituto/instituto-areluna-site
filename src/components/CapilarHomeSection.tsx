@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { Reveal, Section, SectionHeading } from "@/components/site";
-import casoImg from "@/assets/transplante-caso-1.webp";
+import casoImg from "@/assets/transplante-caso-1-960.webp";
+import casoImg480 from "@/assets/transplante-caso-1-480.webp";
 
 /**
  * Teaser do transplante capilar na home (padrão "feature split",
@@ -60,6 +61,8 @@ const CapilarHomeSection = () => {
           <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
             <img
               src={casoImg}
+              srcSet={`${casoImg480} 480w, ${casoImg} 960w`}
+              sizes="(min-width:1024px) 50vw, (min-width:448px) 448px, 100vw"
               alt={t("capilar_home.image_alt")}
               width={1200}
               height={1500}

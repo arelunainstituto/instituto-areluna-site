@@ -2,21 +2,29 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
-import caso13 from "../assets/Caso 13.webp";
-import caso14 from "../assets/14.webp";
-import caso16 from "../assets/16.webp";
-import caso30 from "../assets/30.webp";
-import caso23 from "../assets/Caso 23.webp";
-import caso80 from "../assets/80.webp";
+import caso13_480 from "../assets/Caso 13-480.webp";
+import caso13_960 from "../assets/Caso 13-960.webp";
+import caso14_480 from "../assets/14-480.webp";
+import caso14_960 from "../assets/14-960.webp";
+import caso16_480 from "../assets/16-480.webp";
+import caso16_960 from "../assets/16-960.webp";
+import caso30_480 from "../assets/30-480.webp";
+import caso30_960 from "../assets/30-960.webp";
+import caso23_480 from "../assets/Caso 23-480.webp";
+import caso23_960 from "../assets/Caso 23-960.webp";
+import caso80_480 from "../assets/80-480.webp";
+import caso80_960 from "../assets/80-960.webp";
 
-const IMPLANTS = [caso14, caso16, caso30];
-const FACETS = [caso13, caso23, caso80];
+type CaseImage = { src: string; srcSet: string };
+const img = (small: string, large: string): CaseImage => ({ src: large, srcSet: `${small} 480w, ${large} 960w` });
+const IMPLANTS = [img(caso14_480, caso14_960), img(caso16_480, caso16_960), img(caso30_480, caso30_960)];
+const FACETS = [img(caso13_480, caso13_960), img(caso23_480, caso23_960), img(caso80_480, caso80_960)];
 
 // Padrão inspirado em "before/after gallery" do 21st.dev: imagem com aspeto fixo + legenda.
 const BeforeAfterSection = () => {
   const { t } = useTranslation();
 
-  const renderGroup = (kind: "implants" | "facets", images: string[], heading: string) => (
+  const renderGroup = (kind: "implants" | "facets", images: CaseImage[], heading: string) => (
     <div className="mb-14 last:mb-0">
       <h3 className="mb-8 text-center font-vivant text-2xl text-gold-leaf sm:text-3xl">{heading}</h3>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -27,7 +35,9 @@ const BeforeAfterSection = () => {
               <article className={cn(cardBaseClasses("light"), "p-4 sm:p-4")}>
                 <div className="relative aspect-square overflow-hidden rounded-xl bg-jet-fixed/5 dark:bg-black/30">
                   <img
-                    src={image}
+                    src={image.src}
+                    srcSet={image.srcSet}
+                    sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                     alt={`${title} - Antes e Depois`}
                     loading="lazy"
                     decoding="async"

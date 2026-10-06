@@ -5,14 +5,22 @@ import useEmblaCarousel from 'embla-carousel-react';
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
 
-import draYaraImg from "@/assets/Dra_Yara_Campos.jpg";
-import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
-import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
-import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
-import draCarlaImg from "@/assets/Dra_Carla_Salvi.jpg";
-import drMarcosImg from "@/assets/Dr_Marcos_Kawasaki.jpg";
-import draPethineImg from "@/assets/Dra_Pethine_Dalsasso.jpg";
-import draSaraImg from "@/assets/Dra_Sara_Ribeiro.jpg";
+import draYaraImg_400 from "@/assets/Dra_Yara_Campos-400.webp";
+import draYaraImg_800 from "@/assets/Dra_Yara_Campos-800.webp";
+import draArethuzaImg_400 from "@/assets/Dra_Arethuza_Luna-400.webp";
+import draArethuzaImg_800 from "@/assets/Dra_Arethuza_Luna-800.webp";
+import drLeonardoImg_400 from "@/assets/Dr_Leonardo_Saraiva-400.webp";
+import drLeonardoImg_800 from "@/assets/Dr_Leonardo_Saraiva-800.webp";
+import draDaianeImg_400 from "@/assets/Dra_Daiane_Andrade-400.webp";
+import draDaianeImg_800 from "@/assets/Dra_Daiane_Andrade-800.webp";
+import draCarlaImg_400 from "@/assets/Dra_Carla_Salvi-400.webp";
+import draCarlaImg_800 from "@/assets/Dra_Carla_Salvi-800.webp";
+import drMarcosImg_400 from "@/assets/Dr_Marcos_Kawasaki-400.webp";
+import drMarcosImg_800 from "@/assets/Dr_Marcos_Kawasaki-800.webp";
+import draPethineImg_400 from "@/assets/Dra_Pethine_Dalsasso-400.webp";
+import draPethineImg_800 from "@/assets/Dra_Pethine_Dalsasso-800.webp";
+import draSaraImg_400 from "@/assets/Dra_Sara_Ribeiro-400.webp";
+import draSaraImg_800 from "@/assets/Dra_Sara_Ribeiro-800.webp";
 
 const CorpoClinicoSection = () => {
   const { t } = useTranslation();
@@ -39,49 +47,56 @@ const CorpoClinicoSection = () => {
       name: "Dr. Leonardo Saraiva",
       crm: "OMD 11846",
       peloBrasil: true,
-      image: drLeonardoImg
+      image: drLeonardoImg_800,
+      imageSrcSet: `${drLeonardoImg_400} 400w, ${drLeonardoImg_800} 800w`
     },
     {
       id: "daiane",
       name: "Dra. Daiane Andrade",
       crm: "OMD 22681",
       peloBrasil: true,
-      image: draDaianeImg
+      image: draDaianeImg_800,
+      imageSrcSet: `${draDaianeImg_400} 400w, ${draDaianeImg_800} 800w`
     },
     {
       id: "carla",
       name: "Dra. Carla Salvi",
       crm: "OMD 15214",
       peloBrasil: true,
-      image: draCarlaImg
+      image: draCarlaImg_800,
+      imageSrcSet: `${draCarlaImg_400} 400w, ${draCarlaImg_800} 800w`
     },
     {
       id: "marcos",
       name: "Dr. Marcos Kawasaki",
       crm: "OM 75498",
       peloBrasil: true,
-      image: drMarcosImg
+      image: drMarcosImg_800,
+      imageSrcSet: `${drMarcosImg_400} 400w, ${drMarcosImg_800} 800w`
     },
     {
       id: "pethine",
       name: "Dra. Pethine Dalsasso",
       crm: "OMD 12228",
       peloBrasil: true,
-      image: draPethineImg
+      image: draPethineImg_800,
+      imageSrcSet: `${draPethineImg_400} 400w, ${draPethineImg_800} 800w`
     },
     {
       id: "sara",
       name: "Dra. Sara Ribeiro",
       crm: "OMD 08560",
       peloBrasil: false,
-      image: draSaraImg
+      image: draSaraImg_800,
+      imageSrcSet: `${draSaraImg_400} 400w, ${draSaraImg_800} 800w`
     },
     {
       id: "yara",
       name: "Dra. Yara Campos",
       crm: "OMD 15666",
       peloBrasil: true,
-      image: draYaraImg
+      image: draYaraImg_800,
+      imageSrcSet: `${draYaraImg_400} 400w, ${draYaraImg_800} 800w`
     },
     {
       id: "thais",
@@ -95,7 +110,8 @@ const CorpoClinicoSection = () => {
       name: "Dra. Arethuza Luna",
       crm: "OMD 11845",
       peloBrasil: true,
-      image: draArethuzaImg
+      image: draArethuzaImg_800,
+      imageSrcSet: `${draArethuzaImg_400} 400w, ${draArethuzaImg_800} 800w`
     }
   ];
 
@@ -135,6 +151,8 @@ const CorpoClinicoSection = () => {
                       {doctor.image ? (
                         <OptimizedImage
                           src={doctor.image}
+                          srcSet={doctor.imageSrcSet}
+                          sizes="(min-width:1280px) 20vw, (min-width:1024px) 25vw, (min-width:768px) 33vw, (min-width:640px) 50vw, 100vw"
                           alt={doctor.name}
                           width={400}
                           height={500}
