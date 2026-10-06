@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { PageHero, HeroStat } from "@/components/site/PageHero";
-import tourismBg from "@/assets/tourism.png";
+import tourismBg from "@/assets/tourism.webp";
 
 const TourismDentarioHeroSection = () => {
   const { t } = useTranslation();
