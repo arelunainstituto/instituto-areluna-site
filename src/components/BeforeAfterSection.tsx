@@ -25,7 +25,7 @@ const BeforeAfterSection = () => {
           return (
             <Reveal key={i} delay={i * 80} className="h-full">
               <article className={cn(cardBaseClasses("light"), "p-4 sm:p-4")}>
-                <div className="relative aspect-square overflow-hidden rounded-xl bg-jet/5 dark:bg-black/30">
+                <div className="relative aspect-square overflow-hidden rounded-xl bg-jet-fixed/5 dark:bg-black/30">
                   <img
                     src={image}
                     alt={`${title} - Antes e Depois`}
@@ -35,7 +35,7 @@ const BeforeAfterSection = () => {
                     height={600}
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-jet px-3 py-1 font-vivant text-xs tracking-wide text-pure-white">
+                  <span className="absolute left-3 top-3 rounded-full bg-jet-fixed px-3 py-1 font-vivant text-xs tracking-wide text-pure-white">
                     {t("before_after.card.case_badge")} {i + 1}
                   </span>
                 </div>

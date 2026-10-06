@@ -24,7 +24,7 @@ const buttonVariants = cva(
         // CTA principal sobre fundos escuros (hero, secções tone="dark")
         "gold-leaf": "bg-gold-leaf text-[hsl(20_11%_20%)] hover:bg-gold-leaf/90 shadow-gold transition-all duration-300 font-medium",
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
-        "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
+        "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-jet-fixed hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",
         // Contorno para fundos claros (o "outline-gold" é para fundos escuros)
         "outline-dark": "border border-jet/25 text-jet hover:bg-jet hover:text-pure-white dark:border-white/30 dark:text-white dark:hover:bg-white/10 transition-all duration-300",

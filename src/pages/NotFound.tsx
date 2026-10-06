@@ -27,7 +27,7 @@ const NotFound = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-jet text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-jet-fixed text-white flex flex-col justify-between">
       <SEOHead
         title="Página Não Encontrada (404) | Instituto AreLuna"
         description="A página que procura não existe ou foi movida. Explore os nossos tratamentos dentários ou fale connosco."

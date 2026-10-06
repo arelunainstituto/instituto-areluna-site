@@ -78,7 +78,7 @@ const GallerySection = () => {
                 width={400}
                 height={400}
               />
-              <span className="absolute inset-0 bg-jet/0 transition-colors duration-300 group-hover:bg-jet/20" />
+              <span className="absolute inset-0 bg-jet-fixed/0 transition-colors duration-300 group-hover:bg-jet-fixed/20" />
             </button>
           </Reveal>
         ))}

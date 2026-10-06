@@ -20,7 +20,7 @@ const HeroSection = () => {
           loading="eager"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-jet/90 via-jet/80 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-jet-fixed/90 via-jet-fixed/80 to-black/90" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6">

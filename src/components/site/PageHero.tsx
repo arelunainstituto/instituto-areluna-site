@@ -39,7 +39,7 @@ export const PageHero = ({
         decoding="async"
         className="h-full w-full object-cover opacity-30"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-jet/80 via-jet/70 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-jet-fixed/80 via-jet-fixed/70 to-black/90" />
     </div>
 
     <div className="relative z-10 mx-auto w-full max-w-5xl px-4 text-center sm:px-6 lg:px-8">

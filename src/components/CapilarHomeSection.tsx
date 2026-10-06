@@ -63,7 +63,7 @@ const CapilarHomeSection = () => {
               decoding="async"
               className="aspect-[4/5] w-full rounded-2xl object-cover shadow-elegant"
             />
-            <figcaption className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-jet/85 px-4 py-2 text-xs font-vivant uppercase tracking-[0.18em] text-gold-leaf">
+            <figcaption className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-jet-fixed/85 px-4 py-2 text-xs font-vivant uppercase tracking-[0.18em] text-gold-leaf">
               <Check className="h-3.5 w-3.5" aria-hidden="true" />
               {t("capilar_home.caption")}
             </figcaption>
