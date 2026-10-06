@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import heroWoman from "@/assets/DSC06081.jpg";
+import heroWoman from "@/assets/DSC06081.webp";
 
 const ContatoHeroSection = () => {
   const { t } = useTranslation();

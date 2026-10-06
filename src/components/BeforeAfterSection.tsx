@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import caso13 from "../assets/Caso 13.png";
-import caso14 from "../assets/14.png";
-import caso16 from "../assets/16.png";
-import caso30 from "../assets/30.jpg";
-import caso23 from "../assets/Caso 23.png";
-import caso80 from "../assets/80.png";
+import caso13 from "../assets/Caso 13.webp";
+import caso14 from "../assets/14.webp";
+import caso16 from "../assets/16.webp";
+import caso30 from "../assets/30.webp";
+import caso23 from "../assets/Caso 23.webp";
+import caso80 from "../assets/80.webp";
 
 const BeforeAfterSection = () => {
   const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import thumbImg from '../assets/thumb.jpg';
+import thumbImg from '../assets/thumb.webp';
 import { Play } from 'lucide-react';
 
 const TourismDentarioSection = () => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import caso2 from '../assets/Caso 2.jpg';
+import caso2 from '../assets/Caso 2.webp';
 
 const TrasplanteCapilarSection = () => {
   const [isHovered, setIsHovered] = useState(false);

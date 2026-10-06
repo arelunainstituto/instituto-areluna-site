@@ -25,8 +25,8 @@ interface HeroSectionProps {
   showGradientBorders?: boolean;
 }
 
-const MARBLE_BG = "/lp/lovable-uploads/bad3a722-534a-44c5-a5a1-36043811b0f7.png";
-const LOGO = "/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.png";
+const MARBLE_BG = "/lp/lovable-uploads/bad3a722-534a-44c5-a5a1-36043811b0f7.webp";
+const LOGO = "/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.webp";
 
 const HeroSection = ({
   overlayImage,

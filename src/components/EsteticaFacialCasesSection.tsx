@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import casoRinoImg from "@/assets/caso-rino.png";
-import casoLipsImg from "@/assets/caso-lips.jpg";
-import caso2 from "@/assets/01.png";
+import casoRinoImg from "@/assets/caso-rino.webp";
+import casoLipsImg from "@/assets/caso-lips.webp";
+import caso2 from "@/assets/01.webp";
 
 const EsteticaFacialCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);

@@ -1,15 +1,15 @@
 const BeforeAfterEstetica = () => {
   const cases = [
     {
-      image: "/lp/lovable-uploads/ac47f333-3215-4dfc-bfc9-8dd49560249d.png",
+      image: "/lp/lovable-uploads/ac47f333-3215-4dfc-bfc9-8dd49560249d.webp",
       title: "Sorriso Harmonioso"
     },
     {
-      image: "/lp/lovable-uploads/0a41d192-bb3b-4d43-8e11-e5f7115997af.png",
+      image: "/lp/lovable-uploads/0a41d192-bb3b-4d43-8e11-e5f7115997af.webp",
       title: "Estética Natural"
     },
     {
-      image: "/lp/lovable-uploads/f8984be4-e220-4e22-a671-97cbeb5ff1d3.png", 
+      image: "/lp/lovable-uploads/f8984be4-e220-4e22-a671-97cbeb5ff1d3.webp", 
       title: "Formato Perfeito"
     }
   ];

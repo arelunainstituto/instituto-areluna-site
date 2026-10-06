@@ -1,11 +1,11 @@
 const BeforeAfterOrtodontia = () => {
   const cases = [
     {
-      image: "/lp/lovable-uploads/8fde05d6-7741-4e2e-9262-cccb535ac22f.png",
+      image: "/lp/lovable-uploads/8fde05d6-7741-4e2e-9262-cccb535ac22f.webp",
       title: "Alinhamento Perfeito"
     },
     {
-      image: "/lp/lovable-uploads/5c7b66b2-6488-4009-a0d3-581e54269dd1.png",
+      image: "/lp/lovable-uploads/5c7b66b2-6488-4009-a0d3-581e54269dd1.webp",
       title: "Transformação Natural"
     },
     {

@@ -10,7 +10,7 @@ const Footer = () => {
             {/* Logo above Contactos */}
             <div className="mb-6">
               <img 
-                src="/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.png" 
+                src="/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.webp" 
                 alt="Instituto Areluna" 
                 className="h-10 md:h-12 object-contain"
               />

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import caso1 from "@/assets/transplante-caso-1.jpg";
-import caso2 from "@/assets/transplante-caso-2.png";
-import caso3 from "@/assets/transplante-caso-3.jpg";
+import caso1 from "@/assets/transplante-caso-1.webp";
+import caso2 from "@/assets/transplante-caso-2.webp";
+import caso3 from "@/assets/transplante-caso-3.webp";
 
 const TrasplanteCapilarCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
