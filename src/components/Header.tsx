@@ -1,28 +1,120 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Phone, ChevronRight, X, Menu } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import logoImg from "@/assets/logo.webp";
+
+/**
+ * Cabeçalho global. Inspiração: blocos "navbar" do catálogo 21st.dev
+ * (navbar centrada com menu em painel no mobile), adaptados aos tokens AreLuna.
+ * - Transparente sobre os heros; sólido ao fazer scroll e nas rotas sem hero (`isSolidHeader`).
+ * - Menu mobile acessível: aria-expanded/aria-controls, foco preso no painel, Esc fecha
+ *   e devolve o foco ao botão, scroll da página bloqueado enquanto está aberto.
+ */
+/** Telefone + seletor de língua (no modo compacto, o telefone passa a ícone). */
+const HeaderActions = ({ compact }: { compact: boolean }) => (
+  <>
+    <a
+      href="tel:+351220430090"
+      aria-label="Telefone: +351 220 430 090"
+      className={cn(
+        'inline-flex h-10 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-gold-leaf/50 text-xs font-medium text-gold-leaf transition-colors duration-300 hover:bg-gold-leaf/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf',
+        compact ? 'w-10' : 'ml-2 px-4',
+      )}
+    >
+      <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+      {!compact && '+351 220 430 090'}
+    </a>
+    <div className="ml-3 flex h-11 items-center border-l border-white/15 pl-4">
+      <LanguageSwitcher />
+    </div>
+  </>
+);
 
 const Header = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const isBlogPage = location.pathname.startsWith('/blog');
   const isPrivacyOrTerms = location.pathname === '/privacidade' || location.pathname === '/termos';
   const knownTransparentRoutes = ['/', '/tratamentos', '/turismo-dentario', '/transplante-capilar', '/estetica-facial', '/contato'];
   const isSolidHeader = isBlogPage || isPrivacyOrTerms || location.pathname === '/sobre-a-fundadora' || !knownTransparentRoutes.includes(location.pathname);
+  const isSolid = isScrolled || isSolidHeader;
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 20);
+      setIsScrolled(scrollPosition > 40);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const closeMobileMenu = useCallback((restoreFocus = false) => {
+    setIsMobileMenuOpen(false);
+    if (restoreFocus) menuButtonRef.current?.focus();
+  }, []);
+
+  // Menu mobile aberto: bloquear scroll, focar o primeiro link, Esc fecha, Tab fica no painel.
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const panel = panelRef.current;
+    panel?.removeAttribute('inert');
+    const focusables = () =>
+      Array.from(
+        panel?.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])') ?? [],
+      );
+    const raf = requestAnimationFrame(() => (panel?.querySelector<HTMLElement>('nav a') ?? focusables()[0])?.focus());
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      // O seletor de língua (Radix) trata o seu próprio Esc/Tab.
+      if ((e.target as HTMLElement | null)?.closest?.('[role="menu"]')) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeMobileMenu(true);
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = [menuButtonRef.current, ...focusables()].filter(Boolean) as HTMLElement[];
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      cancelAnimationFrame(raf);
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isMobileMenuOpen, closeMobileMenu]);
+
+  // Painel fechado: fora da árvore de acessibilidade e do foco (atributo inert).
+  useEffect(() => {
+    panelRef.current?.toggleAttribute('inert', !isMobileMenuOpen);
+  }, [isMobileMenuOpen]);
+
+  // Fechar o menu se a rota mudar.
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const menuItems = [
     { href: "/", label: t('nav.institute') },
@@ -37,16 +129,12 @@ const Header = () => {
     // { href: "#formacoes", label: "FORMAÇÕES" }
   ];
 
+  const isActive = (href: string) =>
+    href === '/' ? location.pathname === '/' : location.pathname === href || location.pathname.startsWith(`${href}/`);
 
-  const handleMobileMenuClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-
-    // Check if it's a page route (starts with /) or an anchor (#)
-    if (href.startsWith('/')) {
-      // Navigate to page
-      window.location.href = href;
-    } else {
-      // Smooth scroll to section
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -54,189 +142,179 @@ const Header = () => {
     }
   };
 
+  const handleMobileMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsMobileMenuOpen(false);
+    handleAnchorClick(e, href);
+  };
+
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || isSolidHeader
-      ? 'bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] shadow-xl border-b border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/30'
-      : 'bg-transparent'
-      }`}>
-      {/* Main header */}
-      <div className={`container mx-auto px-3 xs:px-4 sm:px-6 transition-all duration-500 ${isScrolled || isSolidHeader ? 'py-1.5 xs:py-2 sm:py-3' : 'py-2 xs:py-3 sm:py-4'
-        }`}>
-        {/* Mobile Layout - Side by side */}
-        <div className="flex items-center justify-between lg:hidden">
-          {/* Logo */}
-          <div className="flex items-center justify-center">
+    <header
+      className={cn(
+        'fixed top-0 w-full transition-[background-color,box-shadow,border-color] duration-500',
+        isMobileMenuOpen ? 'z-[60]' : 'z-50',
+        isSolid
+          ? 'border-b border-gold-leaf/20 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] shadow-xl dark:border-gold-leaf/30 dark:bg-jet-fixed dark:bg-none'
+          : 'border-b border-transparent bg-transparent',
+      )}
+    >
+      <div className="relative z-50 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Abaixo de xl: logo à esquerda, botão do menu à direita (64 px quando compacto) */}
+        <div
+          className={cn(
+            'flex items-center justify-between transition-[height] duration-500 xl:hidden',
+            isSolid ? 'h-16' : 'h-24 sm:h-28',
+          )}
+        >
+          <a
+            href="/"
+            className="flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
+            aria-label="Instituto AreLuna"
+          >
             <img
               src={logoImg}
               alt="Areluna"
               loading="eager"
               decoding="async"
-              className={`w-auto transition-all duration-500 ${isScrolled || isSolidHeader
-                ? 'h-16 xs:h-16 sm:h-18'
-                : 'h-[6rem] xs:h-18 sm:h-20'
-                }`}
+              className={cn('w-auto transition-[height] duration-500', isSolid ? 'h-12' : 'h-20 sm:h-24')}
             />
-          </div>
+          </a>
 
-          {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`relative z-50 p-1.5 xs:p-2 rounded-lg backdrop-blur-sm border transition-all duration-300 min-w-[40px] min-h-[40px] flex items-center justify-center bg-white/10 border-white/20 hover:bg-white/20`}
-            aria-label="Toggle mobile menu"
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition-colors duration-300 hover:border-gold-leaf/60 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
+            aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            <div className="w-5 xs:w-6 h-5 xs:h-6 flex flex-col justify-center items-center">
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5 xs:translate-y-1' : '-translate-y-0.5 xs:-translate-y-1'
-                }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
-                }`}></span>
-              <span className={`block w-4 xs:w-5 h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5 xs:-translate-y-1' : 'translate-y-0.5 xs:translate-y-1'
-                }`}></span>
-            </div>
+            {isMobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
         </div>
 
-        {/* Desktop Layout - Logo above menu */}
-        <div className="hidden lg:block">
-          {/* Logo centralizada */}
-          <div className="flex items-center justify-center">
+        {/* xl+: no topo do hero, logo centrada e menu por baixo; compacto (72 px, uma linha) ao fazer scroll */}
+        <div
+          className={cn(
+            'hidden xl:flex',
+            isSolid ? 'h-[72px] flex-row items-center justify-between gap-6' : 'flex-col items-center pb-2 pt-3',
+          )}
+        >
+          <a
+            href="/"
+            className="shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
+            aria-label="Instituto AreLuna"
+          >
             <img
               src={logoImg}
               alt="Areluna"
               loading="eager"
               decoding="async"
-              className={`w-auto transition-all duration-500 ${isScrolled || isSolidHeader
-                ? 'h-20'
-                : 'h-40'
-                }`}
+              className={cn('w-auto transition-[height] duration-500', isSolid ? 'h-14' : 'h-28')}
             />
+          </a>
+
+          <nav
+            aria-label="Principal"
+            className={cn('flex min-w-0 items-center justify-center gap-0.5', !isSolid && 'mt-2')}
+          >
+            {menuItems.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? 'page' : undefined}
+                  className={cn(
+                    'relative inline-flex h-11 items-center whitespace-nowrap rounded-full px-2.5 text-xs font-light uppercase tracking-wider transition-colors duration-300 2xl:px-3 2xl:text-sm',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf',
+                    'after:absolute after:inset-x-2.5 after:bottom-2 after:h-px after:origin-center after:bg-gold-leaf after:transition-transform after:duration-300',
+                    active
+                      ? 'text-gold-leaf after:scale-x-100'
+                      : 'text-white after:scale-x-0 hover:text-gold-leaf hover:after:scale-x-100',
+                  )}
+                  onClick={(e) => handleAnchorClick(e, item.href)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+            {!isSolid && <HeaderActions compact={false} />}
+          </nav>
+
+          {isSolid && (
+            <div className="flex shrink-0 items-center">
+              <HeaderActions compact />
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Painel do menu mobile */}
+      <div
+        id="mobile-menu"
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+        aria-hidden={!isMobileMenuOpen}
+        className={cn(
+          'fixed inset-0 z-40 overflow-y-auto bg-gradient-dark transition-[opacity,visibility] duration-300 motion-reduce:transition-none xl:hidden dark:bg-black dark:bg-none',
+          isMobileMenuOpen ? 'visible opacity-100 transition-opacity' : 'invisible opacity-0',
+        )}
+      >
+        <div className="mx-auto flex min-h-full w-full max-w-md flex-col px-4 pb-8 pt-28 sm:px-6">
+          <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+            <span className="font-vivant text-xs uppercase tracking-[0.18em] text-white/60">Menu</span>
+            <div className="flex h-11 items-center">
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          {/* Desktop Navigation - Abaixo da logo */}
-          <nav className={`flex items-center justify-center space-x-5 xl:space-x-6 transition-all duration-500 ${isScrolled || isSolidHeader ? 'mt-2' : 'mt-4'
-            }`}>
-            {menuItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={`hover:text-[hsl(var(--gold-leaf))] transition-colors font-light tracking-wider text-xs xl:text-sm whitespace-nowrap text-white uppercase`}
-                onClick={(e) => {
-                  if (item.href.startsWith('#')) {
-                    e.preventDefault();
-                    const element = document.querySelector(item.href);
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
-              >
-                {item.label}
+          <nav aria-label="Principal (mobile)" className="flex-1">
+            <ul className="divide-y divide-white/10">
+              {menuItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      aria-current={active ? 'page' : undefined}
+                      onClick={(e) => handleMobileMenuClick(e, item.href)}
+                      className={cn(
+                        'group flex min-h-[52px] items-center justify-between gap-4 rounded-lg px-2 text-sm font-light uppercase tracking-wider transition-colors duration-200',
+                        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf',
+                        active ? 'text-gold-leaf' : 'text-white hover:text-gold-leaf',
+                      )}
+                    >
+                      {item.label}
+                      <ChevronRight
+                        className="h-4 w-4 text-gold-leaf/70 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          <div className="mt-8 space-y-3 border-t border-white/10 pt-6 text-center">
+            <Button asChild variant="gold-leaf" size="cta" className="w-full">
+              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                {t('header.book_consultation')}
               </a>
-            ))}
+            </Button>
             <a
               href="tel:+351220430090"
               aria-label="Telefone: +351 220 430 090"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[hsl(var(--gold-leaf))]/40 text-[hsl(var(--gold-leaf))] text-xs font-medium hover:bg-[hsl(var(--gold-leaf))]/10 transition-all duration-300 whitespace-nowrap"
+              className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-4 text-sm text-gold-leaf transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
             >
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
+              <Phone className="h-4 w-4" aria-hidden="true" />
               +351 220 430 090
             </a>
-            <div className="pl-4 opacity-80 border-l border-white/10 ml-4">
-              <LanguageSwitcher />
-            </div>
-          </nav>
-
-        </div>
-
-        {/* Mobile Navigation Overlay */}
-        <div className={`lg:hidden fixed inset-0 top-0 bg-black/80 backdrop-blur-xl transition-all duration-700 ${isMobileMenuOpen
-          ? 'opacity-100 visible'
-          : 'opacity-0 invisible'
-          }`}>
-          {/* Background decorativo */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-br from-[hsl(var(--jet))]/10 to-[hsl(var(--ring))]/5 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-br from-[hsl(var(--ring))]/8 to-[hsl(var(--jet))]/5 rounded-full blur-2xl"></div>
-          </div>
-
-          <div className="relative z-10 flex flex-col min-h-screen">
-            {/* Header do menu mobile */}
-            <div className="pt-16 xs:pt-20 pb-6 xs:pb-8 text-center">
-              <img
-                src={logoImg}
-                alt="Areluna"
-                loading="lazy"
-                decoding="async"
-                className="h-[8rem] xs:h-20 w-auto mx-auto mb-3 xs:mb-4"
-              />
-              <div className="mt-4 flex justify-center">
-                <LanguageSwitcher />
-              </div>
-            </div>
-
-            {/* Navegação principal */}
-            <div className="flex-1 flex flex-col justify-center px-4 xs:px-6 sm:px-8">
-              <nav className="space-y-1.5 xs:space-y-2">
-                {menuItems.slice(0, 5).map((item, index) => (
-                  <button
-                    key={item.href}
-                    onClick={() => handleMobileMenuClick(item.href)}
-                    className={`w-full text-left px-4 xs:px-5 sm:px-6 py-3 xs:py-3.5 sm:py-4 rounded-lg xs:rounded-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 border border-transparent hover:border-[hsl(var(--gold-leaf))]/20 hover:bg-gradient-to-r hover:from-[hsl(var(--jet))]/5 hover:to-[hsl(var(--ring))]/5 dark:hover:from-gray-800/50 dark:hover:to-gray-900/50 ${index === 0 ? 'animate-slide-in-left' :
-                      index === 1 ? 'animate-slide-in-left animation-delay-100' :
-                        index === 2 ? 'animate-slide-in-left animation-delay-200' :
-                          index === 3 ? 'animate-slide-in-left animation-delay-300' :
-                            'animate-slide-in-left animation-delay-400'
-                      }`}
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-white font-light tracking-wider text-sm xs:text-base uppercase">
-                        {item.label}
-                      </span>
-                      <svg className="w-3.5 xs:w-4 h-3.5 xs:h-4 text-[hsl(var(--gold-leaf))]/60 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </button>
-                ))}
-              </nav>
-
-              {/* Seção secundária */}
-              <div className="mt-6 xs:mt-8 pt-4 xs:pt-6 border-t border-[hsl(var(--gold-leaf))]/20">
-                <div className="grid grid-cols-2 gap-2 xs:gap-3">
-                  {menuItems.slice(5).map((item, index) => (
-                    <button
-                      key={item.href}
-                      onClick={() => handleMobileMenuClick(item.href)}
-                      className="px-3 xs:px-4 py-2.5 xs:py-3 rounded-lg border border-[hsl(var(--gold-leaf))]/20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-[hsl(var(--gold-leaf))]/10 transition-all duration-300 transform hover:scale-95"
-                    >
-                      <span className="text-white font-light text-xs xs:text-sm tracking-wide uppercase">
-                        {item.label}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Footer do menu */}
-            <div className="pb-6 xs:pb-8 pt-4 xs:pt-6 text-center border-t border-[hsl(var(--gold-leaf))]/10">
-
-              {/* Call to action */}
-              <div className="px-4 xs:px-6 sm:px-8">
-                <button
-                  onClick={() => window.open('https://wa.me/351910098226', '_blank')}
-                  className="w-full bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black hover:from-gray-800 hover:to-gray-900 text-white font-medium py-3 xs:py-4 px-4 xs:px-6 rounded-lg xs:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[0.98] active:scale-95 text-sm xs:text-base"
-                >
-                  {t('header.book_consultation')}
-                </button>
-
-                <p className="text-xs text-white/70 mt-2 xs:mt-3 font-light px-2">
-                  {t('header.subtitle')}
-                </p>
-              </div>
-            </div>
+            <p className="px-2 text-xs font-light text-white/70">
+              {t('header.subtitle')}
+            </p>
           </div>
         </div>
       </div>
