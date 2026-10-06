@@ -822,5 +822,29 @@
         "toast_success_desc": "Abbiamo ricevuto i suoi dati. La nostra équipe clinica la contatterà a breve.",
         "toast_error_title": "Errore nell'invio",
         "toast_error_desc": "Impossibile inviare i dati automaticamente. Riprovare o contattarci via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Trapianto di Capelli",
+        "title": "Trapianto di capelli",
+        "highlight": "FUE",
+        "description": "Ritrovi la sua linea dei capelli con la tecnica FUE, la più avanzata e meno invasiva, con risultati naturali e un accompagnamento continuo.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Tecnica meno invasiva"
+            },
+            "natural": {
+                "title": "Naturale",
+                "desc": "Risultati impercettibili"
+            },
+            "lasting": {
+                "title": "Duraturo",
+                "desc": "Un risultato per tutta la vita"
+            }
+        },
+        "cta_primary": "Scopri il trapianto di capelli",
+        "cta_secondary": "Prenota una consulenza",
+        "image_alt": "Caso reale di trapianto di capelli FUE",
+        "caption": "Caso reale"
     }
 }

@@ -1155,5 +1155,29 @@
         "toast_success_desc": "We have received your details and our clinical team will get in touch very soon.",
         "toast_error_title": "Error submitting form",
         "toast_error_desc": "Could not send data automatically. Please try again or reach out to us via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Hair Transplant",
+        "title": "Hair Transplant",
+        "highlight": "with FUE",
+        "description": "Restore your hairline with the FUE technique, the most advanced and least invasive, with natural results and continuous follow-up.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Least invasive technique"
+            },
+            "natural": {
+                "title": "Natural",
+                "desc": "Imperceptible results"
+            },
+            "lasting": {
+                "title": "Long-lasting",
+                "desc": "A lifelong result"
+            }
+        },
+        "cta_primary": "Discover hair transplant",
+        "cta_secondary": "Book a consultation",
+        "image_alt": "Real FUE hair transplant case",
+        "caption": "Real case"
     }
 }

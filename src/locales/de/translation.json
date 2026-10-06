@@ -822,5 +822,29 @@
         "toast_success_desc": "Wir haben Ihre Daten erhalten. Unser Team wird sich in Kürze melden.",
         "toast_error_title": "Fehler beim Senden",
         "toast_error_desc": "Die Daten konnten nicht automatisch übermittelt werden. Bitte versuchen Sie es erneut oder über WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Haartransplantation",
+        "title": "Haartransplantation",
+        "highlight": "FUE",
+        "description": "Gewinnen Sie Ihren Haaransatz mit der FUE-Technik zurück, der fortschrittlichsten und am wenigsten invasiven Methode, mit natürlichen Ergebnissen und kontinuierlicher Betreuung.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Am wenigsten invasive Technik"
+            },
+            "natural": {
+                "title": "Natürlich",
+                "desc": "Unauffällige Ergebnisse"
+            },
+            "lasting": {
+                "title": "Dauerhaft",
+                "desc": "Ein Ergebnis fürs Leben"
+            }
+        },
+        "cta_primary": "Haartransplantation entdecken",
+        "cta_secondary": "Termin vereinbaren",
+        "image_alt": "Echter Fall einer FUE-Haartransplantation",
+        "caption": "Echter Fall"
     }
 }

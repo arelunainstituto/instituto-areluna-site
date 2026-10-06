@@ -822,5 +822,29 @@
         "toast_success_desc": "Nous avons bien reçu vos informations. Notre équipe vous recontactera très rapidement.",
         "toast_error_title": "Erreur lors de l'envoi",
         "toast_error_desc": "Impossible d'envoyer vos données automatiquement. Veuillez réessayer ou nous joindre sur WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Greffe de Cheveux",
+        "title": "Greffe de cheveux",
+        "highlight": "FUE",
+        "description": "Retrouvez votre ligne capillaire grâce à la technique FUE, la plus avancée et la moins invasive, avec des résultats naturels et un suivi continu.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Technique la moins invasive"
+            },
+            "natural": {
+                "title": "Naturel",
+                "desc": "Résultats imperceptibles"
+            },
+            "lasting": {
+                "title": "Durable",
+                "desc": "Un résultat pour la vie"
+            }
+        },
+        "cta_primary": "Découvrir la greffe de cheveux",
+        "cta_secondary": "Prendre rendez-vous",
+        "image_alt": "Cas réel de greffe de cheveux FUE",
+        "caption": "Cas réel"
     }
 }

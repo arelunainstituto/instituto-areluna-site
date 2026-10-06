@@ -822,5 +822,29 @@
         "toast_success_desc": "We hebben uw gegevens ontvangen. Ons klinisch team neemt zeer spoedig contact op.",
         "toast_error_title": "Fout bij verzenden",
         "toast_error_desc": "Kon gegevens niet automatisch verzenden. Probeer het opnieuw of neem contact op via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Haartransplantatie",
+        "title": "Haartransplantatie",
+        "highlight": "FUE",
+        "description": "Herstel uw haarlijn met de FUE-techniek, de meest geavanceerde en minst invasieve methode, met natuurlijke resultaten en continue begeleiding.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Minst invasieve techniek"
+            },
+            "natural": {
+                "title": "Natuurlijk",
+                "desc": "Onzichtbare resultaten"
+            },
+            "lasting": {
+                "title": "Blijvend",
+                "desc": "Een resultaat voor het leven"
+            }
+        },
+        "cta_primary": "Ontdek de haartransplantatie",
+        "cta_secondary": "Plan een consult",
+        "image_alt": "Echt geval van FUE-haartransplantatie",
+        "caption": "Echt geval"
     }
 }

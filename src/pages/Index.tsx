@@ -10,6 +10,7 @@ const GallerySection = lazy(() => import("@/components/GallerySection"));
 const CorpoClinicoSection = lazy(() => import("@/components/CorpoClinicoSection"));
 const StatsSection = lazy(() => import("@/components/StatsSection"));
 const TreatmentsSection = lazy(() => import("@/components/TreatmentsSection"));
+const CapilarHomeSection = lazy(() => import("@/components/CapilarHomeSection"));
 const CheckupIntegradoSection = lazy(() => import("@/components/CheckupIntegradoSection"));
 const TourismDentarioSection = lazy(() => import("@/components/TourismDentarioSection"));
 const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
@@ -110,6 +111,9 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <TreatmentsSection />
+      </Suspense>
+      <Suspense fallback={<SectionSkeleton />}>
+        <CapilarHomeSection />
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <CheckupIntegradoSection />

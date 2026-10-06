@@ -822,5 +822,29 @@
         "toast_success_desc": "Hemos recibido sus datos y nuestro equipo clínico se pondrá en contacto muy pronto.",
         "toast_error_title": "Error al enviar",
         "toast_error_desc": "No fue posible enviar los datos automáticamente. Inténtelo de nuevo o contáctenos por WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Trasplante Capilar",
+        "title": "Trasplante",
+        "highlight": "Capilar FUE",
+        "description": "Recupere su línea capilar con la técnica FUE, la más avanzada y menos invasiva, con resultados naturales y seguimiento continuo.",
+        "points": {
+            "fue": {
+                "title": "FUE",
+                "desc": "Técnica menos invasiva"
+            },
+            "natural": {
+                "title": "Natural",
+                "desc": "Resultados imperceptibles"
+            },
+            "lasting": {
+                "title": "Duradero",
+                "desc": "Resultado para toda la vida"
+            }
+        },
+        "cta_primary": "Conocer el trasplante capilar",
+        "cta_secondary": "Reservar consulta",
+        "image_alt": "Caso real de trasplante capilar FUE",
+        "caption": "Caso real"
     }
 }
