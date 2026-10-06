@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "badge": "Estética facial",
+        "title_start": "Estética Facial",
+        "title_highlight": "en Oporto",
+        "question": "¿Desea <highlight>realzar su belleza natural</highlight> con tratamientos seguros y eficaces?",
+        "description": "El equipo de la <strong1>Dra. Arethuza Luna</strong1> realiza tratamientos de <highlight>estética facial</highlight> tras una consulta de evaluación. Los resultados varían de una persona a otra.",
+        "cta_text": "Plan definido tras una consulta de evaluación.",
+        "button": "PEDIR CITA"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Seguro",
+            "desc": "Productos certificados"
+        },
+        "natural": {
+            "title": "Evaluación",
+            "desc": "Plan individual"
+        }
+    },
+    "cases": {
+        "badge": "CASOS CLÍNICOS",
+        "title_start": "Casos de",
+        "title_highlight": "Estética Facial",
+        "description": "Fotografías publicadas con autorización escrita de las pacientes. Cada plan resultó de una evaluación individual y los resultados varían de una persona a otra.",
+        "items": {
+            "case1": {
+                "description": "Rinomodelación con ácido hialurónico",
+                "details": "Toxina botulínica + relleno — fotografía tras 2 semanas"
+            },
+            "case2": {
+                "description": "Toxina Botulínica",
+                "details": "Fotografía tras 1 mes"
+            },
+            "case3": {
+                "description": "Relleno de labios con ácido hialurónico",
+                "details": "Hilos de PDO + skinbooster — fotografía tras 3 semanas"
+            }
+        },
+        "cta": {
+            "title": "Pida su consulta de evaluación",
+            "description": "En la consulta evaluamos su caso y le explicamos las opciones indicadas, los riesgos y los costes.",
+            "button": "AGENDAR EVALUACIÓN"
+        }
+    }
+}

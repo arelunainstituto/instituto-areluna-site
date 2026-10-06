@@ -21,7 +21,7 @@ const buttonVariants = cva(
         // Areluna custom variants
         gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20",
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
-        "outline-gold": "border-2 border-[hsl(var(--jet))] text-[hsl(var(--jet))] hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
+        "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",
       },
       size: {

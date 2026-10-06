@@ -1,53 +1,46 @@
 import { Calendar, Clock, Globe, Heart, Stethoscope, Eye, Scissors, FlaskConical } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const CheckupIntegradoSection = () => {
+  const { t } = useTranslation();
+
   const checkupServices = [
     {
       icon: <Stethoscope className="w-6 h-6" />,
-      title: "Avaliação Dentária Completa",
-      description: "Exame oral detalhado, radiografias panorâmicas e plano de tratamento personalizado",
-      duration: "2-3 horas"
+      title: t("checkup.services.dental.title"),
+      description: t("checkup.services.dental.description"),
+      duration: t("checkup.services.dental.duration")
     },
     {
       icon: <Scissors className="w-6 h-6" />,
-      title: "Análise Capilar Avançada",
-      description: "Tricoscopia digital, análise de densidade e avaliação para transplante capilar",
-      duration: "1-2 horas"
+      title: t("checkup.services.hair.title"),
+      description: t("checkup.services.hair.description"),
+      duration: t("checkup.services.hair.duration")
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: "Avaliação Estética Facial",
-      description: "Planeamento de harmonização e rejuvenescimento",
-      duration: "1-2 horas"
+      title: t("checkup.services.facial.title"),
+      description: t("checkup.services.facial.description"),
+      duration: t("checkup.services.facial.duration")
     },
     {
       icon: <FlaskConical className="w-6 h-6" />,
-      title: "Exames Laboratoriais",
-      description: "Perfil hormonal, vitaminas, minerais e marcadores de saúde geral",
-      duration: "30 min"
+      title: t("checkup.services.labs.title"),
+      description: t("checkup.services.labs.description"),
+      duration: t("checkup.services.labs.duration")
     }
   ];
 
   const benefits = [
     {
-      icon: <Calendar className="w-5 h-5" />,
-      title: "Tudo em 1 Dia",
-      description: "Avaliação completa em apenas uma visita"
-    },
-    {
       icon: <Globe className="w-5 h-5" />,
-      title: "Assistente Pessoal",
-      description: "Apoio completo no planeamento da viagem"
+      title: t("checkup.benefits.personal_assistant.title"),
+      description: t("checkup.benefits.personal_assistant.description")
     },
     {
       icon: <Heart className="w-5 h-5" />,
-      title: "Cuidado Integrado",
-      description: "Abordagem holística da sua saúde e estética"
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      title: "Eficiência Máxima",
-      description: "Otimização do tempo para pacientes internacionais"
+      title: t("checkup.benefits.integrated_care.title"),
+      description: t("checkup.benefits.integrated_care.description")
     }
   ];
 
@@ -62,16 +55,9 @@ const CheckupIntegradoSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[hsl(var(--gold-leaf))]/10 px-4 py-2 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full animate-pulse"></div>
-            <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-              PROGRAMA EXCLUSIVO
-            </span>
-          </div>
-
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-vivant-skinny font-thin mb-6 text-jet dark:text-white leading-tight">
-            Check-up Integrado para
-            <span className="block text-[hsl(var(--gold-leaf))] font-vivant"> Pacientes Internacionais</span>
+            {t("checkup.title.main")}
+            <span className="block text-[hsl(var(--gold-leaf))] font-vivant"> {t("checkup.title.highlight")}</span>
           </h2>
 
           <div className="flex justify-center mb-6">
@@ -79,15 +65,14 @@ const CheckupIntegradoSection = () => {
           </div>
 
           <p className="text-lg md:text-xl text-jet/70 dark:text-gray-300 font-vivant-light max-w-3xl mx-auto leading-relaxed">
-            Uma avaliação completa e integrada que combina medicina dentária, estética facial,
-            análise capilar e exames laboratoriais em apenas um dia.
+            {t("checkup.description")}
           </p>
         </div>
 
         {/* Serviços do Check-up */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-vivant text-center mb-12 text-jet dark:text-white">
-            O que está incluído no seu <span className="text-[hsl(var(--gold-leaf))]">Check-up</span>
+            {t("checkup.services_title.main")} <span className="text-[hsl(var(--gold-leaf))]">{t("checkup.services_title.highlight")}</span>
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -123,10 +108,10 @@ const CheckupIntegradoSection = () => {
         <div className="mb-16">
           <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-[hsl(var(--gold-leaf))]/15">
             <h3 className="text-2xl md:text-3xl font-vivant text-center mb-8 text-jet dark:text-white">
-              Vantagens do <span className="text-[hsl(var(--gold-leaf))]">Programa</span>
+              {t("checkup.benefits_title.main")} <span className="text-[hsl(var(--gold-leaf))]">{t("checkup.benefits_title.highlight")}</span>
             </h3>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-2xl flex items-center justify-center text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -147,28 +132,21 @@ const CheckupIntegradoSection = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-            <h3 className="text-2xl md:text-3xl font-vivant mb-4">
-              Pronto para a sua transformação?
-            </h3>
-            <p className="text-lg font-vivant-light mb-8 opacity-90">
-              Agende o seu Check-up Integrado e descubra o seu potencial completo
-            </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://wa.me/351123456789?text=Gostaria%20de%20agendar%20um%20Check-up%20Integrado"
+                href="https://wa.me/351910098226"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-[hsl(var(--gold-leaf))] px-8 py-4 rounded-2xl font-vivant font-medium hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                <span>Agendar Check-up</span>
+                <span>{t("checkup.cta.button")}</span>
                 <Calendar className="w-5 h-5" />
               </a>
 
               <div className="flex items-center gap-2 text-white/80">
                 <Globe className="w-4 h-4" />
                 <span className="text-sm font-vivant-light">
-                  Assistência em múltiplas línguas
+                  {t("checkup.cta.support")}
                 </span>
               </div>
             </div>

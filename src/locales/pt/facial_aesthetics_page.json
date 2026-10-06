@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "badge": "Estética facial",
+        "title_start": "Estética Facial",
+        "title_highlight": "no Porto",
+        "question": "Deseja <highlight>realçar a sua beleza natural</highlight> com tratamentos seguros e eficazes?",
+        "description": "A equipa da <strong1>Dra. Arethuza Luna</strong1> realiza tratamentos de <highlight>estética facial</highlight> após consulta de avaliação. Os resultados variam de pessoa para pessoa.",
+        "cta_text": "Plano definido após consulta de avaliação.",
+        "button": "MARCAR CONSULTA"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Seguro",
+            "desc": "Produtos certificados"
+        },
+        "natural": {
+            "title": "Avaliação",
+            "desc": "Plano individual"
+        }
+    },
+    "cases": {
+        "badge": "CASOS CLÍNICOS",
+        "title_start": "Casos de",
+        "title_highlight": "Estética Facial",
+        "description": "Fotografias publicadas com autorização escrita das pacientes. Cada plano resultou de uma avaliação individual e os resultados variam de pessoa para pessoa.",
+        "items": {
+            "case1": {
+                "description": "Rinomodelação com ácido hialurónico",
+                "details": "Toxina botulínica + preenchimento — fotografia após 2 semanas"
+            },
+            "case2": {
+                "description": "Toxina Botulínica",
+                "details": "Fotografia após 1 mês"
+            },
+            "case3": {
+                "description": "Preenchimento labial com ácido hialurónico",
+                "details": "Fios de PDO + skinbooster — fotografia após 3 semanas"
+            }
+        },
+        "cta": {
+            "title": "Marque a sua consulta de avaliação",
+            "description": "Na consulta avaliamos o seu caso e explicamos as opções indicadas, os riscos e os custos.",
+            "button": "AGENDAR AVALIAÇÃO"
+        }
+    }
+}

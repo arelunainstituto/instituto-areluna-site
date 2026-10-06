@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sala de Guerra — AreLuna vs MALO</title>
+<style>
+:root{
+  --bg:#0b0d10; --panel:#12161b; --panel2:#171c23; --line:#232a33;
+  --ink:#e8edf3; --ink2:#9aa7b6;
+  --muted:#7d8b9c;
+  --p0:#ff4d4f; --p1:#ff9f0a; --p2:#3ea6ff; --p3:#31d0aa;
+  --ok:#31d0aa;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 100px}
+
+/* ---------- HEADER ---------- */
+header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#101419,#0b0d10);position:relative;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 240px at 12% -10%,rgba(255,77,79,.16),transparent 70%)}
+.hd{position:relative;max-width:1180px;margin:0 auto;padding:34px 24px 30px}
+.kicker{font:600 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--p0)}
+h1{margin:12px 0 6px;font-size:clamp(28px,4.4vw,44px);line-height:1.08;letter-spacing:-.02em}
+.sub{color:var(--ink2);max-width:62ch;font-size:15px}
+.stamp{margin-top:16px;font:500 12px/1.6 var(--mono);color:var(--muted)}
+
+/* ---------- CLOCK BAR ---------- */
+.clock{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:26px 0 0}
+.clock div{background:var(--panel);padding:14px 16px}
+.clock b{display:block;font:700 26px/1.1 var(--sans);letter-spacing:-.02em}
+.clock span{font:500 11px/1.4 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.clock .red b{color:var(--p0)} .clock .grn b{color:var(--ok)}
+
+/* ---------- SECTIONS ---------- */
+section{margin-top:52px}
+h2{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0 0 4px;font-family:var(--mono)}
+.h2sub{color:var(--muted);font-size:14px;margin:0 0 20px;max-width:72ch}
+
+/* ---------- THESIS ---------- */
+.thesis{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.thesis{grid-template-columns:1fr}}
+.tcard{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--panel)}
+.tcard.win{border-color:rgba(49,208,170,.35);background:linear-gradient(180deg,rgba(49,208,170,.07),var(--panel))}
+.tcard h3{margin:0 0 10px;font-size:16px;letter-spacing:-.01em}
+.tcard p{margin:0 0 10px;color:var(--ink2);font-size:14px}
+.tcard p:last-child{margin:0}
+.tag{display:inline-block;font:700 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:5px 8px;border-radius:4px;margin-bottom:12px}
+.tag.them{background:rgba(255,159,10,.14);color:var(--p1)}
+.tag.us{background:rgba(49,208,170,.14);color:var(--ok)}
+
+/* ---------- CONTROLS ---------- */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 70%,rgba(11,13,16,0));padding:14px 0 12px}
+.fbtn{font:600 12px/1 var(--sans);color:var(--ink2);background:var(--panel);border:1px solid var(--line);padding:9px 14px;border-radius:20px;cursor:pointer;transition:.14s}
+.fbtn:hover{color:var(--ink);border-color:#33404e}
+.fbtn.on{background:var(--ink);color:#0b0d10;border-color:var(--ink)}
+.prog{margin-left:auto;display:flex;align-items:center;gap:10px;font:600 12px var(--mono);color:var(--muted)}
+.bar{width:130px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:.3s}
+
+/* ---------- TICKETS ---------- */
+.ticket{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:10px;transition:.15s}
+.ticket[data-p="0"]{border-left-color:var(--p0)}
+.ticket[data-p="1"]{border-left-color:var(--p1)}
+.ticket[data-p="2"]{border-left-color:var(--p2)}
+.ticket[data-p="3"]{border-left-color:var(--p3)}
+.ticket.done{opacity:.4}
+.ticket.done .tt{text-decoration:line-through}
+.thead{display:flex;gap:14px;align-items:flex-start;padding:15px 18px;cursor:pointer}
+.chk{flex:none;width:19px;height:19px;margin-top:2px;border:1.5px solid #3a4550;border-radius:5px;background:transparent;cursor:pointer;position:relative;transition:.15s}
+.chk:hover{border-color:var(--ok)}
+.chk.on{background:var(--ok);border-color:var(--ok)}
+.chk.on:after{content:"";position:absolute;left:5.5px;top:1.5px;width:5px;height:10px;border:solid #0b0d10;border-width:0 2.2px 2.2px 0;transform:rotate(45deg)}
+.tmain{flex:1;min-width:0}
+.tt{font-weight:650;font-size:15px;letter-spacing:-.01em;margin:0 0 5px}
+.tmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{font:700 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:4px;background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.pill.t{color:#ffd479;border-color:rgba(255,212,121,.25)}
+.pill.p0{background:rgba(255,77,79,.13);color:var(--p0);border-color:rgba(255,77,79,.3)}
+.pill.p1{background:rgba(255,159,10,.13);color:var(--p1);border-color:rgba(255,159,10,.3)}
+.pill.p2{background:rgba(62,166,255,.13);color:var(--p2);border-color:rgba(62,166,255,.3)}
+.pill.p3{background:rgba(49,208,170,.13);color:var(--p3);border-color:rgba(49,208,170,.3)}
+.caret{flex:none;color:#4b5765;font-size:12px;margin-top:4px;transition:.2s}
+.ticket.open .caret{transform:rotate(90deg)}
+.tbody{display:none;padding:0 18px 18px 51px;border-top:1px solid var(--line);margin-top:-1px}
+.ticket.open .tbody{display:block}
+.tbody h4{font:700 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:16px 0 7px}
+.tbody p{margin:0 0 8px;font-size:14px;color:var(--ink2)}
+.tbody p b{color:var(--ink);font-weight:650}
+pre{background:#0a0c0f;border:1px solid var(--line);border-radius:7px;padding:12px 13px;overflow-x:auto;font:12px/1.6 var(--mono);color:#c8d4e0;margin:0 0 8px;position:relative}
+code{font-family:var(--mono);font-size:.92em;background:rgba(255,255,255,.055);padding:1.5px 5px;border-radius:3px;color:#e3b7b8}
+.dod{border:1px dashed rgba(49,208,170,.4);background:rgba(49,208,170,.05);border-radius:7px;padding:10px 13px;font-size:13.5px;color:#a7e6d5}
+.dod b{color:var(--ok)}
+
+/* ---------- TABLE ---------- */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th,td{padding:12px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted);background:var(--panel2)}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink2);font-weight:600;white-space:nowrap}
+.no{color:var(--p0)} .yes{color:var(--ok)}
+
+/* ---------- FOOT ---------- */
+footer{margin-top:60px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12.5px;line-height:1.7}
+</style>
+</head>
+<body>
+
+<header><div class="hd">
+  <div class="kicker">Sala de guerra · Digital · Instituto AreLuna</div>
+  <h1>Não vamos ganhar por tamanho.<br>Vamos ganhar por velocidade de correção.</h1>
+  <p class="sub">Auditoria comparada institutoareluna.pt × maloclinics.com. Isto não é um relatório: é uma fila de execução. Cada item traz tempo, dono, o comando exato e a prova de que ficou feito.</p>
+  <div class="stamp">27-08-2026 · fonte: HTML, bundles JS, schema e headers de produção de ambos os sites</div>
+  <div class="clock">
+    <div class="red"><b id="k0">4</b><span>Sangramento ativo</span></div>
+    <div class="red"><b>100%</b><span>Leads de form. perdidos</span></div>
+    <div class="grn"><b>~55 min</b><span>Para estancar tudo</span></div>
+    <div><b id="ktot">20</b><span>Itens na fila</span></div>
+    <div class="grn"><b>30 dias</b><span>Até a pista internacional</span></div>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<section>
+  <h2>A assimetria</h2>
+  <p class="h2sub">Por que a velocidade é a nossa arma — e não uma virtude genérica.</p>
+  <div class="thesis">
+    <div class="tcard">
+      <span class="tag them">MALO — ciclo lento</span>
+      <h3>Migrou para Framer com agência externa (Amplify)</h3>
+      <p>Toda correção passa por briefing, fila da agência e ciclo de aprovação. O site foi ao ar com <b>meta description quebrada</b> (<code>All on 4.ic!</code>), duas descrições de especialidade truncadas, 12 selos de prémio <b>sem alt</b> e um seletor de idioma <b>sem idiomas</b>.</p>
+      <p>Esses defeitos estão no ar há semanas. Não é incompetência — é <b>latência estrutural</b>. Eles não conseguem corrigir rápido.</p>
+    </div>
+    <div class="tcard win">
+      <span class="tag us">ARELUNA — ciclo curto</span>
+      <h3>Stack próprio: React/Vite → Vercel, n8n interno, squad interno</h3>
+      <p>Cada item desta lista é um <code>git push</code> ou uma variável de ambiente. Sem agência, sem fila, sem fatura por alteração. O que a MALO leva um trimestre para mudar, nós mudamos numa tarde.</p>
+      <p><b>A vantagem só existe se for usada.</b> Hoje ela está parada: o formulário está partido e o site não tem analytics. Somos rápidos e cegos.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Fila de execução</h2>
+  <p class="h2sub">Ordenada por retorno sobre minuto de trabalho. Clique num item para abrir o procedimento. Marque a caixa ao concluir.</p>
+
+  <div class="controls">
+    <button class="fbtn on" data-f="all">Tudo</button>
+    <button class="fbtn" data-f="0">P0 · Hoje</button>
+    <button class="fbtn" data-f="1">P1 · Esta semana</button>
+    <button class="fbtn" data-f="2">P2 · Performance</button>
+    <button class="fbtn" data-f="3">P3 · Ataque</button>
+    <div class="prog"><span id="pt">0/20</span><div class="bar"><i id="pb"></i></div></div>
+  </div>
+
+  <div id="q"></div>
+</section>
+
+<section>
+  <h2>Placar</h2>
+  <p class="h2sub">Onde perdemos, onde empatamos, e as três casas vazias que decidem o jogo.</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>MALO CLINIC</th><th>Instituto AreLuna</th><th>Leitura</th></tr>
+    <tr><td>Escala</td><td>5 clínicas · +30 anos · +400.000 pacientes</td><td>2 clínicas · +24 anos (Lisboa nem aparece)</td><td class="no">Perdemos. Não disputar.</td></tr>
+    <tr><td>Ativo proprietário</td><td><b>All-on-4</b> — "Pioneiros Mundiais", copy técnica que antecipa objeções</td><td><b>"padrão IAL"</b> — citado 2×, nunca explicado</td><td class="no">Temos um nome vazio.</td></tr>
+    <tr><td>Páginas por tratamento</td><td>15 especialidades + 11 patologias + 9 tratamentos, cada uma indexável</td><td>26 tratamentos → todos vão direto ao WhatsApp</td><td class="no">Renúncia total ao SEO transacional.</td></tr>
+    <tr><td>Prova científica</td><td>+150 artigos · braço de formação em domínio próprio</td><td>Nenhuma publicação, prémio ou certificação</td><td class="no">Perdemos.</td></tr>
+    <tr><td>Corpo clínico</td><td>Página /equipa fora da navegação principal · <b>Paulo Maló ausente da home</b></td><td>12 profissionais na home com foto, registo OMD/OM e bio · fundadora com página própria</td><td class="yes">Ganhamos. Ampliar.</td></tr>
+    <tr><td>Velocidade de resposta</td><td>Formulário → "entraremos em contacto". Sem chat, sem WhatsApp.</td><td>WhatsApp com n8n em cada card <span class="no">(mas o formulário está partido)</span></td><td class="yes">Ganhamos assim que o form voltar.</td></tr>
+    <tr><td>Schema markup</td><td class="no">Nenhum. Sem <code>Dentist</code>, <code>LocalBusiness</code> ou <code>AggregateRating</code>.</td><td>15 blocos de JSON-LD corretos <span class="no">(anulados por canonical duplicado)</span></td><td class="yes">Fundação melhor. Destravar.</td></tr>
+    <tr><td>Idiomas</td><td class="no">Só PT — seletor no ar sem traduções</td><td class="no">Só PT — vende turismo dentário mesmo assim</td><td class="yes">Casa vazia dos dois lados.</td></tr>
+    <tr><td>Reviews públicas</td><td>Link Trustpilot no rodapé, sem nota exibida</td><td class="no">Zero. Nenhum widget, nenhuma nota.</td><td class="yes">Casa vazia dos dois lados.</td></tr>
+    <tr><td>FAQ estruturado</td><td class="no">Sem <code>FAQPage</code></td><td class="no">24+ perguntas escritas, nenhuma marcada</td><td class="yes">Casa vazia. Custo: 1 hora.</td></tr>
+  </table></div>
+</section>
+
+<footer>
+  <b>Método.</b> Leitura direta do HTML servido, dos bundles JS de produção, do JSON-LD, do sitemap, do robots.txt e dos headers HTTP de ambos os domínios em 27-08-2026. Nenhum número aqui vem de estimativa: onde há citação, é verbatim do site.<br>
+  <b>Escopo.</b> Análise digital competitiva. Não pertence à biblioteca Administrativa — aquela guarda prova de conformidade, não estratégia de marketing.<br>
+  <b>Aviso.</b> O progresso marcado nesta página não é gravado: ao recarregar, as caixas voltam ao início. O registo formal das tarefas é o Zoho.
+</footer>
+
+</div>
+
+<script>
+const T=[
+/* ---------------- P0 ---------------- */
+{p:0,t:"O formulário de contacto não envia nada — em 6 páginas",time:"15 min",who:"TI",tags:["Receita","Sangramento"],
+ diag:"O handler de submit está codificado para falhar. No bundle <code>ContactFormSection-BL4fJ8Gq.js</code> ele imprime um erro no console, mostra um toast vermelho e <b>retorna sem enviar</b>. A variável <code>VITE_SEND_FORM_URL</code> nunca foi definida no build da Vercel.",
+ code:`const x = async a => { a.preventDefault(); h(!0);
+  try { console.error("VITE_SEND_FORM_URL is not defined");
+    i({ title: t("contact.toasts.config_error_title"),
+        variant:"destructive" }); return }`,
+ raio:"Home · /contato · /tratamentos · /turismo-dentario · /estetica-facial · /transplante-capilar. <b>Todo lead orgânico que preenche o formulário é perdido em silêncio.</b> As landing pages de anúncio não são afetadas — elas usam outro caminho, que funciona.",
+ fix:"Definir a variável de ambiente na Vercel apontando para o mesmo webhook que as LPs já usam, e refazer o deploy. É o único item da lista que é literalmente uma linha.",
+ code2:`VITE_SEND_FORM_URL=https://n8n.automacoesareluna.pt/webhook/lp-vivo-bem-leads`,
+ dod:"Submeter o formulário da home com um nome de teste e ver o registo chegar no n8n em menos de 10 segundos."},
+
+{p:0,t:"Zero analytics no site institucional inteiro",time:"20 min",who:"TI + Marketing",tags:["Cegueira"],
+ diag:"GTM <code>GTM-K94Q8Q2G</code>, GA4 <code>G-C04DZ1RFC9</code>, Google Ads <code>AW-10946516279</code> e Meta Pixel <code>4096645043937889</code> existem — e carregam <b>apenas</b> nas landing pages <code>/lp/</code>. O site institucional não tem uma única linha de rastreamento.",
+ raio:"Não sabemos quanto tráfego a home recebe, de onde vem, o que as pessoas leem no blog nem quantas chegam ao WhatsApp. <b>Nenhuma decisão de marketing tomada hoje tem base real.</b> E sem isto, não é possível medir o efeito de nenhuma das outras 19 correções desta lista.",
+ fix:"Injetar o container GTM no <code>index.html</code> raiz (head + noscript no body) e ligar o consentimento de cookies ao disparo. Hoje o banner de cookies pede consentimento para carregar coisa nenhuma.",
+ dod:"Tempo real do GA4 mostrando sessões na home, e um evento de clique no botão de WhatsApp a chegar."},
+
+{p:0,t:'Retirar "Resultados Garantidos" e "15K+ transplantes"',time:"10 min",who:"Marketing",tags:["Risco ERS/OMD"],
+ diag:'O selo <b>"Resultados Garantidos"</b> aparece na home e em /tratamentos, e <b>"✓Resultados garantidos"</b> na LP de implantes. Garantia de resultado em saúde é publicidade problemática perante ERS e OMD. Em paralelo, /transplante-capilar declara <b>"15K+ transplantes"</b> — numa clínica que declara 50 mil tratamentos <i>totais</i>.',
+ raio:"Com a unidade de Lisboa em licenciamento, esta é exposição regulatória gratuita. E o número de transplantes é a peça que um concorrente derruba com um único print — e leva a autoridade do site inteiro junto.",
+ fix:'Remover ambas as strings. Substituir "Resultados Garantidos" por uma promessa verificável — prazo, acompanhamento ou reavaliação — não por resultado clínico.',
+ dod:"Busca por \"garantid\" e por \"15K\" no site em produção retorna zero ocorrências."},
+
+{p:0,t:"Canonical duplicado sabota a indexação de todas as páginas internas",time:"10 min",who:"TI",tags:["SEO"],
+ diag:"Cada página serve <b>dois</b> canonicals conflituantes: o estático do template, que aponta sempre para a home, e o correto injetado pelo react-helmet. O mesmo acontece com <code>og:url</code>.",
+ code:`<link rel="canonical" href="https://www.institutoareluna.pt/">
+<link rel="canonical" href="https://www.institutoareluna.pt/tratamentos" data-rh="true">`,
+ raio:"Canonicals múltiplos e divergentes fazem o Google ignorar ambos. Todo o investimento em meta tags e schema por página — que está bem feito — é anulado na origem. É a correção de maior alavancagem de SEO do site, e são duas linhas.",
+ fix:"Apagar a tag <code>canonical</code> e a <code>og:url</code> estáticas do <code>index.html</code>, deixando só o react-helmet. Depois, corrigir os canonicals das LPs, que apontam para páginas inexistentes (<code>/implantes</code> e <code>/caso-real</code>).",
+ dod:"View-source de /tratamentos mostra exatamente um canonical, e ele aponta para /tratamentos."},
+
+/* ---------------- P1 ---------------- */
+{p:1,t:"Unificar os números — hoje há quatro versões da nossa idade",time:"45 min",who:"Marketing + Dr. Leo",tags:["Credibilidade"],
+ diag:"Anos de experiência: <b>15</b> em /estetica-facial, <b>24</b> na home e em /sobre-a-fundadora, <b>25</b> no rodapé e em /transplante-capilar — e a página de estética contém <i>as duas</i> versões no mesmo texto. Volume: <b>50 mil</b> tratamentos na home vs <b>20 mil</b> sorrisos em /tratamentos. Satisfação: <b>95%</b> em duas páginas, <b>98%</b> noutra.",
+ raio:"Números que se contradizem entre páginas do mesmo site são o sinal mais barato de que a instituição não se controla. Um paciente internacional que compara três páginas antes de gastar cinco mil euros vai notar.",
+ fix:"Escolher UMA versão defensável de cada número, documentá-la, e propagá-la para todas as páginas e LPs. Se não houver fonte para sustentar um número, ele sai — não se ajusta.",
+ dod:"Uma tabela única de números aprovada pelo Dr. Leo, e a mesma cifra em todas as páginas."},
+
+{p:1,t:"Morada da Mota Galiza está errada no rodapé de todas as páginas",time:"5 min",who:"TI",tags:["Conformidade","SEO local"],
+ diag:"O rodapé diz <b>Rua de Júlio Dinis 190, 4050-027</b>. O JSON-LD do próprio site e as LPs dizem <b>Rua de Júlio Dinis 194 R/C, 4050-024</b> — que é a morada registada na ERS.",
+ raio:"O site contradiz o seu próprio schema markup em todas as páginas. Para o Google, isso é sinal de NAP inconsistente e derruba o posicionamento local. Para uma auditoria, é morada divergente da licença.",
+ fix:"Corrigir o rodapé para 194 R/C, 4050-024 Porto. Aproveitar e acrescentar a unidade de Lisboa (Lumiar) assim que o licenciamento permitir.",
+ dod:"Rodapé, schema, LPs, Google Business Profile e licença ERS com exatamente a mesma string."},
+
+{p:1,t:"NIPC não consta em lado nenhum do site",time:"5 min",who:"TI",tags:["DL 7/2004"],
+ diag:"Nem no rodapé, nem na política de privacidade, nem nos termos, nem no schema. Uma sociedade comercial portuguesa com site institucional é obrigada a identificar-se.",
+ raio:"Falha de conformidade do artigo 10.º do DL 7/2004. Custo de correção: uma linha. Custo de não corrigir: coima e o mesmo sinal de desleixo que os números contraditórios.",
+ fix:"Acrescentar razão social completa, NIPC, sede e capital social ao rodapé, junto ao registo ERS E161637 e à licença 21593/2022 que já lá estão.",
+ dod:"Rodapé com razão social + NIPC visíveis em todas as páginas."},
+
+{p:1,t:'Título indexado com erro: "Marcasão de Consulta"',time:"2 min",who:"TI",tags:["SEO"],
+ diag:'A página /contato serve <code>&lt;title&gt;Contacto e <b>Marcasão</b> de Consulta no Porto | Instituto AreLuna&lt;/title&gt;</code>. O mesmo erro está no <code>og:title</code> e no <code>twitter:title</code>.',
+ raio:"É o texto que aparece no resultado do Google e em qualquer partilha no WhatsApp ou LinkedIn. Duas letras trocadas, visíveis para toda a gente que nos procura pelo nome.",
+ fix:'Trocar por "Marcação". Rever de passagem os outros erros de idioma: "européia" (pt-BR num site pt-PT), "Directora" (grafia pré-acordo), "recetorai" em /transplante-capilar, e a alternância "conosco"/"connosco" na mesma página.',
+ dod:"Nenhum erro ortográfico em title, H1 ou H2 de nenhuma das 8 páginas institucionais."},
+
+{p:1,t:"Depoimentos com nomes genéricos ao lado dos casos reais",time:"20 min",who:"Marketing",tags:["Credibilidade"],
+ diag:'A LP de implantes exibe "Maria Silva, 52 anos", "João Santos, 65 anos" e "Ana Costa, 48 anos" — sem foto, sem verificação, sem vídeo. Ao lado deles estão Sergio Emanuel, Sandra Maria e Diana Vieira: casos reais, com nome, foto, vídeo e consentimento expresso.',
+ raio:"Os três nomes genéricos contaminam os três casos verdadeiros. O visitante não separa — assume que todos são inventados, e perdemos o único ativo de prova social sólido que temos.",
+ fix:"Apagar os três depoimentos genéricos. Promover os casos reais no lugar deles. Se houver mais pacientes dispostos, seguir o mesmo padrão de consentimento já usado.",
+ dod:"Zero depoimentos sem nome verificável e sem consentimento documentado em todo o site."},
+
+{p:1,t:"Política de Privacidade insuficiente para dados de saúde",time:"1 dia (jurídico)",who:"Lopes Advogados",tags:["RGPD"],
+ diag:'2.308 caracteres, 4 secções. <b>Não menciona uma única vez as palavras "saúde", "dados clínicos" ou "categoria especial"</b> — numa clínica. Falta: responsável pelo tratamento, DPO, fundamento legal do art. 9.º, prazos de conservação, subcontratantes (n8n, Supabase, Cloudinary, Meta, Google — nenhum declarado), transferências internacionais e direito de reclamação à CNPD.',
+ raio:"Recolhemos dados de saúde de pacientes internacionais através de formulários. E o link do checkbox de consentimento RGPD das LPs aponta para <code>/politica-privacidade</code>, <b>que não existe</b> — o site usa <code>/privacidade</code>. O consentimento está a ser recolhido com o link partido.",
+ fix:"Corrigir o link imediatamente (é 1 minuto e é TI). A reescrita da política vai ao jurídico, com política de cookies autónoma.",
+ dod:"Link do consentimento abre a política; política revista pelo jurídico e datada."},
+
+{p:1,t:"Qualquer URL inválida devolve HTTP 200 com o HTML da home",time:"20 min",who:"TI",tags:["SEO"],
+ diag:"Testado: <code>/xpto-inexistente</code>, <code>/caso-real</code>, <code>/politica-privacidade</code> — todos respondem 200 com a home. Soft-404 clássico de SPA mal configurada.",
+ raio:"Gera lixo de indexação sem limite: cada link errado que alguém publicar vira uma página duplicada da home aos olhos do Google. Combinado com o canonical duplicado, é a receita para o site nunca posicionar.",
+ fix:"Configurar a Vercel para devolver 404 real em rota não reconhecida, com página de 404 própria que ofereça WhatsApp e os tratamentos principais.",
+ dod:"<code>curl -I</code> de uma URL inventada devolve <code>HTTP/2 404</code>."},
+
+{p:1,t:'Diz "15 Especialistas", mostra 12, e o schema tem 13',time:"15 min",who:"TI + Marketing",tags:["Credibilidade"],
+ diag:'A home anuncia "15 Especialistas" na barra de números e renderiza 12 fichas. O JSON-LD contém 13 blocos <code>Person</code> — inclui <b>Dra. Aline Marodin (OMD 12330)</b>, que não aparece em lado nenhum da página. Schema órfão de uma profissional já removida.',
+ raio:'Além da incoerência visível, há um erro de registo: Dra. Patrícia Tatsch está identificada como Cirurgiã Plástica mas com número <b>OMD</b> — Ordem dos Médicos Dentistas. E duas fotos não carregam (renderizam a inicial em vez do retrato).',
+ fix:"Alinhar contagem, fichas e schema. Remover o bloco órfão. Confirmar OM vs OMD com o RH. Repor as duas fotos em falta.",
+ dod:"O número anunciado, as fichas visíveis e os blocos Person no JSON-LD são o mesmo número."},
+
+/* ---------------- P2 ---------------- */
+{p:2,t:"131 MB de imagens na home",time:"2 h",who:"TI",tags:["Performance"],
+ diag:"Somando os assets da home: <b>~131 MB</b>. Imagens individuais de 6 a 14 MB — <code>Instituto-Areluna-Clinicas-80</code> tem 13,9 MB, <code>...-38</code> tem 10,3 MB. Sem WebP, sem AVIF, sem <code>srcset</code>, sem <code>&lt;picture&gt;</code>. O componente chama-se <code>OptimizedImage</code> e tem 556 bytes.",
+ raio:"O TTFB é excelente (0,70 s, edge cache da Vercel) e há <code>lazy</code> em 26 de 29 imagens, o que salva o carregamento inicial. Mas qualquer scroll em rede móvel destrói a experiência — exatamente o paciente internacional a pesquisar no telemóvel.",
+ fix:"Converter tudo para WebP com largura máxima de 1920px e alvo abaixo de 400 KB por imagem, gerar srcset e servir por CDN.",
+ code2:`npx @squoosh/cli --webp '{"quality":78}' \\
+  --resize '{"width":1920}' -d ./dist public/img/*.{jpg,png}`,
+ dod:"Peso total da home abaixo de 6 MB; PageSpeed mobile acima de 70."},
+
+{p:2,t:"Faltam 21 dos 26 artigos do blog no sitemap",time:"20 min",who:"TI",tags:["SEO"],
+ diag:"O sitemap tem 19 URLs, com <code>lastmod</code> de maio/junho. Os 21 artigos publicados depois disso não estão declarados. O cluster de facetas — 8 artigos, o melhor conteúdo que o grupo produziu — está quase todo fora.",
+ raio:"Esse cluster é o único ativo capaz de atrair tráfego de decisão de compra (\"Facetas na Turquia: Vale a Pena?\" é literalmente a pesquisa do nosso paciente ideal). Está escrito, publicado e invisível.",
+ fix:"Gerar o sitemap dinamicamente a partir das rotas no build, e submeter no Search Console.",
+ dod:"Sitemap com todas as URLs e lastmod correto; Search Console sem erros de cobertura."},
+
+/* ---------------- P3 ---------------- */
+{p:3,t:"Versão EN de 5 páginas — a pista que a MALO deixou vazia",time:"3 semanas",who:"Marketing + TI",tags:["Receita","Ataque"],
+ diag:'Vendemos Turismo Dentário e Check-up para Pacientes Internacionais. O FAQ afirma: <i>"A nossa equipa é fluente em várias línguas, incluindo inglês, francês e espanhol."</i> O formulário das LPs prioriza prefixos 🇨🇭 🇱🇺 🇫🇷 🇩🇪 🇬🇧 🇳🇱. E <b>não existe uma única página em inglês.</b>',
+ raio:"A MALO também é monolingue — o seletor de idioma deles está no ar sem nenhuma tradução por trás. <b>A casa está vazia dos dois lados.</b> Com 5 clínicas e 30 anos, eles nunca precisaram desta frente; para nós, com 2 clínicas, é a única onde o tamanho não decide.",
+ fix:"O i18next já está instalado e configurado — só existe um pacote de tradução. Escopo mínimo: home, turismo dentário, check-up internacional, implantes e contacto. Com <code>hreflang</code> correto (já há a estrutura apontando para o .com.br) e formulário com a mesma automação n8n.",
+ dod:"5 páginas EN indexadas, hreflang validado, e o primeiro lead internacional em inglês no n8n."},
+
+{p:3,t:"Páginas próprias para os 5 tratamentos de maior ticket",time:"3 semanas",who:"Marketing",tags:["Receita","SEO"],
+ diag:"Os 26 tratamentos não têm página nenhuma. Cada card é um link direto para <code>wa.me/351910098226</code> com mensagem pré-preenchida. Não existe conteúdo indexável sobre implantes, facetas ou alinhadores no site institucional — só nas 3 LPs, que estão órfãs e não são linkadas em nenhum menu.",
+ raio:"A MALO tem página para cada uma das 15 especialidades, 11 patologias e 9 tratamentos. É por isso que aparecem primeiro. Nós temos o conteúdo pronto no blog e não temos onde aterrar a conversão.",
+ fix:"Criar páginas para os 5 tratamentos de maior ticket, ligando o cluster de blog que já existe (facetas, implantes) ao CTA. Trazer as 3 LPs órfãs para dentro da navegação em vez de as manter escondidas.",
+ dod:"5 páginas de tratamento no ar, no sitemap, com schema <code>MedicalProcedure</code> e formulário funcional."},
+
+{p:3,t:"Marcar as 24 perguntas de FAQ que já estão escritas",time:"1 h",who:"TI",tags:["SEO","Ataque"],
+ diag:"Há mais de 24 perguntas de FAQ distribuídas por 3 páginas. Nenhuma tem <code>FAQPage</code> no schema. A MALO <b>não tem schema markup nenhum</b> — nem <code>Dentist</code>, nem <code>LocalBusiness</code>, nem <code>AggregateRating</code>.",
+ raio:"Uma hora de trabalho para ocupar um espaço na página de resultados que o líder de mercado deixou vago. É o melhor retorno por minuto de toda a lista, depois do formulário.",
+ fix:"Acrescentar blocos <code>FAQPage</code> nas 3 páginas e <code>Article</code> nos 26 posts do blog. A base de JSON-LD já está montada e correta — é replicar o padrão.",
+ dod:"Rich Results Test valida FAQPage sem erros nas 3 páginas."},
+
+{p:3,t:"Ligar as reviews do Google ao site",time:"1 semana",who:"Marketing",tags:["Prova social"],
+ diag:"Zero reviews no site. Nenhum widget, nenhuma nota, nenhum <code>AggregateRating</code> no schema. A afirmação mais forte de prova social que temos é <i>\"a escolha de milhares de pacientes\"</i> — sem qualquer sustentação.",
+ raio:"A MALO tem apenas um link para o Trustpilot no rodapé, sem nota exibida. Outra casa vazia. Estrelas na página de resultados aumentam a taxa de clique de forma mensurável, e são o sinal que um paciente estrangeiro procura antes de comprar uma viagem.",
+ fix:"Campanha de recolha de reviews no Google Business Profile das duas unidades, widget na home e <code>AggregateRating</code> no schema — a partir de notas reais, nunca inventadas.",
+ dod:"Nota agregada visível na home e estrelas a aparecer no resultado do Google."},
+
+{p:3,t:'Definir o "padrão IAL" — ou deixar de o mencionar',time:"1 workshop",who:"Dr. Leo + Dra. Arethuza",tags:["Posicionamento"],
+ diag:'O site cita <i>"no padrão IAL"</i> e <i>"O padrão IAL — desenvolvido ao longo de mais de 24 anos"</i>. E nunca explica o que é. É o único ativo de diferenciação nomeado no site, e está vazio.',
+ raio:"A MALO construiu 30 anos de autoridade sobre um protocolo nomeado, descrito com precisão técnica: 4 implantes, sem enxerto, cirurgia de 1 a 2 horas, dentes fixos no próprio dia. Um nome sem conteúdo não é um ativo — é uma promessa por cumprir que o visitante percebe como vazia.",
+ fix:"Documentar o protocolo: quais etapas, quais critérios de aceitação, o que o paciente recebe em cada fase, o que é medido. Depois publicar com o mesmo nível de detalhe técnico que a MALO usa no All-on-4. Sem isso, retirar a expressão do site.",
+ dod:"Página própria do padrão IAL, com etapas verificáveis, ou zero menções ao termo."},
+
+{p:3,t:"O botão de pagamento Stripe no hero, sem explicação",time:"10 min",who:"Marketing",tags:["Confiança"],
+ diag:'O hero da home tem um botão <b>"RESERVA"</b> que abre um link de pagamento Stripe (<code>pagamento.institutoareluna.pt/b/eVq6oH...</code>), ao lado do CTA principal, <b>sem dizer o que se está a pagar</b>.',
+ raio:"Pedir dinheiro no primeiro ecrã, sem contexto, antes de qualquer relação, é o oposto do que constrói confiança num paciente que ainda não nos conhece — sobretudo um estrangeiro a avaliar se somos legítimos.",
+ fix:"Ou remover do hero, ou explicar em uma frase o que a reserva cobre, se é dedutível do tratamento e se é reembolsável.",
+ dod:"Nenhum pedido de pagamento sem contexto acima da dobra."}
+];
+
+const P=["P0 · Hoje","P1 · Esta semana","P2 · Performance","P3 · Ataque"];
+const q=document.getElementById('q');
+
+T.forEach((x,i)=>{
+  const d=document.createElement('div');
+  d.className='ticket'; d.dataset.p=x.p;
+  d.innerHTML=`
+  <div class="thead">
+    <div class="chk" data-i="${i}"></div>
+    <div class="tmain">
+      <div class="tt">${x.t}</div>
+      <div class="tmeta">
+        <span class="pill p${x.p}">${P[x.p]}</span>
+        <span class="pill t">⏱ ${x.time}</span>
+        <span class="pill">${x.who}</span>
+        ${x.tags.map(t=>`<span class="pill">${t}</span>`).join('')}
+      </div>
+    </div>
+    <div class="caret">▶</div>
+  </div>
+  <div class="tbody">
+    <h4>O que está acontecendo</h4><p>${x.diag}</p>
+    ${x.code?`<pre>${x.code.replace(/</g,'&lt;')}</pre>`:''}
+    <h4>Raio de impacto</h4><p>${x.raio}</p>
+    <h4>Correção</h4><p>${x.fix}</p>
+    ${x.code2?`<pre>${x.code2.replace(/</g,'&lt;')}</pre>`:''}
+    <div class="dod"><b>Prova de feito ·</b> ${x.dod}</div>
+  </div>`;
+  q.appendChild(d);
+});
+
+const done=new Set();
+q.addEventListener('click',e=>{
+  const c=e.target.closest('.chk');
+  if(c){e.stopPropagation();
+    const i=c.dataset.i, tk=c.closest('.ticket');
+    if(done.has(i)){done.delete(i);c.classList.remove('on');tk.classList.remove('done')}
+    else{done.add(i);c.classList.add('on');tk.classList.add('done')}
+    upd();return}
+  const h=e.target.closest('.thead');
+  if(h)h.parentElement.classList.toggle('open');
+});
+
+function upd(){
+  const n=done.size,tot=T.length;
+  document.getElementById('pt').textContent=n+'/'+tot;
+  document.getElementById('pb').style.width=(n/tot*100)+'%';
+  const p0=T.filter((x,i)=>x.p===0&&!done.has(String(i))).length;
+  document.getElementById('k0').textContent=p0;
+}
+document.getElementById('ktot').textContent=T.length;
+document.getElementById('pt').textContent='0/'+T.length;
+
+document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  const f=b.dataset.f;
+  document.querySelectorAll('.ticket').forEach(t=>{
+    t.style.display=(f==='all'||t.dataset.p===f)?'':'none';
+  });
+});
+
+/* abre os P0 por padrão — é o que tem de ser visto primeiro */
+document.querySelectorAll('.ticket[data-p="0"]').forEach(t=>t.classList.add('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "badge": "Esthétique faciale",
+        "title_start": "Esthétique Faciale",
+        "title_highlight": "à Porto",
+        "question": "Souhaitez-vous <highlight>sublimer votre beauté naturelle</highlight> avec des traitements sûrs et efficaces ?",
+        "description": "L'équipe de la <strong1>Dre Arethuza Luna</strong1> réalise des traitements d'<highlight>esthétique faciale</highlight> après une consultation d'évaluation. Les résultats varient d'une personne à l'autre.",
+        "cta_text": "Plan défini après une consultation d'évaluation.",
+        "button": "PRENDRE RENDEZ-VOUS"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Sûr",
+            "desc": "Produits certifiés"
+        },
+        "natural": {
+            "title": "Évaluation",
+            "desc": "Plan individuel"
+        }
+    },
+    "cases": {
+        "badge": "CAS CLINIQUES",
+        "title_start": "Cas de",
+        "title_highlight": "Esthétique Faciale",
+        "description": "Photos publiées avec l'autorisation écrite des patientes. Chaque plan découle d'une évaluation individuelle et les résultats varient d'une personne à l'autre.",
+        "items": {
+            "case1": {
+                "description": "Rhinomodulation à l'acide hyaluronique",
+                "details": "Toxine botulique + injection — photo après 2 semaines"
+            },
+            "case2": {
+                "description": "Toxine Botulique",
+                "details": "Photo après 1 mois"
+            },
+            "case3": {
+                "description": "Comblement des lèvres à l'acide hyaluronique",
+                "details": "Fils PDO + skinbooster — photo après 3 semaines"
+            }
+        },
+        "cta": {
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "description": "Lors de la consultation, nous évaluons votre cas et expliquons les options indiquées, les risques et les coûts.",
+            "button": "PLANIFIER L'ÉVALUATION"
+        }
+    }
+}

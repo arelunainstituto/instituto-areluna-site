@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "badge": "Facial aesthetics",
+        "title_start": "Facial Aesthetics",
+        "title_highlight": "in Porto",
+        "question": "Do you wish to <highlight>enhance your natural beauty</highlight> with safe and effective treatments?",
+        "description": "<strong1>Dr Arethuza Luna</strong1>'s team performs <highlight>facial aesthetic</highlight> treatments after an assessment appointment. Results vary from person to person.",
+        "cta_text": "Plan defined after an assessment appointment.",
+        "button": "BOOK APPOINTMENT"
+    },
+    "benefits": {
+        "safe": {
+            "title": "Safe",
+            "desc": "Certified products"
+        },
+        "natural": {
+            "title": "Assessment",
+            "desc": "Individual plan"
+        }
+    },
+    "cases": {
+        "badge": "CLINICAL CASES",
+        "title_start": "Cases of",
+        "title_highlight": "Facial Aesthetics",
+        "description": "Photos published with the patients' written consent. Each plan followed an individual assessment and results vary from person to person.",
+        "items": {
+            "case1": {
+                "description": "Rhinomodeling with hyaluronic acid",
+                "details": "Botulinum toxin + filler — photo after 2 weeks"
+            },
+            "case2": {
+                "description": "Botulinum Toxin",
+                "details": "Photo after 1 month"
+            },
+            "case3": {
+                "description": "Lip filler with hyaluronic acid",
+                "details": "PDO threads + skinbooster — photo after 3 weeks"
+            }
+        },
+        "cta": {
+            "title": "Book your assessment appointment",
+            "description": "At the appointment we assess your case and explain the suitable options, the risks and the costs.",
+            "button": "SCHEDULE EVALUATION"
+        }
+    }
+}

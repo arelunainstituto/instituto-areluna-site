@@ -1,0 +1,36 @@
+{
+    "hero": {
+        "badge": "Técnica FUE",
+        "title_start": "Transplante",
+        "title_highlight": "Capilar FUE",
+        "question": "Tem <highlight>queda de cabelo ou calvície</highlight> e quer saber se o transplante está indicado para si?",
+        "description": "O <strong1>Instituto Areluna</strong1> realiza transplante capilar pela técnica <highlight>FUE (Follicular Unit Extraction)</highlight>, após consulta de avaliação.",
+        "cta_text": "Plano definido após avaliação e acompanhamento em consultas de controlo.",
+        "button": "MARCAR CONSULTA"
+    },
+    "cases": {
+        "badge": "CASOS CLÍNICOS",
+        "title_start": "Casos de",
+        "title_highlight": "Transplante FUE",
+        "description": "Fotografias publicadas com autorização escrita dos pacientes. Cada plano resultou de uma avaliação individual e os resultados variam de pessoa para pessoa.",
+        "items": {
+            "case1": {
+                "description": "Recuperação da linha frontal",
+                "details": "Transplante FUE com 3.500 folículos - Resultado após 12 meses"
+            },
+            "case2": {
+                "description": "Densidade na região superior",
+                "details": "Transplante FUE com 4.200 folículos - Resultado após 13 meses"
+            },
+            "case3": {
+                "description": "Reconstrução completa",
+                "details": "Transplante FUE com 5.000 folículos - Resultado após 15 meses"
+            }
+        },
+        "cta": {
+            "title": "Marque a sua consulta de avaliação",
+            "description": "Na consulta avaliamos o seu caso e explicamos se o transplante está indicado, os riscos e os custos.",
+            "button": "MARCAR CONSULTA"
+        }
+    }
+}

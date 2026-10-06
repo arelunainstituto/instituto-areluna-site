@@ -1,40 +1,42 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const TreatmentsFAQSection = () => {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "Quanto tempo demora um tratamento ortodôntico?",
-      answer: "O tempo varia conforme a complexidade do caso, geralmente entre 12 a 30 meses. Com alinhadores invisíveis, pode ser mais rápido (12-24 meses). Durante a consulta inicial, fornecemos uma estimativa mais precisa baseada na sua situação específica."
+      question: t('treatments_page.faq.list.ortho_time.question'),
+      answer: t('treatments_page.faq.list.ortho_time.answer')
     },
     {
-      question: "Os implantes dentários doem?",
-      answer: "O procedimento é realizado com anestesia local, pelo que não sentirá dor durante a cirurgia. No pós-operatório, pode haver algum desconforto que é facilmente controlado com medicação. A maioria dos pacientes retoma as atividades normais em 2-3 dias."
+      question: t('treatments_page.faq.list.implants_pain.question'),
+      answer: t('treatments_page.faq.list.implants_pain.answer')
     },
     {
-      question: "Quanto custam as facetas de porcelana?",
-      answer: "O preço das facetas varia conforme o número de dentes e complexidade do caso, desde €600 por dente. Oferecemos planos de pagamento flexíveis e uma consulta inicial gratuita para orçamento personalizado."
+      question: t('treatments_page.faq.list.veneers_cost.question'),
+      answer: t('treatments_page.faq.list.veneers_cost.answer')
     },
     {
-      question: "O branqueamento dentário é seguro?",
-      answer: "Sim, quando realizado por profissionais qualificados. Utilizamos técnicas aprovadas e produtos de qualidade farmacêutica. Pode haver sensibilidade temporária, que desaparece em poucos dias. Fazemos sempre uma avaliação prévia da saúde dentária."
+      question: t('treatments_page.faq.list.whitening_safety.question'),
+      answer: t('treatments_page.faq.list.whitening_safety.answer')
     },
     {
-      question: "Preciso de enxerto ósseo para colocar implantes?",
-      answer: "Depende da quantidade e qualidade do osso disponível. Cerca de 30% dos pacientes necessitam de enxerto. Utilizamos técnicas avançadas de regeneração óssea que aumentam significativamente as possibilidades de colocação de implantes."
+      question: t('treatments_page.faq.list.bone_graft.question'),
+      answer: t('treatments_page.faq.list.bone_graft.answer')
     },
     {
-      question: "Qual a durabilidade dos tratamentos estéticos?",
-      answer: "Facetas de porcelana duram 15-20 anos, branqueamento 2-3 anos (dependendo dos hábitos), implantes podem durar toda a vida com cuidados adequados. Oferecemos garantias e programas de manutenção preventiva."
+      question: t('treatments_page.faq.list.durability.question'),
+      answer: t('treatments_page.faq.list.durability.answer')
     },
     {
-      question: "Aceitam seguros de saúde?",
-      answer: "Sim, trabalhamos com os principais seguros de saúde portugueses. Verificamos sempre a cobertura antes do tratamento e ajudamos com os procedimentos de reembolso. Contacte-nos para confirmar o seu seguro específico."
+      question: t('treatments_page.faq.list.insurance.question'),
+      answer: t('treatments_page.faq.list.insurance.answer')
     },
     {
-      question: "É possível fazer varios tratamentos em simultâneo?",
-      answer: "Sim, frequentemente combinamos tratamentos para otimizar resultados e reduzir tempo total. Por exemplo, implantes com branqueamento, ou ortodontia seguida de facetas. Criamos um plano de tratamento integrado personalizado."
+      question: t('treatments_page.faq.list.simultaneous.question'),
+      answer: t('treatments_page.faq.list.simultaneous.answer')
     }
   ];
 
@@ -72,18 +74,17 @@ const TreatmentsFAQSection = () => {
           </div>
 
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-vivant text-jet dark:text-white mb-6">
-            Perguntas Frequentes
+            {t('treatments_page.faq.title')}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl xs:text-3xl sm:text-4xl font-vivant text-jet mb-4 sm:mb-6">
-              Esclarecemos Suas Dúvidas
+              {t('treatments_page.faq.subtitle')}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-300 font-vivant-light leading-relaxed">
-              Reunimos as perguntas mais comuns sobre nossos tratamentos.
-              Não encontrou a resposta que procura? Entre em contacto connosco.
+              {t('treatments_page.faq.description')}
             </p>
           </div>
         </div>
@@ -134,16 +135,15 @@ const TreatmentsFAQSection = () => {
           <div className="text-center mt-12 sm:mt-16">
             <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-[hsl(var(--gold-leaf))]/20">
               <h3 className="text-xl xs:text-2xl sm:text-3xl font-vivant text-white mb-3 sm:mb-4">
-                Ainda tem dúvidas?
+                {t('treatments_page.faq.cta_title')}
               </h3>
               <p className="text-sm xs:text-base text-gray-300 mb-6 max-w-xl mx-auto">
-                Nossa equipa está disponível para esclarecer todas as suas questões
-                numa consulta personalizada.
+                {t('treatments_page.faq.cta_desc')}
               </p>
               <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   <button className="px-6 py-3 border border-[hsl(var(--gold-leaf))] text-[hsl(var(--gold-leaf))] hover:bg-[hsl(var(--gold-leaf))]/10 dark:hover:bg-[hsl(var(--gold-leaf))]/20 rounded-xl transition-all duration-300 font-vivant-light tracking-wide">
-                    CONTACTAR POR WHATSAPP
+                    {t('treatments_page.faq.cta_button')}
                   </button>
                 </a>
               </div>

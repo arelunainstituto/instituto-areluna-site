@@ -1,0 +1,36 @@
+{
+    "hero": {
+        "badge": "FUE technique",
+        "title_start": "Hair",
+        "title_highlight": "FUE Transplant",
+        "question": "Do you have <highlight>hair loss or baldness</highlight> and want to know whether a transplant is right for you?",
+        "description": "<strong1>Instituto Areluna</strong1> performs hair transplants using the <highlight>FUE (Follicular Unit Extraction)</highlight> technique, after an assessment appointment.",
+        "cta_text": "Plan defined after assessment, with follow-up check-ups.",
+        "button": "BOOK APPOINTMENT"
+    },
+    "cases": {
+        "badge": "CLINICAL CASES",
+        "title_start": "Cases of",
+        "title_highlight": "FUE Transplant",
+        "description": "Photos published with the patients' written consent. Each plan followed an individual assessment and results vary from person to person.",
+        "items": {
+            "case1": {
+                "description": "Frontal hairline recovery",
+                "details": "FUE Transplant with 3,500 follicles - Result after 12 months"
+            },
+            "case2": {
+                "description": "Density in the upper region",
+                "details": "FUE Transplant with 4,200 follicles - Result after 13 months"
+            },
+            "case3": {
+                "description": "Complete reconstruction",
+                "details": "FUE Transplant with 5,000 follicles - Result after 15 months"
+            }
+        },
+        "cta": {
+            "title": "Book your assessment appointment",
+            "description": "At the appointment we assess your case and explain whether a transplant is indicated, the risks and the costs.",
+            "button": "BOOK APPOINTMENT"
+        }
+    }
+}

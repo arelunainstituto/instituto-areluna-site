@@ -1,60 +1,70 @@
+import { useTranslation } from "react-i18next";
+import caso13 from "../assets/Caso 13.png";
+import caso14 from "../assets/14.png";
+import caso16 from "../assets/16.png";
+import caso30 from "../assets/30.jpg";
+import caso23 from "../assets/Caso 23.png";
+import caso80 from "../assets/80.png";
+
 const BeforeAfterSection = () => {
+  const { t } = useTranslation();
+
   const cases = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954554/instituto-areluna/23.jpg", // Caso 1 - Antes e Depois
-      title: "Transformação Completa",
-      description: "Reabilitação oral total com próteses fixas",
-      duration: "4 meses",
-      treatment: "Implantes e Próteses"
+      image: caso14, // Caso 1 - Antes e Depois
+      title: t("before_after.cases.implants.1.title"),
+      description: t("before_after.cases.implants.1.desc"),
+      duration: t("before_after.cases.implants.1.duration"),
+      treatment: t("before_after.cases.implants.1.treatment")
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954561/instituto-areluna/24.jpg", // Caso 2 - Antes e Depois
-      title: "Sorriso Renovado",
-      description: "Implantes e estética dental avançada",
-      duration: "3 meses",
-      treatment: "Implantes Dentários"
+      image: caso16, // Caso 2 - Antes e Depois
+      title: t("before_after.cases.implants.2.title"),
+      description: t("before_after.cases.implants.2.desc"),
+      duration: t("before_after.cases.implants.2.duration"),
+      treatment: t("before_after.cases.implants.2.treatment")
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954567/instituto-areluna/25.jpg", // Caso 3 - Antes e Depois
-      title: "Mudança de Vida",
-      description: "Reconstrução dental personalizada",
-      duration: "5 meses",
-      treatment: "Reabilitação Total"
+      image: caso30, // Caso 3 - Antes e Depois
+      title: t("before_after.cases.implants.3.title"),
+      description: t("before_after.cases.implants.3.desc"),
+      duration: t("before_after.cases.implants.3.duration"),
+      treatment: t("before_after.cases.implants.3.treatment")
     }
   ];
 
   const facetsCases = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465124/Caso_18_qcqzkb.png",
-      title: "Sorriso Harmonioso",
-      description: "Facetas de porcelana para correção estética",
-      duration: "2 semanas",
-      treatment: "Facetas de Porcelana"
+      image: caso13,
+      title: t("before_after.cases.facets.1.title"),
+      description: t("before_after.cases.facets.1.desc"),
+      duration: t("before_after.cases.facets.1.duration"),
+      treatment: t("before_after.cases.facets.1.treatment")
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465123/Caso_13_yqtm3a.png",
-      title: "Perfeição Natural",
-      description: "Facetas ultrafinas para resultado natural",
-      duration: "3 semanas",
-      treatment: "Facetas Ultrafinas"
+      image: caso23,
+      title: t("before_after.cases.facets.2.title"),
+      description: t("before_after.cases.facets.2.desc"),
+      duration: t("before_after.cases.facets.2.duration"),
+      treatment: t("before_after.cases.facets.2.treatment")
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dli5oe4qg/image/upload/v1756465119/caso_27_mfkoht.png",
-      title: "Elegância Refinada",
-      description: "Facetas personalizadas para sorriso perfeito",
-      duration: "2 semanas",
-      treatment: "Facetas Personalizadas"
+      image: caso80,
+      title: t("before_after.cases.facets.3.title"),
+      description: t("before_after.cases.facets.3.desc"),
+      duration: t("before_after.cases.facets.3.duration"),
+      treatment: t("before_after.cases.facets.3.treatment")
     }
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+    <section id="casos-clinicos" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
@@ -69,7 +79,7 @@ const BeforeAfterSection = () => {
       {/* Background text sutil */}
       <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
         <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          Transformação
+          {t("before_after.background_text")}
         </span>
       </div>
 
@@ -88,18 +98,17 @@ const BeforeAfterSection = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet dark:text-gray-200 mb-6 drop-shadow-sm">
-            Galeria de Sorrisos
+            {t("before_after.title")}
           </h2>
 
           <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
 
           <div className="max-w-3xl mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-4 sm:mb-6">
-              Transformações Reais
+              {t("before_after.subtitle")}
             </h3>
             <p className="text-base sm:text-lg text-jet/70 dark:text-gray-400 font-vivant-light leading-relaxed">
-              Veja como transformamos sorrisos e mudamos vidas com nossos tratamentos avançados.
-              Cada caso é único e personalizado para alcançar resultados excepcionais.
+              {t("before_after.description")}
             </p>
           </div>
         </div>
@@ -107,7 +116,7 @@ const BeforeAfterSection = () => {
         {/* Subtítulo para Implantes */}
         <div className="text-center mb-12">
           <h4 className="text-2xl sm:text-3xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-2">
-            Implantes e Reabilitação
+            {t("before_after.implants_title")}
           </h4>
           <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full"></div>
         </div>
@@ -126,20 +135,22 @@ const BeforeAfterSection = () => {
                 {/* Content wrapper */}
                 <div className="relative z-10">
                   {/* Imagem antes/depois */}
-                  <div className="relative overflow-hidden rounded-2xl shadow-xl mb-6">
-                    <div className="aspect-[4/5]">
+                  <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
+                    <div className="aspect-square rounded-3xl">
                       <img
                         src={caseItem.image}
                         alt={`${caseItem.title} - Antes e Depois`}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
 
                     {/* Badge do caso */}
                     <div className="absolute top-4 left-4 bg-gradient-to-r from-[hsl(var(--jet))]/90 dark:from-black/70 to-[hsl(var(--ring))]/90 dark:to-gray-900/70 text-white px-4 py-2 rounded-xl shadow-lg dark:shadow-none">
-                      <span className="font-vivant font-medium text-xs tracking-wide">CASO {index + 1}</span>
+                      <span className="font-vivant font-medium text-xs tracking-wide">
+                        {t("before_after.card.case_badge")} {index + 1}
+                      </span>
                     </div>
 
                     {/* Overlay de hover */}
@@ -156,7 +167,7 @@ const BeforeAfterSection = () => {
                     </p>
 
                     {/* Detalhes do tratamento */}
-                    <div className="grid grid-cols-2 gap-3">
+                    {/* <div className="grid grid-cols-2 gap-3">
                       <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
                         <div className="relative z-10">
@@ -165,7 +176,9 @@ const BeforeAfterSection = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                           </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">Duração</h5>
+                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
+                            {t("before_after.card.duration_label")}
+                          </h5>
                           <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.duration}</p>
                         </div>
                       </div>
@@ -178,11 +191,13 @@ const BeforeAfterSection = () => {
                               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                           </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">Tratamento</h5>
+                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
+                            {t("before_after.card.treatment_label")}
+                          </h5>
                           <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.treatment}</p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Linha decorativa */}
                     <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -199,7 +214,7 @@ const BeforeAfterSection = () => {
         {/* Subtítulo para Facetas */}
         <div className="text-center mb-12">
           <h4 className="text-2xl sm:text-3xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-2">
-            Facetas de Porcelana
+            {t("before_after.facets_title")}
           </h4>
           <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full"></div>
         </div>
@@ -218,20 +233,22 @@ const BeforeAfterSection = () => {
                 {/* Content wrapper */}
                 <div className="relative z-10">
                   {/* Imagem antes/depois */}
-                  <div className="relative overflow-hidden rounded-2xl shadow-xl mb-6">
-                    <div className="aspect-[4/5]">
+                  <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
+                    <div className="aspect-square rounded-3xl">
                       <img
                         src={caseItem.image}
                         alt={`${caseItem.title} - Antes e Depois`}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
 
                     {/* Badge do caso */}
                     <div className="absolute top-4 left-4 bg-gradient-to-r from-[hsl(var(--jet))]/90 dark:from-black/70 to-[hsl(var(--ring))]/90 dark:to-gray-900/70 text-white px-4 py-2 rounded-xl shadow-lg dark:shadow-none">
-                      <span className="font-vivant font-medium text-xs tracking-wide">CASO {index + 1}</span>
+                      <span className="font-vivant font-medium text-xs tracking-wide">
+                        {t("before_after.card.case_badge")} {index + 1}
+                      </span>
                     </div>
 
                     {/* Overlay de hover */}
@@ -248,7 +265,7 @@ const BeforeAfterSection = () => {
                     </p>
 
                     {/* Detalhes do tratamento */}
-                    <div className="grid grid-cols-2 gap-3">
+                    {/* <div className="grid grid-cols-2 gap-3">
                       <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
                         <div className="relative z-10">
@@ -257,7 +274,9 @@ const BeforeAfterSection = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                           </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">Duração</h5>
+                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
+                            {t("before_after.card.duration_label")}
+                          </h5>
                           <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.duration}</p>
                         </div>
                       </div>
@@ -270,7 +289,9 @@ const BeforeAfterSection = () => {
                               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                           </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">Tratamento</h5>
+                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
+                            {t("before_after.card.treatment_label")}
+                          </h5>
                           <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.treatment}</p>
                         </div>
                       </div>
@@ -297,15 +318,15 @@ const BeforeAfterSection = () => {
 
             <div className="relative z-10">
               <h3 className="text-4xl md:text-5xl font-vivant text-white mb-6 drop-shadow-lg">
-                Sua Transformação Começa Aqui
+                {t("before_after.cta.title")}
               </h3>
               <p className="text-white/95 dark:text-white/90 font-vivant-light text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Agende sua consulta e descubra como podemos transformar seu sorriso com resultados naturais e duradouros.
+                {t("before_after.cta.text")}
               </p>
 
               <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white/95 dark:bg-gray-100/95 text-[hsl(var(--gold-leaf))] font-vivant font-semibold px-12 py-6 rounded-2xl hover:bg-white dark:hover:bg-gray-100 transition-all duration-500 hover:scale-105 shadow-2xl dark:shadow-none border border-white/20 dark:border-gray-100/20">
-                  AGENDAR AVALIAÇÃO
+                  {t("before_after.cta.button")}
                 </button>
               </a>
             </div>

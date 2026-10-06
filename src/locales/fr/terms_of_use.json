@@ -1,0 +1,22 @@
+{
+    "title": "Conditions d'Utilisation",
+    "last_update": "Dernière mise à jour : {{date}}",
+    "sections": {
+        "acceptance": {
+            "title": "1. Acceptation des Conditions",
+            "text": "En accédant et en utilisant le site web de l'Instituto Areluna, vous acceptez de respecter ces Conditions d'Utilisation. Si vous n'êtes pas d'accord avec l'un de ces termes, veuillez ne pas utiliser notre site web."
+        },
+        "intellectual_property": {
+            "title": "2. Propriété Intellectuelle",
+            "text": "Tout le contenu de ce site web (textes, images, logos) est la propriété de l'Instituto Areluna ou de ses concédants de licence et est protégé par les lois sur le droit d'auteur."
+        },
+        "permitted_use": {
+            "title": "3. Usage Autorisé",
+            "text": "Ce site web est destiné à un usage personnel et informatif uniquement. Il est interdit d'utiliser le site web à des fins illégales ou nuisibles à l'image de l'Instituto Areluna."
+        },
+        "liability": {
+            "title": "4. Limitation de Responsabilité",
+            "text": "L'Instituto Areluna s'efforce de maintenir les informations du site web à jour, mais ne garantit pas leur exactitude totale. Nous ne sommes pas responsables des dommages résultant de l'utilisation de ce site web."
+        }
+    }
+}

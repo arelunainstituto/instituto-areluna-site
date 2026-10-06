@@ -1,17 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from 'react-i18next';
+import heroImage from "@/assets/heroImage.jpeg";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(var(--jet))] via-[#1a1a1a] to-black pt-36 pb-20 sm:pt-40">
       {/* Imagem de fundo com baixa opacidade */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/dli5oe4qg/image/upload/v1753954598/instituto-areluna/97a1febf-3c27-4a63-a583-b2522013f3f4.jpg"
-          alt="Background"
+          src={heroImage}
+          alt="Interior do Instituto AreLuna — clínica dentária e de estética avançada no Porto"
           className="w-full h-full object-cover mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--jet))]/90 via-[#1a1a1a]/80 to-black/90"></div>
       </div>
+
 
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -30,40 +35,40 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-vivant-skinny font-thin mb-8 leading-tight tracking-wide text-white opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          O principal destino para estética avançada e <span className="font-vivant text-[hsl(var(--gold-leaf))]">medicina dentária</span> em Portugal
+          {t('hero.title_start')} <span className="font-vivant text-[hsl(var(--gold-leaf))]">{t('hero.title_highlight')}</span> {t('hero.title_end')}
         </h1>
 
         <p className="text-base sm:text-lg lg:text-xl mb-12 font-vivant-light text-white/80 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          Referência européia em saúde e estética integrada
+          {t('hero.subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <a
-            href="https://wa.me/351910098226"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/tratamentos"
           >
             <Button
               variant="outline-gold"
               className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant border-[hsl(var(--gold-leaf))]/30 hover:bg-[hsl(var(--gold-leaf))]/10 text-white min-w-[280px]"
             >
-              ENCONTRE O SEU PROCEDIMENTO
+              {t('hero.find_procedure')}
             </Button>
           </a>
 
           <a
-            href="https://pagamento.institutoareluna.pt/b/eVq6oH2da5oM5nJahT9Zo0w?_gl=1*1u10ymg*_gcl_au*OTQ4NDQ4NDE1LjE3Njc4NzgxMDk.*_ga*MTI1MTYyMTI4OS4xNzY3ODc4MTA5*_ga_1FBN8LDFRR*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgyOTA4ODU1NDk.*_ga_Q2XN6ZFDEN*czE3Njc4ODEyNDUkbzIkZzAkdDE3Njc4ODEyNDUkajYwJGwwJGgxNjA5NDc2Mjk1"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contacto-form"
           >
             <Button
               variant="gold"
-              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300"
+              className="px-8 py-6 rounded-full text-sm tracking-widest font-vivant text-white min-w-[280px] hover:scale-105 transition-transform duration-300 shadow-xl shadow-amber-900/20"
             >
-              RESERVA
+              {t('hero.book')}
             </Button>
           </a>
         </div>
+
+        <p className="text-xs text-pure-white/60 font-vivant-light text-center mt-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          Unidades no Porto (Mota Galiza e Marquês) · Consulta de avaliação individual
+        </p>
 
         {/* Indicador de scroll */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1.5s' }}>

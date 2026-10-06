@@ -1,0 +1,22 @@
+{
+    "title": "Termos de Uso",
+    "last_update": "Última atualização: {{date}}",
+    "sections": {
+        "acceptance": {
+            "title": "1. Aceitação dos Termos",
+            "text": "Ao aceder e utilizar o website do Instituto Areluna, concorda em cumprir estes Termos de Uso. Se não concordar com algum destes termos, por favor não utilize o nosso website."
+        },
+        "intellectual_property": {
+            "title": "2. Propriedade Intelectual",
+            "text": "Todo o conteúdo deste website (textos, imagens, logótipos) é propriedade do Instituto Areluna ou dos seus licenciadores e está protegido por leis de direitos de autor."
+        },
+        "permitted_use": {
+            "title": "3. Uso Permitido",
+            "text": "Este website destina-se apenas a uso pessoal e informativo. É proibido utilizar o website para fins ilegais ou que possam prejudicar a imagem do Instituto Areluna."
+        },
+        "liability": {
+            "title": "4. Limitação de Responsabilidade",
+            "text": "O Instituto Areluna esforça-se por manter a informação do website atualizada, mas não garante a sua total precisão. Não nos responsabilizamos por quaisquer danos resultantes do uso deste website."
+        }
+    }
+}

@@ -1,0 +1,713 @@
+{
+    "common": {
+        "loading": "Chargement...",
+        "error": "Une erreur est survenue",
+        "contact": "Contact",
+        "clinical_disclaimer": "L'indication de tout traitement dépend d'une consultation d'évaluation et d'un diagnostic individuel. Les résultats varient d'une personne à l'autre."
+    },
+    "nav": {
+        "institute": "L'Institut",
+        "treatments": "Traitements",
+        "tourism": "Patients internationaux",
+        "hair_transplant": "Greffe de Cheveux",
+        "facial_aesthetics": "Esthétique Faciale",
+        "clinical_cases": "Cas cliniques",
+        "blog": "Blog"
+    },
+    "hero": {
+        "title_start": "Médecine dentaire, médecine esthétique et",
+        "title_highlight": "traitements capillaires",
+        "title_end": "au Portugal",
+        "subtitle": "Consultation d'évaluation et plan de traitement individuel · Porto",
+        "find_procedure": "TROUVEZ VOTRE PROCÉDURE",
+        "book": "RÉSERVER MAINTENANT"
+    },
+    "gallery": {
+        "title": "Clinique",
+        "subtitle": "Découvrez nos locaux et nos équipements",
+        "fullscreen_alt": "Full screen clinic image",
+        "img1_alt": "Cabinet dentaire de l'Instituto AreLuna, Porto",
+        "img2_alt": "Accueil de l'Instituto AreLuna — clinique dentaire à Porto",
+        "img3_alt": "Équipements de diagnostic à l'Instituto AreLuna, Porto",
+        "img4_alt": "Salle de soins de l'Instituto AreLuna, Porto",
+        "img5_alt": "Procedure room",
+        "img6_alt": "Areluna clinic reception",
+        "img7_alt": "Locaux de l'Instituto AreLuna à Porto — clinique dentaire",
+        "img8_alt": "Équipement de diagnostic et de soins bucco-dentaires à l'Instituto AreLuna, Porto"
+    },
+    "team": {
+        "title": "Clinical Team",
+        "subtitle": "Notre équipe clinique. Chaque professionnel est identifié par son Ordre professionnel et son numéro d'inscription.",
+        "specialist_in": "Domaines d'intervention",
+        "doctors": {
+            "leonardo": {
+                "role": "Dentist",
+                "specialty": "Radiology",
+                "bio": "Médecin dentiste, OMD n° 11846. Formation en Radiologie et Pathologie Buccale (Brésil).",
+                "specs": [
+                    "Radiologie",
+                    "Pathologie Buccale"
+                ]
+            },
+            "daiane": {
+                "role": "Dentist",
+                "specialty": "Endodontics",
+                "bio": "Médecin dentiste, OMD n° 22681. Formation en endodontie (Brésil).",
+                "specs": [
+                    "Endodontics",
+                    "Oral Rehabilitation"
+                ]
+            },
+            "carla": {
+                "role": "Médecin dentiste",
+                "specialty": "Oral Surgery",
+                "bio": "Médecin dentiste, OMD n° 15214. Formation en chirurgie buccale (Brésil) et master en médecine dentaire.",
+                "specs": [
+                    "Oral Surgery"
+                ]
+            },
+            "marcos": {
+                "role": "Physician",
+                "specialty": "Hair Transplant",
+                "bio": "Médecin, OM n° 75498. Formation en greffe capillaire (Brésil) et post-graduation à l'ISMD.",
+                "specs": [
+                    "Greffe capillaire"
+                ]
+            },
+            "aline": {
+                "role": "Médecin dentiste",
+                "specialty": "Facial Harmonization",
+                "bio": "Médecin dentiste, OMD n° 12330. Formation en chirurgie buccale et en harmonisation orofaciale (Brésil).",
+                "specs": [
+                    "Orofacial Harmonization",
+                    "Oral Surgery"
+                ]
+            },
+            "pethine": {
+                "role": "Dentist",
+                "specialty": "Pediatric Dentistry",
+                "bio": "Médecin dentiste, OMD n° 12228. Formation en odontologie pédiatrique (Brésil).",
+                "specs": [
+                    "Pediatric Dentistry"
+                ]
+            },
+            "sara": {
+                "role": "Dentist",
+                "specialty": "General Practice",
+                "bio": "Médecin dentiste, OMD n° 08560. Activité en omnipratique, réhabilitation orale et harmonisation orofaciale.",
+                "specs": [
+                    "General Practice and Oral Rehabilitation",
+                    "Orofacial Harmonization"
+                ]
+            },
+            "yara": {
+                "role": "Dentiste",
+                "specialty": "Dentisterie Générale",
+                "bio": "Médecin dentiste, OMD n° 15666. Formation en omnipratique et esthétique buccale (Brésil).",
+                "specs": [
+                    "Dentisterie Générale",
+                    "Esthétique Orale"
+                ]
+            },
+            "thais": {
+                "role": "Médecin",
+                "specialty": "Endocrinologie",
+                "bio": "Médecin, OM n° 69564. Formation en endocrinologie et nutrologie (Brésil). Activité en perte de poids, ménopause et médecine anti-âge.",
+                "specs": [
+                    "Endocrinologie",
+                    "Nutrologie",
+                    "Médecine Anti-Âge"
+                ]
+            },
+            "arethuza": {
+                "role": "Dentist",
+                "specialty": "Facial Harmonization",
+                "bio": "Médecin dentiste, OMD n° 11845. Formation en orthodontie, orthopédie faciale et harmonisation orofaciale (Brésil) ; Master Injector Swift Beauty (New York) et harmonisation orofaciale avancée (Miami).",
+                "specs": [
+                    "Facial Harmonization",
+                    "Orthodontics",
+                    "Orthopedics"
+                ]
+            }
+        }
+    },
+    "treatments": {
+        "title": "Treatments",
+        "power_title": "The Power of a Smile",
+        "description": "Chaque plan de traitement découle d'une consultation d'évaluation et d'un diagnostic individuel.\n\nL'équipe pluridisciplinaire de l'Instituto Areluna réunit médecine dentaire, médecine esthétique et traitements capillaires.\n\nLors de la consultation, nous expliquons les options indiquées, les risques et les coûts, avant toute décision.",
+        "discover_label": "DISCOVER THE IDEAL TREATMENT FOR YOU",
+        "view_all": "View all {{count}} treatments →",
+        "categories": {
+            "todos": "All",
+            "medicina-dentaria": "Dental Medicine",
+            "harmonizacao-orofacial": "Orofacial Harmonization",
+            "estetica-facial": "Facial Aesthetics",
+            "estetica-corporal": "Body Aesthetics",
+            "terapia-capilar": "Hair Therapy",
+            "transplante-capilar": "Hair Transplant",
+            "endocrinologia": "Endocrinology",
+            "dermatologia": "Traitements capillaires"
+        },
+        "cta": {
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "description": "Lors de la consultation, nous évaluons votre situation et vous expliquons les options indiquées, les risques et les coûts. Ce n'est qu'ensuite que vous décidez.",
+            "button": "Schedule consultation",
+            "premium": "Évaluation individuelle",
+            "tech": "Plan expliqué",
+            "results": "Devis avant de commencer"
+        },
+        "items": {
+            "1": {
+                "title": "Dental Aesthetics",
+                "description": "Traitements d'esthétique dentaire, définis après évaluation clinique.",
+                "features": [
+                    "Veneers",
+                    "Whitening",
+                    "Restorations",
+                    "Natural"
+                ]
+            },
+            "2": {
+                "title": "Invisible Aligners",
+                "description": "Discreet orthodontic correction with removable transparent aligners.",
+                "features": [
+                    "Discret",
+                    "Amovible",
+                    "Confortable",
+                    "Planifié"
+                ]
+            },
+            "3": {
+                "title": "Traditional Orthodontics",
+                "description": "Orthodontic treatment with brackets for malocclusion correction.",
+                "features": [
+                    "Brackets",
+                    "Durable",
+                    "Précis",
+                    "Économique"
+                ]
+            },
+            "4": {
+                "title": "Implantology and Advanced Surgery",
+                "description": "Implants dentaires et chirurgie buccale, après évaluation clinique et examens.",
+                "features": [
+                    "Planification numérique",
+                    "Biocompatible",
+                    "Imagerie",
+                    "Réhabilitation"
+                ]
+            },
+            "5": {
+                "title": "Endodontics",
+                "description": "Root canal treatment for preservation of compromised teeth.",
+                "features": [
+                    "Préserve la dent",
+                    "Anesthésie locale",
+                    "Microscopie",
+                    "Suivi"
+                ]
+            },
+            "6": {
+                "title": "Periodontology",
+                "description": "Traitement des gencives et des structures de soutien des dents.",
+                "features": [
+                    "Laser",
+                    "Regeneration",
+                    "Prevention",
+                    "Health"
+                ]
+            },
+            "7": {
+                "title": "Collagen Biostimulators",
+                "description": "Sculptra and Radiesse for natural facial collagen stimulation.",
+                "features": [
+                    "Collagène",
+                    "Sculptra",
+                    "Radiesse",
+                    "Évaluation faciale"
+                ]
+            },
+            "8": {
+                "title": "Double Chin Lipoenzymatic",
+                "description": "Non-surgical reduction of localized fat in the chin region.",
+                "features": [
+                    "Sans chirurgie",
+                    "Enzymes",
+                    "Contour",
+                    "Évaluation préalable"
+                ]
+            },
+            "9": {
+                "title": "Facial Support Threads",
+                "description": "Non-surgical facial lifting with absorbable threads for firmness.",
+                "features": [
+                    "Fils résorbables",
+                    "Sans chirurgie",
+                    "Fermeté",
+                    "Évaluation faciale"
+                ]
+            },
+            "10": {
+                "title": "Dark Circles Filling",
+                "description": "Correction of dark circles and hollows with high-quality hyaluronic acid.",
+                "features": [
+                    "Rejuvenates",
+                    "Natural",
+                    "Hydrates",
+                    "Smooths"
+                ]
+            },
+            "11": {
+                "title": "Non-Surgical Rhinoplasty",
+                "description": "Nose correction with hyaluronic acid without the need for surgery.",
+                "features": [
+                    "Sans chirurgie",
+                    "Acide hyaluronique",
+                    "Réversible",
+                    "Évaluation faciale"
+                ]
+            },
+            "12": {
+                "title": "Medical Peels",
+                "description": "Chemical and enzymatic peels for renewal and rejuvenation.",
+                "features": [
+                    "Renewal",
+                    "Texture",
+                    "Luminosity",
+                    "Anti-aging"
+                ]
+            },
+            "13": {
+                "title": "Skinbooster and Mesotherapy",
+                "description": "Deep hydration and revitalization of facial skin.",
+                "features": [
+                    "Hydration",
+                    "Luminosity",
+                    "Firmness",
+                    "Vitamins"
+                ]
+            },
+            "14": {
+                "title": "Rejuvenation with PRP",
+                "description": "Platelet-Rich Plasma for natural skin regeneration.",
+                "features": [
+                    "Natural",
+                    "Regeneration",
+                    "Collagen",
+                    "Autologous"
+                ]
+            },
+            "15": {
+                "title": "Microneedling",
+                "description": "Collagen stimulation through controlled micro-injuries.",
+                "features": [
+                    "Collagen",
+                    "Texture",
+                    "Scars",
+                    "Firmness"
+                ]
+            },
+            "16": {
+                "title": "Body Radiofrequency",
+                "description": "Treatment for body flaccidity with radiofrequency technology.",
+                "features": [
+                    "Firmness",
+                    "Collagen",
+                    "Contour",
+                    "Non-invasive"
+                ]
+            },
+            "17": {
+                "title": "Body Mesotherapy",
+                "description": "Treatment for localized fat and cellulite with microinjections.",
+                "features": [
+                    "Cellulite",
+                    "Fat",
+                    "Drainage",
+                    "Modeling"
+                ]
+            },
+            "18": {
+                "title": "Lymphatic Drainage",
+                "description": "Massage pour la récupération postopératoire et le bien-être.",
+                "features": [
+                    "Post-surgical",
+                    "Detox",
+                    "Relaxing",
+                    "Recovery"
+                ]
+            },
+            "19": {
+                "title": "Hair PRP",
+                "description": "Platelet-Rich Plasma to stimulate hair growth.",
+                "features": [
+                    "Growth",
+                    "Natural",
+                    "Density",
+                    "Regeneration"
+                ]
+            },
+            "20": {
+                "title": "Capillary Microinfusion (MMP)",
+                "description": "Infusion of medications directly into the scalp.",
+                "features": [
+                    "Médicaments",
+                    "Précision",
+                    "Cuir chevelu",
+                    "Ciblé"
+                ]
+            },
+            "21": {
+                "title": "Hair Mesotherapy",
+                "description": "Application of vitamins and nutrients for hair strengthening.",
+                "features": [
+                    "Vitamins",
+                    "Strengthens",
+                    "Nutrition",
+                    "Vitality"
+                ]
+            },
+            "22": {
+                "title": "FUE Transplant",
+                "description": "Greffe capillaire par technique FUE, après évaluation de la zone donneuse.",
+                "features": [
+                    "FUE",
+                    "Unités folliculaires",
+                    "Anesthésie locale",
+                    "Suivi"
+                ]
+            },
+            "23": {
+                "title": "Evaluation with Dermatoscopy",
+                "description": "Analyse numérique du cuir chevelu avant la greffe.",
+                "features": [
+                    "Digital",
+                    "Precision",
+                    "Planning",
+                    "Analysis"
+                ]
+            },
+            "25": {
+                "title": "Hormonal Evaluation",
+                "description": "Complete hormonal profile analysis for adults and youths.",
+                "features": [
+                    "Hormonal",
+                    "Complete",
+                    "Metabolic",
+                    "Personalized"
+                ]
+            }
+        }
+    },
+    "checkup": {
+        "title": {
+            "main": "Évaluation pour",
+            "highlight": "ceux qui vivent hors du Portugal"
+        },
+        "description": "Nous pouvons programmer lors d'un même déplacement les consultations d'évaluation dont vous avez besoin (médecine dentaire, esthétique faciale, évaluation capillaire et analyses cliniques), lorsque cela est cliniquement approprié.",
+        "services_title": {
+            "main": "Ce qui est inclus dans votre",
+            "highlight": "Check-up"
+        },
+        "services": {
+            "dental": {
+                "title": "Évaluation Dentaire Complète",
+                "description": "Examen oral détaillé, radiographies panoramiques et plan de traitement personnalisé",
+                "duration": "2-3 heures"
+            },
+            "hair": {
+                "title": "Analyse Capillaire Avancée",
+                "description": "Trichoscopie numérique, analyse de densité et évaluation pour greffe de cheveux",
+                "duration": "1-2 heures"
+            },
+            "facial": {
+                "title": "Évaluation Esthétique Faciale",
+                "description": "Planification de l'harmonisation et du rajeunissement",
+                "duration": "1-2 heures"
+            },
+            "labs": {
+                "title": "Examens de Laboratoire",
+                "description": "Profil hormonal, vitamines, minéraux et marqueurs de santé générale",
+                "duration": "30 min"
+            }
+        },
+        "benefits_title": {
+            "main": "Avantages du",
+            "highlight": "Programme"
+        },
+        "benefits": {
+            "personal_assistant": {
+                "title": "Assistant Personnel",
+                "description": "Soutien complet dans la planification du voyage"
+            },
+            "integrated_care": {
+                "title": "Soins Intégrés",
+                "description": "Approche holistique de votre santé et esthétique"
+            }
+        },
+        "cta": {
+            "button": "Prendre rendez-vous",
+            "support": "Assistance multilingue"
+        }
+    },
+    "tourism": {
+        "title": {
+            "main": "Patients vivant",
+            "highlight": "hors du Portugal"
+        },
+        "question": "Vous vivez hors du Portugal ?",
+        "description": "Nous organisons les consultations d'évaluation pour tirer le meilleur parti de chaque déplacement à Porto. Le nombre de déplacements dépend du plan de traitement.",
+        "button": "PRENDRE RENDEZ-VOUS"
+    },
+    "before_after": {
+        "background_text": "Cas",
+        "title": "Galerie de Sourires",
+        "subtitle": "Cas cliniques",
+        "description": "Photos publiées avec l'autorisation écrite des patients. Chaque plan de traitement découle d'une évaluation individuelle et les résultats varient d'une personne à l'autre.",
+        "implants_title": "Implants et Réhabilitation",
+        "facets_title": "Facettes en Porcelaine",
+        "card": {
+            "case_badge": "CAS",
+            "duration_label": "Durée",
+            "treatment_label": "Traitement"
+        },
+        "cta": {
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "text": "Lors de la première consultation, nous évaluons votre cas et vous expliquons les options de traitement indiquées pour vous.",
+            "button": "PLANIFIER ÉVALUATION"
+        },
+        "cases": {
+            "implants": {
+                "1": {
+                    "title": "Réhabilitation orale avec prothèse fixe",
+                    "desc": "Réhabilitation orale totale avec prothèses fixes",
+                    "treatment": "Implants et Prothèses",
+                    "duration": "4 mois"
+                },
+                "2": {
+                    "title": "Implants et réhabilitation",
+                    "desc": "Implants et esthétique dentaire avancée",
+                    "treatment": "Implants Dentaires",
+                    "duration": "3 mois"
+                },
+                "3": {
+                    "title": "Reconstruction dentaire",
+                    "desc": "Reconstruction dentaire personnalisée",
+                    "treatment": "Réhabilitation Totale",
+                    "duration": "5 mois"
+                }
+            },
+            "facets": {
+                "1": {
+                    "title": "Facettes céramiques",
+                    "desc": "Facettes en porcelaine pour correction esthétique",
+                    "treatment": "Facettes en Porcelaine",
+                    "duration": "2 semaines"
+                },
+                "2": {
+                    "title": "Facettes ultrafines",
+                    "desc": "Facettes ultra-fines pour un résultat naturel",
+                    "treatment": "Facettes Ultra-fines",
+                    "duration": "3 semaines"
+                },
+                "3": {
+                    "title": "Facettes personnalisées",
+                    "desc": "Facettes conçues pour chaque cas",
+                    "treatment": "Facettes Personnalisées",
+                    "duration": "2 semaines"
+                }
+            }
+        }
+    },
+    "contact": {
+        "background_text": "Contact",
+        "title": "Contactez-nous",
+        "subtitle": "Contactez-nous",
+        "description": "Prenez rendez-vous par téléphone, par e-mail ou via le formulaire.",
+        "form": {
+            "name": "Nom Complet",
+            "name_placeholder": "Entrez votre nom complet",
+            "email": "Email",
+            "email_placeholder": "votre@email.com",
+            "phone": "Téléphone",
+            "phone_placeholder": "+351 XXX XXX XXX",
+            "subject": "Sujet",
+            "subject_placeholder": "Sélectionnez un sujet",
+            "subjects": {
+                "consultation": "Planifier Consultation",
+                "treatments": "Informations sur les Traitements",
+                "tourism": "Patients internationaux",
+                "emergency": "Consultation d'Urgence",
+                "other": "Autres"
+            },
+            "message": "Message",
+            "message_placeholder": "Décrivez comment nous pouvons vous aider...",
+            "submit": "ENVOYER MESSAGE",
+            "sending": "ENVOI..."
+        },
+        "info": {
+            "title": "Informations de Contact",
+            "email_label": "Email",
+            "phone_label": "Téléphone",
+            "location_label": "Emplacement",
+            "location_value": "Porto, Portugal",
+            "hours_label": "Horaires",
+            "hours_value": "Lun-Ven: 09h à 19h"
+        },
+        "units": {
+            "title": "Unités",
+            "unit1": {
+                "name": "Unidade Mota Galiza",
+                "address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593"
+            },
+            "unit2": {
+                "name": "Unidade Marquês",
+                "address": "Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345"
+            }
+        },
+        "opening_hours": {
+            "title": "Heures d'Ouverture",
+            "weekdays": "Lundi - Vendredi",
+            "saturday": "Samedi",
+            "sunday": "Dimanche",
+            "by_appointment": "Sur rendez-vous",
+            "closed": "Fermé"
+        },
+        "toasts": {
+            "config_error_title": "Erreur de configuration",
+            "config_error_desc": "Impossible d'envoyer le message. Veuillez réessayer plus tard ou nous contacter par téléphone.",
+            "success_title": "Message envoyé !",
+            "success_desc": "Nous vous contacterons dès que possible.",
+            "error_title": "Erreur d'envoi",
+            "error_desc": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+        }
+    },
+    "footer": {
+        "rights_reserved": "Tous droits réservés.",
+        "privacy_policy": "Politique de Confidentialité",
+        "data_protection": "Protection des Données (RGPD)",
+        "terms_of_use": "Conditions d'Utilisation",
+        "cookies": "Cookies",
+        "main_title": "Médecine Dentaire & Esthétique Avancée",
+        "description": "Médecine dentaire, médecine esthétique et traitements capillaires à Porto.",
+        "quick_links": "Liens Rapides",
+        "regulatory_entity": "Autorité de Régulation",
+        "reg_number": "Nº d'Enregistrement ERS :",
+        "license_number": "Nº de Licence :",
+        "complaints_book": "Livre de Réclamations en Ligne",
+        "location": "Porto, Portugal",
+        "hours": "Lun-Ven : 09h-19h<br/>Sam : Sur rendez-vous<br/>Dim : Fermé",
+        "units": {
+            "porto_label": "Porto (Mota Galiza) :",
+            "porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+            "compliance_title": "Conformité & Régulation",
+            "company_name": "Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240"
+        }
+    },
+    "header": {
+        "subtitle": "Médecine dentaire, médecine esthétique et traitements capillaires",
+        "book_consultation": "PRENDRE RENDEZ-VOUS"
+    },
+    "cookie_banner": {
+        "title": "Votre vie privée est importante",
+        "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur \"Accepter\", vous acceptez notre utilisation des cookies. Vous pouvez en savoir plus dans notre <0>Politique de Confidentialité</0>.",
+        "reject": "Rejeter",
+        "accept_all": "Tout Accepter"
+    },
+    "founder": {
+        "title": "Dr. Arethuza",
+        "subtitle": "Luna",
+        "role": "Fondatrice & Directrice Clinique",
+        "bio": "Médecin dentiste, OMD n° 11845, formée en orthodontie, orthopédie faciale et harmonisation orofaciale (Brésil). Fondatrice et directrice clinique de l'Instituto AreLuna.",
+        "specialties_title": "Domaines d'intervention",
+        "specialties": [
+            "Orthodontie et Orthopédie Faciale",
+            "Harmonisation Orofaciale Avancée",
+            "Dentisterie Intégrée",
+            "Master Injector (Swift Beauty, NY)",
+            "Harmonisation Orofaciale Avancée (Miami)"
+        ],
+        "credentials": {
+            "registry": "Registre Professionnel",
+            "registry_val": "OMD n.º 11845",
+            "education": "Formation",
+            "education_val": "Université Fédérale du Paraná",
+            "international": "Formation internationale",
+            "international_val": "New York et Miami"
+        },
+        "vision_title": "La Vision",
+        "vision_p1": "Avec une approche qui associe médecine dentaire, esthétique et bien-être, la Dre Arethuza Luna a créé une clinique où chaque plan de traitement découle d'une évaluation individuelle.",
+        "vision_p2": "Sa formation internationale comprend un programme Master Injector au Swift Beauty Institute de New York et une formation en harmonisation orofaciale avancée à Miami.",
+        "vision_p3": "L'Instituto AreLuna reçoit des patients vivant au Portugal et à l'étranger. Pour tous, le traitement commence par une consultation d'évaluation.",
+        "cta_title": "Découvrez l'Institut AreLuna",
+        "cta_desc": "Prenez rendez-vous pour une consultation d'évaluation à Porto.",
+        "cta_button_contact": "Prendre Rendez-vous",
+        "cta_button_treatments": "Voir les Traitements",
+        "cta_whatsapp": "Prendre rendez-vous",
+        "seo": {
+            "title": "Dr. Arethuza Luna — Fondatrice | Institut AreLuna Porto",
+            "description": "Dre Arethuza Luna, OMD n° 11845, fondatrice de l'Instituto AreLuna à Porto. Formation en orthodontie, orthopédie faciale et harmonisation orofaciale (Brésil) et formation internationale à New York et Miami."
+        }
+    },
+    "triage_form": {
+        "badge": "Rendez-vous & Triage Clinique · Porto",
+        "title": "Prenez Votre Consultation d'Évaluation",
+        "subtitle_html": "Consultations dans nos cliniques de <strong>Porto (Mota Galiza et Marquês)</strong>. Renseignez vos coordonnées pour que l'équipe prépare votre consultation d'évaluation.",
+        "step1_title": "1. Où préférez-vous être reçu(e) ? (*)",
+        "unit_porto": "Porto",
+        "unit_turismo": "Je vis hors du Portugal",
+        "name_label": "Nom Complet (*)",
+        "name_placeholder": "Ex : Marie Dupont",
+        "age_label": "Âge (*)",
+        "age_placeholder": "Sélectionnez...",
+        "email_label": "E-mail (*)",
+        "email_placeholder": "exemple@domaine.com",
+        "phone_label": "Téléphone / WhatsApp (*)",
+        "residence_label": "Pays de Résidence (*)",
+        "residence_placeholder": "Ex : France, Suisse, Belgique...",
+        "language_label": "Langue de Préférence (*)",
+        "smile_question": "Comment vous sentez-vous par rapport à votre sourire ou à l'état de vos dents ? (*)",
+        "smile_opt1": "Je ne suis pas satisfait(e) de mes anciens soins dentaires.",
+        "smile_opt2": "J'aimerais améliorer mon sourire.",
+        "smile_opt3": "J'aimerais améliorer mes soins dentaires.",
+        "smile_hint": "Ces informations nous aident à préparer votre consultation d'évaluation.",
+        "callback_label": "Quel est le meilleur moment pour vous rappeler ?",
+        "callback_placeholder": "Sélectionnez un horaire...",
+        "callback_anytime": "À tout moment de la journée",
+        "callback_morning": "Matin (09h - 13h)",
+        "callback_afternoon": "Après-midi (14h - 18h)",
+        "callback_evening": "Fin de journée (18h - 20h)",
+        "message_label": "Message ou précisions supplémentaires (optionnel)",
+        "message_placeholder": "Une question spécifique ou antécédent dentaire...",
+        "consent_privacy_text": "J'ai lu et j'accepte la",
+        "privacy_policy_link": "Politique de Confidentialité et Cookies",
+        "consent_marketing_text": "Je souhaite recevoir les actualités cliniques de l'Instituto AreLuna.",
+        "required_note": "(*) Champs obligatoires. Vos données cliniques sont traitées dans le respect strict du secret médical.",
+        "submit_btn": "DEMANDER UNE ÉVALUATION CLINIQUE",
+        "submitting_btn": "Traitement en cours...",
+        "success_title": "Merci pour votre confiance !",
+        "success_desc": "Votre demande a été enregistrée avec succès. Un de nos coordinateurs vous contactera très prochainement à l'horaire souhaité.",
+        "success_whatsapp": "Échanger sur WhatsApp",
+        "success_new_msg": "Envoyer un nouveau message",
+        "sidebar_units_title": "Nos Cliniques",
+        "sidebar_porto_name": "Porto · Mota Galiza",
+        "sidebar_porto_badge": "Siège",
+        "sidebar_porto_address": "Rua Júlio Dinis, n.º 194, 4050-327 Porto",
+        "sidebar_porto_reg": "Registo ERS n.º 161637 · Licença de funcionamento n.º 21593",
+        "sidebar_wa_title": "Vous Préférez une Réponse Immédiate ?",
+        "sidebar_wa_desc": "Pour éviter l'attente téléphonique ou pour toute question rapide, notre équipe clinique vous répond directement sur WhatsApp :",
+        "sidebar_wa_btn": "Contacter la réception sur WhatsApp",
+        "sidebar_phone_label": "+351 220 430 090 (Porto & Général)",
+        "sidebar_hours_mon_fri": "Lundi à Vendredi : 09h00 - 19h00",
+        "sidebar_hours_sat": "Samedi : Sur rendez-vous",
+        "sidebar_compliance": "Secret médical et conformité intégrale RGPD / ERS",
+        "toast_privacy_title": "Consentement obligatoire",
+        "toast_privacy_desc": "Veuillez accepter la Politique de Confidentialité et Cookies pour continuer.",
+        "toast_phone_title": "Numéro incomplet",
+        "toast_phone_desc": "Veuillez saisir au moins {{min}} chiffres pour le numéro de téléphone.",
+        "toast_success_title": "Demande de Consultation Envoyée !",
+        "toast_success_desc": "Nous avons bien reçu vos informations. Notre équipe vous recontactera très rapidement.",
+        "toast_error_title": "Erreur lors de l'envoi",
+        "toast_error_desc": "Impossible d'envoyer vos données automatiquement. Veuillez réessayer ou nous joindre sur WhatsApp."
+    }
+}

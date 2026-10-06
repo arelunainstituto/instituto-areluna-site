@@ -1,16 +1,61 @@
 import Header from "@/components/Header";
 import ContatoHeroSection from "@/components/ContatoHeroSection";
-import ContatoSection from "@/components/ContatoSection";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SEOHead from "@/components/SEOHead";
+
+const contactSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Instituto AreLuna — Porto (Sede)",
+    "url": "https://www.institutoareluna.pt/contato",
+    "telephone": "+351220430090",
+    "email": "rececao@institutoareluna.pt",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Júlio Dinis, n.º 194",
+      "addressLocality": "Porto",
+      "postalCode": "4050-327",
+      "addressCountry": "PT"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }],
+    "hasMap": "https://maps.google.com/?q=Instituto+AreLuna+Porto"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Instituto AreLuna — Porto (Marquês)",
+    "url": "https://www.institutoareluna.pt/contato",
+    "telephone": "+351220430090",
+    "email": "rececao@institutoareluna.pt",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua de Faria Guimarães, n.º 450",
+      "addressLocality": "Porto",
+      "postalCode": "4000-205",
+      "addressCountry": "PT"
+    }
+  }
+];
 
 const ContatoPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Contacto e Marcação de Consulta | Porto | Instituto AreLuna"
+        description="Marque a sua consulta de avaliação no Instituto AreLuna, no Porto (Mota Galiza e Marquês). Medicina dentária, medicina estética e tratamentos capilares."
+        canonical="https://www.institutoareluna.pt/contato"
+        jsonLd={contactSchema}
+      />
       <Header />
       <ContatoHeroSection />
-      <ContatoSection />
       <ContactFormSection />
       <Footer />
       <WhatsAppFloat />
