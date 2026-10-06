@@ -14,7 +14,7 @@ const TrasplanteCapilarHeroSection = () => {
   ];
 
   return (
-    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-b from-jet-fixed to-black px-4 pb-16 pt-44 text-pure-white sm:px-6 sm:pt-52 lg:min-h-[80vh] lg:pt-56">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-b from-jet-fixed to-black px-4 pb-16 pt-44 text-white sm:px-6 sm:pt-52 lg:min-h-[80vh] lg:pt-56">
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         <Eyebrow tone="dark" className="mb-6">
           {t("hair_transplant_page.hero.badge")}

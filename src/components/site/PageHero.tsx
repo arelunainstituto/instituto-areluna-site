@@ -29,12 +29,12 @@ export const PageHero = ({
   actions,
   children,
 }: PageHeroProps) => (
-  <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-dark pb-16 pt-44 text-pure-white sm:pt-56 md:pt-64">
+  <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-dark pb-16 pt-44 text-white sm:pt-56 md:pt-64">
     <div className="absolute inset-0" aria-hidden="true">
       <img
         src={image}
         alt={imageAlt}
-        fetchPriority="high"
+        {...{ fetchpriority: "high" }}
         loading="eager"
         decoding="async"
         className="h-full w-full object-cover opacity-30"

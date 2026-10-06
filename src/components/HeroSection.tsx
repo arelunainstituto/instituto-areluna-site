@@ -16,7 +16,7 @@ const HeroSection = () => {
           src={heroImage}
           alt="Interior do Instituto AreLuna — clínica dentária e de estética avançada no Porto"
           className="h-full w-full object-cover mix-blend-overlay"
-          fetchPriority="high"
+          {...{ fetchpriority: "high" }}
           loading="eager"
           decoding="async"
         />
@@ -41,7 +41,7 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <p className="mt-6 text-center font-vivant-light text-xs text-pure-white/60 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <p className="mt-6 text-center font-vivant-light text-xs text-white/60 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Unidades em Lisboa (Lumiar) e no Porto (Mota Galiza) · Acompanhamento contínuo e personalizado
         </p>
       </div>

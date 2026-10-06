@@ -84,7 +84,7 @@ const EsteticaFacialSection = () => {
               height={900}
               className="aspect-[4/3] h-full w-full object-cover object-top"
             />
-            <span className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-1.5 font-vivant text-xs font-medium tracking-widest text-gold-leaf">
+            <span className="absolute left-4 top-4 rounded-full bg-jet-fixed/85 px-4 py-1.5 font-vivant text-xs font-medium tracking-widest text-gold-leaf">
               DRA. ARELUNA
             </span>
           </div>

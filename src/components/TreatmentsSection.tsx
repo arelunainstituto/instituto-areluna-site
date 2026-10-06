@@ -34,7 +34,7 @@ const TreatmentsSection = () => {
             className={cn(
               "min-h-11 rounded-full border px-5 text-sm font-vivant-light tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2",
               activeCategory === id
-                ? "border-jet bg-jet text-pure-white dark:border-gold-leaf dark:bg-gold-leaf dark:text-jet"
+                ? "border-jet bg-jet text-white dark:border-gold-leaf dark:bg-gold-leaf dark:text-jet-fixed"
                 : "border-jet/20 bg-white text-jet hover:border-gold-leaf/60 dark:border-white/15 dark:bg-gray-900 dark:text-gray-200",
             )}
           >
@@ -93,7 +93,7 @@ const TreatmentsSection = () => {
       </div>
 
       <Reveal className="mt-16">
-        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-pure-white sm:px-12 dark:bg-black dark:bg-none">
+        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-white sm:px-12 dark:bg-black dark:bg-none">
           <h3 className="mb-5 font-vivant text-3xl sm:text-4xl">{t("treatments.cta.title")}</h3>
           <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg">
             {t("treatments.cta.description")}

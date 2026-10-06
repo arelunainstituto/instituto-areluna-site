@@ -69,20 +69,20 @@ const SobreAFundadora = () => {
 
       <main>
         {/* Hero (inspirado nos blocos "hero" / "team" do 21st.dev) */}
-        <section className="bg-gradient-dark px-4 pb-16 pt-44 text-pure-white dark:bg-black dark:bg-none sm:px-6 sm:pt-48 lg:pb-24">
+        <section className="bg-gradient-dark px-4 pb-16 pt-28 text-white dark:bg-black dark:bg-none sm:px-6 lg:pb-24 xl:pt-48">
           <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="overflow-hidden rounded-2xl border border-gold-leaf/30 shadow-elegant">
+            <div className="order-2 overflow-hidden rounded-2xl border border-gold-leaf/30 shadow-elegant lg:order-1">
               <img
                 src={draArethuzaImg}
                 alt="Dra. Arethuza Luna — fundadora do Instituto AreLuna, médica-dentista especialista em ortodontia e harmonização orofacial no Porto"
                 loading="eager"
-                fetchPriority="high"
+                {...{ fetchpriority: "high" }}
                 decoding="async"
                 className="max-h-[600px] w-full object-cover lg:max-h-[700px]"
               />
             </div>
 
-            <div>
+            <div className="order-1 lg:order-2">
               <Eyebrow tone="dark" className="mb-5">
                 {t('founder.role')}
               </Eyebrow>

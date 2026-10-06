@@ -24,7 +24,7 @@ export const cardBaseClasses = (tone: "light" | "dark" = "light") =>
   cn(
     "group relative flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 ease-elegant sm:p-8",
     tone === "dark"
-      ? "border-white/10 bg-white/5 text-pure-white hover:border-gold-leaf/40 hover:bg-white/[0.07]"
+      ? "border-white/10 bg-white/5 text-white hover:border-gold-leaf/40 hover:bg-white/[0.07]"
       : "border-jet/10 bg-white text-jet shadow-[0_1px_2px_hsl(20_11%_25%/0.04)] hover:-translate-y-1 hover:border-gold-leaf/50 hover:shadow-elegant dark:border-white/10 dark:bg-gray-900 dark:text-gray-100",
   );
 

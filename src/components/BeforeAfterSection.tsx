@@ -35,7 +35,7 @@ const BeforeAfterSection = () => {
                     height={600}
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-jet-fixed px-3 py-1 font-vivant text-xs tracking-wide text-pure-white">
+                  <span className="absolute left-3 top-3 rounded-full bg-jet-fixed px-3 py-1 font-vivant text-xs tracking-wide text-white">
                     {t("before_after.card.case_badge")} {i + 1}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ const BeforeAfterSection = () => {
       {renderGroup("facets", FACETS, t("before_after.facets_title"))}
 
       <Reveal className="mt-16">
-        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-pure-white sm:px-12 dark:bg-black dark:bg-none">
+        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-white sm:px-12 dark:bg-black dark:bg-none">
           <h3 className="mb-5 font-vivant text-3xl sm:text-4xl">{t("before_after.cta.title")}</h3>
           <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg">
             {t("before_after.cta.text")}

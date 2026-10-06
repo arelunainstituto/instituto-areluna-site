@@ -35,7 +35,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         // CTA padrão do site institucional (pílula, mesmo tamanho em todas as secções)
-        cta: "h-12 rounded-full px-8 font-vivant text-sm tracking-widest sm:h-14",
+        cta: "h-auto min-h-12 max-w-full whitespace-normal rounded-full px-6 py-3 text-center font-vivant text-sm tracking-wide sm:min-h-14 sm:px-8 sm:tracking-widest",
       },
     },
     defaultVariants: {

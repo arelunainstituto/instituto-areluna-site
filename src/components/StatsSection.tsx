@@ -23,7 +23,7 @@ const StatsSection = () => {
               {stat.prefix && (
                 <span className="font-vivant-light text-sm text-gold-leaf">{stat.prefix}</span>
               )}
-              <span className="font-vivant text-5xl leading-none text-pure-white">{stat.value}</span>
+              <span className="font-vivant text-5xl leading-none text-white">{stat.value}</span>
             </dd>
             <dt className="order-2 mt-3 font-vivant-light text-sm text-white/75 sm:text-base">{stat.label}</dt>
           </Reveal>

@@ -42,7 +42,7 @@ const EsteticaFacialCasesSection = () => {
                     height={600}
                     className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-gold-leaf px-3 py-1.5 font-vivant text-xs font-medium text-pure-white">
+                  <span className="absolute left-4 top-4 rounded-full bg-gold-leaf px-3 py-1.5 font-vivant text-xs font-medium text-jet-fixed">
                     {caseItem.title}
                   </span>
                 </div>

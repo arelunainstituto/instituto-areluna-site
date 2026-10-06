@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
             />
             <Header />
 
-            <main className="flex-grow pt-44 pb-20 px-4 sm:pt-52 sm:px-6">
+            <main className="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:pt-32">
                 <div className="mx-auto w-full max-w-3xl">
                     <h1 className="font-vivant text-3xl leading-tight text-gold-leaf sm:text-4xl lg:text-5xl mb-8">
                         {t('title')}

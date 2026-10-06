@@ -68,9 +68,9 @@ const BlogPostPage = () => {
             <div className="container mx-auto px-4 py-32 text-center">
                 <h2 className="text-3xl font-light mb-4">Artigo não encontrado</h2>
                 <p className="text-gray-500 mb-8">O artigo que você procura não existe ou foi removido.</p>
-                <Link to="/blog">
-                    <Button variant="gold" size="cta">Voltar para o Blog</Button>
-                </Link>
+                <Button asChild variant="gold" size="cta">
+                    <Link to="/blog">Voltar para o Blog</Link>
+                </Button>
             </div>
         );
     }

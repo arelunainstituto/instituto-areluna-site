@@ -35,7 +35,7 @@ export const FaqSection = ({ title, subtitle, description, items, cta }: FaqSect
       ))}
     </Accordion>
     {cta && (
-      <div className="mt-12 rounded-3xl bg-gradient-dark p-8 text-center text-pure-white dark:bg-black dark:bg-none">{cta}</div>
+      <div className="mt-12 rounded-3xl bg-gradient-dark p-8 text-center text-white dark:bg-black dark:bg-none">{cta}</div>
     )}
   </Section>
 );

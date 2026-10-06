@@ -18,7 +18,7 @@ const CapilarHomeSection = () => {
   ];
 
   return (
-    <Section id="transplante-capilar" tone="light">
+    <Section id="transplante-capilar" tone="muted">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <SectionHeading

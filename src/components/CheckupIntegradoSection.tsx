@@ -22,7 +22,7 @@ const CheckupIntegradoSection = () => {
   ];
 
   return (
-    <Section tone="muted">
+    <Section tone="light">
       <SectionHeading
         eyebrow={t("checkup.pill")}
         title={t("checkup.title.main")}
@@ -67,7 +67,7 @@ const CheckupIntegradoSection = () => {
       </div>
 
       <Reveal className="mt-16">
-        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-pure-white sm:px-12 dark:bg-black dark:bg-none">
+        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-white sm:px-12 dark:bg-black dark:bg-none">
           <h3 className="mb-4 font-vivant text-3xl">{t("checkup.cta.title")}</h3>
           <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base text-white/80 sm:text-lg">
             {t("checkup.cta.subtitle")}

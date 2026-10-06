@@ -64,8 +64,8 @@ export const SectionHeading = ({
     {eyebrow && <Eyebrow tone={tone}>{eyebrow}</Eyebrow>}
     <Tag
       className={cn(
-        "font-vivant text-3xl leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl",
-        tone === "dark" ? "text-pure-white" : "text-jet dark:text-white",
+        "font-vivant text-3xl leading-[1.1] tracking-tight text-balance break-words sm:text-4xl lg:text-5xl",
+        tone === "dark" ? "text-white" : "text-jet dark:text-white",
       )}
     >
       {title}

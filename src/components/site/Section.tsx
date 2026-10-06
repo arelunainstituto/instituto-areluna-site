@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 const toneClasses = {
   light: "bg-background text-jet dark:bg-gray-950 dark:text-gray-100",
   muted: "bg-gradient-light text-jet dark:bg-gray-900 dark:bg-none dark:text-gray-100",
-  dark: "bg-gradient-dark text-pure-white dark:bg-black dark:bg-none",
+  dark: "bg-gradient-dark text-white dark:bg-black dark:bg-none",
 } as const;
 
 const spacingClasses = {

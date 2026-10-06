@@ -48,7 +48,7 @@ const NotFound = () => {
             Não conseguimos encontrar esta página
           </h2>
 
-          <p className="text-pure-white/70 font-vivant-light text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/70 font-vivant-light text-base max-w-lg mx-auto leading-relaxed">
             O endereço que acedeu pode ter mudado ou não se encontra mais disponível. Mas a nossa equipa clínica em Lisboa e no Porto continua pronta para o acolher.
           </p>
 
@@ -65,7 +65,7 @@ const NotFound = () => {
 
           {/* Links Rápidos */}
           <div className="pt-8 border-t border-white/10">
-            <p className="text-xs text-pure-white/50 uppercase tracking-widest font-semibold mb-4">
+            <p className="text-xs text-white/50 uppercase tracking-widest font-semibold mb-4">
               Páginas e Tratamentos Populares:
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
@@ -73,7 +73,7 @@ const NotFound = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-pure-white/80 hover:text-gold-leaf border border-white/10 text-xs min-h-[44px] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/80 hover:text-gold-leaf border border-white/10 text-xs min-h-[44px] transition-colors"
                 >
                   <span>{link.label}</span>
                   <ArrowRight size={12} className="opacity-60" />
