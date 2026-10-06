@@ -149,7 +149,8 @@ const Footer = () => {
         </div>
 
         {/* Seção inferior */}
-        <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
+        {/* pb-24 no telemóvel: o botão flutuante do WhatsApp não tapa o fim do rodapé */}
+        <div className="flex flex-col items-center justify-between gap-4 pb-24 pt-6 sm:py-6 md:flex-row">
           {/* Copyright */}
           <p className="text-center font-vivant-light text-sm text-white/60 md:text-left">
             © {new Date().getFullYear()} Instituto Areluna Medicina Dentária Avançada, Lda.
