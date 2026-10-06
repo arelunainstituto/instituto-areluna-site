@@ -31,8 +31,7 @@ const Footer = () => {
   const quickLinks = [
     { href: "/", label: t('nav.institute') },
     { href: "/tratamentos", label: t('nav.treatments') },
-    { href: "/turismo-dentario", label: t('nav.tourism') },
-    { href: "/#casos-clinicos", label: t('nav.before_after') },
+    { href: "/#casos-clinicos", label: t('nav.clinical_cases') },
     { href: "/sobre-a-fundadora", label: "Sobre a Fundadora" },
     { href: "/contato", label: t('common.contact') },
   ];
@@ -99,8 +98,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <span className={iconBoxClasses} aria-hidden="true"><MapPin /></span>
                 <div className="space-y-2 font-vivant-light text-sm leading-relaxed text-white/70">
-                  <p><strong className="font-vivant font-normal text-white/90">{t('footer.units.porto_label', 'Porto (Sede):')}</strong> {t('footer.units.porto_address', 'Rua de Júlio Dinis, 194 R/C, 4050-024 Porto')}</p>
-                  <p><strong className="font-vivant font-normal text-white/90">{t('footer.units.lisboa_label', 'Lisboa (Nova Unidade):')}</strong> {t('footer.units.lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}</p>
+                  <p><strong className="font-vivant font-normal text-white/90">{t('footer.units.porto_label', 'Porto (Mota Galiza):')}</strong> {t('footer.units.porto_address', 'Rua Júlio Dinis, n.º 194, 4050-327 Porto')}</p>
+                  <p><strong className="font-vivant font-normal text-white/90">{t('footer.units.marques_label', 'Porto (Marquês):')}</strong> {t('footer.units.marques_address', 'Rua de Faria Guimarães, n.º 450, 4000-205 Porto')}</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -127,15 +126,15 @@ const Footer = () => {
           {/* Entidade Reguladora & Dados da Sociedade */}
           <div className="lg:col-span-3">
             <h4 className={headingClasses}>{t('footer.units.compliance_title', 'Conformidade & Regulação')}</h4>
-            <ul className="space-y-2 font-vivant-light text-sm text-white/70">
+            <ul className="space-y-2 font-vivant-light text-xs leading-relaxed text-white/70">
               <li className="font-vivant text-white/85">
-                {t('footer.units.company_name', 'Instituto AreLuna Lda. · NIPC 516 161 637')}
+                Instituto Areluna Medicina Dentária Avançada, Lda. · NIPC 516 562 240 · Inscrição ERS n.º 37630
               </li>
               <li>
-                <span className="font-vivant text-white/90">{t('footer.reg_number')}</span> E161637
+                <span className="font-vivant text-white/90">Unidade Mota Galiza</span> — Rua Júlio Dinis, n.º 194, 4050-327 Porto · Registo ERS n.º 161637 · Licença de funcionamento n.º 21593
               </li>
               <li>
-                <span className="font-vivant text-white/90">{t('footer.license_number')}</span> 21593/2022
+                <span className="font-vivant text-white/90">Unidade Marquês</span> — Rua de Faria Guimarães, n.º 450, 4000-205 Porto · Registo ERS n.º 175125 · Licença de funcionamento n.º 25345
               </li>
             </ul>
             <a
@@ -153,7 +152,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
           {/* Copyright */}
           <p className="text-center font-vivant-light text-sm text-white/60 md:text-left">
-            © {new Date().getFullYear()} Instituto Areluna - {t('footer.main_title')}. {t('footer.rights_reserved')}
+            © {new Date().getFullYear()} Instituto Areluna Medicina Dentária Avançada, Lda.
           </p>
 
           {/* Links legais */}

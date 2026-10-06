@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { CATEGORY_IDS, TREATMENTS, WHATSAPP_URL } from "@/components/treatments/data";
 
 // Padrão inspirado em "features grid" do 21st.dev (cartões iguais, filtro em pílulas).
@@ -103,6 +104,7 @@ const TreatmentsSection = () => {
               {t("treatments.cta.button")}
             </a>
           </Button>
+          <ClinicalDisclaimer className="mt-6 text-white/75" />
           <p className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-vivant-light text-sm text-gold-leaf">
             <span>{t("treatments.cta.premium")}</span>
             <span aria-hidden="true">·</span>

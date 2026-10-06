@@ -1,53 +1,45 @@
 {
     "hero": {
-        "badge": "Dr Areluna - Spécialiste",
+        "badge": "Esthétique faciale",
         "title_start": "Esthétique Faciale",
-        "title_highlight": "Premium",
+        "title_highlight": "à Porto",
         "question": "Souhaitez-vous <highlight>sublimer votre beauté naturelle</highlight> avec des traitements sûrs et efficaces ?",
-        "description": "L'équipe de spécialistes du <strong1>Dr Areluna</strong1> propose les traitements d'<highlight>esthétique faciale</highlight> les plus modernes, combinant des techniques avancées avec des produits premium pour des résultats naturels.",
-        "cta_text": "Beauté naturelle avec des résultats durables.",
-        "button": "CONSULTATION"
+        "description": "L'équipe de la <strong1>Dre Arethuza Luna</strong1> réalise des traitements d'<highlight>esthétique faciale</highlight> après une consultation d'évaluation. Les résultats varient d'une personne à l'autre.",
+        "cta_text": "Plan défini après une consultation d'évaluation.",
+        "button": "PRENDRE RENDEZ-VOUS"
     },
     "benefits": {
         "safe": {
             "title": "Sûr",
-            "desc": "Procédures certifiées"
+            "desc": "Produits certifiés"
         },
         "natural": {
-            "title": "Naturel",
-            "desc": "Résultats harmonieux"
-        },
-        "premium": {
-            "title": "Premium",
-            "desc": "Produits de qualité"
-        },
-        "experience": {
-            "title": "25 Ans",
-            "desc": "Expérience prouvée"
+            "title": "Évaluation",
+            "desc": "Plan individuel"
         }
     },
     "cases": {
-        "badge": "RÉSULTATS RÉELS",
+        "badge": "CAS CLINIQUES",
         "title_start": "Cas de",
         "title_highlight": "Esthétique Faciale",
-        "description": "Découvrez les résultats réels de nos patients. Transformations naturelles et harmonieuses avec les traitements d'esthétique faciale les plus avancés.",
+        "description": "Photos publiées avec l'autorisation écrite des patientes. Chaque plan découle d'une évaluation individuelle et les résultats varient d'une personne à l'autre.",
         "items": {
             "case1": {
                 "description": "Rhinomodulation à l'acide hyaluronique",
-                "details": "Botox + Comblement - Résultat après 2 semaines"
+                "details": "Toxine botulique + injection — photo après 2 semaines"
             },
             "case2": {
                 "description": "Toxine Botulique",
-                "details": "Traitement complet - Résultat après 1 mois"
+                "details": "Photo après 1 mois"
             },
             "case3": {
                 "description": "Comblement des lèvres à l'acide hyaluronique",
-                "details": "Fils tenseurs + Skinbooster - Résultat après 3 semaines"
+                "details": "Fils PDO + skinbooster — photo après 3 semaines"
             }
         },
         "cta": {
-            "title": "Votre transformation pourrait être la prochaine !",
-            "description": "Chaque visage est unique. Planifiez une consultation pour découvrir le meilleur protocole de traitement pour vous.",
+            "title": "Prenez rendez-vous pour une consultation d'évaluation",
+            "description": "Lors de la consultation, nous évaluons votre cas et expliquons les options indiquées, les risques et les coûts.",
             "button": "PLANIFIER L'ÉVALUATION"
         }
     }

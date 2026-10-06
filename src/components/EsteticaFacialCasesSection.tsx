@@ -35,7 +35,7 @@ const EsteticaFacialCasesSection = () => {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={caseItem.image}
-                    alt={`${caseItem.title} - Estética Facial Premium`}
+                    alt={`${caseItem.title} - Estética Facial`}
                     loading="lazy"
                     decoding="async"
                     width={800}
@@ -67,7 +67,7 @@ const EsteticaFacialCasesSection = () => {
                     aria-controls={`caso-${caseItem.id}`}
                     className="mt-auto flex min-h-[44px] items-center justify-between pt-4 font-vivant-light text-xs text-gold-leaf focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
                   >
-                    <span>Premium</span>
+                    <span>Caso clínico</span>
                     <svg className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>

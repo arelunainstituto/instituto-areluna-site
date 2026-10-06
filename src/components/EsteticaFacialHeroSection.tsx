@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/site";
 import { useTranslation } from "react-i18next";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 // Hero (inspirado no bloco "hero" do 21st.dev): fundo jet -> preto, h1 visível à primeira pintura.
 const EsteticaFacialHeroSection = () => {
   const { t } = useTranslation();
-
-  const stats = [
-    { number: t("facial_aesthetics_page.hero.stats.experience.value"), label: t("facial_aesthetics_page.hero.stats.experience.label") },
-    { number: t("facial_aesthetics_page.hero.stats.procedures.value"), label: t("facial_aesthetics_page.hero.stats.procedures.label") },
-    { number: t("facial_aesthetics_page.hero.stats.satisfaction.value"), label: t("facial_aesthetics_page.hero.stats.satisfaction.label") },
-  ];
 
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-b from-jet-fixed to-black px-4 pb-16 pt-44 text-white sm:px-6 sm:pt-52 lg:min-h-[80vh] lg:pt-56">
@@ -30,7 +25,7 @@ const EsteticaFacialHeroSection = () => {
           {t("facial_aesthetics_page.hero.description")}
         </p>
 
-        <div className="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
+        <div className="mb-6 flex flex-col justify-center gap-4 sm:flex-row">
           <Button asChild variant="gold-leaf" size="cta">
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               {t("facial_aesthetics_page.hero.cta_schedule")}
@@ -45,21 +40,7 @@ const EsteticaFacialHeroSection = () => {
           </Button>
         </div>
 
-        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center transition-colors duration-300 hover:border-gold-leaf/40 sm:p-6"
-            >
-              <div className="mb-1 break-words font-vivant text-2xl text-gold-leaf sm:text-3xl lg:text-4xl">
-                {stat.number}
-              </div>
-              <div className="break-words font-vivant-light text-xs leading-tight text-white/85 sm:text-sm">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        <ClinicalDisclaimer className="text-white/75" />
       </div>
     </section>
   );

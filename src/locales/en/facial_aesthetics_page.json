@@ -1,53 +1,45 @@
 {
     "hero": {
-        "badge": "Dr. Areluna - Specialist",
+        "badge": "Facial aesthetics",
         "title_start": "Facial Aesthetics",
-        "title_highlight": "Premium",
+        "title_highlight": "in Porto",
         "question": "Do you wish to <highlight>enhance your natural beauty</highlight> with safe and effective treatments?",
-        "description": "<strong1>Dr. Areluna's</strong1> team of specialists offers the most modern <highlight>facial aesthetics</highlight> treatments, combining advanced techniques with premium products for natural results.",
-        "cta_text": "Natural beauty with long-lasting results.",
-        "button": "CONSULTATION"
+        "description": "<strong1>Dr Arethuza Luna</strong1>'s team performs <highlight>facial aesthetic</highlight> treatments after an assessment appointment. Results vary from person to person.",
+        "cta_text": "Plan defined after an assessment appointment.",
+        "button": "BOOK APPOINTMENT"
     },
     "benefits": {
         "safe": {
             "title": "Safe",
-            "desc": "Certified procedures"
+            "desc": "Certified products"
         },
         "natural": {
-            "title": "Natural",
-            "desc": "Harmonious results"
-        },
-        "premium": {
-            "title": "Premium",
-            "desc": "Quality products"
-        },
-        "experience": {
-            "title": "25 Years",
-            "desc": "Proven experience"
+            "title": "Assessment",
+            "desc": "Individual plan"
         }
     },
     "cases": {
-        "badge": "REAL RESULTS",
+        "badge": "CLINICAL CASES",
         "title_start": "Cases of",
         "title_highlight": "Facial Aesthetics",
-        "description": "See real results from our patients. Natural and harmonious transformations with the most advanced facial aesthetics treatments.",
+        "description": "Photos published with the patients' written consent. Each plan followed an individual assessment and results vary from person to person.",
         "items": {
             "case1": {
                 "description": "Rhinomodeling with hyaluronic acid",
-                "details": "Botox + Filler - Result after 2 weeks"
+                "details": "Botulinum toxin + filler — photo after 2 weeks"
             },
             "case2": {
                 "description": "Botulinum Toxin",
-                "details": "Complete treatment - Result after 1 month"
+                "details": "Photo after 1 month"
             },
             "case3": {
                 "description": "Lip filler with hyaluronic acid",
-                "details": "PDO threads + Skinbooster - Result after 3 weeks"
+                "details": "PDO threads + skinbooster — photo after 3 weeks"
             }
         },
         "cta": {
-            "title": "Your transformation could be next!",
-            "description": "Each face is unique. Schedule a consultation so we can discover the best treatment protocol for you.",
+            "title": "Book your assessment appointment",
+            "description": "At the appointment we assess your case and explain the suitable options, the risks and the costs.",
             "button": "SCHEDULE EVALUATION"
         }
     }

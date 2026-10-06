@@ -89,7 +89,7 @@ const BlogPostPage = () => {
         "@type": "BlogPosting",
         "headline": post.title,
         "description": excerpt.slice(0, 155),
-        "image": post.image_url || "https://www.institutoareluna.pt/og-institutoareluna.jpg",
+        "image": post.image_url || "https://www.institutoareluna.pt/og-institutoareluna-logo.jpg",
         "url": canonical,
         "datePublished": post.published_at,
         "dateModified": post.updated_at || post.published_at,
@@ -105,7 +105,7 @@ const BlogPostPage = () => {
             "url": "https://www.institutoareluna.pt/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.institutoareluna.pt/og-institutoareluna.jpg"
+                "url": "https://www.institutoareluna.pt/og-institutoareluna-logo.jpg"
             }
         },
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical}

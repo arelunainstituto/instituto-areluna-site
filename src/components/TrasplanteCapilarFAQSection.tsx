@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Section, SectionHeading, Reveal } from "@/components/site";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 // FAQ (inspirado no bloco "faq" do 21st.dev): acordeão acessível do shadcn/ui.
 const TrasplanteCapilarFAQSection = () => {
@@ -65,6 +66,7 @@ const TrasplanteCapilarFAQSection = () => {
               {t("hair_transplant_page.faq.cta_button_results")}
             </Button>
           </div>
+          <ClinicalDisclaimer className="mt-6 text-white/75" />
         </div>
       </Reveal>
     </Section>

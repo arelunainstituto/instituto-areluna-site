@@ -2,6 +2,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import caso2 from "@/assets/Caso 2.webp";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 // Apresentação (inspirada nos blocos "features" / "about" do 21st.dev).
 const TrasplanteCapilarSection = () => {
@@ -29,7 +30,7 @@ const TrasplanteCapilarSection = () => {
                 }}
               >
                 Sofre de
-                <span className="font-medium text-gold-leaf"> calvície ou perda capilar</span> e procura uma solução definitiva?
+                <span className="font-medium text-gold-leaf"> calvície ou perda capilar</span> e quer saber se o transplante está indicado para si?
               </Trans>
             </p>
           </div>
@@ -44,7 +45,7 @@ const TrasplanteCapilarSection = () => {
               }}
             >
                 A <strong className="text-gold-leaf">Clínica Areluna</strong> oferece transplante capilar com a técnica
-                <span className="font-medium text-gold-leaf"> FUE (Follicular Unit Extraction)</span>, a mais avançada e menos invasiva do mercado.
+                <span className="font-medium text-gold-leaf"> FUE (Follicular Unit Extraction)</span>, após consulta de avaliação.
             </Trans>
           </p>
 
@@ -52,11 +53,14 @@ const TrasplanteCapilarSection = () => {
             {t("hero.cta_text")}
           </p>
 
-          <Button asChild variant="gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
-              {t("hero.button")}
-            </a>
-          </Button>
+          <div>
+            <Button asChild variant="gold" size="cta">
+              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                {t("hero.button")}
+              </a>
+            </Button>
+            <ClinicalDisclaimer className="mx-0 mt-4 text-jet/60 dark:text-gray-400" />
+          </div>
         </Reveal>
 
         <Reveal className="order-1 lg:order-2" delay={120}>

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import EvaluationForm from "@/lp/components/EvaluationForm";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 interface HeroSectionProps {
   overlayImage: string;
@@ -121,6 +122,7 @@ const HeroSection = ({
             >
               {ctaLabel}
             </Button>
+            <ClinicalDisclaimer className="mt-4 mx-0 text-white/70" />
           </div>
 
           {right && <div className={formWrapperClassName}>{right}</div>}

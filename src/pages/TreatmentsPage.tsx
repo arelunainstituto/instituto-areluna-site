@@ -23,7 +23,7 @@ const TreatmentsPage = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Tratamentos Dentários e Estéticos no Porto | Instituto AreLuna"
-        description="Ortodontia, implantes, facetas, harmonização orofacial e transplante capilar no Porto. Tecnologia avançada e equipa multidisciplinar no Instituto AreLuna. Agende a sua consulta."
+        description="Ortodontia, implantes, facetas, harmonização orofacial e transplante capilar no Porto. Equipa multidisciplinar no Instituto AreLuna. Marque a sua consulta de avaliação."
         canonical="https://www.institutoareluna.pt/tratamentos"
         jsonLd={[breadcrumbSchema, treatmentsFaqSchema]}
       />

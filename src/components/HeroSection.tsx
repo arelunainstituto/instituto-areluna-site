@@ -41,8 +41,8 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <p className="mt-6 text-center font-vivant-light text-xs text-white/60 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          Unidades em Lisboa (Lumiar) e no Porto (Mota Galiza) · Acompanhamento contínuo e personalizado
+        <p className="mt-6 text-center font-vivant-light text-xs text-white/60">
+          Unidades no Porto (Mota Galiza e Marquês) · Consulta de avaliação individual
         </p>
       </div>
     </section>

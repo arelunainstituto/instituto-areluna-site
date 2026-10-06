@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 interface TrustIndicator {
   label: string;
@@ -58,6 +59,7 @@ const FinalCTASection = ({
               {ctaLabel}
             </Button>
           </div>
+          <ClinicalDisclaimer className="mt-4 text-white/70" />
 
           <div className="mt-12 pt-8 border-t border-white/20">
             <div className="flex flex-wrap justify-center items-center gap-6 text-white/70 text-sm">

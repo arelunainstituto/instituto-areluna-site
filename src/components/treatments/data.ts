@@ -9,10 +9,7 @@ export const CATEGORY_IDS = [
   "estetica-corporal",
   "terapia-capilar",
   "transplante-capilar",
-  "nutricao",
   "endocrinologia",
-  "ansiedade",
-  "cirurgia-plastica",
   "dermatologia",
 ] as const;
 
@@ -31,7 +28,5 @@ export const TREATMENTS: TreatmentMeta[] = [
   ...group("estetica-corporal", 16, 18),
   ...group("terapia-capilar", 19, 21),
   ...group("transplante-capilar", 22, 23),
-  { id: 24, category: "nutricao" },
   { id: 25, category: "endocrinologia" },
-  { id: 26, category: "ansiedade" },
 ];

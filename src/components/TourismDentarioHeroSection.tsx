@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { PageHero, HeroStat } from "@/components/site/PageHero";
+import { PageHero } from "@/components/site/PageHero";
 import tourismBg from "@/assets/tourism.webp";
 
 const TourismDentarioHeroSection = () => {
   const { t } = useTranslation();
-  const stats = [
-    { number: t('tourism_page.hero.stats.days.value'), label: t('tourism_page.hero.stats.days.label') },
-    { number: t('tourism_page.hero.stats.experience.value'), label: t('tourism_page.hero.stats.experience.label') },
-    { number: t('tourism_page.hero.stats.location.value'), label: t('tourism_page.hero.stats.location.label') },
-  ];
-
   return (
     <PageHero
       image={tourismBg}
@@ -35,13 +29,7 @@ const TourismDentarioHeroSection = () => {
           </Button>
         </>
       }
-    >
-      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3">
-        {stats.map((s, i) => (
-          <HeroStat key={i} value={s.number} label={s.label} />
-        ))}
-      </div>
-    </PageHero>
+    />
   );
 };
 

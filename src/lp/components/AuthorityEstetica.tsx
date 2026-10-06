@@ -4,18 +4,17 @@ const AuthorityEstetica = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8 md:mb-12">
-            Especialistas em estética,{" "}
+            Estética dentária,{" "}
             <span className="text-transparent bg-gradient-gold bg-clip-text">
-              resultados naturais e duradouros
+              com planeamento digital
             </span>
           </h2>
 
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-premium">
             <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-              Com uma equipa especializada em estética dental e tecnologia digital 
-              de última geração, criamos sorrisos harmoniosos com facetas dentárias 
-              de alta qualidade. Tudo com segurança, precisão e num ambiente 
-              acolhedor e exclusivo.
+              A equipa clínica planeia cada caso de facetas dentárias com recurso a
+              planeamento digital. A indicação depende de uma consulta de avaliação
+              e os resultados variam de pessoa para pessoa.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
@@ -36,10 +35,10 @@ const AuthorityEstetica = () => {
                   <span className="text-white text-3xl">👨‍⚕️</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Especialistas em Estética
+                  Equipa clínica
                 </h3>
                 <p className="text-muted-foreground">
-                  Dentistas especializados em facetas
+                  Médicos dentistas com atividade em estética dentária
                 </p>
               </div>
 
@@ -48,7 +47,7 @@ const AuthorityEstetica = () => {
                   <span className="text-white text-3xl">🎯</span>
                 </div>
                 <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  Precisão Milimétrica
+                  Planeamento individual
                 </h3>
                 <p className="text-muted-foreground">
                   Facetas sob medida para cada dente
@@ -71,7 +70,7 @@ const AuthorityEstetica = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Resultado Natural
+                Plano explicado
               </span>
             </div>
           </div>

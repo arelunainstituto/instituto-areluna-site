@@ -1,20 +1,23 @@
-import { Check, Leaf, Sparkles, ShieldCheck } from "lucide-react";
+import { CalendarCheck, Check, Leaf, Stethoscope } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { Reveal, Section, SectionHeading } from "@/components/site";
 import casoImg from "@/assets/transplante-caso-1.webp";
 
 /**
  * Teaser do transplante capilar na home (padrão "feature split",
  * inspirado nos blocos de features do 21st.dev). Leva à página completa.
+ * Textos alinhados com /transplante-capilar (conformidade ERS); a imagem é
+ * um dos casos clínicos que essa página publica com autorização do paciente.
  */
 const CapilarHomeSection = () => {
   const { t } = useTranslation();
 
   const points = [
     { icon: Leaf, title: t("capilar_home.points.fue.title"), desc: t("capilar_home.points.fue.desc") },
-    { icon: Sparkles, title: t("capilar_home.points.natural.title"), desc: t("capilar_home.points.natural.desc") },
-    { icon: ShieldCheck, title: t("capilar_home.points.lasting.title"), desc: t("capilar_home.points.lasting.desc") },
+    { icon: Stethoscope, title: t("capilar_home.points.evaluation.title"), desc: t("capilar_home.points.evaluation.desc") },
+    { icon: CalendarCheck, title: t("capilar_home.points.follow_up.title"), desc: t("capilar_home.points.follow_up.desc") },
   ];
 
   return (
@@ -50,6 +53,7 @@ const CapilarHomeSection = () => {
               <a href="#contacto-form">{t("capilar_home.cta_secondary")}</a>
             </Button>
           </div>
+          <ClinicalDisclaimer className="mt-4 mx-0 text-jet/60 dark:text-gray-400" />
         </Reveal>
 
         <Reveal delay={120}>

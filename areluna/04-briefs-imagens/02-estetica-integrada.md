@@ -35,7 +35,7 @@
 - **Filename:** `equipa-multidisciplinar-areluna.webp`
 - **Dimensão:** 1080×720 px
 - **Peso máx:** 150 KB
-- **Cenário:** 3 profissionais da equipa AreLuna juntos — idealmente 1 médica-dentista (Dra. Arethuza ou Dra. Aline Marodin), 1 representando dermatologia/estética facial, 1 representando cirurgia (Dra. Patrícia Tatsch, plástica). Em jaleco/bata, em pé, sorridentes mas profissionais.
+- **Cenário:** 3 profissionais da equipa AreLuna juntos — idealmente 1 médica-dentista (Dra. Arethuza ou Dra. Aline Marodin), 1 representando dermatologia/estética facial, 1 representando cirurgia plástica. Em jaleco/bata, em pé, sorridentes mas profissionais.
 - **Alt:** `Equipa multidisciplinar do Instituto AreLuna: dentista, dermatologista e cirurgião plástico`
 - **Caption:** `Equipa multidisciplinar — cada especialidade no seu lugar, integrada no plano do paciente.`
 - **Se equipa real ainda não tem dermato fixo:** usar 3 profissionais reais que existem (Dra. Arethuza + Dra. Aline + Dra. Patrícia) e ajustar legenda para "Médicas dentistas e cirurgiã plástica do Instituto AreLuna".

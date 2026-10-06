@@ -17,7 +17,7 @@ const SobreAFundadora = () => {
     "name": "Dra. Arethuza Luna",
     "jobTitle": "Médica-Dentista — Ortodontia e Harmonização Orofacial",
     "description": t('founder.seo.description'),
-    "image": "https://www.institutoareluna.pt/og-institutoareluna.jpg",
+    "image": "https://www.institutoareluna.pt/og-institutoareluna-logo.jpg",
     "url": "https://www.institutoareluna.pt/sobre-a-fundadora",
     "worksFor": {
       "@type": "Dentist",
@@ -31,7 +31,7 @@ const SobreAFundadora = () => {
     ],
     "hasCredential": [
       { "@type": "EducationalOccupationalCredential", "name": "OMD 11845 — Ordem dos Médicos Dentistas" },
-      { "@type": "EducationalOccupationalCredential", "name": "Especialização em Ortodontia e Ortopedia" },
+      { "@type": "EducationalOccupationalCredential", "name": "Formação em Ortodontia e Ortopedia Facial (Brasil)" },
       { "@type": "EducationalOccupationalCredential", "name": "Master Injector — Swift Beauty, Nova Iorque" },
       { "@type": "EducationalOccupationalCredential", "name": "Harmonização Orofacial Avançada — Miami" }
     ],
@@ -53,7 +53,6 @@ const SobreAFundadora = () => {
   const credentials = [
     { label: t('founder.credentials.registry'), value: t('founder.credentials.registry_val') },
     { label: t('founder.credentials.education'), value: t('founder.credentials.education_val') },
-    { label: t('founder.credentials.experience'), value: t('founder.credentials.experience_val') },
     { label: t('founder.credentials.international'), value: t('founder.credentials.international_val') }
   ];
 
@@ -74,7 +73,7 @@ const SobreAFundadora = () => {
             <div className="order-2 overflow-hidden rounded-2xl border border-gold-leaf/30 shadow-elegant lg:order-1">
               <img
                 src={draArethuzaImg}
-                alt="Dra. Arethuza Luna — fundadora do Instituto AreLuna, médica-dentista especialista em ortodontia e harmonização orofacial no Porto"
+                alt="Dra. Arethuza Luna — fundadora do Instituto AreLuna, médica dentista (OMD n.º 11845) com formação em ortodontia e harmonização orofacial, no Porto"
                 loading="eager"
                 {...{ fetchpriority: "high" }}
                 decoding="async"

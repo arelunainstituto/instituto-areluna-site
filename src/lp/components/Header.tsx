@@ -16,7 +16,7 @@ const Header = () => {
 
           <div className="flex items-center gap-4 min-w-0">
             <p className="hidden lg:block font-vivant-light text-sm text-muted-foreground truncate">
-              Sorria com Confiança: Transformação em 24 Horas
+              Instituto Areluna · Porto
             </p>
             <Button
               variant="premium"

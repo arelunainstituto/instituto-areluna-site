@@ -15,16 +15,13 @@ const CheckupIntegradoSection = () => {
   ];
 
   const benefits = [
-    { key: "one_day", icon: <Calendar /> },
     { key: "personal_assistant", icon: <Globe /> },
     { key: "integrated_care", icon: <Heart /> },
-    { key: "efficiency", icon: <Clock /> },
   ];
 
   return (
     <Section tone="light">
       <SectionHeading
-        eyebrow={t("checkup.pill")}
         title={t("checkup.title.main")}
         highlight={t("checkup.title.highlight")}
         description={t("checkup.description")}
@@ -54,7 +51,7 @@ const CheckupIntegradoSection = () => {
       <h3 className="mb-8 mt-16 text-center font-vivant text-2xl text-jet dark:text-white">
         {t("checkup.benefits_title.main")} <span className="text-gold-leaf">{t("checkup.benefits_title.highlight")}</span>
       </h3>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
         {benefits.map((b, i) => (
           <Reveal key={b.key} delay={i * 80} className="h-full">
             <FeatureCard
@@ -68,10 +65,6 @@ const CheckupIntegradoSection = () => {
 
       <Reveal className="mt-16">
         <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-white sm:px-12 dark:bg-black dark:bg-none">
-          <h3 className="mb-4 font-vivant text-3xl">{t("checkup.cta.title")}</h3>
-          <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base text-white/80 sm:text-lg">
-            {t("checkup.cta.subtitle")}
-          </p>
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Button asChild variant="gold-leaf" size="cta">
               <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">

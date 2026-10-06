@@ -16,7 +16,6 @@ const PRERENDER_ROUTES = [
   // Institucional
   "/",
   "/tratamentos",
-  "/turismo-dentario",
   "/transplante-capilar",
   "/estetica-facial",
   "/contato",
@@ -41,9 +40,6 @@ const PRERENDER_ROUTES = [
   "/implantes-dentarios-porto",
   "/alinhadores-invisiveis-porto",
   "/facetas-dentarias-porto",
-  "/casos/sergio-emanuel",
-  "/casos/sandra-maria",
-  "/casos/diana-vieira",
   "/obrigado",
 ];
 
@@ -68,6 +64,13 @@ function manualChunks(id: string): string | undefined {
 }
 
 // https://vitejs.dev/config/
+// Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
+// domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
+process.env.VITE_OG_BASE =
+  process.env.VERCEL_ENV === "preview" && process.env.VERCEL_BRANCH_URL
+    ? `https://${process.env.VERCEL_BRANCH_URL}`
+    : "https://www.institutoareluna.pt";
+
 export default defineConfig(async ({ mode }) => {
   // Em Linux (Vercel/CI) o Chromium bundled do puppeteer falha por libs
   // do sistema em falta (libnspr4.so). Usamos @sparticuz/chromium —

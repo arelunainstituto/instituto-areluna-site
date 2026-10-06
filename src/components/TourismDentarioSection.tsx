@@ -3,7 +3,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { Play } from 'lucide-react';
 import thumbImg from '../assets/thumb.webp';
 import { Button } from '@/components/ui/button';
-import { Section, SectionHeading, Eyebrow, Reveal } from '@/components/site';
+import { Section, SectionHeading, Reveal } from '@/components/site';
 
 const VIDEO_SRC =
   "https://hvqckoajxhdqaxfawisd.supabase.co/storage/v1/object/sign/video/214-Legendado.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xYmZmNGRkNy02NjAwLTRlYmMtYTc1OC1hNTBiYTczYzE0YzYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ2aWRlby8yMTQtTGVnZW5kYWRvLm1wNCIsImlhdCI6MTc3NjQyNTc1OCwiZXhwIjoxOTM0MTA1NzU4fQ.Ev3jnYFKqtq3n0zFau2nIh-NtCEFy58REYfH59hDq_s";
@@ -33,7 +33,6 @@ const TourismDentarioSection = () => {
           <div>
             <SectionHeading
               align="left"
-              eyebrow={t("tourism.badge")}
               title={t("tourism.title.main")}
               highlight={t("tourism.title.highlight")}
               className="mb-0 lg:mb-0"
@@ -48,18 +47,7 @@ const TourismDentarioSection = () => {
           </p>
 
           <p className="font-vivant-light text-lg leading-relaxed text-jet/80 dark:text-gray-300">
-            <Trans
-              i18nKey="tourism.description"
-              components={{
-                highlight1: <strong className="text-gold-leaf" />,
-                highlight2: <span className="font-medium text-gold-leaf" />,
-                highlight3: <span className="font-medium text-gold-leaf" />,
-              }}
-            />
-          </p>
-
-          <p className="border-l-2 border-gold-leaf pl-4 font-vivant text-xl italic text-gold-leaf">
-            {t("tourism.cta_text")}
+            {t("tourism.description")}
           </p>
 
           <div className="pt-2">
@@ -83,7 +71,7 @@ const TourismDentarioSection = () => {
                 onPlay={() => setIsVideoPlaying(true)}
                 playsInline
                 preload="metadata"
-                title="Programa Turismo Dentário"
+                title="Pacientes que vivem fora de Portugal"
                 poster={thumbImg}
               />
               {!isVideoPlaying && (
@@ -98,9 +86,6 @@ const TourismDentarioSection = () => {
                   </span>
                 </button>
               )}
-            </div>
-            <div className="absolute left-7 top-7">
-              <Eyebrow>25 ANOS</Eyebrow>
             </div>
           </div>
         </Reveal>

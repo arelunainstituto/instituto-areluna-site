@@ -2,6 +2,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import draArePremium from "@/assets/dra-are-premium.jpg";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 // Apresentação (inspirada nos blocos "features" / "about" do 21st.dev).
 const EsteticaFacialSection = () => {
@@ -43,8 +44,8 @@ const EsteticaFacialSection = () => {
                 highlight: <span className="font-medium text-gold-leaf" />,
               }}
             >
-                A equipa de especialistas da <strong className="text-gold-leaf">Dra. Areluna</strong> oferece os mais modernos tratamentos de
-                <span className="font-medium text-gold-leaf"> estética facial</span>, combinando técnicas avançadas com produtos premium para resultados naturais.
+                A equipa da <strong className="text-gold-leaf">Dra. Arethuza Luna</strong> realiza tratamentos de
+                <span className="font-medium text-gold-leaf"> estética facial</span>, após consulta de avaliação.
             </Trans>
           </p>
 
@@ -56,8 +57,6 @@ const EsteticaFacialSection = () => {
             {[
               { title: t("benefits.safe.title"), desc: t("benefits.safe.desc") },
               { title: t("benefits.natural.title"), desc: t("benefits.natural.desc") },
-              { title: t("benefits.premium.title"), desc: t("benefits.premium.desc") },
-              { title: t("benefits.experience.title"), desc: t("benefits.experience.desc") },
             ].map((benefit, index) => (
               <div key={index} className={cardBaseClasses("light") + " !p-4 sm:!p-4"}>
                 <h4 className="font-vivant font-medium text-gold-leaf">{benefit.title}</h4>
@@ -66,11 +65,14 @@ const EsteticaFacialSection = () => {
             ))}
           </div>
 
-          <Button asChild variant="gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
-              {t("hero.button")}
-            </a>
-          </Button>
+          <div>
+            <Button asChild variant="gold" size="cta">
+              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                {t("hero.button")}
+              </a>
+            </Button>
+            <ClinicalDisclaimer className="mx-0 mt-4 text-jet/60 dark:text-gray-400" />
+          </div>
         </Reveal>
 
         <Reveal className="order-1 lg:order-2" delay={120}>

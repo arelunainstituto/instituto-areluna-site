@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { PageHero, HeroStat } from "@/components/site/PageHero";
+import { PageHero } from "@/components/site/PageHero";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const TreatmentsHeroSection = () => {
   const { t } = useTranslation();
-  const stats = [
-    { number: t('treatments_page.hero.stats.experience.value'), label: t('treatments_page.hero.stats.experience.label') },
-    { number: t('treatments_page.hero.stats.smiles.value'), label: t('treatments_page.hero.stats.smiles.label') },
-    { number: t('treatments_page.hero.stats.satisfaction.value'), label: t('treatments_page.hero.stats.satisfaction.label') },
-    { number: t('treatments_page.hero.stats.treatments.value'), label: t('treatments_page.hero.stats.treatments.label') },
-  ];
 
   return (
     <PageHero
@@ -36,11 +31,7 @@ const TreatmentsHeroSection = () => {
         </>
       }
     >
-      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
-        {stats.map((s, i) => (
-          <HeroStat key={i} value={s.number} label={s.label} />
-        ))}
-      </div>
+      <ClinicalDisclaimer className="-mt-8 text-white/75" />
     </PageHero>
   );
 };

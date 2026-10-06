@@ -42,9 +42,8 @@ const AGE_OPTIONS = [
 ];
 
 const UNIT_OPTIONS = [
-  { value: "lisboa", labelKey: "unit_lisboa", defaultLabel: "Lisboa" },
   { value: "porto", labelKey: "unit_porto", defaultLabel: "Porto" },
-  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Turismo Dentário" }
+  { value: "turismo", labelKey: "unit_turismo", defaultLabel: "Vivo fora de Portugal" }
 ];
 
 const LANGUAGE_OPTIONS = [
@@ -64,7 +63,7 @@ const ContactFormSection = () => {
     age: '',
     email: '',
     phone: '',
-    unit: 'lisboa',
+    unit: 'porto',
     residence: '',
     preferredLanguage: 'Português',
     smileState: SMILE_STATE_OPTIONS[0],
@@ -209,12 +208,12 @@ const ContactFormSection = () => {
   return (
     <Section id="contacto-form" tone="muted" width="wide">
       <SectionHeading
-        eyebrow={t('triage_form.badge', 'Marcação & Triagem Clínica · Lisboa & Porto')}
+        eyebrow={t('triage_form.badge', 'Marcação & Triagem Clínica · Porto')}
         title={t('triage_form.title', 'Marque a Sua Consulta de Avaliação')}
         description={
           <Trans
             i18nKey="triage_form.subtitle_html"
-            defaults="Atendimento exclusivo nas nossas clínicas de <strong>Lisboa (Lumiar)</strong> e <strong>Porto (Mota Galiza)</strong>. Preencha os seus dados para que a equipa médica e de acolhimento prepare a melhor abordagem para o seu caso."
+            defaults="Consultas nas nossas clínicas do <strong>Porto (Mota Galiza e Marquês)</strong>. Preencha os seus dados para que a equipa prepare a sua consulta de avaliação."
             components={{ strong: <strong className="font-vivant text-jet dark:text-white" /> }}
           />
         }
@@ -258,12 +257,12 @@ const ContactFormSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Bloco 1: Unidade de Preferência - Lisboa / Porto / Turismo Dentário */}
+                {/* Bloco 1: Unidade de Preferência - Porto / Fora de Portugal */}
                 <div className={highlightBlockClasses} role="group" aria-labelledby="triage-unit-label">
                   <span id="triage-unit-label" className={highlightLabelClasses}>
                     {t('triage_form.step1_title', '1. Onde prefere ser atendido? (*)')}
                   </span>
-                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                     {UNIT_OPTIONS.map((u) => {
                       const selected = formData.unit === u.value;
                       return (
@@ -457,7 +456,7 @@ const ContactFormSection = () => {
                     </select>
                   </SelectShell>
                   <span id="smileState-hint" className="mt-2 block text-xs leading-relaxed text-jet/60 dark:text-gray-400">
-                    {t('triage_form.smile_hint', 'Esta informação ajuda-nos a direcionar o especialista mais indicado para o seu plano de tratamento.')}
+                    {t('triage_form.smile_hint', 'Esta informação ajuda-nos a preparar a sua consulta de avaliação.')}
                   </span>
                 </div>
 
@@ -564,7 +563,7 @@ const ContactFormSection = () => {
 
         {/* Coluna Lateral: Unidades e Atendimento Imediato */}
         <aside className="space-y-6 lg:col-span-5">
-          {/* Bloco Unidades: Lisboa & Porto */}
+          {/* Bloco Unidades: Porto */}
           <div className={asideCardClasses}>
             <div className="mb-6 flex items-center gap-3">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-gold-leaf/30 bg-gold-leaf/10 text-jet dark:text-gold-leaf" aria-hidden="true">
@@ -576,24 +575,6 @@ const ContactFormSection = () => {
             </div>
 
             <div className="space-y-4">
-              {/* Unidade Lisboa (Destaque) */}
-              <div className="rounded-xl border border-gold-leaf/40 bg-gold-leaf/5 p-4 dark:bg-gold-leaf/10">
-                <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
-                  <h4 className="font-vivant text-base text-jet dark:text-white">
-                    {t('triage_form.sidebar_lisboa_name', 'Lisboa · Lumiar')}
-                  </h4>
-                  <span className="rounded-full bg-jet px-2.5 py-0.5 font-vivant text-[10px] uppercase tracking-[0.14em] text-pure-white dark:bg-gold-leaf dark:text-black">
-                    {t('triage_form.sidebar_lisboa_badge', 'Nova Unidade')}
-                  </span>
-                </div>
-                <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
-                  {t('triage_form.sidebar_lisboa_address', 'Alameda das Linhas de Torres / Lumiar, Lisboa')}
-                </p>
-                <p className="mt-2 text-xs text-jet/80 dark:text-gold-leaf">
-                  {t('triage_form.sidebar_lisboa_tag', '✓ Abertura de Agendamentos & Avaliações Prioritárias')}
-                </p>
-              </div>
-
               {/* Unidade Porto */}
               <div className="rounded-xl border border-jet/10 p-4 dark:border-white/10">
                 <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
@@ -605,10 +586,25 @@ const ContactFormSection = () => {
                   </span>
                 </div>
                 <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
-                  {t('triage_form.sidebar_porto_address', 'Rua de Júlio Dinis, 194 R/C | 4050-024 Porto')}
+                  {t('triage_form.sidebar_porto_address', 'Rua Júlio Dinis, n.º 194, 4050-327 Porto')}
                 </p>
                 <p className="mt-2 text-xs text-jet/60 dark:text-gray-400">
-                  {t('triage_form.sidebar_porto_reg', 'Registo ERS: E161637 · Licença: 21593/2022')}
+                  {t('triage_form.sidebar_porto_reg', 'Registo ERS n.º 161637 · Licença de funcionamento n.º 21593')}
+                </p>
+              </div>
+
+              {/* Unidade Porto · Marquês */}
+              <div className="rounded-xl border border-jet/10 p-4 dark:border-white/10">
+                <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+                  <h4 className="font-vivant text-base text-jet dark:text-white">
+                    {t('triage_form.sidebar_marques_name', 'Porto · Marquês')}
+                  </h4>
+                </div>
+                <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
+                  {t('triage_form.sidebar_marques_address', 'Rua de Faria Guimarães, n.º 450, 4000-205 Porto')}
+                </p>
+                <p className="mt-2 text-xs text-jet/60 dark:text-gray-400">
+                  {t('triage_form.sidebar_marques_reg', 'Registo ERS n.º 175125 · Licença de funcionamento n.º 25345')}
                 </p>
               </div>
             </div>

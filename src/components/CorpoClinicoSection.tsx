@@ -6,14 +6,11 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
 
 import draYaraImg from "@/assets/Dra_Yara_Campos.jpg";
-import draFedericaImg from "@/assets/Dra_Federica_Laporta.jpg";
-import draPatriciaImg from "@/assets/Dra_Patrícia_Tatsch.jpg";
 import draArethuzaImg from "@/assets/Dra_Arethuza_Luna.jpg";
 import drLeonardoImg from "@/assets/Dr_Leonardo_Saraiva.jpg";
 import draDaianeImg from "@/assets/Dra_Daiane_Andrade.jpg";
 import draCarlaImg from "@/assets/Dra_Carla_Salvi.jpg";
 import drMarcosImg from "@/assets/Dr_Marcos_Kawasaki.jpg";
-import draAlineImg from "@/assets/Dra_Aline_Marodin.jpg";
 import draPethineImg from "@/assets/Dra_Pethine_Dalsasso.jpg";
 import draSaraImg from "@/assets/Dra_Sara_Ribeiro.jpg";
 
@@ -66,13 +63,6 @@ const CorpoClinicoSection = () => {
       image: drMarcosImg
     },
     {
-      id: "aline",
-      name: "Dra. Aline Marodin",
-      crm: "OMD 12330",
-      peloBrasil: true,
-      image: draAlineImg
-    },
-    {
       id: "pethine",
       name: "Dra. Pethine Dalsasso",
       crm: "OMD 12228",
@@ -94,31 +84,10 @@ const CorpoClinicoSection = () => {
       image: draYaraImg
     },
     {
-      id: "patricia",
-      name: "Dra. Patrícia Tatsch",
-      crm: "OMD 47868",
-      peloBrasil: false,
-      image: draPatriciaImg
-    },
-    {
-      id: "federica",
-      name: "Federica Laporta",
-      crm: "",
-      peloBrasil: false,
-      image: draFedericaImg
-    },
-    {
       id: "thais",
       name: "Dra. Thais Perlingeiro",
       crm: "OM 69564",
       peloBrasil: true,
-      image: ''
-    },
-    {
-      id: "anavitoria",
-      name: "Dra. Ana Vitória Marques",
-      crm: "OMD 15209",
-      peloBrasil: false,
       image: ''
     },
     {
@@ -186,7 +155,7 @@ const CorpoClinicoSection = () => {
 
                     <div className="flex flex-1 flex-col p-5">
                       <h3 className="font-vivant text-lg leading-snug text-jet dark:text-white">{doctor.name}</h3>
-                      <p className="mt-1 font-vivant-light text-sm text-jet/60 dark:text-gray-400">{doctor.crm}</p>
+                      <p className="mt-1 font-vivant-light text-sm text-jet/60 dark:text-gray-400">{doctor.crm.replace(/^(OMD|OM) /, "$1 n.º ")}</p>
                       {bio && <p className="mt-3 font-vivant-light text-xs leading-relaxed text-jet/75 dark:text-gray-300">{bio}</p>}
 
                       <div className="mt-auto flex flex-col gap-1 border-t border-jet/10 pt-4 dark:border-white/10">
@@ -197,11 +166,6 @@ const CorpoClinicoSection = () => {
                           ))
                         ) : (
                           <span className="font-vivant text-sm text-gold-leaf">{specialty}</span>
-                        )}
-                        {doctor.peloBrasil && (
-                          <span className="mt-1 block font-vivant-light text-xs italic text-jet/50 dark:text-gray-500">
-                            {t('team.by_brazil')}
-                          </span>
                         )}
                       </div>
                     </div>
