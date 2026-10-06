@@ -1,11 +1,16 @@
 import { useState, useRef } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import thumbImg from '../assets/thumb.webp';
 import { Play } from 'lucide-react';
+import thumbImg from '../assets/thumb.webp';
+import { Button } from '@/components/ui/button';
+import { Section, SectionHeading, Eyebrow, Reveal } from '@/components/site';
 
+const VIDEO_SRC =
+  "https://hvqckoajxhdqaxfawisd.supabase.co/storage/v1/object/sign/video/214-Legendado.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xYmZmNGRkNy02NjAwLTRlYmMtYTc1OC1hNTBiYTczYzE0YzYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ2aWRlby8yMTQtTGVnZW5kYWRvLm1wNCIsImlhdCI6MTc3NjQyNTc1OCwiZXhwIjoxOTM0MTA1NzU4fQ.Ev3jnYFKqtq3n0zFau2nIh-NtCEFy58REYfH59hDq_s";
+
+// Padrão inspirado em "hero/feature com vídeo" do 21st.dev.
 const TourismDentarioSection = () => {
   const { t } = useTranslation();
-  const [isHovered, setIsHovered] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -22,174 +27,85 @@ const TourismDentarioSection = () => {
   };
 
   return (
-    <section id="programa" className="py-24 bg-gradient-to-br from-gray-100/40 via-gray-50/60 to-gray-100/40 dark:from-black dark:via-gray-900/60 dark:to-black relative overflow-hidden">
-      {/* Background decorativo */}
-      <div className="absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
-        backgroundSize: '50px 50px'
-      }}></div>
-
-      {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 right-16 w-40 h-40 bg-gradient-to-br from-[hsl(var(--jet))]/15 to-[hsl(var(--ring))]/8 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-16 w-32 h-32 bg-gradient-to-br from-[hsl(var(--ring))]/12 to-[hsl(var(--jet))]/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[hsl(var(--gold-leaf))]/8 rounded-full blur-xl"></div>
-
-      {/* Background text sutil */}
-      <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
-        <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          Turismo
-        </span>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Conteúdo */}
-          <div className="order-2 lg:order-1 space-y-6 sm:space-y-8">
-            {/* Badge superior */}
-            <div className="inline-flex items-center bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-[hsl(var(--gold-leaf))]/25 dark:border-[hsl(var(--gold-leaf))]/40 shadow-lg">
-              <div className="w-2 h-2 bg-[hsl(var(--gold-leaf))] rounded-full mr-3"></div>
-              <span className="text-[hsl(var(--gold-leaf))] font-vivant text-sm font-medium tracking-wide">
-                {t("tourism.badge")}
-              </span>
-            </div>
-
-            {/* Título principal */}
-            <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-vivant text-jet dark:text-gray-200 leading-tight">
-                {t("tourism.title.main")}
-                <span className="block text-[hsl(var(--gold-leaf))] drop-shadow-sm">
-                  {t("tourism.title.highlight")}
-                </span>
-              </h2>
-
-              {/* Linha decorativa */}
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
-                <div className="w-3 h-3 bg-[hsl(var(--gold-leaf))]/20 rounded-full border-2 border-[hsl(var(--gold-leaf))]/40"></div>
-                <div className="w-32 h-px bg-gradient-to-r from-[hsl(var(--ring))] to-[hsl(var(--jet))] rounded-full"></div>
-              </div>
-            </div>
-
-            {/* Pergunta principal */}
-            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--gold-leaf))]/15">
-              <p className="text-xl md:text-2xl font-vivant text-black dark:text-white leading-relaxed">
-                <Trans
-                  i18nKey="tourism.question"
-                  components={{ highlight: <span className="text-[hsl(var(--gold-leaf))] font-medium" /> }}
-                />
-              </p>
-            </div>
-
-            {/* Descrição do programa */}
-            <div className="space-y-6">
-              <p className="text-lg text-jet/80 dark:text-gray-300 font-vivant-light leading-relaxed">
-                <Trans
-                  i18nKey="tourism.description"
-                  components={{
-                    highlight1: <strong className="text-[hsl(var(--gold-leaf))]" />,
-                    highlight2: <span className="text-[hsl(var(--gold-leaf))] font-medium" />,
-                    highlight3: <span className="text-[hsl(var(--gold-leaf))] font-medium" />
-                  }}
-                />
-              </p>
-
-              {/* Call to action text */}
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-gradient-to-b from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full"></div>
-                <p className="text-xl font-vivant text-[hsl(var(--gold-leaf))] italic">
-                  {t("tourism.cta_text")}
-                </p>
-              </div>
-            </div>
-
-            {/* Benefícios premium */}
-            {/* <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { title: t("tourism.benefits.3_days.title"), desc: t("tourism.benefits.3_days.desc") },
-                { title: t("tourism.benefits.tourism.title"), desc: t("tourism.benefits.tourism.desc") },
-                { title: t("tourism.benefits.experience.title"), desc: t("tourism.benefits.experience.desc") }
-              ].map((benefit, index) => (
-                <div key={index} className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-[hsl(var(--gold-leaf))]/15 shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-vivant text-[hsl(var(--gold-leaf))] font-medium">{benefit.title}</h4>
-                      <p className="text-xs text-jet/70 dark:text-gray-400 font-vivant-light">{benefit.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
-            {/* Botão premium */}
-            <div className="pt-4 flex justify-center w-full">
-              <div
-                className="relative inline-block group cursor-pointer"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                {/* Botão principal */}
-                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
-                  <button className="relative bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black text-white font-vivant font-semibold px-10 py-5 rounded-2xl transition-all duration-500 group-hover:scale-105 border border-white/20">
-                    <span className="relative z-10">{t("tourism.button")}</span>
-
-                    {/* Shimmer effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl transition-transform duration-1000 ${isHovered ? 'translate-x-full' : '-translate-x-full'
-                      }`}></div>
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
-                </a>
-              </div>
-            </div>
+    <Section id="programa" tone="muted">
+      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="order-2 space-y-6 lg:order-1">
+          <div>
+            <SectionHeading
+              align="left"
+              eyebrow={t("tourism.badge")}
+              title={t("tourism.title.main")}
+              highlight={t("tourism.title.highlight")}
+              className="mb-0 lg:mb-0"
+            />
           </div>
 
-          {/* Vídeo em formato stories */}
-          <div className="order-1 lg:order-2">
-            <div className="relative bg-gradient-to-br from-white/80 via-white/60 to-white/80 rounded-3xl p-8 backdrop-blur-sm border border-[hsl(var(--gold-leaf))]/20 shadow-2xl">
-              <div className="aspect-[9/16] max-w-sm mx-auto bg-black rounded-3xl overflow-hidden shadow-2xl relative group">
-                <video
-                  ref={videoRef}
-                  src="https://hvqckoajxhdqaxfawisd.supabase.co/storage/v1/object/sign/video/214-Legendado.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xYmZmNGRkNy02NjAwLTRlYmMtYTc1OC1hNTBiYTczYzE0YzYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ2aWRlby8yMTQtTGVnZW5kYWRvLm1wNCIsImlhdCI6MTc3NjQyNTc1OCwiZXhwIjoxOTM0MTA1NzU4fQ.Ev3jnYFKqtq3n0zFau2nIh-NtCEFy58REYfH59hDq_s"
-                  className="w-full h-full object-cover cursor-pointer"
-                  onClick={togglePlay}
-                  onPause={() => setIsVideoPlaying(false)}
-                  onPlay={() => setIsVideoPlaying(true)}
-                  playsInline
-                  preload="metadata"
-                  title="Programa Turismo Dentário"
-                  poster={thumbImg}
-                />
-                
-                {/* Play Button Overlay */}
-                {!isVideoPlaying && (
-                  <div 
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 cursor-pointer transition-colors duration-300"
-                    onClick={togglePlay}
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-br from-[hsl(var(--gold-leaf))] to-amber-400 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.4)] backdrop-blur-sm transform transition-all group-hover:scale-110">
-                      <Play className="text-white w-7 h-7 ml-1" fill="currentColor" />
-                    </div>
-                  </div>
-                )}
-              </div>
+          <p className="rounded-2xl border border-jet/10 bg-white p-6 font-vivant text-xl leading-relaxed text-jet shadow-elegant dark:border-white/10 dark:bg-gray-900 dark:text-white md:text-2xl">
+            <Trans
+              i18nKey="tourism.question"
+              components={{ highlight: <span className="font-medium text-gold-leaf" /> }}
+            />
+          </p>
 
-              {/* Elementos decorativos do card */}
-              <div className="absolute -top-3 -right-3 w-6 h-6 bg-[hsl(var(--gold-leaf))] rounded-full opacity-80"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-400 rounded-full opacity-60"></div>
+          <p className="font-vivant-light text-lg leading-relaxed text-jet/80 dark:text-gray-300">
+            <Trans
+              i18nKey="tourism.description"
+              components={{
+                highlight1: <strong className="text-gold-leaf" />,
+                highlight2: <span className="font-medium text-gold-leaf" />,
+                highlight3: <span className="font-medium text-gold-leaf" />,
+              }}
+            />
+          </p>
 
-              {/* Badge no card */}
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <span className="text-[hsl(var(--gold-leaf))] font-vivant text-xs font-medium">25 ANOS</span>
-              </div>
-            </div>
+          <p className="border-l-2 border-gold-leaf pl-4 font-vivant text-xl italic text-gold-leaf">
+            {t("tourism.cta_text")}
+          </p>
+
+          <div className="pt-2">
+            <Button asChild variant="gold" size="cta">
+              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                {t("tourism.button")}
+              </a>
+            </Button>
           </div>
         </div>
+
+        <Reveal className="order-1 lg:order-2">
+          <div className="relative mx-auto max-w-sm rounded-3xl border border-gold-leaf/30 bg-white p-4 shadow-elegant dark:border-white/10 dark:bg-gray-900">
+            <div className="group relative aspect-[9/16] overflow-hidden rounded-2xl bg-black">
+              <video
+                ref={videoRef}
+                src={VIDEO_SRC}
+                className="h-full w-full cursor-pointer object-cover"
+                onClick={togglePlay}
+                onPause={() => setIsVideoPlaying(false)}
+                onPlay={() => setIsVideoPlaying(true)}
+                playsInline
+                preload="metadata"
+                title="Programa Turismo Dentário"
+                poster={thumbImg}
+              />
+              {!isVideoPlaying && (
+                <button
+                  type="button"
+                  onClick={togglePlay}
+                  aria-label="Reproduzir vídeo"
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors hover:bg-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
+                >
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-leaf text-jet shadow-gold transition-transform group-hover:scale-110">
+                    <Play className="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true" />
+                  </span>
+                </button>
+              )}
+            </div>
+            <div className="absolute left-7 top-7">
+              <Eyebrow>25 ANOS</Eyebrow>
+            </div>
+          </div>
+        </Reveal>
       </div>
-    </section>
+    </Section>
   );
 };
 

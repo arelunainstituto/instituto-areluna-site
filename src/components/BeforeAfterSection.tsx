@@ -1,4 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
+import { cn } from "@/lib/utils";
 import caso13 from "../assets/Caso 13.webp";
 import caso14 from "../assets/14.webp";
 import caso16 from "../assets/16.webp";
@@ -6,334 +9,77 @@ import caso30 from "../assets/30.webp";
 import caso23 from "../assets/Caso 23.webp";
 import caso80 from "../assets/80.webp";
 
+const IMPLANTS = [caso14, caso16, caso30];
+const FACETS = [caso13, caso23, caso80];
+
+// Padrão inspirado em "before/after gallery" do 21st.dev: imagem com aspeto fixo + legenda.
 const BeforeAfterSection = () => {
   const { t } = useTranslation();
 
-  const cases = [
-    {
-      id: 1,
-      image: caso14, // Caso 1 - Antes e Depois
-      title: t("before_after.cases.implants.1.title"),
-      description: t("before_after.cases.implants.1.desc"),
-      duration: t("before_after.cases.implants.1.duration"),
-      treatment: t("before_after.cases.implants.1.treatment")
-    },
-    {
-      id: 2,
-      image: caso16, // Caso 2 - Antes e Depois
-      title: t("before_after.cases.implants.2.title"),
-      description: t("before_after.cases.implants.2.desc"),
-      duration: t("before_after.cases.implants.2.duration"),
-      treatment: t("before_after.cases.implants.2.treatment")
-    },
-    {
-      id: 3,
-      image: caso30, // Caso 3 - Antes e Depois
-      title: t("before_after.cases.implants.3.title"),
-      description: t("before_after.cases.implants.3.desc"),
-      duration: t("before_after.cases.implants.3.duration"),
-      treatment: t("before_after.cases.implants.3.treatment")
-    }
-  ];
-
-  const facetsCases = [
-    {
-      id: 1,
-      image: caso13,
-      title: t("before_after.cases.facets.1.title"),
-      description: t("before_after.cases.facets.1.desc"),
-      duration: t("before_after.cases.facets.1.duration"),
-      treatment: t("before_after.cases.facets.1.treatment")
-    },
-    {
-      id: 2,
-      image: caso23,
-      title: t("before_after.cases.facets.2.title"),
-      description: t("before_after.cases.facets.2.desc"),
-      duration: t("before_after.cases.facets.2.duration"),
-      treatment: t("before_after.cases.facets.2.treatment")
-    },
-    {
-      id: 3,
-      image: caso80,
-      title: t("before_after.cases.facets.3.title"),
-      description: t("before_after.cases.facets.3.desc"),
-      duration: t("before_after.cases.facets.3.duration"),
-      treatment: t("before_after.cases.facets.3.treatment")
-    }
-  ];
+  const renderGroup = (kind: "implants" | "facets", images: string[], heading: string) => (
+    <div className="mb-14 last:mb-0">
+      <h3 className="mb-8 text-center font-vivant text-2xl text-gold-leaf sm:text-3xl">{heading}</h3>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {images.map((image, i) => {
+          const title = t(`before_after.cases.${kind}.${i + 1}.title`);
+          return (
+            <Reveal key={i} delay={i * 80} className="h-full">
+              <article className={cn(cardBaseClasses("light"), "p-4 sm:p-4")}>
+                <div className="relative aspect-square overflow-hidden rounded-xl bg-jet/5 dark:bg-black/30">
+                  <img
+                    src={image}
+                    alt={`${title} - Antes e Depois`}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={600}
+                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute left-3 top-3 rounded-full bg-jet px-3 py-1 font-vivant text-xs tracking-wide text-pure-white">
+                    {t("before_after.card.case_badge")} {i + 1}
+                  </span>
+                </div>
+                <div className="px-2 pb-2 pt-5 text-center">
+                  <h4 className="mb-2 font-vivant text-xl text-jet transition-colors group-hover:text-gold-leaf dark:text-gray-100">
+                    {title}
+                  </h4>
+                  <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
+                    {t(`before_after.cases.${kind}.${i + 1}.desc`)}
+                  </p>
+                </div>
+              </article>
+            </Reveal>
+          );
+        })}
+      </div>
+    </div>
+  );
 
   return (
-    <section id="casos-clinicos" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
-      {/* Background decorativo */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--gold-leaf)) 1px, transparent 0)',
-        backgroundSize: '60px 60px'
-      }}></div>
+    <Section id="casos-clinicos" tone="light">
+      <SectionHeading
+        title={t("before_after.title")}
+        highlight={t("before_after.subtitle")}
+        description={t("before_after.description")}
+      />
 
-      {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-16 right-20 w-48 h-48 bg-gradient-to-br from-[hsl(var(--jet))]/8 to-[hsl(var(--ring))]/4 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-16 left-20 w-36 h-36 bg-gradient-to-br from-[hsl(var(--ring))]/10 to-[hsl(var(--jet))]/6 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/3 left-1/3 w-28 h-28 bg-[hsl(var(--gold-leaf))]/6 rounded-full blur-xl"></div>
+      {renderGroup("implants", IMPLANTS, t("before_after.implants_title"))}
+      {renderGroup("facets", FACETS, t("before_after.facets_title"))}
 
-      {/* Background text sutil */}
-      <div className="absolute top-40 left-1/2 transform -translate-x-1/2 pointer-events-none overflow-hidden">
-        <span className="text-[16rem] font-vivant text-[hsl(var(--gold-leaf))]/5 select-none whitespace-nowrap">
-          {t("before_after.background_text")}
-        </span>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Header da seção */}
-        <div className="text-center mb-20">
-          {/* Ornamento superior */}
-          <div className="flex justify-center items-center mb-8">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
-            <div className="w-4 h-4 bg-[hsl(var(--gold-leaf))]/20 rounded-full mx-4 border-2 border-[hsl(var(--gold-leaf))]/40"></div>
-            <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--gold-leaf))]/40 to-[hsl(var(--gold-leaf))]/20 rounded-full"></div>
-            <div className="w-3 h-3 bg-[hsl(var(--gold-leaf))]/30 rounded-full mx-3"></div>
-            <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--gold-leaf))]/20 to-[hsl(var(--gold-leaf))]/40 rounded-full"></div>
-            <div className="w-4 h-4 bg-[hsl(var(--gold-leaf))]/20 rounded-full mx-4 border-2 border-[hsl(var(--gold-leaf))]/40"></div>
-            <div className="w-12 h-px bg-gradient-to-r from-[hsl(var(--gold-leaf))]/40 to-transparent rounded-full"></div>
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-vivant text-jet dark:text-gray-200 mb-6 drop-shadow-sm">
-            {t("before_after.title")}
-          </h2>
-
-          <div className="w-32 h-1 bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto mb-6 sm:mb-8 rounded-full"></div>
-
-          <div className="max-w-3xl mx-auto px-4">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-4 sm:mb-6">
-              {t("before_after.subtitle")}
-            </h3>
-            <p className="text-base sm:text-lg text-jet/70 dark:text-gray-400 font-vivant-light leading-relaxed">
-              {t("before_after.description")}
-            </p>
-          </div>
+      <Reveal className="mt-16">
+        <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-pure-white sm:px-12 dark:bg-black dark:bg-none">
+          <h3 className="mb-5 font-vivant text-3xl sm:text-4xl">{t("before_after.cta.title")}</h3>
+          <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg">
+            {t("before_after.cta.text")}
+          </p>
+          <Button asChild variant="outline-gold" size="cta">
+            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              {t("before_after.cta.button")}
+            </a>
+          </Button>
         </div>
-
-        {/* Subtítulo para Implantes */}
-        <div className="text-center mb-12">
-          <h4 className="text-2xl sm:text-3xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-2">
-            {t("before_after.implants_title")}
-          </h4>
-          <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full"></div>
-        </div>
-
-        {/* Grid de casos - Implantes */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
-          {cases.map((caseItem, index) => (
-            <div key={caseItem.id} className="group">
-              <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/20 dark:border-white/10 hover:bg-white/15 dark:hover:bg-white/8 transition-all duration-500 hover:-translate-y-2 group-hover:backdrop-blur-2xl overflow-hidden">
-                {/* Liquid glass effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent dark:from-white/20 dark:via-white/5 dark:to-transparent rounded-3xl"></div>
-
-                {/* Glass reflection effect */}
-                <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/40 to-transparent dark:from-white/20 dark:to-transparent rounded-t-3xl opacity-60"></div>
-
-                {/* Content wrapper */}
-                <div className="relative z-10">
-                  {/* Imagem antes/depois */}
-                  <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
-                    <div className="aspect-square rounded-3xl">
-                      <img
-                        src={caseItem.image}
-                        alt={`${caseItem.title} - Antes e Depois`}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
-                      />
-                    </div>
-
-                    {/* Badge do caso */}
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-[hsl(var(--jet))]/90 dark:from-black/70 to-[hsl(var(--ring))]/90 dark:to-gray-900/70 text-white px-4 py-2 rounded-xl shadow-lg dark:shadow-none">
-                      <span className="font-vivant font-medium text-xs tracking-wide">
-                        {t("before_after.card.case_badge")} {index + 1}
-                      </span>
-                    </div>
-
-                    {/* Overlay de hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--gold-leaf))]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-
-                  {/* Informações do caso */}
-                  <div className="text-center space-y-4">
-                    <h4 className="text-xl font-vivant text-gray-800 dark:text-gray-100 group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 drop-shadow-sm">
-                      {caseItem.title}
-                    </h4>
-                    <p className="text-sm text-gray-700 dark:text-gray-300 font-vivant-light leading-relaxed">
-                      {caseItem.description}
-                    </p>
-
-                    {/* Detalhes do tratamento */}
-                    {/* <div className="grid grid-cols-2 gap-3">
-                      <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
-                        <div className="relative z-10">
-                          <div className="w-6 h-6 bg-[hsl(var(--gold-leaf))]/90 dark:bg-[hsl(var(--gold-leaf))]/70 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
-                            {t("before_after.card.duration_label")}
-                          </h5>
-                          <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.duration}</p>
-                        </div>
-                      </div>
-
-                      <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
-                        <div className="relative z-10">
-                          <div className="w-6 h-6 bg-[hsl(var(--gold-leaf))]/90 dark:bg-[hsl(var(--gold-leaf))]/70 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            </svg>
-                          </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
-                            {t("before_after.card.treatment_label")}
-                          </h5>
-                          <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.treatment}</p>
-                        </div>
-                      </div>
-                    </div> */}
-
-                    {/* Linha decorativa */}
-                    <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                </div>
-
-                {/* Liquid glass border glow */}
-                <div className="absolute inset-0 rounded-3xl border border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Subtítulo para Facetas */}
-        <div className="text-center mb-12">
-          <h4 className="text-2xl sm:text-3xl font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 mb-2">
-            {t("before_after.facets_title")}
-          </h4>
-          <div className="w-24 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full"></div>
-        </div>
-
-        {/* Grid de casos - Facetas */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-          {facetsCases.map((caseItem, index) => (
-            <div key={caseItem.id} className="group">
-              <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/20 dark:border-white/10 hover:bg-white/15 dark:hover:bg-white/8 transition-all duration-500 hover:-translate-y-2 group-hover:backdrop-blur-2xl overflow-hidden">
-                {/* Liquid glass effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent dark:from-white/20 dark:via-white/5 dark:to-transparent rounded-3xl"></div>
-
-                {/* Glass reflection effect */}
-                <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/40 to-transparent dark:from-white/20 dark:to-transparent rounded-t-3xl opacity-60"></div>
-
-                {/* Content wrapper */}
-                <div className="relative z-10">
-                  {/* Imagem antes/depois */}
-                  <div className="relative overflow-hidden rounded-3xl shadow-xl mb-6">
-                    <div className="aspect-square rounded-3xl">
-                      <img
-                        src={caseItem.image}
-                        alt={`${caseItem.title} - Antes e Depois`}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover object-center bg-black/5 dark:bg-black/20 transition-all duration-700 group-hover:scale-105"
-                      />
-                    </div>
-
-                    {/* Badge do caso */}
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-[hsl(var(--jet))]/90 dark:from-black/70 to-[hsl(var(--ring))]/90 dark:to-gray-900/70 text-white px-4 py-2 rounded-xl shadow-lg dark:shadow-none">
-                      <span className="font-vivant font-medium text-xs tracking-wide">
-                        {t("before_after.card.case_badge")} {index + 1}
-                      </span>
-                    </div>
-
-                    {/* Overlay de hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--gold-leaf))]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-
-                  {/* Informações do caso */}
-                  <div className="text-center space-y-4">
-                    <h4 className="text-xl font-vivant text-gray-800 dark:text-gray-100 group-hover:text-[hsl(var(--gold-leaf))] transition-colors duration-300 drop-shadow-sm">
-                      {caseItem.title}
-                    </h4>
-                    <p className="text-sm text-gray-700 dark:text-gray-300 font-vivant-light leading-relaxed">
-                      {caseItem.description}
-                    </p>
-
-                    {/* Detalhes do tratamento */}
-                    {/* <div className="grid grid-cols-2 gap-3">
-                      <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
-                        <div className="relative z-10">
-                          <div className="w-6 h-6 bg-[hsl(var(--gold-leaf))]/90 dark:bg-[hsl(var(--gold-leaf))]/70 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
-                            {t("before_after.card.duration_label")}
-                          </h5>
-                          <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.duration}</p>
-                        </div>
-                      </div>
-
-                      <div className="relative bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/30 dark:border-white/20 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
-                        <div className="relative z-10">
-                          <div className="w-6 h-6 bg-[hsl(var(--gold-leaf))]/90 dark:bg-[hsl(var(--gold-leaf))]/70 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            </svg>
-                          </div>
-                          <h5 className="font-vivant text-[hsl(var(--gold-leaf))] dark:text-[hsl(var(--gold-leaf))]/80 font-medium text-xs mb-1">
-                            {t("before_after.card.treatment_label")}
-                          </h5>
-                          <p className="text-xs text-gray-700 dark:text-gray-300">{caseItem.treatment}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Linha decorativa */}
-                    <div className="w-16 h-px bg-gradient-to-r from-[hsl(var(--jet))] to-[hsl(var(--ring))] mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                </div>
-
-                {/* Liquid glass border glow */}
-                <div className="absolute inset-0 rounded-3xl border border-[hsl(var(--gold-leaf))]/20 dark:border-[hsl(var(--gold-leaf))]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] dark:from-black dark:via-gray-900 dark:to-black rounded-3xl px-12 py-16 shadow-2xl dark:shadow-none relative overflow-hidden">
-            {/* Elementos decorativos */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 dark:bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-white/15 dark:bg-white/8 rounded-full blur-2xl"></div>
-
-            <div className="relative z-10">
-              <h3 className="text-4xl md:text-5xl font-vivant text-white mb-6 drop-shadow-lg">
-                {t("before_after.cta.title")}
-              </h3>
-              <p className="text-white/95 dark:text-white/90 font-vivant-light text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                {t("before_after.cta.text")}
-              </p>
-
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
-                <button className="bg-white/95 dark:bg-gray-100/95 text-[hsl(var(--gold-leaf))] font-vivant font-semibold px-12 py-6 rounded-2xl hover:bg-white dark:hover:bg-gray-100 transition-all duration-500 hover:scale-105 shadow-2xl dark:shadow-none border border-white/20 dark:border-gray-100/20">
-                  {t("before_after.cta.button")}
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </Reveal>
+    </Section>
   );
 };
 
