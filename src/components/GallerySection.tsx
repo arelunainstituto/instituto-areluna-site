@@ -2,20 +2,28 @@ import { useState } from "react";
 import { Section, SectionHeading, Reveal } from "@/components/site";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { useTranslation } from 'react-i18next';
+import imgD1_38_480 from "@/assets/Clinica-AreLuna-D1-38-480.webp";
 import imgD1_38_640 from "@/assets/Clinica-AreLuna-D1-38-640.webp";
 import imgD1_38_1280 from "@/assets/Clinica-AreLuna-D1-38-1280.webp";
+import img96_480 from "@/assets/Instituto-Areluna-Clinicas-96-480.webp";
 import img96_640 from "@/assets/Instituto-Areluna-Clinicas-96-640.webp";
 import img96_1280 from "@/assets/Instituto-Areluna-Clinicas-96-1280.webp";
+import imgD1_3_480 from "@/assets/Clinica-AreLuna-D1-3-480.webp";
 import imgD1_3_640 from "@/assets/Clinica-AreLuna-D1-3-640.webp";
 import imgD1_3_1280 from "@/assets/Clinica-AreLuna-D1-3-1280.webp";
+import imgD1_28_480 from "@/assets/Clinica-AreLuna-D1-28-480.webp";
 import imgD1_28_640 from "@/assets/Clinica-AreLuna-D1-28-640.webp";
 import imgD1_28_1280 from "@/assets/Clinica-AreLuna-D1-28-1280.webp";
+import imgD1_44_480 from "@/assets/Clinica-AreLuna-D1-44-480.webp";
 import imgD1_44_640 from "@/assets/Clinica-AreLuna-D1-44-640.webp";
 import imgD1_44_1280 from "@/assets/Clinica-AreLuna-D1-44-1280.webp";
+import imgD1_2_480 from "@/assets/Clinica-AreLuna-D1-2-480.webp";
 import imgD1_2_640 from "@/assets/Clinica-AreLuna-D1-2-640.webp";
 import imgD1_2_1280 from "@/assets/Clinica-AreLuna-D1-2-1280.webp";
+import img38_480 from "@/assets/Instituto-Areluna-Clinicas-38-480.webp";
 import img38_640 from "@/assets/Instituto-Areluna-Clinicas-38-640.webp";
 import img38_1280 from "@/assets/Instituto-Areluna-Clinicas-38-1280.webp";
+import img80_480 from "@/assets/Instituto-Areluna-Clinicas-80-480.webp";
 import img80_640 from "@/assets/Instituto-Areluna-Clinicas-80-640.webp";
 import img80_1280 from "@/assets/Instituto-Areluna-Clinicas-80-1280.webp";
 
@@ -26,42 +34,42 @@ const GallerySection = () => {
   const images = [
     {
       src: imgD1_38_1280,
-      srcSet: `${imgD1_38_640} 640w, ${imgD1_38_1280} 1280w`,
+      srcSet: `${imgD1_38_480} 480w, ${imgD1_38_640} 640w, ${imgD1_38_1280} 1280w`,
       alt: t('gallery.img1_alt')
     },
     {
       src: img96_1280,
-      srcSet: `${img96_640} 640w, ${img96_1280} 1280w`,
+      srcSet: `${img96_480} 480w, ${img96_640} 640w, ${img96_1280} 1280w`,
       alt: t('gallery.img2_alt')
     },
     {
       src: imgD1_3_1280,
-      srcSet: `${imgD1_3_640} 640w, ${imgD1_3_1280} 1280w`,
+      srcSet: `${imgD1_3_480} 480w, ${imgD1_3_640} 640w, ${imgD1_3_1280} 1280w`,
       alt: t('gallery.img3_alt')
     },
     {
       src: imgD1_28_1280,
-      srcSet: `${imgD1_28_640} 640w, ${imgD1_28_1280} 1280w`,
+      srcSet: `${imgD1_28_480} 480w, ${imgD1_28_640} 640w, ${imgD1_28_1280} 1280w`,
       alt: t('gallery.img4_alt')
     },
     {
       src: imgD1_44_1280,
-      srcSet: `${imgD1_44_640} 640w, ${imgD1_44_1280} 1280w`,
+      srcSet: `${imgD1_44_480} 480w, ${imgD1_44_640} 640w, ${imgD1_44_1280} 1280w`,
       alt: t('gallery.img5_alt')
     },
     {
       src: imgD1_2_1280,
-      srcSet: `${imgD1_2_640} 640w, ${imgD1_2_1280} 1280w`,
+      srcSet: `${imgD1_2_480} 480w, ${imgD1_2_640} 640w, ${imgD1_2_1280} 1280w`,
       alt: t('gallery.img6_alt')
     },
     {
       src: img38_1280,
-      srcSet: `${img38_640} 640w, ${img38_1280} 1280w`,
+      srcSet: `${img38_480} 480w, ${img38_640} 640w, ${img38_1280} 1280w`,
       alt: t('gallery.img7_alt')
     },
     {
       src: img80_1280,
-      srcSet: `${img80_640} 640w, ${img80_1280} 1280w`,
+      srcSet: `${img80_480} 480w, ${img80_640} 640w, ${img80_1280} 1280w`,
       alt: t('gallery.img8_alt')
     }
   ];
