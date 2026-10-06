@@ -709,5 +709,29 @@
         "toast_success_desc": "Nous avons bien reçu vos informations. Notre équipe vous recontactera très rapidement.",
         "toast_error_title": "Erreur lors de l'envoi",
         "toast_error_desc": "Impossible d'envoyer vos données automatiquement. Veuillez réessayer ou nous joindre sur WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Greffe de Cheveux",
+        "title": "Greffe de cheveux",
+        "highlight": "FUE",
+        "description": "Greffe de cheveux par la technique FUE (Follicular Unit Extraction), réalisée après une consultation d'évaluation. L'indication dépend du diagnostic individuel de chaque cas.",
+        "points": {
+            "fue": {
+                "title": "Technique FUE",
+                "desc": "Prélèvement d'unités folliculaires individuelles dans la zone donneuse"
+            },
+            "evaluation": {
+                "title": "Évaluation individuelle",
+                "desc": "Consultation avec dermoscopie avant toute indication"
+            },
+            "follow_up": {
+                "title": "Suivi",
+                "desc": "Consultations de contrôle après l'intervention"
+            }
+        },
+        "cta_primary": "Découvrir la greffe de cheveux",
+        "cta_secondary": "Prendre rendez-vous",
+        "image_alt": "Cas clinique de greffe de cheveux FUE, publié avec l'autorisation du patient",
+        "caption": "Cas clinique"
     }
 }

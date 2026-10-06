@@ -709,5 +709,29 @@
         "toast_success_desc": "Abbiamo ricevuto i suoi dati. La nostra équipe clinica la contatterà a breve.",
         "toast_error_title": "Errore nell'invio",
         "toast_error_desc": "Impossibile inviare i dati automaticamente. Riprovare o contattarci via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Trapianto di Capelli",
+        "title": "Trapianto di capelli",
+        "highlight": "FUE",
+        "description": "Trapianto di capelli con la tecnica FUE (Follicular Unit Extraction), eseguito dopo una visita di valutazione. L'indicazione dipende dalla diagnosi individuale di ogni caso.",
+        "points": {
+            "fue": {
+                "title": "Tecnica FUE",
+                "desc": "Prelievo di unità follicolari singole dall'area donatrice"
+            },
+            "evaluation": {
+                "title": "Valutazione individuale",
+                "desc": "Visita con dermatoscopia prima di qualsiasi indicazione"
+            },
+            "follow_up": {
+                "title": "Controlli",
+                "desc": "Visite di controllo dopo la procedura"
+            }
+        },
+        "cta_primary": "Scopri il trapianto di capelli",
+        "cta_secondary": "Prenota una visita",
+        "image_alt": "Caso clinico di trapianto di capelli FUE, pubblicato con l'autorizzazione del paziente",
+        "caption": "Caso clinico"
     }
 }

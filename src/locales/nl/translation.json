@@ -709,5 +709,29 @@
         "toast_success_desc": "We hebben uw gegevens ontvangen. Ons klinisch team neemt zeer spoedig contact op.",
         "toast_error_title": "Fout bij verzenden",
         "toast_error_desc": "Kon gegevens niet automatisch verzenden. Probeer het opnieuw of neem contact op via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Haartransplantatie",
+        "title": "Haartransplantatie",
+        "highlight": "FUE",
+        "description": "Haartransplantatie met de FUE-techniek (Follicular Unit Extraction), uitgevoerd na een evaluatieconsult. Of de behandeling aangewezen is, hangt af van de individuele diagnose.",
+        "points": {
+            "fue": {
+                "title": "FUE-techniek",
+                "desc": "Extractie van afzonderlijke folliculaire eenheden uit het donorgebied"
+            },
+            "evaluation": {
+                "title": "Individuele evaluatie",
+                "desc": "Consult met dermatoscopie vóór elke indicatie"
+            },
+            "follow_up": {
+                "title": "Opvolging",
+                "desc": "Controleconsulten na de ingreep"
+            }
+        },
+        "cta_primary": "Ontdek de haartransplantatie",
+        "cta_secondary": "Plan een consult",
+        "image_alt": "Klinisch geval van FUE-haartransplantatie, gepubliceerd met toestemming van de patiënt",
+        "caption": "Klinisch geval"
     }
 }

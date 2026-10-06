@@ -30,19 +30,23 @@ const CookieBanner = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-jet/95 backdrop-blur-md border-t border-pure-white/10 shadow-2xl animate-in slide-in-from-bottom duration-500">
-            <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
-                <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-[hsl(var(--gold-leaf))] font-vivant text-lg mb-2">
+        <div
+            role="region"
+            aria-label={t('cookie_banner.title')}
+            className="fixed inset-x-0 bottom-0 z-50 border-t border-gold-leaf/20 bg-jet-fixed p-4 text-white shadow-elegant animate-in slide-in-from-bottom duration-500 md:p-6 dark:bg-black"
+        >
+            <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-0 sm:px-2 md:flex-row md:gap-8 lg:px-4">
+                <div className="flex-1 pr-10 text-center md:pr-0 md:text-left">
+                    <h3 className="mb-1.5 font-vivant text-base text-gold-leaf sm:text-lg">
                         {t('cookie_banner.title')}
                     </h3>
-                    <p className="text-pure-white/80 text-sm font-vivant-light leading-relaxed">
+                    <p className="font-vivant-light text-sm leading-relaxed text-white/80">
                         <Trans
                             i18nKey="cookie_banner.description"
                             components={[
                                 <Link
                                     to="/privacidade"
-                                    className="text-[hsl(var(--gold-leaf))] hover:underline underline-offset-4"
+                                    className="text-gold-leaf underline underline-offset-4 hover:text-white"
                                     key="privacy-link"
                                 >
                                     policy
@@ -52,27 +56,30 @@ const CookieBanner = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3 min-w-fit">
+                <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                     <button
+                        type="button"
                         onClick={rejectCookies}
-                        className="px-6 py-2.5 rounded-lg border border-pure-white/20 text-pure-white/80 hover:bg-pure-white/5 hover:text-white transition-all duration-300 font-vivant-light text-sm tracking-wide"
+                        className="inline-flex h-11 items-center justify-center rounded-full border border-white/25 px-6 font-vivant-light text-sm tracking-wide text-white/85 transition-colors duration-300 hover:border-white/50 hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                         {t('cookie_banner.reject')}
                     </button>
                     <button
+                        type="button"
                         onClick={acceptCookies}
-                        className="px-6 py-2.5 rounded-lg bg-[hsl(var(--gold-leaf))] text-white hover:bg-amber-400 transition-all duration-300 font-vivant text-sm tracking-wide shadow-lg shadow-amber-900/20"
+                        className="inline-flex h-11 items-center justify-center rounded-full bg-gold-leaf px-6 font-vivant text-sm tracking-wide text-[hsl(20_11%_20%)] transition-colors duration-300 hover:bg-gold-leaf/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                         {t('cookie_banner.accept_all')}
                     </button>
                 </div>
 
                 <button
+                    type="button"
                     onClick={() => setIsVisible(false)}
-                    className="absolute top-2 right-2 p-1 text-pure-white/40 hover:text-white transition-colors md:hidden"
+                    className="absolute -right-1 -top-1 inline-flex h-11 w-11 items-center justify-center rounded-full text-white/50 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf md:hidden"
                     aria-label="Fechar"
                 >
-                    <X size={20} />
+                    <X size={20} aria-hidden="true" />
                 </button>
             </div>
         </div>

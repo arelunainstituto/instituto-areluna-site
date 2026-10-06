@@ -1,15 +1,15 @@
 const BeforeAfter = () => {
   const cases = [
     {
-      image: "/lp/lovable-uploads/825855a0-c45a-47ae-ae27-258aa064c6e1.png",
+      image: "/lp/lovable-uploads/825855a0-c45a-47ae-ae27-258aa064c6e1.webp",
       title: "Reabilitação oral com prótese fixa"
     },
     {
-      image: "/lp/lovable-uploads/362d794f-240a-47e8-bc66-69b825ad6807.png", 
+      image: "/lp/lovable-uploads/362d794f-240a-47e8-bc66-69b825ad6807.webp", 
       title: "Reabilitação total"
     },
     {
-      image: "/lp/lovable-uploads/6b85a641-26fb-41b3-a2fd-484a5e3f9e59.png",
+      image: "/lp/lovable-uploads/6b85a641-26fb-41b3-a2fd-484a5e3f9e59.webp",
       title: "Implantes e reabilitação"
     }
   ];

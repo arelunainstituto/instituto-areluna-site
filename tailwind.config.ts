@@ -70,6 +70,8 @@ export default {
 				// Areluna custom colors
 				'battleship': 'hsl(var(--battleship-grey))',
 				'jet': 'hsl(var(--jet))',
+				// Mesmo valor do jet (#483E39), mas NÃO muda no modo escuro: para superfícies sempre escuras (overlays de hero, selos)
+				'jet-fixed': 'hsl(20 11% 25% / <alpha-value>)',
 				'gold-leaf': 'hsl(var(--gold-leaf))',
 				'pure-white': 'hsl(var(--pure-white))',
 				sidebar: {

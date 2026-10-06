@@ -43,6 +43,26 @@ const PRERENDER_ROUTES = [
   "/obrigado",
 ];
 
+/**
+ * Separa o vendor estável (muda raramente → fica em cache entre deploys) e
+ * agrupa as traduções de cada língua (exceto pt, que vai no bundle inicial)
+ * num chunk `locale-<lng>` carregado por import dinâmico em src/i18n.ts.
+ * Só se atribuem módulos que a app inicial já carrega, para não arrastar
+ * bibliotecas de páginas lazy (recharts, etc.) para a home.
+ */
+// Um único chunk de vendor: separá-lo em vários criava importações
+// circulares entre chunks (o helper commonjs do rollup ia parar a um e o
+// React a outro), o que rebentava a app no arranque.
+const VENDOR_RE =
+  /\/node_modules\/(react|react-dom|scheduler|react-router|react-router-dom|@remix-run\/router|i18next|react-i18next|i18next-browser-languagedetector)\//;
+
+function manualChunks(id: string): string | undefined {
+  const locale = /\/src\/locales\/([a-z]{2})\/[^/]+\.json$/.exec(id);
+  if (locale && locale[1] !== "pt") return `locale-${locale[1]}`;
+  if (VENDOR_RE.test(id) || id.includes("commonjsHelpers")) return "vendor";
+  return undefined;
+}
+
 // https://vitejs.dev/config/
 // Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
 // domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
@@ -108,6 +128,13 @@ export default defineConfig(async ({ mode }) => {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks,
+      },
     },
   },
   };

@@ -19,16 +19,23 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Areluna custom variants
-        gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20",
+        // Em dark, --jet passa a tan claro: o CTA principal passa a gold-leaf com texto escuro (contraste AA)
+        gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20 dark:bg-none dark:bg-gold-leaf dark:text-[hsl(20_11%_20%)] dark:border-transparent dark:hover:bg-gold-leaf/90",
+        // CTA principal sobre fundos escuros (hero, secções tone="dark")
+        "gold-leaf": "bg-gold-leaf text-[hsl(20_11%_20%)] hover:bg-gold-leaf/90 shadow-gold transition-all duration-300 font-medium",
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
-        "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
+        "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-jet-fixed hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",
+        // Contorno para fundos claros (o "outline-gold" é para fundos escuros)
+        "outline-dark": "border border-jet/25 text-jet hover:bg-jet hover:text-pure-white dark:border-white/30 dark:text-white dark:hover:bg-white/10 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        // CTA padrão do site institucional (pílula, mesmo tamanho em todas as secções)
+        cta: "h-auto min-h-12 max-w-full whitespace-normal rounded-full px-6 py-3 text-center font-vivant text-sm tracking-wide sm:min-h-14 sm:px-8 sm:tracking-widest",
       },
     },
     defaultVariants: {

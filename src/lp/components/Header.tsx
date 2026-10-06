@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <div className="flex items-center justify-between gap-2 h-16 md:h-20">
           <img
-            src="/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.png"
+            src="/lp/lovable-uploads/c3666a59-2f87-4c93-a341-911c9b6c6777.webp"
             alt="Instituto Areluna"
             className="h-8 md:h-10 object-contain shrink-0"
           />

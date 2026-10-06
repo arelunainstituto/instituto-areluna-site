@@ -68,9 +68,9 @@ const BlogPostPage = () => {
             <div className="container mx-auto px-4 py-32 text-center">
                 <h2 className="text-3xl font-light mb-4">Artigo não encontrado</h2>
                 <p className="text-gray-500 mb-8">O artigo que você procura não existe ou foi removido.</p>
-                <Link to="/blog">
-                    <Button>Voltar para o Blog</Button>
-                </Link>
+                <Button asChild variant="gold" size="cta">
+                    <Link to="/blog">Voltar para o Blog</Link>
+                </Button>
             </div>
         );
     }
@@ -125,15 +125,15 @@ const BlogPostPage = () => {
                 jsonLd={blogPostingSchema}
             />
             <Header />
-            <div className="pt-24 pb-16">
-                <article className="container mx-auto px-4 max-w-4xl">
-                    <Link to="/blog" className="inline-flex items-center text-[hsl(var(--gold-leaf))] hover:underline mb-8 font-medium">
+            <div className="pt-40 pb-20 sm:pt-48">
+                <article className="container mx-auto px-4 max-w-3xl">
+                    <Link to="/blog" className="inline-flex min-h-[44px] items-center text-gold-leaf hover:underline mb-8 font-medium">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Voltar para o Blog
                     </Link>
 
                     {/* Ordem: título → subtítulo → autor/data → imagem destaque → conteúdo */}
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900 dark:text-white">
+                    <h1 className="font-vivant text-3xl sm:text-4xl lg:text-5xl leading-[1.1] tracking-tight mb-4 text-gray-900 dark:text-white">
                         {post.title}
                     </h1>
 
@@ -145,14 +145,14 @@ const BlogPostPage = () => {
 
                     <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-8">
                         <div className="flex items-center">
-                            <Calendar className="mr-2 h-4 w-4 text-[hsl(var(--gold-leaf))]" />
+                            <Calendar className="mr-2 h-4 w-4 text-gold-leaf" />
                             <time dateTime={post.published_at}>
                                 {format(new Date(post.published_at), "d 'de' MMMM, yyyy", { locale: ptBR })}
                             </time>
                         </div>
                         {post.author_name && (
                             <div className="flex items-center">
-                                <User className="mr-2 h-4 w-4 text-[hsl(var(--gold-leaf))]" />
+                                <User className="mr-2 h-4 w-4 text-gold-leaf" />
                                 <span>{post.author_name}</span>
                             </div>
                         )}
@@ -160,7 +160,7 @@ const BlogPostPage = () => {
 
                     {post.image_url && (
                         <figure className="mb-10">
-                            <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
+                            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-gold-leaf/20 shadow-elegant">
                                 <img
                                     src={post.image_url}
                                     alt={post.image_caption || post.title}
@@ -179,7 +179,7 @@ const BlogPostPage = () => {
                     )}
 
                     <div
-                        className="blog-content prose prose-lg dark:prose-invert max-w-none prose-a:text-[hsl(var(--gold-leaf))] prose-img:rounded-xl"
+                        className="blog-content prose prose-lg dark:prose-invert max-w-none prose-a:text-gold-leaf prose-img:rounded-xl"
                         dangerouslySetInnerHTML={{ __html: post.content || "" }}
                     />
 

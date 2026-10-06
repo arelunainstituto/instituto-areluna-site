@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Eyebrow } from "@/components/site";
 import { MessageSquare, Home, Sparkles, ArrowRight } from "lucide-react";
 
 const NotFound = () => {
@@ -24,7 +26,7 @@ const NotFound = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-jet text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-jet-fixed text-white flex flex-col justify-between">
       <SEOHead
         title="Página Não Encontrada (404) | Instituto AreLuna"
         description="A página que procura não existe ou foi movida. Explore os nossos tratamentos dentários ou fale connosco."
@@ -34,13 +36,10 @@ const NotFound = () => {
       <Header />
 
       <main className="flex-1 flex items-center justify-center pt-48 sm:pt-56 md:pt-60 pb-20 px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-8 animate-in fade-in zoom-in duration-500">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(var(--gold-leaf))]/15 border border-[hsl(var(--gold-leaf))]/30 text-[hsl(var(--gold-leaf))] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles size={14} />
-            Erro 404 · Conteúdo Não Encontrado
-          </div>
+        <div className="max-w-2xl mx-auto text-center space-y-8 ">
+          <Eyebrow tone="dark"><Sparkles size={14} aria-hidden="true" />Erro 404 · Conteúdo Não Encontrado</Eyebrow>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-vivant text-[hsl(var(--gold-leaf))] drop-shadow-md">
+          <h1 className="text-7xl sm:text-8xl font-vivant text-gold-leaf">
             404
           </h1>
 
@@ -48,32 +47,24 @@ const NotFound = () => {
             Não conseguimos encontrar esta página
           </h2>
 
-          <p className="text-pure-white/70 font-vivant-light text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/70 font-vivant-light text-base max-w-lg mx-auto leading-relaxed">
             O endereço que acedeu pode ter mudado ou não se encontra mais disponível. Mas a nossa equipa clínica no Porto continua pronta para o acolher.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <Link
-              to="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[hsl(var(--gold-leaf))] hover:bg-amber-400 text-white font-medium text-sm transition-all duration-300 shadow-lg shadow-amber-900/20"
-            >
-              <Home size={18} />
-              Voltar à Página Principal
-            </Link>
-            <a
-              href="https://wa.me/351910098226"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all duration-300 shadow-lg"
-            >
-              <MessageSquare size={18} />
-              Falar no WhatsApp
-            </a>
+            <Button asChild variant="gold-leaf" size="cta">
+              <Link to="/"><Home size={18} />Voltar à Página Principal</Link>
+            </Button>
+            <Button asChild variant="outline-gold" size="cta">
+              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                <MessageSquare size={18} />Falar no WhatsApp
+              </a>
+            </Button>
           </div>
 
           {/* Links Rápidos */}
           <div className="pt-8 border-t border-white/10">
-            <p className="text-xs text-pure-white/50 uppercase tracking-widest font-semibold mb-4">
+            <p className="text-xs text-white/50 uppercase tracking-widest font-semibold mb-4">
               Páginas e Tratamentos Populares:
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
@@ -81,7 +72,7 @@ const NotFound = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-pure-white/80 hover:text-[hsl(var(--gold-leaf))] border border-white/10 text-xs transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/80 hover:text-gold-leaf border border-white/10 text-xs min-h-[44px] transition-colors"
                 >
                   <span>{link.label}</span>
                   <ArrowRight size={12} className="opacity-60" />

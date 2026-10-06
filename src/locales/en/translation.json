@@ -972,5 +972,29 @@
         "toast_success_desc": "We have received your details and our clinical team will get in touch very soon.",
         "toast_error_title": "Error submitting form",
         "toast_error_desc": "Could not send data automatically. Please try again or reach out to us via WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Hair Transplant",
+        "title": "Hair Transplant",
+        "highlight": "with FUE",
+        "description": "Hair transplant using the FUE (Follicular Unit Extraction) technique, carried out after an assessment appointment. Whether it is indicated depends on the individual diagnosis of each case.",
+        "points": {
+            "fue": {
+                "title": "FUE technique",
+                "desc": "Extraction of individual follicular units from the donor area"
+            },
+            "evaluation": {
+                "title": "Individual assessment",
+                "desc": "Appointment with dermoscopy before any indication"
+            },
+            "follow_up": {
+                "title": "Follow-up",
+                "desc": "Check-up appointments after the procedure"
+            }
+        },
+        "cta_primary": "Discover hair transplant",
+        "cta_secondary": "Book an appointment",
+        "image_alt": "Clinical case of FUE hair transplant, published with the patient's permission",
+        "caption": "Clinical case"
     }
 }

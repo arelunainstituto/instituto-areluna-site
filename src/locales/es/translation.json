@@ -709,5 +709,29 @@
         "toast_success_desc": "Hemos recibido sus datos y nuestro equipo clínico se pondrá en contacto muy pronto.",
         "toast_error_title": "Error al enviar",
         "toast_error_desc": "No fue posible enviar los datos automáticamente. Inténtelo de nuevo o contáctenos por WhatsApp."
+    },
+    "capilar_home": {
+        "eyebrow": "Trasplante Capilar",
+        "title": "Trasplante",
+        "highlight": "Capilar FUE",
+        "description": "Trasplante capilar mediante la técnica FUE (Follicular Unit Extraction), realizado tras una consulta de evaluación. La indicación depende del diagnóstico individual de cada caso.",
+        "points": {
+            "fue": {
+                "title": "Técnica FUE",
+                "desc": "Extracción de unidades foliculares individuales de la zona donante"
+            },
+            "evaluation": {
+                "title": "Evaluación individual",
+                "desc": "Consulta con dermatoscopia antes de cualquier indicación"
+            },
+            "follow_up": {
+                "title": "Seguimiento",
+                "desc": "Consultas de control después del procedimiento"
+            }
+        },
+        "cta_primary": "Conocer el trasplante capilar",
+        "cta_secondary": "Reservar consulta",
+        "image_alt": "Caso clínico de trasplante capilar FUE, publicado con autorización del paciente",
+        "caption": "Caso clínico"
     }
 }
