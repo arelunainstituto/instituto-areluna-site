@@ -1,0 +1,25 @@
+# Instituto AreLuna
+
+> Clínica no Porto com equipa multidisciplinar que reúne medicina dentária, medicina estética e tratamentos capilares. Cada plano de tratamento resulta de uma consulta de avaliação e de diagnóstico individual, na qual são explicadas as opções indicadas, os riscos e os custos.
+
+Unidade Mota Galiza: Rua Júlio Dinis, n.º 194, 4050-327 Porto. Telefone: +351 220 430 090. Registo ERS n.º 161637.
+
+## Páginas principais
+
+- [Página inicial](https://www.institutoareluna.pt/): apresentação do Instituto AreLuna
+- [Tratamentos](https://www.institutoareluna.pt/tratamentos): áreas de tratamento e consulta de avaliação
+- [Sobre a fundadora](https://www.institutoareluna.pt/sobre-a-fundadora): equipa e percurso da fundadora
+- [Contacto](https://www.institutoareluna.pt/contato): contactos e marcação de consulta
+- [Blog](https://www.institutoareluna.pt/blog): artigos informativos sobre saúde e tratamentos
+
+## Tratamentos
+
+- [Transplante capilar](https://www.institutoareluna.pt/transplante-capilar): tratamento capilar, definido após avaliação clínica
+- [Estética facial](https://www.institutoareluna.pt/estetica-facial): medicina estética facial
+- [Implantes dentários no Porto](https://www.institutoareluna.pt/implantes-dentarios-porto): reabilitação oral com implantes
+- [Alinhadores invisíveis no Porto](https://www.institutoareluna.pt/alinhadores-invisiveis-porto): correção ortodôntica com alinhadores transparentes removíveis
+- [Facetas dentárias no Porto](https://www.institutoareluna.pt/facetas-dentarias-porto): estética dentária
+
+## Outros recursos
+
+- [Sitemap](https://www.institutoareluna.pt/sitemap.xml): lista das páginas públicas
