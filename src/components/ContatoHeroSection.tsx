@@ -22,7 +22,7 @@ const ContatoHeroSection = () => {
       description={t("contact_page.hero.subtitle")}
       actions={
         <>
-          <Button asChild variant="gold" size="cta">
+          <Button asChild variant="gold-leaf" size="cta">
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               {t("contact_page.hero.cta_main")}
             </a>

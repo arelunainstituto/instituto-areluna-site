@@ -52,7 +52,7 @@ const TrasplanteCapilarFAQSection = () => {
           <h3 className="mb-3 font-vivant text-xl sm:text-2xl">{t("hair_transplant_page.faq.cta_title")}</h3>
           <p className="mx-auto mb-6 max-w-xl font-vivant-light text-sm text-white/75 sm:text-base">{t("hair_transplant_page.faq.cta_desc")}</p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button asChild variant="gold" size="cta">
+            <Button asChild variant="gold-leaf" size="cta">
               <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                 {t("hair_transplant_page.faq.cta_button_schedule")}
               </a>

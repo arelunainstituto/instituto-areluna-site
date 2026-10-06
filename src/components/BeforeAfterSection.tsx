@@ -72,7 +72,7 @@ const BeforeAfterSection = () => {
           <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg">
             {t("before_after.cta.text")}
           </p>
-          <Button asChild variant="outline-gold" size="cta">
+          <Button asChild variant="gold-leaf" size="cta">
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               {t("before_after.cta.button")}
             </a>

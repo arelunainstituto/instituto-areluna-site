@@ -98,7 +98,7 @@ const TreatmentsSection = () => {
           <p className="mx-auto mb-8 max-w-2xl font-vivant-light text-base leading-relaxed text-white/80 sm:text-lg">
             {t("treatments.cta.description")}
           </p>
-          <Button asChild variant="outline-gold" size="cta">
+          <Button asChild variant="gold-leaf" size="cta">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               {t("treatments.cta.button")}
             </a>

@@ -32,7 +32,7 @@ const TrasplanteCapilarHeroSection = () => {
         </p>
 
         <div className="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
-          <Button asChild variant="gold" size="cta">
+          <Button asChild variant="gold-leaf" size="cta">
             <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
               {t("hair_transplant_page.hero.cta_schedule")}
             </a>

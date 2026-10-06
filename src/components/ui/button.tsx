@@ -19,7 +19,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Areluna custom variants
-        gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20",
+        // Em dark, --jet passa a tan claro: o CTA principal passa a gold-leaf com texto escuro (contraste AA)
+        gold: "bg-gradient-to-br from-[hsl(var(--jet))] to-[hsl(var(--ring))] text-white hover:shadow-2xl transition-all duration-300 font-medium border border-white/20 dark:bg-none dark:bg-gold-leaf dark:text-[hsl(20_11%_20%)] dark:border-transparent dark:hover:bg-gold-leaf/90",
+        // CTA principal sobre fundos escuros (hero, secções tone="dark")
+        "gold-leaf": "bg-gold-leaf text-[hsl(20_11%_20%)] hover:bg-gold-leaf/90 shadow-gold transition-all duration-300 font-medium",
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
         "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",

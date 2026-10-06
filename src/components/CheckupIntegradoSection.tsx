@@ -73,7 +73,7 @@ const CheckupIntegradoSection = () => {
             {t("checkup.cta.subtitle")}
           </p>
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
-            <Button asChild variant="outline-gold" size="cta">
+            <Button asChild variant="gold-leaf" size="cta">
               <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                 {t("checkup.cta.button")}
                 <Calendar className="h-5 w-5" aria-hidden="true" />

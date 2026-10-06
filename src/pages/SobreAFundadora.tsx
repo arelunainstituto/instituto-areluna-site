@@ -104,7 +104,7 @@ const SobreAFundadora = () => {
                 ))}
               </div>
 
-              <Button asChild variant="gold" size="cta">
+              <Button asChild variant="gold-leaf" size="cta">
                 <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
                   {t('founder.cta_whatsapp')}
                 </a>
@@ -152,7 +152,7 @@ const SobreAFundadora = () => {
             {t('founder.cta_desc')}
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button asChild variant="gold" size="cta">
+            <Button asChild variant="gold-leaf" size="cta">
               <Link to="/contato">{t('founder.cta_button_contact')}</Link>
             </Button>
             <Button asChild variant="outline-gold" size="cta">

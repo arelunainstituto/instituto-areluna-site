@@ -36,7 +36,7 @@ const HeroSection = () => {
           <Button asChild variant="outline-gold" size="cta" className="w-full sm:w-auto sm:min-w-[260px]">
             <a href="/tratamentos">{t('hero.find_procedure')}</a>
           </Button>
-          <Button asChild variant="gold" size="cta" className="w-full sm:w-auto sm:min-w-[260px]">
+          <Button asChild variant="gold-leaf" size="cta" className="w-full sm:w-auto sm:min-w-[260px]">
             <a href="#contacto-form">{t('hero.book')}</a>
           </Button>
         </div>
