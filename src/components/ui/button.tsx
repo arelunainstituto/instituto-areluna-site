@@ -23,12 +23,16 @@ const buttonVariants = cva(
         elegant: "bg-jet text-pure-white hover:bg-battleship border border-gold-leaf/20 transition-all duration-300",
         "outline-gold": "border border-[hsl(var(--gold-leaf))] text-white hover:bg-[hsl(var(--jet))] hover:text-white transition-all duration-300",
         glass: "bg-pure-white/80 backdrop-blur-md text-jet border border-pure-white/20 hover:bg-pure-white transition-all duration-300",
+        // Contorno para fundos claros (o "outline-gold" é para fundos escuros)
+        "outline-dark": "border border-jet/25 text-jet hover:bg-jet hover:text-pure-white dark:border-white/30 dark:text-white dark:hover:bg-white/10 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        // CTA padrão do site institucional (pílula, mesmo tamanho em todas as secções)
+        cta: "h-12 rounded-full px-8 font-vivant text-sm tracking-widest sm:h-14",
       },
     },
     defaultVariants: {
