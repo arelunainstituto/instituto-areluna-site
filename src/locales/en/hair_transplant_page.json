@@ -29,6 +29,26 @@
             "case4": {
                 "description": "Hairline and top of the scalp",
                 "details": "FUE transplant. Four views of the same case: front, back (6 months after surgery), top and post-transplant progress."
+            },
+            "case5": {
+                "description": "Hairline density",
+                "details": "FUE transplant. Follow-up photo 1 year and 4 months after surgery."
+            },
+            "case6": {
+                "description": "Temples and hairline",
+                "details": "Hair transplant. Three views of the same case: front, side and top."
+            },
+            "case7": {
+                "description": "Eyebrow transplant",
+                "details": "Hair transplant to the eyebrows. Follow-up photo at 7 months."
+            },
+            "case8": {
+                "description": "Eyebrows with FUE, sapphire and DHI",
+                "details": "Hair transplant to the eyebrows using the FUE, sapphire and DHI techniques."
+            },
+            "case9": {
+                "description": "Beard transplant",
+                "details": "Hair transplant to the beard. Two views of the same case: profile and three-quarter."
             }
         },
         "views": {
@@ -36,7 +56,17 @@
             "front": "Front view",
             "back": "Back view",
             "top": "Top view",
-            "top_evolution": "Post-transplant progress"
+            "top_evolution": "Post-transplant progress",
+            "side": "Side view",
+            "profile": "Profile",
+            "three_quarter": "Three-quarter view"
+        },
+        "filters": {
+            "label": "Filter cases by area",
+            "all": "All",
+            "scalp": "Scalp",
+            "eyebrows": "Eyebrows",
+            "beard": "Beard"
         },
         "cta": {
             "title": "Book your assessment appointment",
