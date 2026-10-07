@@ -6,6 +6,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import logoImg from "@/assets/logo.webp";
+import logoImg256 from "@/assets/logo-256.webp";
 
 /**
  * Cabeçalho global. Inspiração: blocos "navbar" do catálogo 21st.dev
@@ -171,6 +172,8 @@ const Header = () => {
           >
             <img
               src={logoImg}
+              srcSet={`${logoImg256} 256w, ${logoImg} 512w`}
+              sizes="(min-width:1280px) 170px, 130px"
               alt="Areluna"
               loading="eager"
               decoding="async"
@@ -205,6 +208,8 @@ const Header = () => {
           >
             <img
               src={logoImg}
+              srcSet={`${logoImg256} 256w, ${logoImg} 512w`}
+              sizes="(min-width:1280px) 170px, 130px"
               alt="Areluna"
               loading="eager"
               decoding="async"

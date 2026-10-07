@@ -1,5 +1,6 @@
 import { useRef, type MouseEvent } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
 import { fetchAllPosts } from "@/services/marketingApi";
 import { staticPosts, staticPostTitleSlugs, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -256,4 +257,11 @@ const BlogPage = () => {
     );
 };
 
-export default BlogPage;
+// react-query só é preciso aqui: o provider fica nesta chunk lazy, fora do JS inicial.
+const BlogPageWithQuery = () => (
+  <QueryClientProvider client={queryClient}>
+    <BlogPage />
+  </QueryClientProvider>
+);
+
+export default BlogPageWithQuery;

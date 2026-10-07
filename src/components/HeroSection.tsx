@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
-import heroImage from "@/assets/heroImage.webp";
+import heroImage from "@/assets/heroImage-1600.webp";
+import heroImage828 from "@/assets/heroImage-828.webp";
 
 /**
  * Hero (LCP): h1 e imagem visíveis na primeira pintura, sem animações de entrada.
@@ -14,6 +15,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
+          srcSet={`${heroImage828} 828w, ${heroImage} 1600w`}
+          sizes="100vw"
           alt="Interior do Instituto AreLuna — clínica dentária e de estética avançada no Porto"
           className="h-full w-full object-cover mix-blend-overlay"
           {...{ fetchpriority: "high" }}

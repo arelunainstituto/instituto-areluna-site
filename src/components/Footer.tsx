@@ -3,6 +3,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Container } from "@/components/site";
 import logoImg from '@/assets/logo.webp';
+import logoImg256 from '@/assets/logo-256.webp';
 
 /**
  * Rodapé global. Inspiração: blocos "footer" do catálogo 21st.dev (rodapé em
@@ -45,6 +46,8 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-4">
             <img
               src={logoImg}
+              srcSet={`${logoImg256} 256w, ${logoImg} 512w`}
+              sizes="(min-width:1280px) 170px, 130px"
               alt="Areluna"
               loading="lazy"
               decoding="async"
