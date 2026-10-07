@@ -16,7 +16,7 @@ interface FinalCTASectionProps {
   beforeCta?: ReactNode;
 }
 
-const MARBLE_BG = "/lp/lovable-uploads/bad3a722-534a-44c5-a5a1-36043811b0f7.png";
+const MARBLE_BG = "/lp/lovable-uploads/bad3a722-534a-44c5-a5a1-36043811b0f7.webp";
 
 const FinalCTASection = ({
   titlePrefix,

@@ -1,15 +1,55 @@
 import { createRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
-import App from './App.tsx'
+import App, { preloadRoute } from './App.tsx'
 import './index.css'
-import './i18n';
+import i18n from './i18n';
 
-const root = createRoot(document.getElementById("root")!);
-root.render(
-  <HelmetProvider>
-    <App />
-  </HelmetProvider>
-);
+// O HTML pré-renderizado já está visível. Antes de montar o React (que o
+// substitui), esperamos pela chunk da página atual e pela língua detetada:
+// assim o primeiro render é síncrono e igual ao HTML estático — sem ecrã vazio
+// do Suspense e sem um segundo LCP. Teto de 4 s para nunca bloquear o arranque.
+const i18nReady = new Promise<void>((resolve) => {
+  if (i18n.isInitialized) resolve();
+  else i18n.on('initialized', () => resolve());
+});
+// A fonte dos títulos usa font-display: block e está pré-carregada. Esperar por
+// ela garante que o h1 pré-renderizado é pintado primeiro (é ele o LCP) e que o
+// React só o substitui depois, com o mesmo tamanho.
+const fontReady = document.fonts?.load('100 1em "Bw Vivant Skinny"').catch(() => undefined) ?? Promise.resolve();
+// Só montamos depois de o browser registar a pintura do h1 pré-renderizado como
+// LCP. Montar antes (numa carga muito rápida) fazia o h1 do React — por exemplo
+// já em inglês — passar a ser o LCP, dependente de todo o JavaScript.
+// Páginas sem h1 (ou browsers sem a API) seguem logo que a fonte esteja pronta.
+const heroPainted = new Promise<void>((resolve) => {
+  const root = document.getElementById("root");
+  const supported =
+    typeof PerformanceObserver !== "undefined" &&
+    PerformanceObserver.supportedEntryTypes?.includes("largest-contentful-paint");
+  if (!root?.firstElementChild || !supported) return resolve();
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries() as LargestContentfulPaint[]) {
+      if (entry.element?.tagName === "H1") {
+        observer.disconnect();
+        resolve();
+        return;
+      }
+    }
+  });
+  observer.observe({ type: "largest-contentful-paint", buffered: true });
+  fontReady.then(() => setTimeout(() => { observer.disconnect(); resolve(); }, 300));
+});
+const bootTimeout = new Promise<void>((resolve) => setTimeout(resolve, 4000));
+
+Promise.race([
+  Promise.all([preloadRoute(window.location.pathname), i18nReady, fontReady, heroPainted]).catch(() => undefined),
+  bootTimeout,
+]).then(() => {
+  createRoot(document.getElementById("root")!).render(
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  );
+});
 
 // Sinaliza ao prerender (puppeteer) que o app — incluindo as lazy chunks
 // das rotas e as mutações do <head> feitas pelo react-helmet-async —

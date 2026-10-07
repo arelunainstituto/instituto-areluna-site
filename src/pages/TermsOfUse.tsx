@@ -9,7 +9,7 @@ const TermsOfUse = () => {
     const currentLang = i18n.language;
 
     return (
-        <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+        <div className="min-h-screen bg-background text-jet dark:bg-gray-950 dark:text-gray-100 flex flex-col">
             <SEOHead
               title="Termos de Utilização | Instituto AreLuna"
               description="Termos e condições de utilização do site do Instituto AreLuna — clínica dentária e de estética avançada no Porto."
@@ -18,34 +18,34 @@ const TermsOfUse = () => {
             />
             <Header />
 
-            <main className="flex-grow pt-[260px] pb-20 px-6">
-                <div className="container mx-auto max-w-4xl">
-                    <h1 className="text-4xl md:text-5xl font-vivant text-[hsl(var(--gold-leaf))] mb-8">
+            <main className="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:pt-32">
+                <div className="mx-auto w-full max-w-3xl">
+                    <h1 className="font-vivant text-3xl leading-tight text-gold-leaf sm:text-4xl lg:text-5xl mb-8">
                         {t('title')}
                     </h1>
 
-                    <div className="prose prose-lg max-w-none font-vivant-light text-gray-700">
-                        <p className="text-lg text-gray-600 mb-8">
+                    <div className="prose prose-lg max-w-none font-vivant-light text-jet/80 dark:text-gray-300 dark:prose-invert">
+                        <p className="text-base text-jet/60 dark:text-gray-400 mb-8">
                             {t('last_update', { date: new Date().toLocaleDateString(currentLang === 'pt' ? 'pt-PT' : currentLang) })}
                         </p>
 
                         <section className="space-y-6">
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.acceptance.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.acceptance.title')}</h2>
                             <p>
                                 {t('sections.acceptance.text')}
                             </p>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.intellectual_property.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.intellectual_property.title')}</h2>
                             <p>
                                 {t('sections.intellectual_property.text')}
                             </p>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.permitted_use.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.permitted_use.title')}</h2>
                             <p>
                                 {t('sections.permitted_use.text')}
                             </p>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.liability.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.liability.title')}</h2>
                             <p>
                                 {t('sections.liability.text')}
                             </p>

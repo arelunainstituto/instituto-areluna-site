@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Instituto AreLuna",
+    "documentationUrl": "https://www.institutoareluna.pt/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:institutoareluna.pt:docs:llms-txt",
+      "displayName": "Instituto AreLuna - resumo do site para modelos de linguagem",
+      "type": "text/markdown",
+      "url": "https://www.institutoareluna.pt/llms.txt",
+      "description": "Resumo em Markdown do site e ligações para as páginas públicas do Instituto AreLuna.",
+      "representativeQueries": [
+        "que tratamentos oferece o Instituto AreLuna",
+        "onde fica o Instituto AreLuna no Porto"
+      ]
+    },
+    {
+      "identifier": "urn:air:institutoareluna.pt:docs:sitemap",
+      "displayName": "Instituto AreLuna - sitemap",
+      "type": "application/xml",
+      "url": "https://www.institutoareluna.pt/sitemap.xml",
+      "description": "Lista das páginas públicas do site.",
+      "representativeQueries": [
+        "páginas do site do Instituto AreLuna",
+        "artigos do blog do Instituto AreLuna"
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     const currentLang = i18n.language;
 
     return (
-        <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+        <div className="min-h-screen bg-background text-jet dark:bg-gray-950 dark:text-gray-100 flex flex-col">
             <SEOHead
               title="Política de Privacidade | Instituto AreLuna"
               description="Política de privacidade e tratamento de dados pessoais do Instituto AreLuna, em conformidade com o RGPD."
@@ -18,24 +18,24 @@ const PrivacyPolicy = () => {
             />
             <Header />
 
-            <main className="flex-grow pt-[260px] pb-20 px-6">
-                <div className="container mx-auto max-w-4xl">
-                    <h1 className="text-4xl md:text-5xl font-vivant text-[hsl(var(--gold-leaf))] mb-8">
+            <main className="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:pt-32">
+                <div className="mx-auto w-full max-w-3xl">
+                    <h1 className="font-vivant text-3xl leading-tight text-gold-leaf sm:text-4xl lg:text-5xl mb-8">
                         {t('title')}
                     </h1>
 
-                    <div className="prose prose-lg max-w-none font-vivant-light text-gray-700">
-                        <p className="text-lg text-gray-600 mb-8">
+                    <div className="prose prose-lg max-w-none font-vivant-light text-jet/80 dark:text-gray-300 dark:prose-invert">
+                        <p className="text-base text-jet/60 dark:text-gray-400 mb-8">
                             {t('last_update', { date: new Date().toLocaleDateString(currentLang === 'pt' ? 'pt-PT' : currentLang) })}
                         </p>
 
                         <section className="space-y-6">
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.intro.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.intro.title')}</h2>
                             <p>
                                 {t('sections.intro.text')}
                             </p>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.collection.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.collection.title')}</h2>
                             <p>
                                 {t('sections.collection.text')}
                             </p>
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
                                 <li>{t('sections.collection.items.cookies')}</li>
                             </ul>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.usage.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.usage.title')}</h2>
                             <p>
                                 {t('sections.usage.text')}
                             </p>
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
                                 <li>{t('sections.usage.items.marketing')}</li>
                             </ul>
 
-                            <h2 className="text-2xl font-vivant text-gray-900">{t('sections.rights.title')}</h2>
+                            <h2 className="text-2xl font-vivant text-jet dark:text-white">{t('sections.rights.title')}</h2>
                             <p>
                                 {t('sections.rights.text')}
                             </p>

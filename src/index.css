@@ -4,15 +4,21 @@
 
 @font-face {
   font-family: 'Bw Vivant Skinny';
-  src: url('./assets/fonts/BwVivant-Skinny.ttf') format('truetype');
+  /* woff2 com subconjunto latino (pt, en, es, fr, de, it, nl) e pré-carregado no index.html.
+     font-display: block — o texto espera pela fonte (que chega cedo) em vez de ser
+     pintado com a fonte de recurso e depois trocado: a troca mudava o tamanho do h1
+     e gerava um segundo LCP quando o React substituía o HTML pré-renderizado. */
+  src: url('/fonts/bw-vivant-skinny.woff2') format('woff2'),
+    url('./assets/fonts/BwVivant-Skinny.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
   font-family: 'Bw Vivant';
-  src: url('./assets/fonts/bw-vivant-regular.ttf') format('truetype');
+  src: url('/fonts/bw-vivant-regular.woff2') format('woff2'),
+    url('./assets/fonts/bw-vivant-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,7 +26,8 @@
 
 @font-face {
   font-family: 'Bw Vivant';
-  src: url('./assets/fonts/bw-vivant-bold.ttf') format('truetype');
+  src: url('/fonts/bw-vivant-bold.woff2') format('woff2'),
+    url('./assets/fonts/bw-vivant-bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
@@ -43,6 +43,57 @@ const PRERENDER_ROUTES = [
   "/obrigado",
 ];
 
+/**
+ * Separa o vendor estável (muda raramente → fica em cache entre deploys) e
+ * agrupa as traduções de cada língua (exceto pt, que vai no bundle inicial)
+ * num chunk `locale-<lng>` carregado por import dinâmico em src/i18n.ts.
+ * Só se atribuem módulos que a app inicial já carrega, para não arrastar
+ * bibliotecas de páginas lazy (recharts, etc.) para a home.
+ */
+// Um único chunk de vendor: separá-lo em vários criava importações
+// circulares entre chunks (o helper commonjs do rollup ia parar a um e o
+// React a outro), o que rebentava a app no arranque.
+const VENDOR_RE =
+  /\/node_modules\/(react|react-dom|scheduler|react-router|react-router-dom|@remix-run\/router|i18next|react-i18next|i18next-browser-languagedetector)\//;
+
+function manualChunks(id: string): string | undefined {
+  const locale = /\/src\/locales\/([a-z]{2})\/[^/]+\.json$/.exec(id);
+  if (locale && locale[1] !== "pt") return `locale-${locale[1]}`;
+  if (VENDOR_RE.test(id) || id.includes("commonjsHelpers")) return "vendor";
+  return undefined;
+}
+
+/**
+ * Pré-carrega a chunk de tradução do visitante logo no <head>.
+ * Sem isto, a chunk (ex.: locale-en) só é pedida depois de o JS principal
+ * correr, e o primeiro render em inglês (o do PageSpeed) atrasa o LCP.
+ * Usa a mesma ordem de deteção do i18next: ?lng=, localStorage, navegador.
+ */
+function localePreload(): Plugin {
+  return {
+    name: "areluna-locale-preload",
+    apply: "build",
+    transformIndexHtml: {
+      order: "post",
+      handler(html, ctx) {
+        const chunks: Record<string, string> = {};
+        for (const item of Object.values(ctx.bundle ?? {})) {
+          if (item.type === "chunk" && /^locale-[a-z]{2}$/.test(item.name)) {
+            chunks[item.name.slice("locale-".length)] = `/${item.fileName}`;
+          }
+        }
+        const script =
+          "<script>(function(m){try{" +
+          "var q=new URLSearchParams(location.search).get('lng');" +
+          "var l=(q||localStorage.getItem('i18nextLng')||(navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();" +
+          "var u=m[l];if(u){var k=document.createElement('link');k.rel='modulepreload';k.crossOrigin='';k.href=u;document.head.appendChild(k);}" +
+          `}catch(e){}})(${JSON.stringify(chunks)})</script>`;
+        return html.replace(/<head[^>]*>/i, (tag) => `${tag}\n  ${script}`);
+      },
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 // Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
 // domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
@@ -77,6 +128,7 @@ export default defineConfig(async ({ mode }) => {
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
+    localePreload(),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
     shouldPrerender && prerender({
       routes: PRERENDER_ROUTES,
@@ -108,6 +160,13 @@ export default defineConfig(async ({ mode }) => {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks,
+      },
     },
   },
   };
