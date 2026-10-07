@@ -29,6 +29,26 @@
             "case4": {
                 "description": "Linha frontal e região superior",
                 "details": "Transplante FUE. Quatro vistas do mesmo caso: frontal, posterior (6 meses após a cirurgia), superior e evolução pós-transplante."
+            },
+            "case5": {
+                "description": "Densidade na linha frontal",
+                "details": "Transplante FUE. Fotografia de controlo com 1 ano e 4 meses de pós-operatório."
+            },
+            "case6": {
+                "description": "Entradas e linha frontal",
+                "details": "Transplante capilar. Três vistas do mesmo caso: frontal, lateral e superior."
+            },
+            "case7": {
+                "description": "Transplante de sobrancelhas",
+                "details": "Transplante capilar para as sobrancelhas. Fotografia de controlo aos 7 meses."
+            },
+            "case8": {
+                "description": "Sobrancelhas com FUE, safira e DHI",
+                "details": "Transplante capilar para as sobrancelhas, com as técnicas FUE, safira e DHI."
+            },
+            "case9": {
+                "description": "Transplante de barba",
+                "details": "Transplante capilar para a barba. Duas vistas do mesmo caso: perfil e três quartos."
             }
         },
         "views": {
@@ -36,7 +56,17 @@
             "front": "Vista frontal",
             "back": "Vista posterior",
             "top": "Vista superior",
-            "top_evolution": "Evolução pós-transplante"
+            "top_evolution": "Evolução pós-transplante",
+            "side": "Vista lateral",
+            "profile": "Perfil",
+            "three_quarter": "Três quartos"
+        },
+        "filters": {
+            "label": "Filtrar casos por zona",
+            "all": "Todos",
+            "scalp": "Couro cabeludo",
+            "eyebrows": "Sobrancelhas",
+            "beard": "Barba"
         },
         "cta": {
             "title": "Marque a sua consulta de avaliação",

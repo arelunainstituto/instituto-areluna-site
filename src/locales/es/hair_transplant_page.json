@@ -29,6 +29,26 @@
             "case4": {
                 "description": "Línea frontal y zona superior",
                 "details": "Trasplante FUE. Cuatro vistas del mismo caso: frontal, posterior (6 meses después de la cirugía), superior y evolución postrasplante."
+            },
+            "case5": {
+                "description": "Densidad en la línea frontal",
+                "details": "Trasplante FUE. Foto de control al año y 4 meses de la cirugía."
+            },
+            "case6": {
+                "description": "Entradas y línea frontal",
+                "details": "Trasplante capilar. Tres vistas del mismo caso: frontal, lateral y superior."
+            },
+            "case7": {
+                "description": "Trasplante de cejas",
+                "details": "Trasplante capilar en las cejas. Foto de control a los 7 meses."
+            },
+            "case8": {
+                "description": "Cejas con FUE, zafiro y DHI",
+                "details": "Trasplante capilar en las cejas con las técnicas FUE, zafiro y DHI."
+            },
+            "case9": {
+                "description": "Trasplante de barba",
+                "details": "Trasplante capilar en la barba. Dos vistas del mismo caso: perfil y tres cuartos."
             }
         },
         "views": {
@@ -36,7 +56,17 @@
             "front": "Vista frontal",
             "back": "Vista posterior",
             "top": "Vista superior",
-            "top_evolution": "Evolución postrasplante"
+            "top_evolution": "Evolución postrasplante",
+            "side": "Vista lateral",
+            "profile": "Perfil",
+            "three_quarter": "Tres cuartos"
+        },
+        "filters": {
+            "label": "Filtrar casos por zona",
+            "all": "Todos",
+            "scalp": "Cuero cabelludo",
+            "eyebrows": "Cejas",
+            "beard": "Barba"
         },
         "cta": {
             "title": "Pida su consulta de evaluación",
