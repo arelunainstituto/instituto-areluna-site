@@ -25,7 +25,18 @@
             "case3": {
                 "description": "Reconstruction complète",
                 "details": "Greffe FUE avec 5 000 follicules - Résultat après 15 mois"
+            },
+            "case4": {
+                "description": "Ligne frontale et zone supérieure",
+                "details": "Greffe FUE. Quatre vues du même cas : face, arrière (6 mois après l'intervention), dessus et évolution après la greffe."
             }
+        },
+        "views": {
+            "label": "Choisir la vue",
+            "front": "Vue de face",
+            "back": "Vue arrière",
+            "top": "Vue de dessus",
+            "top_evolution": "Évolution après la greffe"
         },
         "cta": {
             "title": "Prenez rendez-vous pour une consultation d'évaluation",

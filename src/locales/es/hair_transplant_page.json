@@ -25,7 +25,18 @@
             "case3": {
                 "description": "Reconstrucción completa",
                 "details": "Trasplante FUE con 5.000 folículos - Resultado después de 15 meses"
+            },
+            "case4": {
+                "description": "Línea frontal y zona superior",
+                "details": "Trasplante FUE. Cuatro vistas del mismo caso: frontal, posterior (6 meses después de la cirugía), superior y evolución postrasplante."
             }
+        },
+        "views": {
+            "label": "Elegir vista",
+            "front": "Vista frontal",
+            "back": "Vista posterior",
+            "top": "Vista superior",
+            "top_evolution": "Evolución postrasplante"
         },
         "cta": {
             "title": "Pida su consulta de evaluación",
