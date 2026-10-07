@@ -25,7 +25,18 @@
             "case3": {
                 "description": "Complete reconstruction",
                 "details": "FUE Transplant with 5,000 follicles - Result after 15 months"
+            },
+            "case4": {
+                "description": "Hairline and top of the scalp",
+                "details": "FUE transplant. Four views of the same case: front, back (6 months after surgery), top and post-transplant progress."
             }
+        },
+        "views": {
+            "label": "Choose view",
+            "front": "Front view",
+            "back": "Back view",
+            "top": "Top view",
+            "top_evolution": "Post-transplant progress"
         },
         "cta": {
             "title": "Book your assessment appointment",
