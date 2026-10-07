@@ -29,6 +29,26 @@
             "case4": {
                 "description": "Ligne frontale et zone supérieure",
                 "details": "Greffe FUE. Quatre vues du même cas : face, arrière (6 mois après l'intervention), dessus et évolution après la greffe."
+            },
+            "case5": {
+                "description": "Densité de la ligne frontale",
+                "details": "Greffe FUE. Photo de contrôle 1 an et 4 mois après l'intervention."
+            },
+            "case6": {
+                "description": "Golfes et ligne frontale",
+                "details": "Greffe de cheveux. Trois vues du même cas : face, côté et dessus."
+            },
+            "case7": {
+                "description": "Greffe de sourcils",
+                "details": "Greffe de cheveux au niveau des sourcils. Photo de contrôle à 7 mois."
+            },
+            "case8": {
+                "description": "Sourcils avec FUE, saphir et DHI",
+                "details": "Greffe de cheveux au niveau des sourcils avec les techniques FUE, saphir et DHI."
+            },
+            "case9": {
+                "description": "Greffe de barbe",
+                "details": "Greffe de cheveux au niveau de la barbe. Deux vues du même cas : profil et trois-quarts."
             }
         },
         "views": {
@@ -36,7 +56,17 @@
             "front": "Vue de face",
             "back": "Vue arrière",
             "top": "Vue de dessus",
-            "top_evolution": "Évolution après la greffe"
+            "top_evolution": "Évolution après la greffe",
+            "side": "Vue latérale",
+            "profile": "Profil",
+            "three_quarter": "Trois-quarts"
+        },
+        "filters": {
+            "label": "Filtrer les cas par zone",
+            "all": "Tous",
+            "scalp": "Cuir chevelu",
+            "eyebrows": "Sourcils",
+            "beard": "Barbe"
         },
         "cta": {
             "title": "Prenez rendez-vous pour une consultation d'évaluation",
