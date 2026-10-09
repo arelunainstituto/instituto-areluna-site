@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { FaqSection } from "@/components/site/FaqSection";
+import { useContact } from "@/contexts/ContactContext";
 
 const TreatmentsFAQSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const faqs = [
     { question: t('treatments_page.faq.list.ortho_time.question'), answer: t('treatments_page.faq.list.ortho_time.answer') },
@@ -27,7 +29,7 @@ const TreatmentsFAQSection = () => {
           <h3 className="mb-3 font-vivant text-2xl sm:text-3xl">{t('treatments_page.faq.cta_title')}</h3>
           <p className="mx-auto mb-6 max-w-xl font-vivant-light text-white/80">{t('treatments_page.faq.cta_desc')}</p>
           <Button asChild variant="gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t('treatments_page.faq.cta_button')}
             </a>
           </Button>

@@ -7,9 +7,11 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/site";
 import { MessageSquare, Home, Sparkles, ArrowRight } from "lucide-react";
+import { useContact } from "@/contexts/ContactContext";
 
 const NotFound = () => {
   const location = useLocation();
+  const { contact, onContactClick } = useContact();
 
   useEffect(() => {
     console.error(
@@ -56,7 +58,7 @@ const NotFound = () => {
               <Link to="/"><Home size={18} />Voltar à Página Principal</Link>
             </Button>
             <Button asChild variant="outline-gold" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 <MessageSquare size={18} />Falar no WhatsApp
               </a>
             </Button>

@@ -13,6 +13,7 @@ import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useContact } from "@/contexts/ContactContext";
 import { SelectShell } from "@/components/contact-form/SelectShell";
 import {
   asideCardClasses,
@@ -57,6 +58,7 @@ const LANGUAGE_OPTIONS = [
 const ContactFormSection = () => {
   const { t } = useTranslation();
   const { toast } = useToast();
+  const { contact, getWhatsAppUrl, onContactClick } = useContact();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -237,9 +239,10 @@ const ContactFormSection = () => {
                 </p>
                 <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row">
                   <a
-                    href="https://wa.me/351910098226"
+                    href={contact.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={onContactClick}
                     className={whatsappButtonClasses}
                   >
                     <MessageSquare aria-hidden="true" />
@@ -624,9 +627,10 @@ const ContactFormSection = () => {
               {t('triage_form.sidebar_wa_desc', 'Para quem não quer aguardar ligação ou busca tirar dúvidas pontuais antes do agendamento, a nossa equipa clínica atende diretamente pelo canal direto oficial:')}
             </p>
             <a
-              href="https://wa.me/351910098226?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20marca%C3%A7%C3%A3o%20de%20consulta%20no%20Instituto%20AreLuna."
+              href={getWhatsAppUrl("Olá, gostaria de informações sobre marcação de consulta no Instituto AreLuna.")}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={onContactClick}
               className={cn(whatsappButtonClasses, "group h-auto min-h-12 w-full whitespace-normal py-3 text-center sm:min-h-14")}
             >
               <span>{t('triage_form.sidebar_wa_btn', 'Falar com a receção no WhatsApp')}</span>
@@ -637,11 +641,12 @@ const ContactFormSection = () => {
           {/* Informações de Contacto & Horários */}
           <div className={cn(asideCardClasses, "space-y-1 text-sm")}>
             <a
-              href="tel:+351220430090"
+              href={contact.telUrl}
+              onClick={onContactClick}
               className="flex min-h-[44px] items-center gap-3 rounded-lg text-jet/80 transition-colors hover:text-jet focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf dark:text-gray-300 dark:hover:text-gold-leaf"
             >
               <Phone className="h-4 w-4 shrink-0 text-gold-leaf" aria-hidden="true" />
-              <span>{t('triage_form.sidebar_phone_label', '+351 220 430 090 (Porto & Geral)')}</span>
+              <span>{contact.phone} (Porto & Geral)</span>
             </a>
             <a
               href="mailto:rececao@institutoareluna.pt"

@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Section, Reveal, Eyebrow } from "@/components/site";
 import { useTranslation } from "react-i18next";
+import { useContact } from "@/contexts/ContactContext";
 
 const SobreAFundadora = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -104,7 +106,7 @@ const SobreAFundadora = () => {
               </div>
 
               <Button asChild variant="gold-leaf" size="cta">
-                <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+                <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                   {t('founder.cta_whatsapp')}
                 </a>
               </Button>

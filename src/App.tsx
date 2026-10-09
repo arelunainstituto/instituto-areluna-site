@@ -58,11 +58,13 @@ export const preloadRoute = (pathname: string): Promise<unknown> => {
 };
 
 import CookieBanner from "./components/CookieBanner";
+import { ContactProvider } from "./contexts/ContactContext";
 
 const App = () => (
   <ThemeProvider>
-    <DeferredToaster />
-    <BrowserRouter>
+    <ContactProvider>
+      <DeferredToaster />
+      <BrowserRouter>
       <ScrollToHash />
       <Suspense
         fallback={
@@ -109,6 +111,7 @@ const App = () => (
       </Suspense>
       <CookieBanner />
     </BrowserRouter>
+    </ContactProvider>
   </ThemeProvider>
 );
 

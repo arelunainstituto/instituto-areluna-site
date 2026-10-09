@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import caso2 from "@/assets/Caso 2.webp";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
+import { useContact } from "@/contexts/ContactContext";
 
 // Apresentação (inspirada nos blocos "features" / "about" do 21st.dev).
 const TrasplanteCapilarSection = () => {
   const { t } = useTranslation("hair_transplant_page");
+  const { contact, onContactClick } = useContact();
 
   return (
     <Section id="transplante" tone="muted">
@@ -55,7 +57,7 @@ const TrasplanteCapilarSection = () => {
 
           <div>
             <Button asChild variant="gold" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 {t("hero.button")}
               </a>
             </Button>

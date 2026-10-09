@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import draArePremium from "@/assets/dra-are-premium.jpg";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
+import { useContact } from "@/contexts/ContactContext";
 
 // Apresentação (inspirada nos blocos "features" / "about" do 21st.dev).
 const EsteticaFacialSection = () => {
   const { t } = useTranslation("facial_aesthetics_page");
+  const { contact, onContactClick } = useContact();
 
   return (
     <Section id="estetica" tone="muted">
@@ -67,7 +69,7 @@ const EsteticaFacialSection = () => {
 
           <div>
             <Button asChild variant="gold" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 {t("hero.button")}
               </a>
             </Button>
