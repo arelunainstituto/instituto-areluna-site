@@ -13,9 +13,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import { useContact } from "@/contexts/ContactContext";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
+    const { getWhatsAppUrl, onContactClick } = useContact();
 
     // Posts estáticos (definidos no frontend) têm prioridade e dispensam a API.
     const staticPost = findStaticPostBySlug(slug);
@@ -194,9 +196,10 @@ const BlogPostPage = () => {
                             </p>
                             <a
                                 className="article-cta__btn"
-                                href={`https://wa.me/351910098226?text=${encodeURIComponent(`Olá! Li o artigo "${post.title}" no blog do Instituto Areluna e gostaria de uma avaliação personalizada.`)}`}
+                                href={getWhatsAppUrl(`Olá! Li o artigo "${post.title}" no blog do Instituto Areluna e gostaria de uma avaliação personalizada.`)}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={onContactClick}
                             >
                                 Falar com a nossa equipa
                             </a>

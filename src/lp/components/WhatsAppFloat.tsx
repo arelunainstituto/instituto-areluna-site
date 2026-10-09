@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { useContact } from "@/contexts/ContactContext";
 
 interface WhatsAppFloatProps {
-  phoneNumber: string;
+  phoneNumber?: string;
 }
 
 const WhatsAppFloat: React.FC<WhatsAppFloatProps> = ({ phoneNumber }) => {
+  const { contact, onContactClick } = useContact();
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const phoneToUse = phoneNumber || contact.phone;
+
   const handleWhatsAppClick = () => {
-    const cleanNumber = phoneNumber.replace(/\s+/g, '');
+    onContactClick();
+    const cleanNumber = phoneToUse.replace(/\D/g, '');
     const whatsappUrl = `https://wa.me/${cleanNumber}`;
     window.open(whatsappUrl, '_blank');
   };

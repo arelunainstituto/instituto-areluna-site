@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
+import { useContact } from "@/contexts/ContactContext";
 import casoRinoImg from "@/assets/caso-rino.webp";
 import casoLipsImg from "@/assets/caso-lips.webp";
 import caso2 from "@/assets/01.webp";
@@ -10,6 +11,7 @@ import caso2 from "@/assets/01.webp";
 const EsteticaFacialCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
   const { t } = useTranslation("facial_aesthetics_page");
+  const { contact, onContactClick } = useContact();
 
   const cases = [
     { id: 1, title: "Caso 1", description: t("cases.items.case1.description"), image: casoRinoImg, details: t("cases.items.case1.details") },
@@ -84,7 +86,7 @@ const EsteticaFacialCasesSection = () => {
           <h3 className="mb-3 font-vivant text-xl text-jet dark:text-white sm:text-2xl">{t("cases.cta.title")}</h3>
           <p className="mb-6 font-vivant-light text-sm text-jet/70 dark:text-gray-400 sm:text-base">{t("cases.cta.description")}</p>
           <Button asChild variant="gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("cases.cta.button")}
             </a>
           </Button>

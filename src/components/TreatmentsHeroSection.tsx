@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/site/PageHero";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
+import { useContact } from "@/contexts/ContactContext";
 
 const TreatmentsHeroSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   return (
     <PageHero
@@ -17,7 +19,7 @@ const TreatmentsHeroSection = () => {
       actions={
         <>
           <Button asChild variant="gold-leaf" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t('treatments_page.hero.cta_schedule')}
             </a>
           </Button>

@@ -2,12 +2,18 @@
  * Botão flutuante do WhatsApp. Tooltip só com CSS (hover/foco), sem estado JS
  * nem animação contínua; sombra discreta. Alvo de toque de 56 px.
  */
-const WhatsAppFloat = () => (
-  <div className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
-    <a
-      href="https://wa.me/351910098226"
-      target="_blank"
-      rel="noopener noreferrer"
+import { useContact } from "@/contexts/ContactContext";
+
+const WhatsAppFloat = () => {
+  const { contact, onContactClick } = useContact();
+
+  return (
+    <div className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
+      <a
+        href={contact.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onContactClick}
       className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-[0_4px_14px_rgba(0,0,0,0.18)] ring-1 ring-black/5 transition-[transform,background-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-[0_6px_18px_rgba(0,0,0,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2 active:translate-y-0 active:bg-green-700 motion-reduce:transition-none"
       aria-label="Fale conosco no WhatsApp"
     >
@@ -24,6 +30,7 @@ const WhatsAppFloat = () => (
       </svg>
     </a>
   </div>
-);
+  );
+};
 
 export default WhatsAppFloat;

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useContact } from "@/contexts/ContactContext";
 
 const Footer = () => {
+  const { contact, onContactClick } = useContact();
+
   return (
     <footer className="bg-foreground text-white py-10 md:py-16 pb-safe">
       <div className="container mx-auto px-container">
@@ -27,9 +30,13 @@ const Footer = () => {
               </div>
               
               <div>
-                <p className="font-medium">📞 Telefones</p>
-                <p className="text-sm">+351 916 880 681 | +351 220 430 090</p>
-                <p className="text-xs text-white/60">* Custo de chamada para rede fixa ou rede móvel nacional</p>
+                <p className="font-medium">📞 Contacto</p>
+                <p className="text-sm">
+                  <a href={contact.telUrl} onClick={onContactClick} className="hover:text-primary transition-colors">
+                    {contact.phone}
+                  </a>
+                </p>
+                <p className="text-xs text-white/60">* Custo de chamada para rede móvel nacional</p>
               </div>
               
               <div>

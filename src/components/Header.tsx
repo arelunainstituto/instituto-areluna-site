@@ -5,6 +5,7 @@ import { Phone, ChevronRight, X, Menu } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useContact } from '@/contexts/ContactContext';
 import logoImg from "@/assets/logo.webp";
 import logoImg256 from "@/assets/logo-256.webp";
 
@@ -16,27 +17,32 @@ import logoImg256 from "@/assets/logo-256.webp";
  *   e devolve o foco ao botão, scroll da página bloqueado enquanto está aberto.
  */
 /** Telefone + seletor de língua (no modo compacto, o telefone passa a ícone). */
-const HeaderActions = ({ compact }: { compact: boolean }) => (
-  <>
-    <a
-      href="tel:+351220430090"
-      aria-label="Telefone: +351 220 430 090"
-      className={cn(
-        'inline-flex h-10 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-gold-leaf/50 text-xs font-medium text-gold-leaf transition-colors duration-300 hover:bg-gold-leaf/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf',
-        compact ? 'w-10' : 'ml-2 px-4',
-      )}
-    >
-      <Phone className="h-3.5 w-3.5" aria-hidden="true" />
-      {!compact && '+351 220 430 090'}
-    </a>
-    <div className="ml-3 flex h-11 items-center border-l border-white/15 pl-4">
-      <LanguageSwitcher />
-    </div>
-  </>
-);
+const HeaderActions = ({ compact }: { compact: boolean }) => {
+  const { contact, onContactClick } = useContact();
+  return (
+    <>
+      <a
+        href={contact.telUrl}
+        onClick={onContactClick}
+        aria-label={`Telefone: ${contact.phone}`}
+        className={cn(
+          'inline-flex h-10 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-gold-leaf/50 text-xs font-medium text-gold-leaf transition-colors duration-300 hover:bg-gold-leaf/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf',
+          compact ? 'w-10' : 'ml-2 px-4',
+        )}
+      >
+        <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+        {!compact && contact.phone}
+      </a>
+      <div className="ml-3 flex h-11 items-center border-l border-white/15 pl-4">
+        <LanguageSwitcher />
+      </div>
+    </>
+  );
+};
 
 const Header = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -304,17 +310,23 @@ const Header = () => {
 
           <div className="mt-8 space-y-3 border-t border-white/10 pt-6 text-center">
             <Button asChild variant="gold-leaf" size="cta" className="w-full">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a
+                href={contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onContactClick}
+              >
                 {t('header.book_consultation')}
               </a>
             </Button>
             <a
-              href="tel:+351220430090"
-              aria-label="Telefone: +351 220 430 090"
+              href={contact.telUrl}
+              onClick={onContactClick}
+              aria-label={`Telefone: ${contact.phone}`}
               className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-4 text-sm text-gold-leaf transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
-              +351 220 430 090
+              {contact.phone}
             </a>
             <p className="px-2 text-xs font-light text-white/70">
               {t('header.subtitle')}
