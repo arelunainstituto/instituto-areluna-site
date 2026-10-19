@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/site";
 import { useTranslation } from "react-i18next";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
+import { useContact } from "@/contexts/ContactContext";
 
 // Hero (inspirado no bloco "hero" do 21st.dev): fundo jet -> preto, h1 visível à primeira pintura.
 const TrasplanteCapilarHeroSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-to-b from-jet-fixed to-black px-4 pb-16 pt-44 text-white sm:px-6 sm:pt-52 lg:min-h-[80vh] lg:pt-56">
@@ -27,7 +29,7 @@ const TrasplanteCapilarHeroSection = () => {
 
         <div className="mb-6 flex flex-col justify-center gap-4 sm:flex-row">
           <Button asChild variant="gold-leaf" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("hair_transplant_page.hero.cta_schedule")}
             </a>
           </Button>

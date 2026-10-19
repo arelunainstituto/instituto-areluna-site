@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Container } from "@/components/site";
+import { useContact } from "@/contexts/ContactContext";
 import logoImg from '@/assets/logo.webp';
 import logoImg256 from '@/assets/logo-256.webp';
 
@@ -28,6 +29,7 @@ const iconBoxClasses =
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const quickLinks = [
     { href: "/", label: t('nav.institute') },
@@ -107,8 +109,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <span className={iconBoxClasses} aria-hidden="true"><Phone /></span>
-                <a href="tel:+351220430090" className={linkClasses}>
-                  +351 220 430 090
+                <a href={contact.telUrl} onClick={onContactClick} className={linkClasses}>
+                  {contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">

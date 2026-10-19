@@ -2,10 +2,12 @@ import { Calendar, Clock, Globe, Heart, Stethoscope, Eye, Scissors, FlaskConical
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, FeatureCard, Reveal } from "@/components/site";
+import { useContact } from "@/contexts/ContactContext";
 
 // Padrão inspirado em "features" + "stats/benefits" do 21st.dev.
 const CheckupIntegradoSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const services = [
     { key: "dental", icon: <Stethoscope /> },
@@ -67,7 +69,7 @@ const CheckupIntegradoSection = () => {
         <div className="rounded-3xl bg-gradient-dark px-6 py-14 text-center text-white sm:px-12 dark:bg-black dark:bg-none">
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Button asChild variant="gold-leaf" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 {t("checkup.cta.button")}
                 <Calendar className="h-5 w-5" aria-hidden="true" />
               </a>

@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/site/PageHero";
+import { useContact } from "@/contexts/ContactContext";
 import tourismBg from "@/assets/tourism.webp";
 
 const TourismDentarioHeroSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
   return (
     <PageHero
       image={tourismBg}
@@ -16,7 +18,7 @@ const TourismDentarioHeroSection = () => {
       actions={
         <>
           <Button asChild variant="gold-leaf" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t('tourism_page.hero.cta_schedule')}
             </a>
           </Button>

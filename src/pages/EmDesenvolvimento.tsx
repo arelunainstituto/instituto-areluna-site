@@ -4,13 +4,17 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
 import { Home, MessageSquare, Wrench } from "lucide-react";
+import { useContact } from "@/contexts/ContactContext";
 
 /**
  * Página temporária "em desenvolvimento".
  * Usada enquanto /pacientes-internacionais está fora do ar
  * (o conteúdo antigo continua em TourismDentarioPage.tsx para ser reativado).
  */
-const EmDesenvolvimento = () => (
+const EmDesenvolvimento = () => {
+  const { contact, onContactClick } = useContact();
+
+  return (
   <div className="min-h-screen bg-jet text-white flex flex-col justify-between">
     <SEOHead
       title="Página em desenvolvimento | Instituto AreLuna"
@@ -44,9 +48,10 @@ const EmDesenvolvimento = () => (
             Voltar à Página Principal
           </Link>
           <a
-            href="https://wa.me/351910098226"
+            href={contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={onContactClick}
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all duration-300 shadow-lg"
           >
             <MessageSquare size={18} />
@@ -59,6 +64,7 @@ const EmDesenvolvimento = () => (
     <Footer />
     <WhatsAppFloat />
   </div>
-);
+  );
+};
 
 export default EmDesenvolvimento;

@@ -3,14 +3,16 @@ import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail } from "lucide-react";
 import heroWoman from "@/assets/DSC06081.webp";
 import { PageHero } from "@/components/site/PageHero";
+import { useContact } from "@/contexts/ContactContext";
 
 const ContatoHeroSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const contacts = [
-    { icon: MapPin, title: t("contact_page.hero.quick_contact.location.title"), info: "Porto, Portugal" },
-    { icon: Phone, title: t("contact_page.hero.quick_contact.phone.title"), info: "+351 220 430 090" },
-    { icon: Mail, title: t("contact_page.hero.quick_contact.email.title"), info: "rececao@institutoareluna.pt" },
+    { icon: MapPin, title: t("contact_page.hero.quick_contact.location.title"), info: "Porto, Portugal", href: undefined },
+    { icon: Phone, title: t("contact_page.hero.quick_contact.phone.title"), info: contact.phone, href: contact.telUrl },
+    { icon: Mail, title: t("contact_page.hero.quick_contact.email.title"), info: "rececao@institutoareluna.pt", href: "mailto:rececao@institutoareluna.pt" },
   ];
 
   return (
@@ -23,12 +25,12 @@ const ContatoHeroSection = () => {
       actions={
         <>
           <Button asChild variant="gold-leaf" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("contact_page.hero.cta_main")}
             </a>
           </Button>
           <Button asChild variant="outline-gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("contact_page.hero.cta_whatsapp")}
             </a>
           </Button>
@@ -36,11 +38,21 @@ const ContatoHeroSection = () => {
       }
     >
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
-        {contacts.map(({ icon: Icon, title, info }, i) => (
+        {contacts.map(({ icon: Icon, title, info, href }, i) => (
           <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
             <Icon className="mx-auto mb-3 h-6 w-6 text-gold-leaf" aria-hidden="true" />
             <h3 className="mb-1 font-vivant text-base">{title}</h3>
-            <p className="break-words font-vivant-light text-sm text-white/80">{info}</p>
+            {href ? (
+              <a
+                href={href}
+                onClick={href.startsWith("tel:") ? onContactClick : undefined}
+                className="break-words font-vivant-light text-sm text-white/80 transition-colors hover:text-gold-leaf"
+              >
+                {info}
+              </a>
+            ) : (
+              <p className="break-words font-vivant-light text-sm text-white/80">{info}</p>
+            )}
           </div>
         ))}
       </div>

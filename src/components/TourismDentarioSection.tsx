@@ -4,6 +4,7 @@ import { Play } from 'lucide-react';
 import thumbImg from '../assets/thumb.webp';
 import { Button } from '@/components/ui/button';
 import { Section, SectionHeading, Reveal } from '@/components/site';
+import { useContact } from '@/contexts/ContactContext';
 
 const VIDEO_SRC =
   "https://hvqckoajxhdqaxfawisd.supabase.co/storage/v1/object/sign/video/214-Legendado.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xYmZmNGRkNy02NjAwLTRlYmMtYTc1OC1hNTBiYTczYzE0YzYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ2aWRlby8yMTQtTGVnZW5kYWRvLm1wNCIsImlhdCI6MTc3NjQyNTc1OCwiZXhwIjoxOTM0MTA1NzU4fQ.Ev3jnYFKqtq3n0zFau2nIh-NtCEFy58REYfH59hDq_s";
@@ -11,6 +12,7 @@ const VIDEO_SRC =
 // Padrão inspirado em "hero/feature com vídeo" do 21st.dev.
 const TourismDentarioSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -52,7 +54,7 @@ const TourismDentarioSection = () => {
 
           <div className="pt-2">
             <Button asChild variant="gold" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 {t("tourism.button")}
               </a>
             </Button>

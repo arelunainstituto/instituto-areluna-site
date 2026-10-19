@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Section, SectionHeading, Reveal } from "@/components/site";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
+import { useContact } from "@/contexts/ContactContext";
 
 // FAQ (inspirado no bloco "faq" do 21st.dev): acordeão acessível do shadcn/ui.
 const EsteticaFacialFAQSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const faqs = [
     { question: t("facial_aesthetics_page.faq.list.types.question"), answer: t("facial_aesthetics_page.faq.list.types.answer") },
@@ -54,7 +56,7 @@ const EsteticaFacialFAQSection = () => {
           <p className="mx-auto mb-6 max-w-xl font-vivant-light text-sm text-white/75 sm:text-base">{t("facial_aesthetics_page.faq.cta_desc")}</p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button asChild variant="gold-leaf" size="cta">
-              <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
                 {t("facial_aesthetics_page.faq.cta_button_schedule")}
               </a>
             </Button>

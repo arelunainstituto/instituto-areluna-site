@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
+import { useContact } from "@/contexts/ContactContext";
 import caso13_480 from "../assets/Caso 13-480.webp";
 import caso13_960 from "../assets/Caso 13-960.webp";
 import caso14_480 from "../assets/14-480.webp";
@@ -23,6 +24,7 @@ const FACETS = [img(caso13_480, caso13_960), img(caso23_480, caso23_960), img(ca
 // Padrão inspirado em "before/after gallery" do 21st.dev: imagem com aspeto fixo + legenda.
 const BeforeAfterSection = () => {
   const { t } = useTranslation();
+  const { contact, onContactClick } = useContact();
 
   const renderGroup = (kind: "implants" | "facets", images: CaseImage[], heading: string) => (
     <div className="mb-14 last:mb-0">
@@ -83,7 +85,7 @@ const BeforeAfterSection = () => {
             {t("before_after.cta.text")}
           </p>
           <Button asChild variant="gold-leaf" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("before_after.cta.button")}
             </a>
           </Button>

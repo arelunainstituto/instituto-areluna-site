@@ -1,5 +1,5 @@
 // Dados estáticos da grelha de tratamentos (os textos vêm de i18n: treatments.items.<id>.*).
-export const WHATSAPP_URL = "https://wa.me/351910098226";
+export const WHATSAPP_URL = "https://wa.me/351910338912";
 
 export const CATEGORY_IDS = [
   "todos",

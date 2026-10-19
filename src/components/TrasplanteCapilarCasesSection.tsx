@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
+import { useContact } from "@/contexts/ContactContext";
 import caso1_480 from "@/assets/transplante-caso-1-480.webp";
 import caso1_960 from "@/assets/transplante-caso-1-960.webp";
 import caso2_480 from "@/assets/transplante-caso-2-480.webp";
@@ -100,6 +101,7 @@ const TrasplanteCapilarCasesSection = () => {
   const [filter, setFilter] = useState<Filter>("all");
   const visibleCases = filter === "all" ? CASES : CASES.filter((c) => c.category === filter);
   const { t } = useTranslation("hair_transplant_page");
+  const { contact, onContactClick } = useContact();
 
   return (
     <Section tone="light" width="wide">
@@ -253,7 +255,7 @@ const TrasplanteCapilarCasesSection = () => {
           <h3 className="mb-3 font-vivant text-xl text-jet dark:text-white sm:text-2xl">{t("cases.cta.title")}</h3>
           <p className="mb-6 font-vivant-light text-sm text-jet/70 dark:text-gray-400 sm:text-base">{t("cases.cta.description")}</p>
           <Button asChild variant="gold" size="cta">
-            <a href="https://wa.me/351910098226" target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("cases.cta.button")}
             </a>
           </Button>

@@ -13,15 +13,37 @@
   <!-- Google Tag Manager (carregado depois do load, no primeiro momento livre) -->
   <!-- O dataLayer e o gtm.start são criados já, como no snippet oficial; só o
        gtm.js (~500 KB com GA4 e Ads) espera pelo load e por um momento livre, para não competir com a
-       primeira pintura no telemóvel. Eventos enviados antes ficam na fila do dataLayer. -->
+       primeira pintura no telemóvel. Eventos enviados antes ficam na fila do dataLayer.
+       Não carrega durante o prerender do build (window.__PRERENDER_INJECTED, ver vite.config.ts). -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});function load(){var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
-  function idle(){if(w.requestIdleCallback)w.requestIdleCallback(load,{timeout:3000});else setTimeout(load,1);}
+  function idle(){if(w.__PRERENDER_INJECTED)return;if(w.requestIdleCallback)w.requestIdleCallback(load,{timeout:3000});else setTimeout(load,1);}
   if(d.readyState==='complete')idle();else w.addEventListener('load',idle,{once:true});
   })(window,document,'script','dataLayer','GTM-K94Q8Q2G');</script>
   <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <!-- Snippet oficial: o dataLayer, o gtag(), o 'js' e o 'config' correm já. Só o
+       gtag.js carrega como o GTM — depois do load, no primeiro momento livre e nunca
+       durante o prerender — para não competir com a primeira pintura no telemóvel.
+       (Uma tag <script src="…/gtag/js"> estática seria removida do HTML pré-renderizado
+       por scripts/postbuild-html.mjs, que limpa as tags de tracking captadas no build.) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MPET45V27V');
+
+    (function(w,d,id){function load(){var j=d.createElement('script');j.async=true;
+    j.src='https://www.googletagmanager.com/gtag/js?id='+id;d.head.appendChild(j);}
+    function idle(){if(w.__PRERENDER_INJECTED)return;if(w.requestIdleCallback)w.requestIdleCallback(load,{timeout:3000});else setTimeout(load,1);}
+    if(d.readyState==='complete')idle();else w.addEventListener('load',idle,{once:true});
+    })(window,document,'G-MPET45V27V');
+  </script>
+  <!-- End Google tag (gtag.js) -->
 
   <!-- Hreflang (Canonical is injected dynamically by react-helmet-async on each route) -->
   <link rel="alternate" hreflang="pt-PT" href="https://www.institutoareluna.pt/" />

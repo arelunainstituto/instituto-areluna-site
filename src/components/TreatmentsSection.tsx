@@ -6,12 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
-import { CATEGORY_IDS, TREATMENTS, WHATSAPP_URL } from "@/components/treatments/data";
+import { CATEGORY_IDS, TREATMENTS } from "@/components/treatments/data";
+import { useContact } from "@/contexts/ContactContext";
 
 // Padrão inspirado em "features grid" do 21st.dev (cartões iguais, filtro em pílulas).
 const TreatmentsSection = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const { contact, getWhatsAppUrl, onContactClick } = useContact();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
 
   const filtered =
@@ -51,9 +53,10 @@ const TreatmentsSection = () => {
           return (
             <Reveal key={item.id} delay={(index % 3) * 80} className="h-full">
               <a
-                href={`${WHATSAPP_URL}?text=Olá! Gostaria de saber mais sobre: ${encodeURIComponent(title)}`}
+                href={getWhatsAppUrl(`Olá! Gostaria de saber mais sobre: ${title}`)}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={onContactClick}
                 className={cn(cardBaseClasses("light"), "justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf")}
               >
                 <div>
@@ -87,7 +90,7 @@ const TreatmentsSection = () => {
 
       <div className="mt-14 flex justify-center">
         <Button asChild variant="gold" size="cta">
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
             {t("treatments.discover_label")}
           </a>
         </Button>
@@ -100,7 +103,7 @@ const TreatmentsSection = () => {
             {t("treatments.cta.description")}
           </p>
           <Button asChild variant="gold-leaf" size="cta">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={onContactClick}>
               {t("treatments.cta.button")}
             </a>
           </Button>
