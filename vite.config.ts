@@ -137,6 +137,9 @@ export default defineConfig(async ({ mode }) => {
         // Espera o evento `app-rendered` disparado em main.tsx assim que o
         // React e o Helmet estabilizam. Mais robusto do que um timer fixo.
         renderAfterDocumentEvent: "app-rendered",
+        // Define window.__PRERENDER_INJECTED durante o prerender: o index.html usa-o
+        // para não carregar o GTM nem o gtag.js no build (evita visitas falsas no GA/Ads).
+        inject: { prerender: true },
         // Cap de segurança: se o evento nunca disparar (página com erro
         // de runtime, por exemplo), captura na mesma ao fim deste tempo.
         timeout: 40_000,
