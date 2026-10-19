@@ -612,7 +612,8 @@
         "title": "Ihre Privatsphäre ist wichtig",
         "description": "Wir verwenden Cookies zur Verbesserung Ihrer Navigationserfahrung, Analyse des Website-Verkehrs und Personalisierung von Inhalten. Durch Klicken auf \"Akzeptieren\" stimmen Sie unserer Verwendung von Cookies zu. Sie können mehr in unserer <0>Datenschutzrichtlinie</0> lesen.",
         "reject": "Ablehnen",
-        "accept_all": "Alle Akzeptieren"
+        "accept_all": "Alle Akzeptieren",
+        "preferences": "Cookie-Einstellungen"
     },
     "founder": {
         "title": "Dr. Arethuza",

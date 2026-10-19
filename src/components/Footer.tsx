@@ -5,6 +5,7 @@ import { Container } from "@/components/site";
 import { useContact } from "@/contexts/ContactContext";
 import logoImg from '@/assets/logo.webp';
 import logoImg256 from '@/assets/logo-256.webp';
+import { openCookiePreferences } from '@/lib/consent';
 
 /**
  * Rodapé global. Inspiração: blocos "footer" do catálogo 21st.dev (rodapé em
@@ -175,6 +176,9 @@ const Footer = () => {
             <Link to="/privacidade" className={legalLinkClasses}>
               {t('footer.cookies')}
             </Link>
+            <button type="button" onClick={openCookiePreferences} className={legalLinkClasses}>
+              {t('cookie_banner.preferences', 'Preferências de cookies')}
+            </button>
           </nav>
         </div>
       </Container>

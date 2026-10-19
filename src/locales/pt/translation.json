@@ -612,7 +612,8 @@
         "title": "A sua privacidade é importante",
         "description": "Utilizamos cookies para melhorar a sua experiência de navegação, analisar o tráfego do site e personalizar conteúdos. Ao clicar em \"Aceitar\", concorda com a nossa utilização de cookies. Pode ler mais na nossa <0>Política de Privacidade</0>.",
         "reject": "Rejeitar",
-        "accept_all": "Aceitar Todos"
+        "accept_all": "Aceitar Todos",
+        "preferences": "Preferências de cookies"
     },
     "treatments_page": {
         "hero": {

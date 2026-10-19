@@ -612,7 +612,8 @@
         "title": "Votre vie privée est importante",
         "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur \"Accepter\", vous acceptez notre utilisation des cookies. Vous pouvez en savoir plus dans notre <0>Politique de Confidentialité</0>.",
         "reject": "Rejeter",
-        "accept_all": "Tout Accepter"
+        "accept_all": "Tout Accepter",
+        "preferences": "Préférences de cookies"
     },
     "founder": {
         "title": "Dr. Arethuza",

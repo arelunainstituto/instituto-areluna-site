@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { CONSENT_EVENT, getConsent, type ConsentChoice } from "@/lib/consent";
 
 /**
- * Injeta GTM + Facebook Pixel + Cookie Consent **apenas** enquanto a rota
+ * Injeta GTM + Facebook Pixel **apenas** enquanto a rota
  * de LP estiver montada. Removendo a montagem, os scripts são desanexados
  * e param de disparar eventos noutras rotas do site institucional.
  *
@@ -19,16 +20,6 @@ declare global {
 }
 
 const SCRIPT_MARK = "data-lp-tracking";
-
-function injectScript(src: string, attrs: Record<string, string> = {}): HTMLScriptElement {
-  const s = document.createElement("script");
-  s.src = src;
-  s.async = true;
-  s.setAttribute(SCRIPT_MARK, "1");
-  Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
-  document.head.appendChild(s);
-  return s;
-}
 
 function injectInline(text: string): HTMLScriptElement {
   const s = document.createElement("script");
@@ -51,22 +42,25 @@ const LPTracking = () => {
     // Facebook Pixel
     injectInline(`
       !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;t.setAttribute('${SCRIPT_MARK}','1');s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('consent', ${getConsent() === "accepted" ? "'grant'" : "'revoke'"});
       fbq('init','${FB_PIXEL_ID}');
       fbq('track','PageView');
     `);
 
-    // Cookie consent (do projeto LP)
-    const cookieScript = injectScript(
-      "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js",
-    );
-    const cookieCfg = injectScript("/lp/cookieconsent-config.js");
+    // Consentimento: o pixel só envia dados depois de «Aceitar» no banner do site
+    // (CookieBanner); os eventos ficam retidos até lá. O antigo cookieconsent das
+    // LPs foi removido (o config usava `import` num script clássico e nunca corria).
+    const onConsent = (event: Event) => {
+      const choice = (event as CustomEvent<ConsentChoice>).detail;
+      window.fbq?.("consent", choice === "accepted" ? "grant" : "revoke");
+    };
+    window.addEventListener(CONSENT_EVENT, onConsent);
 
     return () => {
+      window.removeEventListener(CONSENT_EVENT, onConsent);
       // Limpa scripts injetados ao sair da rota LP
       document.querySelectorAll(`script[${SCRIPT_MARK}]`).forEach((el) => el.remove());
       // Não removemos window.dataLayer/fbq porque ao recarregar a LP reinicializam.
-      void cookieScript;
-      void cookieCfg;
     };
   }, []);
 

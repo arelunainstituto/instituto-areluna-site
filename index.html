@@ -10,6 +10,17 @@
   <meta name="author" content="Instituto AreLuna" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
+  <!-- Google Consent Mode v2: tudo negado por omissão, ANTES do GTM. O banner
+       (src/lib/consent.ts) atualiza ao aceitar/rejeitar; aqui repõe-se uma escolha
+       já guardada. Função local (sem gtag global) para não mudar outros eventos. -->
+  <script>(function(w){w.dataLayer=w.dataLayer||[];function g(){w.dataLayer.push(arguments);}
+  g('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',
+  analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+  g('set','ads_data_redaction',true);
+  try{if(localStorage.getItem('cookie-consent')==='accepted')g('consent','update',{ad_storage:'granted',
+  ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}catch(e){}
+  })(window);</script>
+
   <!-- Google Tag Manager (carregado depois do load, no primeiro momento livre) -->
   <!-- O dataLayer e o gtm.start são criados já, como no snippet oficial; só o
        gtm.js (~500 KB com GA4 e Ads) espera pelo load e por um momento livre, para não competir com a

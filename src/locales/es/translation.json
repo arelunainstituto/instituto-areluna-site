@@ -612,7 +612,8 @@
         "title": "Su privacidad es importante",
         "description": "Utilizamos cookies para mejorar su experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en \"Aceptar\", acepta nuestro uso de cookies. Puede leer más en nuestra <0>Política de Privacidad</0>.",
         "reject": "Rechazar",
-        "accept_all": "Aceptar Todo"
+        "accept_all": "Aceptar Todo",
+        "preferences": "Preferencias de cookies"
     },
     "founder": {
         "title": "Dra. Arethuza",

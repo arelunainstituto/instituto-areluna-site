@@ -612,7 +612,8 @@
         "title": "Your privacy is important",
         "description": "We use cookies to improve your browsing experience, analyze site traffic, and personalize content. By clicking \"Accept\", you agree to our use of cookies. You can read more in our <0>Privacy Policy</0>.",
         "reject": "Reject",
-        "accept_all": "Accept All"
+        "accept_all": "Accept All",
+        "preferences": "Cookie preferences"
     },
     "treatments_page": {
         "hero": {

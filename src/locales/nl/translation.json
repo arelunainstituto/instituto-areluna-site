@@ -612,7 +612,8 @@
         "title": "Uw privacy is belangrijk",
         "description": "Wij gebruiken cookies om uw browse-ervaring te verbeteren, siteverkeer te analyseren en inhoud te personaliseren. Door op \"Accepteren\" te klikken, stemt u in met ons gebruik van cookies. U kunt meer lezen in ons <0>Privacybeleid</0>.",
         "reject": "Weigeren",
-        "accept_all": "Alles Accepteren"
+        "accept_all": "Alles Accepteren",
+        "preferences": "Cookievoorkeuren"
     },
     "founder": {
         "title": "Dr. Arethuza",

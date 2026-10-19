@@ -3,13 +3,21 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
+import { getConsent, setConsent, OPEN_PREFERENCES_EVENT } from '@/lib/consent';
 
 const CookieBanner = () => {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
 
+    // Reabrir a partir do rodapé («Preferências de cookies»).
     useEffect(() => {
-        const consent = localStorage.getItem('cookie-consent');
+        const open = () => setIsVisible(true);
+        window.addEventListener(OPEN_PREFERENCES_EVENT, open);
+        return () => window.removeEventListener(OPEN_PREFERENCES_EVENT, open);
+    }, []);
+
+    useEffect(() => {
+        const consent = getConsent();
         if (!consent) {
             // Pequeno delay para a animação de entrada ficar mais suave
             const timer = setTimeout(() => setIsVisible(true), 1000);
@@ -17,13 +25,14 @@ const CookieBanner = () => {
         }
     }, []);
 
+    // Atualiza o Google Consent Mode v2 (e o pixel da Meta nas LPs).
     const acceptCookies = () => {
-        localStorage.setItem('cookie-consent', 'accepted');
+        setConsent('accepted');
         setIsVisible(false);
     };
 
     const rejectCookies = () => {
-        localStorage.setItem('cookie-consent', 'rejected');
+        setConsent('rejected');
         setIsVisible(false);
     };
 
