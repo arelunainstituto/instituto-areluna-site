@@ -24,26 +24,6 @@
   })(window,document,'script','dataLayer','GTM-K94Q8Q2G');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Google tag (gtag.js) -->
-  <!-- Snippet oficial: o dataLayer, o gtag(), o 'js' e o 'config' correm já. Só o
-       gtag.js carrega como o GTM — depois do load, no primeiro momento livre e nunca
-       durante o prerender — para não competir com a primeira pintura no telemóvel.
-       (Uma tag <script src="…/gtag/js"> estática seria removida do HTML pré-renderizado
-       por scripts/postbuild-html.mjs, que limpa as tags de tracking captadas no build.) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MPET45V27V');
-
-    (function(w,d,id){function load(){var j=d.createElement('script');j.async=true;
-    j.src='https://www.googletagmanager.com/gtag/js?id='+id;d.head.appendChild(j);}
-    function idle(){if(w.__PRERENDER_INJECTED)return;if(w.requestIdleCallback)w.requestIdleCallback(load,{timeout:3000});else setTimeout(load,1);}
-    if(d.readyState==='complete')idle();else w.addEventListener('load',idle,{once:true});
-    })(window,document,'G-MPET45V27V');
-  </script>
-  <!-- End Google tag (gtag.js) -->
 
   <!-- Hreflang (Canonical is injected dynamically by react-helmet-async on each route) -->
   <link rel="alternate" hreflang="pt-PT" href="https://www.institutoareluna.pt/" />
