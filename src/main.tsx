@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import App, { preloadRoute } from './App.tsx'
 import './index.css'
 import i18n from './i18n';
+import { initAnalytics } from './lib/analytics';
 
 // O HTML pré-renderizado já está visível. Antes de montar o React (que o
 // substitui), esperamos pela chunk da página atual e pela língua detetada:
@@ -49,6 +50,7 @@ Promise.race([
       <App />
     </HelmetProvider>
   );
+  initAnalytics();
 });
 
 // Sinaliza ao prerender (puppeteer) que o app — incluindo as lazy chunks

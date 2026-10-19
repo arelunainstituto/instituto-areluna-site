@@ -19,7 +19,7 @@ const TourismDentarioFAQSection = () => {
   ];
 
   return (
-    <FaqSection
+    <FaqSection trackSection="faq-pacientes-internacionais"
       title={t('tourism_page.faq.title')}
       subtitle={t('tourism_page.faq.subtitle')}
       description={t('tourism_page.faq.description')}

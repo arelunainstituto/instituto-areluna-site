@@ -22,7 +22,7 @@ const CheckupIntegradoSection = () => {
   ];
 
   return (
-    <Section tone="light">
+    <Section data-track-section="checkup" tone="light">
       <SectionHeading
         title={t("checkup.title.main")}
         highlight={t("checkup.title.highlight")}

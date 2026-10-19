@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,7 @@ import {
   countDigits,
   getCountryByIso,
 } from "@/lp/lib/countries";
+import { track } from "@/lib/analytics";
 
 interface FormData {
   name: string;
@@ -84,6 +85,14 @@ const EvaluationForm = ({
     return true;
   };
 
+  // form_start: primeira interação com o formulário (uma vez por montagem).
+  const formStarted = useRef(false);
+  const trackFormStart = () => {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    track("form_start", { form_name: "avaliacao_lp", form_section: "formulario_lp", lp_interesse: interesse });
+  };
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
 
@@ -144,6 +153,12 @@ const EvaluationForm = ({
 
       if (!response.ok) throw new Error("Erro ao enviar dados");
 
+      // Lead confirmado (só depois do envio com sucesso). Sem dados pessoais.
+      const leadParams = { form_name: "avaliacao_lp", form_section: "formulario_lp", lp_interesse: interesse };
+      track("generate_lead", leadParams);
+      // Dispara a tag do GTM «OST — Google Ads Conversão Lead» (evento lead_conversion).
+      track("lead_conversion", leadParams);
+
       toast({
         title: "✅ Inscrição realizada com sucesso!",
         description: "Redirecionando...",
@@ -174,6 +189,7 @@ const EvaluationForm = ({
       }, 1500);
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
+      track("form_error", { form_name: "avaliacao_lp", form_section: "formulario_lp", lp_interesse: interesse });
       toast({
         title: "Erro ao enviar",
         description: "Tente novamente mais tarde ou contacte-nos diretamente.",
@@ -202,7 +218,7 @@ const EvaluationForm = ({
       </CardHeader>
 
       <CardContent className="space-y-6 pb-8 px-4 sm:px-6">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+        <form onSubmit={handleSubmit(onSubmit)} onFocusCapture={trackFormStart} className="space-y-6" noValidate>
           <input type="hidden" name="Event ID" value={eventId} />
 
           <div className="space-y-2">

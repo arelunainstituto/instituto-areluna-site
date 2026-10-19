@@ -2,6 +2,7 @@ import * as React from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Section } from "./Section";
 import { SectionHeading } from "./SectionHeading";
+import { track } from "@/lib/analytics";
 
 /**
  * FAQ padrão (Accordion shadcn/Radix). Inspirado nos blocos "faq" do 21st.dev.
@@ -13,12 +14,24 @@ export interface FaqSectionProps {
   description?: React.ReactNode;
   items: { question: string; answer: string }[];
   cta?: React.ReactNode;
+  /** Nome estável da secção para o tracking (data-track-section e faq_open). */
+  trackSection?: string;
 }
 
-export const FaqSection = ({ title, subtitle, description, items, cta }: FaqSectionProps) => (
-  <Section tone="muted" width="narrow">
+export const FaqSection = ({ title, subtitle, description, items, cta, trackSection }: FaqSectionProps) => (
+  <Section tone="muted" width="narrow" data-track-section={trackSection}>
     <SectionHeading title={title} eyebrow={subtitle} description={description} />
-    <Accordion type="single" collapsible defaultValue="faq-0" className="space-y-3">
+    <Accordion
+      type="single"
+      collapsible
+      defaultValue="faq-0"
+      className="space-y-3"
+      onValueChange={(value) => {
+        if (!value) return;
+        const index = Number(value.replace("faq-", ""));
+        track("faq_open", { faq_section: trackSection || "faq", faq_index: index + 1, faq_question: items[index]?.question.slice(0, 100) });
+      }}
+    >
       {items.map((item, i) => (
         <AccordionItem
           key={i}

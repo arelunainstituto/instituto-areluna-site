@@ -11,7 +11,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-dark pt-36 pb-20 sm:pt-40">
+    <section data-track-section="hero-home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-dark pt-36 pb-20 sm:pt-40">
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}

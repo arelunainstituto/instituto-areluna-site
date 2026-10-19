@@ -8,7 +8,7 @@ const WhatsAppFloat = () => {
   const { contact, onContactClick } = useContact();
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
+    <div data-track-section="botao-flutuante" className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
       <a
         href={contact.whatsappUrl}
         target="_blank"

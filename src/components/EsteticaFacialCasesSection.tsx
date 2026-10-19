@@ -20,7 +20,7 @@ const EsteticaFacialCasesSection = () => {
   ];
 
   return (
-    <Section tone="light">
+    <Section data-track-section="casos-estetica-facial" tone="light">
       <SectionHeading
         eyebrow={t("cases.badge")}
         title={t("cases.title_start")}

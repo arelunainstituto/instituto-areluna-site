@@ -11,7 +11,7 @@ const TrasplanteCapilarSection = () => {
   const { contact, onContactClick } = useContact();
 
   return (
-    <Section id="transplante" tone="muted">
+    <Section data-track-section="transplante-capilar" id="transplante" tone="muted">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal className="order-2 space-y-8 lg:order-1">
           <SectionHeading

@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Section, SectionHeading, Reveal } from "@/components/site";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { useContact } from "@/contexts/ContactContext";
+import { track } from "@/lib/analytics";
 
 // FAQ (inspirado no bloco "faq" do 21st.dev): acordeão acessível do shadcn/ui.
 const EsteticaFacialFAQSection = () => {
@@ -22,7 +23,7 @@ const EsteticaFacialFAQSection = () => {
   ];
 
   return (
-    <Section tone="muted" width="narrow">
+    <Section data-track-section="faq-estetica-facial" tone="muted" width="narrow">
       <SectionHeading
         title={t("facial_aesthetics_page.faq.title")}
         description={
@@ -33,7 +34,17 @@ const EsteticaFacialFAQSection = () => {
         }
       />
 
-      <Accordion type="single" collapsible defaultValue="faq-0" className="space-y-3">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="faq-0"
+        className="space-y-3"
+        onValueChange={(value) => {
+          if (!value) return;
+          const index = Number(value.replace("faq-", ""));
+          track("faq_open", { faq_section: "faq-estetica-facial", faq_index: index + 1, faq_question: faqs[index]?.question?.slice(0, 100) });
+        }}
+      >
         {faqs.map((faq, index) => (
           <AccordionItem
             key={index}

@@ -24,7 +24,7 @@ const EmDesenvolvimento = () => {
     />
     <Header />
 
-    <main className="flex-1 flex items-center justify-center pt-48 sm:pt-56 md:pt-60 pb-20 px-4">
+    <main data-track-section="em-desenvolvimento" className="flex-1 flex items-center justify-center pt-48 sm:pt-56 md:pt-60 pb-20 px-4">
       <div className="max-w-2xl mx-auto text-center space-y-8">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(var(--gold-leaf))]/15 border border-[hsl(var(--gold-leaf))]/30 text-[hsl(var(--gold-leaf))] text-xs font-semibold uppercase tracking-widest">
           <Wrench size={14} />

@@ -16,7 +16,7 @@ const ContatoHeroSection = () => {
   ];
 
   return (
-    <PageHero
+    <PageHero trackSection="hero-contacto"
       image={heroWoman}
       eyebrow={t("contact_page.hero.badge")}
       title={t("contact_page.hero.title_start")}

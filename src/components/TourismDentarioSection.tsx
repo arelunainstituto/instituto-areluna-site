@@ -29,7 +29,7 @@ const TourismDentarioSection = () => {
   };
 
   return (
-    <Section id="programa" tone="muted">
+    <Section data-track-section="pacientes-internacionais" id="programa" tone="muted">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="order-2 space-y-6 lg:order-1">
           <div>

@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { CATEGORY_IDS, TREATMENTS } from "@/components/treatments/data";
 import { useContact } from "@/contexts/ContactContext";
+import { track } from "@/lib/analytics";
 
 // Padrão inspirado em "features grid" do 21st.dev (cartões iguais, filtro em pílulas).
 const TreatmentsSection = () => {
@@ -20,7 +21,7 @@ const TreatmentsSection = () => {
     activeCategory === "todos" ? TREATMENTS : TREATMENTS.filter((item) => item.category === activeCategory);
 
   return (
-    <Section id="tratamentos" tone="light">
+    <Section data-track-section="tratamentos" id="tratamentos" tone="light">
       <SectionHeading
         title={t("treatments.title")}
         highlight={t("treatments.power_title")}
@@ -32,7 +33,10 @@ const TreatmentsSection = () => {
           <button
             key={id}
             type="button"
-            onClick={() => setActiveCategory(id)}
+            onClick={() => {
+              setActiveCategory(id);
+              track("select_content", { content_type: "filtro_tratamentos", item_id: String(id), cta_section: "tratamentos" });
+            }}
             aria-pressed={activeCategory === id}
             className={cn(
               "min-h-11 rounded-full border px-5 text-sm font-vivant-light tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2",
@@ -54,6 +58,8 @@ const TreatmentsSection = () => {
             <Reveal key={item.id} delay={(index % 3) * 80} className="h-full">
               <a
                 href={getWhatsAppUrl(`Olá! Gostaria de saber mais sobre: ${title}`)}
+                data-track-item={item.id}
+                data-track-label={title}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={onContactClick}

@@ -8,7 +8,7 @@ const TourismDentarioHeroSection = () => {
   const { t } = useTranslation();
   const { contact, onContactClick } = useContact();
   return (
-    <PageHero
+    <PageHero trackSection="hero-pacientes-internacionais"
       image={tourismBg}
       imageAlt=""
       eyebrow={t('tourism_page.hero.badge')}

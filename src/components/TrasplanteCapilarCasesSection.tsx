@@ -34,6 +34,7 @@ import barbaPerfil_480 from "@/assets/transplante-barba-caso-1-perfil-480.webp";
 import barbaPerfil_960 from "@/assets/transplante-barba-caso-1-perfil-960.webp";
 import barbaTresQuartos_480 from "@/assets/transplante-barba-caso-1-tres-quartos-480.webp";
 import barbaTresQuartos_960 from "@/assets/transplante-barba-caso-1-tres-quartos-960.webp";
+import { track } from "@/lib/analytics";
 
 type CaseCategory = "scalp" | "eyebrows" | "beard";
 const FILTERS = ["all", "scalp", "eyebrows", "beard"] as const;
@@ -104,7 +105,7 @@ const TrasplanteCapilarCasesSection = () => {
   const { contact, onContactClick } = useContact();
 
   return (
-    <Section tone="light" width="wide">
+    <Section data-track-section="casos-transplante-capilar" tone="light" width="wide">
       <SectionHeading
         eyebrow={t("cases.badge")}
         title={t("cases.title_start")}
@@ -117,7 +118,10 @@ const TrasplanteCapilarCasesSection = () => {
           <button
             key={id}
             type="button"
-            onClick={() => setFilter(id)}
+            onClick={() => {
+              setFilter(id);
+              track("select_content", { content_type: "filtro_casos_capilar", item_id: id, cta_section: "casos-transplante-capilar" });
+            }}
             aria-pressed={filter === id}
             className={cn(
               "min-h-11 rounded-full border px-5 text-sm font-vivant-light tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf focus-visible:ring-offset-2",
@@ -191,7 +195,10 @@ const TrasplanteCapilarCasesSection = () => {
                         <button
                           key={v.src480}
                           type="button"
-                          onClick={() => setActiveView((prev) => ({ ...prev, [caseItem.id]: i }))}
+                          onClick={() => {
+                            setActiveView((prev) => ({ ...prev, [caseItem.id]: i }));
+                            track("select_content", { content_type: "vista_caso_capilar", item_id: `caso-${caseItem.id}-${v.labelKey?.split(".").pop() ?? i + 1}`, cta_section: "casos-transplante-capilar" });
+                          }}
                           aria-pressed={active}
                           aria-label={label}
                           title={label}

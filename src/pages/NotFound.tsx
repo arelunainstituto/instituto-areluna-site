@@ -37,7 +37,7 @@ const NotFound = () => {
       />
       <Header />
 
-      <main className="flex-1 flex items-center justify-center pt-48 sm:pt-56 md:pt-60 pb-20 px-4">
+      <main data-track-section="pagina-404" className="flex-1 flex items-center justify-center pt-48 sm:pt-56 md:pt-60 pb-20 px-4">
         <div className="max-w-2xl mx-auto text-center space-y-8 ">
           <Eyebrow tone="dark"><Sparkles size={14} aria-hidden="true" />Erro 404 · Conteúdo Não Encontrado</Eyebrow>
 

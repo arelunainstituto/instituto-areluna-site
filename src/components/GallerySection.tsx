@@ -83,7 +83,7 @@ const GallerySection = () => {
   };
 
   return (
-    <Section tone="light">
+    <Section data-track-section="galeria" tone="light">
       <SectionHeading title={t('gallery.title')} description={t('gallery.subtitle')} />
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">

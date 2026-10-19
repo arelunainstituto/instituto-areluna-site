@@ -17,6 +17,8 @@ export interface PageHeroProps {
   actions?: React.ReactNode;
   /** Bloco extra por baixo dos botões (estatísticas, contactos rápidos). */
   children?: React.ReactNode;
+  /** Nome estável da secção para o tracking (data-track-section). */
+  trackSection?: string;
 }
 
 export const PageHero = ({
@@ -28,8 +30,9 @@ export const PageHero = ({
   description,
   actions,
   children,
+  trackSection,
 }: PageHeroProps) => (
-  <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-dark pb-16 pt-44 text-white sm:pt-56 md:pt-64">
+  <section data-track-section={trackSection} className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-gradient-dark pb-16 pt-44 text-white sm:pt-56 md:pt-64">
     <div className="absolute inset-0" aria-hidden="true">
       <img
         src={image}

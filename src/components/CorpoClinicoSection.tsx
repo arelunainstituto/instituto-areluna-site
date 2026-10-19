@@ -124,7 +124,7 @@ const CorpoClinicoSection = () => {
   ];
 
   return (
-    <Section tone="muted" width="wide">
+    <Section data-track-section="corpo-clinico" tone="muted" width="wide">
       <SectionHeading title={t('team.title')} description={t('team.subtitle')} />
 
       <div className="relative">

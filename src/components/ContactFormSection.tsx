@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
 import { useTranslation, Trans } from "react-i18next";
@@ -10,6 +10,7 @@ import {
 } from "@/lp/lib/countries";
 import { MessageSquare, MapPin, Phone, Mail, Clock, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { track } from "@/lib/analytics";
 import { Section, SectionHeading } from "@/components/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -96,6 +97,14 @@ const ContactFormSection = () => {
     const rawVal = e.target.value;
     const masked = applyPhoneMask(rawVal, country.mask);
     setFormData(prev => ({ ...prev, phone: masked }));
+  };
+
+  // form_start: primeira interação com o formulário (uma vez por montagem).
+  const formStarted = useRef(false);
+  const trackFormStart = () => {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    track("form_start", { form_name: "triagem_institucional", form_section: "formulario" });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -187,6 +196,11 @@ const ContactFormSection = () => {
       });
 
       if (response.ok) {
+        // Lead confirmado (só depois do envio com sucesso). Sem dados pessoais.
+        const leadParams = { form_name: "triagem_institucional", form_section: "formulario", unit: formData.unit, residence: formData.residence || undefined };
+        track("generate_lead", leadParams);
+        // Dispara a tag do GTM «OST — Google Ads Conversão Lead» (evento lead_conversion).
+        track("lead_conversion", leadParams);
         setIsSubmittedSuccess(true);
         toast({
           title: t('triage_form.toast_success_title', "Pedido de Consulta Enviado!"),
@@ -197,6 +211,7 @@ const ContactFormSection = () => {
       }
     } catch (error) {
       console.error('Erro no envio:', error);
+      track("form_error", { form_name: "triagem_institucional", form_section: "formulario" });
       toast({
         title: t('triage_form.toast_error_title', "Ocorreu um erro no envio"),
         description: t('triage_form.toast_error_desc', "Não conseguimos enviar os dados automaticamente. Por favor, tente novamente ou fale connosco pelo WhatsApp."),
@@ -208,7 +223,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <Section id="contacto-form" tone="muted" width="wide">
+    <Section id="contacto-form" data-track-section="formulario" tone="muted" width="wide">
       <SectionHeading
         eyebrow={t('triage_form.badge', 'Marcação & Triagem Clínica · Porto')}
         title={t('triage_form.title', 'Marque a Sua Consulta de Avaliação')}
@@ -259,7 +274,7 @@ const ContactFormSection = () => {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} onFocusCapture={trackFormStart} className="space-y-6">
                 {/* Bloco 1: Unidade de Preferência - Porto / Fora de Portugal */}
                 <div className={highlightBlockClasses} role="group" aria-labelledby="triage-unit-label">
                   <span id="triage-unit-label" className={highlightLabelClasses}>

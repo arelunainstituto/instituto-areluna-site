@@ -68,7 +68,7 @@ const BeforeAfterSection = () => {
   );
 
   return (
-    <Section id="casos-clinicos" tone="light">
+    <Section data-track-section="casos-clinicos" id="casos-clinicos" tone="light">
       <SectionHeading
         title={t("before_after.title")}
         highlight={t("before_after.subtitle")}

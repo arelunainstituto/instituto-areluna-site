@@ -129,7 +129,7 @@ const BlogPostPage = () => {
             />
             <Header />
             <div className="pt-40 pb-20 sm:pt-48">
-                <article className="container mx-auto px-4 max-w-3xl">
+                <article data-track-section="artigo-blog" className="container mx-auto px-4 max-w-3xl">
                     <Link to="/blog" className="inline-flex min-h-[44px] items-center text-gold-leaf hover:underline mb-8 font-medium">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Voltar para o Blog

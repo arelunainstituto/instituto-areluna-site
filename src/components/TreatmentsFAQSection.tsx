@@ -19,7 +19,7 @@ const TreatmentsFAQSection = () => {
   ];
 
   return (
-    <FaqSection
+    <FaqSection trackSection="faq-tratamentos"
       title={t('treatments_page.faq.title')}
       subtitle={t('treatments_page.faq.subtitle')}
       description={t('treatments_page.faq.description')}

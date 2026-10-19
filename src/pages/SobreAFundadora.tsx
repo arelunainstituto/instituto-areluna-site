@@ -70,7 +70,7 @@ const SobreAFundadora = () => {
 
       <main>
         {/* Hero (inspirado nos blocos "hero" / "team" do 21st.dev) */}
-        <section className="bg-gradient-dark px-4 pb-16 pt-28 text-white dark:bg-black dark:bg-none sm:px-6 lg:pb-24 xl:pt-48">
+        <section data-track-section="hero-fundadora" className="bg-gradient-dark px-4 pb-16 pt-28 text-white dark:bg-black dark:bg-none sm:px-6 lg:pb-24 xl:pt-48">
           <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="order-2 overflow-hidden rounded-2xl border border-gold-leaf/30 shadow-elegant lg:order-1">
               <img
@@ -115,7 +115,7 @@ const SobreAFundadora = () => {
         </section>
 
         {/* Formação & Especialidades */}
-        <Section tone="light">
+        <Section tone="light" data-track-section="fundadora-percurso">
           <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
             <Reveal>
               <h2 className="mb-8 font-vivant text-3xl leading-tight text-jet dark:text-white sm:text-4xl">
@@ -145,7 +145,7 @@ const SobreAFundadora = () => {
         </Section>
 
         {/* CTA (inspirado no bloco "cta" do 21st.dev) */}
-        <Section tone="dark" width="narrow" className="text-center">
+        <Section tone="dark" width="narrow" className="text-center" data-track-section="fundadora-cta">
           <h2 className="mb-6 font-vivant text-3xl leading-tight sm:text-4xl lg:text-5xl">
             {t('founder.cta_title')}
           </h2>
