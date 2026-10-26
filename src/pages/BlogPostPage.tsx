@@ -69,13 +69,16 @@ const BlogPostPage = () => {
     if (!staticPost && (error || (!isListLoading && !postId))) {
         return (
             <div className="container mx-auto px-4 py-32 text-center">
-                {/* Slugs inexistentes chegam aqui pelo index_fallback.html (vercel.json) com status 200 */}
-                <SEOHead
-                    title="Artigo não encontrado"
-                    description="O artigo que procura não existe ou foi removido."
-                    canonical="https://www.institutoareluna.pt/blog"
-                    noindex
-                />
+                {/* Slugs inexistentes chegam aqui pelo index_fallback.html (vercel.json) com status 200.
+                    Com erro da API não há SEOHead: um post válido manteria o noindex se o pedido falhasse. */}
+                {!error && (
+                    <SEOHead
+                        title="Artigo não encontrado"
+                        description="O artigo que procura não existe ou foi removido."
+                        canonical="https://www.institutoareluna.pt/blog"
+                        noindex
+                    />
+                )}
                 <h2 className="text-3xl font-light mb-4">Artigo não encontrado</h2>
                 <p className="text-gray-500 mb-8">O artigo que você procura não existe ou foi removido.</p>
                 <Button asChild variant="gold" size="cta">
@@ -92,7 +95,8 @@ const BlogPostPage = () => {
         || post.content?.replace(/<[^>]+>/g, '').slice(0, 155) + '…'
         || `Artigo do blog do Instituto AreLuna — ${post.title}`;
 
-    const canonical = `https://www.institutoareluna.pt/blog/${slug}`;
+    // Do post e não do URL: o post também abre pelo slug do título, que não deve ser canónico.
+    const canonical = `https://www.institutoareluna.pt/blog/${post.slug || slugify(post.title)}`;
 
     const blogPostingSchema = {
         "@context": "https://schema.org",

@@ -311,7 +311,7 @@ const EvaluationForm = ({
                 <label htmlFor="consent" className="text-muted-foreground leading-relaxed cursor-pointer">
                   Concordo com o tratamento dos meus dados pessoais para fins de contacto e avaliação clínica,
                   conforme a{" "}
-                  <Link to="/politica-privacidade" target="_blank" className="text-primary hover:underline font-medium">
+                  <Link to="/privacidade"target="_blank" className="text-primary hover:underline font-medium">
                     Política de Privacidade
                   </Link>
                   . Posso revogar o consentimento a qualquer momento.

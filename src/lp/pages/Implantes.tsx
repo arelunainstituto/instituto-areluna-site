@@ -58,7 +58,7 @@ const Implantes = () => {
           }),
           buildBreadcrumbSchema([
             { name: "Início", path: "/" },
-            { name: "Implantes Dentários", path: "/implantes" },
+            { name: "Implantes Dentários", path: "/implantes-dentarios-porto" },
           ]),
           faqImplantes,
         ]}

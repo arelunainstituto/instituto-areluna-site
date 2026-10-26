@@ -53,15 +53,16 @@ interface ErpPost {
 
 interface ErpPostsPage {
   data: ErpPost[];
-  meta?: { totalPages?: number };
+  meta?: { total?: number; totalPages?: number };
 }
 
 /** Travão de segurança, igual ao de fetchAllPosts em src/services/marketingApi.ts. */
 const MAX_PAGES = 20;
 
 /**
- * Lê todos os posts publicados na API do ERP. Se a API falhar, o build falha
- * de propósito: a Vercel mantém o deploy anterior em vez de publicar posts sem
+ * Lê todos os posts publicados na API do ERP. Se a API falhar, não responder
+ * em 30 s ou devolver uma lista vazia ou incompleta, o build falha de
+ * propósito: a Vercel mantém o deploy anterior em vez de publicar posts sem
  * prerender.
  */
 export async function fetchBlogPostRoutes(apiUrl?: string, apiKey?: string): Promise<BlogPostRoute[]> {
@@ -72,6 +73,7 @@ export async function fetchBlogPostRoutes(apiUrl?: string, apiKey?: string): Pro
   const fetchPage = async (page: number): Promise<ErpPostsPage> => {
     const res = await fetch(`${apiUrl}/api/public/marketing/posts?page=${page}&limit=100`, {
       headers: { "x-api-key": apiKey },
+      signal: AbortSignal.timeout(30_000),
     });
     if (!res.ok) throw new Error(`seo-pages: a API do ERP respondeu ${res.status} na página ${page} de posts.`);
     return (await res.json()) as ErpPostsPage;
@@ -81,15 +83,21 @@ export async function fetchBlogPostRoutes(apiUrl?: string, apiKey?: string): Pro
   const totalPages = Math.min(first.meta?.totalPages ?? 1, MAX_PAGES);
   const rest = await Promise.all(Array.from({ length: totalPages - 1 }, (_, i) => fetchPage(i + 2)));
   const posts = [...first.data, ...rest.flatMap((r) => r.data)];
+  if (posts.length === 0 || (first.meta?.total !== undefined && posts.length !== first.meta.total)) {
+    throw new Error(`seo-pages: a API do ERP devolveu ${posts.length} posts de ${first.meta?.total ?? "?"}.`);
+  }
 
   // O mesmo slug que BlogPostPage aceita: o explícito ou, na falta dele, o do título.
-  return posts.map((post) => {
+  // Um slug fora do padrão fica fora do prerender e do sitemap (abre na mesma pelo
+  // index_fallback.html), em vez de bloquear todos os deploys até alguém o corrigir no ERP.
+  return posts.flatMap((post) => {
     const slug = post.slug || slugify(post.title);
     if (!/^[a-z0-9-]+$/.test(slug)) {
-      throw new Error(`seo-pages: slug inválido no ERP («${slug}», post «${post.title}»).`);
+      console.warn(`seo-pages: slug fora do padrão no ERP, post ignorado («${slug}», «${post.title}»).`);
+      return [];
     }
     const dates = [post.published_at, post.updated_at].filter(Boolean).map((d) => d!.slice(0, 10));
-    return { slug, lastmod: dates.sort().at(-1) ?? "" };
+    return [{ slug, lastmod: dates.sort().at(-1) ?? "" }];
   });
 }
 

@@ -25,6 +25,7 @@
     { "source": "/porque-e-preciso-cuidar-do-sorriso-desde-pequeno{/}?", "destination": "/tratamentos", "permanent": true },
     { "source": "/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada-no-porto-em-portugal{/}?", "destination": "/blog/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada", "permanent": true },
     { "source": "/politica-de-privacidade{/}?", "destination": "/privacidade", "permanent": true },
+    { "source": "/politica-privacidade{/}?", "destination": "/privacidade", "permanent": true },
     { "source": "/tratamentos/implantologia{/}?", "destination": "/implantes-dentarios-porto", "permanent": true },
     { "source": "/tratamentos/branqueamento-dentario{/}?", "destination": "/blog/branqueamento-dentario-funciona", "permanent": true },
     { "source": "/tratamentos/bichectomia{/}?", "destination": "/estetica-facial", "permanent": true },
@@ -48,7 +49,7 @@
     { "source": "/:path+/", "destination": "/:path+", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/blog/:slug", "destination": "/index_fallback.html" }
+    { "source": "/blog/:slug([^/.]+)", "destination": "/index_fallback.html" }
   ],
   "headers": [
     {

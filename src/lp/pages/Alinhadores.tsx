@@ -58,7 +58,7 @@ const Alinhadores = () => {
           }),
           buildBreadcrumbSchema([
             { name: "Início", path: "/" },
-            { name: "Alinhadores Invisíveis", path: "/alinhadores" },
+            { name: "Alinhadores Invisíveis", path: "/alinhadores-invisiveis-porto" },
           ]),
           faqAlinhadores,
         ]}

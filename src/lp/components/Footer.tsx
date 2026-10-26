@@ -76,7 +76,7 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center text-white/60 text-xs sm:text-sm">
             <div className="flex gap-6">
-              <Link to="/politica-privacidade" className="hover:text-primary transition-colors">
+              <Link to="/privacidade"className="hover:text-primary transition-colors">
                 Política de Privacidade
               </Link>
               <Link to="/termos" className="hover:text-primary transition-colors">

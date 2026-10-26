@@ -4,7 +4,9 @@
 // pára o build e a Vercel mantém o deploy anterior.
 // Verifica também as duas páginas que o vercel.json serve sem rota própria:
 // 404.html (endereços inexistentes) e index_fallback.html (posts publicados no
-// ERP depois do build), que não podem trazer a canonical de outra página.
+// ERP depois do build), que não podem trazer a canonical de outra página; e que
+// cada destino fixo dos redirecionamentos do vercel.json tem HTML pré-renderizado
+// (um post de destino despublicado no ERP deixaria o 308 a apontar para nada).
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -12,6 +14,7 @@ const dist = path.resolve("dist");
 const errors = [];
 
 const read = (file) => readFile(path.join(dist, file), "utf8").catch(() => null);
+const htmlFileFor = (pathname) => (pathname === "/" ? "index.html" : `${pathname.slice(1)}/index.html`);
 const tags = (html, name) => html.match(new RegExp(`<${name}\\b[^>]*>`, "gi")) ?? [];
 const attr = (tag, name) => new RegExp(`\\s${name}="([^"]*)"`, "i").exec(tag)?.[1];
 const canonicals = (html) =>
@@ -26,7 +29,7 @@ if (locs.length === 0) errors.push("sitemap.xml em falta ou sem URLs");
 for (const loc of locs) {
   const { pathname } = new URL(loc);
   if (pathname !== "/" && pathname.endsWith("/")) errors.push(`${loc}: termina em barra (o vercel.json redireciona-a)`);
-  const file = pathname === "/" ? "index.html" : `${pathname.slice(1)}/index.html`;
+  const file = htmlFileFor(pathname);
   const html = await read(file);
   if (!html) {
     errors.push(`${loc}: sem dist/${file}`);
@@ -41,6 +44,12 @@ const notFound = await read("404.html");
 if (!notFound || !isNoindex(notFound)) errors.push("404.html em falta ou sem noindex");
 const fallback = await read("index_fallback.html");
 if (!fallback || canonicals(fallback).length > 0) errors.push("index_fallback.html em falta ou com canonical");
+
+const { redirects = [] } = JSON.parse(await readFile("vercel.json", "utf8"));
+for (const { source, destination } of redirects) {
+  if (destination.includes(":")) continue; // destino com parâmetros (a regra da barra final)
+  if (!(await read(htmlFileFor(destination)))) errors.push(`vercel.json: ${source} redireciona para ${destination}, sem HTML em dist/`);
+}
 
 if (errors.length > 0) {
   console.error(`verify-prerender: ${errors.length} problema(s)\n  ${errors.join("\n  ")}`);

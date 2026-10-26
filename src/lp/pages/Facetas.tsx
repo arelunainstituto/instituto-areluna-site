@@ -58,7 +58,7 @@ const Facetas = () => {
           }),
           buildBreadcrumbSchema([
             { name: "Início", path: "/" },
-            { name: "Facetas Dentárias", path: "/facetas" },
+            { name: "Facetas Dentárias", path: "/facetas-dentarias-porto" },
           ]),
           faqFacetas,
         ]}
