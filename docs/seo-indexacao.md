@@ -21,7 +21,7 @@ O site é uma SPA em React. O Google lê primeiro o HTML que o servidor entrega 
 | `/blog/<slug>` (sem ponto) ainda sem prerender | 200 com `index_fallback.html` (HTML base, sem canonical); o React carrega o post |
 | Qualquer outro endereço | 404 com `404.html` (a rota `/404` pré-renderizada) |
 
-O `index_fallback.html` serve os posts publicados no ERP depois do último build. Esses posts só entram no sitemap e no prerender no build seguinte: convém um build diário (Deploy Hook da Vercel chamado por um agendamento).
+O `index_fallback.html` serve os posts publicados no ERP depois do último build. Esses posts entram no sitemap e no prerender no build seguinte: o workflow `.github/workflows/build-diario.yml` pede um build de produção todos os dias às 12:30 UTC, meia hora depois da hora a que o ERP publica os posts agendados. Usa o Deploy Hook «build-diario-blog» da Vercel, guardado no secret `VERCEL_DEPLOY_HOOK_URL` do GitHub. O GitHub desativa agendamentos de repositórios públicos sem atividade durante 60 dias (avisa por email antes).
 
 ## Página nova
 

@@ -1,0 +1,28 @@
+name: Build diário (posts agendados do blog)
+
+# O ERP publica os posts agendados às 12:00 UTC sem fazer deploy do site. Este
+# build de produção, meia hora depois, põe-nos no prerender e no sitemap (ver
+# docs/seo-indexacao.md); sem ele, só entrariam no deploy seguinte.
+# O secret VERCEL_DEPLOY_HOOK_URL é o Deploy Hook «build-diario-blog» do projeto
+# na Vercel (Settings → Git → Deploy Hooks), para o ramo main.
+on:
+  schedule:
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Pedir à Vercel um build de produção do main
+        env:
+          HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK_URL" ]; then
+            echo "::error::Falta o secret VERCEL_DEPLOY_HOOK_URL (Deploy Hook da Vercel para o main)."
+            exit 1
+          fi
+          curl --fail --silent --show-error --request POST "$HOOK_URL"
