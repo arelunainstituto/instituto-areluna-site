@@ -93,6 +93,11 @@ const Index = () => {
         title="Clínica Dentária e Estética Avançada Porto | Instituto AreLuna"
         description="Instituto AreLuna no Porto — medicina dentária, medicina estética e tratamentos capilares. Implantes, alinhadores, facetas e harmonização orofacial. Marque a sua consulta de avaliação."
         canonical="https://www.institutoareluna.pt/"
+        alternates={[
+          { hrefLang: "pt-PT", href: "https://www.institutoareluna.pt/" },
+          { hrefLang: "pt-BR", href: "https://institutoareluna.com.br/" },
+          { hrefLang: "x-default", href: "https://www.institutoareluna.pt/" },
+        ]}
         jsonLd={[dentistSchema, personSchema, websiteSchema, ...buildTeamPersonSchemas()]}
       />
       <Header />

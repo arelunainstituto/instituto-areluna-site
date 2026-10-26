@@ -1,18 +1,65 @@
 {
   "redirects": [
-    {
-      "source": "/turismo-dentario",
-      "destination": "/pacientes-internacionais",
-      "permanent": true
-    }
+    { "source": "/turismo-dentario{/}?", "destination": "/pacientes-internacionais", "permanent": true },
+    { "source": "/implantes{/}?", "destination": "/implantes-dentarios-porto", "permanent": true },
+    { "source": "/alinhadores{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/facetas{/}?", "destination": "/facetas-dentarias-porto", "permanent": true },
+    { "source": "/caso-real{/}?", "destination": "/", "permanent": true },
+    { "source": "/caso-sandra-maria{/}?", "destination": "/", "permanent": true },
+    { "source": "/caso-diana-vieira{/}?", "destination": "/", "permanent": true },
+    { "source": "/casos/:path*{/}?", "destination": "/", "permanent": true },
+
+    { "source": "/facetas-dentarias-o-que-sao{/}?", "destination": "/facetas-dentarias-porto", "permanent": true },
+    { "source": "/procedimentos-de-estetica-facial{/}?", "destination": "/blog/conheca-os-principais-procedimentos-de-estetica-facial", "permanent": true },
+    { "source": "/contactos{/}?", "destination": "/contato", "permanent": true },
+    { "source": "/equipa/:path*{/}?", "destination": "/sobre-a-fundadora", "permanent": true },
+    { "source": "/clinica{/}?", "destination": "/sobre-a-fundadora", "permanent": true },
+    { "source": "/dente-siso-inflamado{/}?", "destination": "/tratamentos", "permanent": true },
+    { "source": "/4-verdades-que-precisa-de-conhecer-sobre-a-harmonizacao-facial{/}?", "destination": "/blog/harmonizacao-facial-natural-porto", "permanent": true },
+    { "source": "/turismo-dentario-como-funciona{/}?", "destination": "/blog/turismo-dentario-como-funciona-vantagens-e-desafios", "permanent": true },
+    { "source": "/alinhadores-invisiveis{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/reabilitacao-oral{/}?", "destination": "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes", "permanent": true },
+    { "source": "/transplante-capilar-pos-operatorio{/}?", "destination": "/blog/transplante-capilar-fase-patinho-feio", "permanent": true },
+    { "source": "/bichectomia-conheca-o-procedimento{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/dicas-para-uma-pele-jovem-sempre{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/porque-e-preciso-cuidar-do-sorriso-desde-pequeno{/}?", "destination": "/tratamentos", "permanent": true },
+    { "source": "/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada-no-porto-em-portugal{/}?", "destination": "/blog/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada", "permanent": true },
+    { "source": "/politica-de-privacidade{/}?", "destination": "/privacidade", "permanent": true },
+    { "source": "/tratamentos/implantologia{/}?", "destination": "/implantes-dentarios-porto", "permanent": true },
+    { "source": "/tratamentos/branqueamento-dentario{/}?", "destination": "/blog/branqueamento-dentario-funciona", "permanent": true },
+    { "source": "/tratamentos/bichectomia{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/tratamentos/harmonizacao-orofacial{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/tratamentos/estetica-dentaria{/}?", "destination": "/facetas-dentarias-porto", "permanent": true },
+    { "source": "/tratamentos/alinhadores-invisiveis{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/tratamentos/ortodontia{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/tratamentos/bruxismo{/}?", "destination": "/blog/bruxismo-goteira-noturna", "permanent": true },
+    { "source": "/tratamentos/:path+{/}?", "destination": "/tratamentos", "permanent": true },
+    { "source": "/portfolio-category/branqueamento-dentario/:path*{/}?", "destination": "/blog/branqueamento-dentario-funciona", "permanent": true },
+    { "source": "/portfolio-category/estetica-dentaria/:path*{/}?", "destination": "/facetas-dentarias-porto", "permanent": true },
+    { "source": "/portfolio-category/alinhadores-invisiveis/:path*{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/portfolio-category/ortodontia/:path*{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
+    { "source": "/portfolio-category/harmonizacao-orofacial/:path*{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/portfolio-category/bichectomia/:path*{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/portfolio-category/:path*{/}?", "destination": "/tratamentos", "permanent": true },
+    { "source": "/portfolio-tag/:path*{/}?", "destination": "/estetica-facial", "permanent": true },
+    { "source": "/casos-clinicos/:path+{/}?", "destination": "/", "permanent": true },
+    { "source": "/category/:path*{/}?", "destination": "/blog", "permanent": true },
+
+    { "source": "/:path+/", "destination": "/:path+", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/blog/:slug", "destination": "/index_fallback.html" }
   ],
   "headers": [
+    {
+      "source": "/index_fallback.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [

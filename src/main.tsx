@@ -58,14 +58,20 @@ Promise.race([
 // terminou de aplicar o SEO.
 //
 // Estratégia: observar mutações no <head>; cada vez que o Helmet escreve
-// algo, reiniciamos um debounce de 600ms. Quando passar esse tempo sem
-// novas mutações, o head considera-se estável e disparamos o evento.
-// Hard cap de 6s garante que mesmo em páginas com erro o snapshot ocorre.
+// algo, reiniciamos um debounce. Quando passar esse tempo sem novas
+// mutações, o head considera-se estável e disparamos o evento.
+//
+// Só disparamos depois de a página ter canonical: todas as rotas a definem
+// no SEOHead, e as que dependem da API do ERP (blog) só o fazem quando os
+// dados chegam. Sem esta condição, um post lento era capturado ainda no
+// esqueleto de carregamento, sem título nem canonical. O hard cap garante o
+// snapshot mesmo em páginas com erro (o verify-prerender apanha-as no build).
 {
   let settleTimer: ReturnType<typeof setTimeout> | undefined;
   let fired = false;
-  const fire = () => {
-    if (fired) return;
+  const hasCanonical = () => document.head.querySelector('link[rel="canonical"]') !== null;
+  const fire = (force = false) => {
+    if (fired || (!force && !hasCanonical())) return;
     fired = true;
     observer.disconnect();
     if (settleTimer) clearTimeout(settleTimer);
@@ -80,6 +86,6 @@ Promise.race([
   observer.observe(document.head, { childList: true, subtree: true, characterData: true });
   // Mínimo de espera antes do primeiro disparo (mesmo sem mutações)
   settleTimer = setTimeout(fire, 4500);
-  // Hard cap absoluto — algumas rotas têm i18n async + lazy chunk + helmet
-  setTimeout(fire, 12000);
+  // Hard cap absoluto, abaixo do timeout de 40 s do prerender (vite.config.ts)
+  setTimeout(() => fire(true), 30000);
 }

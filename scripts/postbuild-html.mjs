@@ -13,7 +13,9 @@
 //    pintura e em duplicado, e o pixel do Ads levava parâmetros do build
 //    (url=127.0.0.1). O snippet do GTM no index.html e o LPTracking voltam a
 //    injetar tudo em runtime, como numa visita normal.
-import { readdir, readFile, writeFile } from "node:fs/promises";
+// 4. Move a rota /404 pré-renderizada para dist/404.html: a Vercel serve esse
+//    ficheiro, com status 404, a qualquer endereço sem ficheiro nem rewrite.
+import { readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import Beasties from "beasties";
 
@@ -54,3 +56,6 @@ for await (const file of htmlFiles(dist)) {
   count += 1;
 }
 console.log(`postbuild-html: ${count} páginas processadas`);
+
+await rename(path.join(dist, "404", "index.html"), path.join(dist, "404.html"));
+await rm(path.join(dist, "404"), { recursive: true });

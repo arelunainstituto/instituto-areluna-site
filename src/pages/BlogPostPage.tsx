@@ -69,6 +69,13 @@ const BlogPostPage = () => {
     if (!staticPost && (error || (!isListLoading && !postId))) {
         return (
             <div className="container mx-auto px-4 py-32 text-center">
+                {/* Slugs inexistentes chegam aqui pelo index_fallback.html (vercel.json) com status 200 */}
+                <SEOHead
+                    title="Artigo não encontrado"
+                    description="O artigo que procura não existe ou foi removido."
+                    canonical="https://www.institutoareluna.pt/blog"
+                    noindex
+                />
                 <h2 className="text-3xl font-light mb-4">Artigo não encontrado</h2>
                 <p className="text-gray-500 mb-8">O artigo que você procura não existe ou foi removido.</p>
                 <Button asChild variant="gold" size="cta">

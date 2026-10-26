@@ -26,6 +26,8 @@ interface SEOHeadProps {
   articlePublishedTime?: string;
   /** para artigos: data ISO 8601 de modificação */
   articleModifiedTime?: string;
+  /** hreflang: a mesma página noutras línguas/mercados (inclui a própria) */
+  alternates?: { hrefLang: string; href: string }[];
 }
 
 const SEOHead = ({
@@ -39,6 +41,7 @@ const SEOHead = ({
   noindex = false,
   articlePublishedTime,
   articleModifiedTime,
+  alternates = [],
 }: SEOHeadProps) => {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
@@ -60,6 +63,9 @@ const SEOHead = ({
         <meta name="robots" content="index, follow, max-image-preview:large" />
       )}
       <link rel="canonical" href={canonical} />
+      {alternates.map(({ hrefLang, href }) => (
+        <link key={hrefLang} rel="alternate" hrefLang={hrefLang} href={href} />
+      ))}
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />

@@ -1,47 +1,16 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import prerender from "@prerenderer/rollup-plugin";
-
-/**
- * Rotas a pré-renderizar em build (FASE2 §4.1 — SSR/prerender).
- * Cobre todas as páginas indexáveis e os posts estáticos do blog. Os
- * redirects (`/implantes`, `/caso-real`, etc.) ficam de fora porque
- * são apenas <Navigate>: prerender resultaria no destino, duplicado.
- * Rotas dinâmicas servidas pela API (posts do ERP) só serão adicionadas
- * quando `ENABLE_ERP_POSTS` for ligado e tivermos um inventário fiável.
- */
-const PRERENDER_ROUTES = [
-  // Institucional
-  "/",
-  "/tratamentos",
-  "/transplante-capilar",
-  "/estetica-facial",
-  "/contato",
-  "/sobre-a-fundadora",
-  "/blog",
-  "/casos-clinicos",
-  "/ortodontia",
-  "/privacidade",
-  "/termos",
-
-  // Blog — slugs servidos pela API do ERP.
-  // Atualizar manualmente quando forem publicados posts novos.
-  "/blog/reabilitacao-oral-muito-mais-do-que-colocar-dentes",
-  "/blog/estetica-integrada-o-equilibrio-entre-naturalidade-e-tecnologia",
-  "/blog/implante-dentario-doi",
-  "/blog/dentes-fixos-num-so-dia-carga-imediata",
-  "/blog/turismo-dentario-como-funciona-vantagens-e-desafios",
-  "/blog/conheca-os-principais-procedimentos-de-estetica-facial",
-  "/blog/sera-que-vale-a-pena-usar-aparelho-para-correcao-ortodontica-numa-idade-avancada",
-
-  // LPs migradas do vivobem.pt
-  "/implantes-dentarios-porto",
-  "/alinhadores-invisiveis-porto",
-  "/facetas-dentarias-porto",
-  "/obrigado",
-];
+import {
+  INDEXABLE_PAGES,
+  UNLISTED_PAGES,
+  blogPostPath,
+  buildSitemap,
+  fetchBlogPostRoutes,
+  type BlogPostRoute,
+} from "./scripts/seo-pages";
 
 /**
  * Separa o vendor estável (muda raramente → fica em cache entre deploys) e
@@ -94,6 +63,17 @@ function localePreload(): Plugin {
   };
 }
 
+/** Gera dist/sitemap.xml com as páginas indexáveis e os posts lidos do ERP neste build. */
+function sitemap(posts: BlogPostRoute[]): Plugin {
+  return {
+    name: "areluna-sitemap",
+    apply: "build",
+    generateBundle() {
+      this.emitFile({ type: "asset", fileName: "sitemap.xml", source: buildSitemap(posts) });
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 // Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
 // domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
@@ -111,6 +91,11 @@ export default defineConfig(async ({ mode }) => {
     args: ["--lang=pt-PT", "--accept-lang=pt-PT,pt"],
   };
   const shouldPrerender = mode !== "development";
+  // Posts do blog: a mesma lista dá as rotas do prerender e o sitemap.
+  const env = loadEnv(mode, process.cwd(), "VITE_");
+  const blogPosts = shouldPrerender
+    ? await fetchBlogPostRoutes(env.VITE_API_URL, env.VITE_BLOG_PUBLIC_API_KEY)
+    : [];
   if (shouldPrerender && process.platform === "linux") {
     const chromium = (await import("@sparticuz/chromium")).default;
     launchOptions = {
@@ -129,9 +114,14 @@ export default defineConfig(async ({ mode }) => {
     react(),
     mode === 'development' && componentTagger(),
     localePreload(),
+    shouldPrerender && sitemap(blogPosts),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
     shouldPrerender && prerender({
-      routes: PRERENDER_ROUTES,
+      routes: [...INDEXABLE_PAGES, ...UNLISTED_PAGES, ...blogPosts.map(blogPostPath)],
+      // Guarda o index.html sem prerender em dist/index_fallback.html: o
+      // vercel.json serve-o aos posts publicados no ERP depois do último build
+      // (sem a canonical da home, que o HTML pré-renderizado de "/" traria).
+      fallback: true,
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
         // Espera o evento `app-rendered` disparado em main.tsx assim que o
