@@ -15,7 +15,7 @@ Todo agente é lançado com o modelo E o esforço fixados por esta tabela
 | Maior nota | Opus 5.5 · max | US$ 5,98 | 58 | Só o crítico: arquitetura, revisão de segurança crítica, depuração que as outras não resolveram |
 
 - EVITAR: Sonnet 5.5 em medium (US$ 0,59), xhigh (US$ 2,74) ou max (US$ 7,60), e Opus 5 em max (US$ 5,86). Sempre há uma opção mais barata e melhor.
-- Haiku 4.5: só tarefas triviais e mecânicas de texto, quando pedido.
+- Haiku 5.5: só tarefas triviais e mecânicas de texto, quando pedido.
 - O agente principal roda em Opus 5.5 · medium. Max só no crítico.
 - Ao lançar um agente, dizer ao usuário o modelo e o esforço. Avisar quando algo for rodar numa configuração da lista «evitar».
 
@@ -29,7 +29,7 @@ Lance com `subagent_type: <nome>`, sem `model`.
 | `sonnet-5-5-low` | claude-sonnet-5-5 · low (padrão) |
 | `opus-5-5-medium` | claude-opus-5-5 · medium |
 | `opus-5-5-max` | claude-opus-5-5 · max |
-| `haiku-4-5` | claude-haiku-4-5-20251001 (só quando pedido) |
+| `haiku-5-5` | claude-haiku-5-5 (só quando pedido) |
 
 Elas só são carregadas na abertura da sessão. Numa sessão já aberta, use a ferramenta
 de workflow com `model` e `effort` explícitos.
