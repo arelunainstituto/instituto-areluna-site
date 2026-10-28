@@ -18,6 +18,8 @@ export interface Post {
     custom_author: string;
     author_id: string;
     author_name: string;
+    /** Médico que reviu o artigo: id da equipa em src/data/teamSchema.ts ou "arethuza". */
+    reviewer_id?: string;
     content?: string; // Optional because list view doesn't have it
     updated_at?: string;
     /** Posts relacionados (resolvidos pelo backend a partir de related_post_ids). */

@@ -35,6 +35,7 @@ A listagem **não** precisa enviar `content` (poupa payload). O detalhe
 |---|---|---|
 | `excerpt` | string (≤155 chars) | Card da listagem e meta description |
 | `author_name` | string | Linha do autor |
+| `reviewer_id` | string | Médico que reviu o artigo: `arethuza`, `leonardo`, `daiane`, `carla`, `marcos`, `aline`, `pethine`, `sara`, `yara` ou `thais` (ids de `src/data/teamSchema.ts`). Mostra «Revisto por Dr./Dra. … (OMD/OM n.º …)» e entra no JSON-LD como `reviewedBy`. Um id desconhecido é ignorado. Basta no detalhe do post. |
 | `updated_at` | string ISO-8601 | Default: igual a `published_at` |
 | `tags` | string[] | Reservado para categorias futuras |
 

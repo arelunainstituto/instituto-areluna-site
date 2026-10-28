@@ -5,18 +5,27 @@ name: Build diário (posts agendados do blog)
 # docs/seo-indexacao.md); sem ele, só entrariam no deploy seguinte.
 # O secret VERCEL_DEPLOY_HOOK_URL é o Deploy Hook «build-diario-blog» do projeto
 # na Vercel (Settings → Git → Deploy Hooks), para o ramo main.
+# No fim avisa o Bing (IndexNow) dos endereços novos ou alterados no sitemap.
 on:
   schedule:
     - cron: "30 12 * * *"
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 25
     steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: scripts
+
+      - name: Guardar o sitemap publicado antes do build
+        run: curl --fail --silent --show-error https://www.institutoareluna.pt/sitemap.xml -o "$RUNNER_TEMP/sitemap-antes.xml"
+
       - name: Pedir à Vercel um build de produção do main
         env:
           HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
@@ -26,3 +35,6 @@ jobs:
             exit 1
           fi
           curl --fail --silent --show-error --request POST "$HOOK_URL"
+
+      - name: Avisar o Bing (IndexNow) dos endereços novos ou alterados
+        run: node scripts/indexnow.mjs "$RUNNER_TEMP/sitemap-antes.xml"

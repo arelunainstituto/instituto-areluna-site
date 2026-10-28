@@ -7,6 +7,7 @@ import {
   INDEXABLE_PAGES,
   UNLISTED_PAGES,
   blogPostPath,
+  buildLlmsTxt,
   buildSitemap,
   fetchBlogPostRoutes,
   type BlogPostRoute,
@@ -63,13 +64,14 @@ function localePreload(): Plugin {
   };
 }
 
-/** Gera dist/sitemap.xml com as páginas indexáveis e os posts lidos do ERP neste build. */
-function sitemap(posts: BlogPostRoute[]): Plugin {
+/** Gera dist/sitemap.xml e dist/llms.txt com as páginas indexáveis e os posts lidos do ERP neste build. */
+function seoFiles(posts: BlogPostRoute[]): Plugin {
   return {
-    name: "areluna-sitemap",
+    name: "areluna-seo-files",
     apply: "build",
     generateBundle() {
       this.emitFile({ type: "asset", fileName: "sitemap.xml", source: buildSitemap(posts) });
+      this.emitFile({ type: "asset", fileName: "llms.txt", source: buildLlmsTxt(posts) });
     },
   };
 }
@@ -114,7 +116,7 @@ export default defineConfig(async ({ mode }) => {
     react(),
     mode === 'development' && componentTagger(),
     localePreload(),
-    shouldPrerender && sitemap(blogPosts),
+    shouldPrerender && seoFiles(blogPosts),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
     shouldPrerender && prerender({
       routes: [...INDEXABLE_PAGES, ...UNLISTED_PAGES, ...blogPosts.map(blogPostPath)],

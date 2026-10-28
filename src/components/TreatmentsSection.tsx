@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Reveal, cardBaseClasses } from "@/components/site";
 import { cn } from "@/lib/utils";
@@ -54,30 +54,49 @@ const TreatmentsSection = () => {
         {filtered.slice(0, 9).map((item, index) => {
           const title = t(`treatments.items.${item.id}.title`);
           const description = t(`treatments.items.${item.id}.description`);
+          const className = cn(cardBaseClasses("light"), "justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf");
+          const content = (
+            <>
+              <div>
+                <h3 className="mb-2 font-vivant text-lg text-jet transition-colors group-hover:text-gold-leaf dark:text-gray-100">
+                  {title}
+                </h3>
+                <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
+                  {description.length > 80 ? `${description.substring(0, 80)}...` : description}
+                </p>
+              </div>
+              {item.page ? (
+                <ArrowRight className="h-5 w-5 self-end text-gold-leaf opacity-70 transition-opacity group-hover:opacity-100" aria-hidden="true" />
+              ) : (
+                <ArrowUpRight className="h-5 w-5 self-end text-gold-leaf opacity-70 transition-opacity group-hover:opacity-100" aria-hidden="true" />
+              )}
+            </>
+          );
           return (
             <Reveal key={item.id} delay={(index % 3) * 80} className="h-full">
-              <a
-                href={getWhatsAppUrl(`Olá! Gostaria de saber mais sobre: ${title}`)}
-                data-track-item={item.id}
-                data-track-label={title}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={onContactClick}
-                className={cn(cardBaseClasses("light"), "justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-leaf")}
-              >
-                <div>
-                  <h3 className="mb-2 font-vivant text-lg text-jet transition-colors group-hover:text-gold-leaf dark:text-gray-100">
-                    {title}
-                  </h3>
-                  <p className="font-vivant-light text-sm leading-relaxed text-jet/70 dark:text-gray-300">
-                    {description.length > 80 ? `${description.substring(0, 80)}...` : description}
-                  </p>
-                </div>
-                <ArrowUpRight
-                  className="h-5 w-5 self-end text-gold-leaf opacity-70 transition-opacity group-hover:opacity-100"
-                  aria-hidden="true"
-                />
-              </a>
+              {item.page ? (
+                <Link
+                  to={item.page}
+                  data-track-item={item.id}
+                  data-track-label={title}
+                  onClick={() => track("select_content", { content_type: "pagina_tratamento", item_id: String(item.id), cta_section: "tratamentos" })}
+                  className={className}
+                >
+                  {content}
+                </Link>
+              ) : (
+                <a
+                  href={getWhatsAppUrl(`Olá! Gostaria de saber mais sobre: ${title}`)}
+                  data-track-item={item.id}
+                  data-track-label={title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onContactClick}
+                  className={className}
+                >
+                  {content}
+                </a>
+              )}
             </Reveal>
           );
         })}

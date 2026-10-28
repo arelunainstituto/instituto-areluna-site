@@ -6,14 +6,17 @@ import { findStaticPostBySlug, ENABLE_ERP_POSTS } from "@/data/blogStaticPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/utils";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { ArrowLeft, Calendar, Stethoscope, User } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { useContact } from "@/contexts/ContactContext";
+import { findClinicalReviewer } from "@/data/teamSchema";
+import { treatmentLinksFor } from "@/data/blogTreatmentLinks";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -98,6 +101,11 @@ const BlogPostPage = () => {
     // Do post e não do URL: o post também abre pelo slug do título, que não deve ser canónico.
     const canonical = `https://www.institutoareluna.pt/blog/${post.slug || slugify(post.title)}`;
 
+    // Revisão clínica (campo reviewer_id do ERP): em conteúdo de saúde, o Google
+    // e os assistentes de IA dão peso a quem reviu o artigo e à sua cédula.
+    const reviewer = findClinicalReviewer(post.reviewer_id);
+    const treatmentLinks = treatmentLinksFor(post);
+
     const blogPostingSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -108,11 +116,15 @@ const BlogPostPage = () => {
         "datePublished": post.published_at,
         "dateModified": post.updated_at || post.published_at,
         "inLanguage": "pt-PT",
-        "author": {
-            "@type": "Person",
-            "name": post.author_name || "Instituto AreLuna",
-            "url": "https://www.institutoareluna.pt/sobre-a-fundadora"
-        },
+        // Sem autor ou com o nome da clínica, o autor é a organização. A página
+        // da fundadora só é o URL do autor quando o autor é ela.
+        "author": post.author_name && !/instituto areluna/i.test(post.author_name)
+            ? {
+                "@type": "Person",
+                "name": post.author_name,
+                ...(/arethuza/i.test(post.author_name) && { "url": "https://www.institutoareluna.pt/sobre-a-fundadora" })
+            }
+            : { "@type": "Organization", "name": "Instituto AreLuna", "url": "https://www.institutoareluna.pt/" },
         "publisher": {
             "@type": "Organization",
             "name": "Instituto AreLuna",
@@ -122,7 +134,19 @@ const BlogPostPage = () => {
                 "url": "https://www.institutoareluna.pt/og-institutoareluna-logo.jpg"
             }
         },
-        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical}
+        // reviewedBy pertence à WebPage, não ao BlogPosting (schema.org).
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonical,
+            ...(reviewer && {
+                "reviewedBy": {
+                    "@type": "Person",
+                    "name": reviewer.name,
+                    "identifier": { "@type": "PropertyValue", "propertyID": "OMD/OM", "value": reviewer.registration },
+                    ...(reviewer.url && { "url": reviewer.url })
+                }
+            })
+        }
     };
 
     return (
@@ -170,6 +194,12 @@ const BlogPostPage = () => {
                                 <span>{post.author_name}</span>
                             </div>
                         )}
+                        {reviewer && (
+                            <div className="flex items-center">
+                                <Stethoscope className="mr-2 h-4 w-4 text-gold-leaf" />
+                                <span>Revisto por {reviewer.name} ({reviewer.registration})</span>
+                            </div>
+                        )}
                     </div>
 
                     {post.image_url && (
@@ -215,6 +245,20 @@ const BlogPostPage = () => {
                                 Falar com a nossa equipa
                             </a>
                         </div>
+                    )}
+                    {!post.isStatic && <ClinicalDisclaimer className="mt-4 text-center text-gray-500 dark:text-gray-400" />}
+
+                    {treatmentLinks.length > 0 && (
+                        <aside className="article-leia-tambem">
+                            <h2>Saiba mais sobre o tratamento</h2>
+                            <ul>
+                                {treatmentLinks.map((link) => (
+                                    <li key={link.path}>
+                                        <Link to={link.path}>{link.label}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </aside>
                     )}
 
                     {/* "Leia também" — alimentado pelo campo related_posts da API

@@ -40,6 +40,7 @@ export const UNLISTED_PAGES = [
 
 export interface BlogPostRoute {
   slug: string;
+  title: string;
   /** AAAA-MM-DD — a data mais recente entre publicação e edição. */
   lastmod: string;
 }
@@ -97,7 +98,7 @@ export async function fetchBlogPostRoutes(apiUrl?: string, apiKey?: string): Pro
       return [];
     }
     const dates = [post.published_at, post.updated_at].filter(Boolean).map((d) => d!.slice(0, 10));
-    return [{ slug, lastmod: dates.sort().at(-1) ?? "" }];
+    return [{ slug, title: post.title, lastmod: dates.sort().at(-1) ?? "" }];
   });
 }
 
@@ -118,6 +119,52 @@ export function buildSitemap(posts: BlogPostRoute[]): string {
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...urls,
     "</urlset>",
+    "",
+  ].join("\n");
+}
+
+/**
+ * llms.txt (https://llmstxt.org): o resumo do site que os assistentes de IA
+ * leem. Lista as páginas indexáveis e todos os posts deste build, para estar
+ * sempre igual ao sitemap. Texto revisto para a ERS (DL 238/2015). Dos posts
+ * entra só o título: os resumos vêm do ERP sem essa revisão.
+ */
+export function buildLlmsTxt(posts: BlogPostRoute[]): string {
+  const link = (title: string, path: string, note?: string) =>
+    `- [${title.replace(/[[\]]/g, "").replace(/\s+/g, " ").trim()}](${SITE_URL}${path})${note ? `: ${note}` : ""}`;
+  const articles = [...posts]
+    .sort((a, b) => b.lastmod.localeCompare(a.lastmod) || a.slug.localeCompare(b.slug))
+    .map((post) => link(post.title, blogPostPath(post)));
+  return [
+    "# Instituto AreLuna",
+    "",
+    "> Clínica no Porto com equipa multidisciplinar que reúne medicina dentária, medicina estética e tratamentos capilares. Cada plano de tratamento resulta de uma consulta de avaliação e de diagnóstico individual, na qual são explicadas as opções indicadas, os riscos e os custos.",
+    "",
+    "Unidade Mota Galiza: Rua Júlio Dinis, n.º 194, 4050-327 Porto. Telefone: +351 220 430 090. Registo ERS n.º 161637.",
+    "",
+    "## Páginas principais",
+    "",
+    link("Página inicial", "/", "apresentação do Instituto AreLuna"),
+    link("Tratamentos", "/tratamentos", "áreas de tratamento e consulta de avaliação"),
+    link("Sobre a fundadora", "/sobre-a-fundadora", "equipa e percurso da fundadora"),
+    link("Contacto", "/contato", "contactos e marcação de consulta"),
+    link("Blog", "/blog", "artigos informativos sobre saúde e tratamentos"),
+    "",
+    "## Tratamentos",
+    "",
+    link("Transplante capilar", "/transplante-capilar", "tratamento capilar, definido após avaliação clínica"),
+    link("Estética facial", "/estetica-facial", "medicina estética facial"),
+    link("Implantes dentários no Porto", "/implantes-dentarios-porto", "reabilitação oral com implantes"),
+    link("Alinhadores invisíveis no Porto", "/alinhadores-invisiveis-porto", "correção ortodôntica com alinhadores transparentes removíveis"),
+    link("Facetas dentárias no Porto", "/facetas-dentarias-porto", "estética dentária"),
+    "",
+    "## Artigos do blog",
+    "",
+    ...articles,
+    "",
+    "## Outros recursos",
+    "",
+    link("Sitemap", "/sitemap.xml", "lista das páginas públicas"),
     "",
   ].join("\n");
 }

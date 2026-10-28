@@ -35,6 +35,29 @@ const CLINIC_REF = {
   "url": "https://www.institutoareluna.pt/",
 };
 
+/** "OMD 11846" → "OMD n.º 11846" */
+const registrationOf = (crm: string) => crm.replace(/^(OMD|OM) /, "$1 n.º ");
+
+export interface ClinicalReviewer {
+  name: string;
+  /** Ex.: "OMD n.º 11846" */
+  registration: string;
+  url?: string;
+}
+
+/**
+ * Revisor clínico de um post do blog, pelo campo `reviewer_id` do ERP: o id
+ * de um membro da equipa ou "arethuza". Um id desconhecido devolve undefined
+ * e o post sai sem «Revisto por».
+ */
+export const findClinicalReviewer = (id?: string): ClinicalReviewer | undefined => {
+  if (id === "arethuza") {
+    return { name: "Dra. Arethuza Luna", registration: "OMD n.º 11845", url: "https://www.institutoareluna.pt/sobre-a-fundadora" };
+  }
+  const member = TEAM.find((m) => m.id === id);
+  return member?.crm ? { name: member.name, registration: registrationOf(member.crm) } : undefined;
+};
+
 /**
  * Devolve um array de objectos `Person` (schema.org), um por membro da equipa,
  * todos vinculados ao Instituto AreLuna via `worksFor`.
@@ -45,7 +68,7 @@ const CLINIC_REF = {
 export const buildTeamPersonSchemas = () =>
   TEAM.map((m) => {
     const identifier = m.crm
-      ? { "identifier": { "@type": "PropertyValue", "propertyID": "OMD/OM", "value": m.crm.replace(/^(OMD|OM) /, "$1 n.º ") } }
+      ? { "identifier": { "@type": "PropertyValue", "propertyID": "OMD/OM", "value": registrationOf(m.crm) } }
       : {};
     return {
       "@context": "https://schema.org",

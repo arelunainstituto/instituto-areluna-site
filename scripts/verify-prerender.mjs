@@ -7,8 +7,12 @@
 // ERP depois do build), que não podem trazer a canonical de outra página; e que
 // cada destino fixo dos redirecionamentos do vercel.json tem HTML pré-renderizado
 // (um post de destino despublicado no ERP deixaria o 308 a apontar para nada).
-import { readFile } from "node:fs/promises";
+// Por fim: o llms.txt lista todas as URLs do sitemap, cada página que não é post
+// recebe um link de outra página (as landing pages de implantes, facetas e
+// alinhadores estiveram meses sem nenhum) e a chave do IndexNow está publicada.
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { INDEXNOW_KEY } from "./indexnow.mjs";
 
 const dist = path.resolve("dist");
 const errors = [];
@@ -50,6 +54,26 @@ for (const { source, destination } of redirects) {
   if (destination.includes(":")) continue; // destino com parâmetros (a regra da barra final)
   if (!(await read(htmlFileFor(destination)))) errors.push(`vercel.json: ${source} redireciona para ${destination}, sem HTML em dist/`);
 }
+
+const llms = (await read("llms.txt")) ?? "";
+for (const loc of locs) if (!llms.includes(`](${loc})`)) errors.push(`llms.txt: falta ${loc}`);
+
+// Links internos de cada página pré-renderizada (<rota>/index.html; o 404.html e
+// o index_fallback.html não contam).
+const htmlFiles = (await readdir(dist, { recursive: true })).filter((f) => f === "index.html" || f.endsWith("/index.html"));
+const linksByFile = new Map();
+for (const file of htmlFiles) {
+  const hrefs = tags((await read(file)) ?? "", "a").map((t) => attr(t, "href")?.replace(/^https:\/\/www\.institutoareluna\.pt/, ""));
+  linksByFile.set(file, new Set(hrefs));
+}
+for (const loc of locs) {
+  const { pathname } = new URL(loc);
+  if (pathname === "/" || pathname.startsWith("/blog/")) continue;
+  const linked = [...linksByFile].some(([file, hrefs]) => file !== htmlFileFor(pathname) && hrefs.has(pathname));
+  if (!linked) errors.push(`${loc}: nenhuma outra página tem link para ela`);
+}
+
+if ((await read(`${INDEXNOW_KEY}.txt`)) !== INDEXNOW_KEY) errors.push(`${INDEXNOW_KEY}.txt (chave do IndexNow) em falta ou com outro conteúdo`);
 
 if (errors.length > 0) {
   console.error(`verify-prerender: ${errors.length} problema(s)\n  ${errors.join("\n  ")}`);

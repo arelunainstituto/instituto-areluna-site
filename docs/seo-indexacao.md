@@ -3,8 +3,8 @@
 O site é uma SPA em React. O Google lê primeiro o HTML que o servidor entrega e só depois corre o JavaScript. Por isso cada página indexável tem de chegar já com o seu título e a sua canonical no HTML, gerado no build pelo prerender.
 
 - **Páginas e posts:** `scripts/seo-pages.ts`. As páginas institucionais estão listadas à mão; os posts do blog vêm da API do ERP no momento do build.
-- **Prerender e sitemap:** `vite.config.ts`. A mesma lista gera as rotas pré-renderizadas e o `dist/sitemap.xml`. Não existe `public/sitemap.xml`.
-- **Portão:** `scripts/verify-prerender.mjs`, no fim de `npm run build`. Falha o build se uma URL do sitemap não tiver HTML próprio, tiver outra canonical ou tiver `noindex`, ou se um destino dos redirecionamentos do `vercel.json` não existir.
+- **Prerender, sitemap e llms.txt:** `vite.config.ts`. A mesma lista gera as rotas pré-renderizadas, o `dist/sitemap.xml` e o `dist/llms.txt` (o resumo do site para assistentes de IA, com todos os posts). Não existem `public/sitemap.xml` nem `public/llms.txt`.
+- **Portão:** `scripts/verify-prerender.mjs`, no fim de `npm run build`. Falha o build se uma URL do sitemap não tiver HTML próprio, tiver outra canonical, tiver `noindex` ou faltar no `llms.txt`; se uma página que não é post não tiver link de nenhuma outra; se um destino dos redirecionamentos do `vercel.json` não existir; ou se faltar a chave do IndexNow.
 - **Servidor:** `vercel.json` (redirecionamentos, 404 e fallback do blog).
 
 **Regra:** se a API do ERP falhar no build (erro, mais de 30 s, lista vazia ou incompleta), o build falha de propósito. A Vercel mantém o deploy anterior em vez de publicar posts sem prerender.
@@ -22,6 +22,14 @@ O site é uma SPA em React. O Google lê primeiro o HTML que o servidor entrega 
 | Qualquer outro endereço | 404 com `404.html` (a rota `/404` pré-renderizada) |
 
 O `index_fallback.html` serve os posts publicados no ERP depois do último build. Esses posts entram no sitemap e no prerender no build seguinte: o workflow `.github/workflows/build-diario.yml` pede um build de produção todos os dias às 12:30 UTC, meia hora depois da hora a que o ERP publica os posts agendados. Usa o Deploy Hook «build-diario-blog» da Vercel, guardado no secret `VERCEL_DEPLOY_HOOK_URL` do GitHub. O GitHub desativa agendamentos de repositórios públicos sem atividade durante 60 dias (avisa por email antes).
+
+Depois do build, o mesmo workflow corre `scripts/indexnow.mjs`: espera que o sitemap publicado mude e envia ao IndexNow (Bing, que alimenta o ChatGPT e o Copilot) só os endereços novos ou com outro `lastmod`. A chave é pública por desenho e está em `public/<chave>.txt` (força-se o `git add -f`, porque o `.gitignore` ignora `public`). Para enviar o sitemap inteiro, por exemplo depois de mudar muitas páginas: `node scripts/indexnow.mjs --todos`.
+
+## Links internos e artigos
+
+- Os cartões de tratamento (`src/components/treatments/data.ts`) com página própria ligam para ela em vez de abrir o WhatsApp. Sem esses links, as landing pages ficavam só no sitemap e o Google dava as pesquisas de implantes e facetas à home.
+- Cada post liga à página do tratamento do seu tema (`src/data/blogTreatmentLinks.ts`).
+- O campo `reviewer_id` do ERP mostra «Revisto por …» com a cédula e entra no JSON-LD como `reviewedBy` (ver `areluna/blog-api-contract.md`). O autor só aponta para a página da fundadora quando é ela.
 
 ## Página nova
 

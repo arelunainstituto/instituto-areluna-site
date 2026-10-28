@@ -16,10 +16,20 @@ export const CATEGORY_IDS = [
 export interface TreatmentMeta {
   id: number;
   category: (typeof CATEGORY_IDS)[number];
+  /** Página própria do tratamento: o cartão liga para ela em vez de abrir o WhatsApp. */
+  page?: string;
 }
 
+/** Cartões com página própria. São os links internos que levam o Google às landing pages. */
+const PAGES: Record<number, string> = {
+  1: "/facetas-dentarias-porto",
+  2: "/alinhadores-invisiveis-porto",
+  4: "/implantes-dentarios-porto",
+  22: "/transplante-capilar",
+};
+
 const group = (category: TreatmentMeta["category"], from: number, to: number): TreatmentMeta[] =>
-  Array.from({ length: to - from + 1 }, (_, i) => ({ id: from + i, category }));
+  Array.from({ length: to - from + 1 }, (_, i) => ({ id: from + i, category, page: PAGES[from + i] }));
 
 export const TREATMENTS: TreatmentMeta[] = [
   ...group("medicina-dentaria", 1, 6),
