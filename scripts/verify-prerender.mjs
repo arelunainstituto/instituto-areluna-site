@@ -7,9 +7,10 @@
 // ERP depois do build), que não podem trazer a canonical de outra página; e que
 // cada destino fixo dos redirecionamentos do vercel.json tem HTML pré-renderizado
 // (um post de destino despublicado no ERP deixaria o 308 a apontar para nada).
-// Por fim: o llms.txt lista todas as URLs do sitemap, cada página que não é post
-// recebe um link de outra página (as landing pages de implantes, facetas e
-// alinhadores estiveram meses sem nenhum) e a chave do IndexNow está publicada.
+// Por fim: o llms.txt lista todas as URLs do sitemap, cada URL do sitemap além
+// da home recebe um link de outra página (as landing pages estiveram meses sem
+// nenhum, e os posts fora da 1.ª página do blog também: o Google deixava-os em
+// «Descoberta, não indexada») e a chave do IndexNow está publicada.
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { INDEXNOW_KEY } from "./indexnow.mjs";
@@ -68,7 +69,7 @@ for (const file of htmlFiles) {
 }
 for (const loc of locs) {
   const { pathname } = new URL(loc);
-  if (pathname === "/" || pathname.startsWith("/blog/")) continue;
+  if (pathname === "/") continue;
   const linked = [...linksByFile].some(([file, hrefs]) => file !== htmlFileFor(pathname) && hrefs.has(pathname));
   if (!linked) errors.push(`${loc}: nenhuma outra página tem link para ela`);
 }

@@ -4,7 +4,7 @@ O site é uma SPA em React. O Google lê primeiro o HTML que o servidor entrega 
 
 - **Páginas e posts:** `scripts/seo-pages.ts`. As páginas institucionais estão listadas à mão; os posts do blog vêm da API do ERP no momento do build.
 - **Prerender, sitemap e llms.txt:** `vite.config.ts`. A mesma lista gera as rotas pré-renderizadas, o `dist/sitemap.xml` e o `dist/llms.txt` (o resumo do site para assistentes de IA, com todos os posts). Não existem `public/sitemap.xml` nem `public/llms.txt`.
-- **Portão:** `scripts/verify-prerender.mjs`, no fim de `npm run build`. Falha o build se uma URL do sitemap não tiver HTML próprio, tiver outra canonical, tiver `noindex` ou faltar no `llms.txt`; se uma página que não é post não tiver link de nenhuma outra; se um destino dos redirecionamentos do `vercel.json` não existir; ou se faltar a chave do IndexNow.
+- **Portão:** `scripts/verify-prerender.mjs`, no fim de `npm run build`. Falha o build se uma URL do sitemap não tiver HTML próprio, tiver outra canonical, tiver `noindex` ou faltar no `llms.txt`; se uma URL do sitemap (além da home) não tiver link de nenhuma outra página; se um destino dos redirecionamentos do `vercel.json` não existir; ou se faltar a chave do IndexNow.
 - **Servidor:** `vercel.json` (redirecionamentos, 404 e fallback do blog).
 
 **Regra:** se a API do ERP falhar no build (erro, mais de 30 s, lista vazia ou incompleta), o build falha de propósito. A Vercel mantém o deploy anterior em vez de publicar posts sem prerender.
@@ -29,6 +29,7 @@ Depois do build, o mesmo workflow corre `scripts/indexnow.mjs`: espera que o sit
 
 - Os cartões de tratamento (`src/components/treatments/data.ts`) com página própria ligam para ela em vez de abrir o WhatsApp. Sem esses links, as landing pages ficavam só no sitemap e o Google dava as pesquisas de implantes e facetas à home.
 - Cada post liga à página do tratamento do seu tema (`src/data/blogTreatmentLinks.ts`).
+- /blog tem, por baixo da paginação, a lista «Ver todos os N artigos». A paginação só funciona no browser (`/blog?page=2` recebe o HTML pré-renderizado da página 1), por isso é esta lista que dá a cada post um link no HTML. Sem ela, em novembro de 2026, 20 posts estavam em «Descoberta, não indexada» ou eram desconhecidos do Google.
 - O campo `reviewer_id` do ERP mostra «Revisto por …» com a cédula e entra no JSON-LD como `reviewedBy` (ver `areluna/blog-api-contract.md`). O autor só aponta para a página da fundadora quando é ela.
 
 ## Página nova

@@ -247,6 +247,28 @@ const BlogPage = () => {
                             <p className="mt-4 text-center text-sm font-light text-gray-500 dark:text-gray-400">
                                 Página {currentPage} de {totalPages} · {posts.length} artigos
                             </p>
+
+                            {/* Índice de todos os artigos. A paginação só funciona no browser
+                                (/blog?page=2 recebe o HTML pré-renderizado da página 1): sem
+                                esta lista, os artigos fora da primeira página não tinham link
+                                no HTML e o Google deixava-os por rastrear. */}
+                            <details className="mx-auto mt-12 max-w-4xl rounded-2xl border border-jet/10 px-6 py-4 dark:border-white/10">
+                                <summary className="cursor-pointer font-vivant text-sm text-jet dark:text-gray-200">
+                                    Ver todos os {posts.length} artigos
+                                </summary>
+                                <ul className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2">
+                                    {posts.map((post) => (
+                                        <li key={post.id}>
+                                            <Link
+                                                to={`/blog/${post.slug ?? slugify(post.title)}`}
+                                                className="text-sm font-light text-gray-600 hover:text-gold-leaf dark:text-gray-300"
+                                            >
+                                                {post.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </details>
                         </>
                     )}
                 </div>
