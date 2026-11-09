@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
 import { transplanteCapilarFaqSchema } from "@/data/faqSchemas";
+import TopicArticles from "@/components/TopicArticles";
 
 const schemas = [
   {
@@ -54,6 +55,7 @@ const TrasplanteCapilarPage = () => {
       <TrasplanteCapilarCasesSection />
       <TrasplanteCapilarFAQSection />
       <ContactFormSection />
+      <TopicArticles treatmentPath="/transplante-capilar" topic="transplante capilar" />
       <Footer />
       <WhatsAppFloat />
     </div>

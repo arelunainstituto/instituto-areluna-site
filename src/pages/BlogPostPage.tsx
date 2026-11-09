@@ -16,7 +16,7 @@ import SEOHead from "@/components/SEOHead";
 import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { useContact } from "@/contexts/ContactContext";
 import { findClinicalReviewer } from "@/data/teamSchema";
-import { treatmentLinksFor } from "@/data/blogTreatmentLinks";
+import { relatedPostsFor, treatmentLinksFor } from "@/data/blogTreatmentLinks";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -105,6 +105,19 @@ const BlogPostPage = () => {
     // e os assistentes de IA dão peso a quem reviu o artigo e à sua cédula.
     const reviewer = findClinicalReviewer(post.reviewer_id);
     const treatmentLinks = treatmentLinksFor(post);
+
+    // «Leia também»: 3 artigos do mesmo tema e depois os related_posts do ERP
+    // (que, sem escolha no ERP, são os 3 mais recentes), sem repetidos.
+    const byDate = [...(listData ?? [])].sort(
+        (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime(),
+    );
+    const relatedLinks = [
+        ...relatedPostsFor(byDate, post),
+        ...(post.related_posts ?? []),
+    ]
+        .map((rp) => ({ slug: rp.slug || slugify(rp.title), title: rp.title }))
+        .filter((rp, i, all) => rp.slug !== (post.slug || slugify(post.title)) && all.findIndex((o) => o.slug === rp.slug) === i)
+        .slice(0, 6);
 
     const blogPostingSchema = {
         "@context": "https://schema.org",
@@ -261,24 +274,18 @@ const BlogPostPage = () => {
                         </aside>
                     )}
 
-                    {/* "Leia também" — alimentado pelo campo related_posts da API
-                        (resolvido pelo backend a partir de related_post_ids). */}
-                    {(() => {
-                        const related = (post.related_posts ?? []).filter((rp) => rp.slug !== slug);
-                        if (related.length === 0) return null;
-                        return (
-                            <aside className="article-leia-tambem">
-                                <h2>Leia também</h2>
-                                <ul>
-                                    {related.map((rp) => (
-                                        <li key={rp.id}>
-                                            🦷 <Link to={`/blog/${rp.slug}`}>{rp.title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </aside>
-                        );
-                    })()}
+                    {relatedLinks.length > 0 && (
+                        <aside className="article-leia-tambem">
+                            <h2>Leia também</h2>
+                            <ul>
+                                {relatedLinks.map((rp) => (
+                                    <li key={rp.slug}>
+                                        🦷 <Link to={`/blog/${rp.slug}`}>{rp.title}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </aside>
+                    )}
                 </article>
             </div>
             <Footer />

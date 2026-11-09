@@ -67,11 +67,18 @@ for (const file of htmlFiles) {
   const hrefs = tags((await read(file)) ?? "", "a").map((t) => attr(t, "href")?.replace(/^https:\/\/www\.institutoareluna\.pt/, ""));
   linksByFile.set(file, new Set(hrefs));
 }
+// Os posts precisam de mais do que o link da lista de /blog: em novembro de
+// 2026, com só esse link, metade continuava por visitar pelo Google. O «Leia
+// também» por tema e as páginas de tratamento dão-lhes pelo menos 3.
+const MIN_LINKS_TO_POST = 3;
 for (const loc of locs) {
   const { pathname } = new URL(loc);
   if (pathname === "/") continue;
-  const linked = [...linksByFile].some(([file, hrefs]) => file !== htmlFileFor(pathname) && hrefs.has(pathname));
-  if (!linked) errors.push(`${loc}: nenhuma outra página tem link para ela`);
+  const linkedFrom = [...linksByFile].filter(([file, hrefs]) => file !== htmlFileFor(pathname) && hrefs.has(pathname)).length;
+  if (linkedFrom === 0) errors.push(`${loc}: nenhuma outra página tem link para ela`);
+  else if (pathname.startsWith("/blog/") && linkedFrom < MIN_LINKS_TO_POST) {
+    errors.push(`${loc}: só ${linkedFrom} página(s) têm link para este post (mínimo ${MIN_LINKS_TO_POST})`);
+  }
 }
 
 if ((await read(`${INDEXNOW_KEY}.txt`)) !== INDEXNOW_KEY) errors.push(`${INDEXNOW_KEY}.txt (chave do IndexNow) em falta ou com outro conteúdo`);

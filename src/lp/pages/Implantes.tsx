@@ -15,6 +15,7 @@ import {
   buildServiceSchema,
   organizationSchema,
 } from "@/lp/lib/schema";
+import TopicArticles from "@/components/TopicArticles";
 
 const faqImplantes = buildFAQSchema([
   {
@@ -92,6 +93,7 @@ const Implantes = () => {
           { label: "Acompanhamento contínuo" },
         ]}
       />
+      <TopicArticles treatmentPath="/implantes-dentarios-porto" topic="implantes dentários" />
       <Footer />
     </main>
   );

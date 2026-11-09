@@ -76,6 +76,24 @@ function seoFiles(posts: BlogPostRoute[]): Plugin {
   };
 }
 
+/**
+ * `import blogPosts from "virtual:blog-posts"`: os posts lidos do ERP neste
+ * build (a mesma lista do sitemap), do mais recente para o mais antigo. As
+ * páginas de tratamento listam os artigos do tema já no HTML pré-renderizado,
+ * sem pedir a API no browser. No dev a lista é vazia.
+ */
+function blogPostsModule(posts: BlogPostRoute[]): Plugin {
+  const id = "virtual:blog-posts";
+  const list = [...posts]
+    .sort((a, b) => b.lastmod.localeCompare(a.lastmod) || a.slug.localeCompare(b.slug))
+    .map(({ slug, title }) => ({ slug, title }));
+  return {
+    name: "areluna-blog-posts",
+    resolveId: (source) => (source === id ? `\0${id}` : undefined),
+    load: (moduleId) => (moduleId === `\0${id}` ? `export default ${JSON.stringify(list)};` : undefined),
+  };
+}
+
 // https://vitejs.dev/config/
 // Base das imagens de partilha (og:image). Em previews da Vercel usa o próprio
 // domínio do preview, para o WhatsApp/redes mostrarem a imagem dessa versão.
@@ -116,6 +134,7 @@ export default defineConfig(async ({ mode }) => {
     react(),
     mode === 'development' && componentTagger(),
     localePreload(),
+    blogPostsModule(blogPosts),
     shouldPrerender && seoFiles(blogPosts),
     // Prerender só na build de produção (puppeteer é pesado e desnecessário no dev)
     shouldPrerender && prerender({

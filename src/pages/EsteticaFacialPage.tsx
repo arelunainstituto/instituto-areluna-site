@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEOHead from "@/components/SEOHead";
 import { esteticaFacialFaqSchema } from "@/data/faqSchemas";
+import TopicArticles from "@/components/TopicArticles";
 
 const schemas = [
   {
@@ -49,6 +50,7 @@ const EsteticaFacialPage = () => {
       <EsteticaFacialCasesSection />
       <EsteticaFacialFAQSection />
       <ContactFormSection />
+      <TopicArticles treatmentPath="/estetica-facial" topic="estética facial" />
       <Footer />
       <WhatsAppFloat />
     </div>

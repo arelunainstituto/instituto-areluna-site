@@ -15,6 +15,7 @@ import {
   buildServiceSchema,
   organizationSchema,
 } from "@/lp/lib/schema";
+import TopicArticles from "@/components/TopicArticles";
 
 const faqAlinhadores = buildFAQSchema([
   {
@@ -92,6 +93,7 @@ const Alinhadores = () => {
           { label: "Plano explicado" },
         ]}
       />
+      <TopicArticles treatmentPath="/alinhadores-invisiveis-porto" topic="alinhadores e ortodontia" />
       <Footer />
     </main>
   );
