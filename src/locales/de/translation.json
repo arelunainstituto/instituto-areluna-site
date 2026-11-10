@@ -734,5 +734,15 @@
         "cta_secondary": "Termin vereinbaren",
         "image_alt": "Klinischer Fall einer FUE-Haartransplantation, veröffentlicht mit Einwilligung des Patienten",
         "caption": "Klinischer Fall"
+    },
+    "video_home": {
+        "eyebrow": "Video",
+        "title": "Die Geschichte von",
+        "highlight": "Miguel",
+        "description": "30 Jahre lang hat Miguel sein Lächeln versteckt: Er hielt sich die Hand vor den Mund, wenn seine Tochter ihn zum Lachen brachte, schwieg in Besprechungen und mied das Anstoßen beim Abendessen. Er schob es immer auf den nächsten Urlaub, bis er sich entschied, einen Termin zu vereinbaren.",
+        "invite": "Wenn auch Sie es aufgeschoben haben, ist der erste Schritt ein Untersuchungstermin.",
+        "cta": "Untersuchungstermin vereinbaren",
+        "play": "Video „{{title}}“ ansehen (2 Min. 44 Sek., auf Portugiesisch, mit portugiesischen Untertiteln)",
+        "duration": "2 Min. 44 Sek. · Portugiesisch"
     }
 }

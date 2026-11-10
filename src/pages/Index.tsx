@@ -5,11 +5,13 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { buildTeamPersonSchemas } from "@/data/teamSchema";
+import { homeVideoSchema } from "@/data/homeVideo";
 
 const GallerySection = lazy(() => import("@/components/GallerySection"));
 const CorpoClinicoSection = lazy(() => import("@/components/CorpoClinicoSection"));
 const TreatmentsSection = lazy(() => import("@/components/TreatmentsSection"));
 const CapilarHomeSection = lazy(() => import("@/components/CapilarHomeSection"));
+const VideoMiguelSection = lazy(() => import("@/components/VideoMiguelSection"));
 const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
 const ContactFormSection = lazy(() => import("@/components/ContactFormSection"));
 
@@ -98,7 +100,7 @@ const Index = () => {
           { hrefLang: "pt-BR", href: "https://institutoareluna.com.br/" },
           { hrefLang: "x-default", href: "https://www.institutoareluna.pt/" },
         ]}
-        jsonLd={[dentistSchema, personSchema, websiteSchema, ...buildTeamPersonSchemas()]}
+        jsonLd={[dentistSchema, personSchema, websiteSchema, homeVideoSchema, ...buildTeamPersonSchemas()]}
       />
       <Header />
       <HeroSection />
@@ -113,6 +115,9 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <CapilarHomeSection />
+      </Suspense>
+      <Suspense fallback={<SectionSkeleton />}>
+        <VideoMiguelSection />
       </Suspense>
       <Suspense fallback={<SectionSkeleton />}>
         <BeforeAfterSection />

@@ -734,5 +734,15 @@
         "cta_secondary": "Prenota una visita",
         "image_alt": "Caso clinico di trapianto di capelli FUE, pubblicato con l'autorizzazione del paziente",
         "caption": "Caso clinico"
+    },
+    "video_home": {
+        "eyebrow": "Video",
+        "title": "La storia di",
+        "highlight": "Miguel",
+        "description": "Per 30 anni Miguel ha nascosto il suo sorriso: si copriva la bocca quando la figlia lo faceva ridere, restava in silenzio nelle riunioni ed evitava di brindare alle cene. Ha continuato a rimandare alle prossime vacanze, fino al giorno in cui ha deciso di prenotare una visita.",
+        "invite": "Se anche lei ha continuato a rimandare, il primo passo è una visita di valutazione.",
+        "cta": "Prenota una visita di valutazione",
+        "play": "Guarda il video «{{title}}» (2 min 44 s, in portoghese, con sottotitoli in portoghese)",
+        "duration": "2 min 44 s · portoghese"
     }
 }

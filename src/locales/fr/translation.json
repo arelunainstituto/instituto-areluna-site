@@ -734,5 +734,15 @@
         "cta_secondary": "Prendre rendez-vous",
         "image_alt": "Cas clinique de greffe de cheveux FUE, publié avec l'autorisation du patient",
         "caption": "Cas clinique"
+    },
+    "video_home": {
+        "eyebrow": "Vidéo",
+        "title": "L'histoire de",
+        "highlight": "Miguel",
+        "description": "Pendant 30 ans, Miguel a caché son sourire : il se couvrait la bouche quand sa fille le faisait rire, se taisait en réunion et évitait de trinquer aux dîners. Il a repoussé à chaque fois aux prochaines vacances, jusqu'au jour où il a décidé de prendre rendez-vous.",
+        "invite": "Si vous aussi repoussez ce moment, la première étape est une consultation d'évaluation.",
+        "cta": "Prendre rendez-vous pour une évaluation",
+        "play": "Voir la vidéo « {{title}} » (2 min 44 s, en portugais, sous-titrée en portugais)",
+        "duration": "2 min 44 s · portugais"
     }
 }

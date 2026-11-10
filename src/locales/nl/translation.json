@@ -734,5 +734,15 @@
         "cta_secondary": "Plan een consult",
         "image_alt": "Klinisch geval van FUE-haartransplantatie, gepubliceerd met toestemming van de patiënt",
         "caption": "Klinisch geval"
+    },
+    "video_home": {
+        "eyebrow": "Video",
+        "title": "Het verhaal van",
+        "highlight": "Miguel",
+        "description": "Dertig jaar lang verborg Miguel zijn glimlach: hij hield zijn hand voor zijn mond als zijn dochter hem aan het lachen maakte, zweeg in vergaderingen en vermeed te proosten bij etentjes. Hij stelde het steeds uit tot de volgende vakantie, tot de dag waarop hij besloot een afspraak te maken.",
+        "invite": "Hebt u het ook steeds uitgesteld? De eerste stap is een evaluatieconsult.",
+        "cta": "Plan een evaluatieconsult",
+        "play": "Bekijk de video ‘{{title}}’ (2 min 44 s, in het Portugees, met Portugese ondertitels)",
+        "duration": "2 min 44 s · Portugees"
     }
 }

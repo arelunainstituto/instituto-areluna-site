@@ -997,5 +997,15 @@
         "cta_secondary": "Book an appointment",
         "image_alt": "Clinical case of FUE hair transplant, published with the patient's permission",
         "caption": "Clinical case"
+    },
+    "video_home": {
+        "eyebrow": "Video",
+        "title": "Miguel's",
+        "highlight": "story",
+        "description": "For 30 years, Miguel hid his smile: he covered his mouth when his daughter made him laugh, kept quiet in meetings and avoided raising a glass at dinners. He kept putting it off until the next holiday, until the day he decided to book an appointment.",
+        "invite": "If you have been putting it off too, the first step is an assessment appointment.",
+        "cta": "Book an assessment appointment",
+        "play": "Watch the video \"{{title}}\" (2 min 44 s, in Portuguese, with Portuguese subtitles)",
+        "duration": "2 min 44 s · Portuguese"
     }
 }

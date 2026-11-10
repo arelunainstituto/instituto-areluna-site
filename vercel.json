@@ -1,6 +1,7 @@
 {
   "redirects": [
-    { "source": "/turismo-dentario{/}?", "destination": "/pacientes-internacionais", "permanent": true },
+    { "source": "/turismo-dentario{/}?", "destination": "/", "permanent": false },
+    { "source": "/pacientes-internacionais{/}?", "destination": "/", "permanent": false },
     { "source": "/implantes{/}?", "destination": "/implantes-dentarios-porto", "permanent": true },
     { "source": "/alinhadores{/}?", "destination": "/alinhadores-invisiveis-porto", "permanent": true },
     { "source": "/facetas{/}?", "destination": "/facetas-dentarias-porto", "permanent": true },

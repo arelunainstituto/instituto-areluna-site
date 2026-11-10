@@ -997,5 +997,15 @@
         "cta_secondary": "Marcar consulta",
         "image_alt": "Caso clínico de transplante capilar FUE, publicado com autorização do paciente",
         "caption": "Caso clínico"
+    },
+    "video_home": {
+        "eyebrow": "Vídeo",
+        "title": "A história do",
+        "highlight": "Miguel",
+        "description": "Durante 30 anos, o Miguel escondeu o sorriso: tapava a boca quando a filha o fazia rir, ficava calado nas reuniões, evitava brindar nos jantares. Foi adiando para as próximas férias, até ao dia em que decidiu marcar a consulta.",
+        "invite": "Se também tem adiado, o primeiro passo é uma consulta de avaliação.",
+        "cta": "Marcar consulta de avaliação",
+        "play": "Ver o vídeo «{{title}}» (2 min 44 s, em português, com legendas)",
+        "duration": "2 min 44 s"
     }
 }

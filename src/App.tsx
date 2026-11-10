@@ -7,9 +7,10 @@ import ScrollToHash from "./components/ScrollToHash";
 
 const Index = lazyWithPreload(() => import("./pages/Index"));
 const TreatmentsPage = lazyWithPreload(() => import("./pages/TreatmentsPage"));
-// Página de pacientes internacionais fora do ar (em desenvolvimento).
-// Para reativar: trocar EmDesenvolvimento por TourismDentarioPage na rota abaixo.
-const EmDesenvolvimento = lazyWithPreload(() => import("./pages/EmDesenvolvimento"));
+// A página de pacientes internacionais (turismo dentário) está fora do ar desde
+// novembro de 2026: /pacientes-internacionais e /turismo-dentario redirecionam
+// para a home (307 no vercel.json). Para a reativar: rota com TourismDentarioPage,
+// voltar a pô-la em scripts/seo-pages.ts e tirar os dois redirecionamentos.
 const TrasplanteCapilarPage = lazyWithPreload(() => import("./pages/TrasplanteCapilarPage"));
 const EsteticaFacialPage = lazyWithPreload(() => import("./pages/EsteticaFacialPage"));
 const ContatoPage = lazyWithPreload(() => import("./pages/ContatoPage"));
@@ -36,7 +37,6 @@ const ROUTE_PAGES: Record<string, { preload: () => Promise<unknown> }> = {
   "/casos-clinicos": Index,
   "/tratamentos": TreatmentsPage,
   "/ortodontia": TreatmentsPage,
-  "/pacientes-internacionais": EmDesenvolvimento,
   "/transplante-capilar": TrasplanteCapilarPage,
   "/estetica-facial": EsteticaFacialPage,
   "/contato": ContatoPage,
@@ -76,8 +76,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/tratamentos" element={<TreatmentsPage />} />
-          <Route path="/pacientes-internacionais" element={<EmDesenvolvimento />} />
-          <Route path="/turismo-dentario" element={<Navigate to="/pacientes-internacionais" replace />} />
+          <Route path="/pacientes-internacionais" element={<Navigate to="/" replace />} />
+          <Route path="/turismo-dentario" element={<Navigate to="/" replace />} />
           <Route path="/transplante-capilar" element={<TrasplanteCapilarPage />} />
           <Route path="/estetica-facial" element={<EsteticaFacialPage />} />
           <Route path="/contato" element={<ContatoPage />} />

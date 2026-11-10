@@ -25,19 +25,20 @@ Todos os eventos levam `page_path` e `page_language`.
 | `section_view` | A secção ocupou metade do ecrã (uma vez por página vista) | `section` |
 | `select_content` | Filtro de tratamentos, filtro de casos ou vista de um caso | `content_type`, `item_id`, `cta_section` |
 | `faq_open` | Pergunta frequente aberta | `faq_section`, `faq_index`, `faq_question` |
+| `video_start` | Clique para ver o vídeo da home (o leitor do YouTube só carrega nesse momento) | `video_title`, `video_provider`, `video_url`, `cta_section` |
 
 **Valores:**
 - `contact_id`: `contact_1` (+351 910 338 912) ou `contact_2` (+351 910 170 972), do round robin em `src/contexts/ContactContext.tsx`.
 - `cta_item`: id do tratamento, nos cartões da secção de tratamentos.
 - `cta_section`:
-  - **Home:** `hero-home`, `galeria`, `corpo-clinico`, `tratamentos`, `transplante-capilar-home`, `casos-clinicos`, `formulario`.
+  - **Home:** `hero-home`, `galeria`, `corpo-clinico`, `tratamentos`, `transplante-capilar-home`, `video-miguel`, `casos-clinicos`, `formulario`.
   - **Transplante capilar:** `hero-transplante-capilar`, `transplante-capilar`, `casos-transplante-capilar`, `faq-transplante-capilar`.
   - **Estética facial:** `hero-estetica-facial`, `estetica-facial`, `casos-estetica-facial`, `faq-estetica-facial`.
   - **Tratamentos:** `hero-tratamentos`, `faq-tratamentos`.
   - **Contacto e blog:** `hero-contacto`, `hero-blog`, `artigo-blog`.
   - **Fundadora:** `hero-fundadora`, `fundadora-percurso`, `fundadora-cta`.
   - **Elementos comuns:** `menu`, `rodape`, `botao-flutuante`.
-  - **Outras:** `checkup`, `pacientes-internacionais`, `pagina-404`, `em-desenvolvimento`.
+  - **Outras:** `checkup`, `pacientes-internacionais` (página fora do ar), `pagina-404`.
   - **Landing pages:** `secao-N`, pela ordem da secção na página.
 
 Para um botão novo de WhatsApp ou telefone não é preciso código de tracking: o ouvinte global regista-o sozinho. Basta a secção ter `data-track-section`. O atributo `data-track-label` fixa um rótulo estável e `data-track-item` identifica o item.

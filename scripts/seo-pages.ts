@@ -23,7 +23,7 @@ export const INDEXABLE_PAGES = [
 
 /**
  * Pré-renderizadas mas fora do sitemap: noindex (/privacidade, /termos,
- * /obrigado, /pacientes-internacionais) ou com a canonical noutra página
+ * /obrigado) ou com a canonical noutra página
  * (/casos-clinicos → /, /ortodontia → /tratamentos). A rota /404 gera a
  * página de erro que o postbuild move para dist/404.html: a Vercel serve-a,
  * com status 404, a qualquer endereço sem ficheiro nem rewrite.
@@ -34,7 +34,6 @@ export const UNLISTED_PAGES = [
   "/privacidade",
   "/termos",
   "/obrigado",
-  "/pacientes-internacionais",
   "/404",
 ];
 
