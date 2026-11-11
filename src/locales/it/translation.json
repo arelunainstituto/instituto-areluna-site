@@ -743,6 +743,7 @@
         "invite": "Se anche lei ha continuato a rimandare, il primo passo è una visita di valutazione.",
         "cta": "Prenota una visita di valutazione",
         "play": "Guarda il video «{{title}}» (2 min 44 s, in portoghese, con sottotitoli in portoghese)",
-        "duration": "2 min 44 s · portoghese"
+        "duration": "2 min 44 s · portoghese",
+        "ai_notice": "Drammatizzazione creata con l'intelligenza artificiale. I personaggi sono di fantasia e il video non mostra un caso clinico reale."
     }
 }

@@ -7,7 +7,7 @@ export const HOME_VIDEO = {
   id: "9nPZ-yl-1x4",
   title: "Conheça a história de superação do Miguel",
   description:
-    "Durante 30 anos, o Miguel escondeu o sorriso e foi adiando para as próximas férias, até ao dia em que decidiu marcar a consulta.",
+    "Durante 30 anos, o Miguel escondeu o sorriso e foi adiando para as próximas férias, até ao dia em que decidiu marcar a consulta. Dramatização criada com inteligência artificial: as personagens são fictícias e o vídeo não mostra um caso clínico real.",
   uploadDate: "2026-11-09T13:23:18-08:00",
   duration: "PT2M44S",
 };

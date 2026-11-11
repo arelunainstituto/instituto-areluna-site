@@ -743,6 +743,7 @@
         "invite": "Si vous aussi repoussez ce moment, la première étape est une consultation d'évaluation.",
         "cta": "Prendre rendez-vous pour une évaluation",
         "play": "Voir la vidéo « {{title}} » (2 min 44 s, en portugais, sous-titrée en portugais)",
-        "duration": "2 min 44 s · portugais"
+        "duration": "2 min 44 s · portugais",
+        "ai_notice": "Mise en scène réalisée avec l'intelligence artificielle. Les personnages sont fictifs et la vidéo ne montre pas un cas clinique réel."
     }
 }

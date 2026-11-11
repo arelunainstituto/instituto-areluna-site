@@ -66,6 +66,7 @@ const VideoMiguelSection = () => {
                 type="button"
                 onClick={play}
                 aria-label={t("video_home.play", { title: HOME_VIDEO.title })}
+                aria-describedby="historia-miguel-aviso-ia"
                 className="group absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-leaf"
               >
                 <img
@@ -95,6 +96,13 @@ const VideoMiguelSection = () => {
               </button>
             )}
           </div>
+          {/* Obrigatório: o vídeo foi gerado por IA (Regulamento europeu da IA,
+              art. 50.º, n.º 4) e não é um testemunho real (manual de publicidade
+              da ERS: testemunhos têm de ser genuínos e identificáveis). Tem de
+              ficar visível antes do clique. */}
+          <p id="historia-miguel-aviso-ia" className="mt-3 font-vivant-light text-xs leading-relaxed text-white/60 sm:text-sm">
+            {t("video_home.ai_notice")}
+          </p>
         </Reveal>
       </div>
     </Section>

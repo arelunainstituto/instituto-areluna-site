@@ -743,6 +743,7 @@
         "invite": "Si usted también lo ha ido aplazando, el primer paso es una consulta de evaluación.",
         "cta": "Reservar consulta de evaluación",
         "play": "Ver el vídeo «{{title}}» (2 min 44 s, en portugués, con subtítulos en portugués)",
-        "duration": "2 min 44 s · portugués"
+        "duration": "2 min 44 s · portugués",
+        "ai_notice": "Dramatización creada con inteligencia artificial. Los personajes son ficticios y el vídeo no muestra un caso clínico real."
     }
 }

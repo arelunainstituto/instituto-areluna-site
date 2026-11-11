@@ -1006,6 +1006,7 @@
         "invite": "Se também tem adiado, o primeiro passo é uma consulta de avaliação.",
         "cta": "Marcar consulta de avaliação",
         "play": "Ver o vídeo «{{title}}» (2 min 44 s, em português, com legendas)",
-        "duration": "2 min 44 s"
+        "duration": "2 min 44 s",
+        "ai_notice": "Dramatização criada com inteligência artificial. As personagens são fictícias e o vídeo não mostra um caso clínico real."
     }
 }

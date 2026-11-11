@@ -1006,6 +1006,7 @@
         "invite": "If you have been putting it off too, the first step is an assessment appointment.",
         "cta": "Book an assessment appointment",
         "play": "Watch the video \"{{title}}\" (2 min 44 s, in Portuguese, with Portuguese subtitles)",
-        "duration": "2 min 44 s · Portuguese"
+        "duration": "2 min 44 s · Portuguese",
+        "ai_notice": "Dramatisation created with artificial intelligence. The characters are fictional and the video does not show a real clinical case."
     }
 }

@@ -743,6 +743,7 @@
         "invite": "Wenn auch Sie es aufgeschoben haben, ist der erste Schritt ein Untersuchungstermin.",
         "cta": "Untersuchungstermin vereinbaren",
         "play": "Video „{{title}}“ ansehen (2 Min. 44 Sek., auf Portugiesisch, mit portugiesischen Untertiteln)",
-        "duration": "2 Min. 44 Sek. · Portugiesisch"
+        "duration": "2 Min. 44 Sek. · Portugiesisch",
+        "ai_notice": "Mit künstlicher Intelligenz erstellte Inszenierung. Die Figuren sind fiktiv, und das Video zeigt keinen echten klinischen Fall."
     }
 }
