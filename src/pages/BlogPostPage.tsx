@@ -17,6 +17,7 @@ import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 import { useContact } from "@/contexts/ContactContext";
 import { findClinicalReviewer } from "@/data/teamSchema";
 import { relatedPostsFor, treatmentLinksFor } from "@/data/blogTreatmentLinks";
+import builtPosts from "virtual:blog-posts";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -34,8 +35,15 @@ const BlogPostPage = () => {
         enabled: ENABLE_ERP_POSTS && !staticPost,
     });
 
+    // Posts pré-renderizados neste build: o id vem do build e não da lista acima.
+    // O Google guarda em cache a resposta da lista (o endereço é sempre o mesmo) e,
+    // com uma lista antiga, um post novo caía em «Artigo não encontrado», com
+    // noindex e canonical /blog: foi assim que /blog/destartarizacao-limpeza-dentaria
+    // ficou «Excluída pela etiqueta noindex» a 18/11/2026. A lista continua a servir
+    // os posts publicados depois do build (index_fallback.html) e o «Leia também».
+    const builtPost = ENABLE_ERP_POSTS && !staticPost ? builtPosts.find((p) => p.slug === slug) : undefined;
     const postFromList = listData?.find((p) => p.slug === slug || slugify(p.title) === slug);
-    const postId = postFromList?.id;
+    const postId = builtPost?.id || postFromList?.id;
 
     // 2. Fetch post details using ID — só corre se o ERP estiver ativo.
     const { data: apiPost, isLoading: isPostLoading, error: postError } = useQuery({
@@ -45,8 +53,10 @@ const BlogPostPage = () => {
     });
 
     const post = staticPost ?? apiPost;
-    const isLoading = !staticPost && (isListLoading || (!!postId && isPostLoading));
-    const error = !staticPost && (listError || postError);
+    // Um post do build não espera pela lista nem cai por erro dela.
+    const knownPost = !!builtPost?.id;
+    const isLoading = !staticPost && ((!knownPost && isListLoading) || (!!postId && isPostLoading));
+    const error = !staticPost && (postError || (!knownPost && listError));
 
     if (isLoading) {
         return (

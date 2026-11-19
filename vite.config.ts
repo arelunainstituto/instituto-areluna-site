@@ -86,7 +86,7 @@ function blogPostsModule(posts: BlogPostRoute[]): Plugin {
   const id = "virtual:blog-posts";
   const list = [...posts]
     .sort((a, b) => b.lastmod.localeCompare(a.lastmod) || a.slug.localeCompare(b.slug))
-    .map(({ slug, title }) => ({ slug, title }));
+    .map(({ id, slug, title }) => ({ id, slug, title }));
   return {
     name: "areluna-blog-posts",
     resolveId: (source) => (source === id ? `\0${id}` : undefined),

@@ -23,6 +23,8 @@ O site é uma SPA em React. O Google lê primeiro o HTML que o servidor entrega 
 
 O `index_fallback.html` serve os posts publicados no ERP depois do último build. Esses posts entram no sitemap e no prerender no build seguinte: o workflow `.github/workflows/build-diario.yml` pede um build de produção todos os dias às 12:30 UTC, meia hora depois da hora a que o ERP publica os posts agendados. Usa o Deploy Hook «build-diario-blog» da Vercel, guardado no secret `VERCEL_DEPLOY_HOOK_URL` do GitHub. O GitHub desativa agendamentos de repositórios públicos sem atividade durante 60 dias (avisa por email antes).
 
+A página do post (`src/pages/BlogPostPage.tsx`) encontra o id dos posts pré-renderizados na lista do build (`virtual:blog-posts`) e só usa a lista da API no browser para os posts mais recentes do que o build. O Google guarda em cache a resposta da lista, que tem sempre o mesmo endereço. Com uma lista antiga, um post novo aparecia ao Google como «Artigo não encontrado», com noindex e canonical /blog. Foi assim que `/blog/destartarizacao-limpeza-dentaria` ficou «Excluída pela etiqueta noindex» a 18/11/2026, 9 horas depois do build. É provavelmente a mesma causa dos 5 posts «Página alternativa com canonical» de outubro.
+
 Depois do build, o mesmo workflow corre `scripts/indexnow.mjs`: espera que o sitemap publicado mude e envia ao IndexNow (Bing, que alimenta o ChatGPT e o Copilot) só os endereços novos ou com outro `lastmod`. A chave é pública por desenho e está em `public/<chave>.txt` (força-se o `git add -f`, porque o `.gitignore` ignora `public`). Para enviar o sitemap inteiro, por exemplo depois de mudar muitas páginas: `node scripts/indexnow.mjs --todos`.
 
 ## Links internos e artigos

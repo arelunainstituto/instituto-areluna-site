@@ -38,6 +38,8 @@ export const UNLISTED_PAGES = [
 ];
 
 export interface BlogPostRoute {
+  /** Id do post no ERP: a página do post usa-o sem depender da lista da API no browser. */
+  id: string;
   slug: string;
   title: string;
   /** AAAA-MM-DD — a data mais recente entre publicação e edição. */
@@ -45,6 +47,7 @@ export interface BlogPostRoute {
 }
 
 interface ErpPost {
+  id: string;
   title: string;
   slug?: string;
   published_at?: string;
@@ -97,7 +100,7 @@ export async function fetchBlogPostRoutes(apiUrl?: string, apiKey?: string): Pro
       return [];
     }
     const dates = [post.published_at, post.updated_at].filter(Boolean).map((d) => d!.slice(0, 10));
-    return [{ slug, title: post.title, lastmod: dates.sort().at(-1) ?? "" }];
+    return [{ id: post.id, slug, title: post.title, lastmod: dates.sort().at(-1) ?? "" }];
   });
 }
 
